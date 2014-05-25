@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HelloPics</string>
+    <string name="app_name">print.io</string>
     <string name="facebook_app_id">309503815860008</string>
     <string name="menu_settings">Settings</string> <!-- translate -->
     <string name="choose_country">Choose Country</string> <!-- translate -->
@@ -122,7 +122,7 @@
     <string name="find_shipping_address">Find Shipping Address</string> <!-- translate -->
     <string name="order">Order</string> <!-- translate -->
     <string name="need_to_share">Share this deal with your Facebook Friends to get this great $1 deal!</string> <!-- translate -->
-    <string name="fb_canvas_share_text">I just purchased canvas wraps for $1 at Hellopics! Check them out, it\'s ending soon!</string>
+    <string name="fb_canvas_share_text">I just purchased canvas wraps for $1 at print.io! Check them out, it\'s ending soon!</string>
     <string name="empty_first_name">\'First name\' should not be empty</string> <!-- translate -->
     <string name="empty_last_name">\'Last name\' should not be empty</string> <!-- translate -->
     <string name="empty_email">\'Email\' should not be empty</string> <!-- translate -->
@@ -191,7 +191,7 @@
     <string name="share_using">Share using:</string> <!-- translate -->
     <string name="like_us">Like Us On Facebook</string> <!-- translate -->
     <string name="rate_our_app">Rate Our App</string> <!-- translate -->
-    <string name="about">About HelloPics</string> <!-- translate -->
+    <string name="about">About print.io</string> <!-- translate -->
     <string name="how_it_works">How It Works</string> <!-- translate -->
     <string name="past_orders">Past Orders</string> <!-- translate -->
     <string name="save">Save</string> <!-- translate -->
@@ -275,9 +275,10 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="total_ship_cost">Total Ship Cost:</string> <!-- translate -->
     <string name="shipment_review">Shipment Review</string> <!-- translate -->
     <string name="ship_to">Ship to</string>
+    <string name="remove">Remove</string>
     <string name="remove_items">Remove Item(s)</string>
-    <string name="est_arrival">Est. Arrival:</string>
-    <string name="ship_cost">Ship Cost:</string>
+    <string name="est_arrival">Est. Arrival</string>
+    <string name="ship_cost">Ship Cost</string>
     <string name="est_ship_cost">Est. Ship Cost:</string>
     <string name="shipment">Shipment</string>
     <string name="of">of</string>
@@ -331,7 +332,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="add_text_comming_soon">Add text feature is comming soon</string>
     <string name="effects_comming_soon">Effects are coming soon</string>
     <string name="effects">Effects</string>
-    <string name="please_try_again">HelloPics is currently upgrading our products. Please try again in a few minutes.</string>
+    <string name="please_try_again">print.io is currently upgrading our products. Please try again in a few minutes.</string>
     <string name="almost_done">Almost Done!</string>
     <string name="photobucket_comming_soon">Photobucket is coming soon</string>
     <string name="select_address">Select Address</string>
@@ -440,9 +441,9 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="step_4_canvas_wraps">Step 4: Choose Photo Layout/Design</string>
     <string name="step_3_framed_prints">Step 3: Choose Frame Color</string>
     <string name="step_4_framed_prints">Step 4: Choose Print Type</string>
-    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@hellopics.com for support and friends</string>
+    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
     <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
-    <string name="hellopics">HelloPics</string>
+    <string name="hellopics">PrintIO SDK</string>
     <string name="about_hellopics">About:</string>
     <string name="how_it_works_hellopics">How It Works:</string>
     <string name="pop_up_choose_options_1_2">Let\'s get this started and make an awesome Phone Case for your device! This page takes 2 simple steps then it will automatically take you to the next step!\n\n1) Choose the device you want to make the case for. If you don\'t automatically see your Phone type, simply place your finger over the phones and swipe it to the left until you see the Phone of your choice.\n2) Choose the Photo Layout you would like on your Phone Case, this all depends on how many pictures you want to use!</string>
@@ -464,8 +465,8 @@ to the Payment Page.</string>
 enter your credit card information by taking a picture of the front of your card 
 OR enter manually with your keypad. Once you have entered information into 
 each field, simply touch the (Place Order) Blue Button.</string>
-    <string name="pop_up_order_completed">Hellopics thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nSupport@hellopics.com for support and friends</string>
-    <string name="support_text">Support@hellopics.com for support and friends</string>
+    <string name="pop_up_order_completed">print.io thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nSupport@print.io for support and friends</string>
+    <string name="support_text">Support@print.io for support and friends</string>
     <string name="solid_background">Solid Background</string>
     <string name="metal_magnets_popup">On the next page, each photo you select will add 1 magnet to your order.\n\nYou can adjust quantity and remove them at any time before checkout.</string>
     <string name="product_categories">Categories</string>

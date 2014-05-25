@@ -304,7 +304,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/layout_photos"
-        layout="@layout/overlay_buttons" />
+        layout="@layout/overlay_buttons_help_circle" />
     <!-- Dialog Discard -->
 
     <include

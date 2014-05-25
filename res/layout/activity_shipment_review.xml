@@ -119,7 +119,7 @@
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
@@ -141,22 +141,10 @@
                 android:background="#ffffff"
                 android:padding="5dip" >
 
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_order_summary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="10dip"
-                    android:paddingTop="5dip"
-                    android:text="@string/order_summary"
-                    android:textColor="#595d66"
-                    android:textSize="18dp" />
-
                 <RelativeLayout
                     android:id="@+id/first_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textview_order_summary"
-                    android:background="@color/shipment_review_first_container"
                     android:padding="7dip" >
 
                     <RelativeLayout
@@ -236,7 +224,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/first_container"
-                    android:background="@color/shipment_review_second_container"
                     android:paddingBottom="7dip" >
 
                     <RelativeLayout
@@ -264,22 +251,14 @@
                             android:textSize="15dp" />
                     </RelativeLayout>
 
-                    <View
-                        android:id="@+id/dummy_view"
-                        android:layout_width="fill_parent"
-                        android:layout_height="2dip"
-                        android:layout_below="@+id/first_layout1"
-                        android:background="#ffffff" />
-
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/dummy_view"
-                        android:layout_marginTop="5dip"
+                        android:layout_below="@+id/first_layout1"
                         android:paddingLeft="7dip"
                         android:paddingRight="7dip" >
 
-                        <print.io.view.TextViewFontLight
+                        <print.io.view.TextViewFontBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
@@ -287,7 +266,7 @@
                             android:textColor="#595d66"
                             android:textSize="15dp" />
 
-                        <print.io.view.TextViewFontLight
+                        <print.io.view.TextViewFontBold
                             android:id="@+id/textview_order_total_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -296,18 +275,13 @@
                             android:textSize="15dp" />
                     </RelativeLayout>
                 </RelativeLayout>
-
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_shipment_review"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/second_container"
-                    android:paddingBottom="5dip"
-                    android:paddingTop="10dip"
-                    android:text="@string/shipment_review"
-                    android:textColor="#595d66"
-                    android:textSize="18dp" />
             </RelativeLayout>
+
+            <View
+                android:id="@+id/view_dummy_section_separator"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/title_bar_separator" />
 
             <LinearLayout
                 android:id="@+id/shipment_review_container"
@@ -355,7 +329,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="2dip"
         android:background="#00000000"
-        android:padding="10dip"
         android:visibility="visible" >
 
         <print.io.view.TextViewFontLight
@@ -392,7 +365,8 @@
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dip"
-            android:background="@color/title_bar_separator" />
+            android:background="@color/title_bar_separator"
+            android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_order_total"
@@ -405,7 +379,8 @@
             android:paddingTop="5dip"
             android:text="@string/order_total1"
             android:textColor="#010101"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_order_total_price_big"
@@ -419,21 +394,21 @@
             android:paddingRight="8dip"
             android:singleLine="true"
             android:textColor="#010101"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            android:visibility="gone" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_place_order"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
             android:layout_centerVertical="true"
-            android:layout_margin="7dip"
             android:background="@drawable/btn_blue_light"
-            android:drawableRight="@drawable/icon_arrow_right"
             android:drawablePadding="10dp"
+            android:drawableRight="@drawable/icon_arrow_right"
             android:onClick="onClickPlaceOrder"
-            android:paddingLeft="10dip"
-            android:paddingRight="5dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
             android:text="@string/enter_payment_info"
             android:textColor="#ffffff"
             android:textSize="16dp" />

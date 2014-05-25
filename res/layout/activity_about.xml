@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/hellopics"
+            android:text="@string/about"
             android:textColor="@color/title_bar_text"
             android:textSize="20dp" />
 
