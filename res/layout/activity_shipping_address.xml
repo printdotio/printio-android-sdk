@@ -1,0 +1,840 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar" >
+
+        <LinearLayout
+            android:id="@+id/layout_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickBack"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip" >
+
+            <ImageView
+                android:id="@+id/imageview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_back_2" />
+
+            <ImageView
+                android:id="@+id/imageview_top_left_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/layout_menu_back"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/checkout"
+            android:textColor="@color/title_bar_text"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageview_search"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageview_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onClickSearch"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/btn_search"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:layout_width="35dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickShoppingCart" >
+
+            <ImageView
+                android:id="@+id/imageview_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/icon_cart" />
+
+            <TextView
+                android:id="@+id/textview_overlay_num_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageview_cart"
+                android:layout_alignRight="@+id/imageview_cart"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/icon_red_circle"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="8dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_titlebar"
+        android:background="@color/title_bar_separator" />
+    
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/layout_sub_total"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:layout_margin="3dip"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- Fill In -->
+
+            <RelativeLayout
+                android:id="@+id/layout_fill_in"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="2dip" >
+
+                <print.io.view.TextViewFontNormal
+                    android:id="@+id/textview_fill_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/fill_in"
+                    android:textColor="#323232"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_shipping_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_fill_in"
+                    android:layout_marginTop="10dip" >
+
+                    <EditText
+                        android:id="@+id/edittext_first_name"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dip"
+                        android:layout_weight="1"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/first_name"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/edittext_last_name"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edittext_last_name"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:layout_weight="1"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/last_name"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/edittext_email"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edittext_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_shipping_name"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/bg_edit_text"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:nextFocusDown="@+id/edittext_state"
+                    android:padding="7dip"
+                    android:singleLine="true"
+                    android:textColor="#b3b3b3"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/edittext_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edittext_email"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/bg_edit_text"
+                    android:hint="@string/state"
+                    android:inputType="textCapWords"
+                    android:nextFocusDown="@+id/edittext_zip_code"
+                    android:padding="7dip"
+                    android:singleLine="true"
+                    android:textColor="#b3b3b3"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="14dp" />
+
+                <!-- Zip Code -->
+
+                <LinearLayout
+                    android:id="@+id/layout_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edittext_state"
+                    android:layout_marginTop="6dip" >
+
+                    <EditText
+                        android:id="@+id/edittext_zip_code"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dip"
+                        android:layout_weight="1"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/zip_code"
+                        android:inputType="numberDecimal"
+                        android:nextFocusDown="@+id/edittext_city"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edittext_city"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:layout_weight="3"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/city"
+                        android:inputType="textCapWords"
+                        android:nextFocusDown="@+id/edittext_address_1"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <!-- Address 1 -->
+
+                <EditText
+                    android:id="@+id/edittext_address_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_zip"
+                    android:layout_marginTop="6dip"
+                    android:background="@drawable/bg_edit_text_red"
+                    android:hint="@string/address_blank"
+                    android:inputType="textCapWords"
+                    android:nextFocusDown="@+id/edittext_address_2"
+                    android:padding="7dip"
+                    android:singleLine="true"
+                    android:textColor="#b3b3b3"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="14dp" />
+
+                <!-- Address 2 -->
+
+                <EditText
+                    android:id="@+id/edittext_address_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edittext_address_1"
+                    android:layout_marginTop="6dip"
+                    android:background="@color/bg_edit_text"
+                    android:hint="@string/address_2"
+                    android:inputType="textCapWords"
+                    android:nextFocusDown="@+id/edittext_area_num"
+                    android:padding="7dip"
+                    android:singleLine="true"
+                    android:textColor="#b3b3b3"
+                    android:textColorHint="#b3b3b3"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_business_address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edittext_address_2"
+                    android:layout_marginTop="6dip"
+                    android:background="#efeff2"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox_business_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:button="@drawable/checkbox_x"
+                        android:padding="5dip" />
+
+                    <print.io.view.TextViewFontNormal
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_business_address"
+                        android:textColor="#323232" />
+                </LinearLayout>
+
+                <!-- Telephone -->
+
+                <LinearLayout
+                    android:id="@+id/layout_telephone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_business_address"
+                    android:layout_marginTop="6dip" >
+
+                    <EditText
+                        android:id="@+id/edittext_area_num"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dip"
+                        android:layout_weight="1"
+                        android:background="@color/bg_edit_text"
+                        android:hint="+49"
+                        android:inputType="phone"
+                        android:nextFocusDown="@+id/edittext_telephone_num"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/edittext_telephone_num"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dip"
+                        android:layout_weight="3"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/telephone_number"
+                        android:inputType="phone"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_fill_in"
+                android:layout_marginBottom="3dip"
+                android:layout_marginTop="3dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip" >
+
+                <LinearLayout
+                    android:id="@+id/layout_shipping_methods_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <!-- Proceed -->
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_proceed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_fill_in"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="2dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/btn_blue_light"
+                android:onClick="onClickProceed"
+                android:padding="8dip"
+                android:text="@string/proceed"
+                android:textColor="#ffffff" />
+
+            <print.io.view.TextViewFontNormal
+                android:id="@+id/textview_find_shipping_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button_proceed"
+                android:layout_marginTop="5dip"
+                android:text="@string/find_shipping_address"
+                android:textColor="#323232"
+                android:textSize="14dp" />
+
+            <!-- FedEX -->
+
+            <RelativeLayout
+                android:id="@+id/layout_fedex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_find_shipping_address"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="#efeff2"
+                android:padding="8dip" >
+
+                <ImageView
+                    android:id="@+id/imageview_fedex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/icon_fedex" />
+
+                <TextView
+                    android:id="@+id/textview_fedex"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageview_fedex"
+                    android:text="FedEX"
+                    android:textColor="#323232"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <!-- UPS -->
+
+            <RelativeLayout
+                android:id="@+id/layout_ups"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_fedex"
+                android:layout_marginLeft="2dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="#efeff2"
+                android:padding="8dip" >
+
+                <ImageView
+                    android:id="@+id/imageview_ups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:src="@drawable/icon_ups" />
+
+                <TextView
+                    android:id="@+id/textview_ups"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/imageview_ups"
+                    android:text="UPS"
+                    android:textColor="#323232"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <!-- Find Shipping Method -->
+
+            <RelativeLayout
+                android:id="@+id/layout_find_shipping_method"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_fill_in"
+                android:layout_marginBottom="3dip"
+                android:layout_marginTop="5dip"
+                android:background="#ffffff"
+                android:padding="10dip"
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontNormal
+                    android:id="@+id/textview_find_shipping_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/find_shipping_address"
+                    android:textColor="#323232"
+                    android:textSize="14dp"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_find"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textview_find_shipping_address"
+                    android:background="#efeff2"
+                    android:padding="10dip"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/imageview_fedex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dip"
+                        android:src="@drawable/icon_fedex"
+                        android:visibility="gone" />
+
+                    <print.io.view.TextViewFontNormal
+                        android:id="@+id/textview_credit_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/imageview_fedex"
+                        android:text="@string/fedex"
+                        android:textColor="#323232"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <print.io.view.TextViewFontNormal
+                        android:id="@+id/textview_shipping_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageview_fedex"
+                        android:layout_marginTop="10dip"
+                        android:text="@string/shipping_address"
+                        android:textColor="#323232"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_shipping_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textview_shipping_address"
+                        android:layout_marginTop="10dip"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/edittext_shipping_first_name"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dip"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:hint="@string/first_name"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edittext_shipping_last_name"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:hint="@string/last_name"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- Company -->
+
+                    <EditText
+                        android:id="@+id/edittext_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_shipping_name"
+                        android:layout_marginTop="6dip"
+                        android:background="#ffffff"
+                        android:hint="@string/company"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <!-- Zip Code -->
+
+                    <LinearLayout
+                        android:id="@+id/layout_zip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edittext_company"
+                        android:layout_marginTop="6dip"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/edittext_zip_code"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dip"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:hint="@string/zip_code"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edittext_city"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:layout_weight="3"
+                            android:background="#ffffff"
+                            android:hint="@string/city"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <!-- Address 1 -->
+
+                    <EditText
+                        android:id="@+id/edittext_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_zip"
+                        android:layout_marginTop="6dip"
+                        android:background="#ffffff"
+                        android:hint="@string/address"
+                        android:padding="7dip"
+                        android:singleLine="true"
+                        android:textColor="#b3b3b3"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <!-- Telephone -->
+
+                    <LinearLayout
+                        android:id="@+id/layout_telephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edittext_address"
+                        android:layout_marginTop="6dip"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/edittext_area_num"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="3dip"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:hint="+49"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+
+                        <EditText
+                            android:id="@+id/edittext_telephone_num"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:layout_weight="3"
+                            android:background="#ffffff"
+                            android:hint="@string/telephone_number"
+                            android:padding="7dip"
+                            android:singleLine="true"
+                            android:textColor="#b3b3b3"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/layout_find_shipping_method"
+                android:background="#ffffff"
+                android:paddingBottom="7dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="7dip"
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_total_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="3dip"
+                    android:text="@string/total_price"
+                    android:textColor="#323232"
+                    android:textSize="15dp" />
+
+                <RelativeLayout
+                    android:id="@+id/dummy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/button_shipping_method"
+                        android:paddingRight="5dip"
+                        android:text="$15.00"
+                        android:textColor="#323232"
+                        android:textSize="32dp" />
+
+                    <print.io.view.ButtonFontLight
+                        android:id="@+id/button_shipping_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/btn_blue_light"
+                        android:onClick="onClickShippingMethod"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="8dip"
+                        android:text="@string/shipping_method"
+                        android:textColor="#ffffff"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- Sub Total -->
+
+    <RelativeLayout
+        android:id="@+id/layout_sub_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="2dip"
+        android:background="#474747"
+        android:padding="7dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/sub_total"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_price"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/button_shipping_method"
+            android:layout_toRightOf="@+id/textview_total_price"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="14dp" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_shipping_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/btn_blue_light"
+            android:onClick="onClickShippingMethod"
+            android:paddingBottom="13dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="13dip"
+            android:text="@string/checkout"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- Find Shipping Method -->
+
+    <RelativeLayout
+        android:id="@+id/button_find_shipping_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="3dip"
+        android:layout_marginRight="3dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/btn_blue_light"
+        android:onClick="onClickFindShippingMethod"
+        android:padding="10dip"
+        android:visibility="visible" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_find_shipping_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/find_shipping_method"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow" />
+    </RelativeLayout>
+
+    <!-- Coming Soon -->
+
+    <include
+        android:id="@+id/item_coming_soon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_coming_soon"
+        android:visibility="gone" />
+
+</RelativeLayout>

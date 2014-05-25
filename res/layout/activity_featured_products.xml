@@ -1,0 +1,345 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_window_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar" >
+
+        <LinearLayout
+            android:id="@+id/layout_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickMenu"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="0dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip" >
+
+            <ImageView
+                android:id="@+id/imageview_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:src="@drawable/btn_menu_black" />
+
+            <ImageView
+                android:id="@+id/imageview_top_left_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/layout_menu_back"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_featured_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/featured_products"
+            android:textColor="@color/title_bar_text"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageview_search"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageview_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onClickSearch"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/btn_search"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="45dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickShoppingCart" >
+
+            <ImageView
+                android:id="@+id/imageview_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="10dip"
+                android:src="@drawable/icon_cart" />
+
+            <TextView
+                android:id="@+id/textview_overlay_num_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageview_cart"
+                android:layout_alignRight="@+id/imageview_cart"
+                android:layout_marginBottom="5dip"
+                android:layout_marginRight="1dip"
+                android:background="@drawable/icon_red_circle"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="8dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_titlebar"
+        android:background="@color/title_bar_separator" />
+
+    <!-- Country drop down menu -->
+
+    <LinearLayout
+        android:id="@+id/layout_country_drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:background="@color/country_drop_down"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickChangeCountry"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_country_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/icon_caret_white"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Categories -->
+
+    <RelativeLayout
+        android:id="@+id/layout_categories"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_below="@+id/layout_country_drop_down"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/image_view_search_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onClickSearch"
+            android:padding="10dip"
+            android:src="@drawable/btn_search_categories" />
+
+        <RelativeLayout
+            android:id="@+id/text_view_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClickDropDownMenu"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/dummy55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="1dip"
+                android:layout_marginLeft="4dip"
+                android:gravity="center"
+                android:text="@string/product_categories"
+                android:textColor="@drawable/text_selector_green"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/dummy55"
+                android:layout_marginLeft="2dip"
+                android:layout_toRightOf="@+id/dummy55"
+                android:src="@drawable/btn_categories_selector" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edittext_search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageview_close"
+            android:layout_toRightOf="@+id/image_view_search_categories"
+            android:background="#00000000"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/textview_all_products"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickViewAllProducts"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_all_products_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dip"
+                android:layout_marginLeft="4dip"
+                android:gravity="center"
+                android:text="@string/all"
+                android:textColor="@drawable/text_selector_green"
+                android:textSize="18sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageview_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onClickClose"
+            android:padding="10dip"
+            android:src="@drawable/icon_x"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/separator_1"
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/layout_categories"
+        android:background="#cbcbce" />
+
+    <ListView
+        android:id="@+id/listview_product"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/separator_1"
+        android:background="#00000000"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:divider="#00000000"
+        android:dividerHeight="5dip"
+        android:listSelector="#00000000"
+        android:padding="5dip"
+        android:scrollbars="none" >
+    </ListView>
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_view_all_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/btn_view_all_products"
+        android:clickable="true"
+        android:drawableLeft="@drawable/icon_cube_small"
+        android:onClick="onClickViewAllProducts"
+        android:paddingBottom="11dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="11dip"
+        android:text="@string/view_all_products"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:visibility="gone" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/overlay_buttons"
+        android:visibility="gone" />
+
+    <!-- Help -->
+
+    <include
+        android:id="@+id/item_help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_help"
+        android:visibility="gone" />
+
+    <!-- Please try again dialog -->
+
+    <include
+        android:id="@+id/dialog_please_try_again"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_please_try_again"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/drop_down_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_categories"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white_categories"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <!-- Coming Soon -->
+
+    <include
+        android:id="@+id/item_coming_soon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_coming_soon"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_month_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:padding="10dip"
+        android:singleLine="true"
+        android:textColor="#595d66"
+        android:textSize="15dp" />
+
+</LinearLayout>

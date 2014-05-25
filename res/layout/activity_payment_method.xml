@@ -1,0 +1,1232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_bar" >
+
+        <LinearLayout
+            android:id="@+id/layout_menu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickBack"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip" >
+
+            <ImageView
+                android:id="@+id/imageview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_back_2" />
+
+            <ImageView
+                android:id="@+id/imageview_top_left_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/layout_menu_back"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_product_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/payment"
+            android:textColor="@color/title_bar_text"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageview_question_mark"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/imageview_question_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onClickHelp"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_question_big"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_titlebar"
+        android:background="@color/title_bar_separator" />
+
+    <RelativeLayout
+        android:id="@+id/first_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:padding="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/first_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="6dp" >
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/items"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_items_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/second_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_layout" >
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/shipping_and_handling"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_shipping_and_handling_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_container"
+        android:paddingBottom="10dip" >
+
+        <RelativeLayout
+            android:id="@+id/first_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/tax_shipment"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_tax_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="15dp"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_layout1"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <print.io.view.TextViewFontBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/order_total"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_order_total_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/second_container"
+        android:background="@color/title_bar_separator"
+         />
+
+    <!-- Layout Payment Method -->
+
+    <ScrollView
+        android:paddingTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view_dummy_separator"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <!-- Layout Billing Country -->
+
+            <RelativeLayout
+                android:id="@+id/layout_billing_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff" >
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_billing_country"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/billing_country"
+                    android:textColor="#595d66"
+                    android:textSize="16dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_billing_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_below="@+id/textview_billing_country"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/bg_print_type" />
+            </RelativeLayout>
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_payment_method"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_billing_country"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:text="@string/select_payment_method"
+                android:textColor="#595d66"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:id="@+id/dummy_layout_paypal"
+                android:layout_width="fill_parent"
+                android:layout_height="40dip"
+                android:layout_below="@+id/textview_payment_method"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/btn_blue_light_sharp"
+                android:clickable="true"
+                android:onClick="onClickPaypal" >
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_paypal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@drawable/icon_paypal_text"
+                    android:text="@string/pay_with"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageview_paypal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/icon_paypal_big"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/dummy_layout_paypal"
+                android:layout_marginBottom="0dip" >
+
+                <!-- Credit Cards -->
+
+                <LinearLayout
+                    android:id="@+id/dummy_layout_credit_card_old"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="#efeff2"
+                    android:clickable="true"
+                    android:onClick="onClickCreditCard"
+                    android:orientation="horizontal"
+                    android:paddingBottom="7dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="7dip"
+                    android:visibility="gone" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_credit_card"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:text="@string/buy_with"
+                        android:textColor="#595d66"
+                        android:textSize="14dp" />
+
+                    <ImageView
+                        android:id="@+id/imageview_discover"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_discover" />
+
+                    <ImageView
+                        android:id="@+id/imageview_master_card"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_master_card" />
+
+                    <ImageView
+                        android:id="@+id/imageview_visa"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_visa" />
+
+                    <ImageView
+                        android:id="@+id/imageview_american_express"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_american_express" />
+                </LinearLayout>
+
+                <!-- Pay With Card -->
+
+                <RelativeLayout
+                    android:id="@+id/dummy_layout_credit_card"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dip"
+                    android:layout_below="@+id/dummy_layout_credit_card_old"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/btn_gray_sharp"
+                    android:clickable="true"
+                    android:onClick="onClickCreditCard" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/pay_with_card"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <!-- Layout Credit Card Visibility Anim -->
+
+                <RelativeLayout
+                    android:id="@+id/layout_credit_card_anim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/dummy_layout_credit_card"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:visibility="gone" >
+
+                    <!-- Layout Billing Country -->
+
+                    <RelativeLayout
+                        android:id="@+id/layout_billing_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:paddingBottom="5dip"
+                        android:visibility="gone" >
+
+                        <print.io.view.TextViewFontLight
+                            android:id="@+id/textview_billing_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="5dip"
+                            android:text="@string/billing_country"
+                            android:textColor="#323232"
+                            android:textSize="14dp" />
+
+                        <Spinner
+                            android:id="@+id/spinner_choose_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_billing_country"
+                            android:layout_margin="10dip"
+                            android:background="@drawable/bg_print_type" />
+                    </RelativeLayout>
+
+                    <!-- Layout Payment Method -->
+
+                    <RelativeLayout
+                        android:id="@+id/layout_payment_method"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_billing_country"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:background="#efeff2"
+                        android:paddingBottom="15dip" >
+
+                        <RelativeLayout
+                            android:id="@+id/dummy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#efeff2"
+                            android:padding="7dip" >
+
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/textview_secured_by"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerHorizontal="true"
+                                android:drawableRight="@drawable/icon_braintree"
+                                android:gravity="center"
+                                android:text="@string/secured_by"
+                                android:textColor="#595d66"
+                                android:textSize="12dp" />
+
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/textview_card_information"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textview_secured_by"
+                                android:layout_marginTop="0dip"
+                                android:text="@string/card_information"
+                                android:textColor="#323232" />
+
+                            <!-- Layout Name -->
+
+                            <print.io.view.EditTextFontLight
+                                android:id="@+id/edittext_full_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dip"
+                                android:layout_below="@+id/textview_card_information"
+                                android:layout_marginTop="5dip"
+                                android:background="#ffffff"
+                                android:hint="@string/full_name"
+                                android:inputType="textCapWords"
+                                android:nextFocusDown="@+id/edittext_last_name"
+                                android:paddingLeft="10dip"
+                                android:paddingRight="10dip"
+                                android:singleLine="true"
+                                android:textColor="#595d66"
+                                android:textColorHint="#b3b3b3"
+                                android:textSize="15dp"
+                                android:visibility="visible" />
+
+                            <print.io.view.EditTextFontLight
+                                android:id="@+id/edittext_last_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dip"
+                                android:layout_below="@+id/edittext_full_name"
+                                android:layout_marginTop="5dip"
+                                android:background="#ffffff"
+                                android:focusable="false"
+                                android:hint="@string/last_name"
+                                android:inputType="textCapWords"
+                                android:nextFocusDown="@+id/layout_card_number"
+                                android:paddingLeft="10dip"
+                                android:paddingRight="10dip"
+                                android:singleLine="true"
+                                android:textColor="#595d66"
+                                android:textColorHint="#b3b3b3"
+                                android:textSize="14dp"
+                                android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:id="@+id/layout_card_number"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/edittext_last_name"
+                                android:layout_marginTop="5dip"
+                                android:background="#ffffff" >
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_card_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_toLeftOf="@+id/imageview_check"
+                                    android:background="#ffffff"
+                                    android:hint="@string/card_number"
+                                    android:inputType="numberDecimal"
+                                    android:nextFocusDown="@+id/edittext_cvc"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#b3b3b3"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <ImageView
+                                    android:id="@+id/imageview_check"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dip"
+                                    android:layout_marginRight="5dip"
+                                    android:src="@drawable/icon_check_green"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <print.io.view.EditTextFontLight
+                                android:id="@+id/edittext_cvc"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dip"
+                                android:layout_below="@+id/layout_card_number"
+                                android:layout_marginTop="5dip"
+                                android:background="#ffffff"
+                                android:hint="@string/cvc"
+                                android:inputType="numberDecimal"
+                                android:paddingLeft="10dip"
+                                android:paddingRight="10dip"
+                                android:singleLine="true"
+                                android:textColor="#b3b3b3"
+                                android:textColorHint="#b3b3b3"
+                                android:textSize="15dp" />
+
+                            <!-- Expiration -->
+
+                            <LinearLayout
+                                android:id="@+id/layout_expiration"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/edittext_cvc"
+                                android:layout_marginTop="5dip"
+                                android:orientation="horizontal" >
+
+                                <Spinner
+                                    android:id="@+id/spinner_expiration_month"
+                                    android:layout_width="0dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginRight="3dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_print_type_white" />
+
+                                <Spinner
+                                    android:id="@+id/spinner_expiration_year"
+                                    android:layout_width="0dip"
+                                    android:layout_height="40dip"
+                                    android:layout_marginLeft="3dip"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/bg_print_type_white" />
+                            </LinearLayout>
+
+                            <!-- Shipping Address -->
+                            <!-- VISIBILITY = INVISIBLE -->
+
+                            <RelativeLayout
+                                android:id="@+id/layout_shipping_address"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_expiration"
+                                android:visibility="gone" >
+
+                                <print.io.view.TextViewFontNormal
+                                    android:id="@+id/textview_shipping_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dip"
+                                    android:text="@string/shipping_address"
+                                    android:textColor="#323232" />
+
+                                <!-- Layout Name -->
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_shipping_first_name"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/textview_shipping_address"
+                                    android:layout_marginTop="5dip"
+                                    android:layout_weight="1"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/first_name"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_shipping_last_name"
+                                    android:layout_width="0dip"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_shipping_first_name"
+                                    android:layout_marginTop="5dip"
+                                    android:layout_weight="1"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/last_name"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_shipping_last_name"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/email"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_email"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/state"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <!-- Zip Code -->
+
+                                <LinearLayout
+                                    android:id="@+id/layout_zip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/edittext_state"
+                                    android:layout_marginTop="5dip" >
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_zip_code"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginRight="3dip"
+                                        android:layout_weight="1"
+                                        android:background="#ffffff"
+                                        android:editable="false"
+                                        android:hint="@string/zip_code"
+                                        android:inputType="phone"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_city"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginLeft="3dip"
+                                        android:layout_weight="3"
+                                        android:background="#ffffff"
+                                        android:editable="false"
+                                        android:hint="@string/city"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                                <!-- Address -->
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_address1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/layout_zip"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/address_1"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_address2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_address1"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:editable="false"
+                                    android:hint="@string/address_2"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_shipping_business_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/edittext_address2"
+                                    android:layout_marginTop="5dip"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkbox_shipping_business_address"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dip"
+                                        android:button="@drawable/checkbox_x"
+                                        android:editable="false" />
+
+                                    <print.io.view.TextViewFontLight
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/is_business_address"
+                                        android:textColor="#323232" />
+                                </LinearLayout>
+                                <!-- Telephone -->
+
+                                <LinearLayout
+                                    android:id="@+id/layout_telephone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/layout_shipping_business_address"
+                                    android:layout_marginTop="5dip" >
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_area_num"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginRight="3dip"
+                                        android:layout_weight="1"
+                                        android:background="#ffffff"
+                                        android:editable="false"
+                                        android:hint="+49"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_telephone_num"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginLeft="3dip"
+                                        android:layout_weight="3"
+                                        android:background="#ffffff"
+                                        android:editable="false"
+                                        android:hint="@string/telephone_number"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <!-- END OF  VISIBILITY INVISIBLE Shipping Address -->
+
+                            <LinearLayout
+                                android:id="@+id/layout_same"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_shipping_address"
+                                android:layout_marginTop="5dip"
+                                android:orientation="horizontal" >
+
+                                <!-- Billing Address -->
+
+                                <print.io.view.TextViewFontLight
+                                    android:id="@+id/textview_billing_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/billing_address"
+                                    android:textColor="#595d66"
+                                    android:visibility="gone" />
+
+                                <CheckBox
+                                    android:id="@+id/checkbox_same_as"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dip"
+                                    android:layout_marginRight="15dip"
+                                    android:button="@drawable/checkbox_x"
+                                    android:checked="true"
+                                    android:visibility="gone" />
+
+                                <print.io.view.TextViewFontLight
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/same_as"
+                                    android:textColor="#595d66"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <!-- Same as Shipping Address -->
+
+
+                            <!-- ALL EDIT ITEMS ARE GONE -->
+
+                            <RelativeLayout
+                                android:id="@+id/layout_same_as_shipping_address"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_same"
+                                android:visibility="visible" >
+
+                                <!-- Layout Name -->
+
+                                <LinearLayout
+                                    android:id="@+id/layout_billing_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dip"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone" >
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_first_name"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginRight="3dip"
+                                        android:layout_weight="1"
+                                        android:background="#ffffff"
+                                        android:hint="@string/first_name"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_last_name"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginLeft="3dip"
+                                        android:layout_weight="1"
+                                        android:background="#ffffff"
+                                        android:hint="@string/last_name"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_billing_email"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/layout_billing_name"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:hint="@string/company"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp"
+                                    android:visibility="gone" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_billing_state"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_billing_email"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:hint="@string/company"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp"
+                                    android:visibility="gone" />
+
+                                <!-- Zip Code -->
+
+                                <LinearLayout
+                                    android:id="@+id/layout_billing_zip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/edittext_billing_state"
+                                    android:orientation="horizontal" >
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_zip_code"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="40dip"
+                                        android:background="#ffffff"
+                                        android:hint="@string/zip_code"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_city"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginLeft="3dip"
+                                        android:layout_weight="3"
+                                        android:background="#ffffff"
+                                        android:hint="@string/city"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp"
+                                        android:visibility="visible" />
+                                </LinearLayout>
+
+                                <!-- Address -->
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_billing_address1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/layout_billing_zip"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:hint="@string/address_1"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp"
+                                    android:visibility="gone" />
+
+                                <print.io.view.EditTextFontLight
+                                    android:id="@+id/edittext_billing_address2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_below="@+id/edittext_billing_address1"
+                                    android:layout_marginTop="5dip"
+                                    android:background="#ffffff"
+                                    android:hint="@string/address_2"
+                                    android:paddingLeft="10dip"
+                                    android:paddingRight="10dip"
+                                    android:singleLine="true"
+                                    android:textColor="#595d66"
+                                    android:textColorHint="#b3b3b3"
+                                    android:textSize="15dp"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/layout_billing_business_address"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/edittext_billing_address2"
+                                    android:layout_marginTop="5dip"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone" >
+
+                                    <CheckBox
+                                        android:id="@+id/checkbox_billing_business_address"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dip"
+                                        android:button="@drawable/checkbox_x" />
+
+                                    <print.io.view.TextViewFontLight
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/is_business_address"
+                                        android:textColor="#595d66" />
+                                </LinearLayout>
+
+                                <!-- Telephone -->
+
+                                <LinearLayout
+                                    android:id="@+id/layout_billing_telephone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/layout_billing_business_address"
+                                    android:layout_marginTop="5dip"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone" >
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_area_num"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginRight="3dip"
+                                        android:layout_weight="1"
+                                        android:background="#ffffff"
+                                        android:hint="+49"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+
+                                    <print.io.view.EditTextFontLight
+                                        android:id="@+id/edittext_billing_telephone_num"
+                                        android:layout_width="0dip"
+                                        android:layout_height="40dip"
+                                        android:layout_marginLeft="3dip"
+                                        android:layout_weight="3"
+                                        android:background="#ffffff"
+                                        android:hint="@string/telephone_number"
+                                        android:paddingLeft="10dip"
+                                        android:paddingRight="10dip"
+                                        android:singleLine="true"
+                                        android:textColor="#595d66"
+                                        android:textColorHint="#b3b3b3"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <!-- Place Order -->
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_same_as_shipping_address"
+                                android:layout_marginTop="5dip"
+                                android:background="#ffffff" >
+
+                                <print.io.view.ButtonFontLight
+                                    android:id="@+id/button_place_order"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dip"
+                                    android:layout_centerInParent="true"
+                                    android:background="@drawable/btn_blue_light"
+                                    android:onClick="onClickPlaceOrder"
+                                    android:text="@string/place_order"
+                                    android:textColor="#ffffff"
+                                    android:textSize="16dp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                    <!-- Brain tree big image below layout -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/layout_payment_method"
+                        android:minHeight="200dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/icon_braintree_large" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_almost_done"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:visibility="visible" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_almost_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/almost_done"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            layout="@layout/icon" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/payment_finalized_message"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_titlebar"
+        android:background="#FFFFFF"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_almost_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/payment_finalized"
+            android:textColor="#000000"
+            android:textSize="18dp" />
+
+        <ProgressBar
+            android:id="@+id/progress_verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_almost_done"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="3dip"
+            android:indeterminate="true" />
+    </RelativeLayout>
+
+    <!-- Dialog Product Upload Progress -->
+
+    <include
+        android:id="@+id/dialog_product_upload_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_product_upload_progress"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Payment verification error -->
+
+    <include
+        android:id="@+id/dialog_payment_verification_error"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_payment_verification_error"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- You must enter CVV -->
+
+    <include
+        android:id="@+id/dialog_enter_cvc"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_enter_cvc"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Exp date not valid -->
+
+    <include
+        android:id="@+id/dialog_exp_date_not_valid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_exp_date_not_valid"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Help -->
+
+    <include
+        android:id="@+id/item_help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_help"
+        android:visibility="gone" />
+
+    <!-- Coming Soon -->
+
+    <include
+        android:id="@+id/item_coming_soon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_coming_soon"
+        android:visibility="gone" />
+
+</RelativeLayout>

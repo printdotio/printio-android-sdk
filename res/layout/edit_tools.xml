@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:visibility="visible" >
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="120dip"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="#cccccc"
+        android:paddingLeft="1px"
+        android:paddingRight="1px"
+        android:paddingTop="1px" >
+
+        <LinearLayout
+            android:id="@+id/dummy_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_shufle"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selector_white"
+                android:clickable="true"
+                android:drawableTop="@drawable/icon_shufle_green"
+                android:gravity="center"
+                android:onClick="onClickRandomize"
+                android:paddingBottom="1dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/shuffle"
+                android:textColor="@color/green"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_abc"
+                android:layout_width="fill_parent"
+                android:layout_height="0dip"
+                android:layout_margin="2dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selector_white"
+                android:clickable="true"
+                android:drawableTop="@drawable/icon_abc_green"
+                android:gravity="center"
+                android:onClick="onClickTextTool"
+                android:paddingBottom="1dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/text_tool"
+                android:textColor="@color/green"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

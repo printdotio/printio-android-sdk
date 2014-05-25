@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="print.io"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Permissions needed for new paypal integration -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- for most things, including card.io and paypal -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <application
+        android:name=".PIO"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/ThemePrintIO" >
+        <activity android:name="print.io.PIOActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.slidingmenu.lib.SlidingMenuActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingFragmentActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingListActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingPreferenceActivity" />
+        <activity
+            android:name=".ActivityCaseColorStyle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityCountry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityAnimatedHelp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityCurrency"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityFeaturedProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityAllProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityProductDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityImageUpload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityCustomizeProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityStickerBook"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityPhoneCaseGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityThickPrintGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityCanvasWrapsGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityCanvasWrapsNext"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityChooseGridLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityThrowPillowGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityShoppingCart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityShoppingMethods"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityShippingAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityPaymentMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityCheckout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityChooseShippingAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityAddAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ActivityShipmentReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityOrderCompleted"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name=".social.Instagram"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".social.Flickr"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".social.Dropbox"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ActivityAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityHowItWorks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityAcrylicBlocksGrid"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ActivityChooseGridLayoutTwoScollViews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityPreviewOnWall"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- Activities needed for new paypal functionalities -->
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="b19cee99673011cc11b6192ba569b53c1cd35d41" />
+    </application>
+
+</manifest>

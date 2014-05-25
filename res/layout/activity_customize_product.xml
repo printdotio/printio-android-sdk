@@ -1,0 +1,387 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_photos"
+        android:layout_marginBottom="60dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="40dip"
+        android:background="#ffffff" >
+
+        <print.io.view.CustomizeProductView
+            android:id="@+id/customize_product_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dip"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/layout_photos"
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_above="@+id/tab_bar"
+        android:layout_marginLeft="3dip"
+        android:layout_marginRight="3dip"
+        android:background="#ffffff"
+        android:fillViewport="true"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageview_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dip"
+                android:clickable="true"
+                android:src="@drawable/btn_add" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Options -->
+
+    <include
+        android:id="@+id/options"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab_bar"
+        layout="@layout/item_options"
+        android:visibility="gone" />
+    <!-- Icon Info -->
+
+    <ImageView
+        android:id="@+id/imageview_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_photos"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:visibility="invisible" />
+
+    <!-- Double tap ==> gone, should remove after testing -->
+
+    <RelativeLayout
+        android:id="@+id/layout_double_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_photos"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/icon_double_tap"
+        android:padding="7dip"
+        android:visibility="gone" >
+
+        
+        <TextView
+            android:id="@+id/textview_double_tap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/double_tap"
+            android:textColor="#333745"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <!-- Tab Bar -->
+
+    <include
+        android:id="@+id/tab_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/tab_bar"
+        android:background="#ffffff"
+        android:visibility="visible"
+        android:padding="3dip" />
+
+    <!-- Edit Text -->
+
+    <include
+        android:id="@+id/edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/edit_text"
+        android:visibility="gone" />
+
+    <!-- Autofill -->
+
+    <include
+        android:id="@+id/autofill"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/autofill"
+        android:visibility="gone" />
+
+    <!-- Help -->
+
+    <include
+        android:id="@+id/help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/help"
+        android:visibility="gone" />
+
+    <!-- Buttons Back and Next -->
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_back"
+        android:layout_width="70dip"
+        android:layout_height="35dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/btn_blue_light"
+        android:clickable="true"
+        android:drawableLeft="@drawable/icon_arrow_left_white"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:onClick="onClickBack"
+        android:paddingLeft="9dip"
+        android:paddingRight="6dip"
+        android:text="@string/back"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_double_click"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:layout_toLeftOf="@+id/textview_order"
+        android:layout_toRightOf="@+id/textview_back"
+        android:visibility="visible" >
+
+        <print.io.view.AutoResizeTextViewFontLight
+            android:id="@+id/textview_double_click"
+            android:layout_width="fill_parent"
+            android:layout_height="25dip"
+            android:background="@drawable/btn_green_rounded"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text="@string/double_click"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_double_click"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_pin_green" />
+    </RelativeLayout>
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_back_front_side"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_below="@+id/layout_double_click"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dip"
+        android:gravity="center"
+        android:paddingLeft="6dip"
+        android:paddingRight="6dip"
+        android:text="@string/front_side"
+        android:textColor="#333745"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <print.io.view.AutoResizeTextView
+        android:id="@+id/textview_dotted_line"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_above="@+id/layout_photos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dip"        
+        android:gravity="center"
+        android:text="@string/dotted_line"
+        android:textColor="#c6c8cc"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_order"
+        android:layout_width="70dip"
+        android:layout_height="35dip"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/btn_green"
+        android:clickable="true"
+        android:drawableRight="@drawable/icon_arrow_right"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:onClick="onClickOrder"
+        android:paddingLeft="6dip"
+        android:paddingRight="7dip"
+        android:text="@string/buy_it"
+        android:textColor="#ffffff"
+        android:textSize="16dp" />
+
+    <!-- Overlay Buttons -->
+
+    <RelativeLayout
+        android:id="@+id/layout_shopping_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dummy"
+        android:layout_marginLeft="-1dip"
+        android:gravity="center"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/imageview_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="12dip"
+            android:paddingLeft="11dip"
+            android:paddingRight="11dip"
+            android:paddingTop="12dip"
+            android:src="@drawable/icon_cart"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textview_overlay_num_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageview_cart"
+            android:layout_alignRight="@+id/imageview_cart"
+            android:layout_marginBottom="6dip"
+            android:layout_marginRight="3dip"
+            android:background="@drawable/icon_red_circle"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="8dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dummy"
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:layout_above="@+id/overlay_buttons"
+        android:layout_alignRight="@+id/overlay_buttons"
+        android:background="#55ffffff"
+        android:visibility="gone" />
+
+    <!-- Edit Tools -->
+
+    <include
+        android:id="@+id/edit_tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tab_bar"
+        layout="@layout/edit_tools"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/overlay_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_photos"
+        layout="@layout/overlay_buttons" />
+    <!-- Dialog Discard -->
+
+    <include
+        android:id="@+id/dialog_discard"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/dialog_discard"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Help -->
+
+    <include
+        android:id="@+id/item_help"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_help"
+        android:visibility="gone" />
+
+    <!-- Item Customize Product Preview Details -->
+
+    <include
+        android:id="@+id/layout_preview_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_customize_product_preview_details"
+        android:visibility="gone" />
+
+    <!-- Item Auto Arragne -->
+
+    <include
+        android:id="@+id/layout_auto_arrange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/item_auto_arrange"
+        android:visibility="gone" />
+
+    <!-- Dialog Info -->
+
+    <include
+        android:id="@+id/dialog_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/dialog_info"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Dialog Want to share -->
+
+    <include
+        android:id="@+id/dialog_want_to_share"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/dialog_want_to_share"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <!-- Edit Image -->
+
+    <include
+        android:id="@+id/edit_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/edit_image"
+        android:visibility="gone" />
+
+    <!-- Coming Soon -->
+
+    <include
+        android:id="@+id/item_coming_soon"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_coming_soon"
+        android:visibility="gone" />
+
+</RelativeLayout>

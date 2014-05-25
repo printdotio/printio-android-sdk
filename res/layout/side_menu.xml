@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_for_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/side_menu_background"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/layout_for_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <!-- Search -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:padding="10dip"
+                android:visibility="visible" >
+
+                <print.io.view.EditTextFontLight
+                    android:id="@+id/edittext_search1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text_search"
+                    android:inputType="text"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="30dip"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageview_clear1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:onClick="onClickClearText"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="8dip"
+                    android:src="@drawable/icon_x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/list_view_side_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout_for_search"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="1dip"
+            android:listSelector="#000000" >
+        </ListView>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view_side_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/side_menu_background"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- Search -->
+
+            <RelativeLayout
+                android:id="@+id/layout_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:padding="10dip"
+                android:visibility="visible" >
+
+                <print.io.view.EditTextFontLight
+                    android:id="@+id/edittext_search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_edit_text_search"
+                    android:hint="@string/product_search"
+                    android:inputType="text"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="30dip"
+                    android:textColor="#5c5f68"
+                    android:textColorHint="#5c5f68"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageview_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:onClick="onClickClearText"
+                    android:paddingBottom="8dip"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:paddingTop="8dip"
+                    android:src="@drawable/icon_x" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Exit SDK -->
+
+            <LinearLayout
+                android:id="@+id/layout_exit_sdk"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickExitSDK"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_left_white" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/exit"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <!-- Products -->
+
+            <View
+                android:id="@+id/dummy_exit_1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:id="@+id/dummy_exit_2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <LinearLayout
+                android:id="@+id/layout_products"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickProducts"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_product" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/products"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <!-- Special Offers -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <LinearLayout
+                android:id="@+id/layout_special_offers"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickSpecialOffers"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_offers" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/special_offers"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <!-- View Cart -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <LinearLayout
+                android:id="@+id/layout_view_cart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickShoppingCart"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <RelativeLayout
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClickShoppingCart" >
+
+                    <ImageView
+                        android:id="@+id/imageview_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingBottom="2dip"
+                        android:paddingLeft="2dip"
+                        android:paddingRight="2dip"
+                        android:paddingTop="2dip"
+                        android:src="@drawable/icon_cart_big" />
+
+                    <TextView
+                        android:id="@+id/sidemenu_cart_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageview_cart"
+                        android:layout_alignRight="@+id/imageview_cart"
+                        android:layout_marginBottom="0dip"
+                        android:layout_marginRight="0dip"
+                        android:background="@drawable/icon_red_circle"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="8dp" />
+                </RelativeLayout>
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/view_cart"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <!-- Options -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_options"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/side_menu_options"
+                android:gravity="center"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
+                android:text="@string/options"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+
+            <!-- Chart and Photos -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="110dip"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_change_currency"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_selector"
+                    android:clickable="true"
+                    android:onClick="onClickChangeCurrency" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/text_view_change_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/dummy_currency"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dip"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ffffff"
+                        android:textSize="40dp" />
+
+                    <print.io.view.AutoResizeTextViewFontLight
+                        android:id="@+id/dummy_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="10dip"
+                        android:text="@string/change_currency"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="#343434" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_change_country"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_selector"
+                    android:clickable="true"
+                    android:onClick="onClickChangeCountry" >
+
+                    <print.io.view.CustomSideMenuCountryImageView
+                        android:id="@+id/image_view_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/dummy_country"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="22dp"
+                        android:layout_marginRight="22dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_country" />
+
+                    <print.io.view.AutoResizeTextViewFontLight
+                        android:id="@+id/dummy_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="10dip"
+                        android:text="@string/change_country"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="#343434" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_change_language"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_selector"
+                    android:clickable="true"
+                    android:onClick="onClickChangeLanguage" >
+
+                    <ImageView
+                        android:id="@+id/image_view_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/dummy_language"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dip"
+                        android:src="@drawable/icon_language" />
+
+                    <print.io.view.AutoResizeTextViewFontLight
+                        android:id="@+id/dummy_language"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:padding="10dip"
+                        android:text="@string/change_language"
+                        android:textColor="#ffffff"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Accounts -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_accounts"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/side_menu_accounts"
+                android:gravity="center"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
+                android:text="@string/accounts"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <LinearLayout
+                android:id="@+id/layout_social_net"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:orientation="horizontal" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_fb"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToFacebook"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#343434" />
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_flickr"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToFlickr"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#343434" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:orientation="horizontal" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_picasa"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToPicasa"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#343434" />
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_instagram"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToInstagram"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#000000" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#343434" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:orientation="horizontal" >
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_dropbox"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToDropbox"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#343434" />
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_photobucket"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="12dp"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="onClickLogInToPhotobucket"
+                        android:text="@string/login"
+                        android:textColor="#ffffff"
+                        android:textSize="14dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Info -->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_info"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/side_menu_info"
+                android:gravity="center"
+                android:paddingBottom="3dip"
+                android:paddingTop="3dip"
+                android:text="@string/info"
+                android:textColor="#ffffff"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Pricing Chart -->
+
+            <LinearLayout
+                android:id="@+id/layout_pricing_chart"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickPricingChart"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_pricin_cart" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/pricing_chart"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Share this app -->
+
+            <LinearLayout
+                android:id="@+id/layout_share_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickShareApp"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_share" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/share_this_app"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Like Us On Fb -->
+
+            <LinearLayout
+                android:id="@+id/layout_like"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickLike"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_like" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/like_us"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Rate Our App -->
+
+            <LinearLayout
+                android:id="@+id/layout_rate_our_app"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickRateOurApp"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_star_white" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/rate_our_app"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- About Hellopics -->
+
+            <LinearLayout
+                android:id="@+id/layout_about_hellopics"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickAboutHellopics"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_question_sidemenu" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/about"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- How It Works -->
+
+            <LinearLayout
+                android:id="@+id/layout_how_it_works"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickHowItWorks"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_settings" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/how_it_works"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+
+            <!-- Past Orders -->
+
+            <LinearLayout
+                android:id="@+id/layout_past_orders"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_selector"
+                android:clickable="true"
+                android:onClick="onClickPastOrders"
+                android:orientation="horizontal"
+                android:paddingBottom="15dip"
+                android:paddingRight="15dip"
+                android:paddingTop="15dip" >
+
+                <ImageView
+                    android:layout_width="60dip"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_past_orders" />
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/past_orders"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#000000" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="#343434" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-1dip"
+        android:background="@drawable/bg_gradient_right" />
+
+    <!-- Item information -->
+
+    <include
+        android:id="@+id/item_information"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_help"
+        android:visibility="gone" />
+
+</RelativeLayout>

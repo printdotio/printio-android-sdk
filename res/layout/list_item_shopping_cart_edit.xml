@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_selector_blue"
+    android:paddingBottom="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dummy_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/edittext_quantity"
+            android:layout_alignLeft="@+id/edittext_quantity"
+            android:layout_marginBottom="3dip"
+            android:text="@string/quantity"
+            android:textSize="9dp" />
+
+        <LinearLayout
+            android:id="@+id/dummy_layout_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@+id/edittext_quantity"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageview_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dip"
+                android:clickable="true"
+                android:onClick="onClickPlus"
+                android:src="@drawable/btn_plus" />
+
+            <ImageView
+                android:id="@+id/imageview_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dip"
+                android:clickable="true"
+                android:onClick="onClickMinus"
+                android:src="@drawable/btn_minus" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dummy_layout_prev_edit"
+            android:layout_width="55dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
+            android:layout_toRightOf="@+id/dummy_layout_plus"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageview_shopping_cart"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/button_preview"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickPreviewItem" />
+
+    <RelativeLayout
+        android:id="@+id/layout_name_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imageview_close"
+        android:layout_toRightOf="@+id/imageview_shopping_cart" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_shopping_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:singleLine="true"
+            android:text="MiniBook"
+            android:textColor="#595d66"
+            android:textSize="14dp" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_shopping_cart_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_shopping_cart_item"
+            android:text="$12.00"
+            android:textColor="#595d66"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+    <print.io.view.ButtonFontLight
+        android:id="@+id/imageview_close"
+        android:layout_width="55dip"
+        android:layout_height="25dip"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="2dip"
+        android:layout_toLeftOf="@+id/button_edit"
+        android:background="@drawable/btn_red"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickDeleteItem"
+        android:text="Delete"
+        android:textColor="#ffffff"
+        android:textSize="12dp" />
+
+    <print.io.view.ButtonFontLight
+        android:id="@+id/button_edit"
+        android:layout_width="55dip"
+        android:layout_height="25dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dip"
+        android:layout_toLeftOf="@+id/layout_quantity"
+        android:background="@drawable/btn_blue_light"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickEditItem"
+        android:text="@string/edit"
+        android:textColor="#ffffff"
+        android:textSize="12dp" />
+
+    <LinearLayout
+        android:id="@+id/layout_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <print.io.view.SpinnerQuantity
+            android:id="@+id/spinner_shopping_cart_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:dropDownVerticalOffset="5dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="center_horizontal"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="2dp"
+            android:spinnerMode="dropdown"
+            android:textColor="#323232"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_quantity" />
+    </LinearLayout>
+
+    <!-- <print.io.view.EditTextFontLight -->
+    <!-- android:id="@+id/edittext_quantity" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentRight="true" -->
+    <!-- android:layout_centerVertical="true" -->
+    <!-- android:layout_marginLeft="10dip" -->
+    <!-- android:layout_marginRight="10dip" -->
+    <!-- android:background="@drawable/bg_white_cube" -->
+    <!-- android:gravity="center" -->
+    <!-- android:inputType="number" -->
+    <!-- android:textColor="#595d66" -->
+    <!-- android:textColorHint="#595d66" -->
+    <!-- android:textSize="14dp" /> -->
+
+</RelativeLayout>

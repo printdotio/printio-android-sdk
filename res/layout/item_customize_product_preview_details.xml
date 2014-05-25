@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_type"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <print.io.view.ButtonFontLight
+        android:id="@+id/button_see_other_side"
+        android:layout_width="wrap_content"
+        android:layout_height="35dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dip"
+        android:background="@drawable/btn_blue_light"
+        android:gravity="center"
+        android:onClick="onClickSeeOtherSide"
+        android:paddingLeft="8dip"
+        android:paddingRight="8dip"
+        android:text="@string/see_other_side"
+        android:textColor="#ffffff"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/phone_and_grid_type_txt_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dummy_phone_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:paddingBottom="2dip"
+            android:text="@string/device_type"
+            android:textColor="#222325"
+            android:textSize="16dp" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dummy_grid_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:paddingBottom="2dip"
+            android:text="@string/grid_type"
+            android:textColor="#222325"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_and_grid_type_edit_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <print.io.view.EditTextFontLight
+            android:id="@+id/edittext_phone_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text_green"
+            android:editable="false"
+            android:hint=""
+            android:nextFocusDown="@+id/edittext_grid_type"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="14dp" />
+
+        <print.io.view.EditTextFontLight
+            android:id="@+id/edittext_grid_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text_green"
+            android:editable="false"
+            android:hint=""
+            android:nextFocusDown="@+id/edittext_case_color"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/case_color_edit_text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dummy_case_color"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:paddingBottom="2dip"
+            android:text="@string/case_color"
+            android:textColor="#222325"
+            android:textSize="16dp" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dummy_case_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:paddingBottom="2dip"
+            android:text="@string/case_type_preview"
+            android:textColor="#222325"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/case_type_edit_text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.EditTextFontLight
+            android:id="@+id/edittext_case_color"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text_green"
+            android:editable="false"
+            android:hint=""
+            android:nextFocusDown="@+id/edittext_case_type"
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="14dp" />
+
+        <print.io.view.EditTextFontLight
+            android:id="@+id/edittext_case_type"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_edit_text_green"
+            android:editable="false"
+            android:hint=""
+            android:padding="5dip"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

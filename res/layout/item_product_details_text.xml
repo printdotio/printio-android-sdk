@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+   <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_details_key"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text=""
+            android:textColor="#323232"
+            android:textSize="16dp" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_details_content"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text=""
+            android:textColor="#323232"
+            android:textSize="16dp" />
+    </LinearLayout>
+</LinearLayout>

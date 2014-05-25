@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="80dip"
+        android:paddingRight="80dip"
+        android:paddingTop="20dip" >
+
+        <ProgressBar
+            android:id="@+id/image_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+        <print.io.view.ImageViewBookProducts
+            android:id="@+id/imageview_stickerbook"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
+
+        <print.io.view.ImageViewBookProducts
+            android:id="@+id/imageview_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/imageview_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dip"
+            android:clickable="true"
+            android:onClick="onClickMinus"
+            android:src="@drawable/bg_selector_minus" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:text="Qty 1"
+            android:textColor="#313743"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageview_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dip"
+            android:clickable="true"
+            android:onClick="onClickPlus"
+            android:src="@drawable/bg_selector_plus" />
+    </LinearLayout>
+
+</LinearLayout>

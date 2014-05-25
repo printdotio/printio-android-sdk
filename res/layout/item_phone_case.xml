@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_case_item"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/imageview_phone_case"
+        android:layout_width="70dip"
+        android:layout_height="55dip"
+        android:layout_gravity="center"
+        android:layout_margin="4dip"
+        android:adjustViewBounds="true"
+        android:paddingTop="2dip"
+        android:scaleType="fitCenter" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_phone_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingBottom="2dip"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:textColor="#5e5e5e"
+        android:textSize="14dp" />
+
+    <print.io.view.TextViewFontBold
+        android:id="@+id/textview_canvas_wrape_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:textColor="#333333"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+</LinearLayout>

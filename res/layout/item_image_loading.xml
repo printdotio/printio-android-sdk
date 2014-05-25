@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dip" >
+
+    <RelativeLayout
+        android:id="@+id/layout_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#595d66"
+        android:padding="1dip" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageview_shade_overlay"
+            android:layout_width="55dip"
+            android:layout_height="55dip"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_item_image_upload_transparent"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageview_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageview_shade_overlay"
+            android:layout_alignRight="@+id/imageview_shade_overlay"
+            android:src="@drawable/icon_check_white"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:max="100" />
+
+</RelativeLayout>

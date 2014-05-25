@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000"
+    android:clickable="true"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="14dip"
+        android:background="@drawable/bg_white"
+        android:paddingBottom="32dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="32dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/business_residential"
+            android:textColor="#5a5d66"
+            android:textSize="15dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_address"
+            android:layout_marginTop="15dip"
+            android:orientation="horizontal" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_business"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_light"
+                android:drawableTop="@drawable/icon_business"
+                android:onClick="onClickBusinessAddress"
+                android:padding="14dip"
+                android:text="@string/business"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_residential"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_green"
+                android:drawableTop="@drawable/icon_residential"
+                android:onClick="onClickResidentialAddress"
+                android:padding="14dip"
+                android:text="@string/residential"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/item_help"
+        android:visibility="gone" />
+
+</RelativeLayout>

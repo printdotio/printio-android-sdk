@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseThemePrintIO" parent="@android:style/Theme.Light">
+        <!-- Any customizations for your app running on pre-3.0 devices here -->
+    </style>
+
+    <style name="ThemePrintIO" parent="BaseThemePrintIO">
+        <!-- Common customizations for all devices here -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

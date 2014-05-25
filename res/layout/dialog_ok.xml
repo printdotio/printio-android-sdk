@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dip"
+            android:shadowColor="#000000"
+            android:shadowDx="0.9"
+            android:shadowDy="0.9"
+            android:shadowRadius="2.3"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#33B5E5"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dip"
+            android:background="#33B5E5" />
+    </LinearLayout>
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_margin="20dip"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="0.9"
+        android:shadowDy="0.9"
+        android:shadowRadius="2.3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="#555555" />
+
+    <print.io.view.ButtonFontLight
+        android:id="@+id/button_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_holo_blue"
+        android:padding="15dip"
+        android:text="OK"
+        android:textColor="#FFFFFF"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+</LinearLayout>

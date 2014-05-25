@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="45dp" >
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_quantity_cropping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="15dip"
+        android:text="@string/review_quantity_cropping"
+        android:textColor="#5a5d66"
+        android:textSize="18dp" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_double_tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_quantity_cropping"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="10dip"
+        android:drawableLeft="@drawable/icon_double_tap_small"
+        android:gravity="center"
+        android:text="@string/double_tap_stickerbook"
+        android:textColor="#5a5d66"
+        android:textSize="14dp" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_random"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_double_tap"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="10dip"
+        android:drawableLeft="@drawable/icon_random"
+        android:gravity="center"
+        android:text="@string/random_stickerbook"
+        android:textColor="#5a5d66"
+        android:textSize="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/textview_question_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_double_tap"
+        android:layout_marginBottom="10dip"
+        android:clickable="true"
+        android:onClick="onClickHelp"
+        android:paddingLeft="20dip"
+        android:paddingRight="10dip"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/dummy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:onClick="onClickHelp"
+            android:src="@drawable/icon_magnets_big_green" />
+
+        <print.io.view.TextViewFontLight
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/dummy"
+            android:gravity="center"
+            android:text="@string/click_question_mark"
+            android:textColor="#5a5d66"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
