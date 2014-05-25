@@ -48,171 +48,148 @@ As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as 
 Please add following activities to your AndroidManifest.xml file:
 ```sh
 <activity android:name="com.slidingmenu.lib.SlidingMenuActivity" />
-<activity android:name="com.slidingmenu.lib.SlidingFragmentActivity" />
-<activity android:name="com.slidingmenu.lib.SlidingListActivity" />
-<activity android:name="com.slidingmenu.lib.SlidingPreferenceActivity" />
-<activity
-    android:name="print.io.ActivityCaseColorStyle"
-    android:label="@string/app_name"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" >
-</activity>
-<activity
-    android:name="print.io.ActivityCountry"
-    android:label="@string/app_name"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" >
-</activity>
-<activity
-    android:name="print.io.ActivityAnimatedHelp"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityCurrency"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity
-    android:name="print.io.ActivityFeaturedProducts"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityAllProducts"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityProductDetails"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityImageUpload"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityCustomizeProduct"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityStickerBook"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity
-    android:name="print.io.ActivityPhoneCaseGrid"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityThickPrintGrid"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityCanvasWrapsGrid"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityCanvasWrapsNext"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityChooseGridLayout"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityThrowPillowGrid"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityShoppingCart"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity
-    android:name="print.io.ActivityShoppingMethods"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityShippingAddress"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityPaymentMethod"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityCheckout"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityChooseShippingAddress"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityAddAddress"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="adjustResize" />
-<activity
-    android:name="print.io.ActivityShipmentReview"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity
-    android:name="print.io.ActivityOrderCompleted"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity android:name="com.facebook.LoginActivity" />
-<activity
-    android:name="print.io.social.Instagram"
-    android:noHistory="true"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.social.Flickr"
-    android:noHistory="true"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.social.Dropbox"
-    android:noHistory="true"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="com.paypal.android.MEP.PayPalActivity"
-    android:configChanges="keyboardHidden|orientation"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityAbout"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityHowItWorks"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityAcrylicBlocksGrid"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar"
-    android:windowSoftInputMode="stateHidden" />
-<activity
-    android:name="print.io.ActivityChooseGridLayoutTwoScollViews"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<activity
-    android:name="print.io.ActivityPreviewOnWall"
-    android:screenOrientation="portrait"
-    android:theme="@android:style/Theme.NoTitleBar" />
-<!-- Activities needed for new paypal functionalities -->
-<service
-    android:name="com.paypal.android.sdk.payments.PayPalService"
-    android:exported="false" />
-<activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
-<activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
-<activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
-<activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
-<activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingFragmentActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingListActivity" />
+        <activity android:name="com.slidingmenu.lib.SlidingPreferenceActivity" />
+        <activity
+            android:name="print.io.PIOActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCaseColorStyle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityCountry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityAnimatedHelp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCurrency"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityFeaturedProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityAllProducts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityProductDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityImageUpload"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCustomizeProduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityStickerBook"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityPhoneCaseGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityThickPrintGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCanvasWrapsGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCanvasWrapsNext"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityChooseGridLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityThrowPillowGrid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityShoppingCart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityShoppingMethods"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityShippingAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityPaymentMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityCheckout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityChooseShippingAddress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityAddAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="print.io.ActivityShipmentReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityOrderCompleted"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name="com.facebook.LoginActivity" />
+        <activity
+            android:name="print.io.social.Instagram"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.social.Flickr"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.social.Dropbox"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="print.io.ActivityAbout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityHowItWorks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityAcrylicBlocksGrid"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityChooseGridLayoutTwoScollViews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.ActivityPreviewOnWall"
+            android:screenOrientation="portrait" />
+
+        <!-- Activities needed for new paypal functionalities -->
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentCompletedActivity" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
 
 ```
 
