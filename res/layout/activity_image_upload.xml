@@ -111,13 +111,13 @@
         </RelativeLayout>
     </RelativeLayout>
 
-     <View
+    <View
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <!-- Social Networks -->
 
     <RelativeLayout
@@ -346,6 +346,13 @@
         </RelativeLayout>
     </RelativeLayout>
 
+    <!-- Photobucket - we just need Android to generate layout_photobucket id inside R.java -->
+    <View
+        android:id="@+id/layout_photobucket"
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:visibility="gone" />
+
     <!-- Search -->
 
     <RelativeLayout
@@ -485,7 +492,7 @@
     <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"        
+        android:layout_alignParentBottom="true"
         layout="@layout/overlay_buttons" />
 
     <print.io.view.TextViewFontLight
@@ -497,8 +504,8 @@
         android:layout_marginTop="2dip"
         android:background="@drawable/btn_green"
         android:clickable="true"
-        android:drawableRight="@drawable/icon_arrow_right"
         android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_right"
         android:gravity="center"
         android:onClick="onClickNext"
         android:paddingBottom="9dip"
@@ -562,16 +569,15 @@
         android:layout_height="fill_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
-    
+
     <!-- Dialog PhotoBucket login -->
-    
-    <include 
+
+    <include
         android:id="@+id/dialog_photobucket_login"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         layout="@layout/dialog_photobucket_login"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
     <!-- Coming Soon -->
 

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">print.io</string>
-    <string name="facebook_app_id">309503815860008</string>
     <string name="menu_settings">Settings</string> <!-- translate -->
     <string name="choose_country">Choose Country</string> <!-- translate -->
     <string name="store">Store</string> <!-- translate -->

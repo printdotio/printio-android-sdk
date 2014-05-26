@@ -168,10 +168,6 @@
             android:name=".ActivityPreviewOnWall"
             android:screenOrientation="portrait" />
 
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-
         <!-- Activities needed for new paypal functionalities -->
         <service
             android:name="com.paypal.android.sdk.payments.PayPalService"
