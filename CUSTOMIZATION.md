@@ -27,7 +27,6 @@ Header bar changeable icons:
 
  - **icon\_arrow\_back\_2.png(19x33px)**
  - **icon\_question\_big.png(25x38px)**
-
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_back.png)
 
 
@@ -40,7 +39,6 @@ Header bar changeable icons:
 \*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
 
  - **customized header example:**
-
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
 
 ##Side Menu
@@ -49,6 +47,7 @@ Header bar changeable icons:
  - **icon_cart_items_qty_side_menu.png(31x31px)**
 >![Alt icon_cart.png(53x50px)](http://bregava.rs/customization screenshots/cart_big.png)
 
+
  - `<color name="side_menu_background">#1D1D1D</color>`
  - `<color name="side_menu_text">#ffffff</color>`
  - `<color name="side_menu_options">#239EDB</color>`
@@ -56,7 +55,34 @@ Header bar changeable icons:
  - `<color name="side_menu_info">#6369A6</color>`
  - `<color name="side_menu_cart_items_qty_text">#ffffff</color>`
 
+
+ - **side menu**
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/side_menu.png)
+
+
+##Customize Product screen
+
+ - **icon\_add\_more\_images\_a(111x111px)** - default
+ - **icon\_add\_more\_images\_b(111x111px)** - pressed state
+
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_add_more_images_a.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_add_more_images_b.png)
+
+
+ - **icon\_help\_circle\_grey(50x50px)** - default
+ - **icon\_help\_circle\_grey\_dark(50x50px)** - pressed state
+
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_circle_grey.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_circle_grey_dark.png)
+
+ - **PIO.setShowPhotosInCustomize(boolean);**
+ - **PIO.setShowOptionsInCustomize(boolean);**
+
+
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options_and_add_photos1.png)
+
 
 
 
