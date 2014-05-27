@@ -9,7 +9,7 @@ For best results, please keep the icons the same size as they are currently.
 
 ##Header Bar
 
-Header bar changeable icons:
+Header bar changeable icons through the SDK:
 
  - **icon\_menu_default.png(35x34px)**
  - **icon\_cart_default.png(35x34px)**
@@ -30,13 +30,16 @@ Header bar changeable icons:
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_back.png)
 
 
+ - `PIO.setHeaderColor(int);`\*\*
+ 
+ - `<color name="title_bar_background">#ffffff</color>`\*\*
 
- - `<color name="title_bar_background">#ffffff</color>`
+\*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
+
+
  - `<color name="title_bar_text">#000000</color>`
  - `<color name="title_bar_separator">#d6d6d6</color>`
  - `<color name="cart_items_qty_text">#ffffff</color>`
-
-\*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
 
  - **customized header example:**
  
@@ -93,16 +96,41 @@ Hide category + search view on Featured Products screen. Default value is NO;
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
 
+##Photo Sources
+
+ - **Set a list of available photo sources.**
+
+```sh
+	ArrayList<PhotoSource> photoSourcesTest = new ArrayList<PIO.PhotoSource>();
+	
+	photoSourcesTest.add(PhotoSource.PHONE);
+	photoSourcesTest.add(PhotoSource.PICASA);
+	photoSourcesTest.add(PhotoSource.FACEBOOK);
+	photoSourcesTest.add(PhotoSource.DROPBOX);
+	photoSourcesTest.add(PhotoSource.FLICKR);
+	photoSourcesTest.add(PhotoSource.INSTAGRAM);
+	photoSourcesTest.add(PhotoSource.PHOTOBUCKET);
+	
+	PIO.setPhotoSources(photoSourcesTest);
+```
+
+
+ - **Pass in images URLs.**
+
+```sh
+PIO.setImagesUrls(String[]);
+```
 
 ##Fonts
 
- - **PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");**
- - **PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");**
- - **PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");**
+Custom Light, Normal and Bold fonts should be placed in /assets before calling SDK setters for each style.
 
+```sh
+PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
+PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
+PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
+```
 ##Strings
-/res/strings.xml
-
 
 
 
