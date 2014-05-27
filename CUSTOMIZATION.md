@@ -11,7 +11,7 @@ Dimensions are expressed in pixels.
 ##Header
 
 Header icons 1:  
-![alt text](http://bregava.rs/customization screenshots/Screenshot_2014-05-27-20-49-50.png "Header sample 1")  
+![alt text](http://bregava.rs/customization screenshots/screen_1.png "Header sample 1")  
   
   
 ![alt text](http://bregava.rs/customization screenshots/icon_menu_default.png "icon_menu_default.png")
@@ -31,7 +31,7 @@ icon_cart_items_qty_background (31x31)
   
   
 Header icons 2:  
-![alt text](http://bregava.rs/customization screenshots/Screenshot_2014-05-27-20-50-15.png "Header sample 2")  
+![alt text](http://bregava.rs/customization screenshots/screen_2.png "Header sample 2")  
   
   
 ![alt text](http://bregava.rs/customization screenshots/icon_arrow_back_2.png "icon_arrow_back_2.png")
