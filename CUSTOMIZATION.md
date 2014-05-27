@@ -21,7 +21,7 @@ Header bar changeable icons:
  - **icon\_menu\_pressed.png(35x34px)**
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/menu_pressed.png)
 
- - **icon\_menu\_pressed.png(35x34px)**
+ - **icon\_cart\_pressed.png(35x34px)**
 >![Alt icon_cart_pressed.png(35x34px)](http://bregava.rs/customization screenshots/cart_pressed.png)
 
 
@@ -60,6 +60,16 @@ Header bar changeable icons:
  - **side menu**
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/side_menu.png)
 
+##Featured Products screen
+
+Set country on Featured Products screen instead on First screen. Default value is NO.
+
+`PIO.setCountryOnFeaturedProducts(boolean);`
+
+
+Hide category + search view on Featured Products screen. Default value is NO;
+
+`PIO.setHideCategorySearchBar(boolean);`
 
 ##Customize Product screen
 
@@ -82,6 +92,17 @@ Header bar changeable icons:
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options_and_add_photos1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
+
+
+##Fonts
+
+ - **PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");**
+ - **PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");**
+ - **PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");**
+
+##Strings
+/res/strings.xml
+
 
 
 
