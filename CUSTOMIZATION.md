@@ -39,7 +39,8 @@ Header bar changeable icons:
 \*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
 
  - **customized header example:**
->![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
+ 
+	>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
 
 ##Side Menu
 
