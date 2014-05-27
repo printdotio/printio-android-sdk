@@ -1,34 +1,46 @@
 #SDK Customization
 
 #Overview
-Icons are located in `/res/drawable-xhdpi`.
-Colors have been preset in `/res/values/colors.xml`.
+Icons are located in `/res/drawable-xhdpi`.  
+Colors are defined in `/res/values/colors.xml`.  
+  
+To customize the icons, replace them with your own.  
+For best results, new icons should be the same sizes as the ones they are replacing.  
+Dimensions are expressed in pixels.  
 
-In this document we will identify some of icons, color and fonts that are most likely to change.
-For best results, please keep the icons the same size as they are currently.
+##Header
 
-##Header Bar
+Header icons 1:  
+![alt text](http://bregava.rs/customization screenshots/Screenshot_2014-05-27-20-49-50.png "Header sample 1")  
+  
+  
+![alt text](http://bregava.rs/customization screenshots/icon_menu_default.png "icon_menu_default.png")
+icon_menu_default.png (39x29)  
 
-Header bar changeable icons through the SDK:
+![alt text](http://bregava.rs/customization screenshots/icon_menu_pressed.png "icon_menu_pressed.png")
+icon_menu_pressed.png (39x29)  
 
- - **icon\_menu_default.png(35x34px)**
- - **icon\_cart_default.png(35x34px)**
- - **icon\_cart\_items\_qty\_background.png(31x31px)**
- 
-    >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/cart.png)
+![alt text](http://bregava.rs/customization screenshots/icon_cart_default.png "icon_cart_default.png")
+icon_cart_default.png (45x42)  
 
+![alt text](http://bregava.rs/customization screenshots/icon_cart_pressed.png "icon_cart_pressed.png")
+icon_cart_pressed.png (45x42)  
 
- - **icon\_menu\_pressed.png(35x34px)**
->![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/menu_pressed.png)
+![alt text](http://bregava.rs/customization screenshots/icon_cart_items_qty_background.png "icon_cart_items_qty_background")
+icon_cart_items_qty_background (31x31)  
+  
+  
+Header icons 2:  
+![alt text](http://bregava.rs/customization screenshots/Screenshot_2014-05-27-20-50-15.png "Header sample 2")  
+  
+  
+![alt text](http://bregava.rs/customization screenshots/icon_arrow_back_2.png "icon_arrow_back_2.png")
+icon_arrow_back_2.png (19x33)  
 
- - **icon\_cart\_pressed.png(35x34px)**
->![Alt icon_cart_pressed.png(35x34px)](http://bregava.rs/customization screenshots/cart_pressed.png)
-
-
- - **icon\_arrow\_back\_2.png(19x33px)**
- - **icon\_question\_big.png(25x38px)**
->![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_back.png)
-
+![alt text](http://bregava.rs/customization screenshots/icon_question_big.png "icon_question_big.png")
+icon_question_big.png (25x38)  
+  
+  
 
  - `PIO.setHeaderColor(int);`\*\*
  
