@@ -41,14 +41,15 @@ icon_arrow_back_2.png (19x33)
 icon_question_big.png (25x38)  
   
   
-
+  
+Header color can be changed from xml or programatically:
  - `PIO.setHeaderColor(int);`\*\*
  
  - `<color name="title_bar_background">#ffffff</color>`\*\*
 
 \*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
-
-
+  
+  
  - `<color name="title_bar_text">#000000</color>`
  - `<color name="title_bar_separator">#d6d6d6</color>`
  - `<color name="cart_items_qty_text">#ffffff</color>`
@@ -58,12 +59,6 @@ icon_question_big.png (25x38)
 	>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
 
 ##Side Menu
-
-Enable or disable side menu.
-
-```sh
-PIO.setSideMenuEnabled(boolean);
-```  
 
 
  - **icon\_cart\_big.png(53x50px)**
@@ -82,16 +77,6 @@ PIO.setSideMenuEnabled(boolean);
  - **side menu**
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/side_menu.png)
 
-##Featured Products screen
-
-Set country on Featured Products screen instead on First screen. Default value is NO.
-
-`PIO.setCountryOnFeaturedProducts(boolean);`
-
-
-Hide category + search view on Featured Products screen. Default value is NO;
-
-`PIO.setHideCategorySearchBar(boolean);`
 
 ##Customize Product screen
 
@@ -114,6 +99,21 @@ Hide category + search view on Featured Products screen. Default value is NO;
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options_and_add_photos1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
+
+##Featured Products screen
+
+Set country on Featured Products screen instead on First screen. Default value is NO.
+
+```sh
+PIO.setCountryOnFeaturedProducts(boolean);
+```
+
+
+Hide category + search view on Featured Products screen. Default value is NO;
+
+```sh
+PIO.setHideCategorySearchBar(boolean);
+```
 
 ##Photo Sources
 
@@ -204,6 +204,12 @@ PIO.setCoastersType(int);
 ```
 
 ##Other Customization
+
+Enable or disable side menu.
+
+```sh
+PIO.setSideMenuEnabled(boolean);
+```  
 
 Set the partners/payee name for payment screens.
 ```sh
