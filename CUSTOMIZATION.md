@@ -1,6 +1,6 @@
 #SDK Customization
 
-#1. Changing icons, colors and fonts
+#Overview
 Icons are located in `/res/drawable-xhdpi`.
 Colors have been preset in `/res/values/colors.xml`.
 
