@@ -9,7 +9,7 @@
         android:id="@+id/layout_titlebar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title_bar" >
+        android:background="@color/title_bar_background" >
 
         <LinearLayout
             android:id="@+id/layout_menu_back"
@@ -104,9 +104,9 @@
                 android:layout_alignRight="@+id/imageview_cart"
                 android:layout_marginBottom="5dip"
                 android:layout_marginRight="1dip"
-                android:background="@drawable/icon_red_circle"
+                android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/cart_items_qty_text"
                 android:textSize="8dp" />
         </RelativeLayout>
     </RelativeLayout>
@@ -347,7 +347,8 @@
     </RelativeLayout>
 
     <!-- Photobucket - we just need Android to generate layout_photobucket id inside R.java -->
-    <View
+
+    <View
         android:id="@+id/layout_photobucket"
         android:layout_width="0px"
         android:layout_height="0px"
@@ -492,7 +493,7 @@
     <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"        
         layout="@layout/overlay_buttons" />
 
     <print.io.view.TextViewFontLight
@@ -504,8 +505,8 @@
         android:layout_marginTop="2dip"
         android:background="@drawable/btn_green"
         android:clickable="true"
-        android:drawablePadding="10dp"
         android:drawableRight="@drawable/icon_arrow_right"
+        android:drawablePadding="10dp"
         android:gravity="center"
         android:onClick="onClickNext"
         android:paddingBottom="9dip"
@@ -571,13 +572,14 @@
         android:visibility="gone" />
 
     <!-- Dialog PhotoBucket login -->
-
-    <include
+    
+    <include 
         android:id="@+id/dialog_photobucket_login"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         layout="@layout/dialog_photobucket_login"
-        android:visibility="gone" />
+        android:visibility="gone"
+        />
 
     <!-- Coming Soon -->
 

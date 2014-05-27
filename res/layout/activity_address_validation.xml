@@ -8,7 +8,7 @@
         android:id="@+id/layout_titlebar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title_bar" >
+        android:background="@color/title_bar_background" >
 
         <LinearLayout
             android:id="@+id/layout_menu_back"
