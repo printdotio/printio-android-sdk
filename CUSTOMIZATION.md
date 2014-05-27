@@ -119,6 +119,17 @@ Hide category + search view on Featured Products screen. Default value is NO;
 PIO.setImagesUrls(String[]);
 ```
 
+ - **Set passed in image as thumbnail for templates with one photo. Right now, only supports Canvas Wraps, Framed Prints, Metal Prints and Acrylic Prints.**
+```sh
+PIO.setPassedImageThumb(boolean); 
+```
+
+ - **Allow or stop user to use other image sources if some images are passed to SDK**
+```sh
+ PIO.setCanUseUpload(boolean);
+```
+
+
 ##Fonts
 
 Custom Light, Normal and Bold fonts should be placed in /assets before calling SDK setters for each style.
