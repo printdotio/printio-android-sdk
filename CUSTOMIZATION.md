@@ -27,6 +27,7 @@ Header bar changeable icons:
 
  - **icon\_arrow\_back\_2.png(19x33px)**
  - **icon\_question\_big.png(25x38px)**
+
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/icon_help_back.png)
 
 
@@ -40,7 +41,7 @@ Header bar changeable icons:
 
  - **customized header example:**
 
-    >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
 
 ##Side Menu
 
@@ -54,7 +55,6 @@ Header bar changeable icons:
  - `<color name="side_menu_accounts">#1CBA9B</color>`
  - `<color name="side_menu_info">#6369A6</color>`
  - `<color name="side_menu_cart_items_qty_text">#ffffff</color>`
-
 
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/side_menu.png)
 
