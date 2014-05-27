@@ -39,6 +39,7 @@ Header bar changeable icons:
 \*\*Note that any color change for header background will be ignored if you set the color at sdk invoking
 
  - **customized header example:**
+ 
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header1.png)
 
 ##Side Menu
@@ -78,11 +79,9 @@ Header bar changeable icons:
  - **PIO.setShowPhotosInCustomize(boolean);**
  - **PIO.setShowOptionsInCustomize(boolean);**
 
-
->![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
->![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options_and_add_photos1.png)
-
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product_without_options1.png)
+>![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customize_product1.png)
 
 
 
