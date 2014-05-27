@@ -9,7 +9,7 @@
         android:id="@+id/layout_titlebar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@color/title_bar" >
+        android:background="@color/title_bar_background" >
 
         <LinearLayout
             android:id="@+id/layout_menu_back"
@@ -104,9 +104,9 @@
                 android:layout_alignRight="@+id/imageview_cart"
                 android:layout_marginBottom="5dip"
                 android:layout_marginRight="1dip"
-                android:background="@drawable/icon_red_circle"
+                android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
-                android:textColor="#ffffff"
+                android:textColor="@color/cart_items_qty_text"
                 android:textSize="8dp" />
         </RelativeLayout>
     </RelativeLayout>

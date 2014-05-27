@@ -273,9 +273,9 @@
             android:layout_alignRight="@+id/imageview_cart"
             android:layout_marginBottom="6dip"
             android:layout_marginRight="3dip"
-            android:background="@drawable/icon_red_circle"
+            android:background="@drawable/bg_cart_items_qty"
             android:gravity="center"
-            android:textColor="#ffffff"
+            android:textColor="@color/cart_items_qty_text"
             android:textSize="8dp"
             android:visibility="invisible" />
     </RelativeLayout>
