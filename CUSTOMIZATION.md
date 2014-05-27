@@ -1,11 +1,11 @@
 #SDK Customization
 
 #1. Changing icons, colors and fonts
-Icons are located in /res/drawable-xhdpi.
-Colors have been preset in /res/values/colors.xml.
+Icons are located in `/res/drawable-xhdpi ` 
 
-In this document we will identify some of icons, color and fonts that are most likely to change.
-For best results, please keep the icons the same size as they are currently.
+Colors' definitions are located in `/res/values/colors.xml`
+
+For best results, when replacing icons, make sure that their dimensions remain unchanged.
 
 ##Header Bar
 
