@@ -7,13 +7,13 @@ Colors have been preset in /res/values/colors.xml.
 In this document we will identify some of icons, color and fonts that are most likely to change.
 For best results, please keep the icons the same size as they are currently.
 
-###Header Bar
+##Header Bar
 
 Header bar changeable icons:
 
  - **icon\_menu_default.png(35x34px)**
  - **icon\_cart_default.png(35x34px)**
- - **icon_cart_items_qty_background**
+ - **icon\_cart\_items\_qty\_background.png(31x31px)**
 >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/cart.png)
 
 
@@ -23,7 +23,7 @@ Header bar changeable icons:
  - **icon\_menu\_pressed.png(35x34px)**
 >![Alt icon_cart_pressed.png(35x34px)](http://bregava.rs/customization screenshots/cart_pressed.png)
 
-Header background, text and separator line colors can be changed in /res/values/colors.xml:
+
  - `<color name="title_bar_background">#ffffff</color>`
  - `<color name="title_bar_text">#000000</color>`
  - `<color name="title_bar_separator">#d6d6d6</color>`
@@ -35,3 +35,13 @@ Header background, text and separator line colors can be changed in /res/values/
  - **customized header example:**
 
     >![Alt icon_cart.png(35x34px)](http://bregava.rs/customization screenshots/customized_header.png)
+
+##Side Menu
+
+ - **icon\_cart\_big.png(53x50px)**
+>![Alt icon_cart.png(53x50px)](http://bregava.rs/customization screenshots/cart_big.png)
+
+ - `<color name="side_menu_background">#1D1D1D</color>`
+ - `<color name="side_menu_options">#239EDB</color>`
+ - `<color name="side_menu_accounts">#1CBA9B</color>`
+ - `<color name="side_menu_info">#6369A6</color>`
