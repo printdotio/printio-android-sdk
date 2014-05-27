@@ -59,6 +59,13 @@ icon_question_big.png (25x38)
 
 ##Side Menu
 
+Enable or disable side menu.
+
+```sh
+PIO.setSideMenuEnabled(boolean);
+```  
+
+
  - **icon\_cart\_big.png(53x50px)**
  - **icon_cart_items_qty_side_menu.png(31x31px)**
 >![Alt icon_cart.png(53x50px)](http://bregava.rs/customization screenshots/cart_big.png)
@@ -151,8 +158,61 @@ PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
 PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
 PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
 ```
-##Strings
+
+##Image Editor
+
+Set which buttons will be visible in Image Editor toolbar. By default, all buttons are visible. Parameters are respectively for rotate, add text and add effect buttons. Info button is always visible.
+```sh
+PIO.setUpCropScreen(boolean, boolean, boolean);
+```
 
 
+##Country, Currency and Language
 
+Set country code.
+```sh
+PIO.setCountryCode(String);
+```
+
+##Steps
+
+Jumps directly to product.
+```sh
+PIO.setIdAndSku(ProductIds.TABLET_CASES, "TabletCase-iPad3/4-Gloss");
+```
+
+Jumps directly to product with sku
+```sh
+PIO.setProductIdFromApp(Constants.ProductIds.PHONE_CASES);
+```
+
+Show step by step while setting product layout, size, design, color...
+
+```sh
+PIO.setStepByStep(boolean);
+```
+
+Set auto arrange photos over the product. Default is dialog where user can choose.
+```sh
+PIO.setAutoArrange(boolean);
+```
+
+Set coaster type. 1 - one duplicated photo, 4 - four different photos. Default is dialog where user can choose.
+
+```sh
+PIO.setCoastersType(int);
+```
+
+##Other Customization
+
+Set the partners/payee name for payment screens.
+```sh
+PIO.setPartnerName(String);
+```
+
+SDK in fullscreen. Note if your application is already in fullscreen mode than this will be ignored.
+
+```sh
+PIO.setHideStatusBar(boolean);
+```
 
