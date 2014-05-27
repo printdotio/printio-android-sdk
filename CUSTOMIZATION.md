@@ -1,11 +1,11 @@
 #SDK Customization
 
 #1. Changing icons, colors and fonts
-Icons are located in `/res/drawable-xhdpi ` 
+Icons are located in /res/drawable-xhdpi.
+Colors have been preset in /res/values/colors.xml.
 
-Colors' definitions are located in `/res/values/colors.xml`
-
-For best results, when replacing icons, make sure that their dimensions remain unchanged.
+In this document we will identify some of icons, color and fonts that are most likely to change.
+For best results, please keep the icons the same size as they are currently.
 
 ##Header Bar
 
@@ -99,7 +99,6 @@ Hide category + search view on Featured Products screen. Default value is NO;
 ##Photo Sources
 
  - **Set a list of available photo sources.**
-
 ```sh
 	ArrayList<PhotoSource> photoSourcesTest = new ArrayList<PIO.PhotoSource>();
 	
@@ -116,7 +115,6 @@ Hide category + search view on Featured Products screen. Default value is NO;
 
 
  - **Pass in images URLs.**
-
 ```sh
 PIO.setImagesUrls(String[]);
 ```
