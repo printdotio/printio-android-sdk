@@ -162,7 +162,7 @@
         </HorizontalScrollView>
     </LinearLayout>
 
-    <!-- Image Cauch -->
+    <!-- Image Couch -->
 
     <ImageView
         android:id="@+id/imageview_couch"

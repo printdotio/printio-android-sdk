@@ -175,7 +175,7 @@
                         android:singleLine="true"
                         android:text="@string/phone"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
 
                 <!-- Instagram -->
@@ -206,7 +206,7 @@
                         android:singleLine="true"
                         android:text="@string/instagram"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
 
                 <!-- Facebook -->
@@ -237,7 +237,7 @@
                         android:singleLine="true"
                         android:text="@string/facebook"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -278,38 +278,38 @@
                         android:singleLine="true"
                         android:text="@string/flickr"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
 
-                <!-- Picasa -->
+                <!-- Photobucket -->
 
                 <RelativeLayout
-                    android:id="@+id/layout_picasa"
+                    android:id="@+id/layout_photobucket"
                     android:layout_width="0dip"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_selector_blue"
                     android:clickable="true"
-                    android:onClick="onClickPicasa"
+                    android:onClick="onClickPhotobucket"
                     android:padding="5dip" >
 
                     <ImageView
-                        android:id="@+id/imageview_picasa"
+                        android:id="@+id/imageview_photobucket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/icon_picasa_60" />
+                        android:src="@drawable/icon_photobucket_60" />
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_picasa"
+                        android:id="@+id/textview_photobucket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_picasa"
+                        android:layout_toRightOf="@+id/imageview_photobucket"
                         android:singleLine="true"
-                        android:text="@string/picasa"
+                        android:text="@string/photobucket"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
 
                 <!-- Dropbox -->
@@ -340,16 +340,16 @@
                         android:singleLine="true"
                         android:text="@string/dropbox"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="12dp" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>
 
-    <!-- Photobucket - we just need Android to generate layout_photobucket id inside R.java -->
+    <!-- Picasa - we just need Android to generate layout_picasa id inside R.java -->
 
     <View
-        android:id="@+id/layout_photobucket"
+        android:id="@+id/layout_picasa"
         android:layout_width="0px"
         android:layout_height="0px"
         android:visibility="gone" />
@@ -493,7 +493,7 @@
     <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"        
+        android:layout_alignParentBottom="true"
         layout="@layout/overlay_buttons" />
 
     <print.io.view.TextViewFontLight
@@ -505,8 +505,8 @@
         android:layout_marginTop="2dip"
         android:background="@drawable/btn_green"
         android:clickable="true"
-        android:drawableRight="@drawable/icon_arrow_right"
         android:drawablePadding="10dp"
+        android:drawableRight="@drawable/icon_arrow_right"
         android:gravity="center"
         android:onClick="onClickNext"
         android:paddingBottom="9dip"
@@ -570,16 +570,6 @@
         android:layout_height="fill_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
-
-    <!-- Dialog PhotoBucket login -->
-    
-    <include 
-        android:id="@+id/dialog_photobucket_login"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        layout="@layout/dialog_photobucket_login"
-        android:visibility="gone"
-        />
 
     <!-- Coming Soon -->
 

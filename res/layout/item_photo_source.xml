@@ -22,7 +22,6 @@
         android:layout_marginLeft="5dip"
         android:layout_toRightOf="@+id/imageview_photo_icon"
         android:singleLine="true"
-        android:text="@string/phone"
         android:textColor="#ffffff"
         android:textSize="12dp" />
 
