@@ -34,7 +34,6 @@ As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as 
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 <!-- Permissions needed for new paypal integration -->
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.VIBRATE" />
