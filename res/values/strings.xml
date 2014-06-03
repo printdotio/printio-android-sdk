@@ -13,6 +13,9 @@
     <string name="log_in_to_pinterest">Log In To Pinterest</string> <!-- translate -->
     <string name="log_in_to_photobucket">Log In To Photobucket</string> <!-- translate -->
     <string name="photobucket_login">Photobucket Login</string>
+    <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
+    <string name="photobucket_error_loading_albums">Cannot load Photobucket albums. Please try later.</string>
+    <string name="photobucket_error_loading_photos">Cannot load Photobucket photos. Please try later.</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="success_login_instagram">Successfully logged in to Instagram</string>
@@ -49,6 +52,8 @@
     <string name="phone">Phone</string> <!-- translate -->
     <string name="instagram">Instagram</string>
     <string name="facebook">Facebook</string>
+    <string name="facebook_photos_of_me">Photos of Me</string>
+    <string name="facebook_photos_of_friends">Photos of Friends</string>
     <string name="flickr">Flickr</string>
     <string name="picasa">Picasa</string>
     <string name="dropbox">Dropbox</string>
@@ -492,7 +497,7 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="dotted_line">(dotted line shows canvas sides)</string>
     <string name="phone_tablet_customize_info_text">Sides of images are wrapped\n around case (not displayed)</string>
     <string name="beach_bag_customize_info_text">(Front design is replicated on back)</string>
-    <string name="drop_box_notification">%1$s allows you to store very large\n photos. Some large photos will cause\n an error in the app if you do not have\n a strong 4g or Wifi connection.</string>
+    <string name="drop_box_notification">%1$s allows you to store very large photos. Some large photos will cause an error in the app if you do not have a strong 4g or Wifi connection.</string>
     <string name="change_country_notification">Changing country will potentially change the price of items in shopping cart.</string>
     <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you can not validate, please contact our support at: 877.731.PICS</string>
     <string name="try_again">Try again</string>

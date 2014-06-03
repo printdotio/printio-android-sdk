@@ -220,7 +220,7 @@
         android:text="@string/dotted_line"
         android:textColor="#c6c8cc"
         android:textSize="14dp"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_order"

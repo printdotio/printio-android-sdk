@@ -19,21 +19,19 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
 
-        <ImageView
-            android:id="@+id/imageview_shade_overlay"
+        <View
+            android:id="@+id/overlay_translucent"
             android:layout_width="55dip"
             android:layout_height="55dip"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:src="@drawable/bg_item_image_upload_transparent"
+            android:background="@color/overlay_translucent"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/imageview_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageview_shade_overlay"
-            android:layout_alignRight="@+id/imageview_shade_overlay"
+            android:layout_alignBottom="@+id/overlay_translucent"
+            android:layout_alignRight="@+id/overlay_translucent"
             android:src="@drawable/icon_check_white"
             android:visibility="gone" />
     </RelativeLayout>

@@ -102,7 +102,7 @@
             android:paddingLeft="15dip"
             android:paddingRight="15dip"
             android:paddingTop="10dip"
-            android:src="@drawable/btn_menu_black" />
+            android:src="@drawable/btn_menu_right" />
     </RelativeLayout>
 
     <View

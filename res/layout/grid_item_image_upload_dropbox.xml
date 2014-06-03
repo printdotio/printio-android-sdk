@@ -20,6 +20,16 @@
         android:background="@color/overlay_translucent"
         android:visibility="gone" />
 
+    <print.io.view.TextViewFontNormal
+        android:id="@+id/textview_dropbox_folder_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dip"
+        android:layout_marginLeft="4dip"
+        android:textColor="#ffffff"
+        android:textSize="14dp"
+        android:visibility="invisible" />
+
     <ImageView
         android:id="@+id/imageview_warning"
         android:layout_width="wrap_content"

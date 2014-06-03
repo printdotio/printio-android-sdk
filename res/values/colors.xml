@@ -2,24 +2,25 @@
 <resources>
 
     <color name="global_window_background">#ffffffff</color>
-    
+
     <!-- changeable colors -->
-    
     <color name="swipeable_bg">#ffffff</color>
     <color name="swipeable_bg_pressed">#EBEBEB</color>
+    <color name="help_btn_bg">#ffffff</color>
+    <color name="help_btn_bg_pressed">#EBEBEB</color>
     <color name="title_bar_background">#ffffff</color> <!-- #42be9c -->
     <color name="title_bar_text">#000000</color>
     <color name="title_bar_separator">#d6d6d6</color> <!-- #d6d6d6 -->
     <color name="cart_items_qty_text">#ffffff</color>
     <color name="step_separator">#000000</color>
-    <color name="side_menu_background">#1d1d1d</color>
-    <color name="side_menu_options">#239EDB</color>
-    <color name="side_menu_accounts">#1CBA9B</color>
-    <color name="side_menu_info">#6369A6</color>
-    <color name="side_menu_cart_items_qty_text">#ffffff</color>
-    
+    <color name="side_menu_background">#1d1d1d</color> <!-- #1d1d1d -->
+    <color name="side_menu_text">#ffffff</color> <!-- #ffffff -->
+    <color name="side_menu_options">#239EDB</color> <!-- #239EDB -->
+    <color name="side_menu_accounts">#1CBA9B</color> <!-- #1CBA9B -->
+    <color name="side_menu_info">#6369A6</color> <!-- #6369A6 -->
+    <color name="side_menu_cart_items_qty_text">#ffffff</color> <!-- #ffffff -->
+
     <!-- other_colors -->
-    
     <color name="holo_blue_bright">#ff00ddff</color>
     <color name="blue_light">#22a0dd</color>
     <color name="blue_dark">#0e79ad</color>
@@ -32,7 +33,8 @@
     <color name="orange">#d94217</color>
     <color name="purple">#646aa6</color>
     <color name="white">#ffffff</color>
-   
+    <color name="overlay_translucent">#80000000</color>
+
     <color name="product_details_layout_shipping">#22a0dd</color>
     <color name="product_details_layout_bottom">#333333</color>
     <color name="image_upload_soc_but_bg">#333333</color>
