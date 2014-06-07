@@ -249,6 +249,8 @@
     <string name="street_1">Street</string> <!-- translate -->
     <string name="street_2">Street 2 (Apt or Suite #)</string> <!-- translate -->
     <string name="save_address">Save Address</string> <!-- translate -->
+    <string name="pick_from_contacts">Pick from Contacts</string>
+    <string name="no_address_saved_for_contact">Sorry, there is no address saved for that contact!</string>
     <string name="country">Country</string> <!-- translate -->
     <string name="business_residential">Is this address Business or Residental?</string> <!-- translate -->
     <string name="business">Business\nAddress</string> <!-- translate -->
