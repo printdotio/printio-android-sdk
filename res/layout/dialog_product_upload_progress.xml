@@ -24,7 +24,7 @@
             android:gravity="center"
             android:padding="15dip"
             android:textColor="#ffffff"
-            android:textSize="15dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ProgressBar
             android:id="@+id/progressbar_check_out"
@@ -46,7 +46,7 @@
             android:gravity="center_horizontal"
             android:padding="15dip"
             android:textColor="#ffffff"
-            android:textSize="15dip"
+            android:textSize="@dimen/text_size_normal"
             android:text="Continue upload?"
             android:visibility="gone" />
 
@@ -70,7 +70,7 @@
                 android:padding="14dip"
                 android:text="No"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -84,7 +84,7 @@
                 android:padding="14dip"
                 android:text="Yes"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

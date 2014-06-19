@@ -87,7 +87,6 @@
         android:padding="7dip"
         android:visibility="gone" >
 
-        
         <TextView
             android:id="@+id/textview_double_tap"
             android:layout_width="wrap_content"
@@ -96,7 +95,7 @@
             android:gravity="center"
             android:text="@string/double_tap"
             android:textColor="#333745"
-            android:textSize="10dp" />
+            android:textSize="@dimen/text_size_small" />
     </RelativeLayout>
 
     <!-- Tab Bar -->
@@ -108,8 +107,8 @@
         android:layout_alignParentBottom="true"
         layout="@layout/tab_bar"
         android:background="#ffffff"
-        android:visibility="visible"
-        android:padding="3dip" />
+        android:padding="3dip"
+        android:visibility="visible" />
 
     <!-- Edit Text -->
 
@@ -158,7 +157,7 @@
         android:paddingRight="6dip"
         android:text="@string/back"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <RelativeLayout
         android:id="@+id/layout_double_click"
@@ -184,7 +183,7 @@
             android:singleLine="true"
             android:text="@string/double_click"
             android:textColor="#ffffff"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -206,7 +205,7 @@
         android:paddingRight="6dip"
         android:text="@string/front_side"
         android:textColor="#333745"
-        android:textSize="16dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
 
     <print.io.view.AutoResizeTextView
@@ -215,11 +214,11 @@
         android:layout_height="35dip"
         android:layout_above="@+id/layout_photos"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dip"        
+        android:layout_marginBottom="5dip"
         android:gravity="center"
         android:text="@string/dotted_line"
         android:textColor="#c6c8cc"
-        android:textSize="14dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
 
     <print.io.view.TextViewFontLight
@@ -232,15 +231,15 @@
         android:layout_marginTop="5dip"
         android:background="@drawable/btn_green"
         android:clickable="true"
+        android:drawablePadding="3dp"
         android:drawableRight="@drawable/icon_arrow_right"
-        android:drawablePadding="5dp"
         android:gravity="center"
         android:onClick="onClickOrder"
-        android:paddingLeft="6dip"
+        android:paddingLeft="4dip"
         android:paddingRight="7dip"
         android:text="@string/buy_it"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <!-- Overlay Buttons -->
 
@@ -276,7 +275,7 @@
             android:background="@drawable/bg_cart_items_qty"
             android:gravity="center"
             android:textColor="@color/cart_items_qty_text"
-            android:textSize="8dp"
+            android:textSize="@dimen/text_size_tiny"
             android:visibility="invisible" />
     </RelativeLayout>
 

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#595d66"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_shopping_cart_price"
@@ -38,7 +38,7 @@
             android:layout_below="@+id/textview_item_name"
             android:text=""
             android:textColor="#595d66"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <print.io.view.TextViewFontLight
@@ -53,6 +53,6 @@
         android:gravity="center"
         android:text=""
         android:textColor="#595d66"
-        android:textSize="14dp" />
+        android:textSize="@dimen/text_size_normal" />
 
 </RelativeLayout>

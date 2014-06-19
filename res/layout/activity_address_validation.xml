@@ -50,7 +50,7 @@
             android:layout_centerInParent="true"
             android:text="@string/address_validation"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                 android:layout_margin="10dip"
                 android:text="@string/validation"
                 android:textColor="#595d66"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <!-- Suggested Address -->
 
@@ -122,7 +122,7 @@
                     android:layout_marginTop="5dip"
                     android:text="@string/suggested_address"
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_suggested_address"
@@ -132,7 +132,7 @@
                     android:layout_centerHorizontal="true"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_suggested_city_zip"
@@ -143,7 +143,7 @@
                     android:layout_marginTop="2dip"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_suggested_country"
@@ -154,7 +154,7 @@
                     android:layout_marginTop="2dip"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_accept_suggestion"
@@ -170,7 +170,7 @@
                     android:text="@string/accept_suggestion"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_edit_suggestion"
@@ -186,7 +186,7 @@
                     android:text="@string/edit_suggestion"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
             <!-- Initial Address -->
@@ -211,7 +211,7 @@
                     android:layout_marginTop="5dip"
                     android:text="@string/initial_address"
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_initial_address"
@@ -221,7 +221,7 @@
                     android:layout_centerHorizontal="true"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_initial_city_zip"
@@ -232,7 +232,7 @@
                     android:layout_marginTop="2dip"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_initial_country"
@@ -243,7 +243,7 @@
                     android:layout_marginTop="2dip"
                     android:text=""
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_edit_address"
@@ -259,7 +259,7 @@
                     android:text="@string/edit_address_re_attempt"
                     android:textColor="#ffffff"
                     android:textStyle="bold"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

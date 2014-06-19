@@ -9,6 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:background="@drawable/bg_white"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -20,7 +22,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_ok"
@@ -32,7 +34,7 @@
             android:onClick="onClickOk"
             android:text="@string/ok"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
 </RelativeLayout>

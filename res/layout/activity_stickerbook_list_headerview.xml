@@ -16,7 +16,7 @@
         android:layout_marginTop="15dip"
         android:text="@string/review_quantity_cropping"
         android:textColor="#5a5d66"
-        android:textSize="18dp" />
+        android:textSize="@dimen/text_size_large" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_double_tap"
@@ -30,7 +30,7 @@
         android:gravity="center"
         android:text="@string/double_tap_stickerbook"
         android:textColor="#5a5d66"
-        android:textSize="14dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_random"
@@ -44,7 +44,7 @@
         android:gravity="center"
         android:text="@string/random_stickerbook"
         android:textColor="#5a5d66"
-        android:textSize="14dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <RelativeLayout
         android:id="@+id/textview_question_mark"
@@ -76,7 +76,7 @@
             android:gravity="center"
             android:text="@string/click_question_mark"
             android:textColor="#5a5d66"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
 </RelativeLayout>

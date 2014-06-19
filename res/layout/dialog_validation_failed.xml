@@ -22,7 +22,7 @@
             android:padding="15dip"
             android:text="@string/validation_failed"
             android:textColor="#5a5d66"
-            android:textSize="16dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_ok"
@@ -36,7 +36,7 @@
             android:onClick="onClickOk"
             android:text="Ok"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
 </RelativeLayout>

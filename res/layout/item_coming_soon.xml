@@ -24,7 +24,7 @@
             android:padding="15dip"
             android:text="@string/coming_soon_product"
             android:textColor="#5a5d66"
-            android:textSize="15dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_enter_your_email"
@@ -54,7 +54,7 @@
             android:paddingTop="14dip"
             android:text="@string/send"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
 
         <ImageView

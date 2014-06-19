@@ -51,7 +51,7 @@
             android:layout_centerInParent="true"
             android:text="@string/choose_options"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
             android:paddingRight="10dip"
             android:textColor="@color/title_bar_text"
             android:gravity="center_horizontal"
-            android:textSize="20dp"
+            android:textSize="@dimen/text_size_title"
             android:visibility="gone" />
     </RelativeLayout>
 
@@ -94,7 +94,7 @@
         android:padding="7dip"
         android:text=""
         android:textColor="#333333"
-        android:textSize="18dp" />
+        android:textSize="@dimen/text_size_large" />
 
     <View
         android:id="@+id/view_dummy_3"

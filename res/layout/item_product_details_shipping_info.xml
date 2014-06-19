@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/shipping_info"
             android:textColor="@color/blue_light"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
     </LinearLayout>
 
     <View
@@ -54,7 +54,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_arrival"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info_arrival_text_fill"
@@ -68,7 +68,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_arrival_text"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <View
@@ -95,7 +95,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_price"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info_price_text_fill"
@@ -109,7 +109,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_price_text"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <View
@@ -136,7 +136,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_information"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info_information_text"
@@ -150,7 +150,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_information_text"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <View
@@ -177,7 +177,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_return_policy"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info_return_policy_text"
@@ -191,7 +191,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_return_policy_text"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <View
@@ -218,7 +218,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_availability"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info_availability_text"
@@ -232,7 +232,7 @@
             android:paddingTop="10dip"
             android:text="@string/shipping_info_availability_text"
             android:textColor="#323232"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
 </LinearLayout>

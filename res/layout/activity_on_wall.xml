@@ -30,7 +30,7 @@
         android:paddingRight="6dip"
         android:text="@string/back"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <TextView
         android:id="@+id/textview_order"
@@ -49,7 +49,7 @@
         android:paddingRight="7dip"
         android:text="@string/buy_it"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <!-- Overlay Buttons -->
 
@@ -91,7 +91,7 @@
             android:layout_marginTop="15dip"
             android:text="0m"
             android:textColor="@color/green"
-            android:textSize="18sp" />
+            android:textSize="@dimen/text_size_large" />
 
         <TextView
             android:id="@+id/textview_min_size"
@@ -104,7 +104,7 @@
             android:layout_marginTop="15dip"
             android:text="5m"
             android:textColor="@color/green"
-            android:textSize="18sp" />
+            android:textSize="@dimen/text_size_large" />
 
         <SeekBar
             android:id="@+id/seekbar"

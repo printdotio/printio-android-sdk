@@ -22,7 +22,7 @@
             android:singleLine="true"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="26dp" />
+            android:textSize="@dimen/text_size_large" />
 
         <RelativeLayout
             android:layout_width="fill_parent"

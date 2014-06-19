@@ -25,7 +25,7 @@
             android:gravity="center"
             android:text="@string/photo_arrangement"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_auto_arrange"
@@ -37,7 +37,7 @@
             android:gravity="center"
             android:text="@string/auto_arrange_text"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_buttons"
@@ -60,7 +60,7 @@
                 android:padding="14dip"
                 android:text="@string/random_auto_arrange"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -75,7 +75,7 @@
                 android:padding="14dip"
                 android:text="@string/manual_drag_drop"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -88,7 +88,7 @@
             android:gravity="center"
             android:text="@string/auto_arrange_note"
             android:textColor="#5a5d66"
-            android:textSize="13dp" />
+            android:textSize="@dimen/text_size_small" />
     </RelativeLayout>
 
     <include

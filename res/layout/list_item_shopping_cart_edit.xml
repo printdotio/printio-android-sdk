@@ -20,7 +20,7 @@
             android:layout_alignLeft="@+id/edittext_quantity"
             android:layout_marginBottom="3dip"
             android:text="@string/quantity"
-            android:textSize="9dp" />
+            android:textSize="@dimen/text_size_small" />
 
         <LinearLayout
             android:id="@+id/dummy_layout_plus"
@@ -98,7 +98,7 @@
             android:singleLine="true"
             android:text="MiniBook"
             android:textColor="#595d66"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_shopping_cart_price"
@@ -107,7 +107,7 @@
             android:layout_below="@+id/textview_shopping_cart_item"
             android:text="$12.00"
             android:textColor="#595d66"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <print.io.view.ButtonFontLight
@@ -123,7 +123,7 @@
         android:onClick="onClickDeleteItem"
         android:text="Delete"
         android:textColor="#ffffff"
-        android:textSize="12dp" />
+        android:textSize="@dimen/text_size_small" />
 
     <print.io.view.ButtonFontLight
         android:id="@+id/button_edit"
@@ -138,7 +138,7 @@
         android:onClick="onClickEditItem"
         android:text="@string/edit"
         android:textColor="#ffffff"
-        android:textSize="12dp" />
+        android:textSize="@dimen/text_size_small" />
 
     <LinearLayout
         android:id="@+id/layout_quantity"
@@ -165,7 +165,7 @@
             android:paddingTop="2dp"
             android:spinnerMode="dropdown"
             android:textColor="#323232"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -186,6 +186,6 @@
     <!-- android:inputType="number" -->
     <!-- android:textColor="#595d66" -->
     <!-- android:textColorHint="#595d66" -->
-    <!-- android:textSize="14dp" /> -->
+    <!-- android:textSize="@dimen/text_size_normal" /> -->
 
 </RelativeLayout>

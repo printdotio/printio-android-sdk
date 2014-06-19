@@ -17,7 +17,7 @@
         android:lineSpacingExtra="2dip"
         android:text="@string/log_in_to_photobucket"
         android:textColor="#5a5d66"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_title" />
 
     <print.io.view.EditTextFontLight
         android:id="@+id/edittext_username"
@@ -58,7 +58,7 @@
             android:paddingTop="8dip"
             android:text="@string/cancel"
             android:textColor="#ffffff"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
 
         <print.io.view.ButtonFontLight
@@ -75,7 +75,7 @@
             android:paddingTop="8dip"
             android:text="@string/login"
             android:textColor="#ffffff"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </LinearLayout>
 

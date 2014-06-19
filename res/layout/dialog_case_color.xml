@@ -26,7 +26,7 @@
             android:gravity="center"
             android:text="@string/custom_color"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_custom_color_red"
@@ -38,7 +38,7 @@
             android:gravity="center"
             android:text="@string/custom_color_red"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_ok"
@@ -51,7 +51,7 @@
             android:onClick="onClickOk"
             android:text="Ok"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </RelativeLayout>
 

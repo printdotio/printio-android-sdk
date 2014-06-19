@@ -21,7 +21,7 @@
         android:paddingRight="8dip"
         android:text="@string/see_other_side"
         android:textColor="#ffffff"
-        android:textSize="16dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
 
     <LinearLayout
@@ -40,7 +40,7 @@
             android:paddingBottom="2dip"
             android:text="@string/device_type"
             android:textColor="#222325"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/dummy_grid_type"
@@ -51,7 +51,7 @@
             android:paddingBottom="2dip"
             android:text="@string/grid_type"
             android:textColor="#222325"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +75,7 @@
             android:singleLine="true"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_grid_type"
@@ -91,7 +91,7 @@
             android:singleLine="true"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
@@ -110,7 +110,7 @@
             android:paddingBottom="2dip"
             android:text="@string/case_color"
             android:textColor="#222325"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/dummy_case_type"
@@ -121,7 +121,7 @@
             android:paddingBottom="2dip"
             android:text="@string/case_type_preview"
             android:textColor="#222325"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
@@ -144,7 +144,7 @@
             android:singleLine="true"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_case_type"
@@ -159,7 +159,7 @@
             android:singleLine="true"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
 </LinearLayout>

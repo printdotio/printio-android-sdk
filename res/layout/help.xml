@@ -23,7 +23,7 @@
             android:padding="15dip"
             android:text="@string/shipping_to"
             android:textColor="#5a5d66"
-            android:textSize="15dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:id="@+id/imageview_help"
@@ -47,7 +47,7 @@
             android:onClick="onClickOk"
             android:text="Ok"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </RelativeLayout>
 

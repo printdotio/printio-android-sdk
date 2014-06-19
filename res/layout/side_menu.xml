@@ -34,7 +34,7 @@
                     android:inputType="text"
                     android:paddingLeft="10dip"
                     android:paddingRight="30dip"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <ImageView
                     android:id="@+id/imageview_clear1"
@@ -107,7 +107,7 @@
                     android:paddingRight="30dip"
                     android:textColor="#5c5f68"
                     android:textColorHint="#5c5f68"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <ImageView
                     android:id="@+id/imageview_clear"
@@ -160,7 +160,7 @@
                     android:layout_gravity="center"
                     android:text="@string/exit"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <!-- Products -->
@@ -200,7 +200,7 @@
                     android:layout_gravity="center"
                     android:text="@string/products"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <!-- Special Offers -->
@@ -238,7 +238,7 @@
                     android:layout_gravity="center"
                     android:text="@string/special_offers"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <!-- View Cart -->
@@ -294,7 +294,7 @@
                         android:background="@drawable/icon_cart_items_qty_side_menu"
                         android:gravity="center"
                         android:textColor="@color/side_menu_cart_items_qty_text"
-                        android:textSize="8dp" />
+                        android:textSize="@dimen/text_size_tiny" />
                 </RelativeLayout>
 
                 <print.io.view.TextViewFontLight
@@ -303,7 +303,7 @@
                     android:layout_gravity="center"
                     android:text="@string/view_cart"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <!-- Options -->
@@ -329,7 +329,7 @@
                 android:paddingTop="3dip"
                 android:text="@string/options"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <!-- Chart and Photos -->
 
@@ -368,7 +368,7 @@
                         android:gravity="center"
                         android:text=""
                         android:textColor="#ffffff"
-                        android:textSize="40dp" />
+                        android:textSize="@dimen/text_size_huge" />
 
                     <print.io.view.AutoResizeTextViewFontLight
                         android:id="@+id/dummy_currency"
@@ -376,13 +376,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
                         android:gravity="center"
                         android:maxLines="2"
                         android:padding="10dip"
                         android:text="@string/change_currency"
                         android:textColor="#ffffff"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </RelativeLayout>
 
                 <View
@@ -423,13 +422,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
                         android:gravity="center"
                         android:maxLines="2"
                         android:padding="10dip"
                         android:text="@string/change_country"
                         android:textColor="#ffffff"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </RelativeLayout>
 
                 <View
@@ -467,13 +465,12 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true"
                         android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
                         android:gravity="center"
                         android:maxLines="2"
                         android:padding="10dip"
                         android:text="@string/change_language"
                         android:textColor="#ffffff"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -500,7 +497,7 @@
                 android:paddingTop="3dip"
                 android:text="@string/accounts"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <View
                 android:layout_width="fill_parent"
@@ -513,18 +510,18 @@
                 android:background="#343434" />
 
             <LinearLayout
-                android:id="@+id/layout_social_net"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
                 <LinearLayout
+                    android:id="@+id/layout_row_1"
                     android:layout_width="fill_parent"
                     android:layout_height="70dip"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_fb"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -532,10 +529,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToFacebook"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <View
                         android:layout_width="1dip"
@@ -548,7 +543,6 @@
                         android:background="#343434" />
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_flickr"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -556,10 +550,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToFlickr"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
                 <View
@@ -573,12 +565,13 @@
                     android:background="#343434" />
 
                 <LinearLayout
+                    android:id="@+id/layout_row_2"
                     android:layout_width="fill_parent"
                     android:layout_height="70dip"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_picasa"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -586,10 +579,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToPicasa"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <View
                         android:layout_width="1dip"
@@ -602,7 +593,6 @@
                         android:background="#343434" />
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_instagram"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -610,10 +600,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToInstagram"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
                 <View
@@ -627,12 +615,13 @@
                     android:background="#343434" />
 
                 <LinearLayout
+                    android:id="@+id/layout_row_3"
                     android:layout_width="fill_parent"
                     android:layout_height="70dip"
-                    android:orientation="horizontal" >
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_dropbox"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -640,10 +629,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToDropbox"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <View
                         android:layout_width="1dip"
@@ -656,7 +643,6 @@
                         android:background="#343434" />
 
                     <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_photobucket"
                         android:layout_width="0dip"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -664,10 +650,8 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:gravity="center"
-                        android:onClick="onClickLogInToPhotobucket"
-                        android:text="@string/login"
                         android:textColor="#ffffff"
-                        android:textSize="14dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:visibility="visible" />
                 </LinearLayout>
             </LinearLayout>
@@ -695,7 +679,7 @@
                 android:paddingTop="3dip"
                 android:text="@string/info"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <View
                 android:layout_width="fill_parent"
@@ -732,7 +716,7 @@
                     android:layout_gravity="center"
                     android:text="@string/pricing_chart"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -770,7 +754,7 @@
                     android:layout_gravity="center"
                     android:text="@string/share_this_app"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -808,7 +792,7 @@
                     android:layout_gravity="center"
                     android:text="@string/like_us"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -846,7 +830,7 @@
                     android:layout_gravity="center"
                     android:text="@string/rate_our_app"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -862,12 +846,12 @@
             <!-- About Hellopics -->
 
             <LinearLayout
-                android:id="@+id/layout_about_hellopics"
+                android:id="@+id/layout_about_partner"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_selector"
                 android:clickable="true"
-                android:onClick="onClickAboutHellopics"
+                android:onClick="onClickAboutPartner"
                 android:orientation="horizontal"
                 android:paddingBottom="15dip"
                 android:paddingRight="15dip"
@@ -882,9 +866,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/about"
+                    android:text="@string/about_partner"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -922,7 +906,7 @@
                     android:layout_gravity="center"
                     android:text="@string/how_it_works"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
@@ -960,7 +944,7 @@
                     android:layout_gravity="center"
                     android:text="@string/past_orders"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View

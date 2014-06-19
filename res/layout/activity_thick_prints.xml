@@ -44,7 +44,7 @@
             android:layout_centerInParent="true"
             android:text="@string/choose_options"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_price"
@@ -55,7 +55,7 @@
             android:paddingLeft="5dip"
             android:paddingRight="10dip"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
     </RelativeLayout>
 
     <View
@@ -78,7 +78,7 @@
         android:padding="7dip"
         android:text="@string/step_1_thick_prints"
         android:textColor="#333333"
-        android:textSize="18dp" />
+        android:textSize="@dimen/text_size_large" />
 
     <View
         android:id="@+id/view_dummy_1"
@@ -101,7 +101,7 @@
         android:paddingTop="3dip"
         android:text="@string/squares"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <HorizontalScrollView
         android:id="@+id/layout_squares_scroll"
@@ -151,7 +151,7 @@
         android:paddingTop="3dip"
         android:text="@string/usuals"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <HorizontalScrollView
         android:id="@+id/layout_usuals_scrool"

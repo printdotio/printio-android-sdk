@@ -45,7 +45,7 @@
                 android:paddingBottom="2dip"
                 android:text="@string/device_type"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <TextView
                 android:id="@+id/dummy_grid_type"
@@ -56,7 +56,7 @@
                 android:paddingBottom="2dip"
                 android:text="@string/grid_type"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -75,7 +75,7 @@
                 android:padding="5dip"
                 android:textColor="#ffffff"
                 android:textColorHint="#595d66"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <EditText
                 android:id="@+id/edittext_grid_type"
@@ -88,7 +88,7 @@
                 android:padding="5dip"
                 android:textColor="#ffffff"
                 android:textColorHint="#595d66"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -106,7 +106,7 @@
                 android:paddingBottom="2dip"
                 android:text="@string/case_color"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <TextView
                 android:id="@+id/dummy_case_type"
@@ -117,7 +117,7 @@
                 android:paddingBottom="2dip"
                 android:text="@string/case_type_preview"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -136,7 +136,7 @@
                 android:padding="5dip"
                 android:textColor="#ffffff"
                 android:textColorHint="#595d66"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <EditText
                 android:id="@+id/edittext_case_type"
@@ -149,7 +149,7 @@
                 android:padding="5dip"
                 android:textColor="#ffffff"
                 android:textColorHint="#595d66"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </LinearLayout>
 

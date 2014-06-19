@@ -52,7 +52,7 @@
             android:layout_centerInParent="true"
             android:text="@string/order_completed"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
                 android:gravity="center"
                 android:text="@string/thanks"
                 android:textColor="#333333"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_large" />
 
             <View
                 android:id="@+id/view_1"
@@ -126,7 +126,7 @@
                 android:gravity="left"
                 android:text="@string/order_number"
                 android:textColor="#333333"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_large" />
 
             <View
                 android:id="@+id/view_2"
@@ -147,7 +147,7 @@
                 android:paddingTop="10dip"
                 android:text="@string/shipment_review"
                 android:textColor="#595d66"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_large" />
 
             <!-- Shipment 1 of ... -->
 
@@ -169,7 +169,7 @@
                 android:paddingLeft="10dip"
                 android:text="@string/ship_to"
                 android:textColor="#595d66"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_large" />
 
             <include
                 android:id="@+id/layout_included_address"
@@ -209,7 +209,7 @@
                     android:paddingRight="10dip"
                     android:text="@string/overall"
                     android:textColor="#333333"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/text_size_large" />
 
                 <print.io.view.TextViewFontBold
                     android:id="@+id/textview_overall"
@@ -219,7 +219,7 @@
                     android:layout_centerVertical="true"
                     android:text=""
                     android:textColor="#333333"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/text_size_large" />
             </RelativeLayout>
 
             <View
@@ -252,7 +252,7 @@
                     android:layout_gravity="center_vertical"
                     android:text="@string/continue_shopping"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View

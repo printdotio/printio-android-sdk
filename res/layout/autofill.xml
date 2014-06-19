@@ -21,7 +21,7 @@
             android:padding="15dip"
             android:text="@string/shipping_to"
             android:textColor="#5a5d66"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:id="@+id/imageview_help"
@@ -53,7 +53,7 @@
                 android:padding="10dip"
                 android:text="@string/random"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -68,7 +68,7 @@
                 android:padding="10dip"
                 android:text="@string/manual"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

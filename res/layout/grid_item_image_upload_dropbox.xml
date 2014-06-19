@@ -27,7 +27,7 @@
         android:layout_marginBottom="2dip"
         android:layout_marginLeft="4dip"
         android:textColor="#ffffff"
-        android:textSize="14dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="invisible" />
 
     <ImageView
@@ -64,7 +64,7 @@
         android:paddingRight="7dp"
         android:paddingTop="4dp"
         android:textColor="@android:color/black"
-        android:textSize="15dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="invisible" >
     </print.io.view.TextViewFontNormal>
 

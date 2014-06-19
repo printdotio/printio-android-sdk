@@ -12,6 +12,6 @@
         android:lineSpacingMultiplier="1.25"
         android:text="@string/introduction"
         android:textColor="#323232"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
 </LinearLayout>

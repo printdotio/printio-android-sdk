@@ -51,7 +51,7 @@
             android:layout_centerInParent="true"
             android:text="@string/select_photos"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="8dp" />
+                android:textSize="@dimen/text_size_tiny" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -175,7 +175,7 @@
                         android:singleLine="true"
                         android:text="@string/phone"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
 
                 <!-- Instagram -->
@@ -206,7 +206,7 @@
                         android:singleLine="true"
                         android:text="@string/instagram"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
 
                 <!-- Facebook -->
@@ -237,7 +237,7 @@
                         android:singleLine="true"
                         android:text="@string/facebook"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -278,7 +278,7 @@
                         android:singleLine="true"
                         android:text="@string/flickr"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
 
                 <!-- Photobucket -->
@@ -309,7 +309,7 @@
                         android:singleLine="true"
                         android:text="@string/photobucket"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
 
                 <!-- Dropbox -->
@@ -340,7 +340,7 @@
                         android:singleLine="true"
                         android:text="@string/dropbox"
                         android:textColor="#ffffff"
-                        android:textSize="12dp" />
+                        android:textSize="@dimen/text_size_small" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
@@ -374,7 +374,7 @@
             android:paddingLeft="10dip"
             android:paddingRight="30dip"
             android:textColor="#595d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:id="@+id/imageview_clear1"
@@ -440,7 +440,7 @@
                 android:layout_marginRight="25dip"
                 android:text="@string/select_photos_from"
                 android:textColor="#333333"
-                android:textSize="17dp"
+                android:textSize="@dimen/text_size_large"
                 android:visibility="gone" />
 
             <print.io.view.TextViewFontLight
@@ -454,7 +454,7 @@
                 android:layout_marginTop="40dip"
                 android:text="@string/multiphoto"
                 android:textColor="#a0a0a0"
-                android:textSize="14dp"
+                android:textSize="@dimen/text_size_normal"
                 android:visibility="gone" />
 
             <print.io.view.TextViewFontLight
@@ -468,7 +468,7 @@
                 android:layout_marginTop="40dip"
                 android:text="@string/singlephoto_upload"
                 android:textColor="#a0a0a0"
-                android:textSize="14dp"
+                android:textSize="@dimen/text_size_normal"
                 android:visibility="gone" />
 
             <include
@@ -514,7 +514,7 @@
         android:paddingTop="9dip"
         android:text="@string/next"
         android:textColor="#ffffff"
-        android:textSize="18dp" />
+        android:textSize="@dimen/text_size_large" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_pic_num"
@@ -530,7 +530,7 @@
         android:paddingTop="7dip"
         android:text="36/60 Photos"
         android:textColor="#ffffff"
-        android:textSize="14dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <!-- Help -->
 

@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/details"
             android:textColor="@color/green"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
     </LinearLayout>
 
     <LinearLayout

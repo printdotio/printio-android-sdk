@@ -2,6 +2,10 @@
 <resources>
 
     <string name="app_name">print.io</string>
+    <string name="share_app_text">I\'m using PrintIO! You can download it from http://www.print.io/our-app</string>
+    <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
+    <string name="upgrade_to_force_upgrade">PrintIO has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
+
     <string name="menu_settings">Settings</string> <!-- translate -->
     <string name="choose_country">Choose Country</string> <!-- translate -->
     <string name="store">Store</string> <!-- translate -->
@@ -30,8 +34,6 @@
     <string name="settings">Settings</string> <!-- translate -->
     <string name="shipping_to">Will you be shipping to %1$s?</string> <!-- translate -->
     <string name="shipping_to_drop_down">SHIPPING TO: </string>
-    <string name="upgrade_to">HelloPics has been upgraded to %1$s, we recommend you to update now?</string>
-    <string name="upgrade_to_force_upgrade">HelloPics has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
     <string name="update">Update</string>
     <string name="later">Later</string>
     <string name="exit">Exit</string>
@@ -71,6 +73,7 @@
     <string name="total_price">Total Price</string> <!-- translate -->
     <string name="order_summary">Order Summary</string> <!-- translate -->
     <string name="sub_total">Subtotal</string> <!-- translate -->
+    <string name="promo_code">Promo Code</string>
     <string name="tax">Tax</string> <!-- translate -->
     <string name="free">Free</string> <!-- translate -->
     <string name="shipping_method">Shipping Method</string> <!-- translate -->
@@ -101,6 +104,11 @@
     <string name="billing_address">Billing Address</string> <!-- translate -->
     <string name="is_business_address">Is business address?</string> <!-- translate -->
     <string name="same_as">Same as Shipping Address</string> <!-- translate -->
+    <string name="invalid_coupon">Coupon code is not valid!</string>
+    <string name="enter_promo_code">Please enter promo code.</string>
+    <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
+    <string name="coupon_applied">Coupon has been applied. You saved a </string>
+    <string name="coupon_savings">Coupon savings:</string>
     <string name="place_order">Place Order</string> <!-- translate -->
     <string name="enter_payment_info">Enter Payment Info</string> <!-- translate -->
     <string name="address">Address</string> <!-- translate -->
@@ -203,11 +211,10 @@
     <string name="proceed">Proceed</string> <!-- translate -->
     <string name="internet_connection_error">Error, please check your internet connection!</string> <!-- translate -->
     <string name="ok_button_text">OK</string> <!-- translate -->
-    <string name="share_app_text">I\'m using HelloPics! You can download it from http://www.hellopics.com/our-app</string> <!-- translate -->
     <string name="share_using">Share using:</string> <!-- translate -->
     <string name="like_us">Like Us On Facebook</string> <!-- translate -->
     <string name="rate_our_app">Rate Our App</string> <!-- translate -->
-    <string name="about">About print.io</string> <!-- translate -->
+    <string name="about_partner">About print.io</string> <!-- translate -->
     <string name="how_it_works">How It Works</string> <!-- translate -->
     <string name="past_orders">Past Orders</string> <!-- translate -->
     <string name="save">Save</string> <!-- translate -->
@@ -458,11 +465,10 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="step_4_canvas_wraps">Step 4: Choose Photo Layout/Design</string>
     <string name="step_3_framed_prints">Step 3: Choose Frame Color</string>
     <string name="step_4_framed_prints">Step 4: Choose Print Type</string>
+    <string name="about">About:</string>
     <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
+    <string name="how_it_works_">How It Works:</string>
     <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
-    <string name="hellopics">PrintIO SDK</string>
-    <string name="about_hellopics">About:</string>
-    <string name="how_it_works_hellopics">How It Works:</string>
     <string name="pop_up_choose_options_1_2">Let\'s get this started and make an awesome Phone Case for your device! This page takes 2 simple steps then it will automatically take you to the next step!\n\n1) Choose the device you want to make the case for. If you don\'t automatically see your Phone type, simply place your finger over the phones and swipe it to the left until you see the Phone of your choice.\n2) Choose the Photo Layout you would like on your Phone Case, this all depends on how many pictures you want to use!</string>
     <string name="pop_up_acrylic_block_1">Lets make an Acrylic Block!\n\nThis page is easy, in on step, you get to pick your thickness of the block and size at the same time!\n\n
         You have two Thickness sizes to choose from: 3/4 inch or 1 inch thick.\n\nThe 3/4 Inch Thick Block comes in three sizes and the 1 Inch Thick Block comes in two sizes.\n\n
@@ -493,6 +499,8 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="home_decor">Home Decor</string>
     <string name="photo_gifts">Photo Gifts</string>
     <string name="apparel">Apparel</string>
+    <string name="apply">Apply</string>
+    <string name="enter_coupon">Enter Coupon Code</string>
     <string name="cases_skins">Cases &amp; Skins</string>
     <string name="prints">Prints</string>
     <string name="see_other_side">See Other Side</string>

@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:text="@string/choose_country"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
             android:inputType="text"
             android:paddingLeft="10dip"
             android:paddingRight="30dip"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:id="@+id/imageview_clear"
@@ -157,7 +157,7 @@
                 android:singleLine="true"
                 android:text="@string/shipping_to"
                 android:textColor="#5a5d66"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_dialog_country"
@@ -170,7 +170,7 @@
                 android:drawableLeft="@drawable/icon_pin_grey"
                 android:gravity="center"
                 android:textColor="#5a5d66"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:visibility="gone" />
 
             <LinearLayout
@@ -191,7 +191,7 @@
                     android:padding="14dip"
                     android:text="No"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
                 <print.io.view.ButtonFontLight
@@ -205,7 +205,7 @@
                     android:padding="14dip"
                     android:text="Yes"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
         </RelativeLayout>

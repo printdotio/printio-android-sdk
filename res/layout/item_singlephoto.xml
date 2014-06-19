@@ -12,7 +12,7 @@
         android:gravity="center"
         android:text="@string/select_photos_from"
         android:textColor="#333333"
-        android:textSize="18dp" />
+        android:textSize="@dimen/text_size_large" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:text="@string/singlephoto"
             android:textColor="@color/green"
-            android:textSize="17dp" />
+            android:textSize="@dimen/text_size_large" />
 
         <print.io.view.TextViewFontLight
             android:layout_width="fill_parent"
@@ -44,7 +44,7 @@
             android:paddingRight="10dip"
             android:text="@string/instruction_1"
             android:textColor="#333333"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:layout_width="fill_parent"
@@ -57,7 +57,7 @@
             android:paddingRight="10dip"
             android:text="@string/instruction_2"
             android:textColor="#333333"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:layout_width="fill_parent"
@@ -70,7 +70,7 @@
             android:paddingRight="10dip"
             android:text="@string/instruction_3"
             android:textColor="#333333"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
 </LinearLayout>

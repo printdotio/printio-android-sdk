@@ -14,7 +14,6 @@
         android:paddingTop="10dip" >
 
         <ImageView
-            android:id="@+id/imageview_quality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -22,12 +21,11 @@
             android:src="@drawable/icon_quality_guarantee" />
 
         <print.io.view.TextViewFontBold
-            android:id="@+id/textview_quality"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/quality_guarantee"
             android:textColor="@color/purple"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
     </LinearLayout>
 
     <View
@@ -38,7 +36,6 @@
         android:background="#d8d8d8" />
 
     <print.io.view.TextViewFontNormal
-        android:id="@+id/textview_quality_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dip"
@@ -48,6 +45,6 @@
         android:paddingTop="10dip"
         android:text="@string/quality_guarantee_text"
         android:textColor="#323232"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
 </LinearLayout>

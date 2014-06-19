@@ -26,7 +26,7 @@
             android:paddingTop="7dip"
             android:text="@string/edit"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
@@ -49,7 +49,7 @@
             android:paddingRight="15dp"
             android:text="@string/delete"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <RelativeLayout
@@ -78,7 +78,7 @@
             android:paddingRight="10dip"
             android:text=""
             android:textColor="#323232"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_item_description"
@@ -90,7 +90,7 @@
             android:paddingRight="10dip"
             android:text=""
             android:textColor="#323232"
-            android:textSize="13dp" />
+            android:textSize="@dimen/text_size_small" />
 
         <LinearLayout
             android:id="@+id/textview_price"
@@ -110,7 +110,7 @@
                 android:gravity="center"
                 android:text="@string/price"
                 android:textColor="#323232"
-                android:textSize="13dp" />
+                android:textSize="@dimen/text_size_small" />
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_shopping_cart_price"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textColor="#323232"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,7 +139,7 @@
                 android:gravity="center"
                 android:text="@string/quantity"
                 android:textColor="#323232"
-                android:textSize="13dp" />
+                android:textSize="@dimen/text_size_small" />
 
             <print.io.view.SpinnerQuantity
                 android:id="@+id/spinner_shopping_cart_quantity"
@@ -155,7 +155,7 @@
                 android:paddingTop="2dp"
                 android:spinnerMode="dropdown"
                 android:textColor="#323232"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -182,7 +182,7 @@
                 android:gravity="center"
                 android:text="@string/est_arrival"
                 android:textColor="#323232"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_est_arrival_value"
@@ -192,7 +192,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#323232"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <LinearLayout
@@ -212,7 +212,7 @@
                 android:gravity="center"
                 android:text="@string/ship_cost"
                 android:textColor="#323232"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_ship_cost_value"
@@ -222,7 +222,7 @@
                 android:singleLine="true"
                 android:text=""
                 android:textColor="#323232"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </RelativeLayout>
 

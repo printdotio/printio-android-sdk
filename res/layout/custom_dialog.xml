@@ -13,7 +13,7 @@
         android:padding="15dip" >
 
         <print.io.view.DialogFont
-            android:id="@+id/textview_shipping_to"
+            android:id="@+id/textview_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -22,10 +22,10 @@
             android:textColor="#5a5d66" />
 
         <print.io.view.DialogFont
-            android:id="@+id/textview_country"
+            android:id="@+id/textview_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_shipping_to"
+            android:layout_below="@+id/textview_title"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dip"
             android:drawableRight="@drawable/icon_pin_grey"
@@ -35,7 +35,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_country"
+            android:layout_below="@+id/textview_text"
             android:layout_margin="20dip"
             android:orientation="horizontal" >
 
@@ -52,7 +52,7 @@
                 android:paddingTop="13dip"
                 android:text="No"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -68,7 +68,7 @@
                 android:paddingTop="13dip"
                 android:text="Yes"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

@@ -42,9 +42,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/about"
+            android:text="@string/about_partner"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <RelativeLayout
             android:layout_width="45dip"
@@ -78,7 +78,7 @@
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="8dp" />
+                android:textSize="@dimen/text_size_tiny" />
         </RelativeLayout>        
     </RelativeLayout>
     
@@ -105,15 +105,14 @@
             android:paddingTop="10dip" >
 
             <print.io.view.TextViewFontBold
-                android:id="@+id/textview_quality"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
                 android:drawableLeft="@drawable/icon_help_purple"
                 android:drawablePadding="5dip"
-                android:text="@string/about_hellopics"
+                android:text="@string/about"
                 android:textColor="@color/purple"
-                android:textSize="18dp" />
+                android:textSize="@dimen/text_size_large" />
 
             <View
                 android:layout_width="fill_parent"
@@ -128,7 +127,7 @@
                 android:lineSpacingMultiplier="1.20"
                 android:text="@string/about_text"
                 android:textColor="#323232"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </ScrollView>
 

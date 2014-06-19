@@ -38,7 +38,7 @@
             android:paddingTop="10dip"
             android:text=""
             android:textColor="#333333"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_set"
@@ -52,7 +52,7 @@
             android:paddingRight="5dip"
             android:text=""
             android:textColor="#333333"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
 </LinearLayout>

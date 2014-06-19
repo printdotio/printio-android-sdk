@@ -6,7 +6,7 @@
     android:orientation="horizontal" >
 
     <ImageView
-        android:id="@+id/introImageView"
+        android:id="@+id/imageview_splash_screen_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -15,11 +15,12 @@
     <!-- Please try again dialog -->
 
     <ImageView
-        android:id="@+id/imageview_splash"
+        android:id="@+id/imageview_splash_screen"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center"
-        android:src="@drawable/bg_splash_new" />
+        android:src="@drawable/bg_splash_new"
+        android:visibility="invisible" />
 
     <include
         android:id="@+id/dialog_please_try_again"
@@ -53,35 +54,34 @@
             android:paddingTop="32dip" >
 
             <print.io.view.AutoResizeTextView
-                android:id="@+id/textview_shipping_to"
+                android:id="@+id/textview_upgrade_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
                 android:paddingBottom="20dip"
                 android:paddingTop="5dip"
-                android:text="@string/upgrade_to"
                 android:textColor="#5a5d66"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/textview_dialog_country"
+                android:id="@+id/textview_unknown"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textview_shipping_to"
+                android:layout_below="@+id/textview_upgrade_to"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dip"
                 android:layout_marginTop="5dip"
                 android:drawableLeft="@drawable/icon_pin_grey"
                 android:gravity="center"
                 android:textColor="#5a5d66"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:visibility="gone" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textview_dialog_country"
+                android:layout_below="@+id/textview_unknown"
                 android:layout_margin="10dip"
                 android:orientation="horizontal" >
 
@@ -96,7 +96,7 @@
                     android:padding="14dip"
                     android:text="@string/update"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
                 <print.io.view.ButtonFontLight
@@ -110,7 +110,7 @@
                     android:padding="14dip"
                     android:text="Yes"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
         </RelativeLayout>

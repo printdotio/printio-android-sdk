@@ -52,7 +52,7 @@
             android:layout_centerInParent="true"
             android:text="@string/featured_products"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="8dp" />
+                android:textSize="@dimen/text_size_tiny" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -140,7 +140,7 @@
             android:drawableRight="@drawable/icon_caret_white"
             android:gravity="center"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -185,7 +185,7 @@
                 android:gravity="center"
                 android:text="@string/product_categories"
                 android:textColor="@drawable/text_selector_green"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_large"
                 android:visibility="visible" />
 
             <ImageView
@@ -208,7 +208,7 @@
             android:inputType="text"
             android:singleLine="true"
             android:textColor="#222222"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_size_large"
             android:visibility="gone" />
 
         <LinearLayout
@@ -236,7 +236,7 @@
                 android:gravity="center"
                 android:text="@string/all"
                 android:textColor="@drawable/text_selector_green"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size_large"
                 android:visibility="gone" />
         </LinearLayout>
 
@@ -291,7 +291,7 @@
         android:paddingTop="11dip"
         android:text="@string/view_all_products"
         android:textColor="#ffffff"
-        android:textSize="15dp"
+        android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
 
     <include

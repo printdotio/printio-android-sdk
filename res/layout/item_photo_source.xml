@@ -23,6 +23,6 @@
         android:layout_toRightOf="@+id/imageview_photo_icon"
         android:singleLine="true"
         android:textColor="#ffffff"
-        android:textSize="12dp" />
+        android:textSize="@dimen/text_size_small" />
 
 </RelativeLayout>

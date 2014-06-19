@@ -19,7 +19,7 @@
             android:paddingTop="10dip"
             android:text=""
             android:textColor="#323232"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
 
         <ImageView
             android:id="@+id/imageview_plus_minus"

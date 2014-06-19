@@ -54,7 +54,7 @@
                 android:paddingTop="5dip"
                 android:text="@string/shuffle"
                 android:textColor="@color/purple"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <View
                 android:layout_width="fill_parent"
@@ -78,7 +78,7 @@
                 android:paddingTop="5dip"
                 android:text="@string/text_tool"
                 android:textColor="@color/green"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:visibility="gone" />
         </LinearLayout>
     </RelativeLayout>

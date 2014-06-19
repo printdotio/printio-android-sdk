@@ -44,7 +44,7 @@
             android:paddingRight="10dip"
             android:text="@string/back"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_photos"
@@ -53,7 +53,7 @@
             android:layout_centerInParent="true"
             android:text=""
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_buy_it"
@@ -73,7 +73,7 @@
             android:paddingRight="2dip"
             android:text=""
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <include
@@ -120,7 +120,7 @@
                 android:gravity="center"
                 android:text="@string/remove_magnet_from_order"
                 android:textColor="#5a5d66"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -140,7 +140,7 @@
                     android:padding="14dip"
                     android:text="No"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
                 <print.io.view.ButtonFontLight
@@ -154,7 +154,7 @@
                     android:padding="14dip"
                     android:text="Yes"
                     android:textColor="#ffffff"
-                    android:textSize="15dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
         </RelativeLayout>

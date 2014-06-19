@@ -53,7 +53,7 @@
             android:layout_centerInParent="true"
             android:text="@string/shipment_review"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -91,7 +91,7 @@
             android:shadowRadius="1"
             android:text="@string/edit"
             android:textColor="#ffffff"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
@@ -109,7 +109,7 @@
             android:shadowRadius="1"
             android:text="@string/save"
             android:textColor="#ffffff"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
     </RelativeLayout>
 
@@ -160,7 +160,7 @@
                             android:layout_alignParentLeft="true"
                             android:text="@string/items"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/textview_items_price"
@@ -168,7 +168,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -183,7 +183,7 @@
                             android:layout_alignParentLeft="true"
                             android:text="@string/shipping_and_handling"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/textview_shipping_and_handling_price"
@@ -191,7 +191,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -207,7 +207,7 @@
                             android:layout_alignParentLeft="true"
                             android:text="@string/total_before_price"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/textview_total_before_tax_price"
@@ -215,7 +215,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
                 </RelativeLayout>
 
@@ -230,7 +230,7 @@
                         android:id="@+id/first_layout1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="6dp"
+                        android:layout_marginBottom="4dp"
                         android:paddingLeft="7dip"
                         android:paddingRight="7dip" >
 
@@ -240,7 +240,7 @@
                             android:layout_alignParentLeft="true"
                             android:text="@string/tax_shipment"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/textview_tax_price"
@@ -248,13 +248,39 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/layout_coupon_savings"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/first_layout1"
+                        android:paddingLeft="7dip"
+                        android:paddingRight="7dip"
+                        android:visibility="gone" >
+
+                        <print.io.view.TextViewFontBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:text="@string/coupon_savings"
+                            android:textColor="#595d66"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <print.io.view.TextViewFontBold
+                            android:id="@+id/textview_coupon_savings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/red_discount"
+                            android:textSize="@dimen/text_size_normal" />
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_coupon_savings"
                         android:paddingLeft="7dip"
                         android:paddingRight="7dip" >
 
@@ -264,7 +290,7 @@
                             android:layout_alignParentLeft="true"
                             android:text="@string/order_total"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontBold
                             android:id="@+id/textview_order_total_price"
@@ -272,7 +298,7 @@
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
                             android:textColor="#595d66"
-                            android:textSize="15dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>
@@ -308,7 +334,7 @@
                     android:paddingBottom="10dip"
                     android:text="@string/ship_to"
                     android:textColor="#595d66"
-                    android:textSize="18dp" />
+                    android:textSize="@dimen/text_size_large" />
 
                 <include
                     android:id="@+id/layout_included_address"
@@ -339,7 +365,7 @@
             android:layout_centerVertical="true"
             android:text="@string/total_ship_cost"
             android:textColor="#ffffff"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="invisible" />
 
         <print.io.view.TextViewFontLight
@@ -351,7 +377,7 @@
             android:layout_toRightOf="@+id/textview_total_price"
             android:singleLine="true"
             android:textColor="#ffffff"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="invisible" />
     </RelativeLayout>
 
@@ -379,7 +405,7 @@
             android:paddingTop="5dip"
             android:text="@string/order_total1"
             android:textColor="#010101"
-            android:textSize="18dp"
+            android:textSize="@dimen/text_size_large"
             android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
@@ -394,7 +420,7 @@
             android:paddingRight="8dip"
             android:singleLine="true"
             android:textColor="#010101"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
 
         <print.io.view.ButtonFontLight
@@ -411,7 +437,7 @@
             android:paddingRight="15dip"
             android:text="@string/enter_payment_info"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <include

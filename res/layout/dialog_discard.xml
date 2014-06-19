@@ -23,7 +23,7 @@
             android:padding="15dip"
             android:text="@string/discard_changes"
             android:textColor="#5a5d66"
-            android:textSize="15dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_discard_text"
@@ -37,7 +37,7 @@
             android:padding="15dip"
             android:text="@string/discard_changes_text"
             android:textColor="#5a5d66"
-            android:textSize="15dip" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -60,7 +60,7 @@
                 android:paddingTop="13dip"
                 android:text="No"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -77,7 +77,7 @@
                 android:paddingTop="13dip"
                 android:text="Yes"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

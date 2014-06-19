@@ -51,7 +51,7 @@
             android:layout_centerInParent="true"
             android:text="@string/product_details"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="8dp" />
+                android:textSize="@dimen/text_size_tiny" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -189,9 +189,8 @@
                         android:paddingRight="8dip"
                         android:paddingTop="5dip"
                         android:singleLine="true"
-                        android:text="POSTER"
                         android:textColor="#ffffff"
-                        android:textSize="17dp"
+                        android:textSize="@dimen/text_size_large"
                         android:textStyle="bold"
                         android:visibility="invisible" />
 
@@ -206,9 +205,8 @@
                         android:paddingLeft="8dip"
                         android:paddingRight="8dip"
                         android:singleLine="true"
-                        android:text="STARTING AT $19"
                         android:textColor="#ffffff"
-                        android:textSize="13dp"
+                        android:textSize="@dimen/text_size_small"
                         android:visibility="invisible" />
 
                     <print.io.view.ButtonFontLight
@@ -226,7 +224,7 @@
                         android:paddingRight="15dip"
                         android:text="@string/select"
                         android:textColor="#ffffff"
-                        android:textSize="15dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:textStyle="bold"
                         android:visibility="invisible" />
                 </RelativeLayout>
@@ -271,7 +269,7 @@
                     android:layout_marginTop="8dip"
                     android:text="@string/product_is_shipped"
                     android:textColor="#ffffff"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <LinearLayout
                     android:layout_width="fill_parent"
@@ -290,7 +288,7 @@
                         android:gravity="right"
                         android:text="@string/est_arrival"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <View
                         android:layout_width="1dip"
@@ -311,7 +309,7 @@
                         android:gravity="left"
                         android:text="@string/est_ship_cost"
                         android:textColor="#ffffff"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -378,7 +376,7 @@
                 android:layout_below="@+id/item_quality_guarantee"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_price_chart"
-                android:visibility="visible" />
+                android:visibility="gone" />
         </RelativeLayout>
     </print.io.view.CustomScrollView>
 

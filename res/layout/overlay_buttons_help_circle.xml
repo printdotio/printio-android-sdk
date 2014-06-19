@@ -55,7 +55,7 @@
             android:background="@drawable/bg_cart_items_qty"
             android:gravity="center"
             android:textColor="@color/cart_items_qty_text"
-            android:textSize="8dp" />
+            android:textSize="@dimen/text_size_tiny" />
     </RelativeLayout>
 
     <View

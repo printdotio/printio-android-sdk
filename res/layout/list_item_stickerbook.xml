@@ -58,7 +58,7 @@
             android:layout_marginRight="5dip"
             android:text="Qty 1"
             android:textColor="#313743"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:id="@+id/imageview_plus"

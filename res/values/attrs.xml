@@ -16,7 +16,7 @@ limitations under the License.
 
 <resources>
 
-    <declare-styleable name="SlidingMenu">
+    <declare-styleable name="PrintIoSdkSlidingMenu">
         <attr name="mode">
             <enum name="left" value="0" />
             <enum name="right" value="1" />

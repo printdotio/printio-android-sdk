@@ -51,7 +51,7 @@
             android:layout_centerInParent="true"
             android:text="@string/payment"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -102,16 +102,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/items"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_items_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -125,16 +125,16 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/shipping_and_handling"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_shipping_and_handling_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -158,22 +158,50 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/tax_shipment"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_tax_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_coupon_savings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_layout1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:visibility="gone" >
+
+            <print.io.view.TextViewFontBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/coupon_savings"
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_coupon_savings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/red_discount"
+                android:textSize="@dimen/text_size_normal" />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/first_layout1"
+            android:layout_below="@+id/layout_coupon_savings"
             android:paddingLeft="10dip"
             android:paddingRight="10dip" >
 
@@ -182,18 +210,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/order_total"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_order_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -202,16 +230,15 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/second_container"
-        android:background="@color/title_bar_separator"
-         />
+        android:background="@color/title_bar_separator" />
 
     <!-- Layout Payment Method -->
 
     <ScrollView
-        android:paddingTop="10dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_below="@+id/view_dummy_separator"
+        android:paddingTop="10dp"
         android:scrollbars="none" >
 
         <RelativeLayout
@@ -234,7 +261,7 @@
                     android:layout_marginTop="5dip"
                     android:text="@string/billing_country"
                     android:textColor="#595d66"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <Spinner
                     android:id="@+id/spinner_billing_country"
@@ -257,7 +284,7 @@
                 android:layout_marginTop="5dip"
                 android:text="@string/select_payment_method"
                 android:textColor="#595d66"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <RelativeLayout
                 android:id="@+id/dummy_layout_paypal"
@@ -279,7 +306,7 @@
                     android:drawableRight="@drawable/icon_paypal_text"
                     android:text="@string/pay_with"
                     android:textColor="#ffffff"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <ImageView
                     android:id="@+id/imageview_paypal"
@@ -326,7 +353,7 @@
                         android:layout_weight="2"
                         android:text="@string/buy_with"
                         android:textColor="#595d66"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <ImageView
                         android:id="@+id/imageview_discover"
@@ -385,7 +412,7 @@
                         android:layout_centerInParent="true"
                         android:text="@string/pay_with_card"
                         android:textColor="#ffffff"
-                        android:textSize="16dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </RelativeLayout>
 
                 <!-- Layout Credit Card Visibility Anim -->
@@ -417,7 +444,7 @@
                             android:layout_marginTop="5dip"
                             android:text="@string/billing_country"
                             android:textColor="#323232"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <Spinner
                             android:id="@+id/spinner_choose_country"
@@ -457,7 +484,7 @@
                                 android:gravity="center"
                                 android:text="@string/secured_by"
                                 android:textColor="#595d66"
-                                android:textSize="12dp" />
+                                android:textSize="@dimen/text_size_small" />
 
                             <print.io.view.TextViewFontLight
                                 android:id="@+id/textview_card_information"
@@ -485,7 +512,7 @@
                                 android:singleLine="true"
                                 android:textColor="#595d66"
                                 android:textColorHint="#b3b3b3"
-                                android:textSize="15dp"
+                                android:textSize="@dimen/text_size_normal"
                                 android:visibility="visible" />
 
                             <print.io.view.EditTextFontLight
@@ -504,7 +531,7 @@
                                 android:singleLine="true"
                                 android:textColor="#595d66"
                                 android:textColorHint="#b3b3b3"
-                                android:textSize="14dp"
+                                android:textSize="@dimen/text_size_normal"
                                 android:visibility="gone" />
 
                             <RelativeLayout
@@ -529,7 +556,7 @@
                                     android:singleLine="true"
                                     android:textColor="#b3b3b3"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <ImageView
                                     android:id="@+id/imageview_check"
@@ -557,7 +584,7 @@
                                 android:singleLine="true"
                                 android:textColor="#b3b3b3"
                                 android:textColorHint="#b3b3b3"
-                                android:textSize="15dp" />
+                                android:textSize="@dimen/text_size_normal" />
 
                             <!-- Expiration -->
 
@@ -621,7 +648,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <print.io.view.EditTextFontLight
                                     android:id="@+id/edittext_shipping_last_name"
@@ -638,7 +665,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <print.io.view.EditTextFontLight
                                     android:id="@+id/edittext_email"
@@ -654,7 +681,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <print.io.view.EditTextFontLight
                                     android:id="@+id/edittext_state"
@@ -670,7 +697,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <!-- Zip Code -->
 
@@ -696,7 +723,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_city"
@@ -712,7 +739,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
                                 </LinearLayout>
 
                                 <!-- Address -->
@@ -731,7 +758,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <print.io.view.EditTextFontLight
                                     android:id="@+id/edittext_address2"
@@ -747,7 +774,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp" />
+                                    android:textSize="@dimen/text_size_normal" />
 
                                 <LinearLayout
                                     android:id="@+id/layout_shipping_business_address"
@@ -794,7 +821,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_telephone_num"
@@ -810,7 +837,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
                                 </LinearLayout>
                             </RelativeLayout>
                             <!-- END OF  VISIBILITY INVISIBLE Shipping Address -->
@@ -886,7 +913,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_billing_last_name"
@@ -901,7 +928,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
                                 </LinearLayout>
 
                                 <print.io.view.EditTextFontLight
@@ -917,7 +944,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp"
+                                    android:textSize="@dimen/text_size_normal"
                                     android:visibility="gone" />
 
                                 <print.io.view.EditTextFontLight
@@ -933,7 +960,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp"
+                                    android:textSize="@dimen/text_size_normal"
                                     android:visibility="gone" />
 
                                 <!-- Zip Code -->
@@ -956,7 +983,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_billing_city"
@@ -971,7 +998,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp"
+                                        android:textSize="@dimen/text_size_normal"
                                         android:visibility="visible" />
                                 </LinearLayout>
 
@@ -990,7 +1017,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp"
+                                    android:textSize="@dimen/text_size_normal"
                                     android:visibility="gone" />
 
                                 <print.io.view.EditTextFontLight
@@ -1006,7 +1033,7 @@
                                     android:singleLine="true"
                                     android:textColor="#595d66"
                                     android:textColorHint="#b3b3b3"
-                                    android:textSize="15dp"
+                                    android:textSize="@dimen/text_size_normal"
                                     android:visibility="gone" />
 
                                 <LinearLayout
@@ -1056,7 +1083,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_billing_telephone_num"
@@ -1071,7 +1098,7 @@
                                         android:singleLine="true"
                                         android:textColor="#595d66"
                                         android:textColorHint="#b3b3b3"
-                                        android:textSize="15dp" />
+                                        android:textSize="@dimen/text_size_normal" />
                                 </LinearLayout>
                             </RelativeLayout>
 
@@ -1093,7 +1120,7 @@
                                     android:onClick="onClickPlaceOrder"
                                     android:text="@string/place_order"
                                     android:textColor="#ffffff"
-                                    android:textSize="16dp" />
+                                    android:textSize="@dimen/text_size_normal" />
                             </RelativeLayout>
                         </RelativeLayout>
                     </RelativeLayout>
@@ -1134,7 +1161,7 @@
             android:gravity="center"
             android:text="@string/almost_done"
             android:textColor="#000000"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <include
             android:layout_width="wrap_content"
@@ -1159,7 +1186,7 @@
             android:gravity="center"
             android:text="@string/payment_finalized"
             android:textColor="#000000"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
 
         <ProgressBar
             android:id="@+id/progress_verify"

@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:textColor="#595d66"
-        android:textSize="15dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -64,7 +64,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/est_arrival"
                             android:textColor="#595d66"
-                            android:textSize="12dp" />
+                            android:textSize="@dimen/text_size_small" />
 
                         <print.io.view.TextViewFontNormal
                             android:id="@+id/textview_est_arrival_value"
@@ -73,7 +73,7 @@
                             android:layout_marginLeft="5dp"
                             android:singleLine="true"
                             android:textColor="#595d66"
-                            android:textSize="12dp" />
+                            android:textSize="@dimen/text_size_small" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -87,7 +87,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ship_cost"
                             android:textColor="#595d66"
-                            android:textSize="12dp" />
+                            android:textSize="@dimen/text_size_small" />
 
                         <print.io.view.TextViewFontNormal
                             android:id="@+id/textview_ship_cost_value"
@@ -96,7 +96,7 @@
                             android:layout_marginLeft="5dp"
                             android:singleLine="true"
                             android:textColor="#595d66"
-                            android:textSize="12dp" />
+                            android:textSize="@dimen/text_size_small" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -125,7 +125,7 @@
                     android:padding="10dip"
                     android:text="@string/remove_items"
                     android:textColor="#ffffff"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

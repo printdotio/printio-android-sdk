@@ -26,7 +26,7 @@
         android:layout_marginRight="10dp"
         android:lines="2"
         android:textColor="#010101"
-        android:textSize="12dp" />
+        android:textSize="@dimen/text_size_small" />
 
     <ProgressBar
         android:id="@+id/progress"

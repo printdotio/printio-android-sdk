@@ -35,7 +35,7 @@
             android:paddingLeft="5dip"
             android:paddingRight="5dip"
             android:textColor="#333333"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
@@ -49,7 +49,7 @@
             android:paddingLeft="5dip"
             android:paddingRight="5dip"
             android:textColor="#333333"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_canvas_wrape_price"
@@ -62,7 +62,7 @@
             android:paddingLeft="5dip"
             android:paddingRight="5dip"
             android:textColor="#333333"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
 </LinearLayout>

@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_price"
@@ -24,7 +24,7 @@
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/arrow"
         android:textColor="#ffffff"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <ImageView
         android:id="@+id/arrow"

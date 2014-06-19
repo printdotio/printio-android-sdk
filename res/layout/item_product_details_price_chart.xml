@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:text="@string/price_chart"
             android:textColor="#cc525c"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
     </LinearLayout>
     <View
         android:layout_width="fill_parent"

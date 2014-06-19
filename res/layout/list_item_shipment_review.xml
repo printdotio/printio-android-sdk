@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:textColor="#595d66"
-        android:textSize="15dp" />
+        android:textSize="@dimen/text_size_normal" />
 
     <RelativeLayout
         android:id="@+id/layout_shippment_container"
@@ -76,7 +76,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/est_arrival"
                             android:textColor="#595d66"
-                            android:textSize="16dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontBold
                             android:id="@+id/textview_est_arrival_value"
@@ -84,7 +84,7 @@
                             android:layout_height="wrap_content"                            
                             android:singleLine="true"
                             android:textColor="#595d66"
-                            android:textSize="16dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -100,7 +100,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/ship_cost"
                             android:textColor="#595d66"
-                            android:textSize="16dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <print.io.view.TextViewFontBold
                             android:id="@+id/textview_ship_cost_value"
@@ -108,7 +108,7 @@
                             android:layout_height="wrap_content"
                             android:singleLine="true"
                             android:textColor="#595d66"
-                            android:textSize="16dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -124,7 +124,7 @@
                     android:textColor="@color/gray_edit"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:textSize="16dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>

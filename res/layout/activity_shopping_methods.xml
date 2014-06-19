@@ -54,7 +54,7 @@
             android:gravity="center"
             android:text="@string/shopping_methods"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -126,7 +126,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <EditText
                 android:id="@+id/edittext_last_name"
@@ -139,7 +139,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <EditText
@@ -155,7 +155,7 @@
             android:padding="7dip"
             android:textColor="#b3b3b3"
             android:textColorHint="#b3b3b3"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_zip"
@@ -177,7 +177,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <EditText
                 android:id="@+id/edittext_city"
@@ -190,7 +190,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
         <EditText
@@ -206,7 +206,7 @@
             android:padding="7dip"
             android:textColor="#b3b3b3"
             android:textColorHint="#b3b3b3"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <EditText
             android:id="@+id/edittext_address_2"
@@ -221,7 +221,7 @@
             android:padding="7dip"
             android:textColor="#b3b3b3"
             android:textColorHint="#b3b3b3"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_telephone"
@@ -243,7 +243,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <EditText
                 android:id="@+id/edittext_telephone_num"
@@ -256,7 +256,7 @@
                 android:padding="7dip"
                 android:textColor="#b3b3b3"
                 android:textColorHint="#b3b3b3"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </RelativeLayout>
 
@@ -310,7 +310,7 @@
             android:paddingLeft="5dip"
             android:text="@string/total_price"
             android:textColor="#323232"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_total_price"
@@ -320,7 +320,7 @@
             android:layout_centerVertical="true"
             android:text="$15.00"
             android:textColor="#323232"
-            android:textSize="34dp" />
+            android:textSize="@dimen/text_size_huge" />
     </RelativeLayout>
 
     <include

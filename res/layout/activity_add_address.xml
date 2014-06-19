@@ -50,7 +50,7 @@
             android:layout_centerInParent="true"
             android:text="@string/address_form"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -100,7 +100,7 @@
                 android:layout_marginTop="10dip"
                 android:text="@string/add_address"
                 android:textColor="#595d66"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_pick_from_contacts"
@@ -114,7 +114,7 @@
                 android:onClick="onClickPickFromContacts"
                 android:text="@string/pick_from_contacts"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_first_name"
@@ -133,7 +133,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_last_name"
@@ -152,7 +152,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -174,7 +174,7 @@
                     android:singleLine="true"
                     android:textColor="#595d66"
                     android:textColorHint="#b3b3b3"
-                    android:textSize="15dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <ProgressBar
                     android:id="@+id/progressbar_street_1"
@@ -203,7 +203,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.AutoCompleteTextViewFont
                 android:id="@+id/edittext_zip_code"
@@ -225,7 +225,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_city"
@@ -243,7 +243,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.AutoCompleteTextViewFont
                 android:id="@+id/edittext_state"
@@ -265,7 +265,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_phone_num"
@@ -283,7 +283,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_email"
@@ -300,7 +300,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_country"
@@ -318,7 +318,7 @@
                 android:singleLine="true"
                 android:textColor="#595d66"
                 android:textColorHint="#b3b3b3"
-                android:textSize="15dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <!-- <requestFocus /> -->
 
@@ -332,7 +332,7 @@
                 android:onClick="onClickSaveAddress"
                 android:text="@string/save_address"
                 android:textColor="#ffffff"
-                android:textSize="16dp" />
+                android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </ScrollView>
 

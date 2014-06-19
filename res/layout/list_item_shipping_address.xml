@@ -23,7 +23,7 @@
             android:paddingRight="15dp"
             android:text="@string/edit"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +46,7 @@
             android:paddingRight="15dp"
             android:text="@string/delete"
             android:textColor="#ffffff"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <RelativeLayout
@@ -63,7 +63,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold"
             android:paddingLeft="10dp" />
 
@@ -75,7 +75,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:paddingLeft="10dp" />
 
         <print.io.view.TextViewFontLight
@@ -86,7 +86,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:paddingLeft="10dp" />
 
         <print.io.view.TextViewFontLight
@@ -97,7 +97,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:paddingLeft="10dp" />
 
         <print.io.view.TextViewFontLight
@@ -109,7 +109,7 @@
             android:singleLine="true"
             android:text=""
             android:textColor="#000000"
-            android:textSize="15dp"
+            android:textSize="@dimen/text_size_normal"
             android:paddingLeft="10dp" />
 
         <ImageView

@@ -52,7 +52,7 @@
             android:layout_centerInParent="true"
             android:text="@string/checkout"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -108,7 +108,7 @@
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="8dp" />
+                android:textSize="@dimen/text_size_tiny" />
         </RelativeLayout>
     </RelativeLayout>
 
@@ -147,7 +147,7 @@
                     android:layout_marginTop="5dip"
                     android:text="@string/fill_in"
                     android:textColor="#323232"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <LinearLayout
                     android:id="@+id/layout_shipping_name"
@@ -170,7 +170,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <EditText
                         android:id="@+id/edittext_last_name"
@@ -186,7 +186,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
                 <EditText
@@ -203,7 +203,7 @@
                     android:singleLine="true"
                     android:textColor="#b3b3b3"
                     android:textColorHint="#b3b3b3"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <EditText
                     android:id="@+id/edittext_state"
@@ -219,7 +219,7 @@
                     android:singleLine="true"
                     android:textColor="#b3b3b3"
                     android:textColorHint="#b3b3b3"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <!-- Zip Code -->
 
@@ -244,7 +244,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <EditText
                         android:id="@+id/edittext_city"
@@ -260,7 +260,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
                 <!-- Address 1 -->
@@ -279,7 +279,7 @@
                     android:singleLine="true"
                     android:textColor="#b3b3b3"
                     android:textColorHint="#b3b3b3"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <!-- Address 2 -->
 
@@ -297,7 +297,7 @@
                     android:singleLine="true"
                     android:textColor="#b3b3b3"
                     android:textColorHint="#b3b3b3"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <LinearLayout
                     android:id="@+id/layout_business_address"
@@ -347,7 +347,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
 
                     <EditText
                         android:id="@+id/edittext_telephone_num"
@@ -362,7 +362,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp" />
+                        android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
             </RelativeLayout>
 
@@ -407,7 +407,7 @@
                 android:layout_marginTop="5dip"
                 android:text="@string/find_shipping_address"
                 android:textColor="#323232"
-                android:textSize="14dp" />
+                android:textSize="@dimen/text_size_normal" />
 
             <!-- FedEX -->
 
@@ -438,7 +438,7 @@
                     android:layout_toRightOf="@+id/imageview_fedex"
                     android:text="FedEX"
                     android:textColor="#323232"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
             <!-- UPS -->
@@ -470,7 +470,7 @@
                     android:layout_toRightOf="@+id/imageview_ups"
                     android:text="UPS"
                     android:textColor="#323232"
-                    android:textSize="14dp" />
+                    android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
             <!-- Find Shipping Method -->
@@ -493,7 +493,7 @@
                     android:layout_marginTop="5dip"
                     android:text="@string/find_shipping_address"
                     android:textColor="#323232"
-                    android:textSize="14dp"
+                    android:textSize="@dimen/text_size_normal"
                     android:visibility="gone" />
 
                 <RelativeLayout
@@ -520,7 +520,7 @@
                         android:layout_toRightOf="@+id/imageview_fedex"
                         android:text="@string/fedex"
                         android:textColor="#323232"
-                        android:textSize="14dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:visibility="gone" />
 
                     <print.io.view.TextViewFontNormal
@@ -531,7 +531,7 @@
                         android:layout_marginTop="10dip"
                         android:text="@string/shipping_address"
                         android:textColor="#323232"
-                        android:textSize="14dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:visibility="gone" />
 
                     <LinearLayout
@@ -554,7 +554,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <EditText
                             android:id="@+id/edittext_shipping_last_name"
@@ -568,7 +568,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </LinearLayout>
 
                     <!-- Company -->
@@ -585,7 +585,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:visibility="gone" />
 
                     <!-- Zip Code -->
@@ -610,7 +610,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <EditText
                             android:id="@+id/edittext_city"
@@ -624,7 +624,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </LinearLayout>
 
                     <!-- Address 1 -->
@@ -641,7 +641,7 @@
                         android:singleLine="true"
                         android:textColor="#b3b3b3"
                         android:textColorHint="#b3b3b3"
-                        android:textSize="14dp"
+                        android:textSize="@dimen/text_size_normal"
                         android:visibility="gone" />
 
                     <!-- Telephone -->
@@ -666,7 +666,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
 
                         <EditText
                             android:id="@+id/edittext_telephone_num"
@@ -680,7 +680,7 @@
                             android:singleLine="true"
                             android:textColor="#b3b3b3"
                             android:textColorHint="#b3b3b3"
-                            android:textSize="14dp" />
+                            android:textSize="@dimen/text_size_normal" />
                     </LinearLayout>
                 </RelativeLayout>
             </RelativeLayout>
@@ -706,7 +706,7 @@
                     android:layout_marginBottom="3dip"
                     android:text="@string/total_price"
                     android:textColor="#323232"
-                    android:textSize="15dp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <RelativeLayout
                     android:id="@+id/dummy"
@@ -723,7 +723,7 @@
                         android:paddingRight="5dip"
                         android:text="$15.00"
                         android:textColor="#323232"
-                        android:textSize="32dp" />
+                        android:textSize="@dimen/text_size_huge" />
 
                     <print.io.view.ButtonFontLight
                         android:id="@+id/button_shipping_method"
@@ -764,7 +764,7 @@
             android:layout_centerVertical="true"
             android:text="@string/sub_total"
             android:textColor="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_price"
@@ -776,7 +776,7 @@
             android:layout_toRightOf="@+id/textview_total_price"
             android:singleLine="true"
             android:textColor="#ffffff"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_shipping_method"
@@ -793,7 +793,7 @@
             android:paddingTop="13dip"
             android:text="@string/checkout"
             android:textColor="#ffffff"
-            android:textSize="14dp"
+            android:textSize="@dimen/text_size_normal"
             android:visibility="invisible" />
     </RelativeLayout>
 

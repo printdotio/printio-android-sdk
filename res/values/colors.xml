@@ -28,13 +28,16 @@
     <color name="gray_edit">#c7c7cc</color>
     <color name="gray_edit_pressed">#96c7c7cc</color>
     <color name="green">#42be9c</color>
+    <color name="green_dark">#09866d</color>
     <color name="red_delete">#f31c24</color>
+    <color name="red_discount">#f31c24</color>
     <color name="red_delete_pressed">#96f31c24</color>
     <color name="orange">#d94217</color>
     <color name="purple">#646aa6</color>
     <color name="white">#ffffff</color>
     <color name="overlay_translucent">#80000000</color>
 
+    <color name="promo_code_background">#f3f3f3</color>
     <color name="product_details_layout_shipping">#22a0dd</color>
     <color name="product_details_layout_bottom">#333333</color>
     <color name="image_upload_soc_but_bg">#333333</color>

@@ -93,7 +93,7 @@
                     android:singleLine="true"
                     android:text="@string/product_price"
                     android:textColor="#323232"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontNormalResize
                     android:id="@+id/textview_price"
@@ -106,7 +106,7 @@
                     android:singleLine="true"
                     android:text="$59.00"
                     android:textColor="#323232"
-                    android:textSize="32sp" />
+                    android:textSize="@dimen/text_size_huge" />
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_add_to_card"
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/select_your_options"
                     android:textColor="#323232"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <LinearLayout
                     android:id="@+id/layout_spinner"
@@ -178,7 +178,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/crop_image"
                     android:textColor="#323232"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/text_size_normal" />
 
                 <print.io.view.TextViewFontNormal
                     android:id="@+id/imageview_pinch_to_zoom"
@@ -189,7 +189,7 @@
                     android:drawableLeft="@drawable/icon_pinch_to_zoom"
                     android:text="@string/pinch_to_zoom"
                     android:textColor="#323232"
-                    android:textSize="11sp" />
+                    android:textSize="@dimen/text_size_small" />
 
                 <ViewFlipper
                     android:id="@+id/flipper"

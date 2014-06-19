@@ -20,7 +20,7 @@
             android:layout_centerInParent="true"
             android:text="@string/choose_currency"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -71,7 +71,7 @@
             android:inputType="text"
             android:paddingLeft="10dip"
             android:paddingRight="30dip"
-            android:textSize="14dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <ImageView
             android:id="@+id/imageview_clear"

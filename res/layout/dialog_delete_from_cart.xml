@@ -24,7 +24,7 @@
             android:padding="15dip"
             android:text="@string/delete_item_shoping_cart"
             android:textColor="#5a5d66"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
         
         
         <LinearLayout
@@ -46,7 +46,7 @@
                 android:padding="14dip"
                 android:text="No"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -60,7 +60,7 @@
                 android:padding="14dip"
                 android:text="Yes"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
        

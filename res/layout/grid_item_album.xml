@@ -30,7 +30,7 @@
             android:background="#478cd1"
             android:padding="3dip"
             android:textColor="#ffffff"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <print.io.view.TextViewFontLight
@@ -44,6 +44,6 @@
         android:maxLines="2"
         android:padding="5dip"
         android:textColor="#797c83"
-        android:textSize="16dp" />
+        android:textSize="@dimen/text_size_normal" />
 
 </RelativeLayout>

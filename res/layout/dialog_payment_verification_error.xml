@@ -28,7 +28,7 @@
             android:lineSpacingExtra="2dip"
             android:text="@string/payment_verification_error_message"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_buttons"
@@ -53,7 +53,7 @@
                 android:paddingTop="8dip"
                 android:text="@string/try_again"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -71,7 +71,7 @@
                 android:paddingTop="8dip"
                 android:text="@string/ok"
                 android:textColor="#ffffff"
-                android:textSize="15dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

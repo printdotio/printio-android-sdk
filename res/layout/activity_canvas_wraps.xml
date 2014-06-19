@@ -51,7 +51,7 @@
             android:layout_centerInParent="true"
             android:text="@string/choose_options"
             android:textColor="@color/title_bar_text"
-            android:textSize="20dp" />
+            android:textSize="@dimen/text_size_title" />
 
         <ImageView
             android:id="@+id/imageview_info"
@@ -94,7 +94,7 @@
             android:gravity="center"
             android:padding="7dip"
             android:textColor="#333333"
-            android:textSize="18dp" />
+            android:textSize="@dimen/text_size_large" />
 
         <!-- Horizontal Scroll View, Step 2 -->
 
@@ -136,7 +136,7 @@
             android:paddingBottom="3dp"
             android:text="@string/step_2_canvas_wraps"
             android:textColor="#333333"
-            android:textSize="18dp"
+            android:textSize="@dimen/text_size_large"
             android:visibility="gone" />
 
         <!-- Horizontal Scroll View, Step 2 -->

@@ -25,7 +25,7 @@
             android:gravity="center"
             android:text="@string/are_you_sure"
             android:textColor="#5a5d66"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_buttons"
@@ -46,7 +46,7 @@
                 android:padding="14dip"
                 android:text="No"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -60,7 +60,7 @@
                 android:padding="14dip"
                 android:text="Yes"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>

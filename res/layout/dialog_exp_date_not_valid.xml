@@ -24,7 +24,7 @@
             android:padding="15dip"
             android:text="@string/exp_month_not_valid"
             android:textColor="#5a5d66"
-            android:textSize="15dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_ok"
@@ -37,7 +37,7 @@
             android:onClick="onClickOkExpDateNotValid"
             android:text="Ok"
             android:textColor="#ffffff"
-            android:textSize="16dp"
+            android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </RelativeLayout>
 

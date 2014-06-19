@@ -26,7 +26,7 @@
             android:lineSpacingExtra="2dip"
             android:text="@string/hello"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_low_res"
@@ -40,7 +40,7 @@
             android:lineSpacingExtra="2dip"
             android:text="@string/less_photos"
             android:textColor="#5a5d66"
-            android:textSize="16dp" />
+            android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_buttons"
@@ -64,7 +64,7 @@
                 android:paddingTop="8dip"
                 android:text="@string/get_more_photos"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -81,7 +81,7 @@
                 android:paddingTop="8dip"
                 android:text="@string/continue_with"
                 android:textColor="#ffffff"
-                android:textSize="16dp"
+                android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -95,7 +95,7 @@
             android:gravity="left"
             android:text="@string/note_required"
             android:textColor="#db0106"
-            android:textSize="12dp"
+            android:textSize="@dimen/text_size_small"
             android:visibility="gone" />
 
         <ImageView
