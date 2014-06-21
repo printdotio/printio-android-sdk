@@ -17,29 +17,29 @@ limitations under the License.
 <resources>
 
     <declare-styleable name="PrintIoSdkSlidingMenu">
-        <attr name="mode">
-            <enum name="left" value="0" />
-            <enum name="right" value="1" />
+        <attr name="printiosdk_slidingmenu_mode">
+            <enum name="printiosdk_slidingmenu_left" value="0" />
+            <enum name="printiosdk_slidingmenu_right" value="1" />
         </attr>
-        <attr name="viewAbove" format="reference" />
-        <attr name="viewBehind" format="reference" />
-        <attr name="behindOffset" format="dimension" />
-        <attr name="behindWidth" format="dimension" />
-        <attr name="behindScrollScale" format="float" />
-        <attr name="touchModeAbove">
-            <enum name="margin" value="0" />
-            <enum name="fullscreen" value="1" />
+        <attr name="printiosdk_slidingmenu_viewAbove" format="reference" />
+        <attr name="printiosdk_slidingmenu_viewBehind" format="reference" />
+        <attr name="printiosdk_slidingmenu_behindOffset" format="dimension" />
+        <attr name="printiosdk_slidingmenu_behindWidth" format="dimension" />
+        <attr name="printiosdk_slidingmenu_behindScrollScale" format="float" />
+        <attr name="printiosdk_slidingmenu_touchModeAbove">
+            <enum name="printiosdk_slidingmenu_margin" value="0" />
+            <enum name="printiosdk_slidingmenu_fullscreen" value="1" />
         </attr>
-        <attr name="touchModeBehind">
-            <enum name="margin" value="0" />
-            <enum name="fullscreen" value="1" />
+        <attr name="printiosdk_slidingmenu_touchModeBehind">
+            <enum name="printiosdk_slidingmenu_margin" value="0" />
+            <enum name="printiosdk_slidingmenu_fullscreen" value="1" />
         </attr>
-        <attr name="shadowDrawable" format="reference" />
-        <attr name="shadowWidth" format="dimension" />
-        <attr name="fadeEnabled" format="boolean" />
-        <attr name="fadeDegree" format="float" />
-        <attr name="selectorEnabled" format="boolean" />
-        <attr name="selectorDrawable" format="reference" />
+        <attr name="printiosdk_slidingmenu_shadowDrawable" format="reference" />
+        <attr name="printiosdk_slidingmenu_shadowWidth" format="dimension" />
+        <attr name="printiosdk_slidingmenu_fadeEnabled" format="boolean" />
+        <attr name="printiosdk_slidingmenu_fadeDegree" format="float" />
+        <attr name="printiosdk_slidingmenu_selectorEnabled" format="boolean" />
+        <attr name="printiosdk_slidingmenu_selectorDrawable" format="reference" />
     </declare-styleable>
 
 </resources>

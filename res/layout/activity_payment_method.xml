@@ -298,25 +298,25 @@
                 android:clickable="true"
                 android:onClick="onClickPaypal" >
 
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_paypal"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:drawableRight="@drawable/icon_paypal_text"
-                    android:text="@string/pay_with"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
 
-                <ImageView
-                    android:id="@+id/imageview_paypal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="5dip"
-                    android:src="@drawable/icon_paypal_big"
-                    android:visibility="gone" />
+                    <print.io.view.TextViewFontLight
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pay_with"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_paypal_text" />
+                </LinearLayout>
             </RelativeLayout>
 
             <RelativeLayout
