@@ -5,6 +5,10 @@
         <!-- Any customizations for your app running on devices with Theme.Holo here -->
     </style>
 
+    <style name="BaseThemePrintIONoStatusBar" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        <!-- Any customizations for your app running on devices with Theme.Holo here -->
+    </style>
+
     <style name="ThemePrintIODialog" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:backgroundDimAmount">0.67</item>
         <item name="android:windowCloseOnTouchOutside">false</item>

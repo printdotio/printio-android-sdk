@@ -131,7 +131,7 @@
         android:id="@+id/item_buy_it_header"
         android:layout_width="fill_parent"
         android:layout_height="60dip"
-        android:layout_below="@+id/layout_titlebar"
+        android:layout_below="@+id/view_dummy_title_separator"
         layout="@layout/item_product_details_buy_it"
         android:visibility="gone" />
 

@@ -126,8 +126,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/imageview_shopping_cart"
-            android:layout_marginLeft="20dip"
-            android:layout_marginRight="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="5dip"
             android:layout_toRightOf="@+id/imageview_shopping_cart"
             android:gravity="center"
             android:orientation="vertical" >
@@ -150,17 +150,18 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false"
                 android:gravity="center"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
                 android:spinnerMode="dropdown"
                 android:textColor="#323232"
-                android:textSize="@dimen/text_size_normal" />
+                android:textSize="@dimen/text_size_large" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_quantity" />
+                android:src="@drawable/icon_quantity"
+                android:layout_marginLeft="5dp" />
         </LinearLayout>
 
         <LinearLayout

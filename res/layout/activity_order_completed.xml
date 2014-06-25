@@ -72,7 +72,7 @@
             android:paddingLeft="15dip"
             android:paddingRight="15dip"
             android:paddingTop="10dip"
-            android:src="@drawable/icon_help_black"
+            android:src="@drawable/icon_question_big"
             android:visibility="visible" />
     </RelativeLayout>
 

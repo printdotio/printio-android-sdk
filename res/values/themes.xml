@@ -5,7 +5,18 @@
         <!-- Any customizations for your app running on pre-3.0 devices here -->
     </style>
 
+    <style name="BaseThemePrintIONoStatusBar" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+        <!-- Any customizations for your app running on pre-3.0 devices here -->
+    </style>
+
     <style name="ThemePrintIO" parent="BaseThemePrintIO">
+
+        <!-- Common customizations for all devices here -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemePrintIONoStatusBar" parent="BaseThemePrintIONoStatusBar">
 
         <!-- Common customizations for all devices here -->
         <item name="android:windowBackground">@null</item>

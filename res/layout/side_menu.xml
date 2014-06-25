@@ -308,170 +308,176 @@
 
             <!-- Options -->
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#000000"
-                android:visibility="gone" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#343434" />
-
-            <print.io.view.TextViewFontBold
-                android:id="@+id/textview_options"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/side_menu_options"
-                android:gravity="center"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
-                android:text="@string/options"
-                android:textColor="#ffffff"
-                android:textSize="@dimen/text_size_normal" />
-
-            <!-- Chart and Photos -->
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#000000" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="#343434" />
-
             <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="110dip"
-                android:orientation="horizontal" >
-
-                <RelativeLayout
-                    android:id="@+id/layout_change_currency"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector"
-                    android:clickable="true"
-                    android:onClick="onClickChangeCurrency" >
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/text_view_change_currency"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/dummy_currency"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dip"
-                        android:gravity="center"
-                        android:text=""
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_huge" />
-
-                    <print.io.view.AutoResizeTextViewFontLight
-                        android:id="@+id/dummy_currency"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:maxLines="2"
-                        android:padding="10dip"
-                        android:text="@string/change_currency"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-                </RelativeLayout>
+                android:id="@+id/layout_side_menu_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
 
                 <View
-                    android:layout_width="1dip"
-                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#000000"
+                    android:visibility="gone" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="#343434" />
+
+                <print.io.view.TextViewFontBold
+                    android:id="@+id/textview_options"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/side_menu_options"
+                    android:gravity="center"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:text="@string/options"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <!-- Chart and Photos -->
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
                     android:background="#000000" />
 
                 <View
-                    android:layout_width="1dip"
-                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
                     android:background="#343434" />
 
-                <RelativeLayout
-                    android:id="@+id/layout_change_country"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector"
-                    android:clickable="true"
-                    android:onClick="onClickChangeCountry" >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dip"
+                    android:orientation="horizontal" >
 
-                    <print.io.view.CustomSideMenuCountryImageView
-                        android:id="@+id/image_view_country"
-                        android:layout_width="match_parent"
+                    <RelativeLayout
+                        android:id="@+id/layout_change_currency"
+                        android:layout_width="0dip"
                         android:layout_height="wrap_content"
-                        android:layout_above="@+id/dummy_country"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginLeft="22dp"
-                        android:layout_marginRight="22dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/icon_country" />
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickChangeCurrency" >
 
-                    <print.io.view.AutoResizeTextViewFontLight
-                        android:id="@+id/dummy_country"
-                        android:layout_width="wrap_content"
+                        <print.io.view.TextViewFontLight
+                            android:id="@+id/text_view_change_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/dummy_currency"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dip"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_huge" />
+
+                        <print.io.view.AutoResizeTextViewFontLight
+                            android:id="@+id/dummy_currency"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:padding="10dip"
+                            android:text="@string/change_currency"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_normal" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#343434" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_change_country"
+                        android:layout_width="0dip"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:maxLines="2"
-                        android:padding="10dip"
-                        android:text="@string/change_country"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-                </RelativeLayout>
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickChangeCountry" >
 
-                <View
-                    android:layout_width="1dip"
-                    android:layout_height="fill_parent"
-                    android:background="#000000" />
+                        <print.io.view.CustomSideMenuCountryImageView
+                            android:id="@+id/image_view_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/dummy_country"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginRight="22dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/icon_country" />
 
-                <View
-                    android:layout_width="1dip"
-                    android:layout_height="fill_parent"
-                    android:background="#343434" />
+                        <print.io.view.AutoResizeTextViewFontLight
+                            android:id="@+id/dummy_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:padding="10dip"
+                            android:text="@string/change_country"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_normal" />
+                    </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/layout_change_language"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector"
-                    android:clickable="true"
-                    android:onClick="onClickChangeLanguage" >
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#000000" />
 
-                    <ImageView
-                        android:id="@+id/image_view_language"
-                        android:layout_width="wrap_content"
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="fill_parent"
+                        android:background="#343434" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_change_language"
+                        android:layout_width="0dip"
                         android:layout_height="wrap_content"
-                        android:layout_above="@+id/dummy_language"
-                        android:layout_centerHorizontal="true"
-                        android:layout_gravity="center"
-                        android:layout_margin="5dip"
-                        android:src="@drawable/icon_language" />
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickChangeLanguage" >
 
-                    <print.io.view.AutoResizeTextViewFontLight
-                        android:id="@+id/dummy_language"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_centerHorizontal="true"
-                        android:gravity="center"
-                        android:maxLines="2"
-                        android:padding="10dip"
-                        android:text="@string/change_language"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-                </RelativeLayout>
+                        <ImageView
+                            android:id="@+id/image_view_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/dummy_language"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dip"
+                            android:src="@drawable/icon_language" />
+
+                        <print.io.view.AutoResizeTextViewFontLight
+                            android:id="@+id/dummy_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:padding="10dip"
+                            android:text="@string/change_language"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/text_size_normal" />
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Accounts -->

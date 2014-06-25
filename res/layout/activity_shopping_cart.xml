@@ -179,7 +179,8 @@
         android:cacheColorHint="#00000000"
         android:divider="#d8d8d8"
         android:dividerHeight="1px"
-        android:scrollbars="none" >
+        android:scrollbars="none"
+        android:layout_marginLeft="5dp" >
     </ListView>
 
     <print.io.view.ButtonFontBold
