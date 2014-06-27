@@ -327,3 +327,81 @@ PIO.setHideIconForUploadInstructions(boolean hideIconForUploadInstructions);
 ```
 &nbsp;  
 &nbsp;  
+Photo Sources Credentials
+-------------------------
+#### > Set Instagram credentials  
+
+In order to use Instagram as a photo source, credentials are required.  
+To obtain Instagram `CLIENT_ID`, refer to documentation at http://instagram.com/developer
+```java
+PIO.setInstagramClientId(String INSTAGRAM_CLIENT_ID);
+```
+~~**NOTICE:**~~  
+~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-instagram`.~~
+&nbsp;  
+&nbsp;  
+#### > Set Flickr credentials  
+
+In order to use Flickr as a photo source, credentials are required.  
+To obtain Flickr `CONSUMER_KEY` and `CONSUMER_SECRET`, refer to documentation at https://www.flickr.com/services/developer/api
+```java
+PIO.setFlickrConsumerKey(String FLICKR_CONSUMER_KEY);
+PIO.setFlickrConsumerSecret(String FLICKR_CONSUMER_SECRET);
+```
+~~**NOTICE:**~~  
+~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-flickr`.~~
+&nbsp;  
+&nbsp;  
+#### > Set Dropbox credentials  
+
+In order to use Dropbox as a photo source, credentials are required.  
+To obtain Dropbox `CONSUMER_KEY` and `CONSUMER_SECRET`, refer to documentation at https://www.dropbox.com/developers/apps
+```java
+PIO.setDropboxConsumerKey(String DROPBOX_CONSUMER_KEY);
+PIO.setDropboxConsumerSecret(String DROPBOX_CONSUMER_SECRET);
+```
+~~**NOTICE:**~~  
+~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-dropbox`.~~
+&nbsp;  
+&nbsp;  
+#### > Set Facebook credentials  
+
+In order to use Facebook as a photo source, credentials are required.  
+To obtain Facebook `APP_ID`, refer to documentation at https://developers.facebook.com/apps  
+&nbsp;  
+You need to provide `facebook_app_id` in your app's `strings.xml` file.
+```xml
+<string name="facebook_app_id">000000000000000</string>
+```
+You can then reference it in java code (**required**) like this:
+```java
+PIO.setFacebookAppId(getString(R.string.facebook_app_id));
+```
+&nbsp;  
+&nbsp;  
+#### > Set Photobucket credentials  
+
+In order to use Photobucket as a photo source, credentials are required.  
+To obtain Photobucket `CLIENT_ID` and `CLIENT_SECRET`, refer to documentation at http://pic.pbsrc.com/dev_help/WebHelpPublic/Content/FAQ/FAQOverview.htm#HowDoIUseAPI  
+```java
+PIO.setPhotobucketClientId(String PHOTOBUCKET_CLIENT_ID);
+PIO.setPhotobucketClientSecret(String PHOTOBUCKET_CLIENT_SECRET);
+```
+&nbsp;  
+If your app already logs user in to Photobucket, you will want to save the user from having to log in again inside the PrintIO SDK.  
+
+To do this, you need to provide a Photobucket `USERNAME`, `BASE_API_URL`, `ACCESS_TOKEN` and `REFRESH_TOKEN` using the following methods.
+```java
+PIO.setPhotobucketUsername(String photobucketUsername);
+PIO.setPhotobucketBaseApiUrl(String photobucketBaseApiUrl);
+PIO.setPhotobucketAccessToken(String photobucketAccessToken);
+PIO.setPhotobucketRefreshToken(String photobucketRefreshToken);
+```
+&nbsp;  
+&nbsp;  
+#### > Set Picasa credentials  
+
+In order to use Picasa as a photo source, **no credentials are required**.  
+Picasa will allow the user to select one of the Google accounts set up on the device.
+&nbsp;  
+&nbsp;  
