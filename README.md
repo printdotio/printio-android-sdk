@@ -228,8 +228,8 @@ public void onClickStartSDK(View v) {
     //set passed image as layout with 1 photo for some products
     PIO.setPassedImageThumb(boolean);
 
-    //allow/forbid user to use his own images or use those passed to sdk.
-    PIO.setCanUseUpload(boolean);
+    //forbid user to use his own images and use those passed to sdk.
+    PIO.setPhotosourcesDisabled(boolean);
 
     //preset the country. Country code is 2 letter code, e.g. "US".
     PIO.setCountryCode(String);

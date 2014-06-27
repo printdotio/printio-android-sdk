@@ -145,7 +145,7 @@ PIO.setPassedImageThumb(boolean);
 
  - **Allow or stop user to use other image sources if some images are passed to SDK**
 ```sh
- PIO.setCanUseUpload(boolean);
+ PIO.setPhotosourcesDisabled(boolean);
 ```
 
 
