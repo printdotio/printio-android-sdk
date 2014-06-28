@@ -48,7 +48,7 @@ icon_arrow_back_2.png (19x33)
 &nbsp;  
 #### > Hide status bar  
 
-Default value is false (not hidden).
+Default value is `false` (not hidden).
 ```java
 PIO.setHideStatusBar(boolean hideStatusBar);
 ```
@@ -57,9 +57,9 @@ PIO.setHideStatusBar(boolean hideStatusBar);
 ~~#### > Set three buttons title bar style~~
 
 ~~Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.~~  
-~~Default value is false.~~
+~~Default value is `false`.~~
 ```java
-TO BE DONE
+//TO BE DONE
 PIO.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 ```
 &nbsp;  
@@ -68,7 +68,7 @@ Side Menu
 ---------
 #### > Change side menu icon  
 
-Replace the following icons with your own icons of same names.  
+Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
 ```
 icon_menu_default.png (39x29)
@@ -100,7 +100,7 @@ To change side menu text color, modify the following item in
 &nbsp;  
 ~~To select buttons for this section, pass a `List` of `SideMenuButton` to the following method~~
 ```java
-TO BE DONE
+//TO BE DONE
 PIO.setSideMenuButtons(List<SideMenuButton> sideMenuButtons);
 
 enum SideMenuButton {
@@ -131,8 +131,8 @@ Modify values only.
 ~~To change the section title color, modify the following item in~~  
 ~~**res/values/colors.xml**~~
 ```xml
-TO BE DONE
-<color name="side_menu_options_title">#FFFFFF</color>
+//TO BE DONE
+<color name="side_menu_options_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
@@ -142,7 +142,7 @@ To change the section title background color, modify the following item in
 ```
 &nbsp;  
 These methods control if the user is allowed to change the preset country, currency and language.  
-The default values are false.
+The default values are `true`.
 ```java
 PIO.setChangeableCountry(boolean changeableCountry);
 PIO.setChangeableCurrency(boolean changeableCurrency);
@@ -162,8 +162,8 @@ and if your app supports multiple languages, change the appropriate items in
 ~~To change the section title color, modify the following item in~~  
 ~~**res/values/colors.xml**~~
 ```xml
-TO BE DONE
-<color name="side_menu_accounts_title">#FFFFFF</color>
+//TO BE DONE
+<color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
@@ -186,8 +186,8 @@ and if your app supports multiple languages, change the appropriate items in
 ~~To change the section title color, modify the following item in~~  
 ~~**res/values/colors.xml**~~
 ```xml
-TO BE DONE
-<color name="side_menu_info_title">#FFFFFF</color>
+//TO BE DONE
+<color name="side_menu_info_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
@@ -198,7 +198,7 @@ To change the section title background color, modify the following item in
 &nbsp;  
 ~~To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the following method~~
 ```java
-TO BE DONE
+//TO BE DONE
 PIO.setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
 
 enum SideMenuButton {
@@ -215,7 +215,7 @@ enum SideMenuButton {
 &nbsp;  
 #### > Slide side menu from right side  
 
-Default value is false (side menu slides from left side).
+Default value is `false` (side menu slides from left side).
 ```java
 PIO.setRightSideMenu(boolean rightSideMenu);
 ```
@@ -237,7 +237,7 @@ Featured Products
 --------------
 #### > Set country on Featured Products screen instead on First screen  
 
-Default value is false.
+Default value is `false` (country selection screen is the first screen).
 ```java
 PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 ```
@@ -245,7 +245,7 @@ PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 &nbsp;  
 #### > Hide category+search view on Featured Products screen  
 
-Default value is false.
+Default value is `false`.
 ```java
 PIO.setHideCategorySearchBar(boolean hideCategorySearchBar);
 ```
@@ -295,7 +295,7 @@ PIO.setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
 ~~#### > Disable photo sources only if image is passed in, and user selects template with one photo~~  
 
 ```java
-TO BE DONE
+//TO BE DONE
 PIO.setPhotosourcesDisabledForOnePhotoTemplate(boolean isPhotosourcesDisabledForOnePhotoTemplate);
 ```
 &nbsp;  
@@ -318,11 +318,11 @@ PIO.setPassedImageThumb(boolean passedImageThumb);
 Currently supports Canvas Wraps, Framed Prints and Acrylic Prints.
 &nbsp;  
 &nbsp;  
-~~#### > Hide icon for Upload Instructions text in Photo Sources screen~~  
+~~#### > ??? Hide icon for Upload Instructions text in Photo Sources screen~~  
 
-~~Default value is false.~~
+~~Default value is `false`.~~
 ```java
-TO BE DONE
+//TO BE DONE
 PIO.setHideIconForUploadInstructions(boolean hideIconForUploadInstructions);
 ```
 &nbsp;  
@@ -403,5 +403,173 @@ PIO.setPhotobucketRefreshToken(String photobucketRefreshToken);
 
 In order to use Picasa as a photo source, **no credentials are required**.  
 Picasa will allow the user to select one of the Google accounts set up on the device.
+&nbsp;  
+&nbsp;  
+Customize Product
+-----------------
+#### > Show toolbar in Customize Product screen  
+
+The toolbar contains the following buttons: `Photos`, `Edit Tools`, `Options` and `Layout`.  
+Default value is `true`.
+```java
+PIO.setShowOptionsInCustomize(boolean showOptionsInCustomize);
+```
+**NOTICE:**  
+Not all of those buttons' functions have been implemented yet.  
+&nbsp;  
+&nbsp;  
+#### > Show a list of selected images in Customize Product screen  
+
+Default value is `true`.
+```java
+PIO.setShowPhotosInCustomize(boolean showPhotosInCustomize);
+```
+&nbsp;  
+&nbsp;  
+#### > Auto-arrange photos in Customize Product screen  
+
+If this is set to `true`, instead of showing a blank product, images will be pre-arranged on it.  
+The user will still be able to change the arrangement.  
+
+If it is set to `false`, a dialog will appear allowing the user to choose between automatic and manual arrangement.  
+
+Default value is `false`.
+```java
+PIO.setAutoArrange(boolean autoArrange);
+```
+**DIFFERENCES BETWEEN iOS and Android:**
+iOS version of the SDK provides the following choices:
+- PIO_PHOTO_ARRANGEMENT_CHOOSE
+- PIO_PHOTO_ARRANGEMENT_AUTO
+- PIO_PHOTO_ARRANGEMENT_MANUAL
+whereas in Android, this method corresponds to choice between:
+- PIO_PHOTO_ARRANGEMENT_CHOOSE
+- PIO_PHOTO_ARRANGEMENT_AUTO
+&nbsp;  
+&nbsp;  
+#### > Change the `Add photos` icon in Customize Product screen  
+
+Replace following icons with your own icons of same names.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_add_more_images_a (111x111) - default state
+icon_add_more_images_b (111x111) - pressed state
+```
+&nbsp;  
+&nbsp;  
+#### > Change the `Help button` icon in Customize Product screen  
+
+Replace following icons with your own icons of same names.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_help_circle_grey (50x50px) - default state
+icon_help_circle_grey_dark (50x50px) - pressed state
+```
+&nbsp;  
+&nbsp;  
+~~#### > ??? Customize Pop up balloon in Customize Product screen~~  
+
+```java
+//TO BE DONE
+PIO.setUpPopUpBalloonCustomize(...);
+```
+&nbsp;  
+&nbsp;  
+~~#### > ??? Show custom help dialog on Image Editor screen~~  
+
+```java
+//TO BE DONE
+PIO.setImageEditorHelpDialog(...);
+```
+&nbsp;  
+&nbsp;  
+Image Editor
+------------
+#### > Choose buttons to display in Image Editor  
+
+Available buttons are `Rotate`, `Edit Text` and `Effects`.  
+By default, all buttons are visible.
+```java
+PIO.setUpCropScreen(boolean isRotateAllowed, boolean isTextAllowed, boolean isEffectsAllowed);
+```
+**NOTICE:**  
+`Info` button is always visible.  
+Not all of those buttons' functions have been implemented yet.  
+&nbsp;  
+&nbsp;  
+Shopping Cart
+-------------
+#### > Set custom icon for Shopping Cart  
+
+Replace following icons with your own icons of same names.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_cart_default.png (45x42)
+icon_cart_pressed.png (45x42)
+icon_cart_items_qty_background (31x31) //Background for the badge that displays cart items count
+```
+**DIFFERENCES BETWEEN iOS and Android:**
+iOS version of the SDK allows the badge to be hidden.  
+On Android version, the badge is always visible and its background can be changed.
+&nbsp;  
+&nbsp;  
+~~#### > Remove `+` sign from `Add More Products` button~~  
+
+~~Default value is `false` (`+` sign is visible).~~
+```java
+//TO BE DONE
+//Android version does not have + sign on this button
+PIO.removePlusFromAddMoreProductsButton(boolean removePlusSign);
+```
+&nbsp;  
+&nbsp;  
+Payment Screen
+--------------
+~~#### > Remove logo from Payment ~~and Order Confirmation~~ screen~~  
+
+~~Default value is `false` (logo is visible).~~
+```java
+//TO BE DONE
+PIO.removeLogoFromPaymentScreen(boolean removeLogo);
+```
+&nbsp;  
+&nbsp;  
+Country, Currency and Language
+------------------------------
+#### > Set country code  
+
+Sets the default shipping country.
+```java
+/**
+ * @param countryCode - A two-letter country code
+ */
+PIO.setCountryCode(String countryCode);
+```
+**NOTICE:**
+If `setCountryOnFeaturedProducts()` was set to `true`, default country code is `us`.  
+Otherwise, the user is taken to Select Country screen and there is no default value.
+&nbsp;  
+&nbsp;  
+#### > Set currency code  
+
+If not set, default value is determined by the selected Country Code.
+```java
+/**
+ * @param currencyCode - A three-letter currency code
+ */
+PIO.setCurrencyCode(String currencyCode);
+```
+&nbsp;  
+&nbsp;  
+~~#### > Set language code~~  
+
+~~If not set, default value is determined by the selected Country Code.~~
+```java
+//TO BE DONE
+/**
+ * @param languageCode - A two-letter language code
+ */
+PIO.setLanguageCode(String languageCode);
+```
 &nbsp;  
 &nbsp;  
