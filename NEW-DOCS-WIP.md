@@ -10,7 +10,7 @@ Navigation bar
 #### > Change navigation bar color, separator color and title bar text color  
 
 This can be done in xml by changing the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`
 ```xml
 <color name="title_bar_background">#ffffff</color>
 ```
@@ -24,7 +24,7 @@ PIO.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex 
 _Note that the value set programmatically will override the value set in xml!_  
 &nbsp;  
 To change separator and texts' colors, modify the following items in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="title_bar_separator">#d6d6d6</color>
 <color name="title_bar_text">#000000</color>
@@ -37,10 +37,10 @@ Never modify xml item names.
 Modify values only.  
 &nbsp;  
 &nbsp;  
-#### > Set icon for back button  
+#### > Change `Back` button icon  
 
 Replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.
+Recommended dimensions are listed next to the icon name.  
 ```
 icon_arrow_back_2.png (19x33)
 ```
@@ -69,7 +69,7 @@ Side Menu
 #### > Change side menu icon  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
+Recommended dimensions are listed next to the icon name.  
 ```
 icon_menu_default.png (39x29)
 icon_menu_pressed.png (39x29)
@@ -79,7 +79,7 @@ icon_menu_pressed.png (39x29)
 #### > Change side menu background color  
 
 To change side menu background color, modify the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="side_menu_background">#1D1D1D</color>
 ```
@@ -88,7 +88,7 @@ To change side menu background color, modify the following item in
 #### > Change side menu text color  
 
 To change side menu text color, modify the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="side_menu_text">#ffffff</color>
 ```
@@ -118,9 +118,9 @@ enum SideMenuButton {
 ##### **Options** section:  
 
 To modify its title, change the following item in  
-**res/values/strings.xml**  
+`res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-**res/values-language/strings.xml**  
+`res/values-language/strings.xml`  
 ```xml
 <string name="options">Options</string>
 ```
@@ -129,14 +129,14 @@ Never modify xml item names.
 Modify values only.  
 &nbsp;  
 ~~To change the section title color, modify the following item in~~  
-~~**res/values/colors.xml**~~
+~~`res/values/colors.xml`~~  
 ```xml
 //TO BE DONE
 <color name="side_menu_options_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="side_menu_options">#239EDB</color>
 ```
@@ -152,22 +152,22 @@ PIO.setChangeableLanguage(boolean changeableLanguage);
 ##### **Accounts** section:
 Contains the available photo sources that the app will use.  
 To modify its title, change the following item in  
-**res/values/strings.xml**  
+`res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-**res/values-language/strings.xml**  
+`res/values-language/strings.xml`  
 ```xml
 <string name="accounts">Accounts</string>
 ```
 &nbsp;  
 ~~To change the section title color, modify the following item in~~  
-~~**res/values/colors.xml**~~
+~~`res/values/colors.xml`~~
 ```xml
 //TO BE DONE
 <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="side_menu_accounts">#1CBA9B</color>
 ```
@@ -176,22 +176,22 @@ To change the section title background color, modify the following item in
 &nbsp;  
 ##### **Info** section:  
 To modify its title, change the following item in  
-**res/values/strings.xml**  
+`res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-**res/values-language/strings.xml**  
+`res/values-language/strings.xml`  
 ```xml
 <string name="info">Info</string>
 ```
 &nbsp;  
 ~~To change the section title color, modify the following item in~~  
-~~**res/values/colors.xml**~~
+~~`res/values/colors.xml`~~
 ```xml
 //TO BE DONE
 <color name="side_menu_info_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-**res/values/colors.xml**
+`res/values/colors.xml`  
 ```xml
 <color name="side_menu_info">#6369A6</color>
 ```
@@ -437,7 +437,7 @@ Default value is `false`.
 ```java
 PIO.setAutoArrange(boolean autoArrange);
 ```
-**DIFFERENCES BETWEEN iOS and Android:**
+**DIFFERENCES BETWEEN iOS and Android:**  
 iOS version of the SDK provides the following choices:
 - PIO_PHOTO_ARRANGEMENT_CHOOSE
 - PIO_PHOTO_ARRANGEMENT_AUTO
@@ -447,20 +447,20 @@ whereas in Android, this method corresponds to choice between:
 - PIO_PHOTO_ARRANGEMENT_AUTO
 &nbsp;  
 &nbsp;  
-#### > Change the `Add photos` icon in Customize Product screen  
+#### > Change the `Add photos` button icon in Customize Product screen  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
+Recommended dimensions are listed next to the icon name.  
 ```
 icon_add_more_images_a (111x111) - default state
 icon_add_more_images_b (111x111) - pressed state
 ```
 &nbsp;  
 &nbsp;  
-#### > Change the `Help button` icon in Customize Product screen  
+#### > Change the `Help` button icon in Customize Product screen  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
+Recommended dimensions are listed next to the icon name.  
 ```
 icon_help_circle_grey (50x50px) - default state
 icon_help_circle_grey_dark (50x50px) - pressed state
@@ -502,13 +502,13 @@ Shopping Cart
 #### > Set custom icon for Shopping Cart  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
+Recommended dimensions are listed next to the icon name.  
 ```
 icon_cart_default.png (45x42)
 icon_cart_pressed.png (45x42)
 icon_cart_items_qty_background (31x31) //Background for the badge that displays cart items count
 ```
-**DIFFERENCES BETWEEN iOS and Android:**
+**DIFFERENCES BETWEEN iOS and Android:**  
 iOS version of the SDK allows the badge to be hidden.  
 On Android version, the badge is always visible and its background can be changed.
 &nbsp;  
@@ -545,7 +545,7 @@ Sets the default shipping country.
  */
 PIO.setCountryCode(String countryCode);
 ```
-**NOTICE:**
+**NOTICE:**  
 If `setCountryOnFeaturedProducts()` was set to `true`, default country code is `us`.  
 Otherwise, the user is taken to Select Country screen and there is no default value.
 &nbsp;  
@@ -570,6 +570,333 @@ PIO.setCurrencyCode(String currencyCode);
  * @param languageCode - A two-letter language code
  */
 PIO.setLanguageCode(String languageCode);
+```
+&nbsp;  
+&nbsp;  
+Steps
+-----
+#### > Jump to product  
+
+Instead of opening Featured Products screen, go directly to specified product.
+```java
+/**
+ * @param productIdFromApp - ID of a product to jump to
+ */
+PIO.setProductIdFromApp(int productIdFromApp);
+```
+**NOTICE:**  
+PRODUCT_IDS constants are currently `private`,
+but will be made `public` in upcoming versions of the SDK.  
+&nbsp;  
+&nbsp;  
+#### > Jump to product with specific SKU  
+
+```java
+/**
+ * @param productIdFromApp - ID of a product to jump to
+ * @param productSkuFromApp - SKU for product
+ */
+PIO.setIdAndSku(int productIdFromApp, String productSkuFromApp);
+```
+**NOTICE:**  
+PRODUCT_IDS constants are currently `private`, but will be made `public` in upcoming versions of the SDK.  
+SKUs currently work only for Phone Cases and Coasters.  
+&nbsp;  
+&nbsp;  
+#### > Jump to SKU  
+
+Force a SKU for product.
+```java
+PIO.setProductSkuFromApp(String productSkuFromApp);
+```
+**NOTICE:**  
+This method only works for Phone Cases, **not** for Coasters.  
+&nbsp;  
+&nbsp;  
+~~#### > Set Product Variant options~~  
+
+```java
+//TO BE DONE
+PIO.setProductVariantFromApp(String productVariantFromApp);
+```
+&nbsp;  
+&nbsp;  
+Push Notifications
+------------------
+#### > Initialize Parse.com push notifications  
+
+To obtain Parse.com credentials, refer to https://parse.com/  
+Set the Parse.com `APPLICATION_ID` and `CLIENT_KEY`.  
+Pass an `Application` reference to `initializeParse(...)` method.  
+```java
+PIO.setParseApplicationId(String PARSE_APPLICATION_ID);
+PIO.setParseClientKey(String PARSE_CLIENT_KEY);
+PIO.initializeParse(Application application);
+```
+&nbsp;  
+&nbsp;  
+PayPal Settings
+---------------
+#### > Set up PayPal credentials  
+
+```java
+PIO.setPayPalAppId(String PAY_PAL_APP_ID);
+PIO.setPayPalClientId(String PAY_PAL_CLIENT_ID);
+```
+**NOTICE:**  
+If `PIO.setLiveApplication(...)` was set to `true`, PayPal **Live** environment is used.  
+Otherwise, **Sandbox** environment is used.  
+&nbsp;  
+&nbsp;  
+#### > Define PayPal receiver email and set up fees  
+
+```java
+PIO.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
+
+/**
+ * @param PAY_PAL_FEE_PAYER  
+ * Sets who pays any transaction fees.
+ * Possible values:
+ * FEEPAYER_SENDER, FEEPAYER_PRIMARYRECEIVER, FEEPAYER_EACHRECEIVER,
+ * and FEEPAYER_SECONDARYONLY
+ */
+PIO.setPayPalFeePayer(int PAY_PAL_FEE_PAYER);
+```
+&nbsp;  
+&nbsp;  
+Braintree Settings
+------------------
+#### > Set up Braintree encryption key  
+
+```java
+PIO.setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);
+```
+&nbsp;  
+&nbsp;  
+Other Customization
+===================
+
+#### > Adjust font sizes  
+
+Fonts sizes are organized into six "buckets".  
+To change their sizes, modify the respective items in `res/values/dimen.xml`.  
+These are the default values which work well with default fonts.  
+```xml
+<dimen name="text_size_tiny">8dip</dimen>
+<dimen name="text_size_small">12dip</dimen>
+<dimen name="text_size_normal">14dip</dimen>
+<dimen name="text_size_large">18dip</dimen>
+<dimen name="text_size_title">20dip</dimen>
+<dimen name="text_size_huge">32dip</dimen>
+```
+&nbsp;  
+&nbsp;  
+#### > Set custom fonts  
+
+Pass font's filename to appropriate method.  
+`.otf` and `.ttf` fonts are supported.  
+```java
+PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
+PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
+PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
+```
+**NOTICE:**  
+Fonts need to be placed in `assets` dir.  
+&nbsp;  
+&nbsp;  
+#### > Change Loading animation  
+
+Currently, Android's GIF support is very limited.
+PrintIO Android SDK does not use GIF animations directly.  
+To set a custom loading animation, follow these steps:  
+&nbsp;  
+1) Extract individual frames from GIF animation.  
+This can be done using free online tools, for example: http://gif-explode.com/  
+&nbsp;  
+2) Copy individual frames to appropriate drawable(s) folder(s).  
+&nbsp;  
+3) Modify `res/anim/progress_anim_multicolor.xml` to reference new frames.  
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/loading_01_multicolor"
+        android:duration="80"/>
+    <item
+        android:drawable="@drawable/loading_02_multicolor"
+        android:duration="80"/>
+
+    ...
+
+    <item
+        android:drawable="@drawable/loading_26_multicolor"
+        android:duration="80"/>
+</animation-list>
+```
+**NOTICE:**  
+`android:duration` parameter specifies the amount of time a single frame will be shown, in milliseconds.  
+Smaller value equals faster animation and vice-versa.  
+&nbsp;  
+&nbsp;  
+#### > Change loading dialog text  
+
+To modify loading dialog title and message, change the following items in  
+`res/values/strings.xml`  
+```xml
+<string name="progress_text_pt1">Loading... Please wait.</string>
+<string name="progress_text_pt2">Think Happy Thoughts</string>
+```
+&nbsp;  
+&nbsp;  
+#### > Change `Help` button icon  
+
+Replace the following icon with your own icon of the same name.  
+Recommended dimensions are listed next to the icon name.  
+```
+icon_question_big.png (25x38)
+```
+&nbsp;  
+&nbsp;  
+#### > Set custom logo for the SDK  
+
+Replace the following icon with your own icon of the same name.  
+Recommended dimensions are listed next to the icon name.  
+Default logo is a 100% transparent image (no logo).  
+```
+icon_logo.png (71×80)
+```
+&nbsp;  
+&nbsp;  
+#### > Set PayPal payee name  
+
+Default is blank (no name).  
+```java
+PIO.setPartnerName(String partnerName);
+```
+&nbsp;  
+&nbsp;  
+~~#### > Jump to screen~~  
+
+```java
+//TO BE DONE
+/**
+ * @param screen - Screen to jump to.
+ * Can be one of following:
+ * PRINTIO_SCREEN_SHOPING_CART
+ */
+PIO.goToScreen(int screen);
+```
+~~**NOTICE:**~~  
+~~Screens constants are defined in Screens.java~~  
+&nbsp;  
+&nbsp;  
+~~#### > Set Terms and Conditions URL~~  
+
+```java
+//TO BE DONE
+PIO.setTermsAndConditionsUrl(String termsAndConditionsUrl);
+```
+&nbsp;  
+&nbsp;  
+#### > Change buttons' colors  
+
+To change buttons' colors, modify the following items in  
+`res/values/colors.xml`  
+&nbsp;  
+Primary button:  
+```xml
+<color name="blue_light">#22a0dd</color> <!--Default state-->
+<color name="blue_dark">#0e79ad</color> <!--Pressed state-->
+```
+&nbsp;
+Secondary button:  
+```xml
+<color name="green">#42be9c</color> <!--Default state-->
+<color name="green_dark">#09866d</color> <!--Pressed state-->
+```
+**NOTICE:**  
+Those buttons are used throughout the application.  
+Do **not** change colors' names, only change the values (#xxxxxx).  
+"Primary" and "Secondary" do not hold any significance beyond simply differentiating between buttons' colors:  
+All "Primary" buttons have same color and all "Secondary" buttons have same color.  
+More categories may be added in the future.  
+Colors' names will be changed to more generic names in the future.  
+&nbsp;  
+&nbsp;  
+#### > Change Product Details screen labels icons and colors  
+
+Replace the following icon(s) with your own icon(s) of the same name(s).  
+Recommended dimensions are listed next to the icon name.  
+```
+icon_details.png (40x40)
+icon_shipping_info (42x40)
+icon_quality_guarantee (40x40)
+```
+To change labels' colors, modify the following items in  
+`res/values/colors.xml`  
+```xml
+<!--Details-->
+<color name="green">#42be9c</color>
+<!--Same color is currently being used for secondary buttons!-->
+<!--Needs fixing-->
+
+<!--Shipping Info-->
+<color name="blue_light">#22a0dd</color>
+<!--Same color is currently being used for primary buttons!-->
+<!--Needs fixing-->
+
+<!--Quality Guarantee-->
+<color name="purple">#646aa6</color>
+```
+**DIFFERENCES BETWEEN iOS and Android:**  
+Icons cannot be changed on iOS.  
+`Description` label color cannot be changed on Android.  
+&nbsp;  
+&nbsp;  
+#### > Change buttons labels in Auto Arrange dialog  
+
+To modify buttons' labels, change the following items in  
+`res/values/strings.xml`  
+```xml
+<string name="random_auto_arrange">Auto Random\nArrange</string>
+<string name="manual_drag_drop">Manual\nDrag and Drop</string>
+```
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.  
+&nbsp;  
+&nbsp;  
+#### > Change Address Type dialog labels  
+
+To modify labels, change the following items in  
+`res/values/strings.xml`  
+```xml
+<string name="business_residential">Is this address Business or Residental?</string>
+<string name="business">Business\nAddress</string>
+<string name="residential">Residential\nAddress</string>
+```
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.  
+&nbsp;  
+&nbsp;  
+~~#### > Change Product Preview screen labels~~  
+
+~~To change labels' colors, modify the following items in~~  
+~~`res/values/colors.xml`~~  
+```xml
+//TO BE DONE
+//Colors are hard-coded currently
+<!--Device Type-->
+<color name="label_device_type">#000000</color>
+
+<!--Grid Type-->
+<color name="label_grid_type">#000000</color>
+
+<!--Case Color-->
+<color name="label_case_color">#000000</color>
+
+<!--Case Type-->
+<color name="label_case_type">#000000</color>
 ```
 &nbsp;  
 &nbsp;  
