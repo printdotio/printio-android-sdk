@@ -24,7 +24,7 @@ PIO.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex 
 _Note that the value set programmatically will override the value set in xml!_  
 &nbsp;  
 To change separator and texts' colors, modify the following items in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="title_bar_separator">#d6d6d6</color>
 <color name="title_bar_text">#000000</color>
@@ -40,7 +40,7 @@ Modify values only.
 #### > Change `Back` button icon  
 
 Replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_arrow_back_2.png (19x33)
 ```
@@ -69,7 +69,7 @@ Side Menu
 #### > Change side menu icon  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_menu_default.png (39x29)
 icon_menu_pressed.png (39x29)
@@ -79,7 +79,7 @@ icon_menu_pressed.png (39x29)
 #### > Change side menu background color  
 
 To change side menu background color, modify the following item in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="side_menu_background">#1D1D1D</color>
 ```
@@ -88,7 +88,7 @@ To change side menu background color, modify the following item in
 #### > Change side menu text color  
 
 To change side menu text color, modify the following item in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="side_menu_text">#ffffff</color>
 ```
@@ -120,7 +120,7 @@ enum SideMenuButton {
 To modify its title, change the following item in  
 `res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-`res/values-language/strings.xml`  
+`res/values-language/strings.xml`
 ```xml
 <string name="options">Options</string>
 ```
@@ -129,14 +129,14 @@ Never modify xml item names.
 Modify values only.  
 &nbsp;  
 ~~To change the section title color, modify the following item in~~  
-~~`res/values/colors.xml`~~  
+~~`res/values/colors.xml`~~
 ```xml
 //TO BE DONE
 <color name="side_menu_options_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="side_menu_options">#239EDB</color>
 ```
@@ -154,7 +154,7 @@ Contains the available photo sources that the app will use.
 To modify its title, change the following item in  
 `res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-`res/values-language/strings.xml`  
+`res/values-language/strings.xml`
 ```xml
 <string name="accounts">Accounts</string>
 ```
@@ -167,7 +167,7 @@ and if your app supports multiple languages, change the appropriate items in
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="side_menu_accounts">#1CBA9B</color>
 ```
@@ -178,7 +178,7 @@ To change the section title background color, modify the following item in
 To modify its title, change the following item in  
 `res/values/strings.xml`  
 and if your app supports multiple languages, change the appropriate items in  
-`res/values-language/strings.xml`  
+`res/values-language/strings.xml`
 ```xml
 <string name="info">Info</string>
 ```
@@ -191,7 +191,7 @@ and if your app supports multiple languages, change the appropriate items in
 ```
 &nbsp;  
 To change the section title background color, modify the following item in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <color name="side_menu_info">#6369A6</color>
 ```
@@ -256,7 +256,7 @@ Photo Sources
 #### > Set available photo sources  
 
 To select photo sources for this section, pass a `List` of `PhotoSource` to the following method.  
-The order of photo sources on screen is determined by order of elements in the list.  
+The order of photo sources on screen is determined by order of elements in the list.
 ```java
 PIO.setPhotoSources(List<PhotoSource> photoSources);
 
@@ -382,7 +382,7 @@ PIO.setFacebookAppId(getString(R.string.facebook_app_id));
 #### > Set Photobucket credentials  
 
 In order to use Photobucket as a photo source, credentials are required.  
-To obtain Photobucket `CLIENT_ID` and `CLIENT_SECRET`, refer to documentation at http://pic.pbsrc.com/dev_help/WebHelpPublic/Content/FAQ/FAQOverview.htm#HowDoIUseAPI  
+To obtain Photobucket `CLIENT_ID` and `CLIENT_SECRET`, refer to documentation at http://pic.pbsrc.com/dev_help/WebHelpPublic/Content/FAQ/FAQOverview.htm#HowDoIUseAPI
 ```java
 PIO.setPhotobucketClientId(String PHOTOBUCKET_CLIENT_ID);
 PIO.setPhotobucketClientSecret(String PHOTOBUCKET_CLIENT_SECRET);
@@ -450,7 +450,7 @@ whereas in Android, this method corresponds to choice between:
 #### > Change the `Add photos` button icon in Customize Product screen  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_add_more_images_a (111x111) - default state
 icon_add_more_images_b (111x111) - pressed state
@@ -460,7 +460,7 @@ icon_add_more_images_b (111x111) - pressed state
 #### > Change the `Help` button icon in Customize Product screen  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_help_circle_grey (50x50px) - default state
 icon_help_circle_grey_dark (50x50px) - pressed state
@@ -502,7 +502,7 @@ Shopping Cart
 #### > Set custom icon for Shopping Cart  
 
 Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_cart_default.png (45x42)
 icon_cart_pressed.png (45x42)
@@ -627,7 +627,7 @@ Push Notifications
 
 To obtain Parse.com credentials, refer to https://parse.com/  
 Set the Parse.com `APPLICATION_ID` and `CLIENT_KEY`.  
-Pass an `Application` reference to `initializeParse(...)` method.  
+Pass an `Application` reference to `initializeParse(...)` method.
 ```java
 PIO.setParseApplicationId(String PARSE_APPLICATION_ID);
 PIO.setParseClientKey(String PARSE_CLIENT_KEY);
@@ -680,7 +680,7 @@ Other Customization
 
 Fonts sizes are organized into six "buckets".  
 To change their sizes, modify the respective items in `res/values/dimen.xml`.  
-These are the default values which work well with default fonts.  
+These are the default values which work well with default fonts.
 ```xml
 <dimen name="text_size_tiny">8dip</dimen>
 <dimen name="text_size_small">12dip</dimen>
@@ -694,7 +694,7 @@ These are the default values which work well with default fonts.
 #### > Set custom fonts  
 
 Pass font's filename to appropriate method.  
-`.otf` and `.ttf` fonts are supported.  
+`.otf` and `.ttf` fonts are supported.
 ```java
 PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
 PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
@@ -715,7 +715,7 @@ This can be done using free online tools, for example: http://gif-explode.com/
 &nbsp;  
 2) Copy individual frames to appropriate drawable(s) folder(s).  
 &nbsp;  
-3) Modify `res/anim/progress_anim_multicolor.xml` to reference new frames.  
+3) Modify `res/anim/progress_anim_multicolor.xml` to reference new frames.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
@@ -742,7 +742,7 @@ Smaller value equals faster animation and vice-versa.
 #### > Change loading dialog text  
 
 To modify loading dialog title and message, change the following items in  
-`res/values/strings.xml`  
+`res/values/strings.xml`
 ```xml
 <string name="progress_text_pt1">Loading... Please wait.</string>
 <string name="progress_text_pt2">Think Happy Thoughts</string>
@@ -752,7 +752,7 @@ To modify loading dialog title and message, change the following items in
 #### > Change `Help` button icon  
 
 Replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_question_big.png (25x38)
 ```
@@ -762,7 +762,7 @@ icon_question_big.png (25x38)
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.  
-Default logo is a 100% transparent image (no logo).  
+Default logo is a 100% transparent image (no logo).
 ```
 icon_logo.png (71×80)
 ```
@@ -770,7 +770,7 @@ icon_logo.png (71×80)
 &nbsp;  
 #### > Set PayPal payee name  
 
-Default is blank (no name).  
+Default is blank (no name).
 ```java
 PIO.setPartnerName(String partnerName);
 ```
@@ -804,13 +804,13 @@ PIO.setTermsAndConditionsUrl(String termsAndConditionsUrl);
 To change buttons' colors, modify the following items in  
 `res/values/colors.xml`  
 &nbsp;  
-Primary button:  
+Primary button:
 ```xml
 <color name="blue_light">#22a0dd</color> <!--Default state-->
 <color name="blue_dark">#0e79ad</color> <!--Pressed state-->
 ```
 &nbsp;
-Secondary button:  
+Secondary button:
 ```xml
 <color name="green">#42be9c</color> <!--Default state-->
 <color name="green_dark">#09866d</color> <!--Pressed state-->
@@ -827,14 +827,14 @@ Colors' names will be changed to more generic names in the future.
 #### > Change Product Details screen labels icons and colors  
 
 Replace the following icon(s) with your own icon(s) of the same name(s).  
-Recommended dimensions are listed next to the icon name.  
+Recommended dimensions are listed next to the icon name.
 ```
 icon_details.png (40x40)
 icon_shipping_info (42x40)
 icon_quality_guarantee (40x40)
 ```
 To change labels' colors, modify the following items in  
-`res/values/colors.xml`  
+`res/values/colors.xml`
 ```xml
 <!--Details-->
 <color name="green">#42be9c</color>
@@ -857,7 +857,7 @@ Icons cannot be changed on iOS.
 #### > Change buttons labels in Auto Arrange dialog  
 
 To modify buttons' labels, change the following items in  
-`res/values/strings.xml`  
+`res/values/strings.xml`
 ```xml
 <string name="random_auto_arrange">Auto Random\nArrange</string>
 <string name="manual_drag_drop">Manual\nDrag and Drop</string>
@@ -869,7 +869,7 @@ Use `newline` character `\n` to manually add new lines.
 #### > Change Address Type dialog labels  
 
 To modify labels, change the following items in  
-`res/values/strings.xml`  
+`res/values/strings.xml`
 ```xml
 <string name="business_residential">Is this address Business or Residental?</string>
 <string name="business">Business\nAddress</string>
@@ -882,7 +882,7 @@ Use `newline` character `\n` to manually add new lines.
 ~~#### > Change Product Preview screen labels~~  
 
 ~~To change labels' colors, modify the following items in~~  
-~~`res/values/colors.xml`~~  
+~~`res/values/colors.xml`~~
 ```xml
 //TO BE DONE
 //Colors are hard-coded currently
