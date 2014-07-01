@@ -21,7 +21,6 @@
             android:layout_marginTop="15dip"
             android:gravity="center"
             android:padding="15dip"
-            android:text="@string/shipping_to"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />
 
