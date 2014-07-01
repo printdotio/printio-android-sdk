@@ -7,7 +7,8 @@
 ---
 Navigation bar
 --------------
-#### > Change navigation bar color, separator color and title bar text color  
+#### > Change navigation bar color and title font color, also set left and right bar button.  
+( > Change navigation bar color, separator color and title bar text color)  
 
 This can be done in xml by changing the following item in  
 `res/values/colors.xml`
@@ -37,7 +38,8 @@ Never modify xml item names.
 Modify values only.  
 &nbsp;  
 &nbsp;  
-#### > Change `Back` button icon  
+#### > Set icon for back button.  
+( > Change `Back` button icon)  
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.
@@ -46,7 +48,8 @@ icon_arrow_back_2.png (19x33)
 ```
 &nbsp;  
 &nbsp;  
-#### > Hide status bar  
+#### > Set status bar style and visibility. Default value is light and visible.  
+( > Hide status bar)  
 
 Default value is `false` (not hidden).
 ```java
@@ -54,7 +57,8 @@ PIO.setHideStatusBar(boolean hideStatusBar);
 ```
 &nbsp;  
 &nbsp;  
-~~#### > Set three buttons title bar style~~
+~~#### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen~~  
+~~( > Set three buttons title bar style)~~
 
 ~~Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.~~  
 ~~Default value is `false`.~~
@@ -66,7 +70,8 @@ PIO.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 &nbsp;  
 Side Menu
 ---------
-#### > Change side menu icon  
+#### > Use Side Menu with options.  
+( > Change side menu icon)  
 
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
@@ -76,7 +81,7 @@ icon_menu_pressed.png (39x29)
 ```
 &nbsp;  
 &nbsp;  
-#### > Change side menu background color  
+( > Change side menu background color)  
 
 To change side menu background color, modify the following item in  
 `res/values/colors.xml`
@@ -85,7 +90,8 @@ To change side menu background color, modify the following item in
 ```
 &nbsp;  
 &nbsp;  
-#### > Change side menu text color  
+*On iOS this is a part of "Set which options to use in side menu"
+( > Change side menu text color)  
 
 To change side menu text color, modify the following item in  
 `res/values/colors.xml`
@@ -94,7 +100,8 @@ To change side menu text color, modify the following item in
 ```
 &nbsp;  
 &nbsp;  
-#### > Choose which options will be displayed in side menu
+#### > Set which options to use in side menu  
+( > Choose which options will be displayed in side menu)  
 
 ~~**Buttons** section is at the top of the side menu.~~  
 &nbsp;  
@@ -213,7 +220,8 @@ enum SideMenuButton {
 ```
 &nbsp;  
 &nbsp;  
-#### > Slide side menu from right side  
+#### > Slide side menu from right. Default value is NO.  
+( > Slide side menu from right side)  
 
 Default value is `false` (side menu slides from left side).
 ```java
@@ -221,7 +229,8 @@ PIO.setRightSideMenu(boolean rightSideMenu);
 ```
 &nbsp;  
 &nbsp;  
-#### > Set share text
+#### > This is option from Side Menu, in order to use it, Side Menu needs to be enabled first.  
+( > Set share text)  
 
 This is an option from Side Menu.  
 In order to use it, Side Menu needs to be enabled.
@@ -235,7 +244,8 @@ PIO.setShareText(String shareText);
 &nbsp;  
 Featured Products
 --------------
-#### > Set country on Featured Products screen instead on First screen  
+#### > Set country on Featured Products screen instead on First screen. Default value is NO.  
+( > Set country on Featured Products screen instead on First screen)  
 
 Default value is `false` (country selection screen is the first screen).
 ```java
@@ -243,7 +253,8 @@ PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 ```
 &nbsp;  
 &nbsp;  
-#### > Hide category+search view on Featured Products screen  
+#### > Hide category+search view on Featured Products screen. Default value is NO;  
+( > Hide category+search view on Featured Products screen)  
 
 Default value is `false`.
 ```java
@@ -253,7 +264,8 @@ PIO.setHideCategorySearchBar(boolean hideCategorySearchBar);
 &nbsp;  
 Photo Sources
 --------------
-#### > Set available photo sources  
+#### > Set available photo sources. The order of photo sources on screen will be the same like order they are placed in array.  
+( > Set available photo sources)  
 
 To select photo sources for this section, pass a `List` of `PhotoSource` to the following method.  
 The order of photo sources on screen is determined by order of elements in the list.
@@ -276,7 +288,8 @@ enum PhotoSource {
 Up to 6 photo sources are supported.  
 &nbsp;  
 &nbsp;  
-#### > Pass in images URLs  
+#### > Pass in images URLs or UIImage objects.  
+( > Pass in images URLs)  
 
 Set predefined list of images that will be available to the user.
 ```java
@@ -284,7 +297,8 @@ PIO.setImageUrls(String[] imageUrls);
 ```
 &nbsp;  
 &nbsp;  
-#### > Disable photo sources  
+#### > If user pass in images usinig method 'images', this method can disable photo sources, forcing user to use only passed photos. This method overrides method 'availablePhotoSources'  
+( > Disable photo sources)  
 
 If images were preset using `setImageUrls(...)`, this method can be used to disable photo sources and force the user to only use predefined photos.
 ```java
@@ -309,7 +323,8 @@ PIO.setPassedImageFirstInPhotoSources(boolean passedImageFirstInPhotoSources);
 Currently works only for `PHONE` photo source.
 &nbsp;  
 &nbsp;  
-#### > Set passed in image as thumbnail for templates with one photo  
+#### > Set passed in image as thumbnail for templates with one photo. Right now, only supports Canvas Wraps and Framed Prints.  
+( > Set passed in image as thumbnail for templates with one photo)  
 
 ```java
 PIO.setPassedImageThumb(boolean passedImageThumb);
@@ -407,7 +422,8 @@ Picasa will allow the user to select one of the Google accounts set up on the de
 &nbsp;  
 Customize Product
 -----------------
-#### > Show toolbar in Customize Product screen  
+#### > Show/hide tab bar in Customize Product screen. Default value is YES.  
+( > Show toolbar in Customize Product screen)  
 
 The toolbar contains the following buttons: `Photos`, `Edit Tools`, `Options` and `Layout`.  
 Default value is `true`.
@@ -418,7 +434,8 @@ PIO.setShowOptionsInCustomize(boolean showOptionsInCustomize);
 Not all of those buttons' functions have been implemented yet.  
 &nbsp;  
 &nbsp;  
-#### > Show a list of selected images in Customize Product screen  
+#### > Hide list with images in customization screen.  
+( > Show a list of selected images in Customize Product screen)  
 
 Default value is `true`.
 ```java
@@ -426,7 +443,8 @@ PIO.setShowPhotosInCustomize(boolean showPhotosInCustomize);
 ```
 &nbsp;  
 &nbsp;  
-#### > Auto-arrange photos in Customize Product screen  
+#### > Set photo(s) arrangement in Customize Product screen.  
+( > Auto-arrange photos in Customize Product screen)  
 
 If this is set to `true`, instead of showing a blank product, images will be pre-arranged on it.  
 The user will still be able to change the arrangement.  
@@ -447,7 +465,8 @@ whereas in Android, this method corresponds to choice between:
 - PIO_PHOTO_ARRANGEMENT_AUTO
 &nbsp;  
 &nbsp;  
-#### > Change the `Add photos` button icon in Customize Product screen  
+#### > Change image for "Add photos" button in Customize Product screen.  
+( > Change the `Add photos` button icon in Customize Product screen)  
 
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
@@ -457,7 +476,8 @@ icon_add_more_images_b (111x111) - pressed state
 ```
 &nbsp;  
 &nbsp;  
-#### > Change the `Help` button icon in Customize Product screen  
+#### > Change icon for Help Button on Customize Product screen.  
+( > Change the `Help` button icon in Customize Product screen)  
 
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
@@ -467,7 +487,8 @@ icon_help_circle_grey_dark (50x50px) - pressed state
 ```
 &nbsp;  
 &nbsp;  
-~~#### > ??? Customize Pop up balloon in Customize Product screen~~  
+#### > Set Pop up balloon in Customize Product screen.  
+~~( > ??? Customize Pop up balloon in Customize Product screen)~~  
 
 ```java
 //TO BE DONE
@@ -475,7 +496,8 @@ PIO.setUpPopUpBalloonCustomize(...);
 ```
 &nbsp;  
 &nbsp;  
-~~#### > ??? Show custom help dialog on Image Editor screen~~  
+#### > Show custom dialog for helping user how to edit a photo.  
+~~( > ??? Show custom help dialog on Image Editor screen)~~  
 
 ```java
 //TO BE DONE
@@ -485,7 +507,8 @@ PIO.setImageEditorHelpDialog(...);
 &nbsp;  
 Image Editor
 ------------
-#### > Choose buttons to display in Image Editor  
+#### > Set which buttons will be visible in Image Editor toolbar. By default, all buttons are visible.  
+( > Choose buttons to display in Image Editor)  
 
 Available buttons are `Rotate`, `Edit Text` and `Effects`.  
 By default, all buttons are visible.
@@ -513,7 +536,8 @@ iOS version of the SDK allows the badge to be hidden.
 On Android version, the badge is always visible and its background can be changed.
 &nbsp;  
 &nbsp;  
-~~#### > Remove `+` sign from `Add More Products` button~~  
+#### > Remove plus sign from "Add more products" button. By default, sign is visible.  
+~~( > Remove `+` sign from `Add More Products` button)~~  
 
 ~~Default value is `false` (`+` sign is visible).~~
 ```java
@@ -525,7 +549,8 @@ PIO.removePlusFromAddMoreProductsButton(boolean removePlusSign);
 &nbsp;  
 Payment Screen
 --------------
-~~#### > Remove logo from Payment ~~and Order Confirmation~~ screen~~  
+#### > Remove logo from Payment and Order Confirmation screen.  
+~~( > Remove logo from Payment ~~and Order Confirmation~~ screen)~~  
 
 ~~Default value is `false` (logo is visible).~~
 ```java
@@ -575,7 +600,8 @@ PIO.setLanguageCode(String languageCode);
 &nbsp;  
 Steps
 -----
-#### > Jump to product  
+#### > Jumps directly to product.  
+( > Jump to product)  
 
 Instead of opening Featured Products screen, go directly to specified product.
 ```java
@@ -589,7 +615,8 @@ PRODUCT_IDS constants are currently `private`,
 but will be made `public` in upcoming versions of the SDK.  
 &nbsp;  
 &nbsp;  
-#### > Jump to product with specific SKU  
+#### > Jumps directly to product with sku  
+( > Jump to product with specific SKU)  
 
 ```java
 /**
@@ -603,7 +630,7 @@ PRODUCT_IDS constants are currently `private`, but will be made `public` in upco
 SKUs currently work only for Phone Cases and Coasters.  
 &nbsp;  
 &nbsp;  
-#### > Jump to SKU  
+#### > Jump to SKU (no equivalent method on iOS exists)  
 
 Force a SKU for product.
 ```java
@@ -623,7 +650,9 @@ PIO.setProductVariantFromApp(String productVariantFromApp);
 &nbsp;  
 Push Notifications
 ------------------
-#### > Initialize Parse.com push notifications  
+#### > Set applicationId and apiKey provided from parse.com  
+#### > Register device to receive push notifications.  
+( > Initialize Parse.com push notifications)  
 
 To obtain Parse.com credentials, refer to https://parse.com/  
 Set the Parse.com `APPLICATION_ID` and `CLIENT_KEY`.  
@@ -635,9 +664,14 @@ PIO.initializeParse(Application application);
 ```
 &nbsp;  
 &nbsp;  
+#### > Display notification pop up from bottom of screen. On tap it will dismiss notification.  
+(Does not exist on Android)  
+&nbsp;
+&nbsp;
 PayPal Settings
 ---------------
-#### > Set up PayPal credentials  
+#### > Set PayPal's client ids, for both modes, staging and production. Default values are client ids from PrintIO.  
+( > Set up PayPal credentials)  
 
 ```java
 PIO.setPayPalAppId(String PAY_PAL_APP_ID);
@@ -649,6 +683,7 @@ Otherwise, **Sandbox** environment is used.
 &nbsp;  
 &nbsp;  
 #### > Define PayPal receiver email and set up fees  
+(Does not exist on iOS)  
 
 ```java
 PIO.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
@@ -666,7 +701,8 @@ PIO.setPayPalFeePayer(int PAY_PAL_FEE_PAYER);
 &nbsp;  
 Braintree Settings
 ------------------
-#### > Set up Braintree encryption key  
+#### > Set Braintree encryption key for staging and production mode. By default, keys from PrintIO will be used.  
+( > Set up Braintree encryption key)  
 
 ```java
 PIO.setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);
@@ -676,7 +712,12 @@ PIO.setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);
 Other Customization
 ===================
 
+#### > Import customization XML file  
+(Does not exist on Android)
+&nbsp;
+&nbsp;
 #### > Adjust font sizes  
+(Does not exist on iOS)  
 
 Fonts sizes are organized into six "buckets".  
 To change their sizes, modify the respective items in `res/values/dimen.xml`.  
@@ -691,7 +732,8 @@ These are the default values which work well with default fonts.
 ```
 &nbsp;  
 &nbsp;  
-#### > Set custom fonts  
+#### > Set custom fonts from main app bundle.  
+( > Set custom fonts)  
 
 Pass font's filename to appropriate method.  
 `.otf` and `.ttf` fonts are supported.
@@ -704,7 +746,8 @@ PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
 Fonts need to be placed in `assets` dir.  
 &nbsp;  
 &nbsp;  
-#### > Change Loading animation  
+#### > Change "Loading" GIF animation  
+( > Change Loading animation)  
 
 Currently, Android's GIF support is very limited.
 PrintIO Android SDK does not use GIF animations directly.  
@@ -739,7 +782,8 @@ This can be done using free online tools, for example: http://gif-explode.com/
 Smaller value equals faster animation and vice-versa.  
 &nbsp;  
 &nbsp;  
-#### > Change loading dialog text  
+#### > Change title of loading dialog  
+( > Change loading dialog text)  
 
 To modify loading dialog title and message, change the following items in  
 `res/values/strings.xml`
@@ -749,7 +793,8 @@ To modify loading dialog title and message, change the following items in
 ```
 &nbsp;  
 &nbsp;  
-#### > Change `Help` button icon  
+#### > Change icon for Help Button.  
+( > Change `Help` button icon)  
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.
@@ -758,7 +803,8 @@ icon_question_big.png (25x38)
 ```
 &nbsp;  
 &nbsp;  
-#### > Set custom logo for the SDK  
+#### > Change logo in SDK.  
+( > Set custom logo for the SDK)  
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.  
@@ -768,7 +814,8 @@ icon_logo.png (71×80)
 ```
 &nbsp;  
 &nbsp;  
-#### > Set PayPal payee name  
+#### > Set payee name.  
+( > Set PayPal payee name)  
 
 Default is blank (no name).
 ```java
@@ -776,7 +823,8 @@ PIO.setPartnerName(String partnerName);
 ```
 &nbsp;  
 &nbsp;  
-~~#### > Jump to screen~~  
+#### > Jumps to screen  
+~~( > Jump to screen)~~  
 
 ```java
 //TO BE DONE
@@ -791,7 +839,8 @@ PIO.goToScreen(int screen);
 ~~Screens constants are defined in Screens.java~~  
 &nbsp;  
 &nbsp;  
-~~#### > Set Terms and Conditions URL~~  
+#### > Set url for Terms and Conditions  
+~~( > Set Terms and Conditions URL)~~  
 
 ```java
 //TO BE DONE
@@ -800,6 +849,7 @@ PIO.setTermsAndConditionsUrl(String termsAndConditionsUrl);
 &nbsp;  
 &nbsp;  
 #### > Change buttons' colors  
+(Does not exist on iOS)
 
 To change buttons' colors, modify the following items in  
 `res/values/colors.xml`  
@@ -824,7 +874,8 @@ More categories may be added in the future.
 Colors' names will be changed to more generic names in the future.  
 &nbsp;  
 &nbsp;  
-#### > Change Product Details screen labels icons and colors  
+#### > “Product Details” screen  
+( > Change Product Details screen labels icons and colors)  
 
 Replace the following icon(s) with your own icon(s) of the same name(s).  
 Recommended dimensions are listed next to the icon name.
@@ -854,7 +905,8 @@ Icons cannot be changed on iOS.
 `Description` label color cannot be changed on Android.  
 &nbsp;  
 &nbsp;  
-#### > Change buttons labels in Auto Arrange dialog  
+#### > "Dialog Arrange Photos"  
+( > Change buttons labels in Auto Arrange dialog)  
 
 To modify buttons' labels, change the following items in  
 `res/values/strings.xml`
@@ -866,7 +918,8 @@ To modify buttons' labels, change the following items in
 Use `newline` character `\n` to manually add new lines.  
 &nbsp;  
 &nbsp;  
-#### > Change Address Type dialog labels  
+#### > "Dialog Address Type"  
+( > Change Address Type dialog labels)  
 
 To modify labels, change the following items in  
 `res/values/strings.xml`
@@ -879,7 +932,8 @@ To modify labels, change the following items in
 Use `newline` character `\n` to manually add new lines.  
 &nbsp;  
 &nbsp;  
-~~#### > Change Product Preview screen labels~~  
+#### > “Product image Preview” screen  
+~~( > Change Product Preview screen labels)~~  
 
 ~~To change labels' colors, modify the following items in~~  
 ~~`res/values/colors.xml`~~
