@@ -259,10 +259,10 @@ public void onClickStartSDK(View v) {
     PIO.setCoastersType(int);
     
     //jump directly to the product and select variant.
-    PIO.setIdAndSku(Constants.ProductIds.TABLET_CASES, "TabletCase-iPad3/4-Gloss");
+    PIO.setIdAndSku(PublicConstants.ProductIds.TABLET_CASES, "TabletCase-iPad3/4-Gloss");
     
     //jump directly to the product. if PIO.setIdAndSku() is set this will be ignored.
-    PIO.setProductIdFromApp(Constants.ProductIds.PHONE_CASES);
+    PIO.setProductIdFromApp(PublicConstants.ProductIds.PHONE_CASES);
     
     //show/hide help option through the sdk
     PIO.setShowHelp(boolean);

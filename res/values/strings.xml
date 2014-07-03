@@ -442,6 +442,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="delete_address">Do you want to delete this address?</string>
     <string name="delete">Delete</string>
     <string name="remove_magnet_from_order">Do you want to remove this\nmagnet from your order?</string>
+    <string name="remove_print_from_order">Are you sure you want to remove this print from your order?</string>
     <string name="remove_item_question">Do you want to delete this item?</string>
     <string name="save_editings_dialog_help">You have edited the quantity in your shopping cart.</string>
     <string name="save_editings_dialog_help_1">Do you want to proceed with this new quantity?</string>
@@ -453,9 +454,11 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="overall">Overall</string>
     <string name="continue_shopping">Continue Shopping</string>
     <string name="step_1_canvas_wraps">Step 1: Choose Canvas Shape</string>
+    <string name="step_1_prints">Step 1: Choose Print Material</string>
     <string name="step_1_acrylic_metal">Step 1: Choose Shape</string>
     <string name="step_1_framed_prints">Step 1: Choose Print Type</string>
     <string name="step_2_canvas_wraps">Step 2: Choose Size</string>
+    <string name="step_2_prints">Step 2: Print Size</string>
     <string name="square">Square</string>
     <string name="rectangular">Rectangular</string>
     <string name="panoramatic">Panoramatic</string>

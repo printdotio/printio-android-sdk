@@ -2,6 +2,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android" >
     
     <item android:drawable="@color/swipeable_bg_pressed" android:state_pressed="true"></item>
+    <item android:drawable="@color/swipeable_bg_pressed" android:state_selected="true"></item>
 	<item android:drawable="@color/swipeable_bg"></item>
 
 </selector>

@@ -183,7 +183,7 @@ PIO.setIdAndSku(ProductIds.TABLET_CASES, "TabletCase-iPad3/4-Gloss");
 
 Jumps directly to product with sku
 ```sh
-PIO.setProductIdFromApp(Constants.ProductIds.PHONE_CASES);
+PIO.setProductIdFromApp(PublicConstants.ProductIds.PHONE_CASES);
 ```
 
 Show step by step while setting product layout, size, design, color...

@@ -19,7 +19,7 @@
 
     <!-- Buttons Back and Buy It -->
 
-    <RelativeLayout
+   <RelativeLayout
         android:id="@+id/layout_buttons"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_back"
             android:layout_width="wrap_content"
-            android:layout_height="40dip"
+            android:layout_height="35dip"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="5dip"
@@ -57,8 +57,8 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_buy_it"
-            android:layout_width="75dip"
-            android:layout_height="40dip"
+            android:layout_width="70dip"
+            android:layout_height="35dip"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_marginRight="5dip"
@@ -66,14 +66,17 @@
             android:background="@drawable/btn_green"
             android:clickable="true"
             android:drawableRight="@drawable/icon_arrow_right"
-            android:drawablePadding="5dp"
+            android:drawablePadding="3dp"
             android:gravity="center"
             android:onClick="onClickOrder"
-            android:paddingLeft="10dip"
-            android:paddingRight="2dip"
+            android:paddingLeft="4dp"
+            android:paddingRight="7dp"
             android:text=""
             android:textColor="#ffffff"
             android:textSize="@dimen/text_size_normal" />
+        
+
+        
     </RelativeLayout>
 
     <include
