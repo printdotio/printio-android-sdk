@@ -266,16 +266,24 @@ PIO.start(context, null);
 
 PIO.start(Context ctx, PIOCallback pioCallback) method takes 2 parameters, first is your activity Context, second is optional PIOCallback, that can give you information when shopping cart has been changed, or purchase has been finalized.
 
-RECEIPE_ID is your API KEY provided for every partner.
-
 #print.io Quick Start
 Below is sample code for launching a customized print.io widget, with all options included.  
 This code should be added to your Application class' onCreate() method.  
 ```xml
-PIO.setRecipeID(YOUR_RECEIPE_ID);
-
 //set live or staging server, on staging you can test purchase process without using real money.
 PIO.setLiveApplication(boolean);
+
+//do not show splash screen
+PIO.setSplashScreenEnabled(false);
+
+//hide Android status bar
+PIO.setHideStatusBar(true);
+
+//API KEY provided for every partner
+PIO.setRecipeID(PIOConstants.RECIPE_ID);
+
+// http://staging.api.print.io/api/
+PIO.setApiUrl(PIOConstants.API_URL);
 
 //enable/disable application side menu.
 PIO.setSideMenuEnabled(boolean);
@@ -347,6 +355,11 @@ photoSourcesTest.add(PhotoSource.FLICKR);
 photoSourcesTest.add(PhotoSource.INSTAGRAM);
 photoSourcesTest.add(PhotoSource.PHOTOBUCKET);
 PIO.setPhotoSources(photoSourcesTest);
+
+//initialize Parse push notifications
+PIO.setParseApplicationId(PIOConstants.Parse.APPLICATION_ID);
+PIO.setParseClientKey(PIOConstants.Parse.CLIENT_KEY);
+PIO.initializeParse(this);
 ```
 
 #See also
