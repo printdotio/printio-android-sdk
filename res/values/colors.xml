@@ -13,10 +13,15 @@
     <color name="title_bar_separator">#d6d6d6</color> <!-- #d6d6d6 -->
     <color name="cart_items_qty_text">#ffffff</color>
     <color name="step_separator">#000000</color>
+    <color name="separator_color_1">#000000</color>
+    <color name="separator_color_2">#343434</color>
     <color name="side_menu_background">#1d1d1d</color> <!-- #1d1d1d -->
     <color name="side_menu_text">#ffffff</color> <!-- #ffffff -->
+    <color name="side_menu_options_subtitle_text">#FFFFFF</color>
     <color name="side_menu_options">#239EDB</color> <!-- #239EDB -->
+    <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
     <color name="side_menu_accounts">#1CBA9B</color> <!-- #1CBA9B -->
+    <color name="side_menu_info_subtitle_text">#FFFFFF</color>
     <color name="side_menu_info">#6369A6</color> <!-- #6369A6 -->
     <color name="side_menu_cart_items_qty_text">#ffffff</color> <!-- #ffffff -->
 

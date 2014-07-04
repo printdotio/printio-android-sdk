@@ -135,10 +135,9 @@ and if your app supports multiple languages, change the appropriate items in
 Never modify xml item names.  
 Modify values only.  
 &nbsp;  
-~~To change the section title color, modify the following item in~~  
-~~`res/values/colors.xml`~~
+To change the section title color, modify the following item in  
+`res/values/colors.xml`
 ```xml
-//TO BE DONE
 <color name="side_menu_options_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
@@ -166,10 +165,9 @@ and if your app supports multiple languages, change the appropriate items in
 <string name="accounts">Accounts</string>
 ```
 &nbsp;  
-~~To change the section title color, modify the following item in~~  
-~~`res/values/colors.xml`~~
+To change the section title color, modify the following item in  
+`res/values/colors.xml`
 ```xml
-//TO BE DONE
 <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
@@ -190,10 +188,9 @@ and if your app supports multiple languages, change the appropriate items in
 <string name="info">Info</string>
 ```
 &nbsp;  
-~~To change the section title color, modify the following item in~~  
-~~`res/values/colors.xml`~~
+To change the section title color, modify the following item in  
+`res/values/colors.xml`
 ```xml
-//TO BE DONE
 <color name="side_menu_info_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
@@ -951,6 +948,13 @@ Use `newline` character `\n` to manually add new lines.
 
 <!--Case Type-->
 <color name="label_case_type">#000000</color>
+```
+&nbsp;  
+&nbsp;  
+#### > Set url for Help in side menu  
+
+```java
+PIO.setHelpUrl(String helpUrl);
 ```
 &nbsp;  
 &nbsp;  
