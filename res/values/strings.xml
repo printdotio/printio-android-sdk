@@ -183,8 +183,8 @@
     <string name="share_this_app">Share this app</string> <!-- translate -->
     <string name="accounts">Accounts</string> <!-- translate -->
     <string name="view_cart">View Cart</string> <!-- translate -->
-    <string name="logout">LogOut</string> <!-- translate -->
-    <string name="login">LogIn</string> <!-- translate -->
+    <string name="logout">Logout</string> <!-- translate -->
+    <string name="login">Login</string> <!-- translate -->
     <string name="info">Info</string> <!-- translate -->
     <string name="step_1_phone">Step 1: Choose Phone Type</string> <!-- translate -->
     <string name="with_zipper">With Zipper</string>
@@ -387,7 +387,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="get_more_photos">Get\nMore Photos</string>
     <string name="continue_with">Continue\nWith %1$s Photo(s)</string>
     <string name="photo_arrangement">Photo Arrangement</string>
-    <string name="product_search">Product Search</string>
+    <string name="product_search">Search for products here</string>
     <string name="address_validation">Address Validation</string>
     <string name="close">Close</string>
     <string name="tabbar_info">Info</string>

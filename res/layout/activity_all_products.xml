@@ -18,7 +18,6 @@
             android:layout_centerVertical="true"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:onClick="onClickMenu"
             android:orientation="horizontal"
             android:paddingBottom="10dip"
             android:paddingLeft="0dip"
@@ -30,7 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:src="@drawable/btn_menu_black" />
+                android:src="@drawable/btn_menu_black"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/imageview_top_left_logo"
@@ -76,7 +76,18 @@
             android:src="@drawable/btn_search"
             android:visibility="gone" />
 
+        <ImageView
+            android:id="@+id/button_menu_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/relativelayout_shopping_cart"
+            android:padding="10dip"
+            android:src="@drawable/btn_menu_black"
+            android:visibility="gone" />
+
         <RelativeLayout
+            android:id="@+id/relativelayout_shopping_cart"
             android:layout_width="45dip"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
