@@ -109,7 +109,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="30dip"
-                android:drawableLeft="@drawable/icon_logo"
                 android:gravity="center"
                 android:text="@string/thanks"
                 android:textColor="#333333"
