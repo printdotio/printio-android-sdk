@@ -462,6 +462,7 @@ whereas in Android, this method corresponds to choice between:
 - PIO_PHOTO_ARRANGEMENT_AUTO
 &nbsp;  
 &nbsp;  
+
 #### > Change image for "Add photos" button in Customize Product screen.  
 ( > Change the `Add photos` button icon in Customize Product screen)  
 

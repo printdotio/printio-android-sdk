@@ -269,7 +269,7 @@ PIO.start(Context ctx, PIOCallback pioCallback) method takes 2 parameters, first
 #print.io Quick Start
 Below is sample code for launching a customized print.io widget, with all options included.  
 This code should be added to your Application class' onCreate() method.  
-PIOConstants class is not a part of the SDK.  
+PIOConstants class is not built in into the SDK.  
 You should create your PIOConstants class and store SDK related constants there. (RECIPE_ID, API_URL, etc...)
 ```xml
 //set live or staging server, on staging you can test purchase process without using real money.
