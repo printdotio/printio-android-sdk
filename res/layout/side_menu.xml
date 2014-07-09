@@ -204,7 +204,7 @@
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
-            <!-- Special Offers -->
+            <!-- Featured Products -->
 
             <View
                 android:layout_width="fill_parent"
@@ -217,7 +217,6 @@
                 android:background="@color/separator_color_2" />
 
             <LinearLayout
-                android:id="@+id/layout_special_offers"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_selector"
@@ -237,7 +236,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="@string/special_offers"
+                    android:text="@string/side_menu_featured_products"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>

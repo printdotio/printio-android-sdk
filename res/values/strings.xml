@@ -39,7 +39,7 @@
     <string name="exit">Exit</string>
     <string name="starting_at">Starting at %s</string> <!-- translate -->
     <string name="metal_magnets_price">%s Each</string> <!-- translate -->
-    <string name="featured_products">Featured Products</string> <!-- translate -->
+    <string name="title_featured_products">Featured Products</string> <!-- translate -->
     <string name="view_all_products">View All Products</string> <!-- translate -->
     <string name="all_products">All Products</string> <!-- translate -->
     <string name="all">All</string>
@@ -176,7 +176,7 @@
     <string name="products">Products</string> <!-- translate -->
     <string name="help">Help</string> <!-- translate -->
     <string name="options">Options</string> <!-- translate -->
-    <string name="special_offers">Featured Products</string> <!-- translate -->
+    <string name="side_menu_featured_products">Featured Products</string> <!-- translate -->
     <string name="change_currency">Change Currency</string> <!-- translate -->
     <string name="change_country">Change Country</string> <!-- translate -->
     <string name="pricing_chart">Pricing Chart</string> <!-- translate -->

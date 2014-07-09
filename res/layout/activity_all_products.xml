@@ -167,7 +167,7 @@
         android:clickable="true"
         android:onClick="onClickFeatureProducts"
         android:padding="7dip"
-        android:text="@string/featured_products"
+        android:text="@string/side_menu_featured_products"
         android:textColor="#ffffff"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
