@@ -80,7 +80,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="5dip"
             android:clickable="true"
             android:gravity="center"
             android:onClick="onClickShoppingCart" >
@@ -137,7 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dip"
-            android:background="@drawable/bg_gray" >
+            android:background="@drawable/bg_photosources" >
 
             <!-- Dummy Horizontal 1 -->
 
@@ -428,48 +427,7 @@
             android:id="@+id/layout_select_photos_from"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="10dip"
-            android:paddingTop="0dip" >
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_select_photos_from"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginLeft="25dip"
-                android:layout_marginRight="25dip"
-                android:text="@string/select_photos_from"
-                android:textColor="#333333"
-                android:textSize="@dimen/text_size_large"
-                android:visibility="gone" />
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_multiphoto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textview_select_photos_from"
-                android:layout_alignRight="@+id/textview_select_photos_from"
-                android:layout_below="@+id/textview_select_photos_from"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dip"
-                android:text="@string/multiphoto"
-                android:textColor="#a0a0a0"
-                android:textSize="@dimen/text_size_normal"
-                android:visibility="gone" />
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_singlephoto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textview_select_photos_from"
-                android:layout_alignRight="@+id/textview_select_photos_from"
-                android:layout_below="@+id/textview_multiphoto"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="40dip"
-                android:text="@string/singlephoto_upload"
-                android:textColor="#a0a0a0"
-                android:textSize="@dimen/text_size_normal"
-                android:visibility="gone" />
+            android:paddingBottom="10dip" >
 
             <include
                 android:id="@+id/singlephoto"

@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:src="@drawable/btn_menu_black"
+                android:src="@drawable/btn_menu"
                 android:visibility="gone" />
 
             <ImageView
@@ -77,50 +77,16 @@
             android:visibility="gone" />
 
         <ImageView
-            android:id="@+id/button_menu_right"
+            android:id="@+id/imageview_menu_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/relativelayout_shopping_cart"
             android:padding="10dip"
-            android:src="@drawable/btn_menu_black"
+            android:src="@drawable/btn_menu"
             android:visibility="gone" />
 
-        <RelativeLayout
-            android:id="@+id/relativelayout_shopping_cart"
-            android:layout_width="45dip"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="5dip"
-            android:clickable="true"
-            android:gravity="center"
-            android:onClick="onClickShoppingCart" >
-
-            <ImageView
-                android:id="@+id/imageview_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dip"
-                android:paddingLeft="7dip"
-                android:paddingRight="7dip"
-                android:paddingTop="10dip"
-                android:src="@drawable/icon_cart" />
-
-            <TextView
-                android:id="@+id/textview_overlay_num_items"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imageview_cart"
-                android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="5dip"
-                android:layout_marginRight="1dip"
-                android:background="@drawable/bg_cart_items_qty"
-                android:gravity="center"
-                android:textColor="@color/cart_items_qty_text"
-                android:textSize="@dimen/text_size_tiny" />
-        </RelativeLayout>
+        <include layout="@layout/button_shopping_cart" />
     </RelativeLayout>
 
     <View

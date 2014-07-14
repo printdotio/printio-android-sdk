@@ -5,7 +5,6 @@
     <string name="share_app_text">I\'m using PrintIO! You can download it from http://www.print.io/our-app</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
     <string name="upgrade_to_force_upgrade">PrintIO has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
-
     <string name="menu_settings">Settings</string> <!-- translate -->
     <string name="choose_country">Choose Country</string> <!-- translate -->
     <string name="store">Store</string> <!-- translate -->
@@ -61,6 +60,7 @@
     <string name="dropbox">Dropbox</string>
     <string name="photobucket">Photobucket</string>
     <string name="customize_product">Customize Product</string> <!-- translate -->
+    <string name="customize_product_tooltip_text">Double click photo to edit</string>
     <string name="product_price">Product Price</string> <!-- translate -->
     <string name="select_your_options">Select Your Options</string> <!-- translate -->
     <string name="add_to_cart">Add To Cart</string> <!-- translate -->
@@ -371,9 +371,9 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="payment">Payment</string>
     <string name="pick_a_color">Pick a color</string>
     <string name="info_custom_color_selection">You have choosen to select a custom color.\n\n After you click OK, the next screen will be black. Place your finger on the screen and while keeping contact drag your finger to find your preferred color.\n\n To select the color, remove your finger from the screen, and it will select that color for you.</string>
-    <string name="singlephoto">Upload Instructions</string>
+    <string name="upload_instructions_title">Upload Instructions</string>
+    <string name="upload_instructions_text">1. Add images from the above sources\n\n2. Selected photos will be counted below\n\n3. When done, click the \"Next\" button below</string>
     <string name="singlephoto_text">You have chosen an item that only needs one image to complete the design.\n\nPlease select an image source above, log-in if necessary and click on the photo you wish to select.\n\nOnce you see the check mark in the corner of the image, push the blue personalize it button below to customize your product.</string>
-    <string name="multiphoto">Upload Instructions</string>
     <string name="single_multiphoto_text">Add images from source above.\nSelected photos will be counted below.\n\nWhen done, click that big blue button.</string>
     <string name="custom_color">Custom Color Instructions</string>
     <string name="custom_color_red">On next screen\ndrag finger to select color</string>
@@ -431,9 +431,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="max_image_count_exceed">uses maximum %1$s images.</string>
     <string name="max_image_count_exceed_thickprints">of this size only allow %1$s per set.</string>
     <string name="max_image_count_exceed_thickprints_photo_select">You have selected maximum photos for this product.</string>
-    <string name="instruction_1">1. Add images from the above sources</string>
-    <string name="instruction_2">2. Selected photos will be counted below</string>
-    <string name="instruction_3">3. When done, click the \"Next\" button below</string>
     <string name="description">Description</string>
     <string name="step_1_thick_prints">Step 1: Choose Size &amp; Set</string>
     <string name="step_1_acrylic_prints">Step 1: Choose Size</string>
@@ -522,7 +519,6 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="coaster_1_duplicated">1 Coaster Duplicated</string>
     <string name="inch">Inch</string>
     <string name="set_of">Set of %1$s</string>
-    <string name="double_click">Double click photo to edit</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
 
     <!-- Help -->
@@ -581,6 +577,7 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="help_select_photo_mousepad">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Mousepad, select Next (Green Button) in the bottom right corner.</string>
     <string name="help_select_photo_coasters">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Coasters, select Next (Green Button) in the bottom right corner</string>
     <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollar.\n</string>
+
     <string name="select_photos_title">Select Photos</string>
     <string name="select_color_title">Select Color</string>
     <string name="woven_blanket_title">Woven Blanket</string>

@@ -103,22 +103,27 @@ To change side menu text color, modify the following item in
 #### > Set which options to use in side menu  
 ( > Choose which options will be displayed in side menu)  
 
-~~**Buttons** section is at the top of the side menu.~~  
+**Buttons** section is at the top of the side menu.  
 &nbsp;  
-~~To select buttons for this section, pass a `List` of `SideMenuButton` to the following method~~
+To select buttons for this section, pass a `List` of `SideMenuButton` to the following method
 ```java
-//TO BE DONE
 PIO.setSideMenuButtons(List<SideMenuButton> sideMenuButtons);
 
 enum SideMenuButton {
-	PIO_SM_EXIT_BUTTON,
-    PIO_SM_SEARCH_BAR,
-    PIO_SM_PRODUCTS,
-    PIO_SM_FEATURED_PRODUCTS,
-    PIO_SM_VIEW_CART,
-    PIO_SM_SHARE_WITH_IMAGE,
-    PIO_SM_EMAIL_SUPPORT;
+	EXIT_BUTTON,
+    SEARCH_BAR,
+    PRODUCTS,
+    FEATURED_PRODUCTS,
+    VIEW_CART,
+    SHARE_WITH_IMAGE,
+    EMAIL_SUPPORT,
+    HELP,
+    VIEW_CART;
 };
+```
+or, to use the default buttons, call
+```java
+PIO.setDefaultSideMenuButtonsTop();
 ```
 &nbsp;  
 
@@ -200,20 +205,23 @@ To change the section title background color, modify the following item in
 <color name="side_menu_info">#6369A6</color>
 ```
 &nbsp;  
-~~To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the following method~~
+To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the following method
 ```java
-//TO BE DONE
 PIO.setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
 
 enum SideMenuButton {
-    PIO_SM_PRICING_CHART,
-    PIO_SM_SHARE_APP,
-    PIO_SM_LIKE_US_FB,
-    PIO_SM_RATE_APP,
-    PIO_SM_ABOUT,
-    PIO_SM_HOW_IT_WORKS,
-    PIO_SM_PAST_ORDERS;
+    PRICING_CHART,
+    SHARE_APP,
+    LIKE_US_FB,
+    RATE_APP,
+    ABOUT,
+    HOW_IT_WORKS,
+    PAST_ORDERS;
 };
+```
+or, to use the default buttons, call
+```java
+PIO.setDefaultSideMenuInfoButtons();
 ```
 &nbsp;  
 &nbsp;  
@@ -486,11 +494,17 @@ icon_help_circle_grey_dark (50x50px) - pressed state
 &nbsp;  
 &nbsp;  
 #### > Set Pop up balloon in Customize Product screen.  
-~~( > ??? Customize Pop up balloon in Customize Product screen)~~  
+~~( > Customize tooltip in Customize Product screen)~~  
 
-```java
-//TO BE DONE
-PIO.setUpPopUpBalloonCustomize(...);
+To modify tooltip text, change the following item in  
+`res/values/strings.xml`
+```xml
+<string name="customize_product_tooltip_text">Double click photo to edit</string>
+```
+To change tooltip background color, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="customize_product_tooltip">#42BE9C</color>
 ```
 &nbsp;  
 &nbsp;  
@@ -959,3 +973,26 @@ PIO.setHelpUrl(String helpUrl);
 ```
 &nbsp;  
 &nbsp;  
+#### > Set "About" text  
+
+To modify "About" text, change the following item in  
+`res/values/strings.xml`
+```xml
+<string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
+```
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.  
+&nbsp;  
+&nbsp;  
+#### > Set "How it Works" text  
+
+To modify "How it Works" text, change the following item in  
+`res/values/strings.xml`
+```xml
+<string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
+```
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.  
+&nbsp;  
+&nbsp;  
+

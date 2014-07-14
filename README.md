@@ -259,7 +259,7 @@ Important: `android:largeHeap="true"` attribute is required to be set in `<appli
 
 #Basic Usage
 
-print.io SDK is controlled from static PIO class. To launch print.io widget, next 2 lines of code should be included at desired place:
+print.io SDK is controlled from static PIO class. To launch print.io widget, the following 2 lines of code should be included at desired place:
 ```xml
 PIO.start(context, null);
 ```
@@ -290,6 +290,8 @@ PIO.setApiUrl(PIOConstants.API_URL);
 
 //enable/disable application side menu.
 PIO.setSideMenuEnabled(boolean);
+PIO.setDefaultSideMenuButtonsTop();
+PIO.setDefaultSideMenuInfoButtons();
 
 //array of urls or local path for images that will be preloaded into the application.
 PIO.setImagesUrls(String[]);

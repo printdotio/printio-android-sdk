@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
-                android:src="@drawable/btn_menu_black"
+                android:src="@drawable/btn_menu"
                 android:visibility="gone" />
 
             <ImageView
@@ -61,13 +61,13 @@
             android:visibility="invisible" />
 
         <ImageView
-            android:id="@+id/button_menu_right"
+            android:id="@+id/imageview_menu_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/imageview_question_mark"
             android:padding="10dip"
-            android:src="@drawable/btn_menu_black"
+            android:src="@drawable/btn_menu"
             android:visibility="gone" />
 
         <ImageView

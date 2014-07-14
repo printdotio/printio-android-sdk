@@ -83,285 +83,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <!-- Search -->
-
-            <RelativeLayout
-                android:id="@+id/layout_search"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:padding="10dip"
-                android:visibility="visible" >
-
-                
-                <print.io.view.EditTextFontLight
-                    android:id="@+id/edittext_search"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_edit_text_search"
-                    android:hint="@string/product_search"
-                    android:inputType="text"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="30dip"
-                    android:textColor="#5c5f68"
-                    android:textColorHint="#5c5f68"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <ImageView
-                    android:id="@+id/imageview_clear"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="true"
-                    android:onClick="onClickClearText"
-                    android:paddingBottom="8dip"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip"
-                    android:paddingTop="8dip"
-                    android:src="@drawable/icon_search_b" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Exit SDK -->
-
             <LinearLayout
-                android:id="@+id/layout_exit_sdk"
-                android:layout_width="fill_parent"
+                android:id="@+id/linearlayout_top_buttons"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickExitSDK"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip"
-                android:visibility="gone" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_arrow_left_white" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/exit"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <!-- Products -->
-
-            <View
-                android:id="@+id/dummy_exit_1"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:id="@+id/dummy_exit_2"
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <LinearLayout
-                android:id="@+id/layout_products"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickProducts"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_product" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/products"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <!-- Featured Products -->
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickSpecialOffers"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_offers" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/side_menu_featured_products"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <!-- View Cart -->
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <LinearLayout
-                android:id="@+id/layout_view_cart"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickShoppingCart"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <RelativeLayout
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:gravity="center"
-                    android:onClick="onClickShoppingCart" >
-
-                    <ImageView
-                        android:id="@+id/imageview_cart"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:paddingBottom="2dip"
-                        android:paddingLeft="2dip"
-                        android:paddingRight="2dip"
-                        android:paddingTop="2dip"
-                        android:src="@drawable/icon_cart_big" />
-
-                    <TextView
-                        android:id="@+id/sidemenu_cart_num"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/imageview_cart"
-                        android:layout_alignRight="@+id/imageview_cart"
-                        android:layout_marginBottom="0dip"
-                        android:layout_marginRight="0dip"
-                        android:background="@drawable/icon_cart_items_qty_side_menu"
-                        android:gravity="center"
-                        android:textColor="@color/side_menu_cart_items_qty_text"
-                        android:textSize="@dimen/text_size_tiny" />
-                </RelativeLayout>
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/view_cart"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <!-- Help -->
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <LinearLayout
-                android:id="@+id/layout_general_help"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickGeneralHelp"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_help" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/help"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <!-- Options -->
+                android:orientation="vertical" />
 
             <LinearLayout
                 android:id="@+id/layout_side_menu_options"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_1"
-                    android:visibility="gone" />
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_2" />
 
                 <print.io.view.TextViewFontBold
                     android:id="@+id/textview_options"
@@ -700,8 +435,6 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- Info -->
-
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="1dip"
@@ -713,293 +446,37 @@
                 android:layout_height="1dip"
                 android:background="@color/separator_color_2" />
 
-            <print.io.view.TextViewFontBold
-                android:id="@+id/textview_info"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/side_menu_info"
-                android:gravity="center"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
-                android:text="@string/info"
-                android:textColor="@color/side_menu_info_subtitle_text"
-                android:textSize="@dimen/text_size_normal" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Pricing Chart -->
+            <!-- Info -->
 
             <LinearLayout
-                android:id="@+id/layout_pricing_chart"
-                android:layout_width="fill_parent"
+                android:id="@+id/linearlayout_info_buttons"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickPricingChart"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
+                android:orientation="vertical"
+                android:visibility="gone" >
 
-                <ImageView
-                    android:layout_width="60dip"
+                <print.io.view.TextViewFontBold
+                    android:id="@+id/textview_info"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_pricin_cart" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/pricing_chart"
-                    android:textColor="#ffffff"
+                    android:background="@color/side_menu_info"
+                    android:gravity="center"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:text="@string/info"
+                    android:textColor="@color/side_menu_info_subtitle_text"
                     android:textSize="@dimen/text_size_normal" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/separator_color_1" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/separator_color_2" />
             </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Share this app -->
-
-            <LinearLayout
-                android:id="@+id/layout_share_app"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickShareApp"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_share" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/share_this_app"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Like Us On Fb -->
-
-            <LinearLayout
-                android:id="@+id/layout_like"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickLike"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_like" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/like_us"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Rate Our App -->
-
-            <LinearLayout
-                android:id="@+id/layout_rate_our_app"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickRateOurApp"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_star_white" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/rate_our_app"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- About Hellopics -->
-
-            <LinearLayout
-                android:id="@+id/layout_about_partner"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickAboutPartner"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_question_sidemenu" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/about_partner"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- How It Works -->
-
-            <LinearLayout
-                android:id="@+id/layout_how_it_works"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickHowItWorks"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_settings" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/how_it_works"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Past Orders -->
-
-            <LinearLayout
-                android:id="@+id/layout_past_orders"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:clickable="true"
-                android:onClick="onClickPastOrders"
-                android:orientation="horizontal"
-                android:paddingBottom="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="15dip" >
-
-                <ImageView
-                    android:layout_width="60dip"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_past_orders" />
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:text="@string/past_orders"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
         </LinearLayout>
     </ScrollView>
 

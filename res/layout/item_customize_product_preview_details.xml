@@ -67,14 +67,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_green"
+            android:background="@drawable/bg_edit_text_white"
             android:editable="false"
             android:hint=""
             android:nextFocusDown="@+id/edittext_grid_type"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.EditTextFontLight
@@ -83,14 +83,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_green"
+            android:background="@drawable/bg_edit_text_white"
             android:editable="false"
             android:hint=""
             android:nextFocusDown="@+id/edittext_case_color"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
@@ -136,14 +136,14 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_green"
+            android:background="@drawable/bg_edit_text_white"
             android:editable="false"
             android:hint=""
             android:nextFocusDown="@+id/edittext_case_type"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.EditTextFontLight
@@ -152,13 +152,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_green"
+            android:background="@drawable/bg_edit_text_white"
             android:editable="false"
             android:hint=""
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textColorHint="#ffffff"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 

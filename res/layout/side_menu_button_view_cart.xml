@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_view_cart"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/bg_selector"
+    android:clickable="true"
+    android:onClick="onClickShoppingCart"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="60dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/imageview_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="2dip"
+            android:paddingLeft="2dip"
+            android:paddingRight="2dip"
+            android:paddingTop="2dip"
+            android:src="@drawable/icon_cart_big" />
+
+        <TextView
+            android:id="@+id/sidemenu_cart_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageview_cart"
+            android:layout_alignRight="@+id/imageview_cart"
+            android:layout_marginBottom="0dip"
+            android:layout_marginRight="0dip"
+            android:background="@drawable/icon_cart_items_qty_side_menu"
+            android:gravity="center"
+            android:textColor="@color/side_menu_cart_items_qty_text"
+            android:textSize="@dimen/text_size_tiny" />
+    </RelativeLayout>
+
+    <print.io.view.TextViewFontLight
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="@string/view_cart"
+        android:textColor="@color/side_menu_text"
+        android:textSize="@dimen/text_size_normal" />
+
+</LinearLayout>

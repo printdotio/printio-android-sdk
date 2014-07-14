@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:drawableLeft="@drawable/icon_arrowe_top"
+        android:drawableLeft="@drawable/icon_arrow_top"
         android:gravity="center"
         android:text="@string/select_photos_from"
         android:textColor="#333333"
@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:drawableLeft="@drawable/icon_multiphoto"
             android:gravity="center"
-            android:text="@string/singlephoto"
+            android:text="@string/upload_instructions_title"
             android:textColor="@color/green"
             android:textSize="@dimen/text_size_large" />
 
@@ -42,33 +42,7 @@
             android:gravity="left"
             android:paddingLeft="10dip"
             android:paddingRight="10dip"
-            android:text="@string/instruction_1"
-            android:textColor="#333333"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontLight
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dip"
-            android:layout_marginTop="10dip"
-            android:gravity="left"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:text="@string/instruction_2"
-            android:textColor="#333333"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontLight
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="5dip"
-            android:layout_marginTop="10dip"
-            android:gravity="left"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:text="@string/instruction_3"
+            android:text="@string/upload_instructions_text"
             android:textColor="#333333"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
