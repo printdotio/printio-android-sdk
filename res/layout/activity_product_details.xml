@@ -176,7 +176,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dip"
                     android:layout_alignParentBottom="true"
-                    android:background="#00000000" >
+                    android:background="@color/transparent" >
 
                     <print.io.view.TextViewFontLight
                         android:id="@+id/textview_product_name"
@@ -207,25 +207,6 @@
                         android:textColor="#ffffff"
                         android:textSize="@dimen/text_size_small"
                         android:visibility="invisible" />
-
-                    <print.io.view.ButtonFontLight
-                        android:id="@+id/button_choose"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginBottom="4dip"
-                        android:layout_marginRight="15dip"
-                        android:layout_marginTop="4dip"
-                        android:background="@drawable/btn_blue_light"
-                        android:onClick="onClickChoose"
-                        android:paddingLeft="15dip"
-                        android:paddingRight="15dip"
-                        android:text="@string/select"
-                        android:textColor="@color/primary_button_text"
-                        android:textSize="@dimen/text_size_normal"
-                        android:textStyle="bold"
-                        android:visibility="invisible" />
                 </RelativeLayout>
 
                 <!-- Indicators -->
@@ -236,8 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
-                    android:orientation="horizontal" >
-                </LinearLayout>
+                    android:orientation="horizontal" />
 
                 <ImageView
                     android:layout_width="wrap_content"
