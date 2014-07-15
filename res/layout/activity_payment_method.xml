@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -235,15 +235,15 @@
     <!-- Layout Payment Method -->
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view_dummy_separator"
         android:paddingTop="10dp"
         android:scrollbars="none" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
             <!-- Layout Billing Country -->
 
@@ -288,7 +288,7 @@
 
             <RelativeLayout
                 android:id="@+id/dummy_layout_paypal"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_below="@+id/textview_payment_method"
                 android:layout_marginLeft="5dip"
@@ -309,7 +309,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/pay_with"
-                        android:textColor="#ffffff"
+                        android:textColor="@color/primary_button_text"
                         android:textSize="@dimen/text_size_normal" />
 
                     <ImageView
@@ -322,7 +322,7 @@
             <RelativeLayout
                 android:id="@+id/layout_payment_method"
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_below="@+id/dummy_layout_paypal"
                 android:layout_marginBottom="0dip" >
 
@@ -330,7 +330,7 @@
 
                 <LinearLayout
                     android:id="@+id/dummy_layout_credit_card_old"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dip"
                     android:layout_marginRight="5dip"
@@ -395,7 +395,7 @@
 
                 <RelativeLayout
                     android:id="@+id/dummy_layout_credit_card"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:layout_below="@+id/dummy_layout_credit_card_old"
                     android:layout_marginLeft="5dip"
@@ -499,7 +499,7 @@
 
                             <print.io.view.EditTextFontLight
                                 android:id="@+id/edittext_full_name"
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="40dip"
                                 android:layout_below="@+id/textview_card_information"
                                 android:layout_marginTop="5dip"
@@ -517,7 +517,7 @@
 
                             <print.io.view.EditTextFontLight
                                 android:id="@+id/edittext_last_name"
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="40dip"
                                 android:layout_below="@+id/edittext_full_name"
                                 android:layout_marginTop="5dip"
@@ -536,7 +536,7 @@
 
                             <RelativeLayout
                                 android:id="@+id/layout_card_number"
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/edittext_last_name"
                                 android:layout_marginTop="5dip"
@@ -618,7 +618,7 @@
 
                             <RelativeLayout
                                 android:id="@+id/layout_shipping_address"
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/layout_expiration"
                                 android:visibility="gone" >
@@ -635,7 +635,7 @@
 
                                 <print.io.view.EditTextFontLight
                                     android:id="@+id/edittext_shipping_first_name"
-                                    android:layout_width="fill_parent"
+                                    android:layout_width="match_parent"
                                     android:layout_height="40dip"
                                     android:layout_below="@+id/textview_shipping_address"
                                     android:layout_marginTop="5dip"
@@ -885,7 +885,7 @@
 
                             <RelativeLayout
                                 android:id="@+id/layout_same_as_shipping_address"
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/layout_same"
                                 android:visibility="visible" >
@@ -974,7 +974,7 @@
 
                                     <print.io.view.EditTextFontLight
                                         android:id="@+id/edittext_billing_zip_code"
-                                        android:layout_width="fill_parent"
+                                        android:layout_width="match_parent"
                                         android:layout_height="40dip"
                                         android:background="#ffffff"
                                         android:hint="@string/zip_code"
@@ -1105,7 +1105,7 @@
                             <!-- Place Order -->
 
                             <RelativeLayout
-                                android:layout_width="fill_parent"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@+id/layout_same_as_shipping_address"
                                 android:layout_marginTop="5dip"
@@ -1119,7 +1119,7 @@
                                     android:background="@drawable/btn_blue_light"
                                     android:onClick="onClickPlaceOrder"
                                     android:text="@string/place_order"
-                                    android:textColor="#ffffff"
+                                    android:textColor="@color/primary_button_text"
                                     android:textSize="@dimen/text_size_normal" />
                             </RelativeLayout>
                         </RelativeLayout>
@@ -1146,7 +1146,7 @@
 
     <LinearLayout
         android:id="@+id/layout_almost_done"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center_horizontal"
@@ -1174,8 +1174,8 @@
 
     <RelativeLayout
         android:id="@+id/payment_finalized_message"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/layout_titlebar"
         android:background="#FFFFFF"
         android:visibility="gone" >
@@ -1204,8 +1204,8 @@
 
     <include
         android:id="@+id/dialog_product_upload_progress"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_product_upload_progress"
         android:clickable="true"
         android:visibility="gone" />
@@ -1214,8 +1214,8 @@
 
     <include
         android:id="@+id/dialog_payment_verification_error"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_payment_verification_error"
         android:clickable="true"
         android:visibility="gone" />
@@ -1224,8 +1224,8 @@
 
     <include
         android:id="@+id/dialog_enter_cvc"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_enter_cvc"
         android:clickable="true"
         android:visibility="gone" />
@@ -1234,8 +1234,8 @@
 
     <include
         android:id="@+id/dialog_exp_date_not_valid"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_exp_date_not_valid"
         android:clickable="true"
         android:visibility="gone" />
@@ -1244,8 +1244,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -1253,8 +1253,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

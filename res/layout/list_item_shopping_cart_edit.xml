@@ -8,7 +8,7 @@
     android:paddingTop="10dip" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:visibility="gone" >
 
@@ -137,7 +137,7 @@
         android:gravity="center"
         android:onClick="onClickEditItem"
         android:text="@string/edit"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_small" />
 
     <LinearLayout

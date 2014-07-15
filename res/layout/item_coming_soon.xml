@@ -15,7 +15,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_coming_soon"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dip"
@@ -28,7 +28,7 @@
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_enter_your_email"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_coming_soon"
             android:layout_marginTop="5dip"
@@ -42,7 +42,7 @@
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_send"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/edittext_enter_your_email"
             android:layout_centerHorizontal="true"
@@ -53,7 +53,7 @@
             android:padding="14dip"
             android:paddingTop="14dip"
             android:text="@string/send"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
 

@@ -6,7 +6,7 @@
     android:clickable="true" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -18,7 +18,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_please_try_again"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -36,7 +36,7 @@
             android:background="@drawable/btn_yes"
             android:gravity="center"
             android:onClick="onClickOk"
-            android:text="Ok"
+            android:text="@string/ok"
             android:textColor="#ffffff"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>

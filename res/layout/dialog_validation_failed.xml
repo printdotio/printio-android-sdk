@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#aa000000"
     android:clickable="true" >
 
@@ -15,7 +15,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_validation"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -34,8 +34,8 @@
             android:background="@drawable/btn_blue_light"
             android:gravity="center"
             android:onClick="onClickOk"
-            android:text="Ok"
-            android:textColor="#ffffff"
+            android:text="@string/ok"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 

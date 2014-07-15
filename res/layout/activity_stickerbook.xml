@@ -8,20 +8,20 @@
 
     <ListView
         android:id="@+id/listview_stickerbook"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"
         android:divider="@color/green"
-        android:scrollbars="none"
         android:dividerHeight="1px"
-        android:headerDividersEnabled="false" >
+        android:headerDividersEnabled="false"
+        android:scrollbars="none" >
     </ListView>
 
     <!-- Buttons Back and Buy It -->
 
-   <RelativeLayout
+    <RelativeLayout
         android:id="@+id/layout_buttons"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#8FFF"
         android:paddingBottom="5dp" >
@@ -43,7 +43,7 @@
             android:paddingLeft="5dip"
             android:paddingRight="10dip"
             android:text="@string/back"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
@@ -65,24 +65,20 @@
             android:layout_marginTop="5dip"
             android:background="@drawable/btn_green"
             android:clickable="true"
-            android:drawableRight="@drawable/icon_arrow_right"
             android:drawablePadding="3dp"
+            android:drawableRight="@drawable/icon_arrow_right"
             android:gravity="center"
             android:onClick="onClickOrder"
             android:paddingLeft="4dp"
             android:paddingRight="7dp"
-            android:text=""
-            android:textColor="#ffffff"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
-        
-
-        
     </RelativeLayout>
 
     <include
         android:id="@+id/edit_image"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/edit_image"
         android:visibility="gone" />
 
@@ -90,8 +86,8 @@
 
     <include
         android:id="@+id/dialog_stickerbook"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_stickerbook"
         android:visibility="gone" />
 
@@ -104,7 +100,7 @@
         android:visibility="gone" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_margin="14dip"
@@ -116,7 +112,7 @@
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_delete_item"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="15dip"
@@ -126,7 +122,7 @@
                 android:textSize="@dimen/text_size_normal" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_delete_item"
                 android:layout_margin="10dip"
@@ -141,8 +137,8 @@
                     android:background="@drawable/btn_blue_light"
                     android:onClick="onClickNo"
                     android:padding="14dip"
-                    android:text="No"
-                    android:textColor="#ffffff"
+                    android:text="@string/no"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -155,8 +151,8 @@
                     android:background="@drawable/btn_green"
                     android:onClick="onClickYes"
                     android:padding="14dip"
-                    android:text="Yes"
-                    android:textColor="#ffffff"
+                    android:text="@string/yes"
+                    android:textColor="@color/secondary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -167,8 +163,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -176,8 +172,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

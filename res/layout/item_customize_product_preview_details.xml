@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_type"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
     android:background="#ffffff"
@@ -20,19 +20,19 @@
         android:paddingLeft="8dip"
         android:paddingRight="8dip"
         android:text="@string/see_other_side"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/phone_and_grid_type_txt_view"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:visibility="gone" >
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/dummy_phone_type"
+            android:id="@+id/textview_up_left_title"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
@@ -43,7 +43,7 @@
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/dummy_grid_type"
+            android:id="@+id/textview_up_right_title"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
@@ -56,53 +56,45 @@
 
     <LinearLayout
         android:id="@+id/phone_and_grid_type_edit_text"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:visibility="gone" >
 
-        <print.io.view.EditTextFontLight
-            android:id="@+id/edittext_phone_type"
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_up_left"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_white"
-            android:editable="false"
-            android:hint=""
-            android:nextFocusDown="@+id/edittext_grid_type"
+            android:background="@color/green"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
 
-        <print.io.view.EditTextFontLight
-            android:id="@+id/edittext_grid_type"
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_up_right"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_white"
-            android:editable="false"
-            android:hint=""
-            android:nextFocusDown="@+id/edittext_case_color"
+            android:background="@color/green"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/case_color_edit_text_layout"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"
         android:orientation="horizontal" >
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/dummy_case_color"
+            android:id="@+id/textview_down_left_title"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
@@ -113,7 +105,7 @@
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/dummy_case_type"
+            android:id="@+id/textview_down_right_title"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
@@ -126,39 +118,32 @@
 
     <LinearLayout
         android:id="@+id/case_type_edit_text_layout"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <print.io.view.EditTextFontLight
-            android:id="@+id/edittext_case_color"
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_down_left"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginRight="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_white"
-            android:editable="false"
-            android:hint=""
-            android:nextFocusDown="@+id/edittext_case_type"
+            android:background="@color/green"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
 
-        <print.io.view.EditTextFontLight
-            android:id="@+id/edittext_case_type"
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_down_right"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_marginLeft="3dip"
             android:layout_weight="1"
-            android:background="@drawable/bg_edit_text_white"
-            android:editable="false"
-            android:hint=""
+            android:background="@color/green"
             android:padding="5dip"
             android:singleLine="true"
-            android:textColor="#000000"
-            android:textColorHint="#000000"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 

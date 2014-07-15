@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#9a000000"
     android:clickable="true" >
 
@@ -16,7 +16,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_text"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dip"
@@ -37,22 +37,22 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_continue_with_upload"
-            android:layout_below="@+id/textview_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_text"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dip"
             android:layout_marginTop="15dip"
             android:gravity="center_horizontal"
             android:padding="15dip"
+            android:text="Continue upload?"
             android:textColor="#ffffff"
             android:textSize="@dimen/text_size_normal"
-            android:text="Continue upload?"
             android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/layout_yes_no"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_continue_with_upload"
             android:layout_margin="10dip"
@@ -68,8 +68,8 @@
                 android:background="@drawable/btn_blue_light"
                 android:onClick="onClickNo"
                 android:padding="14dip"
-                android:text="No"
-                android:textColor="#ffffff"
+                android:text="@string/no"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -82,8 +82,8 @@
                 android:background="@drawable/btn_green"
                 android:onClick="onClickYes"
                 android:padding="14dip"
-                android:text="Yes"
-                android:textColor="#ffffff"
+                android:text="@string/yes"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

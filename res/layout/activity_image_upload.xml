@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -357,7 +357,7 @@
 
     <RelativeLayout
         android:id="@+id/relative_layout_search"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_social_networks"
         android:background="@drawable/bg_selector"
@@ -366,7 +366,7 @@
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_search1"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="40dip"
             android:background="@color/bg_edit_text"
             android:inputType="text"
@@ -394,8 +394,8 @@
 
     <print.io.view.GridViewAnim
         android:id="@+id/gridview_product"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/relative_layout_search"
         android:background="#ffffff"
         android:cacheColorHint="#00000000"
@@ -411,7 +411,7 @@
 
     <ScrollView
         android:id="@+id/scrollview_select_photos_from"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/layout_social_networks"
         android:layout_alignRight="@+id/layout_social_networks"
@@ -431,7 +431,7 @@
 
             <include
                 android:id="@+id/singlephoto"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 layout="@layout/item_singlephoto"
@@ -439,7 +439,7 @@
 
             <include
                 android:id="@+id/multiphoto"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 layout="@layout/item_multiphoto"
@@ -471,7 +471,7 @@
         android:paddingRight="9dip"
         android:paddingTop="9dip"
         android:text="@string/next"
-        android:textColor="#ffffff"
+        android:textColor="@color/secondary_button_text"
         android:textSize="@dimen/text_size_large" />
 
     <print.io.view.TextViewFontLight
@@ -486,16 +486,15 @@
         android:paddingLeft="9dip"
         android:paddingRight="9dip"
         android:paddingTop="7dip"
-        android:text="36/60 Photos"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
     <!-- Help -->
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -503,8 +502,8 @@
 
     <include
         android:id="@+id/dialog_low_res"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_low_resolution"
         android:clickable="true"
         android:visibility="gone" />
@@ -513,8 +512,8 @@
 
     <include
         android:id="@+id/dialog_less_photos"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_less_photos"
         android:clickable="true"
         android:visibility="gone" />
@@ -523,8 +522,8 @@
 
     <include
         android:id="@+id/dialog_please_try_again"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
@@ -532,8 +531,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

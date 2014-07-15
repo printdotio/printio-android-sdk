@@ -14,7 +14,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_autofill"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -35,7 +35,7 @@
             android:visibility="gone" />
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="120dip"
             android:layout_below="@+id/textview_autofill"
             android:layout_margin="10dip"
@@ -44,7 +44,7 @@
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_random"
                 android:layout_width="0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_marginRight="15dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_blue_light"
@@ -52,14 +52,14 @@
                 android:onClick="onClickRandom"
                 android:padding="10dip"
                 android:text="@string/random"
-                android:textColor="#ffffff"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_manual"
                 android:layout_width="0dip"
-                android:layout_height="fill_parent"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="15dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_green"
@@ -67,7 +67,7 @@
                 android:onClick="onClickManual"
                 android:padding="10dip"
                 android:text="@string/manual"
-                android:textColor="#ffffff"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

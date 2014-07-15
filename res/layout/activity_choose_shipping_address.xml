@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -83,7 +83,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_address"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
         android:layout_marginTop="5dip"
@@ -111,7 +111,7 @@
             android:gravity="center"
             android:onClick="onClickEdit"
             android:text="@string/edit"
-            android:textColor="#ffffff"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal"
             android:visibility="visible" />
 
@@ -126,15 +126,15 @@
             android:gravity="center"
             android:onClick="onClickSave"
             android:text="@string/save"
-            android:textColor="#ffffff"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
     </RelativeLayout>
 
     <ScrollView
         android:id="@+id/scrollview_addresses"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/button_add_address"
         android:layout_below="@+id/layout_address" >
 
@@ -148,7 +148,7 @@
 
     <print.io.view.ButtonFontLight
         android:id="@+id/button_add_address"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dip"
@@ -160,15 +160,15 @@
         android:paddingRight="8dip"
         android:paddingTop="10dip"
         android:text="@string/add_address"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_large" />
 
     <!-- Help -->
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -176,8 +176,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

@@ -14,7 +14,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_help"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dip"
@@ -44,7 +44,7 @@
             android:background="@drawable/btn_yes"
             android:gravity="center"
             android:onClick="onClickOk"
-            android:text="Ok"
+            android:text="@string/ok"
             android:textColor="#ffffff"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />

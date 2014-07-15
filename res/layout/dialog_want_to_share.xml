@@ -7,7 +7,7 @@
     android:visibility="visible" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -19,7 +19,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_are_you_sure"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:id="@+id/layout_buttons"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_are_you_sure"
             android:layout_margin="10dip"
@@ -44,8 +44,8 @@
                 android:background="@drawable/btn_blue_light"
                 android:onClick="onClickNo"
                 android:padding="14dip"
-                android:text="Cancel Deal"
-                android:textColor="#ffffff"
+                android:text="@string/cancel_deal"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -58,8 +58,8 @@
                 android:background="@drawable/btn_green"
                 android:onClick="onClickYes"
                 android:padding="14dip"
-                android:text="Share"
-                android:textColor="#ffffff"
+                android:text="@string/share"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

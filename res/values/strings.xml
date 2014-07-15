@@ -211,7 +211,6 @@
     <string name="address_blank">Address 1 can\'t be blank.</string> <!-- translate -->
     <string name="proceed">Proceed</string> <!-- translate -->
     <string name="internet_connection_error">Error, please check your internet connection!</string> <!-- translate -->
-    <string name="ok_button_text">OK</string> <!-- translate -->
     <string name="share_using">Share using:</string> <!-- translate -->
     <string name="like_us">Like Us On Facebook</string> <!-- translate -->
     <string name="rate_our_app">Rate Our App</string> <!-- translate -->
@@ -375,8 +374,8 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="upload_instructions_text">1. Add images from the above sources\n\n2. Selected photos will be counted below\n\n3. When done, click the \"Next\" button below</string>
     <string name="singlephoto_text">You have chosen an item that only needs one image to complete the design.\n\nPlease select an image source above, log-in if necessary and click on the photo you wish to select.\n\nOnce you see the check mark in the corner of the image, push the blue personalize it button below to customize your product.</string>
     <string name="single_multiphoto_text">Add images from source above.\nSelected photos will be counted below.\n\nWhen done, click that big blue button.</string>
-    <string name="custom_color">Custom Color Instructions</string>
-    <string name="custom_color_red">On next screen\ndrag finger to select color</string>
+    <string name="custom_color_instructions">Custom Color Instructions</string>
+    <string name="drag_finger_to_select_color">On next screen\ndrag finger to select color</string>
     <string name="remove_finger">To select the color, remove your finger.</string>
     <string name="randomize">Randomize</string>
     <string name="text_tool">Text tool</string>
@@ -444,8 +443,8 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="remove_item_question">Do you want to delete this item?</string>
     <string name="save_editings_dialog_help">You have edited the quantity in your shopping cart.</string>
     <string name="save_editings_dialog_help_1">Do you want to proceed with this new quantity?</string>
-    <string name="yes_dialog_help">Yes</string>
-    <string name="no_dialog_help">No</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="order_completed">Order Completed</string>
     <string name="thanks">Thank You for your purchase!</string>
     <string name="order_number">Your order Number is %1$s \nYou have ordered the following products</string>
@@ -512,7 +511,7 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="change_country_notification">Changing country will potentially change the price of items in shopping cart.</string>
     <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you can not validate, please contact our support at: 877.731.PICS</string>
     <string name="try_again">Try again</string>
-    <string name="ok">OK</string>
+    <string name="ok">Ok</string>
     <string name="shipping_price_error">We are sorry, but for there currently no shipping options for %1$s for inputted location.</string> <!-- translate -->
     <string name="coaster_text">Choose Coaster Type</string>
     <string name="coaster_4_different">4 Different Coasters</string>
@@ -520,6 +519,8 @@ each field, simply touch the (Place Order) Blue Button.</string>
     <string name="inch">Inch</string>
     <string name="set_of">Set of %1$s</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
+    <string name="share">Share</string>
+    <string name="cancel_deal">Cancel Deal</string>
 
     <!-- Help -->
     <string name="help_product_wood_prints_step_1_2">Let\'s get started and make a beautiful Wood Print! \n\nThis page takes 2 simple steps, then you automatically move to the next step and start customizing your Wood Print!\n\n1) Choose which Wood Print shape you want to use!\n\n2) Choose your Wood Print size. If you don\'t automatically see your Wood Print size, simply place your finger over the images and swipe it to the left until you see the Wood Print size of your choice.</string>

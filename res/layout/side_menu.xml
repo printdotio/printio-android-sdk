@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
     <RelativeLayout
         android:id="@+id/layout_for_listview"
@@ -20,7 +20,7 @@
             <!-- Search -->
 
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_selector"
                 android:padding="10dip"
@@ -28,7 +28,7 @@
 
                 <print.io.view.EditTextFontLight
                     android:id="@+id/edittext_search1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_edit_text_search"
                     android:inputType="text"
@@ -52,12 +52,12 @@
             </RelativeLayout>
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_1" />
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_2" />
         </LinearLayout>
@@ -100,7 +100,7 @@
 
                 <print.io.view.TextViewFontBold
                     android:id="@+id/textview_options"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/side_menu_options"
                     android:gravity="center"
@@ -113,17 +113,17 @@
                 <!-- Chart and Photos -->
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_1" />
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
 
                 <LinearLayout
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="110dip"
                     android:orientation="horizontal" >
 
@@ -164,12 +164,12 @@
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_1" />
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_2" />
 
                     <RelativeLayout
@@ -210,12 +210,12 @@
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_1" />
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_2" />
 
                     <RelativeLayout
@@ -256,19 +256,19 @@
             <!-- Accounts -->
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_1"
                 android:visibility="gone" />
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_2" />
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_accounts"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/side_menu_accounts"
                 android:gravity="center"
@@ -279,23 +279,23 @@
                 android:textSize="@dimen/text_size_normal" />
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_1" />
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_2" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
                 <LinearLayout
                     android:id="@+id/layout_row_1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="70dip"
                     android:orientation="horizontal"
                     android:visibility="gone" >
@@ -313,12 +313,12 @@
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_1" />
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_2" />
 
                     <print.io.view.TextViewFontLight
@@ -334,18 +334,18 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_1" />
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
 
                 <LinearLayout
                     android:id="@+id/layout_row_2"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="70dip"
                     android:orientation="horizontal"
                     android:visibility="gone" >
@@ -363,12 +363,12 @@
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_1" />
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_2" />
 
                     <print.io.view.TextViewFontLight
@@ -384,18 +384,18 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_1" />
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
 
                 <LinearLayout
                     android:id="@+id/layout_row_3"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="70dip"
                     android:orientation="horizontal"
                     android:visibility="gone" >
@@ -413,12 +413,12 @@
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_1" />
 
                     <View
                         android:layout_width="1dip"
-                        android:layout_height="fill_parent"
+                        android:layout_height="match_parent"
                         android:background="@color/separator_color_2" />
 
                     <print.io.view.TextViewFontLight
@@ -436,13 +436,13 @@
             </LinearLayout>
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_1"
                 android:visibility="gone" />
 
             <View
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1dip"
                 android:background="@color/separator_color_2" />
 
@@ -457,7 +457,7 @@
 
                 <print.io.view.TextViewFontBold
                     android:id="@+id/textview_info"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/side_menu_info"
                     android:gravity="center"
@@ -468,12 +468,12 @@
                     android:textSize="@dimen/text_size_normal" />
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_1" />
 
                 <View
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
             </LinearLayout>
@@ -482,7 +482,7 @@
 
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentRight="true"
         android:layout_marginRight="-1dip"
         android:background="@drawable/bg_gradient_right" />
@@ -491,8 +491,8 @@
 
     <include
         android:id="@+id/item_information"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 

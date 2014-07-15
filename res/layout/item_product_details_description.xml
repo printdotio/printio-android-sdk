@@ -5,12 +5,12 @@
     android:orientation="vertical" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_content_name"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:paddingBottom="10dip"
@@ -38,7 +38,7 @@
     </RelativeLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"

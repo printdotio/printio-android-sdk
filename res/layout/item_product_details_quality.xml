@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="10dip"
@@ -21,7 +21,7 @@
             android:src="@drawable/icon_quality_guarantee" />
 
         <print.io.view.TextViewFontBold
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/quality_guarantee"
             android:textColor="@color/purple"
@@ -29,14 +29,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <print.io.view.TextViewFontNormal
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="10dip"
         android:paddingLeft="15dip"

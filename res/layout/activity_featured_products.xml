@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -124,7 +124,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_categories"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="45dip"
         android:layout_below="@+id/layout_country_drop_down"
         android:background="@color/white" >
@@ -175,7 +175,7 @@
 
         <EditText
             android:id="@+id/edittext_search"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/imageview_close"
@@ -232,15 +232,15 @@
 
     <View
         android:id="@+id/separator_1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="2dip"
         android:layout_below="@+id/layout_categories"
         android:background="#cbcbce" />
 
     <ListView
         android:id="@+id/listview_product"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/separator_1"
         android:background="#00000000"
         android:cacheColorHint="#00000000"
@@ -282,8 +282,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -291,8 +291,8 @@
 
     <include
         android:id="@+id/dialog_please_try_again"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
@@ -314,8 +314,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

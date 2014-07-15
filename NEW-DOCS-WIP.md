@@ -494,7 +494,7 @@ icon_help_circle_grey_dark (50x50px) - pressed state
 &nbsp;  
 &nbsp;  
 #### > Set Pop up balloon in Customize Product screen.  
-~~( > Customize tooltip in Customize Product screen)~~  
+( > Customize tooltip in Customize Product screen)  
 
 To modify tooltip text, change the following item in  
 `res/values/strings.xml`

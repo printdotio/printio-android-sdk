@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -99,7 +99,7 @@
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_step_1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
         android:layout_marginBottom="2dip"
@@ -112,7 +112,7 @@
 
     <View
         android:id="@+id/view_dummy_1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/textview_step_1"
         android:layout_marginLeft="10dip"
@@ -144,7 +144,7 @@
 
     <View
         android:id="@+id/view_dummy_2"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/layout_photos"
         android:layout_marginLeft="10dip"
@@ -155,7 +155,7 @@
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_step_2"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_2"
         android:layout_marginBottom="2dip"
@@ -169,7 +169,7 @@
 
     <View
         android:id="@+id/view_dummy_3"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/textview_step_2"
         android:layout_marginLeft="10dip"
@@ -209,8 +209,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -218,8 +218,8 @@
 
     <include
         android:id="@+id/dialog_please_try_again"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
@@ -227,8 +227,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

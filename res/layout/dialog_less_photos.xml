@@ -7,7 +7,7 @@
     android:visibility="visible" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -19,7 +19,7 @@
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_hello"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -30,7 +30,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_low_res"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_hello"
             android:layout_centerHorizontal="true"
@@ -63,7 +63,7 @@
                 android:paddingBottom="8dip"
                 android:paddingTop="8dip"
                 android:text="@string/get_more_photos"
-                android:textColor="#ffffff"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -79,15 +79,14 @@
                 android:onClick="onClickYes"
                 android:paddingBottom="8dip"
                 android:paddingTop="8dip"
-                android:text="@string/continue_with"
-                android:textColor="#ffffff"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_note"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/layout_buttons"
             android:layout_gravity="center"

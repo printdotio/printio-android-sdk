@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -46,26 +46,26 @@
 
     <View
         android:id="@+id/view_1"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_below="@+id/layout_titlebar"        
+        android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator"
         android:visibility="visible" />
-    
+
     <RelativeLayout
         android:id="@+id/layout_search"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_titlebar"
+        android:paddingBottom="5dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="5dp"
-        android:paddingBottom="5dp"
         android:visibility="visible" >
 
         <print.io.view.EditTextFontLight
             android:id="@+id/edittext_search"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit_text_search"
             android:inputType="text"
@@ -90,28 +90,28 @@
 
     <View
         android:id="@+id/view_2"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/layout_search"
         android:background="@color/title_bar_separator"
         android:visibility="visible" />
-    
-    
 
-    <!-- <View
+    <!--
+         <View
         android:id="@+id/view_2"
         android:layout_width="1px"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/view_1"
         android:layout_alignParentRight="true"
         android:layout_marginRight="45dip"
         android:background="#138a72"
-        android:visibility="visible" /> -->
+        android:visibility="visible" />
+    -->
 
     <ListView
         android:id="@+id/listview_choose_country"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view_2"
         android:layout_marginLeft="2dip"
         android:layout_marginRight="2dip"
@@ -132,7 +132,7 @@
         android:visibility="gone" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="20dip"
@@ -174,7 +174,7 @@
                 android:visibility="gone" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_dialog_country"
                 android:layout_margin="10dip"
@@ -189,8 +189,8 @@
                     android:background="@drawable/btn_blue_light"
                     android:onClick="onClickNo"
                     android:padding="14dip"
-                    android:text="No"
-                    android:textColor="#ffffff"
+                    android:text="@string/no"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -203,8 +203,8 @@
                     android:background="@drawable/btn_green"
                     android:onClick="onClickYes"
                     android:padding="14dip"
-                    android:text="Yes"
-                    android:textColor="#ffffff"
+                    android:text="@string/yes"
+                    android:textColor="@color/secondary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -214,8 +214,8 @@
 
     <include
         android:id="@+id/dialog_please_try_again"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 

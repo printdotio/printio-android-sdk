@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -82,13 +82,13 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
         android:scrollbars="none" >
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
@@ -113,12 +113,12 @@
                 android:gravity="center"
                 android:onClick="onClickPickFromContacts"
                 android:text="@string/pick_from_contacts"
-                android:textColor="#ffffff"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_first_name"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -137,7 +137,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_last_name"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -155,7 +155,7 @@
                 android:textSize="@dimen/text_size_normal" />
 
             <RelativeLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -163,7 +163,7 @@
 
                 <print.io.view.AutoCompleteTextViewFontLight
                     android:id="@+id/autocompletetextview_street_1"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:background="@color/bg_edit_text"
                     android:hint="@string/street_1"
@@ -189,7 +189,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_street_2"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -207,7 +207,7 @@
 
             <print.io.view.AutoCompleteTextViewFont
                 android:id="@+id/edittext_zip_code"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -229,7 +229,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_city"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -247,7 +247,7 @@
 
             <print.io.view.AutoCompleteTextViewFont
                 android:id="@+id/edittext_state"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -269,7 +269,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_phone_num"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -287,7 +287,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_email"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -304,7 +304,7 @@
 
             <print.io.view.EditTextFontLight
                 android:id="@+id/edittext_country"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="40dip"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
@@ -331,15 +331,15 @@
                 android:gravity="center"
                 android:onClick="onClickSaveAddress"
                 android:text="@string/save_address"
-                android:textColor="#ffffff"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </ScrollView>
 
     <include
         android:id="@+id/layout_address_type"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_address_type"
         android:visibility="gone" />
 
@@ -347,8 +347,8 @@
 
     <include
         android:id="@+id/item_help1"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -356,8 +356,8 @@
 
     <include
         android:id="@+id/item_address_validation"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/activity_address_validation"
         android:visibility="gone" />
 
@@ -365,8 +365,8 @@
 
     <include
         android:id="@+id/dialog_please_try_again"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
@@ -374,8 +374,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -383,8 +383,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

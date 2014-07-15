@@ -5,7 +5,7 @@
     android:background="@color/dialog_transparent" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="10dip"
@@ -14,7 +14,7 @@
 
         <print.io.view.DialogFont
             android:id="@+id/textview_title"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -33,7 +33,7 @@
             android:textColor="#5a5d66" />
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_text"
             android:layout_margin="20dip"
@@ -50,8 +50,8 @@
                 android:paddingLeft="15dip"
                 android:paddingRight="15dip"
                 android:paddingTop="13dip"
-                android:text="No"
-                android:textColor="#ffffff"
+                android:text="@string/no"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -66,8 +66,8 @@
                 android:paddingLeft="15dip"
                 android:paddingRight="15dip"
                 android:paddingTop="13dip"
-                android:text="Yes"
-                android:textColor="#ffffff"
+                android:text="@string/yes"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

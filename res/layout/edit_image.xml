@@ -59,34 +59,34 @@
             android:layout_weight="1"
             android:background="@drawable/btn_blue_light_sharp"
             android:clickable="true"
+            android:gravity="center_horizontal"
             android:onClick="onClickBack"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
-            android:gravity="center_horizontal"
             android:text="@string/cancel"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_save"
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_weight="1"
             android:background="@drawable/btn_green_sharp"
             android:clickable="true"
+            android:gravity="center_horizontal"
             android:onClick="onClickSave"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:text="@string/save"
-            android:textColor="#ffffff"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/layout_info"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/layout_buttons"
         android:background="#efeff2"
         android:visibility="gone" >
@@ -107,12 +107,12 @@
             android:paddingRight="17dip"
             android:paddingTop="10dip"
             android:text="@string/close"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
             android:id="@+id/layout_zoom_rotate"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:gravity="center"
@@ -165,7 +165,7 @@
 
     <LinearLayout
         android:id="@+id/layout_buttons"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="55dip"
         android:layout_alignParentBottom="true"
         android:visibility="visible" >
@@ -173,7 +173,7 @@
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_info"
             android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:clickable="true"
@@ -188,13 +188,13 @@
         <View
             android:id="@+id/separator_1"
             android:layout_width="1px"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:background="#cccccc" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_rotate"
             android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@drawable/edit_image_selector_rotate_background"
@@ -210,13 +210,13 @@
         <View
             android:id="@+id/separator_2"
             android:layout_width="1px"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:background="#cccccc" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_abc"
             android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@drawable/edit_image_selector_abc_background"
@@ -232,13 +232,13 @@
         <View
             android:id="@+id/separator_3"
             android:layout_width="1px"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:background="#cccccc" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_effects"
             android:layout_width="0dip"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/edit_image_selector_effects_background"
             android:clickable="true"

@@ -41,7 +41,7 @@
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_name"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:singleLine="true"
@@ -52,7 +52,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_address"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_name"
             android:paddingLeft="10dp"
@@ -63,7 +63,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_city_zip"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_address"
             android:paddingLeft="10dp"
@@ -74,7 +74,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_country"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_city_zip"
             android:paddingLeft="10dp"
@@ -85,7 +85,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_shipping_number"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_country"
             android:paddingBottom="10dp"

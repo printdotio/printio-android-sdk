@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -139,7 +139,7 @@
             android:gravity="center"
             android:onClick="onClickEdit"
             android:text="@string/edit"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal"
             android:visibility="visible" />
 
@@ -154,13 +154,13 @@
             android:gravity="center"
             android:onClick="onClickSave"
             android:text="@string/save"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
     </RelativeLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/layout_add_more_product"
         android:layout_marginLeft="5dip"
@@ -275,7 +275,7 @@
         android:layout_alignParentBottom="true" >
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="1dip"
             android:background="#d8d8d8"
             android:visibility="gone" />
@@ -381,7 +381,6 @@
                     android:id="@+id/button_apply_coupon"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
                     android:layout_marginBottom="7dp"
                     android:layout_marginLeft="3dp"
                     android:layout_marginRight="7dp"
@@ -391,7 +390,7 @@
                     android:gravity="center"
                     android:onClick="onClickApplyCoupon"
                     android:text="@string/apply"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
         </LinearLayout>
@@ -408,7 +407,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/checkout"
-            android:textColor="#ffffff"
+            android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_large" />
     </RelativeLayout>
 
@@ -421,7 +420,7 @@
         android:visibility="gone" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_margin="14dip"
@@ -433,7 +432,7 @@
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_shipping_to"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
@@ -442,7 +441,7 @@
                 android:textSize="@dimen/text_size_normal" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_shipping_to"
                 android:layout_margin="10dip"
@@ -457,8 +456,8 @@
                     android:background="@drawable/btn_blue_light"
                     android:onClick="onClickNo"
                     android:padding="14dip"
-                    android:text="No"
-                    android:textColor="#ffffff"
+                    android:text="@string/no"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -471,8 +470,8 @@
                     android:background="@drawable/btn_green"
                     android:onClick="onClickYes"
                     android:padding="14dip"
-                    android:text="Yes"
-                    android:textColor="#ffffff"
+                    android:text="@string/yes"
+                    android:textColor="@color/secondary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -488,7 +487,7 @@
         android:visibility="gone" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_margin="14dip"
@@ -500,7 +499,7 @@
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_dialog_help"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
@@ -510,7 +509,7 @@
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_dialog_help_1"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_dialog_help"
                 android:layout_centerHorizontal="true"
@@ -521,7 +520,7 @@
                 android:textSize="@dimen/text_size_normal" />
 
             <LinearLayout
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_dialog_help_1"
                 android:layout_margin="10dip"
@@ -536,8 +535,8 @@
                     android:background="@drawable/btn_blue_light"
                     android:onClick="onClickNoDialogHelp"
                     android:padding="14dip"
-                    android:text="@string/no_dialog_help"
-                    android:textColor="#ffffff"
+                    android:text="@string/no"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -550,8 +549,8 @@
                     android:background="@drawable/btn_green"
                     android:onClick="onClickYesDialogHelp"
                     android:padding="14dip"
-                    android:text="@string/yes_dialog_help"
-                    android:textColor="#ffffff"
+                    android:text="@string/yes"
+                    android:textColor="@color/secondary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -571,8 +570,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

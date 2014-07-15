@@ -9,7 +9,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -276,7 +276,7 @@
                             android:textColor="@color/red_discount"
                             android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
-                    
+
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -370,7 +370,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_price"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dip"
@@ -389,14 +389,14 @@
         android:background="@color/white" >
 
         <View
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="1dip"
             android:background="@color/title_bar_separator"
             android:visibility="gone" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_order_total"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_toLeftOf="@+id/button_place_order"
@@ -410,7 +410,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_order_total_price_big"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/textview_order_total"
@@ -426,7 +426,7 @@
         <print.io.view.ButtonFontLight
             android:id="@+id/button_place_order"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_centerVertical="true"
             android:background="@drawable/btn_blue_light"
@@ -436,7 +436,7 @@
             android:paddingLeft="15dip"
             android:paddingRight="15dip"
             android:text="@string/enter_payment_info"
-            android:textColor="#ffffff"
+            android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
@@ -451,15 +451,15 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
     <include
         android:id="@+id/item_are_you_sure"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_are_you_sure"
         android:visibility="gone" />
 
@@ -467,8 +467,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
@@ -476,8 +476,8 @@
 
     <include
         android:id="@+id/item_shipping_price_error"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 

@@ -6,14 +6,12 @@
 
     <SurfaceView
         android:id="@+id/surface_camera"
-        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/layout_size"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        >
-    </SurfaceView>
-    
-<TextView
+        android:layout_alignParentTop="true" />
+
+    <TextView
         android:id="@+id/textview_back"
         android:layout_width="70dip"
         android:layout_height="35dip"
@@ -29,7 +27,7 @@
         android:paddingLeft="9dip"
         android:paddingRight="6dip"
         android:text="@string/back"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
     <TextView
@@ -48,7 +46,7 @@
         android:paddingLeft="6dip"
         android:paddingRight="7dip"
         android:text="@string/buy_it"
-        android:textColor="#ffffff"
+        android:textColor="@color/secondary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
     <!-- Overlay Buttons -->
@@ -74,7 +72,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_size"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#ffffff"
@@ -108,7 +106,7 @@
 
         <SeekBar
             android:id="@+id/seekbar"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dip"

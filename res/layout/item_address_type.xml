@@ -7,7 +7,7 @@
     android:visibility="visible" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -19,7 +19,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_address"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -28,7 +28,7 @@
             android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_address"
             android:layout_marginTop="15dip"
@@ -45,7 +45,7 @@
                 android:onClick="onClickBusinessAddress"
                 android:padding="14dip"
                 android:text="@string/business"
-                android:textColor="#ffffff"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -60,15 +60,15 @@
                 android:onClick="onClickResidentialAddress"
                 android:padding="14dip"
                 android:text="@string/residential"
-                android:textColor="#ffffff"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
     </RelativeLayout>
 
     <include
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 

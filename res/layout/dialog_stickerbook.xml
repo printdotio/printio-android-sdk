@@ -7,7 +7,7 @@
     android:visibility="visible" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -19,7 +19,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_are_you_sure"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:id="@+id/layout_buttons"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_are_you_sure"
             android:layout_marginTop="15dip"

@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#222327" >
 
@@ -97,7 +97,7 @@
 
                 <print.io.view.TextViewFontNormalResize
                     android:id="@+id/textview_price"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="5dip"
@@ -152,7 +152,7 @@
 
                 <LinearLayout
                     android:id="@+id/layout_spinner"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textview_options"
                     android:orientation="vertical" >
@@ -212,7 +212,7 @@
                         <View
                             android:id="@+id/crop_rectangle"
                             android:layout_width="200dip"
-                            android:layout_height="fill_parent"
+                            android:layout_height="match_parent"
                             android:layout_centerInParent="true"
                             android:layout_marginBottom="20dip"
                             android:layout_marginTop="20dip"
@@ -252,7 +252,7 @@
                     android:paddingRight="20dip"
                     android:paddingTop="8dip"
                     android:text="@string/product_preview"
-                    android:textColor="#ffffff" />
+                    android:textColor="@color/primary_button_text" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>

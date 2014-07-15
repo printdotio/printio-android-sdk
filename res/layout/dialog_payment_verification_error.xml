@@ -7,7 +7,7 @@
     android:visibility="visible" >
 
     <RelativeLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_margin="14dip"
@@ -19,7 +19,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_error_message"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="5dip"
@@ -32,7 +32,7 @@
 
         <LinearLayout
             android:id="@+id/layout_buttons"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_error_message"
             android:layout_marginTop="10dip"
@@ -52,7 +52,7 @@
                 android:paddingRight="5dip"
                 android:paddingTop="8dip"
                 android:text="@string/try_again"
-                android:textColor="#ffffff"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -64,13 +64,13 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_green"
                 android:lineSpacingExtra="1dp"
-                android:onClick="onClickOkey"
+                android:onClick="onClickOkPaymentVerificationError"
                 android:paddingBottom="8dip"
                 android:paddingLeft="5dip"
                 android:paddingRight="5dip"
                 android:paddingTop="8dip"
                 android:text="@string/ok"
-                android:textColor="#ffffff"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

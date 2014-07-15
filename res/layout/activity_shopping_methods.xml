@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -85,7 +85,7 @@
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <RelativeLayout
         android:id="@+id/dummy"
         android:layout_width="match_parent"
@@ -264,7 +264,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_find_shipping_method"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/dummy"
         android:layout_marginLeft="3dip"
@@ -283,7 +283,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:text="@string/find_shipping_method"
-            android:textColor="#ffffff" />
+            android:textColor="@color/primary_button_text" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -333,8 +333,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -342,8 +342,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

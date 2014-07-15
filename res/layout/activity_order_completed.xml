@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -94,13 +94,13 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view_dummy_title_separator"
         android:scrollbars="none" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <print.io.view.TextViewFontBold
@@ -116,7 +116,7 @@
 
             <View
                 android:id="@+id/view_1"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/textview_thanks"
                 android:layout_marginLeft="10dip"
@@ -139,7 +139,7 @@
 
             <View
                 android:id="@+id/view_2"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/textview_order_number"
                 android:layout_marginLeft="10dip"
@@ -190,7 +190,7 @@
 
             <View
                 android:id="@+id/view_3"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/layout_included_address"
                 android:layout_marginLeft="10dip"
@@ -201,7 +201,7 @@
 
             <RelativeLayout
                 android:id="@+id/layout_overall"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/view_3"
                 android:paddingBottom="15dip"
@@ -211,7 +211,7 @@
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/dummy_overall"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toLeftOf="@+id/textview_overall"
@@ -233,7 +233,7 @@
 
             <View
                 android:id="@+id/view_4"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/layout_overall"
                 android:layout_marginLeft="10dip"
@@ -260,13 +260,13 @@
                     android:gravity="center"
                     android:onClick="onClickContinueShopping"
                     android:text="@string/continue_shopping"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 
             <View
                 android:id="@+id/view_5"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_below="@+id/layout_continue_close"
                 android:background="#00000000" />
@@ -277,8 +277,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -286,8 +286,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

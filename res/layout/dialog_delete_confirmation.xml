@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#aa000000"
     android:clickable="true" >
 
@@ -15,7 +15,7 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_delete_confirmation"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="15dip"
@@ -25,15 +25,13 @@
             android:text="@string/delete_address"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />
-        
-        
+
         <LinearLayout
             android:id="@+id/layout_yes_no"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_delete_confirmation"            
-            android:orientation="horizontal"
-             >
+            android:layout_below="@+id/textview_delete_confirmation"
+            android:orientation="horizontal" >
 
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_no"
@@ -44,8 +42,8 @@
                 android:background="@drawable/btn_blue_light"
                 android:onClick="onClickNoDeleteConfirmation"
                 android:padding="14dip"
-                android:text="No"
-                android:textColor="#ffffff"
+                android:text="@string/no"
+                android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -58,13 +56,11 @@
                 android:background="@drawable/btn_green"
                 android:onClick="onClickYesDeleteConfirmation"
                 android:padding="14dip"
-                android:text="Yes"
-                android:textColor="#ffffff"
+                android:text="@string/yes"
+                android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
-       
-        
     </RelativeLayout>
 
 </RelativeLayout>

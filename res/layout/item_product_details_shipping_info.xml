@@ -5,7 +5,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingBottom="10dip"
@@ -23,7 +23,7 @@
 
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_shipping_info"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/shipping_info"
             android:textColor="@color/blue_light"
@@ -31,14 +31,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -72,14 +72,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -113,14 +113,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -154,14 +154,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
@@ -195,14 +195,14 @@
     </LinearLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="15dip"
         android:layout_marginRight="15dip"
         android:background="#d8d8d8" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 

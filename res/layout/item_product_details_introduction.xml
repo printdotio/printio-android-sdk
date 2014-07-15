@@ -6,7 +6,7 @@
 
     <print.io.view.TextViewFontNormal
         android:id="@+id/textview_introduction"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left"
         android:lineSpacingMultiplier="1.25"

@@ -22,7 +22,7 @@
     </RelativeLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="#7a7a7a"
         android:visibility="gone" />
@@ -63,7 +63,7 @@
     </RelativeLayout>
 
     <View
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="1dip"
         android:background="#33000000"
         android:visibility="gone" />

@@ -5,7 +5,7 @@
     android:background="#aa000000" >
 
     <ScrollView
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:paddingBottom="10dip"
@@ -21,7 +21,7 @@
 
             <print.io.view.TextViewFontNormal
                 android:id="@+id/textview_help_bold"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
@@ -31,7 +31,7 @@
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_help"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_help_bold"
                 android:layout_centerHorizontal="true"
@@ -65,7 +65,7 @@
                     android:paddingBottom="14dip"
                     android:paddingTop="14dip"
                     android:text="@string/watch_video"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/secondary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold"
                     android:visibility="gone" />
@@ -80,8 +80,8 @@
                     android:onClick="onClickOk"
                     android:paddingBottom="14dip"
                     android:paddingTop="14dip"
-                    android:text="Ok"
-                    android:textColor="#ffffff"
+                    android:text="@string/ok"
+                    android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>

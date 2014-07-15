@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_titlebar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
@@ -73,8 +73,7 @@
             android:paddingTop="10dip"
             android:src="@drawable/icon_question_big" />
     </RelativeLayout>
-    
-    
+
     <View
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"
@@ -83,13 +82,13 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_below="@+id/view_dummy_title_separator"
         android:scrollbars="none" >
 
         <RelativeLayout
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
             <print.io.view.TextViewFontLight
@@ -106,7 +105,7 @@
 
             <RelativeLayout
                 android:id="@+id/layout_suggested_address"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview_validation"
                 android:layout_margin="5dip"
@@ -158,7 +157,7 @@
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_accept_suggestion"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textview_suggested_country"
                     android:layout_marginLeft="35dip"
@@ -168,13 +167,13 @@
                     android:onClick="onClickAcceptSuggestion"
                     android:padding="14dip"
                     android:text="@string/accept_suggestion"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/secondary_button_text"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_edit_suggestion"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/button_accept_suggestion"
                     android:layout_marginLeft="35dip"
@@ -184,16 +183,16 @@
                     android:onClick="onClickEditSuggestion"
                     android:padding="14dip"
                     android:text="@string/edit_suggestion"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/primary_button_text"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <!-- Initial Address -->
 
             <RelativeLayout
                 android:id="@+id/layout_initial_address"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/layout_suggested_address"
                 android:layout_marginBottom="5dip"
@@ -247,7 +246,7 @@
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_edit_address"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/textview_initial_country"
                     android:layout_marginLeft="35dip"
@@ -257,9 +256,9 @@
                     android:onClick="onClickEditAddressAttempt"
                     android:padding="14dip"
                     android:text="@string/edit_address_re_attempt"
-                    android:textColor="#ffffff"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textColor="@color/primary_button_text"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
@@ -268,8 +267,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -277,8 +276,8 @@
 
     <include
         android:id="@+id/dialog_validation_failed"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_validation_failed"
         android:visibility="gone" />
 
@@ -286,8 +285,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 

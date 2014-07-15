@@ -8,6 +8,7 @@
     android:focusableInTouchMode="true" >
 
     <RelativeLayout
+        android:id="@+id/relativelayout_customize_product"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_photos"
@@ -58,7 +59,7 @@
 
     <include
         android:id="@+id/options"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tab_bar"
         layout="@layout/item_options"
@@ -78,7 +79,7 @@
 
     <include
         android:id="@+id/tab_bar"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         layout="@layout/tab_bar"
@@ -90,8 +91,8 @@
 
     <include
         android:id="@+id/edit_text"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/edit_text"
         android:visibility="gone" />
 
@@ -99,8 +100,8 @@
 
     <include
         android:id="@+id/autofill"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/autofill"
         android:visibility="gone" />
 
@@ -108,8 +109,8 @@
 
     <include
         android:id="@+id/help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/help"
         android:visibility="gone" />
 
@@ -132,12 +133,12 @@
         android:paddingLeft="9dip"
         android:paddingRight="6dip"
         android:text="@string/back"
-        android:textColor="#ffffff"
+        android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
     <RelativeLayout
         android:id="@+id/layout_tooltip"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="10dip"
@@ -149,7 +150,7 @@
 
         <print.io.view.AutoResizeTextViewFontLight
             android:id="@+id/textview_tooltip"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="25dip"
             android:background="@drawable/bg_tooltip"
             android:ellipsize="none"
@@ -194,14 +195,13 @@
         android:visibility="gone" />
 
     <print.io.view.AutoResizeTextView
-        android:id="@+id/textview_dotted_line"
+        android:id="@+id/textview_info_text"
         android:layout_width="wrap_content"
-        android:layout_height="35dip"
-        android:layout_above="@+id/layout_photos"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativelayout_customize_product"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dip"
+        android:layout_marginTop="-60dip"
         android:gravity="center"
-        android:text="@string/dotted_line"
         android:textColor="#c6c8cc"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
@@ -223,7 +223,7 @@
         android:paddingLeft="4dip"
         android:paddingRight="7dip"
         android:text="@string/buy_it"
-        android:textColor="#ffffff"
+        android:textColor="@color/secondary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
     <!-- Overlay Buttons -->
@@ -277,7 +277,7 @@
 
     <include
         android:id="@+id/edit_tools"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tab_bar"
         layout="@layout/edit_tools"
@@ -293,8 +293,8 @@
 
     <include
         android:id="@+id/dialog_discard"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/dialog_discard"
         android:clickable="true"
         android:visibility="gone" />
@@ -303,8 +303,8 @@
 
     <include
         android:id="@+id/item_help"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_help"
         android:visibility="gone" />
 
@@ -354,8 +354,8 @@
 
     <include
         android:id="@+id/edit_image"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/edit_image"
         android:visibility="gone" />
 
@@ -363,8 +363,8 @@
 
     <include
         android:id="@+id/item_coming_soon"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
