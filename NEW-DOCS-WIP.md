@@ -562,11 +562,10 @@ PIO.removePlusFromAddMoreProductsButton(boolean removePlusSign);
 Payment Screen
 --------------
 #### > Remove logo from Payment and Order Confirmation screen.  
-~~( > Remove logo from Payment ~~and Order Confirmation~~ screen)~~  
+( > Remove logo from Payment ~~and Order Confirmation~~ screen)  
 
-~~Default value is `false` (logo is visible).~~
+Default value is `false` (logo is visible).
 ```java
-//TO BE DONE
 PIO.removeLogoFromPaymentScreen(boolean removeLogo);
 ```
 &nbsp;  
