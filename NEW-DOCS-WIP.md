@@ -945,25 +945,9 @@ Use `newline` character `\n` to manually add new lines.
 &nbsp;  
 &nbsp;  
 #### > “Product image Preview” screen  
-~~( > Change Product Preview screen labels)~~  
+( > Change Product Preview screen labels)  
 
-~~To change labels' colors, modify the following items in~~  
-~~`res/values/colors.xml`~~
-```xml
-//TO BE DONE
-//Colors are hard-coded currently
-<!--Device Type-->
-<color name="label_device_type">#000000</color>
-
-<!--Grid Type-->
-<color name="label_grid_type">#000000</color>
-
-<!--Case Color-->
-<color name="label_case_color">#000000</color>
-
-<!--Case Type-->
-<color name="label_case_type">#000000</color>
-```
+Labels' colors are the same color as the secondary button  
 &nbsp;  
 &nbsp;  
 #### > Set url for Help in side menu  
