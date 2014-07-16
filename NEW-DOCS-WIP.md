@@ -91,6 +91,16 @@ To change side menu background color, modify the following item in
 &nbsp;  
 &nbsp;  
 *On iOS this is a part of "Set which options to use in side menu"
+( > Change side menu separators' colors)  
+
+To change side menu separators' colors, modify the following items in  
+`res/values/colors.xml`
+```xml
+<color name="separator_color_1">#000000</color>
+<color name="separator_color_2">#343434</color>
+```
+&nbsp;  
+&nbsp;  
 ( > Change side menu text color)  
 
 To change side menu text color, modify the following item in  
@@ -568,6 +578,13 @@ Default value is `false` (logo is visible).
 ```java
 PIO.removeLogoFromPaymentScreen(boolean removeLogo);
 ```
+To change the logo on Payment and Order Confirmation screens,
+replace the following icon with your own icon of the same name.  
+Recommended dimensions are listed next to the icon name.  
+Default logo is a 100% transparent image (no logo).
+```
+icon_logo.png (71×80)
+```
 &nbsp;  
 &nbsp;  
 Country, Currency and Language
@@ -817,11 +834,14 @@ icon_question_big.png (25x38)
 #### > Change logo in SDK.  
 ( > Set custom logo for the SDK)  
 
-Replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.  
-Default logo is a 100% transparent image (no logo).
-```
-icon_logo.png (71×80)
+Logo is hidden by default.
+To show logo in the navigation bar, use the following method
+```java
+/**
+ * @param imageResourceId - ID of a drawable resource to be used.
+ * Make sure to use the image of appropriate size.
+ */
+PIO.setApplicationIconId(int imageResourceId);
 ```
 &nbsp;  
 &nbsp;  
