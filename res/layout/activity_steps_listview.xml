@@ -20,10 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -93,9 +90,9 @@
             android:layout_marginTop="2dip"
             android:gravity="center"
             android:padding="7dip"
+            android:text="@string/step_1_prints"
             android:textColor="#333333"
-            android:textSize="@dimen/text_size_large"
-            android:text="@string/step_1_prints" />
+            android:textSize="@dimen/text_size_large" />
 
         <!-- Horizontal Scroll View, Step 1 -->
 
@@ -110,10 +107,10 @@
                 android:id="@+id/linearlayout_choose_shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:paddingLeft="4dip"
-                android:paddingRight="4dip"
-                android:layout_gravity="center_horizontal" />
+                android:paddingRight="4dip" />
         </HorizontalScrollView>
 
         <View
@@ -141,14 +138,14 @@
             android:visibility="visible" />
 
         <!-- List View, Step 2 -->
-        
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/listview_choose_size"
-             />
 
-        <!-- <HorizontalScrollView
+        <ListView
+            android:id="@+id/listview_choose_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--
+        <HorizontalScrollView
             android:id="@+id/layout_choose_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,10 +163,9 @@
                 android:orientation="horizontal"
                 android:paddingLeft="10dip"
                 android:paddingRight="10dip" />
-        </HorizontalScrollView> -->
+        </HorizontalScrollView>
+        -->
     </LinearLayout>
-
-    
 
     <!-- Help -->
 

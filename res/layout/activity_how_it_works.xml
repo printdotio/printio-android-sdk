@@ -20,7 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:padding="15dp" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -84,7 +84,7 @@
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

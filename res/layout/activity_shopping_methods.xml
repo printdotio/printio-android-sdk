@@ -20,16 +20,13 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back" />
+                android:src="@drawable/icon_arrow_back_2" />
 
             <ImageView
                 android:id="@+id/imageview_top_left_logo"

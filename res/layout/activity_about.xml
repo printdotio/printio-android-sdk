@@ -20,7 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:padding="15dp" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -75,9 +75,9 @@
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
                 android:textSize="@dimen/text_size_tiny" />
-        </RelativeLayout>        
+        </RelativeLayout>
     </RelativeLayout>
-    
+
     <View
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"

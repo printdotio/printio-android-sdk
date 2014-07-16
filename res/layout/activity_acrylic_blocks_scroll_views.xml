@@ -20,10 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -84,7 +81,7 @@
             android:paddingRight="15dip"
             android:paddingTop="10dip"
             android:src="@drawable/icon_question_big"
-            android:visibility="gone" />        
+            android:visibility="gone" />
     </RelativeLayout>
 
     <View
@@ -93,7 +90,7 @@
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -161,10 +158,10 @@
                         android:id="@+id/linear_layout_first_scroll"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
                         android:orientation="horizontal"
                         android:paddingLeft="3dip"
-                        android:paddingRight="3dip"
-                        android:layout_gravity="center_horizontal" >
+                        android:paddingRight="3dip" >
                     </LinearLayout>
                 </HorizontalScrollView>
             </RelativeLayout>
@@ -211,8 +208,8 @@
                         android:id="@+id/linear_layout_second_scroll"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
                         android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
                         android:paddingLeft="10dip"
                         android:paddingRight="10dip" >
                     </LinearLayout>
@@ -245,7 +242,7 @@
         android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
-    
+
     <!-- Coming Soon -->
 
     <include

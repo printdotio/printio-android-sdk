@@ -20,10 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -109,10 +106,10 @@
                 android:id="@+id/linearlayout_choose_shape"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
                 android:paddingLeft="4dip"
-                android:paddingRight="4dip"
-                android:layout_gravity="center_horizontal" />
+                android:paddingRight="4dip" />
         </HorizontalScrollView>
 
         <View

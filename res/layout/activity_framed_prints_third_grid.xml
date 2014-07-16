@@ -20,10 +20,7 @@
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip" >
+            android:padding="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -66,21 +63,21 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
             android:paddingLeft="5dip"
             android:paddingRight="10dip"
             android:textColor="@color/title_bar_text"
-            android:gravity="center_horizontal"
             android:textSize="@dimen/text_size_title"
             android:visibility="gone" />
     </RelativeLayout>
 
-     <View
+    <View
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
-    
+
     <!-- Step 2 -->
 
     <print.io.view.TextViewFontLight
@@ -112,10 +109,10 @@
         android:id="@+id/gridview_phone_case"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:layout_below="@+id/view_dummy_3"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-       	android:layout_alignParentBottom="true"
         android:background="#00000000"
         android:cacheColorHint="#00000000"
         android:horizontalSpacing="1dip"
