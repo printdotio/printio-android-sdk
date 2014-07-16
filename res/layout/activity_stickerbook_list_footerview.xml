@@ -42,7 +42,7 @@
         android:drawableLeft="@drawable/icon_arrow_left_white"
         android:drawablePadding="5dp"
         android:gravity="center"
-        android:onClick="onClickPreviousSet"
+        android:onClick="onClickBack"
         android:paddingLeft="5dip"
         android:paddingRight="10dip"
         android:text="@string/prev"

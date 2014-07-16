@@ -559,13 +559,17 @@ On Android version, the badge is always visible and its background can be change
 &nbsp;  
 &nbsp;  
 #### > Remove plus sign from "Add more products" button. By default, sign is visible.  
-~~( > Remove `+` sign from `Add More Products` button)~~  
+( > Remove `+` sign from `Add More Products` button)  
 
-~~Default value is `false` (`+` sign is visible).~~
+Default value is `false` (`+` sign is visible).
 ```java
-//TO BE DONE
-//Android version does not have + sign on this button
 PIO.removePlusFromAddMoreProductsButton(boolean removePlusSign);
+```
+To change the icon for "Add More Products" button,
+replace the following icon with your own icon of the same name.  
+Recommended dimensions are listed next to the icon name.  
+```
+icon_add_more_products.png (36×36 xhdpi, 54x54 xxhdpi)
 ```
 &nbsp;  
 &nbsp;  

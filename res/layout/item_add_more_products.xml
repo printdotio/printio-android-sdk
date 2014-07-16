@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/bg_selector_swipeable" >
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_selector_swipeable"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_add_more_products"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:padding="25dip"
+        android:layout_height="96dip"
+        android:drawablePadding="10dip"
+        android:gravity="center_vertical"
         android:text="@string/add_more_products"
         android:textColor="@color/blue_light"
         android:textSize="@dimen/text_size_large" />
