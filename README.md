@@ -160,6 +160,9 @@ Please add following activities to your AndroidManifest.xml file:
             android:name="print.io.ActivityOrderCompleted"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityHelp"
+            android:screenOrientation="portrait" />
         <activity android:name="com.facebook.LoginActivity" />
         <activity
             android:name="print.io.social.Instagram"
