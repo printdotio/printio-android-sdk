@@ -34,6 +34,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/layout_menu_back"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_customize_product"
             android:layout_width="wrap_content"
@@ -43,7 +50,15 @@
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/layout_shopping_cart"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
         <RelativeLayout
+            android:id="@+id/layout_shopping_cart"
             android:layout_width="45dip"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -69,12 +84,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imageview_cart"
                 android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="5dip"
-                android:layout_marginRight="1dip"
+                android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
+                android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="@dimen/text_size_tiny" />
+                android:textSize="@dimen/text_size_cart_items_quantity" />
         </RelativeLayout>
     </RelativeLayout>
 

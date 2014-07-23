@@ -69,12 +69,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imageview_cart"
                 android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="5dip"
-                android:layout_marginRight="1dip"
+                android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
+                android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="@dimen/text_size_tiny" />
+                android:textSize="@dimen/text_size_cart_items_quantity" />
         </RelativeLayout>
     </RelativeLayout>
 

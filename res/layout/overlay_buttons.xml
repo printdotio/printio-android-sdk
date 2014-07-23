@@ -8,7 +8,7 @@
         android:id="@+id/layout_help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_selector_help" 
+        android:background="@drawable/bg_selector_help"
         android:clickable="true"
         android:minHeight="45dp"
         android:minWidth="45dp"
@@ -20,67 +20,5 @@
             android:layout_centerInParent="true"
             android:src="@drawable/icon_question_big" /> <!-- icon_help -->
     </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#7a7a7a"
-        android:visibility="gone" />
-
-    <RelativeLayout
-        android:layout_width="35dip"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@drawable/btn_overlay_bottom"
-        android:clickable="true"
-        android:gravity="center"
-        android:onClick="onClickShoppingCart"
-        android:visibility="gone" >
-
-        <ImageView
-            android:id="@+id/imageview_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="10dip"
-            android:paddingLeft="7dip"
-            android:paddingRight="7dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/icon_cart" />
-
-        <TextView
-            android:id="@+id/textview_overlay_num_items"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageview_cart"
-            android:layout_alignRight="@+id/imageview_cart"
-            android:layout_marginBottom="7dip"
-            android:layout_marginRight="3dip"
-            android:background="@drawable/bg_cart_items_qty"
-            android:gravity="center"
-            android:textColor="@color/cart_items_qty_text"
-            android:textSize="@dimen/text_size_tiny" />
-    </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:background="#33000000"
-        android:visibility="gone" />
-
-    <ImageView
-        android:layout_width="35dip"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:background="@drawable/bg_selector"
-        android:clickable="true"
-        android:onClick="onClickFeatureProducts"
-        android:paddingBottom="10dip"
-        android:paddingLeft="7dip"
-        android:paddingRight="7dip"
-        android:paddingTop="10dip"
-        android:src="@drawable/icon_home"
-        android:visibility="gone" />
 
 </LinearLayout>

@@ -226,53 +226,6 @@
         android:textColor="@color/secondary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
-    <!-- Overlay Buttons -->
-
-    <RelativeLayout
-        android:id="@+id/relativelayout_shopping_cart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/dummy"
-        android:layout_marginLeft="-1dip"
-        android:gravity="center"
-        android:visibility="invisible" >
-
-        <ImageView
-            android:id="@+id/imageview_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:paddingBottom="12dip"
-            android:paddingLeft="11dip"
-            android:paddingRight="11dip"
-            android:paddingTop="12dip"
-            android:src="@drawable/icon_cart"
-            android:visibility="invisible" />
-
-        <TextView
-            android:id="@+id/textview_overlay_num_items"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageview_cart"
-            android:layout_alignRight="@+id/imageview_cart"
-            android:layout_marginBottom="6dip"
-            android:layout_marginRight="3dip"
-            android:background="@drawable/bg_cart_items_qty"
-            android:gravity="center"
-            android:textColor="@color/cart_items_qty_text"
-            android:textSize="@dimen/text_size_tiny"
-            android:visibility="invisible" />
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/dummy"
-        android:layout_width="wrap_content"
-        android:layout_height="1px"
-        android:layout_above="@+id/overlay_buttons"
-        android:layout_alignRight="@+id/overlay_buttons"
-        android:background="#55ffffff"
-        android:visibility="gone" />
-
     <!-- Edit Tools -->
 
     <include
@@ -283,12 +236,18 @@
         layout="@layout/edit_tools"
         android:visibility="gone" />
 
-    <include
-        android:id="@+id/overlay_buttons"
+    <ImageView
+        android:id="@+id/imageview_help_circle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/layout_photos"
-        layout="@layout/overlay_buttons_help_circle" />
+        android:layout_marginLeft="15dp"
+        android:clickable="true"
+        android:minHeight="45dp"
+        android:minWidth="45dp"
+        android:onClick="onClickHelp"
+        android:src="@drawable/icon_help_circle" />
+
     <!-- Dialog Discard -->
 
     <include

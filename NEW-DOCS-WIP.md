@@ -553,6 +553,15 @@ icon_cart_default.png (45x42)
 icon_cart_pressed.png (45x42)
 icon_cart_items_qty_background (31x31) //Background for the badge that displays cart items count
 ```
+Shopping cart quantity badge is bottom-right aligned with the shopping cart icon  
+and its position is controlled by bottom and right margins.  
+To change the margins, modify the respective items in `res/values/dimens.xml`.  
+These are the default values.
+```xml
+<dimen name="cart_items_quantity_bottom_offset">5dip</dimen>
+<dimen name="cart_items_quantity_right_offset">1dip</dimen>
+```
+
 **DIFFERENCES BETWEEN iOS and Android:**  
 iOS version of the SDK allows the badge to be hidden.  
 On Android version, the badge is always visible and its background can be changed.
@@ -752,10 +761,10 @@ Other Customization
 (Does not exist on iOS)  
 
 Fonts sizes are organized into six "buckets".  
-To change their sizes, modify the respective items in `res/values/dimen.xml`.  
+To change their sizes, modify the respective items in `res/values/dimens.xml`.  
 These are the default values which work well with default fonts.
 ```xml
-<dimen name="text_size_tiny">8dip</dimen>
+<dimen name="text_size_cart_items_quantity">8dip</dimen>
 <dimen name="text_size_small">12dip</dimen>
 <dimen name="text_size_normal">14dip</dimen>
 <dimen name="text_size_large">18dip</dimen>

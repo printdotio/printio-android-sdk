@@ -108,7 +108,8 @@
     <string name="enter_promo_code">Please enter promo code.</string>
     <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
     <string name="coupon_applied">Coupon has been applied. You saved a </string>
-    <string name="coupon_savings">Coupon savings:</string>
+    <string name="coupon_savings">Savings:</string>
+    <string name="ship_discount">Ship Discount</string>
     <string name="place_order">Place Order</string> <!-- translate -->
     <string name="enter_payment_info">Enter Payment Info</string> <!-- translate -->
     <string name="address">Address</string> <!-- translate -->
@@ -306,6 +307,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="ship_cost">Ship Cost</string>
     <string name="est_ship_cost">Est. Ship Cost:</string>
     <string name="shipment">Shipment</string>
+    <string name="ship">Ship</string>
     <string name="of">of</string>
     <string name="send">Send</string>
     <string name="feature_not_available">This feature is not available for this type of product</string>

@@ -19,11 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="2dip"
-            android:paddingLeft="2dip"
-            android:paddingRight="2dip"
-            android:paddingTop="2dip"
-            android:src="@drawable/icon_cart_big" />
+            android:paddingBottom="10dip"
+            android:paddingLeft="7dip"
+            android:paddingRight="7dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_cart_white" />
 
         <TextView
             android:id="@+id/sidemenu_cart_num"
@@ -31,12 +31,12 @@
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/imageview_cart_sidemenu"
             android:layout_alignRight="@+id/imageview_cart_sidemenu"
-            android:layout_marginBottom="0dip"
-            android:layout_marginRight="0dip"
+            android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
+            android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
             android:background="@drawable/icon_cart_items_qty_side_menu"
             android:gravity="center"
             android:textColor="@color/side_menu_cart_items_qty_text"
-            android:textSize="@dimen/text_size_tiny" />
+            android:textSize="@dimen/text_size_cart_items_quantity" />
     </RelativeLayout>
 
     <print.io.view.TextViewFontLight

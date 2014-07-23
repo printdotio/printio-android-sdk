@@ -35,52 +35,14 @@
             android:paddingLeft="10dp"
             android:src="@drawable/icon_arrow_back_2" />
 
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_back"
-            android:layout_width="wrap_content"
-            android:layout_height="35dip"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/btn_blue_light"
-            android:clickable="true"
-            android:drawableLeft="@drawable/icon_arrow_left_white"
-            android:drawablePadding="5dp"
-            android:gravity="center"
-            android:onClick="onClickBack"
-            android:paddingLeft="5dip"
-            android:paddingRight="10dip"
-            android:text="@string/back"
-            android:textColor="@color/primary_button_text"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="gone" />
-
         <print.io.view.TextViewFontBold
             android:id="@+id/textview_photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:paddingRight="30dp"
-            android:text=""
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_large" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_buy_it1"
-            android:layout_width="70dip"
-            android:layout_height="35dip"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/btn_green"
-            android:clickable="true"
-            android:drawablePadding="3dp"
-            android:drawableRight="@drawable/icon_arrow_right"
-            android:gravity="center"
-            android:onClick="onClickOrder"
-            android:paddingLeft="4dp"
-            android:paddingRight="7dp"
-            android:textColor="@color/secondary_button_text"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="gone" />
 
         <RelativeLayout
             android:id="@+id/relativelayout_shopping_cart"
@@ -90,30 +52,29 @@
             android:layout_centerVertical="true"
             android:background="@drawable/btn_blue_light_sharp"
             android:clickable="true"
-            android:gravity="center_vertical"
-            android:onClick="onClickOrder" >
+            android:onClick="onClickOrder"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip" >
 
             <print.io.view.TextViewFontNormal
                 android:id="@+id/textview_buy_it"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dp"
                 android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal" />
 
             <ImageView
                 android:id="@+id/imageview_cart"
-                android:layout_width="36dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/textview_buy_it"
-                android:paddingBottom="6dip"
+                android:paddingBottom="10dip"
                 android:paddingLeft="7dip"
                 android:paddingRight="7dip"
-                android:paddingTop="6dip"
-                android:src="@drawable/icon_cart_big"
+                android:paddingTop="10dip"
+                android:src="@drawable/icon_cart_white"
                 android:visibility="gone" />
 
             <print.io.view.TextViewFontLight
@@ -122,15 +83,22 @@
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/imageview_cart"
                 android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="5dip"
-                android:layout_marginRight="1dip"
+                android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
+                android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
                 android:textColor="@color/cart_items_qty_text"
-                android:textSize="@dimen/text_size_tiny"
+                android:textSize="@dimen/text_size_cart_items_quantity"
                 android:visibility="gone" />
         </RelativeLayout>
     </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_buttons"
+        android:background="@color/title_bar_separator" />
 
     <include
         android:id="@+id/edit_image"
