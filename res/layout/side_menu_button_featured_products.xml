@@ -11,7 +11,7 @@
         android:layout_width="60dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/icon_offers" />
+        android:src="@drawable/icon_featured_products" />
 
     <print.io.view.TextViewFontLight
         android:layout_width="wrap_content"

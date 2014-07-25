@@ -27,7 +27,7 @@
                 android:gravity="center"
                 android:paddingBottom="15dip"
                 android:textColor="@android:color/black"
-                android:textSize="@dimen/text_size_normal" />
+                android:textSize="@dimen/text_size_large" />
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_help"
@@ -82,7 +82,7 @@
                     android:paddingTop="14dip"
                     android:text="@string/ok"
                     android:textColor="@color/primary_button_text"
-                    android:textSize="@dimen/text_size_normal"
+                    android:textSize="@dimen/text_size_large"
                     android:textStyle="bold" />
             </LinearLayout>
         </RelativeLayout>

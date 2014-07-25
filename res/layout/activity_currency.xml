@@ -71,7 +71,8 @@
             android:inputType="text"
             android:paddingLeft="10dip"
             android:paddingRight="30dip"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_normal"
+            android:hint="@string/currency_search" />
 
         <ImageView
             android:id="@+id/imageview_clear"

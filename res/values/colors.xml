@@ -27,6 +27,11 @@
     <color name="side_menu_cart_items_qty_text">#FFFFFF</color> <!-- #FFFFFF -->
     <color name="bg_photosources">#333333</color>
     <color name="customize_product_tooltip">#42BE9C</color>
+    
+    <color name="product_details_header_1">#000000</color>
+    <color name="product_details_header_2">#42BE9C</color>
+    <color name="product_details_header_3">#000000</color>
+    <color name="product_details_header_4">#000000</color>
 
     <!-- other_colors -->
     <color name="holo_blue_bright">#00DDFF</color>

@@ -1,62 +1,85 @@
+# Developer SDK Customization Reference
 
-**SDK Customization**
-=====================
----
-*Notice: Items that are implemented in iOS SDK but are missing from Android SDK are marked using ~~strikethrough~~*  
+Notice: Items that are implemented in iOS SDK but are missing from Android SDK are marked using strikethrough 
 
 ---
-Navigation bar
---------------
-#### > Change navigation bar color and title font color, also set left and right bar button.  
-( > Change navigation bar color, separator color and title bar text color)  
+
+## Status Bar Settings
+
+Set status bar style and visibility. Default value is light and visible.  
+(Hide status bar)  
+
+Default value is `false` (not hidden).
+
+### Code Sample
+
+```java
+PIO.setHideStatusBar(boolean hideStatusBar);
+```
+### Screenshots - to be added
+
+| Currently | Changed |
+| :---- | :---- | :---- |
+
+---
+
+## Navigation Bar Settings
+
+- Change navigation bar color and title font color, also set left and right bar button.  
 
 This can be done in xml by changing the following item in  
-`res/values/colors.xml`
-```xml
-<color name="title_bar_background">#ffffff</color>
-```
+
+| Resource | Method |
+| :---- | :---- |
+| `res/values/colors.xml` | `<color name="title_bar_background">#ffffff</color>` |
+
+
 ~~`<color name="title_bar_left_button_background">#ffffff</color>`~~  
 ~~`<color name="title_bar_right_button_background">#ffffff</color>`~~  
 
-or programmatically, by using following method.
+### Code Sample
+
 ```java
 PIO.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
 ```
 _Note that the value set programmatically will override the value set in xml!_  
-&nbsp;  
-To change separator and texts' colors, modify the following items in  
-`res/values/colors.xml`
-```xml
-<color name="title_bar_separator">#d6d6d6</color>
-<color name="title_bar_text">#000000</color>
-<color name="cart_items_qty_text">#ffffff</color>
-```
+ 
+- To change separator and texts' colors, modify the following items in  
+ 
+| Resource | Method |
+| :---- | :---- |
+| `res/values/colors.xml` | `<color name="title_bar_separator">#d6d6d6</color>` |
+| `res/values/colors.xml` | `<color name="title_bar_text">#000000</color>` |
+| `res/values/colors.xml` | `<color name="cart_items_qty_text">#ffffff</color>` |
+
 ~~`titleButtonIcon:(NSString *)iPath;`~~  
-&nbsp;  
-**NOTICE:**  
-Never modify xml item names.  
-Modify values only.  
-&nbsp;  
-&nbsp;  
-#### > Set icon for back button.  
-( > Change `Back` button icon)  
+
+### Screenshots - to be added
+
+| Currently | Changed |
+|  :---- | :---- |
+  
+_NOTICE: Never modify xml item names. Modify values only._  
+
+---
+
+## Set Icon For Back Button  
+(Change `Back` button icon)  
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.
-```
-icon_arrow_back_2.png (19x33)
-```
-&nbsp;  
-&nbsp;  
-#### > Set status bar style and visibility. Default value is light and visible.  
-( > Hide status bar)  
 
-Default value is `false` (not hidden).
-```java
-PIO.setHideStatusBar(boolean hideStatusBar);
-```
-&nbsp;  
-&nbsp;  
+| Resource | Parameters - Options |
+| :---- | :---- |
+| `res/drawable-xhdpi` | `icon_arrow_back_2.png (19x33)` |
+
+### Screenshots - to be added
+
+| Currently | Changed |
+|  :---- | :---- |
+
+--- 
+
 ~~#### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen~~  
 ~~( > Set three buttons title bar style)~~
 
@@ -124,7 +147,6 @@ enum SideMenuButton {
     SEARCH_BAR,
     PRODUCTS,
     FEATURED_PRODUCTS,
-    VIEW_CART,
     SHARE_WITH_IMAGE,
     EMAIL_SUPPORT,
     HELP,
@@ -136,7 +158,22 @@ or, to use the default buttons, call
 PIO.setDefaultSideMenuButtonsTop();
 ```
 &nbsp;  
-
+To modify buttons' icons, replace the corresponding icon with your own.
+Recommended dimensions are listed next to the icon name.
+```
+icon_exit_sdk.png (17x30)
+icon_products.png (52x52)
+icon_featured_products.png (52x52)
+icon_email (52x52)
+icon_help (17x26)
+icon_cart_white.png (45x42)
+```
+&nbsp;  
+To set support email address, use the following method:
+```java
+PIO.setSupportEmail(String supportEmail);
+```
+&nbsp;  
 ##### **Options** section:  
 
 To modify its title, change the following item in  
@@ -193,6 +230,10 @@ To change the section title background color, modify the following item in
 ```
 &nbsp;  
 #### > To select Photo Sources that will be displayed here, refer to **Photo Sources** section of this document.
+#### > To hide **Accounts** section, use the following method
+```java
+PIO.hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
+```
 &nbsp;  
 ##### **Info** section:  
 To modify its title, change the following item in  

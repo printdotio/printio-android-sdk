@@ -158,7 +158,7 @@
                             android:maxLines="2"
                             android:padding="10dip"
                             android:text="@string/change_currency"
-                            android:textColor="#ffffff"
+                            android:textColor="@color/side_menu_text"
                             android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
@@ -204,7 +204,7 @@
                             android:maxLines="2"
                             android:padding="10dip"
                             android:text="@string/change_country"
-                            android:textColor="#ffffff"
+                            android:textColor="@color/side_menu_text"
                             android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
@@ -247,91 +247,43 @@
                             android:maxLines="2"
                             android:padding="10dip"
                             android:text="@string/change_language"
-                            android:textColor="#ffffff"
+                            android:textColor="@color/side_menu_text"
                             android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/separator_color_1"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/separator_color_2" />
+
             <!-- Accounts -->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1"
-                android:visibility="gone" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <print.io.view.TextViewFontBold
-                android:id="@+id/textview_accounts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/side_menu_accounts"
-                android:gravity="center"
-                android:paddingBottom="3dip"
-                android:paddingTop="3dip"
-                android:text="@string/accounts"
-                android:textColor="@color/side_menu_accounts_subtitle_text"
-                android:textSize="@dimen/text_size_normal" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
             <LinearLayout
+                android:id="@+id/linearlayout_accounts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:visibility="gone" >
 
-                <LinearLayout
-                    android:id="@+id/layout_row_1"
+                <print.io.view.TextViewFontBold
+                    android:id="@+id/textview_accounts"
                     android:layout_width="match_parent"
-                    android:layout_height="70dip"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
-
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_2" />
-
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-                </LinearLayout>
+                    android:layout_height="wrap_content"
+                    android:background="@color/side_menu_accounts"
+                    android:gravity="center"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:text="@string/accounts"
+                    android:textColor="@color/side_menu_accounts_subtitle_text"
+                    android:textSize="@dimen/text_size_normal" />
 
                 <View
                     android:layout_width="match_parent"
@@ -344,108 +296,163 @@
                     android:background="@color/separator_color_2" />
 
                 <LinearLayout
-                    android:id="@+id/layout_row_2"
                     android:layout_width="match_parent"
-                    android:layout_height="70dip"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
+                    <LinearLayout
+                        android:id="@+id/layout_row_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_1" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_2" />
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal" />
+                    </LinearLayout>
 
                     <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
                         android:background="@color/separator_color_1" />
 
                     <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
                         android:background="@color/separator_color_2" />
 
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
+                    <LinearLayout
+                        android:id="@+id/layout_row_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_1" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_2" />
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_2" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_row_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dip"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_1" />
+
+                        <View
+                            android:layout_width="1dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/separator_color_2" />
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="12dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_normal"
+                            android:visibility="visible" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
-                    android:background="@color/separator_color_1" />
+                    android:background="@color/separator_color_1"
+                    android:visibility="gone" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
-
-                <LinearLayout
-                    android:id="@+id/layout_row_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dip"
-                    android:orientation="horizontal"
-                    android:visibility="gone" >
-
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_2" />
-
-                    <print.io.view.TextViewFontLight
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="12dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal"
-                        android:visibility="visible" />
-                </LinearLayout>
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1"
-                android:visibility="gone" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
             <!-- Info -->
 
             <LinearLayout

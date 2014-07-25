@@ -17,22 +17,11 @@
         android:paddingRight="15dip"
         android:paddingTop="20dip" >
 
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_hello"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"
-            android:lineSpacingExtra="2dip"
-            android:text="@string/hello"
-            android:textColor="#5a5d66"
-            android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_low_res"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_hello"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="10dip"
@@ -40,7 +29,7 @@
             android:lineSpacingExtra="2dip"
             android:text="@string/less_photos"
             android:textColor="#5a5d66"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_large" />
 
         <LinearLayout
             android:id="@+id/layout_buttons"
@@ -64,7 +53,7 @@
                 android:paddingTop="8dip"
                 android:text="@string/get_more_photos"
                 android:textColor="@color/primary_button_text"
-                android:textSize="@dimen/text_size_normal"
+                android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
 
             <print.io.view.ButtonFontLight
@@ -80,7 +69,7 @@
                 android:paddingBottom="8dip"
                 android:paddingTop="8dip"
                 android:textColor="@color/secondary_button_text"
-                android:textSize="@dimen/text_size_normal"
+                android:textSize="@dimen/text_size_large"
                 android:textStyle="bold" />
         </LinearLayout>
 

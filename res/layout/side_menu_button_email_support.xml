@@ -4,20 +4,20 @@
     android:layout_height="60dip"
     android:background="@drawable/bg_selector"
     android:clickable="true"
-    android:onClick="onClickExitSDK"
+    android:onClick="onClickEmailSupport"
     android:orientation="horizontal" >
 
     <ImageView
         android:layout_width="60dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:src="@drawable/icon_exit_sdk" />
+        android:src="@drawable/icon_email" />
 
     <print.io.view.TextViewFontLight
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="@string/exit"
+        android:text="@string/email_support"
         android:textColor="@color/side_menu_text"
         android:textSize="@dimen/text_size_normal" />
 
