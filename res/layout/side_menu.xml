@@ -148,7 +148,7 @@
                             android:textColor="#ffffff"
                             android:textSize="@dimen/text_size_huge" />
 
-                        <print.io.view.AutoResizeTextViewFontLight
+                        <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_currency"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                             android:padding="10dip"
                             android:text="@string/change_currency"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </RelativeLayout>
 
                     <View
@@ -194,7 +194,7 @@
                             android:layout_marginTop="5dp"
                             android:src="@drawable/icon_country" />
 
-                        <print.io.view.AutoResizeTextViewFontLight
+                        <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_country"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -205,7 +205,7 @@
                             android:padding="10dip"
                             android:text="@string/change_country"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </RelativeLayout>
 
                     <View
@@ -237,7 +237,7 @@
                             android:layout_margin="5dip"
                             android:src="@drawable/icon_language" />
 
-                        <print.io.view.AutoResizeTextViewFontLight
+                        <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_language"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -248,7 +248,7 @@
                             android:padding="10dip"
                             android:text="@string/change_language"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -316,7 +316,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
 
                         <View
                             android:layout_width="1dip"
@@ -337,7 +337,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </LinearLayout>
 
                     <View
@@ -366,7 +366,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
 
                         <View
                             android:layout_width="1dip"
@@ -387,7 +387,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </LinearLayout>
 
                     <View
@@ -416,7 +416,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
 
                         <View
                             android:layout_width="1dip"
@@ -437,8 +437,7 @@
                             android:clickable="true"
                             android:gravity="center"
                             android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_normal"
-                            android:visibility="visible" />
+                            android:textSize="@dimen/text_size_side_menu_button" />
                     </LinearLayout>
                 </LinearLayout>
 

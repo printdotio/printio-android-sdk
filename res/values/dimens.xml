@@ -10,6 +10,8 @@
     <dimen name="text_size_title">20dip</dimen>
     <dimen name="text_size_huge">32dip</dimen>
 
+    <dimen name="text_size_side_menu_button">14dip</dimen>
+
     <dimen name="text_size_cart_items_quantity">8dip</dimen>
     <dimen name="cart_items_quantity_bottom_offset">5dip</dimen>
     <dimen name="cart_items_quantity_right_offset">1dip</dimen>

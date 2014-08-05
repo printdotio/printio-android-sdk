@@ -143,9 +143,6 @@ Please add following activities to your AndroidManifest.xml file:
             android:name="print.io.ActivityPaymentMethod"
             android:screenOrientation="portrait" />
         <activity
-            android:name="print.io.ActivityCheckout"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="print.io.ActivityChooseShippingAddress"
             android:screenOrientation="portrait" />
         <activity
@@ -317,7 +314,7 @@ PIO.setPhotosourcesDisabled(boolean);
 //preset the country. Country code is 2 letter code, e.g. "US".
 PIO.setCountryCode(String);
 
-//can change country from Featured Products screen.
+//can change country from Featured Products screen (default is true).
 PIO.setCountryOnFeaturedProducts(boolean);
 
 //hide category and search bar on Featured Products screen

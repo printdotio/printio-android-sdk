@@ -31,11 +31,11 @@ This can be done in xml by changing the following item in
 
 | Resource | Method |
 | :---- | :---- |
-| `res/values/colors.xml` | `<color name="title_bar_background">#ffffff</color>` |
+| `res/values/colors.xml` | `<color name="title_bar_background">#FFFFFF</color>` |
 
 
-~~`<color name="title_bar_left_button_background">#ffffff</color>`~~  
-~~`<color name="title_bar_right_button_background">#ffffff</color>`~~  
+~~`<color name="title_bar_left_button_background">#FFFFFF</color>`~~  
+~~`<color name="title_bar_right_button_background">#FFFFFF</color>`~~  
 
 ### Code Sample
 
@@ -50,7 +50,7 @@ _Note that the value set programmatically will override the value set in xml!_
 | :---- | :---- |
 | `res/values/colors.xml` | `<color name="title_bar_separator">#d6d6d6</color>` |
 | `res/values/colors.xml` | `<color name="title_bar_text">#000000</color>` |
-| `res/values/colors.xml` | `<color name="cart_items_qty_text">#ffffff</color>` |
+| `res/values/colors.xml` | `<color name="text_cart_items_quantity">#FFFFFF</color>` |
 
 ~~`titleButtonIcon:(NSString *)iPath;`~~  
 
@@ -80,13 +80,12 @@ Recommended dimensions are listed next to the icon name.
 
 --- 
 
-~~#### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen~~  
-~~( > Set three buttons title bar style)~~
+#### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen  
+( > Set three buttons title bar style)
 
-~~Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.~~  
-~~Default value is `false`.~~
+Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.  
+Default value is `false`.
 ```java
-//TO BE DONE
 PIO.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 ```
 &nbsp;  
@@ -129,7 +128,7 @@ To change side menu separators' colors, modify the following items in
 To change side menu text color, modify the following item in  
 `res/values/colors.xml`
 ```xml
-<color name="side_menu_text">#ffffff</color>
+<color name="side_menu_text">#FFFFFF</color>
 ```
 &nbsp;  
 &nbsp;  
@@ -169,6 +168,24 @@ icon_help (17x26)
 icon_cart_white.png (45x42)
 ```
 &nbsp;  
+#### > Get order information when SDK is closed  
+
+In order to get back order information, host activity needs to be specified.  
+Control will be returned to this activity when PrintIO SDK is closed.  
+To set host activity, use the following method:
+```java
+//Use qualified class name, like this: "com.example.piosdkpoconcept.ActivityTest"
+PIO.setHostAppActivity(String className);
+```
+
+Order information is passed back to the host activity through Intent.  
+To obtain this data, use the following code snippet:
+```java
+ArrayList<String> cartItems = getIntent().getStringArrayListExtra("ShoppingCartItems");
+```
+&nbsp;  
+#### > Set support email address  
+
 To set support email address, use the following method:
 ```java
 PIO.setSupportEmail(String supportEmail);
@@ -300,10 +317,10 @@ PIO.setShareText(String shareText);
 &nbsp;  
 Featured Products
 --------------
-#### > Set country on Featured Products screen instead on First screen. Default value is NO.  
+#### > Set country on Featured Products screen instead on First screen. Default value is YES.  
 ( > Set country on Featured Products screen instead on First screen)  
 
-Default value is `false` (country selection screen is the first screen).
+Default value is `true`.
 ```java
 PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 ```
@@ -602,10 +619,30 @@ These are the default values.
 <dimen name="cart_items_quantity_bottom_offset">5dip</dimen>
 <dimen name="cart_items_quantity_right_offset">1dip</dimen>
 ```
+To change cart quantity text color, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="text_cart_items_quantity">#FFFFFF</color>
+```
 
 **DIFFERENCES BETWEEN iOS and Android:**  
 iOS version of the SDK allows the badge to be hidden.  
 On Android version, the badge is always visible and its background can be changed.
+&nbsp;  
+&nbsp;  
+#### > Customize `Shopping Cart` side menu button  
+
+Replace following icons with your own icons of same names.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_cart_white.png (45x42)
+icon_cart_items_qty_background_side_menu (31x31) //Background for the badge that displays cart items count
+```
+To change cart quantity text color, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
+```
 &nbsp;  
 &nbsp;  
 #### > Remove plus sign from "Add more products" button. By default, sign is visible.  
@@ -755,6 +792,16 @@ PayPal Settings
 #### > Set PayPal's client ids, for both modes, staging and production. Default values are client ids from PrintIO.  
 ( > Set up PayPal credentials)  
 
+Our SDK is using the legacy PayPal MPL library for Android.  
+(https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MPL/)  
+
+PayPal APP_ID is the id of the PayPal application.  
+You can manage your applications here:  
+https://developer.paypal.com/webapps/developer/applications/myapps  
+PayPal APP_ID should look like this: "APP-XXXXXXXXXXXXXXXXX"  
+
+PayPal CLIENT_ID is the public key for your app.  
+You can find it in your app's credentials page.  
 ```java
 PIO.setPayPalAppId(String PAY_PAL_APP_ID);
 PIO.setPayPalClientId(String PAY_PAL_CLIENT_ID);
@@ -767,6 +814,13 @@ Otherwise, **Sandbox** environment is used.
 #### > Define PayPal receiver email and set up fees  
 (Does not exist on iOS)  
 
+PayPal Receiver Email is your PayPal business account that will receive the payments from the app.  
+
+PayPal Fee Payer decides who pays the PayPal fees.  
+Default (and suggested) value is `FEEPAEYER_ACHRECEIVER`.  
+You can read more about it here:  
+https://developer.paypal.com/docs/classic/api/adaptive-payments/Pay_API_Operation/  
+(search the page for "feesPayer")  
 ```java
 PIO.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
 
@@ -805,12 +859,15 @@ Fonts sizes are organized into six "buckets".
 To change their sizes, modify the respective items in `res/values/dimens.xml`.  
 These are the default values which work well with default fonts.
 ```xml
-<dimen name="text_size_cart_items_quantity">8dip</dimen>
 <dimen name="text_size_small">12dip</dimen>
 <dimen name="text_size_normal">14dip</dimen>
 <dimen name="text_size_large">18dip</dimen>
 <dimen name="text_size_title">20dip</dimen>
 <dimen name="text_size_huge">32dip</dimen>
+
+<dimen name="text_size_cart_items_quantity">8dip</dimen>
+
+<dimen name="text_size_side_menu_button">14dip</dimen>
 ```
 &nbsp;  
 &nbsp;  
@@ -1017,7 +1074,7 @@ To modify labels, change the following items in
 Use `newline` character `\n` to manually add new lines.  
 &nbsp;  
 &nbsp;  
-#### > “Product image Preview” screen  
+#### > "Product image Preview" screen  
 ( > Change Product Preview screen labels)  
 
 Labels' colors are the same color as the secondary button  
@@ -1050,6 +1107,24 @@ To modify "How it Works" text, change the following item in
 ```
 **NOTICE:**  
 Use `newline` character `\n` to manually add new lines.  
+&nbsp;  
+&nbsp;  
+#### > Get shopping cart items count without starting the SDK  
+
+To get the count of items in shopping cart, use the following method:
+```java
+PIO.getNumberOfItemsInShoppingCart(Context context);
+```
+&nbsp;  
+&nbsp;
+#### > Change photosources text and background colors  
+
+To change photosources text and background colors, modify following items in  
+`res/values/colors.xml`
+```xml
+<color name="photosources_background">#333333</color>
+<color name="photosources_text">#FFFFFF</color>
+```
 &nbsp;  
 &nbsp;  
 

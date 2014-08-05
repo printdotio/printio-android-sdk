@@ -56,47 +56,6 @@
             android:layout_toLeftOf="@+id/imageview_edit"
             android:src="@drawable/icon_ver_divider"
             android:visibility="gone" />
-
-        <ImageView
-            android:id="@+id/imageview_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickEdit"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/btn_edit"
-            android:visibility="gone" />
-
-        <ImageView
-            android:id="@+id/imageview_check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickCheck"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/btn_check"
-            android:visibility="gone" />
-
-        <ImageView
-            android:id="@+id/imageview_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickMenu"
-            android:padding="10dip"
-            android:src="@drawable/btn_menu" />
     </RelativeLayout>
 
     <View
@@ -288,7 +247,7 @@
                     android:layout_weight="2.8"
                     android:background="@drawable/bg_selector_featured_product"
                     android:gravity="left|center_vertical"
-                    android:hint="@string/enter_coupon"
+                    android:hint="@string/enter_code"
                     android:inputType="text"
                     android:paddingBottom="9dp"
                     android:paddingLeft="7dp"

@@ -33,9 +33,9 @@
             android:layout_alignRight="@+id/imageview_cart_sidemenu"
             android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
             android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
-            android:background="@drawable/icon_cart_items_qty_side_menu"
+            android:background="@drawable/icon_cart_items_qty_background_side_menu"
             android:gravity="center"
-            android:textColor="@color/side_menu_cart_items_qty_text"
+            android:textColor="@color/text_cart_items_quantity_side_menu"
             android:textSize="@dimen/text_size_cart_items_quantity" />
     </RelativeLayout>
 
@@ -45,6 +45,6 @@
         android:layout_gravity="center_vertical"
         android:text="@string/view_cart"
         android:textColor="@color/side_menu_text"
-        android:textSize="@dimen/text_size_normal" />
+        android:textSize="@dimen/text_size_side_menu_button" />
 
 </LinearLayout>

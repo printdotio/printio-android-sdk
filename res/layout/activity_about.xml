@@ -88,7 +88,7 @@
                 android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
-                android:textColor="@color/cart_items_qty_text"
+                android:textColor="@color/text_cart_items_quantity"
                 android:textSize="@dimen/text_size_cart_items_quantity" />
         </RelativeLayout>
     </RelativeLayout>

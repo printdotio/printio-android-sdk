@@ -102,7 +102,7 @@
                 android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
                 android:background="@drawable/bg_cart_items_qty"
                 android:gravity="center"
-                android:textColor="@color/cart_items_qty_text"
+                android:textColor="@color/text_cart_items_quantity"
                 android:textSize="@dimen/text_size_cart_items_quantity" />
         </RelativeLayout>
     </RelativeLayout>
@@ -114,241 +114,35 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
-    <!-- Social Networks -->
+    <!-- Photosources container -->
 
-    <RelativeLayout
-        android:id="@+id/layout_social_networks"
+    <LinearLayout
+        android:id="@+id/linearlayout_photosources"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
-        android:background="#ffffff"
-        android:paddingBottom="0dip"
-        android:paddingLeft="7dip"
-        android:paddingRight="7dip"
-        android:paddingTop="7dip" >
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/bg_photosources"
+        android:orientation="vertical" >
 
-        <!-- Gray Layout -->
+        <!-- Photosources first row -->
 
-        <RelativeLayout
+        <LinearLayout
+            android:id="@+id/dummy_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="3dip"
-            android:background="@drawable/bg_photosources" >
+            android:orientation="horizontal" />
 
-            <!-- Dummy Horizontal 1 -->
+        <!-- Photosources second row -->
 
-            <LinearLayout
-                android:id="@+id/dummy_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal" >
-
-                <!-- Phone -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_phone"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickPhone"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_phone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_phone_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_phone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_phone"
-                        android:singleLine="true"
-                        android:text="@string/phone"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-
-                <!-- Instagram -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_instagram"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickInstagram"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_instagram"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_instagram_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_instagram"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_instagram"
-                        android:singleLine="true"
-                        android:text="@string/instagram"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-
-                <!-- Facebook -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_facebook"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickFacebook"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_facebook"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_facebook_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_facebook"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_facebook"
-                        android:singleLine="true"
-                        android:text="@string/facebook"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-            </LinearLayout>
-
-            <!-- Dummy Horizontal 2 -->
-
-            <LinearLayout
-                android:id="@+id/dummy_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/dummy_1"
-                android:orientation="horizontal" >
-
-                <!-- Flickr -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_flickr"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickFlickr"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_flickr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_flickr_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_flickr"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_flickr"
-                        android:singleLine="true"
-                        android:text="@string/flickr"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-
-                <!-- Photobucket -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_photobucket"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickPhotobucket"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_photobucket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_photobucket_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_photobucket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_photobucket"
-                        android:singleLine="true"
-                        android:text="@string/photobucket"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-
-                <!-- Dropbox -->
-
-                <RelativeLayout
-                    android:id="@+id/layout_dropbox"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/bg_selector_blue"
-                    android:clickable="true"
-                    android:onClick="onClickDropbox"
-                    android:padding="5dip" >
-
-                    <ImageView
-                        android:id="@+id/imageview_dropbox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/icon_dropbox_60" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_dropbox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginLeft="5dip"
-                        android:layout_toRightOf="@+id/imageview_dropbox"
-                        android:singleLine="true"
-                        android:text="@string/dropbox"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small" />
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <!-- Picasa - we just need Android to generate layout_picasa id inside R.java -->
-
-    <View
-        android:id="@+id/layout_picasa"
-        android:layout_width="0px"
-        android:layout_height="0px"
-        android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/dummy_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
 
     <!-- Search -->
 
@@ -356,7 +150,7 @@
         android:id="@+id/relative_layout_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_social_networks"
+        android:layout_below="@+id/linearlayout_photosources"
         android:background="@drawable/bg_selector"
         android:padding="10dip"
         android:visibility="gone" >
@@ -410,9 +204,7 @@
         android:id="@+id/scrollview_select_photos_from"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/layout_social_networks"
-        android:layout_alignRight="@+id/layout_social_networks"
-        android:layout_below="@+id/layout_social_networks"
+        android:layout_below="@+id/linearlayout_photosources"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="20dip"
