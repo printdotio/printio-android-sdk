@@ -12,29 +12,21 @@
         android:background="@color/title_bar_background" >
 
         <LinearLayout
-            android:id="@+id/layout_menu_back"
+            android:id="@+id/layout_back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:padding="10dip"
+            android:visibility="gone" >
 
             <ImageView
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:src="@drawable/btn_back"
-                android:visibility="gone" />
-
-            <ImageView
-                android:id="@+id/imageview_menu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:src="@drawable/btn_menu"
-                android:visibility="gone" />
+                android:src="@drawable/icon_arrow_back_2" />
 
             <ImageView
                 android:id="@+id/imageview_top_left_logo"
@@ -43,9 +35,19 @@
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/imageview_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/layout_menu_back"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/layout_back_button"
+            android:padding="10dip"
+            android:src="@drawable/btn_menu"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageview_menu"
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 

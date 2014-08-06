@@ -14,7 +14,7 @@
         android:background="@color/title_bar_background" >
 
         <LinearLayout
-            android:id="@+id/layout_menu_back"
+            android:id="@+id/layout_back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -39,7 +39,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/layout_menu_back"
+            android:layout_toRightOf="@+id/layout_back_button"
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 

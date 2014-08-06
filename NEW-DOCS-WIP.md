@@ -361,6 +361,14 @@ enum PhotoSource {
 Up to 6 photo sources are supported.  
 &nbsp;  
 &nbsp;  
+#### > Set default photo source.  
+
+Set photo source that will be selected by default.
+```java
+PIO.setDefaultPhotoSource(PhotoSource defaultPhotoSource);
+```
+&nbsp;  
+&nbsp;  
 #### > Pass in images URLs or UIImage objects.  
 ( > Pass in images URLs)  
 

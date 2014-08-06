@@ -435,7 +435,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="number_prints_info_pt2">If you choose fewer then %1$s images we will duplicate prints to fill your order.</string>
     <string name="max_image_count_exceed">uses maximum %1$s images.</string>
     <string name="max_image_count_exceed_thickprints">of this size only allow %1$s per set.</string>
-    <string name="max_image_count_exceed_thickprints_photo_select">You have selected maximum photos for this product.</string>
+    <string name="max_image_count_exceed_thickprints_photo_select">You have selected the maximum number of photos for this product.</string>
     <string name="description">Description</string>
     <string name="step_1_thick_prints"><b>Step 1:</b> Choose Size &amp; Set</string>
     <string name="step_1_acrylic_prints"><b>Step 1:</b> Choose Size</string>
