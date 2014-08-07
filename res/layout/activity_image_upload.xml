@@ -184,7 +184,7 @@
     <!-- Grid View -->
 
     <print.io.view.GridViewAnim
-        android:id="@+id/gridview_product"
+        android:id="@+id/gridview_photos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/relative_layout_search"

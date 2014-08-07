@@ -195,34 +195,16 @@
             android:textSize="@dimen/text_size_large"
             android:visibility="gone" />
 
-        <LinearLayout
-            android:id="@+id/textview_all_products"
+        <ImageView
+            android:id="@+id/imageview_toggle_featured_all_products"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:clickable="true"
-            android:gravity="center_vertical"
-            android:onClick="onClickViewAllProducts"
-            android:orientation="horizontal"
-            android:padding="10dip" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/btn_all_products_selector" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="1dip"
-                android:layout_marginLeft="4dip"
-                android:gravity="center"
-                android:text="@string/all"
-                android:textColor="@drawable/text_selector_green"
-                android:textSize="@dimen/text_size_large"
-                android:visibility="gone" />
-        </LinearLayout>
+            android:onClick="onClickToggleFeaturedAllProducts"
+            android:padding="10dip"
+            android:src="@drawable/icon_show_all_products" />
 
         <ImageView
             android:id="@+id/imageview_close"
@@ -256,34 +238,22 @@
         android:dividerHeight="5dip"
         android:listSelector="#00000000"
         android:padding="5dip"
-        android:scrollbars="none" >
-    </ListView>
+        android:scrollbars="none" />
 
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_view_all_products"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/btn_view_all_products"
-        android:clickable="true"
-        android:drawableLeft="@drawable/icon_cube_small"
-        android:onClick="onClickViewAllProducts"
-        android:paddingBottom="11dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="11dip"
-        android:text="@string/view_all_products"
-        android:textColor="#ffffff"
-        android:textSize="@dimen/text_size_normal"
-        android:visibility="gone" />
-
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        layout="@layout/overlay_buttons"
-        android:visibility="gone" />
+    <GridView
+        android:id="@+id/gridview_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/separator_1"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:horizontalSpacing="3dip"
+        android:listSelector="#00000000"
+        android:numColumns="2"
+        android:padding="5dip"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="5dip" />
 
     <!-- Help -->
 

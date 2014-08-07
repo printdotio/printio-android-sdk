@@ -137,7 +137,7 @@
         android:layout_margin="2dip"
         android:background="@drawable/btn_gray"
         android:clickable="true"
-        android:onClick="onClickFeatureProducts"
+        android:onClick="onClickFeaturedProducts"
         android:padding="7dip"
         android:text="@string/side_menu_featured_products"
         android:textColor="#ffffff"

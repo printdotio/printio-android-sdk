@@ -733,7 +733,7 @@ Steps
 Instead of opening Featured Products screen, go directly to specified product.
 ```java
 /**
- * @param productIdFromApp - ID of a product to jump to
+ * @param productIdFromApp - ID of a product to jump to (Default value is -1)
  */
 PIO.setProductIdFromApp(int productIdFromApp);
 ```

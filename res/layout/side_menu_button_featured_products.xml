@@ -4,7 +4,7 @@
     android:layout_height="60dip"
     android:background="@drawable/bg_selector"
     android:clickable="true"
-    android:onClick="onClickSpecialOffers"
+    android:onClick="onClickFeaturedProducts"
     android:orientation="horizontal" >
 
     <ImageView
