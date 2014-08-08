@@ -22,6 +22,7 @@
     <color name="side_menu_text">#FFFFFF</color>
     <color name="side_menu_options_subtitle_text">#FFFFFF</color>
     <color name="side_menu_options">#239EDB</color>
+    <color name="side_menu_change_currency_text">#FFFFFF</color>
     <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
     <color name="side_menu_accounts">#1CBA9B</color>
     <color name="side_menu_info_subtitle_text">#FFFFFF</color>

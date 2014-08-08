@@ -77,7 +77,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_edit_text_search"
             android:hint="@string/currency_search"
-            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:inputType="textNoSuggestions|textVisiblePassword"
             android:paddingLeft="10dip"
             android:paddingRight="30dip"
             android:textSize="@dimen/text_size_normal" />

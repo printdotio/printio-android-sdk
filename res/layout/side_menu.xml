@@ -110,7 +110,7 @@
                     android:textColor="@color/side_menu_options_subtitle_text"
                     android:textSize="@dimen/text_size_normal" />
 
-                <!-- Chart and Photos -->
+                <!-- Options -->
 
                 <View
                     android:layout_width="match_parent"
@@ -145,7 +145,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dip"
                             android:gravity="center"
-                            android:textColor="#ffffff"
+                            android:textColor="@color/side_menu_change_currency_text"
                             android:textSize="@dimen/text_size_huge" />
 
                         <print.io.view.TextViewFontLight
@@ -192,7 +192,7 @@
                             android:layout_marginLeft="22dp"
                             android:layout_marginRight="22dp"
                             android:layout_marginTop="5dp"
-                            android:src="@drawable/icon_country" />
+                            android:src="@drawable/icon_change_country" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_country"
@@ -235,7 +235,7 @@
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
                             android:layout_margin="5dip"
-                            android:src="@drawable/icon_language" />
+                            android:src="@drawable/icon_change_language" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_language"

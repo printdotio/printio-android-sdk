@@ -163,8 +163,8 @@ Recommended dimensions are listed next to the icon name.
 icon_exit_sdk.png (17x30)
 icon_products.png (52x52)
 icon_featured_products.png (52x52)
-icon_email (52x52)
-icon_help (17x26)
+icon_email.png (52x52)
+icon_help.png (17x26)
 icon_cart_white.png (45x42)
 ```
 &nbsp;  
@@ -214,6 +214,26 @@ To change the section title background color, modify the following item in
 `res/values/colors.xml`
 ```xml
 <color name="side_menu_options">#239EDB</color>
+```
+&nbsp;  
+To change the currency code color, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="side_menu_change_currency_text">#FFFFFF</color>
+```
+&nbsp;  
+To change the `Change Country` icon, replace the following icon
+with your own icon of same name.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_change_country.png (80x80)
+```
+&nbsp;  
+To change the `Change Language` icon, replace the following icon
+with your own icon of same name.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_change_language.png (80x80)
 ```
 &nbsp;  
 These methods control if the user is allowed to change the preset country, currency and language.  
@@ -553,8 +573,8 @@ whereas in Android, this method corresponds to choice between:
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
 ```
-icon_add_more_images_a (111x111) - default state
-icon_add_more_images_b (111x111) - pressed state
+icon_add_more_images_a.png (111x111) - default state
+icon_add_more_images_b.png (111x111) - pressed state
 ```
 &nbsp;  
 &nbsp;  
@@ -564,8 +584,8 @@ icon_add_more_images_b (111x111) - pressed state
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
 ```
-icon_help_circle_grey (50x50px) - default state
-icon_help_circle_grey_dark (50x50px) - pressed state
+icon_help_circle_grey.png (50x50px) - default state
+icon_help_circle_grey_dark.png (50x50px) - pressed state
 ```
 &nbsp;  
 &nbsp;  
@@ -644,7 +664,7 @@ Replace following icons with your own icons of same names.
 Recommended dimensions are listed next to the icon name.
 ```
 icon_cart_white.png (45x42)
-icon_cart_items_qty_background_side_menu (31x31) //Background for the badge that displays cart items count
+icon_cart_items_qty_background_side_menu.png (31x31) //Background for the badge that displays cart items count
 ```
 To change cart quantity text color, modify the following item in  
 `res/values/colors.xml`
@@ -1031,8 +1051,8 @@ Replace the following icon(s) with your own icon(s) of the same name(s).
 Recommended dimensions are listed next to the icon name.
 ```
 icon_details.png (40x40)
-icon_shipping_info (42x40)
-icon_quality_guarantee (40x40)
+icon_shipping_info.png (42x40)
+icon_quality_guarantee.png (40x40)
 ```
 To change labels' colors, modify the following items in  
 `res/values/colors.xml`
