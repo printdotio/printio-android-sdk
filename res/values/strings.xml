@@ -192,8 +192,8 @@
     <string name="with_zipper">With Zipper</string>
     <string name="thick_blocks_3_4">3/4 Inch Thick Blocks</string>
     <string name="thick_blocks_1">1 Inch Thick Blocks</string>
-    <string name="thick_blocks_3_4_not_usa">1.9 cm Thick Blocks</string>
-    <string name="thick_blocks_1_not_usa">2.5 cm Thick Blocks</string>
+    <string name="thick_blocks_3_4_metric">1.9 cm Thick Blocks</string>
+    <string name="thick_blocks_1_metric">2.5 cm Thick Blocks</string>
     <string name="without_zipper">Without Zipper</string>
     <string name="step_1_tablet"><![CDATA[<b>Step 1:</b>]]> Choose Tablet Type</string> <!-- translate -->
     <string name="step_2"> <b>Step 2:</b> Choose Photo Layout/Design</string> <!-- translate -->
@@ -440,7 +440,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="step_1_thick_prints"><b>Step 1:</b> Choose Size &amp; Set</string>
     <string name="step_1_acrylic_prints"><b>Step 1:</b> Choose Size</string>
     <string name="squares">Squares</string>
-    <string name="usuals">Rectangles</string>
+    <string name="rectangles">Rectangles</string>
     <string name="delete_item_shoping_cart">Delete this item from\nMy Shopping Cart?</string>
     <string name="delete_address">Delete this address?</string>
     <string name="delete">Delete</string>
@@ -604,5 +604,7 @@ each field, simply touch the Place Order button.</string>
     <string name="metal_magnet_title">Metal Magnet</string>
     <string name="canvas_title">Canvas</string>
     <string name="payment_finalized">Payment is being finalized.\nPlease hold for confirmation.\nYou are going to love your products!</string>
+
+    <string name="empty_content_description"></string>
 
 </resources>

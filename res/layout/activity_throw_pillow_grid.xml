@@ -92,28 +92,24 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
-        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/view_dummy_title_separator"
+        android:clipToPadding="false"
         android:fillViewport="true"
+        android:paddingBottom="10dip"
         android:scrollbars="none" >
 
         <LinearLayout
             android:id="@+id/linearLayoutMainScroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="10dp" >
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
         </LinearLayout>
     </ScrollView>
-
-    <include
-        android:id="@+id/overlay_buttons_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        layout="@layout/overlay_buttons" />
 
     <!-- Help -->
 

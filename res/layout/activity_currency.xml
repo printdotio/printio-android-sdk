@@ -128,8 +128,7 @@
         android:background="#ffffff"
         android:cacheColorHint="#00000000"
         android:divider="#22000000"
-        android:dividerHeight="1px" >
-    </ListView>
+        android:dividerHeight="1px" />
 
     <!-- Please try again dialog -->
 

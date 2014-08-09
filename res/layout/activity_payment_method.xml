@@ -469,7 +469,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#efeff2"
-                            android:padding="7dip" >
+                            android:padding="10dip" >
 
                             <print.io.view.TextViewFontLight
                                 android:id="@+id/textview_secured_by"

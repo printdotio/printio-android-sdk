@@ -86,10 +86,9 @@
             android:id="@+id/textview_step_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="2dip"
-            android:layout_marginTop="2dip"
             android:gravity="center"
-            android:padding="7dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
             android:text="@string/step_1_prints"
             android:textColor="#333333"
             android:textSize="@dimen/text_size_large" />
@@ -128,10 +127,9 @@
             android:id="@+id/textview_step_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dip"
             android:gravity="center"
-            android:padding="7dip"
-            android:paddingBottom="3dp"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
             android:text="@string/step_2_prints"
             android:textColor="#333333"
             android:textSize="@dimen/text_size_large"
@@ -143,28 +141,6 @@
             android:id="@+id/listview_choose_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
-        <!--
-        <HorizontalScrollView
-            android:id="@+id/layout_choose_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dip"
-            android:layout_marginRight="2dip"
-            android:layout_weight="1.0"
-            android:fillViewport="true"
-            android:scrollbars="none" >
-
-            <LinearLayout
-                android:id="@+id/linearlayout_choose_size"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip" />
-        </HorizontalScrollView>
-        -->
     </LinearLayout>
 
     <!-- Help -->

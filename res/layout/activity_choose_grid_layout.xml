@@ -51,18 +51,23 @@
             android:textSize="@dimen/text_size_title" />
 
         <ImageView
-            android:id="@+id/imageview_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/textview_price"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickHelp"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/icon_question_big"
+            android:gravity="center_horizontal"
+            android:paddingLeft="5dip"
+            android:paddingRight="10dip"
+            android:textColor="@color/title_bar_text"
+            android:textSize="@dimen/text_size_title"
             android:visibility="gone" />
     </RelativeLayout>
 
@@ -73,100 +78,58 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
-    <LinearLayout
+    <!-- Step 2 -->
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_step_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/imageview_couch"
         android:layout_below="@+id/view_dummy_title_separator"
-        android:orientation="vertical" >
+        android:gravity="center"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_large" />
 
-        <!-- Step 1 -->
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_step_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="2dip"
-            android:layout_marginTop="2dip"
-            android:gravity="center"
-            android:padding="7dip"
-            android:textColor="#333333"
-            android:textSize="@dimen/text_size_large" />
-
-        <!-- Horizontal Scroll View, Step 2 -->
-
-        <HorizontalScrollView
-            android:id="@+id/layout_choose_shape"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dip"
-            android:scrollbars="none" >
-
-            <LinearLayout
-                android:id="@+id/linearlayout_choose_shape"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal"
-                android:paddingLeft="4dip"
-                android:paddingRight="4dip" />
-        </HorizontalScrollView>
-
-        <View
-            android:id="@+id/view_dummy_1"
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:layout_marginTop="5dip"
-            android:background="@color/step_separator" />
-
-        <!-- Step 2 -->
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_step_2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dip"
-            android:gravity="center"
-            android:padding="7dip"
-            android:paddingBottom="3dp"
-            android:text="@string/step_2_canvas_wraps"
-            android:textColor="#333333"
-            android:textSize="@dimen/text_size_large"
-            android:visibility="gone" />
-
-        <!-- Horizontal Scroll View, Step 2 -->
-
-        <HorizontalScrollView
-            android:id="@+id/layout_choose_size"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="2dip"
-            android:layout_marginRight="2dip"
-            android:layout_weight="1.0"
-            android:fillViewport="true"
-            android:scrollbars="none" >
-
-            <LinearLayout
-                android:id="@+id/linearlayout_choose_size"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip" />
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <!-- Image Couch -->
-
-    <ImageView
-        android:id="@+id/imageview_couch"
+    <View
+        android:id="@+id/view_dummy_3"
         android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/textview_step_2"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#d6d6d6"
+        android:visibility="invisible" />
+
+    <!-- Grid View, Photo Layout/Designe -->
+
+    <GridView
+        android:id="@+id/gridview_phone_case"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/view_dummy_3"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:background="#00000000"
+        android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
+        android:horizontalSpacing="1dip"
+        android:layoutAnimation="@anim/layout_grid_fade"
+        android:listSelector="@drawable/bg_blue"
+        android:numColumns="4"
+        android:paddingBottom="10dip"
+        android:paddingTop="6dip"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dip"
+        android:visibility="visible" />
+
+    <include
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/img_couch" />
+        layout="@layout/overlay_buttons" />
 
     <!-- Help -->
 

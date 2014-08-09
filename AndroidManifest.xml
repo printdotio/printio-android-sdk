@@ -131,9 +131,6 @@
             android:name="print.io.ActivityPaymentMethod"
             android:screenOrientation="portrait" />
         <activity
-            android:name="print.io.ActivityCheckout"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="print.io.ActivityChooseShippingAddress"
             android:screenOrientation="portrait" />
         <activity

@@ -76,7 +76,6 @@
             android:layout_toRightOf="@+id/imageview_shopping_cart"
             android:paddingLeft="10dip"
             android:paddingRight="10dip"
-            android:text=""
             android:textColor="#323232"
             android:textSize="@dimen/text_size_normal" />
 
@@ -88,7 +87,6 @@
             android:layout_toRightOf="@+id/imageview_shopping_cart"
             android:paddingLeft="10dip"
             android:paddingRight="10dip"
-            android:text=""
             android:textColor="#323232"
             android:textSize="@dimen/text_size_small" />
 
@@ -116,7 +114,6 @@
                 android:id="@+id/textview_shopping_cart_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textColor="#323232"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
@@ -160,8 +157,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_quantity"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/icon_quantity" />
         </LinearLayout>
 
         <LinearLayout
@@ -191,7 +188,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:singleLine="true"
-                android:text=""
                 android:textColor="#323232"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
@@ -221,7 +217,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:singleLine="true"
-                android:text=""
                 android:textColor="#323232"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>

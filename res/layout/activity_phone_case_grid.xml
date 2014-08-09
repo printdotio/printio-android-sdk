@@ -66,7 +66,7 @@
             android:gravity="center_horizontal"
             android:paddingLeft="5dip"
             android:paddingRight="10dip"
-            android:textColor="#ffffff"
+            android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
 
         <ImageView
@@ -99,10 +99,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
-        android:layout_marginBottom="2dip"
-        android:layout_marginTop="2dip"
         android:gravity="center"
-        android:padding="7dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
         android:text="@string/step_1_phone"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_large" />
@@ -121,22 +120,21 @@
 
     <HorizontalScrollView
         android:id="@+id/layout_photos"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_1"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dip"
-        android:layout_marginLeft="2dip"
-        android:layout_marginRight="2dip"
-        android:layout_marginTop="0dip"
+        android:clipToPadding="false"
+        android:paddingLeft="4dip"
+        android:paddingRight="4dip"
         android:scrollbars="none" >
 
         <LinearLayout
             android:id="@+id/linearlayout_photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip" />
+            android:orientation="horizontal" />
     </HorizontalScrollView>
 
     <View
@@ -155,10 +153,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_2"
-        android:layout_marginBottom="2dip"
-        android:layout_marginTop="2dip"
         android:gravity="center"
-        android:padding="7dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
         android:text="@string/step_2"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_large"
@@ -185,11 +182,13 @@
         android:layout_marginRight="10dip"
         android:background="#00000000"
         android:cacheColorHint="#00000000"
+        android:clipToPadding="false"
         android:horizontalSpacing="1dip"
         android:layoutAnimation="@anim/layout_grid_fade"
         android:listSelector="@drawable/bg_blue"
         android:numColumns="4"
-        android:paddingTop="5dip"
+        android:paddingBottom="10dip"
+        android:paddingTop="6dip"
         android:scrollbars="none"
         android:stretchMode="columnWidth"
         android:verticalSpacing="20dip"

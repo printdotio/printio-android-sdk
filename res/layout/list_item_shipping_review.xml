@@ -18,12 +18,11 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textview_name"
         android:background="#efeff2"
-        android:padding="7dip" >
+        android:padding="10dip" >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
             android:background="#ffffff"
             android:paddingBottom="15dp"
             android:paddingLeft="10dp"

@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/layout_case_item"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginLeft="13dip"
-        android:layout_marginRight="13dip"
+        android:layout_marginLeft="12dip"
+        android:layout_marginRight="12dip"
         android:orientation="vertical"
-        android:paddingBottom="7dip"
-        android:paddingTop="7dip" >
+        android:paddingBottom="5dip"
+        android:paddingTop="2dip" >
 
         <ImageView
-            android:id="@+id/imageview_phone_case"
+            android:id="@+id/imageview_shape"
             android:layout_width="wrap_content"
-            android:layout_height="70dip"
+            android:layout_height="50dip"
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter" />
+            android:adjustViewBounds="true" />
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/textview_phone_type"
+            android:id="@+id/textview_shape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:clickable="true"
             android:gravity="center"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:textColor="#5e5e5e"
+            android:textColor="#333333"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 

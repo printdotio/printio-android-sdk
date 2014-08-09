@@ -76,75 +76,6 @@
         android:dividerHeight="1px"
         android:scrollbars="none" />
 
-    <!-- Order Summary -->
-
-    <RelativeLayout
-        android:id="@+id/layout_order_summary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/layout_total_price"
-        android:layout_marginLeft="3dip"
-        android:layout_marginRight="3dip"
-        android:layout_marginTop="3dip"
-        android:background="#ffffff"
-        android:padding="7dip"
-        android:visibility="gone" >
-
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_order_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="5dip"
-            android:paddingTop="5dip"
-            android:text="@string/order_summary"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_order_summary"
-            android:background="#ededed"
-            android:padding="7dip" >
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_sub_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sub_total"
-                android:textColor="#323232"
-                android:textSize="@dimen/text_size_normal" />
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_tax"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textview_sub_total"
-                android:layout_marginTop="5dip"
-                android:text="@string/tax"
-                android:textColor="#323232"
-                android:textSize="@dimen/text_size_normal" />
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_sub_total_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:textColor="#323232"
-                android:textSize="@dimen/text_size_normal" />
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_free"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textview_sub_total_price"
-                android:layout_marginTop="5dip"
-                android:textColor="#323232"
-                android:textSize="@dimen/text_size_normal" />
-        </RelativeLayout>
-    </RelativeLayout>
-
     <!-- Total Price -->
 
     <RelativeLayout
@@ -424,15 +355,6 @@
             </LinearLayout>
         </RelativeLayout>
     </RelativeLayout>
-
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="2dip"
-        android:layout_marginLeft="2dip"
-        layout="@layout/overlay_buttons"
-        android:visibility="gone" />
 
     <!-- Coming Soon -->
 

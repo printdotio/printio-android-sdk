@@ -51,23 +51,19 @@
             android:textSize="@dimen/text_size_title" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/textview_price"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_price"
+            android:id="@+id/imageview_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:gravity="center_horizontal"
-            android:paddingLeft="5dip"
-            android:paddingRight="10dip"
-            android:textColor="@color/title_bar_text"
-            android:textSize="@dimen/text_size_title" />
+            android:clickable="true"
+            android:onClick="onClickHelp"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:src="@drawable/icon_question_big"
+            android:visibility="gone" />
     </RelativeLayout>
 
     <View
@@ -77,110 +73,98 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
+    <!-- Image Couch - Bottom, background -->
+
+    <ImageView
+        android:id="@+id/imageview_couch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/img_couch" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/view_dummy_title_separator"
         android:fillViewport="true" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
 
-            <!-- Step 2 -->
+            <!-- Step 1 Title -->
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_step_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_large" />
+
+            <!-- Step 1 Contents -->
+
+            <HorizontalScrollView
+                android:id="@+id/layout_choose_shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:clipToPadding="false"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_choose_shape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/step_separator" />
+
+            <!-- Step 2 Title -->
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_step_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="2dip"
-                android:layout_marginTop="2dip"
                 android:gravity="center"
-                android:padding="7dip"
-                android:text=""
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/step_2_canvas_wraps"
                 android:textColor="#333333"
-                android:textSize="@dimen/text_size_large" />
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
 
-            <View
-                android:id="@+id/view_dummy_3"
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_below="@+id/textview_step_2"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:background="@color/step_separator"
-                android:visibility="visible" />
+            <!-- Step 2 Contents -->
 
             <HorizontalScrollView
-                android:id="@+id/layout_choose_shape_1"
-                android:layout_width="match_parent"
+                android:id="@+id/layout_choose_size"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_dummy_3"
-                android:layout_marginBottom="10dip"
-                android:layout_marginTop="10dip"
-                android:fillViewport="true"
+                android:clipToPadding="false"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip"
                 android:scrollbars="none" >
 
                 <LinearLayout
-                    android:id="@+id/linearlayout_choose_shape_1"
+                    android:id="@+id/linearlayout_choose_size"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip" />
+                    android:orientation="horizontal" />
             </HorizontalScrollView>
-            <!-- Grid View, Photo Layout/Designe -->
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_step_3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_choose_shape_1"
-                android:layout_marginBottom="2dip"
-                android:layout_marginTop="2dip"
-                android:gravity="center"
-                android:padding="7dip"
-                android:text=""
-                android:textColor="#333333"
-                android:textSize="@dimen/text_size_large" />
-
-            <View
-                android:id="@+id/view_dummy_4"
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_below="@+id/textview_step_3"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:background="@color/step_separator"
-                android:visibility="visible" />
-
-            <HorizontalScrollView
-                android:id="@+id/layout_choose_shape_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/view_dummy_4"
-                android:layout_marginBottom="10dip"
-                android:layout_marginTop="10dip"
-                android:fillViewport="true"
-                android:scrollbars="none" >
-
-                <LinearLayout
-                    android:id="@+id/linearlayout_choose_shape_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip" />
-            </HorizontalScrollView>
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
-
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        layout="@layout/overlay_buttons" />
-
     <!-- Help -->
 
     <include

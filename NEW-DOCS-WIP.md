@@ -184,6 +184,18 @@ To obtain this data, use the following code snippet:
 ArrayList<String> cartItems = getIntent().getStringArrayListExtra("ShoppingCartItems");
 ```
 &nbsp;  
+#### > Pass promo coupon code to SDK  
+
+Pass a promo coupon code which will be shown to user in `Shopping Cart` screen.  
+The user can choose to apply the coupon to get discounts or promotions.  
+
+Once products in shopping cart are purchased, coupon code is cleared.  
+
+To set promo coupon code, use the following method:
+```java
+PIO.setPromoCode(String promoCode);
+```
+&nbsp;
 #### > Set support email address  
 
 To set support email address, use the following method:
@@ -310,6 +322,18 @@ enum SideMenuButton {
 or, to use the default buttons, call
 ```java
 PIO.setDefaultSideMenuInfoButtons();
+```
+&nbsp;  
+To modify buttons' icons, replace the corresponding icon with your own.
+Recommended dimensions are listed next to the icon name.
+```
+icon_side_menu_pricing_chart.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_share_this_app.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_like_us_on_facebook.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_rate_our_app.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_about.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_how_it_works.png (baseline-mdpi:26x26; xhdpi:52x52)
+icon_side_menu_past_orders.png (baseline-mdpi:26x26; xhdpi:52x52)
 ```
 &nbsp;  
 &nbsp;  

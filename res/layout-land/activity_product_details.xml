@@ -5,23 +5,22 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
-   
     <android.support.v4.view.ViewPager
         android:id="@+id/pager_fullScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-      	android:visibility="visible"
-        ></android.support.v4.view.ViewPager>
+        android:visibility="visible" >
+    </android.support.v4.view.ViewPager>
 
-  <!-- Indicators -->
+    <!-- Indicators -->
 
-                <LinearLayout
-                    android:id="@+id/layout_indicators"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-                </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_indicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
 </RelativeLayout>

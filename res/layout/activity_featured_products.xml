@@ -147,7 +147,7 @@
             android:src="@drawable/btn_search_categories" />
 
         <RelativeLayout
-            android:id="@+id/text_view_categories"
+            android:id="@+id/relativelayout_product_categories_filter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -158,7 +158,7 @@
             android:padding="10dip" >
 
             <TextView
-                android:id="@+id/dummy55"
+                android:id="@+id/textview_product_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -174,9 +174,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/dummy55"
+                android:layout_alignBottom="@+id/textview_product_categories"
                 android:layout_marginLeft="2dip"
-                android:layout_toRightOf="@+id/dummy55"
+                android:layout_toRightOf="@+id/textview_product_categories"
                 android:src="@drawable/btn_categories_selector" />
         </RelativeLayout>
 

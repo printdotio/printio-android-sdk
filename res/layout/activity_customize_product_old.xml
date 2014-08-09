@@ -166,11 +166,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/product_options"
-                android:layout_marginBottom="3dip"
-                android:layout_marginLeft="3dip"
-                android:layout_marginRight="3dip"
                 android:background="#ffffff"
-                android:padding="7dip" >
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip" >
 
                 <print.io.view.TextViewFontNormal
                     android:id="@+id/imageview_crop_image"

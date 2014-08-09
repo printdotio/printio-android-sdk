@@ -12,7 +12,7 @@
         android:clickable="true"
         android:minHeight="45dp"
         android:minWidth="45dp"
-        android:onClick="onClickHelp" > <!-- btn_question_mark -->
+        android:onClick="onClickHelp" >
 
         <ImageView
             android:layout_width="wrap_content"

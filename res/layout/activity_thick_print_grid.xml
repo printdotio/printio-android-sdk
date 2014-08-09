@@ -67,21 +67,6 @@
             android:paddingRight="10dip"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:id="@+id/imageview_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickHelp"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/icon_question_big"
-            android:visibility="gone" />
     </RelativeLayout>
 
     <View
@@ -104,122 +89,117 @@
 
             <!-- Step 1 -->
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_step_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginBottom="2dip"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:padding="7dip"
-                    android:text="@string/step_1_acrylic_prints"
-                    android:textColor="#333333"
-                    android:textSize="@dimen/text_size_large" />
-
-                <View
-                    android:id="@+id/view_dummy_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:layout_below="@+id/textview_step_1"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginRight="10dip"
-                    android:layout_marginTop="2dip"
-                    android:background="@color/step_separator" />
-
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_zipper"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/view_dummy_1"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="2dip"
-                    android:background="@color/green"
-                    android:gravity="center"
-                    android:paddingLeft="20dip"
-                    android:paddingRight="20dip"
-                    android:text="@string/thick_blocks_3_4"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textview_zipper"
-                    android:layout_marginBottom="25dip"
-                    android:scrollbars="none" >
-
-                    <LinearLayout
-                        android:id="@+id/linear_layout_first_scroll"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:paddingLeft="3dip"
-                        android:paddingRight="3dip" >
-                    </LinearLayout>
-                </HorizontalScrollView>
-            </RelativeLayout>
-
-            <RelativeLayout
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_step_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dip" >
+                android:gravity="center"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:text="@string/step_1_thick_prints"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_large" />
+
+            <!-- Section 1 -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout_section_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
 
                 <View
-                    android:id="@+id/view_dummy_2"
                     android:layout_width="match_parent"
                     android:layout_height="1px"
-                    android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dip"
                     android:layout_marginRight="10dip"
-                    android:layout_marginTop="5dip"
                     android:background="@color/step_separator" />
 
                 <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_zipper1"
+                    android:id="@+id/textview_squares"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/view_dummy_2"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginBottom="2dip"
+                    android:layout_marginBottom="6dip"
                     android:background="@color/green"
                     android:gravity="center"
+                    android:minWidth="160dip"
+                    android:paddingBottom="4dip"
                     android:paddingLeft="20dip"
                     android:paddingRight="20dip"
-                    android:text="@string/thick_blocks_1"
-                    android:textColor="#FFFFFF"
+                    android:paddingTop="4dip"
+                    android:text="@string/squares"
+                    android:textColor="#ffffff"
                     android:textSize="@dimen/text_size_normal" />
 
                 <HorizontalScrollView
-                    android:id="@+id/horizontalScrollView2"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textview_zipper1"
-                    android:layout_marginBottom="10dip"
+                    android:clipToPadding="false"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="4dip"
                     android:scrollbars="none" >
 
                     <LinearLayout
-                        android:id="@+id/linear_layout_second_scroll"
+                        android:id="@+id/linearlayout_choose_size_set_squares"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:orientation="horizontal"
-                        android:paddingLeft="10dip"
-                        android:paddingRight="10dip" >
-                    </LinearLayout>
+                        android:orientation="horizontal" />
                 </HorizontalScrollView>
-            </RelativeLayout>
+            </LinearLayout>
+
+            <!-- Rectangles -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout_section_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:background="@color/step_separator" />
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_rectangles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dip"
+                    android:background="@color/green"
+                    android:gravity="center"
+                    android:minWidth="160dip"
+                    android:paddingBottom="4dip"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:paddingTop="4dip"
+                    android:text="@string/rectangles"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="4dip"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_choose_size_set_rectangles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <include
-        android:id="@+id/overlay_buttons_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -232,15 +212,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Please try again dialog -->
-
-    <include
-        android:id="@+id/dialog_please_try_again"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
     <!-- Coming Soon -->

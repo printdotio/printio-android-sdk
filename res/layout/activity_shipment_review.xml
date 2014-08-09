@@ -118,7 +118,6 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
-        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_order_total"
@@ -142,7 +141,7 @@
                     android:id="@+id/first_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="7dip" >
+                    android:padding="10dip" >
 
                     <RelativeLayout
                         android:id="@+id/first_layout"
@@ -437,13 +436,6 @@
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dip"
-        android:layout_marginLeft="2dip"
-        layout="@layout/overlay_buttons"
-        android:visibility="gone" />
     <!-- Help -->
 
     <include
