@@ -174,11 +174,6 @@ Please add following activities to your AndroidManifest.xml file:
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.paypal.android.MEP.PayPalActivity"
-            android:configChanges="keyboardHidden|orientation"
-            android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-        <activity
             android:name="print.io.ActivityAbout"
             android:screenOrientation="portrait" />
         <activity

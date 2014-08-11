@@ -844,18 +844,11 @@ PayPal Settings
 #### > Set PayPal's client ids, for both modes, staging and production. Default values are client ids from PrintIO.  
 ( > Set up PayPal credentials)  
 
-Our SDK is using the legacy PayPal MPL library for Android.  
-(https://developer.paypal.com/webapps/developer/docs/classic/mobile/gs_MPL/)  
+PrintIO SDK is currently using PayPal Android SDK version 1.2.1  
 
-PayPal APP_ID is the id of the PayPal application.  
-You can manage your applications here:  
+PayPal CLIENT_ID can be obtained here  
 https://developer.paypal.com/webapps/developer/applications/myapps  
-PayPal APP_ID should look like this: "APP-XXXXXXXXXXXXXXXXX"  
-
-PayPal CLIENT_ID is the public key for your app.  
-You can find it in your app's credentials page.  
 ```java
-PIO.setPayPalAppId(String PAY_PAL_APP_ID);
 PIO.setPayPalClientId(String PAY_PAL_CLIENT_ID);
 ```
 **NOTICE:**  
@@ -863,27 +856,12 @@ If `PIO.setLiveApplication(...)` was set to `true`, PayPal **Live** environment 
 Otherwise, **Sandbox** environment is used.  
 &nbsp;  
 &nbsp;  
-#### > Define PayPal receiver email and set up fees  
+#### > Define PayPal receiver email  
 (Does not exist on iOS)  
 
 PayPal Receiver Email is your PayPal business account that will receive the payments from the app.  
-
-PayPal Fee Payer decides who pays the PayPal fees.  
-Default (and suggested) value is `FEEPAEYER_ACHRECEIVER`.  
-You can read more about it here:  
-https://developer.paypal.com/docs/classic/api/adaptive-payments/Pay_API_Operation/  
-(search the page for "feesPayer")  
 ```java
 PIO.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
-
-/**
- * @param PAY_PAL_FEE_PAYER  
- * Sets who pays any transaction fees.
- * Possible values:
- * FEEPAYER_SENDER, FEEPAYER_PRIMARYRECEIVER, FEEPAYER_EACHRECEIVER,
- * and FEEPAYER_SECONDARYONLY
- */
-PIO.setPayPalFeePayer(int PAY_PAL_FEE_PAYER);
 ```
 &nbsp;  
 &nbsp;  
