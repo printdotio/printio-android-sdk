@@ -31,7 +31,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_edit_text_search"
-                    android:inputType="text"
+                    android:inputType="textNoSuggestions|textVisiblePassword"
                     android:paddingLeft="10dip"
                     android:paddingRight="30dip"
                     android:textSize="@dimen/text_size_normal" />
@@ -70,8 +70,7 @@
             android:cacheColorHint="#00000000"
             android:divider="#00000000"
             android:dividerHeight="1dip"
-            android:listSelector="#000000" >
-        </ListView>
+            android:listSelector="#000000" />
     </RelativeLayout>
 
     <ScrollView

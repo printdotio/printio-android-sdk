@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/imageview_close"
+        android:layout_toLeftOf="@+id/button_delete"
         android:layout_toRightOf="@+id/imageview_shopping_cart" >
 
         <print.io.view.TextViewFontLight
@@ -96,7 +96,6 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="5dip"
             android:singleLine="true"
-            android:text="MiniBook"
             android:textColor="#595d66"
             android:textSize="@dimen/text_size_normal" />
 
@@ -105,13 +104,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_shopping_cart_item"
-            android:text="$12.00"
             android:textColor="#595d66"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
     <print.io.view.ButtonFontLight
-        android:id="@+id/imageview_close"
+        android:id="@+id/button_delete"
         android:layout_width="55dip"
         android:layout_height="25dip"
         android:layout_centerVertical="true"
@@ -121,7 +119,7 @@
         android:clickable="true"
         android:gravity="center"
         android:onClick="onClickDeleteItem"
-        android:text="Delete"
+        android:text="@string/delete"
         android:textColor="#ffffff"
         android:textSize="@dimen/text_size_small" />
 
@@ -172,20 +170,5 @@
             android:layout_height="wrap_content"
             android:src="@drawable/icon_quantity" />
     </LinearLayout>
-
-    <!-- <print.io.view.EditTextFontLight -->
-    <!-- android:id="@+id/edittext_quantity" -->
-    <!-- android:layout_width="wrap_content" -->
-    <!-- android:layout_height="wrap_content" -->
-    <!-- android:layout_alignParentRight="true" -->
-    <!-- android:layout_centerVertical="true" -->
-    <!-- android:layout_marginLeft="10dip" -->
-    <!-- android:layout_marginRight="10dip" -->
-    <!-- android:background="@drawable/bg_white_cube" -->
-    <!-- android:gravity="center" -->
-    <!-- android:inputType="number" -->
-    <!-- android:textColor="#595d66" -->
-    <!-- android:textColorHint="#595d66" -->
-    <!-- android:textSize="@dimen/text_size_normal" /> -->
 
 </RelativeLayout>

@@ -9,13 +9,13 @@
     android:visibility="visible" >
 
     <print.io.view.EditTextFontLight
-        android:id="@+id/edittext_search"
+        android:id="@+id/edittext_search_side_menu_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:background="@drawable/bg_edit_text_search"
         android:hint="@string/product_search"
-        android:inputType="text"
+        android:inputType="textNoSuggestions|textVisiblePassword"
         android:paddingLeft="10dip"
         android:paddingRight="30dip"
         android:textColor="#5c5f68"
@@ -23,7 +23,7 @@
         android:textSize="@dimen/text_size_normal" />
 
     <ImageView
-        android:id="@+id/imageview_clear"
+        android:id="@+id/imageview_clear_side_menu_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

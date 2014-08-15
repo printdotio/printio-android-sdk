@@ -107,7 +107,7 @@
     <LinearLayout
         android:id="@+id/layout_country_drop_down"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dip"
         android:layout_below="@+id/view_dummy_title_separator"
         android:background="@color/country_drop_down"
         android:clickable="true"
@@ -118,10 +118,8 @@
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_country_drop_down"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="wrap_content"
             android:drawablePadding="3dp"
-            android:drawableRight="@drawable/icon_caret_white"
-            android:gravity="center"
             android:textColor="#ffffff"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
