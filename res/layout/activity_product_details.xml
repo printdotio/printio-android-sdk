@@ -291,8 +291,7 @@
                 android:layout_below="@+id/view_1"
                 android:orientation="vertical"
                 android:paddingBottom="10dip"
-                android:paddingTop="10dip" >
-            </LinearLayout>
+                android:paddingTop="10dip" />
 
             <include
                 android:id="@+id/item_details"

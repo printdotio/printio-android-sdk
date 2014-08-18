@@ -130,6 +130,9 @@ Please add following activities to your AndroidManifest.xml file:
             android:name="print.io.ActivityStepsListView"
             android:screenOrientation="portrait" />
         <activity
+            android:name="print.io.ActivityStickerbooksType"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="print.io.ActivityShoppingCart"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />

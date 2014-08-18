@@ -44,7 +44,6 @@
     <string name="all">All</string>
     <string name="product_details">Product Details</string> <!-- translate -->
     <string name="choose">Choose</string> <!-- translate -->
-    <string name="introduction">The Tinybook needs little introduction. Is there any cuter way to show off your Pics than this ? The photo quality is Surprisingly great, and Tinybooks even Magnet together or to your fridge.</string>
     <string name="you_get">You get 1 tinybook with 10 images</string>
     <string name="text_star_1">Each book has 24 photos and you get 3 books with each order.</string>
     <string name="text_star_2">If you choose Instagram photos, you\'ll get 3 of the Same book, choose 72 images for 3 Unique books.</string>
@@ -381,6 +380,8 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="randomize">Randomize</string>
     <string name="text_tool">Text tool</string>
     <string name="text">Text</string>
+    <string name="single">Single</string>
+    <string name="double_">Double</string>
     <string name="shuffle">Shuffle</string>
     <string name="coming_soon">Coming soon</string>
     <string name="personalize_it">Personalize It</string>
@@ -439,6 +440,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="description">Description</string>
     <string name="step_1_thick_prints"><b>Step 1:</b> Choose Size &amp; Set</string>
     <string name="step_1_acrylic_prints"><b>Step 1:</b> Choose Size</string>
+    <string name="step_1_stickerbooks"><b>Step 1:</b> Choose Stickerbook Set</string>
     <string name="squares">Squares</string>
     <string name="rectangles">Rectangles</string>
     <string name="delete_item_shoping_cart">Delete this item from\nMy Shopping Cart?</string>
@@ -526,6 +528,7 @@ each field, simply touch the Place Order button.</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
     <string name="share">Share</string>
     <string name="cancel_deal">Cancel Deal</string>
+    <string name="you_can_add">You can add more images in Step 2</string>
 
     <!-- Help -->
     <string name="help_product_wood_prints_step_1_2">Let\'s get started and make a beautiful Wood Print! \n\nThis page takes 2 simple steps, then you automatically move to the next step and start customizing your Wood Print!\n\n1) Choose which Wood Print shape you want to use!\n\n2) Choose your Wood Print size. If you don\'t automatically see your Wood Print size, simply place your finger over the images and swipe it to the left until you see the Wood Print size of your choice.</string>

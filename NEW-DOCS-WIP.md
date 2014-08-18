@@ -1059,18 +1059,17 @@ icon_quality_guarantee.png (40x40)
 To change labels' colors, modify the following items in  
 `res/values/colors.xml`
 ```xml
+<!--Description-->
+<color name="product_details_header_1">#323232</color>
+
 <!--Details-->
-<color name="green">#42be9c</color>
-<!--Same color is currently being used for secondary buttons!-->
-<!--Needs fixing-->
+<color name="product_details_header_2">#42BE9C</color>
 
 <!--Shipping Info-->
-<color name="blue_light">#22a0dd</color>
-<!--Same color is currently being used for primary buttons!-->
-<!--Needs fixing-->
+<color name="product_details_header_3">#22A0DD</color>
 
 <!--Quality Guarantee-->
-<color name="purple">#646aa6</color>
+<color name="product_details_header_4">#646AA6</color>
 ```
 **DIFFERENCES BETWEEN iOS and Android:**  
 Icons cannot be changed on iOS.  

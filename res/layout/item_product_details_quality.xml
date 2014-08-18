@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/quality_guarantee"
-            android:textColor="@color/purple"
+            android:textColor="@color/product_details_header_4"
             android:textSize="@dimen/text_size_large" />
     </LinearLayout>
 
@@ -38,10 +38,10 @@
     <print.io.view.TextViewFontNormal
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.20"
         android:paddingBottom="10dip"
         android:paddingLeft="15dip"
         android:paddingRight="15dip"
-        android:lineSpacingMultiplier="1.20"
         android:paddingTop="10dip"
         android:text="@string/quality_guarantee_text"
         android:textColor="#323232"
