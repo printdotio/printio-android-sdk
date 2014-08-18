@@ -1071,9 +1071,6 @@ To change labels' colors, modify the following items in
 <!--Quality Guarantee-->
 <color name="product_details_header_4">#646AA6</color>
 ```
-**DIFFERENCES BETWEEN iOS and Android:**  
-Icons cannot be changed on iOS.  
-`Description` label color cannot be changed on Android.  
 &nbsp;  
 &nbsp;  
 #### > "Dialog Arrange Photos"  
