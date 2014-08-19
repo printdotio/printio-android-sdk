@@ -121,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dip"
-                    android:background="@color/green"
+                    android:background="@color/step_separator_header"
                     android:gravity="center"
                     android:minWidth="160dip"
                     android:paddingBottom="4dip"
@@ -132,18 +132,37 @@
                     android:textColor="#ffffff"
                     android:textSize="@dimen/text_size_normal" />
 
-                <ImageView
-                    android:id="@+id/imageview_stickerbooks_single"
+                <LinearLayout
+                    android:id="@+id/layout_stickerbooks_single"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/stickerbook_single" />
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dip"
+                    android:clickable="true"
+                    android:onClick="onClickStickerbooksSingle"
+                    android:orientation="vertical"
+                    android:paddingTop="15dp" >
 
-               
+                    <ImageView
+                        android:id="@+id/imageview_stickerbooks_single"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/stickerbook_single" />
+
+                    <print.io.view.TextViewFontBold
+                        android:id="@+id/stickerbooks_price_single"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
 
                 <print.io.view.TextViewFontLight
                     android:id="@+id/textview_you_can_add_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
                     android:drawablePadding="5dp"
                     android:drawableRight="@drawable/icon_arrow_right_grey"
                     android:text="@string/you_can_add"
@@ -172,7 +191,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="6dip"
-                    android:background="@color/green"
+                    android:background="@color/step_separator_header"
                     android:gravity="center"
                     android:minWidth="160dip"
                     android:paddingBottom="4dip"
@@ -183,17 +202,35 @@
                     android:textColor="#ffffff"
                     android:textSize="@dimen/text_size_normal" />
 
-                <ImageView
-                    android:id="@+id/imageview_stickerbooks_double"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/layout_stickerbooks_double"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    
-                    android:src="@drawable/stickerbook_double" />
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dip"
+                    android:clickable="true"
+                    android:onClick="onClickStickerbooksDouble"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp" >
 
-                
+                    <ImageView
+                        android:id="@+id/imageview_stickerbooks_double"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/stickerbook_double" />
+
+                    <print.io.view.TextViewFontBold
+                        android:id="@+id/stickerbooks_price_double"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
 
                 <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_you_can_add_1"
+                    android:id="@+id/textview_you_can_add_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawablePadding="5dp"

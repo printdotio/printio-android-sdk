@@ -109,6 +109,9 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
+            android:name="print.io.ActivityStickerbooksType"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="print.io.ActivityPhoneCaseGrid"
             android:screenOrientation="portrait" />
         <activity
@@ -128,9 +131,6 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait" />
         <activity
             android:name="print.io.ActivityStepsListView"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="print.io.ActivityStickerbooksType"
             android:screenOrientation="portrait" />
         <activity
             android:name="print.io.ActivityShoppingCart"

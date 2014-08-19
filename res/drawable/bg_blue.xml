@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@drawable/bg_border_phone_blue"></item>
-<!--     <item><color android:color="#478cd1" /> -->
-<!--     </item> -->
+    <item android:drawable="@drawable/bg_border_phone_blue"/>
 
 </selector>

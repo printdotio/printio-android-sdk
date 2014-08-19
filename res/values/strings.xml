@@ -208,7 +208,7 @@
     <string name="step_2_choose_background_border"><![CDATA[<b>Step 2:</b>]]> Choose Background/Border Color</string>
     <string name="step_3_choose_background_border"><![CDATA[<b>Step 3:</b>]]> Choose Background/Border Color</string>
     <string name="choose_options">Choose Options</string> <!-- translate -->
-    <string name="select_photos">Select Photos</string> <!-- translate -->
+    <string name="select_photos">Select Images</string> <!-- translate -->
     <string name="address_blank">Address 1 can\'t be blank.</string> <!-- translate -->
     <string name="proceed">Proceed</string> <!-- translate -->
     <string name="internet_connection_error">Error, please check your internet connection!</string> <!-- translate -->
@@ -432,6 +432,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="product_not_supported">Product is not currently supported. Please try something else.</string>
     <string name="number_photo_info"><b>%1$s use %2$s photos.</b></string>
     <string name="number_photo_info_pt2">If you choose less we will duplicate photos to fill the order.</string>
+    <string name="number_photo_info_stickerbooks">If you choose fewer then %1$s images we will duplicate stickers to fill your order.</string>
     <string name="number_prints_info"><b>You selected a %1$s-prints pack</b></string>
     <string name="number_prints_info_pt2">If you choose fewer then %1$s images we will duplicate prints to fill your order.</string>
     <string name="max_image_count_exceed">uses maximum %1$s images.</string>

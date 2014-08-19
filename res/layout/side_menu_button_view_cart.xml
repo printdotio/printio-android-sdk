@@ -5,7 +5,7 @@
     android:layout_height="60dip"
     android:background="@drawable/bg_selector"
     android:clickable="true"
-    android:onClick="onClickShoppingCart"
+    android:onClick="onClickShoppingCartSideMenuButton"
     android:orientation="horizontal" >
 
     <RelativeLayout
