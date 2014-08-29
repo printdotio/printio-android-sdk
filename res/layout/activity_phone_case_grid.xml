@@ -166,7 +166,7 @@
         android:background="#d6d6d6"
         android:visibility="invisible" />
 
-    <!-- Grid View, Photo Layout/Designe -->
+    <!-- Grid View, Photo Layout/Design -->
 
     <GridView
         android:id="@+id/gridview_phone_case"

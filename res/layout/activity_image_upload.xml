@@ -198,6 +198,14 @@
         android:verticalSpacing="16dip"
         android:visibility="visible" />
 
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_layout_search"
+        android:gravity="center"
+        android:visibility="gone" />
+
     <ScrollView
         android:id="@+id/scrollview_select_photos_from"
         android:layout_width="match_parent"
