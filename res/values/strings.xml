@@ -448,7 +448,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="stickerbooks">Stickerbooks</string>
     <string name="squares">Squares</string>
     <string name="rectangles">Rectangles</string>
-    <string name="delete_item_shoping_cart">Delete this item from\nMy Shopping Cart?</string>
+    <string name="delete_item_shopping_cart">Delete this item from\nMy Shopping Cart?</string>
     <string name="delete_address">Delete this address?</string>
     <string name="delete">Delete</string>
     <string name="remove_magnet_from_order">Do you want to remove this\nmagnet from your order?</string>

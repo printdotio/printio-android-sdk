@@ -1008,6 +1008,17 @@ PIO.setJumpToScreen(int screenId, int flags);
 ```
 **NOTICE:**  
 Screens and flags are defined in PublicConstants.java  
+```
+Screen IDs:
+SCREEN_SHOPPING_CART
+
+Flags:
+/*
+ * If set, back button takes user to Featured Products screen
+ * Else, the user is taken back to the host app
+ */
+FLAG_GO_BACK_TO_FEATURED_PRODUCTS
+```
 &nbsp;  
 &nbsp;  
 #### > Set url for Terms and Conditions  

@@ -241,7 +241,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:text="@string/delete_item_shoping_cart"
+                android:text="@string/delete_item_shopping_cart"
                 android:textColor="#5a5d66"
                 android:textSize="@dimen/text_size_large" />
 
