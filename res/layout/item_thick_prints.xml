@@ -9,8 +9,8 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="15dip"
+        android:layout_marginLeft="40dip"
+        android:layout_marginRight="40dip"
         android:gravity="center"
         android:paddingBottom="10dip"
         android:paddingTop="5dip" >
@@ -18,12 +18,11 @@
         <ImageView
             android:id="@+id/imageview_thick_print"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dip"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:adjustViewBounds="true"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip" />
+            android:scaleType="centerInside" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_size_inch"
