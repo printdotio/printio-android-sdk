@@ -5,7 +5,7 @@
     android:background="@drawable/bg_image_upload_selector"
     android:padding="1dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageViewSquare
         android:id="@+id/imageview_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

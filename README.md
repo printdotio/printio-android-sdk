@@ -330,9 +330,6 @@ PIO.setAutoArrange(boolean);
 //display product variants and options step by step
 PIO.setStepByStep(boolean);
 
-//SDK in fullscreen. Note if your application is already in fullscreen mode than this will be ignored.
-PIO.setHideStatusBar(boolean);
-
 // 1 - one duplicated photo, 4 - four different photos.
 PIO.setCoastersType(int);
 

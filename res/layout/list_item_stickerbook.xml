@@ -19,19 +19,17 @@
             android:layout_gravity="center"
             android:indeterminate="true" />
 
-        <print.io.view.ImageViewBookProducts
+        <print.io.imageloader.MyImageViewBookProduct
             android:id="@+id/imageview_stickerbook"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="fitXY" />
+            android:layout_gravity="center" />
 
-        <print.io.view.ImageViewBookProducts
+        <print.io.imageloader.MyImageViewBookProduct
             android:id="@+id/imageview_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="fitXY" />
+            android:layout_gravity="center" />
     </FrameLayout>
 
     <LinearLayout
@@ -56,7 +54,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dip"
             android:layout_marginRight="5dip"
-            android:text="Qty 1"
             android:textColor="#313743"
             android:textSize="@dimen/text_size_title" />
 

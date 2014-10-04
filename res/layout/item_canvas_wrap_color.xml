@@ -9,7 +9,7 @@
     android:paddingBottom="7dip"
     android:paddingTop="7dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_phone_case"
         android:layout_width="wrap_content"
         android:layout_height="70dip"

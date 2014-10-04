@@ -14,7 +14,7 @@
         android:paddingBottom="5dip"
         android:paddingTop="2dip" >
 
-        <ImageView
+        <print.io.imageloader.MyImageView
             android:id="@+id/imageview_shape"
             android:layout_width="wrap_content"
             android:layout_height="50dip"

@@ -5,7 +5,7 @@
     android:layout_gravity="center"
     android:orientation="vertical" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_phone_case"
         android:layout_width="70dip"
         android:layout_height="55dip"

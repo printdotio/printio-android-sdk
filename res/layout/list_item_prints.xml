@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_selector_swipeable" >
+    android:layout_height="48dip"
+    android:background="@drawable/bg_selector_swipeable"
+    android:paddingBottom="4dip"
+    android:paddingLeft="8dip"
+    android:paddingTop="4dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_print_size"
-        android:layout_width="75dp"
+        android:layout_width="72dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:adjustViewBounds="true"
-        android:background="@drawable/placeholder_flag"
-        android:scaleType="centerCrop"
-        android:layout_margin="5dp" />
+        android:adjustViewBounds="true" />
 
     <print.io.view.TextViewFontNormal
         android:id="@+id/textview_print_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_marginLeft="8dip"
         android:layout_toRightOf="@+id/imageview_print_size"
-        android:text="12x12 Print"
         android:textColor="@color/gray"
         android:textSize="@dimen/text_size_normal" />
 
@@ -28,11 +28,10 @@
         android:id="@+id/textview_print_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/imageview_arrow_forward"
         android:textColor="#000000"
-        android:textSize="@dimen/text_size_normal"
-        android:text="$21.50"
-        android:layout_centerVertical="true" />
+        android:textSize="@dimen/text_size_normal" />
 
     <ImageView
         android:id="@+id/imageview_arrow_forward"

@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
 
-    <ImageView
+    <print.io.imageloader.MyImageViewAspectRatio
         android:id="@+id/imageview_phone_case"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="60dip"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
-        android:adjustViewBounds="true"
-        android:background="@drawable/placeholder_image_upload"
-        android:scaleType="center" />
+        android:adjustViewBounds="true" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_phone_photos_count"

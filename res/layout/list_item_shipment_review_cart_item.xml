@@ -7,7 +7,7 @@
     android:gravity="center_vertical"
     android:padding="10dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_shopping_cart"
         android:layout_width="80dip"
         android:layout_height="80dip"

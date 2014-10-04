@@ -780,10 +780,15 @@ Instead of opening Featured Products screen, go directly to specified product.
  * @param productIdFromApp - ID of a product to jump to (Default value is -1)
  */
 PIO.setProductIdFromApp(int productIdFromApp);
+
+/**
+ * @param skipProductDetails - Use 'true' to skip ProductDetails screen and go directly to Step 1.
+ */
+PIO.setSkipProductDetails(boolean skipProductDetails);
 ```
 **NOTICE:**  
-PRODUCT_IDS constants are currently `private`,
-but will be made `public` in upcoming versions of the SDK.  
+Product IDs can be found in PublicConstants class.  
+Not all Product IDs are currently supported.  
 &nbsp;  
 &nbsp;  
 #### > Jumps directly to product with sku  

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">print.io</string>
+    <string name="app_name">printio</string>
     <string name="share_app_text">I\'m using PrintIO! You can download it from http://www.print.io/our-app</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
     <string name="upgrade_to_force_upgrade">PrintIO has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
@@ -18,8 +18,8 @@
     <string name="log_in_to_photobucket">Log In To Photobucket</string>
     <string name="photobucket_login">Photobucket Login</string>
     <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
-    <string name="photobucket_error_loading_albums">Cannot load Photobucket albums. Please try later.</string>
-    <string name="photobucket_error_loading_photos">Cannot load Photobucket photos. Please try later.</string>
+    <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
+    <string name="photobucket_error_loading_photos">Error loading Photobucket photos. Please try later.</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="success_login_instagram">Successfully logged in to Instagram</string>
@@ -38,8 +38,8 @@
     <string name="later">Later</string>
     <string name="exit">Exit</string>
     <string name="starting_at">Starting at %s</string>
-    <string name="metal_magnets_price">%s Each</string>
-    <string name="title_featured_products">Featured Products</string>
+    <string name="price_each">%s Each</string>
+    <string name="title_featured_products">Products</string>
     <string name="view_all_products">View All Products</string>
     <string name="all_products">All Products</string>
     <string name="all">All</string>
@@ -60,7 +60,7 @@
     <string name="dropbox">Dropbox</string>
     <string name="photobucket">Photobucket</string>
     <string name="customize_product">Customize Product</string>
-    <string name="customize_product_tooltip_text">Double click photo to edit</string>
+    <string name="customize_product_tooltip_text">Double-tap photo to edit</string>
     <string name="product_price">Product Price</string>
     <string name="select_your_options">Select Your Options</string>
     <string name="add_to_cart">Add To Cart</string>
@@ -107,7 +107,7 @@
     <string name="invalid_coupon">Coupon code is not valid!</string>
     <string name="enter_promo_code">Please enter promo code.</string>
     <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
-    <string name="coupon_applied">Coupon has been applied. You saved a </string>
+    <string name="coupon_applied">Coupon applied. You saved %1$s</string>
     <string name="coupon_savings">Savings:</string>
     <string name="ship_discount">Ship Discount</string>
     <string name="place_order">Place Order</string>
@@ -133,8 +133,9 @@
     <string name="case_type">Case Type</string>
     <string name="layout">Layout</string>
     <string name="back">Back</string>
-    <string name="back_side">Back Side</string>
     <string name="front_side">Front Side</string>
+    <string name="back_side">Back Side</string>
+    <string name="page_number">Page %1$s</string>
     <string name="canvas_wraps_help_text">Dotted line shows canvas sides</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -159,15 +160,17 @@
     <string name="empty_telephone_num">\'Telephone num\' should not be less then 10 digits</string>
     <string name="empty_name">\'Name\' should not be empty</string>
     <string name="empty_street">\'Street\' should not be empty</string>
+    <string name="error_some_items_were_removed_from_shopping_cart">Some items were removed from your shopping cart.</string>
+    <string name="error_getting_shopping_cart_items_prices">Error receiving shopping cart prices. Please try again later.</string>
     <string name="error_getting_country_list">Cannot download countries list</string>
-    <string name="error_uploading_product">Cannot upload product</string>
-    <string name="error_ordering_product">Error while ordering product.\nPlease go back to previous screen and ensure that you have entered all the necessary data</string>
+    <string name="error_uploading_product">Error uploading product photos. Please try again.</string>
+    <string name="error_ordering_product">Error while ordering.\nPlease go back to previous screen and ensure that you have entered all necessary data.</string>
     <string name="error_verifying_payment">Payment verification failed</string>
     <string name="error_getting_shipping_price">Error while calculating shipping price</string>
     <string name="success_verifying_payment">Order completed successfully</string>
     <string name="uploading_images">Uploading file %1$s of %2$s&#8230;\nPlease wait&#8230;</string>
     <string name="placing_order">Confirming Order Information&#8230;</string>
-    <string name="cancelled_pay_pal">Pay Pal payment cancelled</string>
+    <string name="cancelled_pay_pal">PayPal payment cancelled</string>
     <string name="cancel">Cancel</string>
     <string name="verifying_payment">Verifying payment&#8230;</string>
     <string name="find_shipping_method">Find Shipping Method</string>
@@ -178,7 +181,7 @@
     <string name="products">Products</string>
     <string name="help">Help</string>
     <string name="options">Options</string>
-    <string name="side_menu_featured_products">Featured Products</string>
+    <string name="side_menu_featured_products">Products</string>
     <string name="email_support">Email Support</string>
     <string name="change_currency">Change Currency</string>
     <string name="change_country">Change Country</string>
@@ -334,7 +337,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="manual_drag_drop">Manual\nDrag and Drop</string>
     <string name="price_starting_from">from</string>
     <string name="country_edit_text_warning_message">You choose to ship to this country\nchanging the country would\nchange the price and potentially\navailability of items in your cart</string>
-    <string name="double_tap">double-tap\nphoto\nto edit</string>
+    <string name="double_tap">Double-tap\nphoto\nto edit</string>
     <string name="change_language">Change Language</string>
     <string name="under_1">under %1$s</string>
     <string name="make_it">Make It</string>
@@ -418,7 +421,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="shipping_info_availability_text">This item ships internationally.</string>
     <string name="quality_guarantee">Quality Guarantee</string>
     <string name="price_chart">Price Chart is coming soon</string>
-    <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
+    <string name="quality_guarantee_text">Your memories are our top priority. We promise to deliver quality products that can be cherished for a lifetime. If you are unhappy for any reason contact us at customer support. We will replace the item at no cost for you.</string>
     <string name="product_dummy">Product</string>
     <string name="price">Price</string>
     <string name="image_not_ready_popup">Image is downloading please wait until download bar is complete</string>
@@ -521,10 +524,10 @@ each field, simply touch the Place Order button.</string>
     <string name="beach_bag_customize_info_text">(Front design is replicated on back)</string>
     <string name="drop_box_notification">%1$s allows you to store very large photos. Some large photos will cause an error in the app if you do not have a strong 4g or Wifi connection.</string>
     <string name="change_country_notification">Changing country will potentially change the price of items in shopping cart.</string>
-    <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you can not validate, please contact our support at: 877.731.PICS</string>
+    <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you can not validate, please contact our support.</string>
     <string name="try_again">Try again</string>
     <string name="ok">Ok</string>
-    <string name="shipping_price_error">We are sorry, but for there currently no shipping options for %1$s for inputted location.</string>
+    <string name="shipping_price_error">We are sorry, but there are currently no shipping options for %1$s in your location.</string>
     <string name="coaster_text">Choose Coaster Type</string>
     <string name="coaster_4_different">4 Different Coasters</string>
     <string name="coaster_1_duplicated">1 Coaster Duplicated</string>

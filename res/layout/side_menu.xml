@@ -180,7 +180,7 @@
                         android:clickable="true"
                         android:onClick="onClickChangeCountry" >
 
-                        <print.io.view.CustomSideMenuCountryImageView
+                        <print.io.imageloader.MyImageView
                             android:id="@+id/image_view_country"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

@@ -21,7 +21,7 @@
             android:background="@drawable/bg_white"
             android:padding="2dip" >
 
-            <ImageView
+            <print.io.imageloader.MyImageView
                 android:id="@+id/imageview_product"
                 android:layout_width="55dip"
                 android:layout_height="55dip"

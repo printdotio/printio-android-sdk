@@ -5,7 +5,7 @@
     android:layout_gravity="center"
     android:padding="4dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_canvas_wrap_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

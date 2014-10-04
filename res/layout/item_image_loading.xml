@@ -12,7 +12,7 @@
         android:background="#595d66"
         android:padding="1dip" >
 
-        <ImageView
+        <print.io.imageloader.MyImageView
             android:id="@+id/image"
             android:layout_width="55dip"
             android:layout_height="55dip"

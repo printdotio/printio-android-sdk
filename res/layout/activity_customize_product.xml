@@ -7,23 +7,110 @@
     android:focusable="false"
     android:focusableInTouchMode="true" >
 
+    <!-- Buttons Back and Next -->
+
     <RelativeLayout
-        android:id="@+id/relativelayout_customize_product"
+        android:id="@+id/relativelayout_top_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_back"
+            android:layout_width="70dip"
+            android:layout_height="34dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_blue_light"
+            android:clickable="true"
+            android:drawableLeft="@drawable/icon_arrow_left_white"
+            android:gravity="center"
+            android:onClick="onClickBack"
+            android:paddingLeft="6dip"
+            android:text="@string/back"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <RelativeLayout
+            android:id="@+id/layout_tooltip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="4dip"
+            android:layout_toLeftOf="@+id/textview_order"
+            android:layout_toRightOf="@+id/textview_back"
+            android:visibility="visible" >
+
+            <print.io.view.AutoResizeTextViewFontLight
+                android:id="@+id/textview_tooltip"
+                android:layout_width="match_parent"
+                android:layout_height="26dip"
+                android:background="@drawable/bg_tooltip"
+                android:ellipsize="none"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:singleLine="true"
+                android:text="@string/customize_product_tooltip_text"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_normal" />
+
+            <View
+                android:layout_width="20dip"
+                android:layout_height="24dip"
+                android:layout_below="@+id/textview_tooltip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/arrow_up"
+                android:rotation="180" />
+        </RelativeLayout>
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_order"
+            android:layout_width="70dip"
+            android:layout_height="34dip"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_green"
+            android:clickable="true"
+            android:drawableRight="@drawable/icon_arrow_right"
+            android:gravity="center"
+            android:onClick="onClickOrder"
+            android:paddingRight="6dip"
+            android:text="@string/buy_it"
+            android:textColor="@color/secondary_button_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_current_page"
+            android:layout_width="wrap_content"
+            android:layout_height="35dip"
+            android:layout_below="@+id/layout_tooltip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dip"
+            android:gravity="center"
+            android:paddingLeft="6dip"
+            android:paddingRight="6dip"
+            android:text="@string/front_side"
+            android:textColor="#333745"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_customize_product_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_photos"
-        android:layout_marginBottom="60dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="40dip"
-        android:background="#ffffff" >
+        android:layout_below="@+id/relativelayout_top_buttons"
+        android:layout_marginBottom="60dip" >
 
         <print.io.view.CustomizeProductView
             android:id="@+id/customize_product_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_marginTop="10dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
             android:adjustViewBounds="true" />
     </RelativeLayout>
 
@@ -114,192 +201,19 @@
         layout="@layout/help"
         android:visibility="gone" />
 
-    <!-- Buttons Back and Next -->
-
-	<RelativeLayout
-        android:id="@+id/layout_buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/title_bar_background"
-        android:visibility="gone" >
-
-        <ImageView
-            android:id="@+id/imageview_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickBack"
-            android:paddingLeft="10dp"
-            android:src="@drawable/icon_arrow_back_2" />
-
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_photos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:paddingRight="30dp"
-            android:textColor="@color/title_bar_text"
-            android:textSize="@dimen/text_size_large" />
-
-        <RelativeLayout
-            android:id="@+id/relativelayout_shopping_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/btn_blue_light_sharp"
-            android:clickable="true"
-            android:onClick="onClickOrder"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip" >
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_buy_it"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:textColor="@color/primary_button_text"
-                android:textSize="@dimen/text_size_normal" />
-
-            <ImageView
-                android:id="@+id/imageview_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/textview_buy_it"
-                android:paddingBottom="10dip"
-                android:paddingLeft="7dip"
-                android:paddingRight="7dip"
-                android:paddingTop="10dip"
-                android:src="@drawable/icon_cart_white"
-                android:visibility="gone" />
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_overlay_num_items"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imageview_cart"
-                android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
-                android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
-                android:background="@drawable/bg_cart_items_qty"
-                android:gravity="center"
-                android:textColor="@color/text_cart_items_quantity"
-                android:textSize="@dimen/text_size_cart_items_quantity"
-                android:visibility="gone" />
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_back"
-        android:layout_width="70dip"
-        android:layout_height="35dip"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="5dip"
-        android:layout_marginTop="5dip"
-        android:background="@drawable/btn_blue_light"
-        android:clickable="true"
-        android:drawableLeft="@drawable/icon_arrow_left_white"
-        android:drawablePadding="5dp"
-        android:gravity="center"
-        android:onClick="onClickBack"
-        android:paddingLeft="9dip"
-        android:paddingRight="6dip"
-        android:text="@string/back"
-        android:textColor="@color/primary_button_text"
-        android:textSize="@dimen/text_size_normal" />
-
-    <RelativeLayout
-        android:id="@+id/layout_tooltip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:layout_toLeftOf="@+id/textview_order"
-        android:layout_toRightOf="@+id/textview_back"
-        android:visibility="visible" >
-
-        <print.io.view.AutoResizeTextViewFontLight
-            android:id="@+id/textview_tooltip"
-            android:layout_width="match_parent"
-            android:layout_height="25dip"
-            android:background="@drawable/bg_tooltip"
-            android:ellipsize="none"
-            android:gravity="center"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:singleLine="true"
-            android:text="@string/customize_product_tooltip_text"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-
-        <View
-            android:layout_width="20dip"
-            android:layout_height="24dip"
-            android:layout_below="@+id/textview_tooltip"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/arrow_up"
-            android:rotation="180" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_tooltip"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/icon_pin_green"
-            android:visibility="gone" />
-    </RelativeLayout>
-
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_back_front_side"
-        android:layout_width="wrap_content"
-        android:layout_height="35dip"
-        android:layout_below="@+id/layout_tooltip"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="5dip"
-        android:gravity="center"
-        android:paddingLeft="6dip"
-        android:paddingRight="6dip"
-        android:text="@string/front_side"
-        android:textColor="#333745"
-        android:textSize="@dimen/text_size_normal"
-        android:visibility="gone" />
+    <!-- Info text below the product -->
 
     <print.io.view.AutoResizeTextView
         android:id="@+id/textview_info_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relativelayout_customize_product"
+        android:layout_below="@+id/container_customize_product_view"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-60dip"
         android:gravity="center"
         android:textColor="#c6c8cc"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
-
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_order"
-        android:layout_width="70dip"
-        android:layout_height="35dip"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="5dip"
-        android:layout_marginTop="5dip"
-        android:background="@drawable/btn_green"
-        android:clickable="true"
-        android:drawablePadding="3dp"
-        android:drawableRight="@drawable/icon_arrow_right"
-        android:gravity="center"
-        android:onClick="onClickOrder"
-        android:paddingLeft="4dip"
-        android:paddingRight="7dip"
-        android:text="@string/buy_it"
-        android:textColor="@color/secondary_button_text"
-        android:textSize="@dimen/text_size_normal" />
 
     <!-- Edit Tools -->
 

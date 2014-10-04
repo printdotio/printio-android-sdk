@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_product_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

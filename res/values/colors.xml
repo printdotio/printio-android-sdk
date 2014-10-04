@@ -15,8 +15,9 @@
     <color name="text_cart_items_quantity">#FFFFFF</color>
     <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
 
+    <color name="step_header_background">#42BE9C</color>
     <color name="step_separator">#000000</color>
-    <color name="step_separator_header">#898989</color>
+
     <color name="separator_color_1">#000000</color>
     <color name="separator_color_2">#343434</color>
     <color name="side_menu_background">#1D1D1D</color>
