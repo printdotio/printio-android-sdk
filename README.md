@@ -91,7 +91,8 @@ Please add following activities to your AndroidManifest.xml file:
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name="print.io.ActivityFeaturedProducts"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="print.io.ActivityAllProducts"
             android:screenOrientation="portrait" />
@@ -144,7 +145,8 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait" />
         <activity
             android:name="print.io.ActivityPaymentMethod"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="print.io.ActivityChooseShippingAddress"
             android:screenOrientation="portrait" />

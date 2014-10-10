@@ -54,6 +54,23 @@
     <color name="green_dark">#09866D</color>
     <color name="secondary_button_text">#FFFFFF</color>
 
+    <color name="edit_image_info_text_default">#22A0DD</color>
+    <color name="edit_image_info_text_pressed">#404040</color>
+
+    <color name="edit_image_rotate_text_default">#42BE9C</color>
+    <color name="edit_image_rotate_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_text_text_default">#D94217</color>
+    <color name="edit_image_text_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_effects_text_default">#646AA6</color>
+    <color name="edit_image_effects_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_info_background_highlight">#EFEFF2</color>
+    <color name="edit_image_rotate_background_highlight">#42BE9C</color>
+    <color name="edit_image_text_background_highlight">#D94217</color>
+    <color name="edit_image_effects_background_highlight">#646AA6</color>
+
     <color name="red_delete">#F31C24</color>
     <color name="red_discount">#F31C24</color>
     <color name="red_delete_pressed">#96F31C24</color>

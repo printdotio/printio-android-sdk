@@ -100,83 +100,91 @@
         android:layout_below="@+id/view_dummy_title_separator"
         android:scrollbars="none" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip" >
 
             <print.io.view.TextViewFontBold
                 android:id="@+id/textview_thanks"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_margin="30dip"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="30dip"
                 android:gravity="center"
                 android:text="@string/thanks"
                 android:textColor="#333333"
                 android:textSize="@dimen/text_size_large" />
 
             <View
-                android:id="@+id/view_1"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@+id/textview_thanks"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
                 android:background="#d8d8d8" />
 
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_order_number"
-                android:layout_width="wrap_content"
+            <!-- Order number -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_1"
-                android:layout_marginBottom="15dip"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:layout_marginTop="15dip"
-                android:gravity="left"
-                android:text="@string/order_number"
-                android:textColor="#333333"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="16dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_order_number_is"
+                    android:textColor="#595d66"
+                    android:textSize="@dimen/text_size_large" />
+
+                <print.io.view.TextViewFontBold
+                    android:id="@+id/textview_order_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dip"
+                android:text="@string/you_have_ordered_the_following_products"
+                android:textColor="#595d66"
                 android:textSize="@dimen/text_size_large" />
 
             <View
-                android:id="@+id/view_2"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@+id/textview_order_number"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
                 android:background="#d8d8d8" />
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/textview_shipment_review"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_2"
-                android:paddingBottom="5dip"
-                android:paddingLeft="10dip"
-                android:paddingTop="10dip"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="16dip"
                 android:text="@string/shipment_review"
                 android:textColor="#595d66"
                 android:textSize="@dimen/text_size_large" />
 
-            <!-- Shipment 1 of ... -->
+            <!-- Container for shipment items - Shipment 1 of ... -->
 
             <LinearLayout
                 android:id="@+id/shipment_review_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textview_shipment_review"
-                android:orientation="vertical" >
-            </LinearLayout>
+                android:orientation="vertical" />
 
             <!-- Ship to -->
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/text_view_ship_to"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/shipment_review_container"
-                android:paddingLeft="10dip"
+                android:layout_marginTop="16dip"
                 android:text="@string/ship_to"
                 android:textColor="#595d66"
                 android:textSize="@dimen/text_size_large" />
@@ -185,76 +193,88 @@
                 android:id="@+id/layout_included_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_view_ship_to"
-                android:layout_margin="10dip"
+                android:layout_marginBottom="8dip"
+                android:layout_marginTop="8dip"
                 layout="@layout/list_item_shipping_address" />
 
             <View
-                android:id="@+id/view_3"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@+id/layout_included_address"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
                 android:background="#d8d8d8" />
+
+            <!-- Coupon Savings -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout_container_coupon_savings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="8dip"
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/coupon_savings_long"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_large" />
+
+                <print.io.view.TextViewFontBold
+                    android:id="@+id/textview_coupon_savings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#ff0000"
+                    android:textSize="@dimen/text_size_large" />
+            </LinearLayout>
 
             <!-- Overall -->
 
-            <RelativeLayout
-                android:id="@+id/layout_overall"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_3"
-                android:paddingBottom="15dip"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:paddingTop="15dip" >
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip" >
 
                 <print.io.view.TextViewFontLight
-                    android:id="@+id/dummy_overall"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/textview_overall"
-                    android:paddingRight="10dip"
                     android:text="@string/overall"
                     android:textColor="#333333"
                     android:textSize="@dimen/text_size_large" />
 
                 <print.io.view.TextViewFontBold
                     android:id="@+id/textview_overall"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
+                    android:gravity="right"
                     android:textColor="#333333"
                     android:textSize="@dimen/text_size_large" />
-            </RelativeLayout>
+            </LinearLayout>
 
             <View
-                android:id="@+id/view_4"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@+id/layout_overall"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
                 android:background="#d8d8d8" />
 
             <LinearLayout
                 android:id="@+id/layout_continue_close"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_4"
                 android:gravity="right|center_vertical"
                 android:orientation="horizontal"
+                android:paddingBottom="8dip"
+                android:paddingTop="8dip"
                 android:weightSum="2" >
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_continue_shopping"
                     android:layout_width="0px"
-                    android:layout_height="35dip"
-                    android:layout_gravity="center_vertical"
-                    android:layout_margin="10dip"
+                    android:layout_height="32dip"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@drawable/btn_blue_light"
                     android:gravity="center"
@@ -263,14 +283,7 @@
                     android:textColor="@color/primary_button_text"
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
-
-            <View
-                android:id="@+id/view_5"
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_below="@+id/layout_continue_close"
-                android:background="#00000000" />
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 
     <!-- Help -->

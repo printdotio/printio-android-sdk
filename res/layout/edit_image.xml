@@ -21,19 +21,6 @@
     </LinearLayout>
 
     <print.io.view.TextViewFontLight
-        android:id="@+id/textview_info_above_touchimageview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/layout_back_save"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="25dip"
-        android:gravity="center"
-        android:text="@string/phone_and_tablet_info_text_image_manip"
-        android:textColor="#ffffff"
-        android:textSize="@dimen/text_size_normal"
-        android:visibility="gone" />
-
-    <print.io.view.TextViewFontLight
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/layout_buttons"
@@ -49,14 +36,15 @@
         android:id="@+id/layout_back_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
         android:orientation="horizontal"
-        android:weightSum="5"
-        android:layout_marginTop="7dp" >
+        android:weightSum="5" >
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_back"
             android:layout_width="0px"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
             android:layout_weight="2"
             android:background="@drawable/btn_blue_light_sharp"
             android:clickable="true"
@@ -66,17 +54,18 @@
             android:paddingTop="10dp"
             android:text="@string/cancel"
             android:textColor="@color/primary_button_text"
-            android:textSize="@dimen/text_size_normal"
-            android:layout_marginLeft="7dp" />
+            android:textSize="@dimen/text_size_normal" />
 
-        <View android:layout_width="0px"
+        <View
+            android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        
+            android:layout_weight="1" />
+
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_save"
             android:layout_width="0px"
             android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
             android:layout_weight="2"
             android:background="@drawable/btn_green_sharp"
             android:clickable="true"
@@ -86,8 +75,7 @@
             android:paddingTop="10dp"
             android:text="@string/save"
             android:textColor="@color/secondary_button_text"
-            android:textSize="@dimen/text_size_normal"
-            android:layout_marginRight="7dp" />
+            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <RelativeLayout
@@ -110,8 +98,8 @@
             android:clickable="true"
             android:onClick="onClickClose"
             android:paddingBottom="10dip"
-            android:paddingLeft="17dip"
-            android:paddingRight="17dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
             android:paddingTop="10dip"
             android:text="@string/close"
             android:textColor="@color/primary_button_text"
@@ -183,13 +171,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/edit_image_selector_info_background"
             android:clickable="true"
-            android:drawableTop="@drawable/icon_info_blue"
+            android:drawableTop="@drawable/edit_image_selector_info_image"
             android:gravity="center"
             android:paddingBottom="1dip"
             android:paddingTop="5dip"
             android:text="@string/tabbar_info"
-            android:textColor="@color/blue_light"
+            android:textColor="@drawable/edit_image_selector_info_text"
             android:textSize="@dimen/text_size_normal" />
 
         <View
@@ -226,14 +215,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:background="@drawable/edit_image_selector_abc_background"
+            android:background="@drawable/edit_image_selector_text_background"
             android:clickable="true"
-            android:drawableTop="@drawable/edit_image_selector_abc_image"
+            android:drawableTop="@drawable/edit_image_selector_text_image"
             android:gravity="center"
             android:paddingBottom="1dip"
             android:paddingTop="5dip"
             android:text="@string/tabbar_edit_text"
-            android:textColor="@drawable/edit_image_selector_abc_text"
+            android:textColor="@drawable/edit_image_selector_text_text"
             android:textSize="@dimen/text_size_normal" />
 
         <View

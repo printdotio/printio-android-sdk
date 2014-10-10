@@ -12,8 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="6dip"
         android:adjustViewBounds="true"
-        android:background="@drawable/placeholder_image_upload"
-        android:scaleType="centerCrop" />
+        android:scaleType="fitCenter" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_pillow_size"

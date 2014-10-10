@@ -136,7 +136,7 @@
                     android:id="@+id/first_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="10dip" >
+                    android:padding="8dip" >
 
                     <RelativeLayout
                         android:id="@+id/first_layout"
@@ -215,15 +215,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/first_container"
-                    android:paddingBottom="7dip" >
+                    android:padding="8dip" >
 
                     <RelativeLayout
                         android:id="@+id/first_layout1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:paddingLeft="7dip"
-                        android:paddingRight="7dip" >
+                        android:layout_marginBottom="4dp" >
 
                         <print.io.view.TextViewFontLight
                             android:layout_width="wrap_content"
@@ -247,15 +245,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/first_layout1"
-                        android:paddingLeft="7dip"
-                        android:paddingRight="7dip"
                         android:visibility="gone" >
 
                         <print.io.view.TextViewFontBold
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentLeft="true"
-                            android:text="@string/coupon_savings"
+                            android:text="@string/coupon_savings_long"
                             android:textColor="#595d66"
                             android:textSize="@dimen/text_size_normal" />
 
@@ -271,9 +267,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/layout_coupon_savings"
-                        android:paddingLeft="7dip"
-                        android:paddingRight="7dip" >
+                        android:layout_below="@+id/layout_coupon_savings" >
 
                         <print.io.view.TextViewFontBold
                             android:layout_width="wrap_content"

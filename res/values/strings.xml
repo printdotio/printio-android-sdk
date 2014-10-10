@@ -108,7 +108,8 @@
     <string name="enter_promo_code">Please enter promo code.</string>
     <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
     <string name="coupon_applied">Coupon applied. You saved %1$s</string>
-    <string name="coupon_savings">Savings:</string>
+    <string name="coupon_savings_short">Savings:</string>
+    <string name="coupon_savings_long">Coupon Savings:</string>
     <string name="ship_discount">Ship Discount</string>
     <string name="place_order">Place Order</string>
     <string name="enter_payment_info">Enter Payment Info</string>
@@ -136,6 +137,7 @@
     <string name="front_side">Front Side</string>
     <string name="back_side">Back Side</string>
     <string name="page_number">Page %1$s</string>
+    <string name="page_n_of_m">Page %1$s / %2$s</string>
     <string name="canvas_wraps_help_text">Dotted line shows canvas sides</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
@@ -192,7 +194,7 @@
     <string name="logout">Logout</string>
     <string name="login">Login</string>
     <string name="info">Info</string>
-    <string name="step_1_phone"> <![CDATA[<b>Step 1:</b>]]> Choose Phone Type</string>
+    <string name="step_1_phone"><![CDATA[<b>Step 1:</b>]]> Choose Phone Type</string>
     <string name="with_zipper">With Zipper</string>
     <string name="thick_blocks_3_4">3/4 Inch Thick Blocks</string>
     <string name="thick_blocks_1">1 Inch Thick Blocks</string>
@@ -200,7 +202,7 @@
     <string name="thick_blocks_1_metric">2.5 cm Thick Blocks</string>
     <string name="without_zipper">Without Zipper</string>
     <string name="step_1_tablet"><![CDATA[<b>Step 1:</b>]]> Choose Tablet Type</string>
-    <string name="step_2"> <b>Step 2:</b> Choose Photo Layout/Design</string>
+    <string name="step_2"><b>Step 2:</b> Choose Photo Layout/Design</string>
     <string name="step_1_design"><![CDATA[<b>Step 1:</b>]]> Choose Photo Layout/Design</string>
     <string name="step_1_flece_blanket"><![CDATA[<b>Step 1:</b>]]> Choose Blanket Size</string>
     <string name="step_1_throw_pillow"><![CDATA[<b>Step 1:</b>]]> Choose Pillow Type and Size</string>
@@ -353,7 +355,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="pay_with">Pay with</string>
     <string name="pay_with_card">Pay with Card</string>
     <string name="pinch_pan">Pinch to Zoom / Pan to Move</string>
-    <string name="phone_and_tablet_info_text_image_manip">Image should fill box - Because image wraps around side of case</string>
     <string name="zoom">Zoom</string>
     <string name="rotate">Rotate</string>
     <string name="move">Move</string>
@@ -462,11 +463,12 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="no">No</string>
     <string name="order_completed">Order Completed</string>
     <string name="thanks">Thank You for your purchase!</string>
-    <string name="order_number">Your order Number is %1$s \nYou have ordered the following products</string>
+    <string name="your_order_number_is">Your Order Number is</string>
+    <string name="you_have_ordered_the_following_products">You have ordered the following products</string>
     <string name="overall">Overall</string>
     <string name="continue_shopping">Continue Shopping</string>
     <string name="step_1_canvas_wraps"><![CDATA[<b>Step 1:</b>]]> Choose Canvas Shape</string>
-    <string name="step_1_prints"> <b>Step 1:</b> Choose Print Material</string>
+    <string name="step_1_prints"><b>Step 1:</b> Choose Print Material</string>
     <string name="step_1_acrylic_metal"><![CDATA[<b>Step 1:</b>]]> Choose Shape</string>
     <string name="step_1_framed_prints"><![CDATA[<b>Step 1:</b>]]> Choose Print Type</string>
     <string name="step_2_canvas_wraps"><b>Step 2:</b> Choose Size</string>
@@ -594,7 +596,6 @@ each field, simply touch the Place Order button.</string>
     <string name="help_select_photo_mousepad">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Mousepad, select Next button in the bottom right corner.</string>
     <string name="help_select_photo_coasters">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Coasters, select Next button in the bottom right corner</string>
     <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollar.\n</string>
-
     <string name="select_photos_title">Select Images</string>
     <string name="select_color_title">Select Color</string>
     <string name="woven_blanket_title">Woven Blanket</string>
@@ -615,7 +616,6 @@ each field, simply touch the Place Order button.</string>
     <string name="metal_magnet_title">Metal Magnet</string>
     <string name="canvas_title">Canvas</string>
     <string name="payment_finalized">Payment is being finalized.\nPlease hold for confirmation.\nYou are going to love your products!</string>
-
     <string name="empty_content_description"></string>
 
 </resources>

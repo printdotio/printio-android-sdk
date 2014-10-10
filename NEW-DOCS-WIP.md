@@ -647,6 +647,48 @@ By default, all buttons are visible.
 ```java
 PIO.setUpCropScreen(boolean isRotateAllowed, boolean isTextAllowed, boolean isEffectsAllowed);
 ```
+
+To modify icons, replace following icons with your own icons of same names.  
+Recommended dimensions for all icons:
+height: 26dp (26 pixels mdpi, 78 pixels xxhdpi)
+width: up to 52dp (52 pixels mdpi, 156 pixels xxhdpi)
+```
+icon_edit_image_info_default.png - default state
+icon_edit_image_info_pressed.png - pressed state
+icon_edit_image_rotate_default.png - default state
+icon_edit_image_rotate_pressed.png - pressed state
+icon_edit_image_text_default.png - default state
+icon_edit_image_text_pressed.png - pressed state
+icon_edit_image_effects_default.png - default state
+icon_edit_image_effects_pressed.png - pressed state
+```
+
+To change background highlight colors, modify following items in  
+`res/values/colors.xml`
+```xml
+<color name="edit_image_info_background_highlight">#EFEFF2</color>
+<color name="edit_image_rotate_background_highlight">#42BE9C</color>
+<color name="edit_image_text_background_highlight">#D94217</color>
+<color name="edit_image_effects_background_highlight">#646AA6</color>
+```
+
+To change text colors, modify following items in  
+`res/values/colors.xml`
+```xml
+<color name="edit_image_info_text_default">#22A0DD</color>
+<color name="edit_image_info_text_pressed">#404040</color>
+
+<color name="edit_image_rotate_text_default">#42BE9C</color>
+<color name="edit_image_rotate_text_pressed">#FFFFFF</color>
+
+<color name="edit_image_text_text_default">#D94217</color>
+<color name="edit_image_text_text_pressed">#FFFFFF</color>
+
+<color name="edit_image_effects_text_default">#646AA6</color>
+<color name="edit_image_effects_text_pressed">#FFFFFF</color>
+```
+&nbsp;  
+&nbsp;  
 **NOTICE:**  
 `Info` button is always visible.  
 Not all of those buttons' functions have been implemented yet.  

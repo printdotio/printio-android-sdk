@@ -271,6 +271,13 @@
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
 
+    <View
+        android:id="@+id/outside_drop_down_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="onClickOutsideDropDownMenu"
+        android:visibility="gone" />
+
     <LinearLayout
         android:id="@+id/drop_down_menu"
         android:layout_width="wrap_content"
@@ -282,8 +289,7 @@
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
-        android:visibility="gone" >
-    </LinearLayout>
+        android:visibility="gone" />
 
     <!-- Coming Soon -->
 
