@@ -37,20 +37,12 @@
             android:visibility="invisible" />
 
         <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_image_upload"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/shopping_cart"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageview_edit"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="gone" />
     </RelativeLayout>
 
     <View
@@ -79,23 +71,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:background="#d8d8d8"
-            android:visibility="gone" />
-
         <LinearLayout
-            android:id="@+id/layout_checkout"
+            android:id="@+id/layout_coupon"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentRight="true"
+            android:layout_height="48dip"
+            android:baselineAligned="false"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/layout_promo_code"
                 android:layout_width="0px"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:background="@color/promo_code_background"
@@ -127,18 +113,17 @@
             <LinearLayout
                 android:id="@+id/layout_subtotal"
                 android:layout_width="0px"
-                android:layout_height="50dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
                 <print.io.view.TextViewFontNormal
-                    android:id="@+id/textview_total_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:singleLine="true"
-                    android:text="@string/sub_total"
+                    android:text="@string/subtotal"
                     android:textColor="#323232"
                     android:textSize="@dimen/text_size_large" />
 
@@ -153,16 +138,27 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_coupon"
-                android:layout_width="0px"
-                android:layout_height="50dp"
+                android:id="@+id/layout_coupon_entry"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="2.5"
                 android:background="@color/promo_code_background"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:visibility="gone"
-                android:weightSum="4" >
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontNormal
+                    android:id="@+id/textview_cancel"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="onClickPromoCodeCancel"
+                    android:singleLine="true"
+                    android:text="@string/cancel"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/text_size_large" />
 
                 <print.io.view.EditTextFontLight
                     android:id="@+id/edittext_coupon"
@@ -170,7 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="5dp"
-                    android:layout_weight="2.8"
+                    android:layout_weight="7"
                     android:background="@drawable/bg_selector_featured_product"
                     android:gravity="left|center_vertical"
                     android:hint="@string/enter_code"
@@ -185,12 +181,10 @@
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_apply_coupon"
                     android:layout_width="0px"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
-                    android:layout_marginLeft="3dp"
-                    android:layout_marginRight="7dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_weight="1.2"
+                    android:layout_height="40dip"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="3"
                     android:background="@drawable/btn_blue_light"
                     android:gravity="center"
                     android:onClick="onClickApplyCoupon"
@@ -201,86 +195,19 @@
         </LinearLayout>
 
         <print.io.view.ButtonFontLight
-            android:id="@+id/button_shipping_method"
+            android:id="@+id/button_checkout"
             android:layout_width="match_parent"
-            android:layout_height="50dip"
-            android:layout_below="@+id/layout_checkout"
+            android:layout_height="48dip"
+            android:layout_below="@+id/layout_coupon"
             android:background="@drawable/btn_green"
             android:drawableRight="@drawable/icon_arrow_right"
             android:gravity="center"
-            android:onClick="onClickShippingMethod"
+            android:onClick="onClickCheckout"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/checkout"
             android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_large" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout_dialog"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#aa000000"
-        android:clickable="true"
-        android:visibility="gone" >
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_margin="14dip"
-            android:background="@drawable/bg_white"
-            android:paddingBottom="32dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="32dip" >
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_shipping_to"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="@string/delete_item_shopping_cart"
-                android:textColor="#5a5d66"
-                android:textSize="@dimen/text_size_large" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textview_shipping_to"
-                android:layout_margin="10dip"
-                android:orientation="horizontal" >
-
-                <print.io.view.ButtonFontLight
-                    android:id="@+id/button_no"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="9dip"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_blue_light"
-                    android:onClick="onClickNo"
-                    android:padding="14dip"
-                    android:text="@string/no"
-                    android:textColor="@color/primary_button_text"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold" />
-
-                <print.io.view.ButtonFontLight
-                    android:id="@+id/button_yes"
-                    android:layout_width="0dip"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="9dip"
-                    android:layout_weight="1"
-                    android:background="@drawable/btn_green"
-                    android:onClick="onClickYes"
-                    android:padding="14dip"
-                    android:text="@string/yes"
-                    android:textColor="@color/secondary_button_text"
-                    android:textSize="@dimen/text_size_large"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </RelativeLayout>
     </RelativeLayout>
 
     <RelativeLayout

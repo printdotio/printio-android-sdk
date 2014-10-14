@@ -113,7 +113,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/layout_sub_total"
+        android:layout_above="@+id/layout_subtotal"
         android:layout_below="@+id/view_dummy_title_separator"
         android:layout_margin="3dip"
         android:scrollbars="none" >
@@ -331,7 +331,6 @@
                         android:layout_marginRight="3dip"
                         android:layout_weight="1"
                         android:background="@color/bg_edit_text"
-                        android:hint="+49"
                         android:inputType="phone"
                         android:nextFocusDown="@+id/edittext_telephone_num"
                         android:padding="7dip"
@@ -464,218 +463,6 @@
                     android:textSize="@dimen/text_size_normal" />
             </RelativeLayout>
 
-            <!-- Find Shipping Method -->
-
-            <RelativeLayout
-                android:id="@+id/layout_find_shipping_method"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_fill_in"
-                android:layout_marginBottom="3dip"
-                android:layout_marginTop="5dip"
-                android:background="#ffffff"
-                android:padding="10dip"
-                android:visibility="gone" >
-
-                <print.io.view.TextViewFontNormal
-                    android:id="@+id/textview_find_shipping_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dip"
-                    android:text="@string/find_shipping_address"
-                    android:textColor="#323232"
-                    android:textSize="@dimen/text_size_normal"
-                    android:visibility="gone" />
-
-                <RelativeLayout
-                    android:id="@+id/layout_find"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textview_find_shipping_address"
-                    android:background="#efeff2"
-                    android:padding="10dip"
-                    android:visibility="gone" >
-
-                    <ImageView
-                        android:id="@+id/imageview_fedex"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="5dip"
-                        android:src="@drawable/icon_fedex"
-                        android:visibility="gone" />
-
-                    <print.io.view.TextViewFontNormal
-                        android:id="@+id/textview_credit_card"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/imageview_fedex"
-                        android:text="@string/fedex"
-                        android:textColor="#323232"
-                        android:textSize="@dimen/text_size_normal"
-                        android:visibility="gone" />
-
-                    <print.io.view.TextViewFontNormal
-                        android:id="@+id/textview_shipping_address"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/imageview_fedex"
-                        android:layout_marginTop="10dip"
-                        android:text="@string/shipping_address"
-                        android:textColor="#323232"
-                        android:textSize="@dimen/text_size_normal"
-                        android:visibility="gone" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_shipping_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/textview_shipping_address"
-                        android:layout_marginTop="10dip"
-                        android:visibility="gone" >
-
-                        <EditText
-                            android:id="@+id/edittext_shipping_first_name"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="3dip"
-                            android:layout_weight="1"
-                            android:background="#ffffff"
-                            android:hint="@string/first_name"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-
-                        <EditText
-                            android:id="@+id/edittext_shipping_last_name"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dip"
-                            android:layout_weight="1"
-                            android:background="#ffffff"
-                            android:hint="@string/last_name"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-                    </LinearLayout>
-
-                    <!-- Company -->
-
-                    <EditText
-                        android:id="@+id/edittext_company"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/layout_shipping_name"
-                        android:layout_marginTop="6dip"
-                        android:background="#ffffff"
-                        android:hint="@string/company"
-                        android:padding="7dip"
-                        android:singleLine="true"
-                        android:textColor="#b3b3b3"
-                        android:textColorHint="#b3b3b3"
-                        android:textSize="@dimen/text_size_normal"
-                        android:visibility="gone" />
-
-                    <!-- Zip Code -->
-
-                    <LinearLayout
-                        android:id="@+id/layout_zip"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/edittext_company"
-                        android:layout_marginTop="6dip"
-                        android:visibility="gone" >
-
-                        <EditText
-                            android:id="@+id/edittext_zip_code"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="3dip"
-                            android:layout_weight="1"
-                            android:background="#ffffff"
-                            android:hint="@string/zip_code"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-
-                        <EditText
-                            android:id="@+id/edittext_city"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dip"
-                            android:layout_weight="3"
-                            android:background="#ffffff"
-                            android:hint="@string/city"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-                    </LinearLayout>
-
-                    <!-- Address 1 -->
-
-                    <EditText
-                        android:id="@+id/edittext_address"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/layout_zip"
-                        android:layout_marginTop="6dip"
-                        android:background="#ffffff"
-                        android:hint="@string/address"
-                        android:padding="7dip"
-                        android:singleLine="true"
-                        android:textColor="#b3b3b3"
-                        android:textColorHint="#b3b3b3"
-                        android:textSize="@dimen/text_size_normal"
-                        android:visibility="gone" />
-
-                    <!-- Telephone -->
-
-                    <LinearLayout
-                        android:id="@+id/layout_telephone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/edittext_address"
-                        android:layout_marginTop="6dip"
-                        android:visibility="gone" >
-
-                        <EditText
-                            android:id="@+id/edittext_area_num"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="3dip"
-                            android:layout_weight="1"
-                            android:background="#ffffff"
-                            android:hint="+49"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-
-                        <EditText
-                            android:id="@+id/edittext_telephone_num"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dip"
-                            android:layout_weight="3"
-                            android:background="#ffffff"
-                            android:hint="@string/telephone_number"
-                            android:padding="7dip"
-                            android:singleLine="true"
-                            android:textColor="#b3b3b3"
-                            android:textColorHint="#b3b3b3"
-                            android:textSize="@dimen/text_size_normal" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </RelativeLayout>
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -712,7 +499,6 @@
                         android:layout_centerVertical="true"
                         android:layout_toLeftOf="@+id/button_shipping_method"
                         android:paddingRight="5dip"
-                        android:text="$15.00"
                         android:textColor="#323232"
                         android:textSize="@dimen/text_size_huge" />
 
@@ -735,58 +521,6 @@
             </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
-
-    <!-- Sub Total -->
-
-    <RelativeLayout
-        android:id="@+id/layout_sub_total"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="2dip"
-        android:background="#474747"
-        android:padding="7dip" >
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_total_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="@string/sub_total"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dip"
-            android:layout_toLeftOf="@+id/button_shipping_method"
-            android:layout_toRightOf="@+id/textview_total_price"
-            android:singleLine="true"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.ButtonFontLight
-            android:id="@+id/button_shipping_method"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="5dip"
-            android:background="@drawable/btn_blue_light"
-            android:onClick="onClickShippingMethod"
-            android:paddingBottom="13dip"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:paddingTop="13dip"
-            android:text="@string/checkout"
-            android:textColor="@color/primary_button_text"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="invisible" />
-    </RelativeLayout>
 
     <!-- Find Shipping Method -->
 

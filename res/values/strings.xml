@@ -72,7 +72,7 @@
     <string name="add_more_products">Add More Products</string>
     <string name="total_price">Total Price</string>
     <string name="order_summary">Order Summary</string>
-    <string name="sub_total">Subtotal</string>
+    <string name="subtotal">Subtotal</string>
     <string name="promo_code">Promo Code</string>
     <string name="tax">Tax</string>
     <string name="free">Free</string>
@@ -174,6 +174,7 @@
     <string name="placing_order">Confirming Order Information&#8230;</string>
     <string name="cancelled_pay_pal">PayPal payment cancelled</string>
     <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
     <string name="verifying_payment">Verifying payment&#8230;</string>
     <string name="find_shipping_method">Find Shipping Method</string>
     <string name="state">State</string>
@@ -269,7 +270,7 @@
     <string name="pick_from_contacts">Pick from Contacts</string>
     <string name="no_address_saved_for_contact">Sorry, there is no address saved for that contact!</string>
     <string name="country">Country</string>
-    <string name="business_residential">Is this address Business or Residental?</string>
+    <string name="business_residential">Is this address Business or Residential?</string>
     <string name="business">Business\nAddress</string>
     <string name="residential">Residential\nAddress</string>
     <string name="error_happened">There was an error, please try again.</string>
@@ -338,7 +339,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="random_auto_arrange">Auto Random\nArrange</string>
     <string name="manual_drag_drop">Manual\nDrag and Drop</string>
     <string name="price_starting_from">from</string>
-    <string name="country_edit_text_warning_message">You choose to ship to this country\nchanging the country would\nchange the price and potentially\navailability of items in your cart</string>
+    <string name="country_edit_text_warning_message">You chose to ship to this country\nchanging the country would\nchange the price and potentially\navailability of items in your cart</string>
     <string name="double_tap">Double-tap\nphoto\nto edit</string>
     <string name="change_language">Change Language</string>
     <string name="under_1">under %1$s</string>
