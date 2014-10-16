@@ -83,6 +83,13 @@
             android:visibility="gone" />
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/imageview_menu_right"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <ImageView
             android:id="@+id/imageview_menu_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

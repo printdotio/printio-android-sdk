@@ -37,7 +37,7 @@
             android:visibility="invisible" />
 
         <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_product_details"
+            android:id="@+id/textview_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -48,58 +48,11 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageview_search"
+            android:layout_toLeftOf="@+id/relativelayout_shopping_cart"
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <ImageView
-            android:id="@+id/imageview_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickSearch"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/btn_search"
-            android:visibility="gone" />
-
-        <RelativeLayout
-            android:layout_width="45dip"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:gravity="center"
-            android:onClick="onClickShoppingCart" >
-
-            <ImageView
-                android:id="@+id/imageview_cart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dip"
-                android:paddingLeft="7dip"
-                android:paddingRight="7dip"
-                android:paddingTop="10dip"
-                android:src="@drawable/icon_cart" />
-
-            <TextView
-                android:id="@+id/textview_overlay_num_items"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imageview_cart"
-                android:layout_alignRight="@+id/imageview_cart"
-                android:layout_marginBottom="@dimen/cart_items_quantity_bottom_offset"
-                android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
-                android:background="@drawable/bg_cart_items_qty"
-                android:gravity="center"
-                android:textColor="@color/text_cart_items_quantity"
-                android:textSize="@dimen/text_size_cart_items_quantity" />
-        </RelativeLayout>
+        <include layout="@layout/button_shopping_cart" />
     </RelativeLayout>
 
     <View
@@ -109,25 +62,17 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
-    <include
-        android:id="@+id/item_buy_it_header"
-        android:layout_width="match_parent"
-        android:layout_height="60dip"
-        android:layout_below="@+id/view_dummy_title_separator"
-        layout="@layout/item_product_details_buy_it"
-        android:visibility="gone" />
-
     <print.io.view.CustomScrollView
         android:id="@+id/scroll_view_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/view_bottom"
-        android:layout_below="@+id/item_buy_it_header"
+        android:layout_below="@+id/view_dummy_title_separator"
         android:scrollbars="none" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
             <RelativeLayout
                 android:id="@+id/layout_image"
@@ -135,67 +80,14 @@
                 android:layout_height="wrap_content" >
 
                 <android.support.v4.view.ViewPager
-                    android:id="@+id/productImagesPager"
+                    android:id="@+id/viewpager_product_images"
                     android:layout_width="match_parent"
-                    android:layout_height="302dip" >
-                </android.support.v4.view.ViewPager>
-
-                <ImageView
-                    android:id="@+id/imageview_card"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="20dip"
-                    android:paddingBottom="30dip"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip"
-                    android:paddingTop="10dip"
-                    android:src="@drawable/icon_card"
-                    android:visibility="gone" />
-
-                <RelativeLayout
-                    android:id="@+id/layout_transparent"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dip"
-                    android:layout_alignParentBottom="true"
-                    android:background="@color/transparent" >
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_product_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_toLeftOf="@+id/button_choose"
-                        android:paddingLeft="8dip"
-                        android:paddingRight="8dip"
-                        android:paddingTop="5dip"
-                        android:singleLine="true"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_large"
-                        android:textStyle="bold"
-                        android:visibility="invisible" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_starting_at"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_below="@+id/textview_product_name"
-                        android:layout_toLeftOf="@+id/button_choose"
-                        android:paddingBottom="5dip"
-                        android:paddingLeft="8dip"
-                        android:paddingRight="8dip"
-                        android:singleLine="true"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_small"
-                        android:visibility="invisible" />
-                </RelativeLayout>
+                    android:layout_height="302dip" />
 
                 <!-- Indicators -->
 
                 <LinearLayout
-                    android:id="@+id/layout_indicators"
+                    android:id="@+id/layout_images_dot_indicators"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -207,7 +99,6 @@
                 android:id="@+id/layout_shipping"
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
-                android:layout_below="@+id/layout_image"
                 android:background="@color/product_details_layout_shipping"
                 android:visibility="gone" >
 
@@ -265,30 +156,26 @@
                 </LinearLayout>
             </RelativeLayout>
 
-            <!-- Layout Buy It! -->
+            <!-- Create It container -->
 
             <include
-                android:id="@+id/item_buy_it"
+                android:id="@+id/container_create_it"
                 android:layout_width="match_parent"
                 android:layout_height="60dip"
-                android:layout_below="@+id/layout_shipping"
-                layout="@layout/item_product_details_buy_it_copy"
+                layout="@layout/item_product_details_buy_it"
                 android:visibility="visible" />
 
             <View
-                android:id="@+id/view_1"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
-                android:layout_below="@+id/item_buy_it"
                 android:background="#d8d8d8" />
 
             <!-- Layout Items -->
 
             <LinearLayout
-                android:id="@+id/layout_items"
+                android:id="@+id/container_product_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/view_1"
                 android:orientation="vertical"
                 android:paddingBottom="10dip"
                 android:paddingTop="10dip" />
@@ -297,7 +184,6 @@
                 android:id="@+id/item_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/layout_items"
                 android:layout_marginTop="5dip"
                 layout="@layout/item_product_details_details"
                 android:visibility="visible" />
@@ -306,7 +192,6 @@
                 android:id="@+id/item_shipping_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/item_details"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_shipping_info"
                 android:visibility="visible" />
@@ -315,7 +200,6 @@
                 android:id="@+id/item_quality_guarantee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/item_shipping_info"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_quality"
                 android:visibility="visible" />
@@ -324,12 +208,21 @@
                 android:id="@+id/item_price_chart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/item_quality_guarantee"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_price_chart"
                 android:visibility="gone" />
-        </RelativeLayout>
+        </LinearLayout>
     </print.io.view.CustomScrollView>
+
+    <!-- Sticky Create It container -->
+
+    <include
+        android:id="@+id/container_create_it_sticky"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_below="@+id/view_dummy_title_separator"
+        layout="@layout/item_product_details_buy_it"
+        android:visibility="gone" />
 
     <!-- Help -->
 
@@ -348,32 +241,6 @@
         android:layout_height="match_parent"
         layout="@layout/dialog_please_try_again"
         android:visibility="gone" />
-
-    <!-- ImageView Full Size -->
-
-    <ImageView
-        android:id="@+id/imageview_full_size"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:clickable="true"
-        android:onClick="onClickImgFullScreen"
-        android:scaleType="centerCrop"
-        android:visibility="gone" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager_fullScreen"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone" >
-    </android.support.v4.view.ViewPager>
-
-    <View
-        android:id="@+id/view_bottom"
-        android:layout_width="match_parent"
-        android:layout_height="1dip"
-        android:layout_alignParentBottom="true"
-        android:background="#00000000" />
 
     <!-- Coming Soon -->
 
