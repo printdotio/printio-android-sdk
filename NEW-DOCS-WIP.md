@@ -379,6 +379,14 @@ PIO.setHideCategorySearchBar(boolean hideCategorySearchBar);
 ```
 &nbsp;  
 &nbsp;  
+#### > Hide `Coming Soon` products  
+
+Default value is `false`.
+```java
+PIO.setHideComingSoonProducts(boolean hideComingSoonProducts);
+```
+&nbsp;  
+&nbsp;  
 Photo Sources
 --------------
 #### > Set available photo sources. The order of photo sources on screen will be the same like order they are placed in array.  
