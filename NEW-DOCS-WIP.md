@@ -484,8 +484,8 @@ To obtain Instagram `CLIENT_ID`, refer to documentation at http://instagram.com/
 ```java
 PIO.setInstagramClientId(String INSTAGRAM_CLIENT_ID);
 ```
-~~**NOTICE:**~~  
-~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-instagram`.~~
+**NOTICE:**  
+When creating Instagram Client, set `REDIRECT URI` to `http://x-oauthflow-instagram`.
 &nbsp;  
 &nbsp;  
 #### > Set Flickr credentials  
