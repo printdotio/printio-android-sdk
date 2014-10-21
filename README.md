@@ -94,9 +94,6 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="print.io.ActivityAllProducts"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="print.io.ActivityProductDetails"
             android:screenOrientation="portrait" />
         <activity

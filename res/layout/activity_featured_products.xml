@@ -63,28 +63,6 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageview_search"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
-        <ImageView
-            android:id="@+id/imageview_search"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickSearch"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:src="@drawable/btn_search"
-            android:visibility="gone" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/imageview_menu_right"
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
@@ -194,7 +172,7 @@
             android:layout_toRightOf="@+id/image_view_search_categories"
             android:background="#00000000"
             android:hint="@string/product_search"
-            android:inputType="text"
+            android:inputType="textNoSuggestions"
             android:singleLine="true"
             android:textColor="#222222"
             android:textSize="@dimen/text_size_large"

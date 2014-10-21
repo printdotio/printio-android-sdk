@@ -3,13 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <print.io.imageloader.MyImageView
+    <print.io.imageloader.MyImageViewAspectRatio
         android:id="@+id/imageview_product_details"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
-        android:scaleType="fitXY"
         android:src="@drawable/viewpager_place_holder" />
 
     <ProgressBar

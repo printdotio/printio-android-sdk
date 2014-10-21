@@ -160,23 +160,40 @@
                     android:textColor="#000000"
                     android:textSize="@dimen/text_size_large" />
 
-                <print.io.view.EditTextFontLight
-                    android:id="@+id/edittext_coupon"
+                <RelativeLayout
+                    android:id="@+id/container_edittext_coupon"
                     android:layout_width="0px"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
                     android:layout_margin="5dp"
                     android:layout_weight="7"
-                    android:background="@drawable/bg_selector_featured_product"
-                    android:gravity="left|center_vertical"
-                    android:hint="@string/enter_code"
-                    android:inputType="text"
-                    android:paddingBottom="9dp"
-                    android:paddingLeft="7dp"
-                    android:paddingRight="7dp"
-                    android:paddingTop="9dp"
-                    android:textColorHint="@color/gray"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:background="@drawable/bg_selector_featured_product" >
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_coupon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageview_close"
+                        android:background="@color/transparent"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/enter_code"
+                        android:inputType="textNoSuggestions"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:textColorHint="@color/gray"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <ImageView
+                        android:id="@+id/imageview_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:onClick="onClickRemoveCoupon"
+                        android:padding="10dip"
+                        android:src="@drawable/icon_x" />
+                </RelativeLayout>
 
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_apply_coupon"
