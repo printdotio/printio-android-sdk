@@ -133,7 +133,7 @@ Please add following activities to your AndroidManifest.xml file:
         <activity
             android:name="print.io.ActivityShoppingCart"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="stateHidden" />
+            android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name="print.io.ActivityShoppingMethods"
             android:screenOrientation="portrait" />
