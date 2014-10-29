@@ -272,7 +272,7 @@
                 <print.io.view.ButtonFontLight
                     android:id="@+id/button_continue_shopping"
                     android:layout_width="0px"
-                    android:layout_height="32dip"
+                    android:layout_height="40dip"
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:background="@drawable/btn_blue_light"

@@ -196,12 +196,10 @@
     <string name="login">Login</string>
     <string name="info">Info</string>
     <string name="step_1_phone"><![CDATA[<b>Step 1:</b>]]> Choose Phone Type</string>
-    <string name="with_zipper">With Zipper</string>
     <string name="thick_blocks_3_4">3/4 Inch Thick Blocks</string>
     <string name="thick_blocks_1">1 Inch Thick Blocks</string>
     <string name="thick_blocks_3_4_metric">1.9 cm Thick Blocks</string>
     <string name="thick_blocks_1_metric">2.5 cm Thick Blocks</string>
-    <string name="without_zipper">Without Zipper</string>
     <string name="step_1_tablet"><![CDATA[<b>Step 1:</b>]]> Choose Tablet Type</string>
     <string name="step_2"><b>Step 2:</b> Choose Photo Layout/Design</string>
     <string name="step_1_design"><![CDATA[<b>Step 1:</b>]]> Choose Photo Layout/Design</string>

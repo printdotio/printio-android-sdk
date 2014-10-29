@@ -15,15 +15,23 @@
         android:layout_height="wrap_content"
         android:background="@color/title_bar_background" >
 
-        <ImageView
-            android:id="@+id/imageview_back"
+        <LinearLayout
+            android:id="@+id/layout_back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:clickable="true"
+            android:gravity="center_vertical"
             android:onClick="onClickBack"
-            android:paddingLeft="10dp"
-            android:src="@drawable/icon_arrow_back_2" />
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <ImageView
+                android:id="@+id/imageview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_back_2" />
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/relativelayout_shopping_cart"

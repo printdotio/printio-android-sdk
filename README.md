@@ -269,44 +269,43 @@ This code should be added to your Application class' onCreate() method.
 PIOConstants class is not built in into the SDK.  
 You should create your PIOConstants class and store SDK related constants there. (RECIPE_ID, API_URL, etc...)
 ```xml
+///////////////////////////////
+// REQUIRED METHODS begin here:
+// MAKE SURE that you call all of them
+
 //initialize Parse push notifications
 PIO.setParseApplicationId(PIOConstants.Parse.APPLICATION_ID);
 PIO.setParseClientKey(PIOConstants.Parse.CLIENT_KEY);
-// MAKE SURE TO CALL THIS
 PIO.initializeParse(this);
 
-//set live or staging server, on staging you can test purchase process without using real money.
+//Tells the SDK which server to use (Live or Staging) server.
+//In Staging mode, you can test purchase process without using real money.
+//Note: Some other methods require this to be called first, so make sure to call it as early as possible.
 PIO.setLiveApplication(boolean);
-
-//do not show splash screen
-PIO.setSplashScreenEnabled(false);
-
-//hide Android status bar
-PIO.setHideStatusBar(true);
 
 //API KEY provided for every partner
 PIO.setRecipeID(PIOConstants.RECIPE_ID);
 
-// MAKE SURE TO CALL THIS
-// http://staging.api.print.io/api/
-PIO.setApiUrl(PIOConstants.API_URL);
+// PublicConstants.API_URL_STAGING or PublicConstants.API_URL_LIVE
+PIO.setApiUrl(...);
 
-//enable/disable application side menu.
+// REQUIRED METHODS end here
+////////////////////////////
+
+
+//Do not show splash screen
+PIO.setSplashScreenEnabled(false);
+
+//Set your company's name for payment screens.
+PIO.setPartnerName(String);
+
+//Hide Android status bar
+PIO.setHideStatusBar(false);
+
+//Enable/disable application side menu.
 PIO.setSideMenuEnabled(boolean);
 PIO.setDefaultSideMenuButtonsTop();
 PIO.setDefaultSideMenuInfoButtons();
-
-//array of urls or local path for images that will be preloaded into the application.
-PIO.setImagesUrls(String[]);
-
-//show passed image first with images from other sources
-PIO.setPassedImageFirstInPhotoSources(boolean);
-
-//set passed image as layout with 1 photo for some products
-PIO.setPassedImageThumb(boolean);
-
-//forbid user to use his own images and use those passed to sdk.
-PIO.setPhotosourcesDisabled(boolean);
 
 //preset the country. Country code is 2 letter code, e.g. "US".
 PIO.setCountryCode(String);
@@ -319,9 +318,6 @@ PIO.setHideCategorySearchBar(boolean);
 
 //set header bar color.
 PIO.setHeaderColor(int);
-
-//set the name for payment screens.
-PIO.setPartnerName(String);
 
 //preset the images always be auto arranged. User can customize product after.
 PIO.setAutoArrange(boolean);
@@ -360,6 +356,19 @@ photoSourcesTest.add(PhotoSource.FLICKR);
 photoSourcesTest.add(PhotoSource.INSTAGRAM);
 photoSourcesTest.add(PhotoSource.PHOTOBUCKET);
 PIO.setPhotoSources(photoSourcesTest);
+
+//Note: Following methods are not fully implemented yet
+//Array of urls or local path for images that will be preloaded into the application.
+PIO.setImagesUrls(String[]);
+
+//show passed image first with images from other sources
+PIO.setPassedImageFirstInPhotoSources(boolean);
+
+//set passed image as layout with 1 photo for some products
+PIO.setPassedImageThumb(boolean);
+
+//forbid user to use his own images and use those passed to sdk.
+PIO.setPhotosourcesDisabled(boolean);
 ```
 
 #See also
