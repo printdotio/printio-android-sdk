@@ -483,9 +483,8 @@ In order to use Instagram as a photo source, credentials are required.
 To obtain Instagram `CLIENT_ID`, refer to documentation at http://instagram.com/developer
 ```java
 PIO.setInstagramClientId(String INSTAGRAM_CLIENT_ID);
+PIO.setInstagramCallbackUri(String INSTAGRAM_CALLBACK_URI);
 ```
-**NOTICE:**  
-When creating Instagram Client, set `REDIRECT URI` to `http://x-oauthflow-instagram`.
 &nbsp;  
 &nbsp;  
 #### > Set Flickr credentials  
