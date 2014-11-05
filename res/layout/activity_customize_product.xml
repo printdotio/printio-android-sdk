@@ -7,24 +7,23 @@
     android:focusable="false"
     android:focusableInTouchMode="true" >
 
-    <!-- Buttons Back and Buy It -->
-
     <RelativeLayout
         android:id="@+id/layout_buttons"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/title_bar_height"
         android:background="@color/title_bar_background" >
 
         <LinearLayout
             android:id="@+id/layout_back_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:clickable="true"
             android:gravity="center_vertical"
             android:onClick="onClickBack"
             android:orientation="horizontal"
-            android:padding="10dip" >
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
 
             <ImageView
                 android:id="@+id/imageview_back"
@@ -36,7 +35,7 @@
         <RelativeLayout
             android:id="@+id/relativelayout_shopping_cart"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/btn_blue_light_sharp"

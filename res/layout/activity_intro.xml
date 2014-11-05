@@ -2,8 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    android:orientation="horizontal" >
+    android:background="#ffffff" >
 
     <ImageView
         android:id="@+id/imageview_splash_screen_logo"
@@ -12,6 +11,7 @@
         android:layout_gravity="center"
         android:src="@drawable/icon_splash_logo"
         android:visibility="invisible" />
+
     <!-- Please try again dialog -->
 
     <ImageView

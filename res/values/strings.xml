@@ -337,7 +337,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="random_auto_arrange">Auto Random\nArrange</string>
     <string name="manual_drag_drop">Manual\nDrag and Drop</string>
     <string name="price_starting_from">from</string>
-    <string name="country_edit_text_warning_message">You chose to ship to this country\nchanging the country would\nchange the price and potentially\navailability of items in your cart</string>
+    <string name="country_edit_text_warning_message">Warning! Changing the ship to country may change the product price and availability of the items in your cart. Are you sure you want to change the country?</string>
     <string name="double_tap">Double-tap\nphoto\nto edit</string>
     <string name="change_language">Change Language</string>
     <string name="under_1">under %1$s</string>

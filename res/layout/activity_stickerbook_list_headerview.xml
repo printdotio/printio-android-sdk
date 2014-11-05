@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="5dp"
-    android:paddingTop="45dp" >
+    android:paddingBottom="8dip"
+    android:paddingTop="8dip" >
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_quantity_cropping"

@@ -4,6 +4,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
+    <dimen name="title_bar_height">48dip</dimen>
+
     <dimen name="text_size_small">12dip</dimen>
     <dimen name="text_size_normal">14dip</dimen>
     <dimen name="text_size_large">18dip</dimen>
