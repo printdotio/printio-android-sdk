@@ -712,13 +712,13 @@ icon_cart_default.png (45x42)
 icon_cart_pressed.png (45x42)
 icon_cart_items_qty_background (31x31) //Background for the badge that displays cart items count
 ```
-Shopping cart quantity badge is bottom-right aligned with the shopping cart icon  
-and its position is controlled by bottom and right margins.  
+Shopping cart quantity badge is top-right aligned with the shopping cart icon  
+and its position is controlled by top and right margins.  
 To change the margins, modify the respective items in `res/values/dimens.xml`.  
 These are the default values.
 ```xml
-<dimen name="cart_items_quantity_bottom_offset">5dip</dimen>
-<dimen name="cart_items_quantity_right_offset">1dip</dimen>
+<dimen name="cart_items_quantity_top_offset">20dip</dimen>
+<dimen name="cart_items_quantity_right_offset">0dip</dimen>
 ```
 To change cart quantity text color, modify the following item in  
 `res/values/colors.xml`
