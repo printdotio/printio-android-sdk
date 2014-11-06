@@ -949,6 +949,8 @@ These are the default values which work well with default fonts.
 <dimen name="text_size_title">20dip</dimen>
 <dimen name="text_size_huge">32dip</dimen>
 
+<dimen name="text_size_photosources">12dip</dimen>
+
 <dimen name="text_size_cart_items_quantity">8dip</dimen>
 
 <dimen name="text_size_side_menu_button">14dip</dimen>
@@ -1214,6 +1216,12 @@ To change photosources text and background colors, modify following items in
 ```xml
 <color name="photosources_background">#333333</color>
 <color name="photosources_text">#FFFFFF</color>
+```
+  
+To change photosources text size, modify the following line in
+`res/values/dimens.xml`
+```xml
+<dimen name="text_size_photosources">12dip</dimen>
 ```
 &nbsp;  
 &nbsp;  
