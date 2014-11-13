@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_edit_text"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="14dip"
+        android:background="@drawable/bg_white"
+        android:paddingBottom="32dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="32dip" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/dialog_information_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/dialog_information_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_information_title"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="15dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="@string/help_text"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_information_message"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_ok"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dip"
+                android:layout_marginRight="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_light"
+                android:gravity="center"
+                android:padding="14dip"
+                android:text="@string/ok"
+                android:textColor="@color/primary_button_text"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

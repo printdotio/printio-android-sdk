@@ -304,15 +304,6 @@
         layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
-    <!-- Delete confirmation pop up -->
-
-    <include
-        android:id="@+id/dialog_delete_confirmation"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_delete_from_cart"
-        android:visibility="gone" />
-
     <!-- Coupon dialog -->
 
     <include

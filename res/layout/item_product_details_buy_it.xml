@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/button_choose"
+        android:layout_toLeftOf="@+id/button_create_it"
         android:orientation="vertical"
         android:paddingLeft="16dip"
         android:paddingRight="8dip" >
@@ -33,7 +33,7 @@
     </LinearLayout>
 
     <print.io.view.ButtonFontNormal
-        android:id="@+id/button_choose"
+        android:id="@+id/button_create_it"
         android:layout_width="100dip"
         android:layout_height="30dip"
         android:layout_alignParentRight="true"
@@ -41,7 +41,7 @@
         android:layout_marginRight="10dip"
         android:background="@drawable/btn_blue_light"
         android:drawableRight="@drawable/icon_arrow_right"
-        android:onClick="onClickChoose"
+        android:onClick="onClickCreateIt"
         android:paddingLeft="5dip"
         android:paddingRight="5dip"
         android:text="@string/create_it"

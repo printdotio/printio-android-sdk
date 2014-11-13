@@ -15,7 +15,7 @@
         android:gravity="center" >
 
         <ImageView
-            android:id="@+id/imageview_cart_sidemenu"
+            android:id="@+id/imageview_cart_side_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -26,11 +26,11 @@
             android:src="@drawable/icon_cart_white" />
 
         <TextView
-            android:id="@+id/sidemenu_cart_num"
+            android:id="@+id/textview_overlay_num_items_side_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/imageview_cart_sidemenu"
-            android:layout_alignTop="@+id/imageview_cart_sidemenu"
+            android:layout_alignRight="@+id/imageview_cart_side_menu"
+            android:layout_alignTop="@+id/imageview_cart_side_menu"
             android:layout_marginRight="@dimen/cart_items_quantity_right_offset"
             android:layout_marginTop="@dimen/cart_items_quantity_top_offset"
             android:background="@drawable/icon_cart_items_qty_background_side_menu"
