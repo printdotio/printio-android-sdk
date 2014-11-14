@@ -492,13 +492,4 @@
         android:layout_marginRight="-1dip"
         android:background="@drawable/bg_gradient_right" />
 
-    <!-- Item information -->
-
-    <include
-        android:id="@+id/item_information"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
 </RelativeLayout>
