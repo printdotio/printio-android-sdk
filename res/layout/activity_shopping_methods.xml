@@ -106,7 +106,7 @@
             android:layout_marginRight="10dip"
             android:layout_marginTop="15dip" >
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_first_name"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                 android:textColorHint="#b3b3b3"
                 android:textSize="@dimen/text_size_normal" />
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_last_name"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
-        <EditText
+        <print.io.view.EditTextFontNormal
             android:id="@+id/edittext_state"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -157,7 +157,7 @@
             android:layout_marginRight="10dip"
             android:layout_marginTop="6dip" >
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_zip_code"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                 android:textColorHint="#b3b3b3"
                 android:textSize="@dimen/text_size_normal" />
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_city"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -184,7 +184,7 @@
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
 
-        <EditText
+        <print.io.view.EditTextFontNormal
             android:id="@+id/edittext_address_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
             android:textColorHint="#b3b3b3"
             android:textSize="@dimen/text_size_normal" />
 
-        <EditText
+        <print.io.view.EditTextFontNormal
             android:id="@+id/edittext_address_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -223,7 +223,7 @@
             android:layout_marginRight="10dip"
             android:layout_marginTop="6dip" >
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_area_num"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
                 android:textColorHint="#b3b3b3"
                 android:textSize="@dimen/text_size_normal" />
 
-            <EditText
+            <print.io.view.EditTextFontNormal
                 android:id="@+id/edittext_telephone_num"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"

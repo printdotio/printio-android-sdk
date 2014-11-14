@@ -12,7 +12,7 @@
         android:layout_marginTop="60dip"
         android:background="#9a000000" >
 
-        <EditText
+        <print.io.view.EditTextFontNormal
             android:layout_width="130dip"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"

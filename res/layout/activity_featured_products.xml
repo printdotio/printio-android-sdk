@@ -164,7 +164,7 @@
                 android:src="@drawable/btn_categories_selector" />
         </RelativeLayout>
 
-        <EditText
+        <print.io.view.EditTextFontNormal
             android:id="@+id/edittext_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

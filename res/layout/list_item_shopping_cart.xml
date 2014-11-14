@@ -129,22 +129,33 @@
                 android:textColor="#323232"
                 android:textSize="@dimen/text_size_small" />
 
-            <print.io.view.SpinnerQuantity
-                android:id="@+id/spinner_shopping_cart_quantity"
+            <print.io.view.TextViewFontNormal
+                android:id="@+id/textview_shopping_cart_quantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:dropDownVerticalOffset="5dp"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
                 android:gravity="center"
                 android:paddingBottom="4dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:paddingTop="6dp"
-                android:spinnerMode="dropdown"
                 android:textColor="#323232"
-                android:textSize="@dimen/text_size_large" />
+                android:textSize="@dimen/text_size_normal" />
+
+            <Spinner
+                android:id="@+id/spinner_shopping_cart_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:clickable="true"
+                android:dropDownVerticalOffset="5dp"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp"
+                android:popupBackground="@color/gray"
+                android:spinnerMode="dropdown"
+                android:visibility="gone" />
 
             <ImageView
                 android:layout_width="wrap_content"
