@@ -195,6 +195,7 @@
     <string name="logout">Logout</string>
     <string name="login">Login</string>
     <string name="info">Info</string>
+    <string name="version">Version: %1$s</string>
     <string name="step_1_phone"><![CDATA[<b>Step 1:</b>]]> Choose Phone Type</string>
     <string name="thick_blocks_3_4">3/4 Inch Thick Blocks</string>
     <string name="thick_blocks_1">1 Inch Thick Blocks</string>
@@ -421,7 +422,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="shipping_info_availability_text">This item ships internationally.</string>
     <string name="quality_guarantee">Quality Guarantee</string>
     <string name="price_chart">Price Chart is coming soon</string>
-    <string name="quality_guarantee_text">Your memories are our top priority. We promise to deliver quality products that can be cherished for a lifetime. If you are unhappy for any reason contact us at customer support. We will replace the item at no cost for you.</string>
+    <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
     <string name="product_dummy">Product</string>
     <string name="price">Price</string>
     <string name="image_not_ready_popup">Image is downloading please wait until download bar is complete</string>
@@ -535,6 +536,7 @@ each field, simply touch the Place Order button.</string>
     <string name="inch">Inch</string>
     <string name="set_of">Set of %1$s</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
+    <string name="problem_downloading_some_photos">There was a problem downloading some of your selected photos. Please try again!</string>
     <string name="share">Share</string>
     <string name="cancel_deal">Cancel Deal</string>
     <string name="you_can_add">You can add more images in Step 2</string>

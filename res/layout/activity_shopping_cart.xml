@@ -313,4 +313,9 @@
         layout="@layout/dialog_ok"
         android:visibility="gone" />
 
+    <View
+        android:id="@+id/view_outside"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
 </RelativeLayout>

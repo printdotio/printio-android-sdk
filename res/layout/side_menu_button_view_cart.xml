@@ -10,19 +10,15 @@
 
     <RelativeLayout
         android:layout_width="60dip"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:gravity="center" >
+        android:layout_height="match_parent" >
 
         <ImageView
             android:id="@+id/imageview_cart_side_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="10dip"
+            android:layout_centerInParent="true"
             android:paddingLeft="7dip"
             android:paddingRight="7dip"
-            android:paddingTop="10dip"
             android:src="@drawable/icon_cart_white" />
 
         <TextView

@@ -8,9 +8,11 @@
     <color name="swipeable_bg_pressed">#EBEBEB</color>
     <color name="help_btn_bg">#FFFFFF</color>
     <color name="help_btn_bg_pressed">#EBEBEB</color>
-    <color name="title_bar_background">#FFFFFF</color> <!-- #42BE9C -->
+    <color name="title_bar_background">#FFFFFF</color>
     <color name="title_bar_text">#000000</color>
     <color name="title_bar_separator">#D6D6D6</color>
+
+    <color name="separator_list">#D6D6D6</color>
 
     <color name="text_cart_items_quantity">#FFFFFF</color>
     <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
@@ -29,6 +31,8 @@
     <color name="side_menu_accounts">#1CBA9B</color>
     <color name="side_menu_info_subtitle_text">#FFFFFF</color>
     <color name="side_menu_info">#6369A6</color>
+    <color name="side_menu_version_bg">#000000</color>
+    <color name="side_menu_version_text">#FFFFFF</color>
     <color name="customize_product_tooltip">#42BE9C</color>
 
     <color name="photosources_background">#333333</color>

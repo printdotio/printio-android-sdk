@@ -169,15 +169,6 @@
         layout="@layout/item_help"
         android:visibility="gone" />
 
-    <!-- Please try again dialog -->
-
-    <include
-        android:id="@+id/dialog_please_try_again"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_please_try_again"
-        android:visibility="gone" />
-
     <!-- Coming Soon -->
 
     <include

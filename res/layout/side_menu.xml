@@ -482,6 +482,37 @@
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
             </LinearLayout>
+
+            <!-- Version -->
+
+            <LinearLayout
+                android:id="@+id/linearlayout_version"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/side_menu_version_bg"
+                    android:gravity="center"
+                    android:paddingBottom="3dip"
+                    android:paddingTop="3dip"
+                    android:textColor="@color/side_menu_version_text"
+                    android:textSize="@dimen/text_size_small" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/separator_color_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/separator_color_2" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

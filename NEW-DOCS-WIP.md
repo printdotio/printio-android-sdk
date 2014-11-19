@@ -309,7 +309,7 @@ To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the
 ```java
 PIO.setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
 
-enum SideMenuButton {
+enum SideMenuInfoButton {
     PRICING_CHART,
     SHARE_APP,
     LIKE_US_FB,
@@ -334,6 +334,15 @@ icon_side_menu_rate_our_app.png (baseline-mdpi:26x26; xhdpi:52x52)
 icon_side_menu_about.png (baseline-mdpi:26x26; xhdpi:52x52)
 icon_side_menu_how_it_works.png (baseline-mdpi:26x26; xhdpi:52x52)
 icon_side_menu_past_orders.png (baseline-mdpi:26x26; xhdpi:52x52)
+```
+&nbsp;  
+&nbsp;  
+##### **Hide SDK Version** from Side Menu:  
+&nbsp;  
+By default, the SDK version is shown at the bottom of the Side Menu.  
+To hide the SDK version, use the following method
+```java
+PIO.hideVersionInSideMenu(boolean isHidden);
 ```
 &nbsp;  
 &nbsp;  
@@ -707,17 +716,18 @@ Shopping Cart
 
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
+Dimensions are listed in baseline (MDPI) density.
 ```
-icon_cart_default.png (45x42)
-icon_cart_pressed.png (45x42)
-icon_cart_items_qty_background (31x31) //Background for the badge that displays cart items count
+icon_cart_default.png (24x24)
+icon_cart_pressed.png (24x24)
+icon_cart_items_qty_background (16x16) //Background for the badge that displays cart items count
 ```
 Shopping cart quantity badge is top-right aligned with the shopping cart icon  
 and its position is controlled by top and right margins.  
 To change the margins, modify the respective items in `res/values/dimens.xml`.  
 These are the default values.
 ```xml
-<dimen name="cart_items_quantity_top_offset">20dip</dimen>
+<dimen name="cart_items_quantity_top_offset">10dip</dimen>
 <dimen name="cart_items_quantity_right_offset">0dip</dimen>
 ```
 To change cart quantity text color, modify the following item in  
@@ -1136,6 +1146,11 @@ To change labels' colors, modify the following items in
 
 <!--Quality Guarantee-->
 <color name="product_details_header_4">#646AA6</color>
+```
+To change 'Quality Guarantee' text, modify following item in
+`res/values/strings.xml`
+```xml
+<string name="quality_guarantee_text">Your memories are our top priority...</string>
 ```
 &nbsp;  
 &nbsp;  
