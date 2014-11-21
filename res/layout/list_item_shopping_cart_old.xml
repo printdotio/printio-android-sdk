@@ -6,7 +6,7 @@
     android:background="@drawable/bg_selector"
     android:padding="10dip" >
 
-    <ImageView
+    <print.io.imageloader.MyImageView
         android:id="@+id/imageview_shopping_cart"
         android:layout_width="50dip"
         android:layout_height="50dip"
