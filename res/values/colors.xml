@@ -48,7 +48,7 @@
 
     <color name="gray">#404040</color>
     <color name="gray_edit">#C7C7CC</color>
-    <color name="gray_edit_pressed">#96C7C7CC</color>
+    <color name="gray_edit_pressed">#96A7A7AC</color>
 
     <color name="blue_light">#22A0DD</color>
     <color name="blue_dark">#0E79AD</color>

@@ -168,6 +168,69 @@ icon_help.png (17x26)
 icon_cart_white.png (45x42)
 ```
 &nbsp;  
+#### > Starting PrintIO SDK  
+
+Use the following method:
+```java
+	/**
+	 * Starts the PrintIO SDK
+	 * @param context
+	 * @param pioCallback
+	 * @throws PIOException
+	 */
+PIO.start(Context context, PIOCallback pioCallback);
+```
+
+Order information is passed back to the host application  
+using PIOCallback class' `onOrderComplete(CallbackInfo callBackInfo);` method.  
+CallbackInfo object contains following data:  
+```java
+class CallbackInfo {
+	String orderId;
+	String totalPrice;
+	ShippingInfo shippingInfo;
+	List<ShipItem> items;
+}
+```
+
+ShippingInfo object contains following data:
+```java
+class ShippingInfo {
+	String city;
+	String country;
+	String countryCode;
+	String email;
+	String firstName;
+	String lastName;
+	String phone;
+	String state;
+	String street;
+	String street2;
+	String zipCode;
+}
+```
+
+ShipItem object contains following data:
+```java
+class ShipItem {
+	List<String> skus;
+	List<ShipOption> shipOptions;
+}
+```
+
+ShipOptions object contains following data:
+```java
+class ShipOptions {
+	int id;
+	String methodType;
+	String name;
+	String carrierName;
+	String carrierLogoUrl;
+	ShipPrice price;
+	int daysToDelivery;
+}
+```
+&nbsp;  
 #### > Get order information when SDK is closed  
 
 In order to get back order information, host activity needs to be specified.  
@@ -644,6 +707,17 @@ To change tooltip background color, modify the following item in
 ```
 &nbsp;  
 &nbsp;  
+#### > Set Pop up balloon in Customize Product screen visibility timeout.  
+
+By default, the pop up balloon disappears after 10 seconds.  
+To change this value, use the following method:  
+```java
+PIO.setDoubleTapBalloonVisibilityTime(int visibilityTimeoutSeconds);
+```
+**NOTICE:**  
+The method takes SECONDS (not milliseconds) as argument.
+&nbsp;  
+&nbsp;  
 #### > Show custom dialog for helping user how to edit a photo.  
 ~~( > ??? Show custom help dialog on Image Editor screen)~~  
 
@@ -768,6 +842,14 @@ replace the following icon with your own icon of the same name.
 Recommended dimensions are listed next to the icon name.  
 ```
 icon_add_more_products.png (36×36 xhdpi, 54x54 xxhdpi)
+```
+&nbsp;  
+&nbsp;  
+#### > Hide edit button is shopping cart swipe menu.  
+
+Default value is 'false' (edit button is visible).
+```java
+PIO.hideEditButtonInShoppingCart(boolean isHidden);
 ```
 &nbsp;  
 &nbsp;  
