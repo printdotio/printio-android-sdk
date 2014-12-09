@@ -226,6 +226,7 @@
     <!-- Payment Method scrollable container -->
 
     <ScrollView
+        android:id="@+id/scrollview_payment_options"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_almost_done"
@@ -239,6 +240,24 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+            <!-- Billing Country -->
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginTop="5dip"
+                android:text="@string/billing_country"
+                android:textColor="#595d66"
+                android:textSize="@dimen/text_size_normal" />
+
+            <Spinner
+                android:id="@+id/spinner_billing_country"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:layout_margin="5dip"
+                android:background="@drawable/bg_print_type" />
+
             <LinearLayout
                 android:id="@+id/layout_buttons"
                 android:layout_width="match_parent"
@@ -246,37 +265,21 @@
                 android:background="#ffffff"
                 android:orientation="vertical" >
 
-                <!-- Billing Country -->
-
                 <print.io.view.TextViewFontLight
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginTop="5dip"
-                    android:text="@string/billing_country"
-                    android:textColor="#595d66"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <Spinner
-                    android:id="@+id/spinner_billing_country"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dip"
-                    android:layout_margin="5dip"
-                    android:background="@drawable/bg_print_type" />
-
-                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_select_payment_method"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dip"
                     android:layout_marginTop="5dip"
                     android:text="@string/select_payment_method"
                     android:textColor="#595d66"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="gone" />
 
                 <!-- Pay with PayPal -->
 
                 <LinearLayout
-                    android:id="@+id/button_layout_paypal"
+                    android:id="@+id/linearlayout_paypal"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:layout_marginLeft="5dip"
@@ -286,7 +289,8 @@
                     android:clickable="true"
                     android:gravity="center_horizontal"
                     android:onClick="onClickPaypal"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:visibility="gone" >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -311,7 +315,7 @@
                 <!-- Pay With Credit Card -->
 
                 <print.io.view.TextViewFontLight
-                    android:id="@+id/button_layout_credit_card"
+                    android:id="@+id/linearlayout_credit_card"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
                     android:layout_marginLeft="5dip"
@@ -323,7 +327,8 @@
                     android:onClick="onClickCreditCard"
                     android:text="@string/pay_with_card"
                     android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:textSize="@dimen/text_size_normal"
+                    android:visibility="gone" />
             </LinearLayout>
 
             <!-- Credit Card data container -->
@@ -467,7 +472,7 @@
                         android:layout_marginBottom="20dip"
                         android:layout_marginTop="5dip"
                         android:background="@drawable/btn_blue_light"
-                        android:onClick="onClickPlaceOrder"
+                        android:onClick="onClickPlaceOrderCreditCard"
                         android:text="@string/place_order"
                         android:textColor="@color/primary_button_text"
                         android:textSize="@dimen/text_size_normal" />
@@ -588,15 +593,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
 </RelativeLayout>

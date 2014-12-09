@@ -182,13 +182,4 @@
         layout="@layout/item_help"
         android:visibility="gone" />
 
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
-        android:visibility="gone" />
-
 </RelativeLayout>

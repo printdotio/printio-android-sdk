@@ -74,6 +74,7 @@
         android:background="@color/title_bar_separator" />
 
     <ScrollView
+        android:id="@+id/scrollview_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
@@ -304,8 +305,6 @@
                 android:textColorHint="#b3b3b3"
                 android:textSize="@dimen/text_size_normal" />
 
-            <!-- <requestFocus /> -->
-
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_save_address"
                 android:layout_width="match_parent"
@@ -354,13 +353,9 @@
         layout="@layout/item_help"
         android:visibility="gone" />
 
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
-        android:visibility="gone" />
+    <print.io.view.OverlayView
+        android:id="@+id/overlay_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
 
 </RelativeLayout>

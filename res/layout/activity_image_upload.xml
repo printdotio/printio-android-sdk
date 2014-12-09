@@ -148,7 +148,7 @@
         android:paddingTop="10dip"
         android:scrollbars="none"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="16dip"
+        android:verticalSpacing="8dip"
         android:visibility="visible" />
 
     <print.io.view.TextViewFontLight
@@ -264,15 +264,6 @@
         android:layout_height="match_parent"
         layout="@layout/dialog_less_photos"
         android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
 </RelativeLayout>

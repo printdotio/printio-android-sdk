@@ -692,6 +692,14 @@ icon_help_circle_grey_dark.png (50x50px) - pressed state
 ```
 &nbsp;  
 &nbsp;  
+#### > Change visibility of 'Help' button in Customize Product screen.  
+
+Default value is 'false' (Help button is visible).  
+```java
+PIO.hideHelpButtonInCustomizeProduct(boolean isHidden);
+```
+&nbsp;  
+&nbsp;  
 #### > Set Pop up balloon in Customize Product screen.  
 ( > Customize tooltip in Customize Product screen)  
 
@@ -868,6 +876,22 @@ Recommended dimensions are listed next to the icon name.
 Default logo is a 100% transparent image (no logo).
 ```
 icon_logo.png (71×80)
+```
+&nbsp;  
+&nbsp;  
+#### > Set Available Payment Options  
+
+By default, all payment options are enabled.
+```java
+PIO.setPaymentOptions(int paymentOptions);
+```
+Use one of the following values from PublicConstants:
+```java
+class PaymentOptions {
+	PAYMENT_OPTION_ALL
+	PAYMENT_OPTION_PAY_PAL
+	PAYMENT_OPTION_CREDIT_CARD
+}
 ```
 &nbsp;  
 &nbsp;  

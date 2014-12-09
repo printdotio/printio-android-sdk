@@ -38,10 +38,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/image_container"
-        android:layout_marginTop="-10dip"
+        android:layout_marginTop="-8dip"
         android:ellipsize="end"
         android:lineSpacingMultiplier="1"
-        android:maxLines="2"
+        android:lines="2"
         android:padding="5dip"
         android:textColor="#797c83"
         android:textSize="@dimen/text_size_normal" />

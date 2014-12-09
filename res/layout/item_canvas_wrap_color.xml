@@ -6,8 +6,7 @@
     android:layout_marginLeft="13dip"
     android:layout_marginRight="13dip"
     android:orientation="vertical"
-    android:paddingBottom="7dip"
-    android:paddingTop="7dip" >
+    android:padding="7dip" >
 
     <print.io.imageloader.MyImageView
         android:id="@+id/imageview_phone_case"

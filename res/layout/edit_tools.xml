@@ -9,7 +9,7 @@
         android:layout_width="0dip"
         android:layout_height="wrap_content"
         android:layout_weight="1" />
-    
+
     <View
         android:layout_width="0dip"
         android:layout_height="wrap_content"
@@ -22,7 +22,7 @@
 
     <RelativeLayout
         android:layout_width="0dip"
-        android:layout_height="60dip"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
         android:background="#cccccc"
@@ -38,14 +38,13 @@
             android:orientation="vertical" >
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/textview_shufle"
+                android:id="@+id/textview_shuffle"
                 android:layout_width="match_parent"
-                android:layout_height="0dip"
+                android:layout_height="60dip"
                 android:layout_margin="2dip"
-                android:layout_weight="1"
                 android:background="@drawable/bg_selector_white"
                 android:clickable="true"
-                android:drawableTop="@drawable/icon_shufle_purple"
+                android:drawableTop="@drawable/icon_shuffle_purple"
                 android:gravity="center"
                 android:onClick="onClickRandomize"
                 android:paddingBottom="1dip"
@@ -53,6 +52,29 @@
                 android:paddingRight="5dip"
                 android:paddingTop="5dip"
                 android:text="@string/shuffle"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_size_normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_change_background"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_margin="2dip"
+                android:background="@drawable/bg_selector_white"
+                android:clickable="true"
+                android:drawableTop="@drawable/icon_change_background"
+                android:gravity="center"
+                android:onClick="onClickChangeBackground"
+                android:paddingBottom="1dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/background"
                 android:textColor="@color/purple"
                 android:textSize="@dimen/text_size_normal" />
 
@@ -82,7 +104,5 @@
                 android:visibility="gone" />
         </LinearLayout>
     </RelativeLayout>
-
-    
 
 </LinearLayout>

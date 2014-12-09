@@ -426,6 +426,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="product_dummy">Product</string>
     <string name="price">Price</string>
     <string name="image_not_ready_popup">Image is downloading please wait until download bar is complete</string>
+    <string name="image_failed_to_download">Error while downloading one of your photos. Please try again.</string>
     <string name="retail_price">%1$s Retail Price</string>
     <string name="selected_images">You selected only %1$s images</string>
     <string name="or">or</string>
@@ -618,5 +619,6 @@ each field, simply touch the Place Order button.</string>
     <string name="canvas_title">Canvas</string>
     <string name="payment_finalized">Payment is being finalized.\nPlease hold for confirmation.\nYou are going to love your products!</string>
     <string name="empty_content_description"></string>
+    <string name="confirm_leaving_design">Are you sure you want to cancel design?</string>
 
 </resources>

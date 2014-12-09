@@ -7,11 +7,11 @@
 
     <print.io.imageloader.MyImageView
         android:id="@+id/imageview_country"
-        android:layout_width="wrap_content"
+        android:layout_width="50dip"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:adjustViewBounds="true"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
         android:src="@drawable/placeholder_flag" />
 
     <print.io.view.TextViewFontLight

@@ -97,7 +97,6 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="6dp"
-            android:popupBackground="@color/separator_list"
             android:spinnerMode="dropdown"
             android:visibility="gone" />
 
