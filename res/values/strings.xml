@@ -59,6 +59,7 @@
     <string name="picasa">Picasa</string>
     <string name="dropbox">Dropbox</string>
     <string name="photobucket">Photobucket</string>
+    <string name="preselected">Preselected</string>
     <string name="customize_product">Customize Product</string>
     <string name="customize_product_tooltip_text">Double-tap photo to edit</string>
     <string name="product_price">Product Price</string>
@@ -300,6 +301,7 @@ the pop-up screen. Pinch to crop. To edit, select the options on the bottom of t
 screen to rotate, flip, or apply effects.\n\nAfter you have filled each spot on the grid, click the Buy It button in the top 
 right corner to review and add the item to your shopping cart.</string>
     <string name="address_validation_failed">Address validation failed!</string>
+    <string name="ship_to_different_country">Country from selected address is not same as ship to country. Changing the ship to country may change the product price and availability of the items in your cart.\n\nWould you like to change ship to country and proceed with checkout?</string>
     <string name="items">Items:</string>
     <string name="shipping_and_handling">Shipping &amp; Handling:</string>
     <string name="total_before_price">Total before tax:</string>

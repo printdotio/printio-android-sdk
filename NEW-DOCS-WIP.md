@@ -519,15 +519,6 @@ PIO.setPhotosourcesDisabledForOnePhotoTemplate(boolean isPhotosourcesDisabledFor
 ```
 &nbsp;  
 &nbsp;  
-#### > Set passed in image to be first in row for all photo sources  
-
-```java
-PIO.setPassedImageFirstInPhotoSources(boolean passedImageFirstInPhotoSources);
-```
-**NOTICE:**  
-Currently works only for `PHONE` photo source.
-&nbsp;  
-&nbsp;  
 #### > Set passed in image as thumbnail for templates with one photo. Right now, only supports Canvas Wraps and Framed Prints.  
 ( > Set passed in image as thumbnail for templates with one photo)  
 

@@ -237,33 +237,4 @@
         android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_normal" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Dialog Low Resolution -->
-
-    <include
-        android:id="@+id/dialog_low_res"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_low_resolution"
-        android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Dialog Less Photos -->
-
-    <include
-        android:id="@+id/dialog_less_photos"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_less_photos"
-        android:clickable="true"
-        android:visibility="gone" />
-
 </RelativeLayout>

@@ -239,15 +239,6 @@
         android:stretchMode="columnWidth"
         android:verticalSpacing="5dip" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
     <View
         android:id="@+id/outside_drop_down_menu"
         android:layout_width="match_parent"
@@ -266,15 +257,6 @@
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
-        android:visibility="gone" />
-
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
 </RelativeLayout>

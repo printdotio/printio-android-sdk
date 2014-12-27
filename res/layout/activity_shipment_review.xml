@@ -424,29 +424,4 @@
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <include
-        android:id="@+id/item_are_you_sure"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_are_you_sure"
-        android:visibility="gone" />
-
-    <!-- Shipping price error dialog -->
-
-    <include
-        android:id="@+id/item_shipping_price_error"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
 </RelativeLayout>

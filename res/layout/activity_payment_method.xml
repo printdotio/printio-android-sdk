@@ -556,43 +556,4 @@
         android:clickable="true"
         android:visibility="gone" />
 
-    <!-- Payment verification error -->
-
-    <include
-        android:id="@+id/dialog_payment_verification_error"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_payment_verification_error"
-        android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- You must enter CVV -->
-
-    <include
-        android:id="@+id/dialog_enter_cvc"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_enter_cvc"
-        android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Exp date not valid -->
-
-    <include
-        android:id="@+id/dialog_exp_date_not_valid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_exp_date_not_valid"
-        android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
 </RelativeLayout>

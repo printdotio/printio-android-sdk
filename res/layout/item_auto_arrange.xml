@@ -93,10 +93,4 @@
             android:textSize="@dimen/text_size_small" />
     </RelativeLayout>
 
-    <include
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
 </RelativeLayout>

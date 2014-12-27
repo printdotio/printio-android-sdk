@@ -5,43 +5,57 @@
     android:background="@drawable/bg_white"
     android:clickable="true" >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_margin="14dip"
         android:background="@drawable/bg_white"
-        android:orientation="vertical"
         android:paddingBottom="32dip"
         android:paddingLeft="15dip"
         android:paddingRight="15dip"
         android:paddingTop="32dip" >
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
+        <print.io.view.AutoResizeTextView
+            android:id="@+id/dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawableRight="@drawable/icon_pin_grey"
+            android:gravity="center"
+            android:paddingBottom="20dip"
+            android:paddingTop="5dip"
+            android:singleLine="true"
+            android:text="@string/shipping_to"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal" />
 
-            <print.io.view.TextViewFontLight
-                android:id="@+id/dialog_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="#5a5d66"
-                android:textSize="@dimen/text_size_normal" />
-        </ScrollView>
+        <print.io.view.TextViewFontLight
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_message"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="5dip"
+            android:drawableLeft="@drawable/icon_pin_grey"
+            android:gravity="center"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
 
         <LinearLayout
+            android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_message"
             android:layout_margin="10dip"
             android:orientation="horizontal" >
 
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_no"
                 android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_marginRight="8dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_blue_light"
                 android:padding="14dip"
@@ -53,8 +67,8 @@
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_yes"
                 android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_green"
                 android:padding="14dip"
@@ -63,6 +77,6 @@
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>

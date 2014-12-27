@@ -295,15 +295,6 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <!-- Coupon dialog -->
-
-    <include
-        android:id="@+id/dialog_coupon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_ok"
-        android:visibility="gone" />
-
     <View
         android:id="@+id/view_outside"
         android:layout_width="fill_parent"

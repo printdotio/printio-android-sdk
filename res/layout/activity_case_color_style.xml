@@ -337,22 +337,4 @@
         android:layout_alignParentBottom="true"
         layout="@layout/overlay_buttons" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Dialog Case Color -->
-
-    <include
-        android:id="@+id/dialog_case_color"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_case_color"
-        android:visibility="gone" />
-
 </RelativeLayout>

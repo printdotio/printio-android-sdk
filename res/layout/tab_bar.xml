@@ -11,7 +11,7 @@
         android:orientation="horizontal" >
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/textview_photos"
+            android:id="@+id/textview_text"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -19,7 +19,7 @@
             android:clickable="true"
             android:drawableTop="@drawable/icon_abc_blue"
             android:gravity="center"
-            android:onClick="onClickPhotos"
+            android:onClick="onClickText"
             android:paddingBottom="4dip"
             android:paddingTop="9dip"
             android:text="@string/text"
@@ -27,7 +27,7 @@
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/textview_edit_tools"
+            android:id="@+id/textview_effects"
             android:layout_width="0dip"
             android:layout_height="match_parent"
             android:layout_gravity="center"

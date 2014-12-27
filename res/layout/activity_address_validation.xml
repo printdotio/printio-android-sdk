@@ -249,31 +249,4 @@
         </RelativeLayout>
     </ScrollView>
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Dialog Validation Failed -->
-
-    <include
-        android:id="@+id/dialog_validation_failed"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_validation_failed"
-        android:visibility="gone" />
-
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
-        android:visibility="gone" />
-
 </RelativeLayout>

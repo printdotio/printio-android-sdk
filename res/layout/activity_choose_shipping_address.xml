@@ -102,15 +102,6 @@
         android:textColor="@color/primary_button_text"
         android:textSize="@dimen/text_size_large" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
     <View
         android:id="@+id/view_outside"
         android:layout_width="fill_parent"

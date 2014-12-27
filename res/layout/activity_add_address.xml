@@ -326,15 +326,6 @@
         layout="@layout/item_address_type"
         android:visibility="gone" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
     <!-- Address validation -->
 
     <include
@@ -342,15 +333,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/activity_address_validation"
-        android:visibility="gone" />
-
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
         android:visibility="gone" />
 
     <print.io.view.OverlayView

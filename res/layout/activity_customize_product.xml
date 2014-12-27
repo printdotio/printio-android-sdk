@@ -228,15 +228,6 @@
         layout="@layout/autofill"
         android:visibility="gone" />
 
-    <!-- Help -->
-
-    <include
-        android:id="@+id/help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/help"
-        android:visibility="gone" />
-
     <!-- Info text below the product -->
 
     <print.io.view.AutoResizeTextView
@@ -303,25 +294,6 @@
             android:visibility="visible" />
     </RelativeLayout>
 
-    <!-- Dialog Discard -->
-
-    <include
-        android:id="@+id/dialog_discard"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_discard"
-        android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
     <!-- Item Customize Product Preview Details -->
 
     <include
@@ -342,17 +314,6 @@
         layout="@layout/item_auto_arrange"
         android:visibility="gone" />
 
-    <!-- Dialog Info -->
-
-    <include
-        android:id="@+id/dialog_info"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        layout="@layout/dialog_info"
-        android:clickable="true"
-        android:visibility="gone" />
-
     <!-- Dialog Want to share -->
 
     <include
@@ -362,15 +323,6 @@
         android:layout_alignParentBottom="true"
         layout="@layout/dialog_want_to_share"
         android:clickable="true"
-        android:visibility="gone" />
-
-    <!-- Edit Image -->
-
-    <include
-        android:id="@+id/edit_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/edit_image"
         android:visibility="gone" />
 
 </RelativeLayout>

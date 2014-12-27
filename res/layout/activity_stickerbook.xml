@@ -103,13 +103,6 @@
         android:headerDividersEnabled="false"
         android:scrollbars="none" />
 
-    <include
-        android:id="@+id/edit_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/edit_image"
-        android:visibility="gone" />
-
     <!-- Stickerbook info dialog -->
 
     <include
@@ -117,24 +110,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/dialog_stickerbook"
-        android:visibility="gone" />
-
-    <!-- Help -->
-
-    <include
-        android:id="@+id/item_help"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_help"
-        android:visibility="gone" />
-
-    <!-- Coming Soon -->
-
-    <include
-        android:id="@+id/item_coming_soon"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/item_coming_soon"
         android:visibility="gone" />
 
 </RelativeLayout>
