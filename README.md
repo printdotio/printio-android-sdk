@@ -6,7 +6,7 @@ In order to follow this guide, you must have minimum the Android 4.0 SDK (API v1
 
 #Configuration
 
-**In order to use the SDK in an existing app, next steps need to be followed carefully:**
+**In order to use the SDK in an existing app, following steps need to be followed carefully:**
 ###1. Clone print.io project from this repository
 
 ###2. Import print.io SDK project
@@ -17,7 +17,7 @@ In order to follow this guide, you must have minimum the Android 4.0 SDK (API v1
 
 
 
-**After importing and adding print.io SDK project, AndroidManifest.xml file of your project has to be set like follows:**
+**After importing and adding print.io SDK project, AndroidManifest.xml file of your project has to be set like so:**
 ###1. Android target version
 As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as target version. For lower versions, the user will be notified that it is not supported. So the `<uses-sdk>` node of your manifest should look like this:
 
@@ -256,97 +256,105 @@ Important: `android:largeHeap="true"` attribute is required to be set in `<appli
 
 #Basic Usage
 
-print.io SDK is controlled from static PIO class. To launch print.io widget, the following 2 lines of code should be included at desired place:
-```xml
-PIO.start(context, null);
+print.io SDK is launched from static `PIO` class by calling `PIO.start(...)` method similar to this:
+```java
+PIO.setConfig(context, pioConfig);
+PIO.start(context);
 ```
 
-PIO.start(Context ctx, PIOCallback pioCallback) method takes 2 parameters, first is your activity Context, second is optional PIOCallback, that can give you information when shopping cart has been changed, or purchase has been finalized.
+PIO.setConfig(Context context, PIOConfig pioConfig) method takes 2 parameters. First is your activity Context, second is  PIOConfig object which holds entire SDK configuration.
+In order to successfully start SDK some configuration has to be done, which will be described in next chapter.
+After you set your Config object, start the SDK using PIO.start(Context context) method.
 
 #print.io Quick Start
 Below is sample code for launching a customized print.io widget, with all options included.  
 This code should be added to your Application class' onCreate() method.  
 PIOConstants class is not built in into the SDK.  
-You should create your PIOConstants class and store SDK related constants there. (RECIPE_ID, API_URL, etc...)
-```xml
+You should create your PIOConstants class and store SDK related constants there. (RECIPE_ID, etc...)
+```java
 ///////////////////////////////
-// REQUIRED METHODS begin here:
-// MAKE SURE that you call all of them
+// To launch SDK with minimum configuration your code should be similar to this.
+///////////////////////////////
 
-//initialize Parse push notifications
-PIO.setParseApplicationId(PIOConstants.Parse.APPLICATION_ID);
-PIO.setParseClientKey(PIOConstants.Parse.CLIENT_KEY);
-PIO.initializeParse(this);
+// Initialize Parse push notifications
+// Needs to be inside Application class' onCreate() method
+PIO.initializeParse(this, PIOConstants.Parse.APPLICATION_ID, PIOConstants.Parse.CLIENT_KEY);
 
-//Tells the SDK which server to use (Live or Staging) server.
-//In Staging mode, you can test purchase process without using real money.
-//Note: Some other methods require this to be called first, so make sure to call it as early as possible.
-PIO.setLiveApplication(boolean);
+// Create PIOConfig object which will be used to configure SDK
+PIOConfig config = new PIOConfig();
 
-//API KEY provided for every partner
-PIO.setRecipeID(PIOConstants.RECIPE_ID);
+// Tells the SDK which server to use (Live or Staging) server.
+// In Staging mode, you can test purchase process without using real money.
+// Note: Some other methods require this to be called first, so make sure to call it as early as possible.
+config.setLiveApplication(boolean);
+
+// API KEY provided for every partner
+config.setRecipeID(PIOConstants.RECIPE_ID);
 
 // PublicConstants.API_URL_STAGING or PublicConstants.API_URL_LIVE
-PIO.setApiUrl(...);
+config.setApiUrl(...);
 
-// REQUIRED METHODS end here
+// Set Config object
+PIO.setConfig(context, config);
+
+// Launch SDK by calling PIO.start
+PIO.start(context);
+
+///////////////////////////////
+// Other configuration is not mandatory, but you can tweak it to fit your needs.
 ////////////////////////////
 
+// Do not show splash screen
+config.setSplashScreenEnabled(false);
 
-//Do not show splash screen
-PIO.setSplashScreenEnabled(false);
+// Set your company's name for payment screens.
+config.setPartnerName(String);
 
-//Set your company's name for payment screens.
-PIO.setPartnerName(String);
+// Hide Android status bar
+config.setHideStatusBar(false);
 
-//Hide Android status bar
-PIO.setHideStatusBar(false);
+// Enable/disable application side menu.
+config.setSideMenuEnabled(boolean);
+config.setDefaultSideMenuButtonsTop();
+config.setDefaultSideMenuInfoButtons();
 
-//Enable/disable application side menu.
-PIO.setSideMenuEnabled(boolean);
-PIO.setDefaultSideMenuButtonsTop();
-PIO.setDefaultSideMenuInfoButtons();
+// Preset the country. Country code is 2 letter code, e.g. "US".
+config.setCountryCode(String);
 
-//preset the country. Country code is 2 letter code, e.g. "US".
-PIO.setCountryCode(String);
+// Can change country from Featured Products screen (default is true).
+config.setCountryOnFeaturedProducts(boolean);
 
-//can change country from Featured Products screen (default is true).
-PIO.setCountryOnFeaturedProducts(boolean);
+// Hide category and search bar on Featured Products screen
+config.setHideCategorySearchBar(boolean);
 
-//hide category and search bar on Featured Products screen
-PIO.setHideCategorySearchBar(boolean);
+// Set header bar color.
+config.setHeaderColor(int);
 
-//set header bar color.
-PIO.setHeaderColor(int);
+// Preset the images always be auto arranged. User can customize product after.
+config.setAutoArrange(boolean);
 
-//preset the images always be auto arranged. User can customize product after.
-PIO.setAutoArrange(boolean);
-
-//display product variants and options step by step
-PIO.setStepByStep(boolean);
+// Display product variants and options step by step
+config.setStepByStep(boolean);
 
 // 1 - one duplicated photo, 4 - four different photos.
-PIO.setCoastersType(int);
+config.setCoastersType(int);
 
-//jump directly to the product and select variant.
-PIO.setIdAndSku(PublicConstants.ProductIds.TABLET_CASES, "TabletCase-iPad3/4-Gloss");
+// Jump directly to the product. if PIO.setIdAndSku() is set this will be ignored.
+config.setProductIdFromApp(PublicConstants.ProductIds.PHONE_CASES);
 
-//jump directly to the product. if PIO.setIdAndSku() is set this will be ignored.
-PIO.setProductIdFromApp(PublicConstants.ProductIds.PHONE_CASES);
+// Show/hide help option through the sdk
+config.setShowHelp(boolean);
 
-//show/hide help option through the sdk
-PIO.setShowHelp(boolean);
+// Show/hide choosen photos in Customize Product screen.
+config.setShowPhotosInCustomize(boolean);
 
-//show/hide choosen photos in Customize Product screen.
-PIO.setShowPhotosInCustomize(boolean);
+// Show/hide bottom tab bar with options in Customize Product screen.
+config.setShowOptionsInCustomize(boolean);
 
-//show/hide bottom tab bar with options in Customize Product screen.
-PIO.setShowOptionsInCustomize(boolean);
+// In edit photo screen show/hide options(roatate, add text, add effect)
+config.setUpCropScreen(boolean, boolean, boolean);
 
-//in edit photo screen show/hide options(roatate, add text, add effect)
-PIO.setUpCropScreen(boolean, boolean, boolean);
-
-//add desired photo sources
+// Add desired photo sources
 ArrayList<PhotoSource> photoSourcesTest = new ArrayList<PIO.PhotoSource>();
 photoSourcesTest.add(PhotoSource.PHONE);
 photoSourcesTest.add(PhotoSource.PICASA);
@@ -355,20 +363,20 @@ photoSourcesTest.add(PhotoSource.DROPBOX);
 photoSourcesTest.add(PhotoSource.FLICKR);
 photoSourcesTest.add(PhotoSource.INSTAGRAM);
 photoSourcesTest.add(PhotoSource.PHOTOBUCKET);
-PIO.setPhotoSources(photoSourcesTest);
+config.setPhotoSources(photoSourcesTest);
 
-//Note: Following methods are not fully implemented yet
-//Array of urls or local path for images that will be preloaded into the application.
-PIO.setImagesUrls(String[]);
+// Note: Following methods are not fully implemented yet
+// Array of urls or local path for images that will be preloaded into the application.
+config.setImagesUrls(String[]);
 
-//show passed image first with images from other sources
-PIO.setPassedImageFirstInPhotoSources(boolean);
+// Show passed image first with images from other sources
+config.setPassedImageFirstInPhotoSources(boolean);
 
-//set passed image as layout with 1 photo for some products
-PIO.setPassedImageThumb(boolean);
+// Set passed image as layout with 1 photo for some products
+config.setPassedImageThumb(boolean);
 
-//forbid user to use his own images and use those passed to sdk.
-PIO.setPhotosourcesDisabled(boolean);
+// Forbid user to use his own images and use those passed to sdk.
+config.setPhotosourcesDisabled(boolean);
 ```
 
 #See also

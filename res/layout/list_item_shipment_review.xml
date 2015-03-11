@@ -4,20 +4,40 @@
     android:layout_height="wrap_content"
     android:padding="5dip" >
 
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_name"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:textColor="#595d66"
-        android:textSize="@dimen/text_size_normal" />
+        android:paddingRight="10dp" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:textColor="#595d66"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_shipping_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:onClick="onClickChangeShippingMethod"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="#595d66"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_shippment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textview_name" >
+        android:layout_below="@+id/layout_header" >
 
         <RelativeLayout
             android:layout_width="match_parent"

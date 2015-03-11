@@ -10,19 +10,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="15dip"
+        android:layout_margin="16dip"
         android:background="@drawable/bg_white"
-        android:padding="20dip" >
+        android:padding="8dip" >
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dip"
-            android:layout_marginTop="15dip"
             android:gravity="center"
-            android:padding="15dip"
+            android:paddingBottom="16dip"
+            android:paddingTop="8dip"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />
 
@@ -32,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_text"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dip"
+            android:layout_margin="8dip"
             android:indeterminate="true" />
 
         <print.io.view.TextViewFontLight
@@ -41,10 +40,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_text"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dip"
-            android:layout_marginTop="15dip"
-            android:gravity="center_horizontal"
-            android:padding="15dip"
+            android:gravity="center"
+            android:paddingBottom="16dip"
+            android:paddingTop="16dip"
             android:text="Continue upload?"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal"
@@ -55,19 +53,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_continue_with_upload"
-            android:layout_margin="10dip"
             android:orientation="horizontal"
             android:visibility="gone" >
 
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_no"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="9dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_blue_light"
+                android:gravity="center"
                 android:onClick="onClickNo"
-                android:padding="14dip"
+                android:padding="8dip"
                 android:text="@string/no"
                 android:textColor="@color/primary_button_text"
                 android:textSize="@dimen/text_size_normal"
@@ -76,12 +74,13 @@
             <print.io.view.ButtonFontLight
                 android:id="@+id/button_yes"
                 android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="9dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dip"
                 android:layout_weight="1"
                 android:background="@drawable/btn_green"
+                android:gravity="center"
                 android:onClick="onClickYes"
-                android:padding="14dip"
+                android:padding="8dip"
                 android:text="@string/yes"
                 android:textColor="@color/secondary_button_text"
                 android:textSize="@dimen/text_size_normal"

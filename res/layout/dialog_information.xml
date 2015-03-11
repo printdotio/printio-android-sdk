@@ -9,20 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_margin="14dip"
         android:background="@drawable/bg_white"
         android:orientation="vertical"
-        android:paddingBottom="32dip"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip"
-        android:paddingTop="32dip" >
+        android:padding="8dip" >
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/dialog_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="15dip"
+            android:paddingBottom="8dip"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_large" />
 
@@ -36,36 +32,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingBottom="15dip"
-                android:paddingLeft="15dip"
-                android:paddingRight="15dip"
-                android:text="@string/help_text"
+                android:paddingBottom="16dip"
+                android:paddingTop="8dip"
                 android:textColor="#5a5d66"
                 android:textSize="@dimen/text_size_normal" />
         </ScrollView>
 
-        <LinearLayout
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dip"
+            android:background="@drawable/btn_blue_light"
             android:gravity="center"
-            android:orientation="horizontal" >
-
-            <print.io.view.ButtonFontLight
-                android:id="@+id/button_ok"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="9dip"
-                android:layout_marginRight="9dip"
-                android:layout_weight="1"
-                android:background="@drawable/btn_blue_light"
-                android:gravity="center"
-                android:padding="14dip"
-                android:text="@string/ok"
-                android:textColor="@color/primary_button_text"
-                android:textSize="@dimen/text_size_large"
-                android:textStyle="bold" />
-        </LinearLayout>
+            android:padding="8dip"
+            android:text="@string/ok"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </RelativeLayout>

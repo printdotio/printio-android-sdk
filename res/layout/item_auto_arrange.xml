@@ -23,19 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:gravity="center"
-            android:text="@string/photo_arrangement"
-            android:textColor="#5a5d66"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_auto_arrange"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_arrangement"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dip"
-            android:gravity="center"
-            android:text="@string/auto_arrange_text"
+            android:text="@string/image_arrangement"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />
 
@@ -43,7 +31,7 @@
             android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_auto_arrange"
+            android:layout_below="@+id/textview_arrangement"
             android:layout_marginBottom="10dip"
             android:layout_marginTop="20dip"
             android:orientation="horizontal" >

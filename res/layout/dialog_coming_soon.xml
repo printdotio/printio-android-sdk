@@ -9,19 +9,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="15dip"
         android:background="@drawable/bg_white"
-        android:padding="20dip" >
+        android:padding="8dip" >
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_coming_soon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="15dip"
-            android:layout_marginTop="15dip"
             android:gravity="center"
-            android:padding="15dip"
+            android:paddingBottom="16dip"
+            android:paddingTop="8dip"
             android:text="@string/coming_soon_product"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />
@@ -31,11 +29,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/textview_coming_soon"
-            android:layout_marginTop="5dip"
+            android:layout_marginTop="8dip"
             android:background="#efeff2"
             android:hint="@string/enter_your_email"
             android:inputType="textEmailAddress"
-            android:padding="12dp"
+            android:padding="12dip"
             android:singleLine="true"
             android:textColor="#b3b3b3"
             android:textColorHint="#b3b3b3" />
@@ -49,8 +47,7 @@
             android:layout_marginTop="8dip"
             android:background="@drawable/btn_blue_light"
             android:gravity="center"
-            android:padding="14dip"
-            android:paddingTop="14dip"
+            android:padding="8dip"
             android:text="@string/send"
             android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal"

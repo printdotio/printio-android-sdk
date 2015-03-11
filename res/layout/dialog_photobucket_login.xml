@@ -5,57 +5,53 @@
     android:background="@drawable/bg_white"
     android:minWidth="300dip"
     android:orientation="vertical"
-    android:padding="16dip" >
+    android:padding="8dip" >
 
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_error_message"
+    <print.io.view.TextViewFontNormal
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dip"
-        android:layout_marginTop="10dip"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="2dip"
+        android:paddingBottom="8dip"
         android:text="@string/log_in_to_photobucket"
-        android:textColor="#5a5d66"
-        android:textSize="@dimen/text_size_title" />
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_large" />
 
     <print.io.view.EditTextFontLight
         android:id="@+id/edittext_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
         android:hint="@string/username"
         android:inputType="textEmailAddress"
-        android:nextFocusForward="@+id/edittext_password" />
+        android:nextFocusForward="@+id/edittext_password"
+        android:padding="12dip" />
 
     <print.io.view.EditTextFontLight
         android:id="@+id/edittext_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:nextFocusForward="@+id/button_login" />
+        android:nextFocusForward="@+id/button_login"
+        android:padding="12dip" />
 
     <LinearLayout
         android:id="@+id/layout_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
+        android:layout_marginTop="8dip"
         android:orientation="horizontal" >
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_cancel"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="4dip"
             android:layout_weight="1"
             android:background="@drawable/btn_blue_light"
+            android:gravity="center"
             android:lineSpacingExtra="1dp"
-            android:paddingBottom="8dip"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:paddingTop="8dip"
+            android:padding="8dip"
             android:text="@string/cancel"
             android:textColor="@color/primary_button_text"
             android:textSize="@dimen/text_size_normal"
@@ -64,15 +60,13 @@
         <print.io.view.ButtonFontLight
             android:id="@+id/button_login"
             android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dip"
             android:layout_weight="1"
             android:background="@drawable/btn_green"
+            android:gravity="center"
             android:lineSpacingExtra="1dp"
-            android:paddingBottom="8dip"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:paddingTop="8dip"
+            android:padding="8dip"
             android:text="@string/login"
             android:textColor="@color/secondary_button_text"
             android:textSize="@dimen/text_size_normal"

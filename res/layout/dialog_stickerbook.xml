@@ -10,15 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="14dip"
+        android:layout_margin="16dip"
         android:background="@drawable/bg_white"
-        android:paddingBottom="15dip"
-        android:paddingLeft="15dip"
-        android:paddingRight="15dip"
-        android:paddingTop="15dip" >
+        android:padding="8dip" >
 
         <print.io.view.TextViewFontLight
-            android:id="@+id/textview_are_you_sure"
+            android:id="@+id/textview_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -31,7 +28,7 @@
             android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textview_are_you_sure"
+            android:layout_below="@+id/textview_title"
             android:layout_marginTop="15dip"
             android:orientation="horizontal" >
 
@@ -55,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:paddingBottom="40dip"
+                android:paddingBottom="32dip"
                 android:text="@string/or"
                 android:textColor="#5a5d66"
                 android:textSize="@dimen/text_size_normal" />

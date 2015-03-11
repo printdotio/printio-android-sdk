@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
     <RelativeLayout
-        android:id="@+id/image_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bg_image_upload_selector"
-        android:padding="1dip" >
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <print.io.imageloader.MyImageViewSquare
             android:id="@+id/imageview_image"
@@ -24,16 +21,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/overlay_translucent"
-            android:visibility="gone" />
-
-        <ImageView
-            android:id="@+id/imageview_warning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_margin="4dip"
-            android:src="@drawable/icon_ellipse"
             android:visibility="invisible" />
 
         <ImageView
@@ -49,27 +36,23 @@
             android:id="@+id/textview_image_index"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="8dip"
-            android:layout_marginRight="8dip"
+            android:layout_alignBottom="@+id/imageview_image"
+            android:layout_alignRight="@+id/imageview_image"
+            android:layout_marginBottom="4dip"
+            android:layout_marginRight="4dip"
             android:background="@drawable/bg_white_transparent"
             android:gravity="center"
-            android:paddingBottom="4dp"
-            android:paddingLeft="7dp"
-            android:paddingRight="7dp"
-            android:paddingTop="4dp"
+            android:minHeight="24dip"
+            android:minWidth="24dip"
             android:textColor="@android:color/black"
             android:textSize="@dimen/text_size_normal"
-            android:visibility="invisible" >
-        </print.io.view.TextViewFontNormal>
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <print.io.view.TextViewFontNormal
         android:id="@+id/textview_dropbox_folder_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/image_container"
         android:layout_marginTop="-3dip"
         android:ellipsize="end"
         android:lineSpacingMultiplier="1"
@@ -78,4 +61,4 @@
         android:textColor="#797c83"
         android:textSize="@dimen/text_size_normal" />
 
-</RelativeLayout>
+</LinearLayout>

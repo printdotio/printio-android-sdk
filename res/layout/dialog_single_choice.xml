@@ -5,45 +5,47 @@
     android:background="@drawable/bg_white"
     android:clickable="true" >
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="15dip"
         android:background="@drawable/bg_white"
-        android:padding="20dip" >
+        android:orientation="vertical"
+        android:padding="8dip" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dip"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large" />
 
         <LinearLayout
             android:id="@+id/layout_content_items"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dip"
-            android:orientation="vertical" >
-        </LinearLayout>
+            android:layout_marginTop="8dip"
+            android:orientation="vertical" />
 
-        <LinearLayout
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginBottom="16dip"
+            android:background="@color/separator_list" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/layout_content_items"
-            android:layout_margin="10dip"
-            android:orientation="horizontal" >
-
-            <print.io.view.ButtonFontLight
-                android:id="@+id/button_cancel"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="9dip"
-                android:layout_weight="1"
-                android:background="@drawable/btn_blue_light"
-                android:paddingBottom="13dip"
-                android:paddingLeft="15dip"
-                android:paddingRight="15dip"
-                android:paddingTop="13dip"
-                android:text="@string/cancel"
-                android:textColor="@color/primary_button_text"
-                android:textSize="@dimen/text_size_normal"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </RelativeLayout>
+            android:background="@drawable/btn_blue_light"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="@string/cancel"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </RelativeLayout>

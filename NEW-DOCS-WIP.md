@@ -14,7 +14,7 @@ Default value is `false` (not hidden).
 ### Code Sample
 
 ```java
-PIO.setHideStatusBar(boolean hideStatusBar);
+PIOConfig#setHideStatusBar(boolean hideStatusBar);
 ```
 ### Screenshots - to be added
 
@@ -40,7 +40,7 @@ This can be done in xml by changing the following item in
 ### Code Sample
 
 ```java
-PIO.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
+PIOConfig#setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
 ```
 _Note that the value set programmatically will override the value set in xml!_  
  
@@ -86,7 +86,7 @@ Recommended dimensions are listed next to the icon name.
 Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.  
 Default value is `false`.
 ```java
-PIO.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
+PIOConfig#useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 ```
 &nbsp;  
 &nbsp;  
@@ -139,7 +139,7 @@ To change side menu text color, modify the following item in
 &nbsp;  
 To select buttons for this section, pass a `List` of `SideMenuButton` to the following method
 ```java
-PIO.setSideMenuButtons(List<SideMenuButton> sideMenuButtons);
+PIOConfig#setSideMenuButtons(List<SideMenuButton> sideMenuButtons);
 
 enum SideMenuButton {
 	EXIT_BUTTON,
@@ -154,7 +154,7 @@ enum SideMenuButton {
 ```
 or, to use the default buttons, call
 ```java
-PIO.setDefaultSideMenuButtonsTop();
+PIOConfig#setDefaultSideMenuButtonsTop();
 ```
 &nbsp;  
 To modify buttons' icons, replace the corresponding icon with your own.
@@ -170,81 +170,74 @@ icon_cart_white.png (45x42)
 &nbsp;  
 #### > Starting PrintIO SDK  
 
-Use the following method:
+To start PrintIO SDK use the following method:
 ```java
-	/**
-	 * Starts the PrintIO SDK
-	 * @param context
-	 * @param pioCallback
-	 * @throws PIOException
-	 */
-PIO.start(Context context, PIOCallback pioCallback);
+/**
+ * Starts the PrintIO SDK.
+ * 
+ * @param context
+ *            The active {@code Context} for your application.
+ * @param config
+ *            The {@code PIOConfig} holding configuration of PIO SDK.
+ * @throws PIOException
+ *             If an error occurs while starting SDK.
+ */
+public static void start(Context context, PIOConfig config) throws PIOException;
 ```
+&nbsp;
+#### > PrintIO SDK publicly exposed data
 
-Order information is passed back to the host application  
-using PIOCallback class' `onOrderComplete(CallbackInfo callBackInfo);` method.  
-CallbackInfo object contains following data:  
-```java
-class CallbackInfo {
-	String orderId;
-	String totalPrice;
-	ShippingInfo shippingInfo;
-	List<ShipItem> items;
-}
-```
+PrintIO SDK provides SDK user with following data which could be accessed at all times:
 
-ShippingInfo object contains following data:
-```java
-class ShippingInfo {
-	String city;
-	String country;
-	String countryCode;
-	String email;
-	String firstName;
-	String lastName;
-	String phone;
-	String state;
-	String street;
-	String street2;
-	String zipCode;
-}
-```
+ 1. Current shopping cart state
+ 2. Last successful order information
 
-ShipItem object contains following data:
-```java
-class ShipItem {
-	List<String> skus;
-	List<ShipOption> shipOptions;
-}
-```
+Methods for accessing these structures are `PIO.getShoppingCart(Context)` and `PIO.getLastOrder(Context)` respectively.
 
-ShipOptions object contains following data:
-```java
-class ShipOptions {
-	int id;
-	String methodType;
-	String name;
-	String carrierName;
-	String carrierLogoUrl;
-	ShipPrice price;
-	int daysToDelivery;
-}
-```
+&nbsp;
+#### > PrintIO SDK Events
+
+PrintIO SDK uses BroadcastReceiver mechanism to notify user of SDK with events. PrintIO SDK broadcast following events:
+
+ 1. Event when chopping cart is changed (when new is added to the cart, or when item is removed from the cart, etc...).
+ 2. Event when end SDK user successfully completes an order. 
+
+All events (Intents) are broadcasted locally within SDK. All Intents have the same action `"PIO_SDK_EVENTS"` but type of en event could be determined by `"TYPE"` Intent extra data holding String identifier of en event. Possible values are following:
+
+ 1. `"CART_CHANGED"` - when cart is changed
+ 2. `"ORDER_COMPLETED"` - when end SDK user successfully completes an order
+
 &nbsp;  
-#### > Get order information when SDK is closed  
+##### > Example code for handling PrintIO SDK events
 
-In order to get back order information, host activity needs to be specified.  
-Control will be returned to this activity when PrintIO SDK is closed.  
-To set host activity, use the following method:
+First, create your implementation of `BroadcastReceiver` which will receive Intents describing events sent by the PrintIO SDK.
+
 ```java
-//Use qualified class name, like this: "com.example.piosdkpoconcept.ActivityTest"
-PIO.setHostAppActivity(String className);
+public class PIOSDKEventListener extends BroadcastReceiver {
+
+	@Override
+	public void onReceive(Context context, Intent intent) {
+		String type = intent.getStringExtra(PIOConstants.PIO_SDK_EVENT_TYPE);
+		if (PIOConstants.PIO_SDK_EVENT_CART_CHANGED.equals(type)) {
+			Log.d("PIOSDKEventListener", "Cart changed");
+			// Use PIO.getShoppingCart(context) to get current shopping cart state
+		} else if (PIOConstants.PIO_SDK_EVENT_ORDER_COMPLETED.equals(type)) {
+			Log.d("PIOSDKEventListener", "Order finished");
+			// Use PIO.getLastOrder(context) to get last successful order information
+		}
+	}
+
+}
 ```
 
-Order information is passed back to the host activity through Intent.  
-To obtain this data, use the following code snippet:
+Then, register event listener in `onCreate()` method of your `Application`.
+
 ```java
-ArrayList<String> cartItems = getIntent().getStringArrayListExtra("ShoppingCartItems");
+@Override
+public void onCreate() {
+	super.onCreate();
+	LocalBroadcastManager.getInstance(this).registerReceiver(new PIOSDKEventListener(), new IntentFilter(PIOConstants.PIO_SDK_EVENTS));
+}
 ```
 &nbsp;  
 #### > Pass promo coupon code to SDK  
@@ -256,14 +249,14 @@ Once products in shopping cart are purchased, coupon code is cleared.
 
 To set promo coupon code, use the following method:
 ```java
-PIO.setPromoCode(String promoCode);
+PIOConfig#setPromoCode(String promoCode);
 ```
 &nbsp;
 #### > Set support email address  
 
 To set support email address, use the following method:
 ```java
-PIO.setSupportEmail(String supportEmail);
+PIOConfig#setSupportEmail(String supportEmail);
 ```
 &nbsp;  
 ##### **Options** section:  
@@ -314,9 +307,9 @@ icon_change_language.png (80x80)
 These methods control if the user is allowed to change the preset country, currency and language.  
 The default values are `true`.
 ```java
-PIO.setChangeableCountry(boolean changeableCountry);
-PIO.setChangeableCurrency(boolean changeableCurrency);
-PIO.setChangeableLanguage(boolean changeableLanguage);
+PIOConfig#setChangeableCountry(boolean changeableCountry);
+PIOConfig#setChangeableCurrency(boolean changeableCurrency);
+PIOConfig#setChangeableLanguage(boolean changeableLanguage);
 ```
 &nbsp;  
 ##### **Accounts** section:
@@ -344,7 +337,7 @@ To change the section title background color, modify the following item in
 #### > To select Photo Sources that will be displayed here, refer to **Photo Sources** section of this document.
 #### > To hide **Accounts** section, use the following method
 ```java
-PIO.hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
+PIOConfig#hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
 ```
 &nbsp;  
 ##### **Info** section:  
@@ -370,7 +363,7 @@ To change the section title background color, modify the following item in
 &nbsp;  
 To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the following method
 ```java
-PIO.setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
+setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
 
 enum SideMenuInfoButton {
     PRICING_CHART,
@@ -384,7 +377,7 @@ enum SideMenuInfoButton {
 ```
 or, to use the default buttons, call
 ```java
-PIO.setDefaultSideMenuInfoButtons();
+PIOConfig#setDefaultSideMenuInfoButtons();
 ```
 &nbsp;  
 To modify buttons' icons, replace the corresponding icon with your own.
@@ -405,7 +398,7 @@ icon_side_menu_past_orders.png (baseline-mdpi:26x26; xhdpi:52x52)
 By default, the SDK version is shown at the bottom of the Side Menu.  
 To hide the SDK version, use the following method
 ```java
-PIO.hideVersionInSideMenu(boolean isHidden);
+PIOConfig#hideVersionInSideMenu(boolean isHidden);
 ```
 &nbsp;  
 &nbsp;  
@@ -414,7 +407,7 @@ PIO.hideVersionInSideMenu(boolean isHidden);
 
 Default value is `false` (side menu slides from left side).
 ```java
-PIO.setRightSideMenu(boolean rightSideMenu);
+PIOConfig#setRightSideMenu(boolean rightSideMenu);
 ```
 &nbsp;  
 &nbsp;  
@@ -424,21 +417,18 @@ PIO.setRightSideMenu(boolean rightSideMenu);
 This is an option from Side Menu.  
 In order to use it, Side Menu needs to be enabled.
 ```java
-/**
- * @param shareText - Text that will be used when sharing. May contain link.
- */
-PIO.setShareText(String shareText);
+PIOConfig#setShareText(String shareText);
 ```
 &nbsp;  
 &nbsp;  
 Featured Products
 --------------
-#### > Set country on Featured Products screen instead on First screen. Default value is YES.  
+#### > Set country on Featured Products screen instead on First screen. Default value is true.  
 ( > Set country on Featured Products screen instead on First screen)  
 
 Default value is `true`.
 ```java
-PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
+PIOConfig#setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 ```
 &nbsp;  
 &nbsp;  
@@ -447,7 +437,16 @@ PIO.setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 
 Default value is `false`.
 ```java
-PIO.setHideCategorySearchBar(boolean hideCategorySearchBar);
+PIOConfig#setHideCategorySearchBar(boolean hideCategorySearchBar);
+```
+&nbsp;  
+&nbsp;  
+#### > Shows featured products by default. If disabled all products screen is shown. Default value is YES.
+( > Shows featured products by default. If disabled all products screen is shown. Default value is YES.)  
+
+Default value is `true`.
+```java
+PIOConfig#setShowFeaturedProductsByDefault(boolean showFeaturedProductsByDefault);
 ```
 &nbsp;  
 &nbsp;  
@@ -455,7 +454,7 @@ PIO.setHideCategorySearchBar(boolean hideCategorySearchBar);
 
 Default value is `false`.
 ```java
-PIO.setHideComingSoonProducts(boolean hideComingSoonProducts);
+PIOConfig#setHideComingSoonProducts(boolean hideComingSoonProducts);
 ```
 &nbsp;  
 &nbsp;  
@@ -467,7 +466,7 @@ Photo Sources
 To select photo sources for this section, pass a `List` of `PhotoSource` to the following method.  
 The order of photo sources on screen is determined by order of elements in the list.
 ```java
-PIO.setPhotoSources(List<PhotoSource> photoSources);
+PIOConfig#setPhotoSources(List<PhotoSource> photoSources);
 
 enum PhotoSource {
 	PHONE,
@@ -489,7 +488,7 @@ Up to 6 photo sources are supported.
 
 Set photo source that will be selected by default.
 ```java
-PIO.setDefaultPhotoSource(PhotoSource defaultPhotoSource);
+PIOConfig#setDefaultPhotoSource(PhotoSource defaultPhotoSource);
 ```
 &nbsp;  
 &nbsp;  
@@ -498,7 +497,7 @@ PIO.setDefaultPhotoSource(PhotoSource defaultPhotoSource);
 
 Set predefined list of images that will be available to the user.
 ```java
-PIO.setImageUrls(String[] imageUrls);
+PIOConfig#setImageUrls(String[] imageUrls);
 ```
 &nbsp;  
 &nbsp;  
@@ -507,7 +506,7 @@ PIO.setImageUrls(String[] imageUrls);
 
 If images were preset using `setImageUrls(...)`, this method can be used to disable photo sources and force the user to only use predefined photos.
 ```java
-PIO.setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
+PIOConfig#setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
 ```
 &nbsp;  
 &nbsp;  
@@ -515,7 +514,7 @@ PIO.setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
 
 ```java
 //TO BE DONE
-PIO.setPhotosourcesDisabledForOnePhotoTemplate(boolean isPhotosourcesDisabledForOnePhotoTemplate);
+PIOConfig#setPhotosourcesDisabledForOnePhotoTemplate(boolean PIOConfig#isPhotosourcesDisabledForOnePhotoTemplate);
 ```
 &nbsp;  
 &nbsp;  
@@ -523,7 +522,7 @@ PIO.setPhotosourcesDisabledForOnePhotoTemplate(boolean isPhotosourcesDisabledFor
 ( > Set passed in image as thumbnail for templates with one photo)  
 
 ```java
-PIO.setPassedImageThumb(boolean passedImageThumb);
+PIOConfig#setPassedImageThumb(boolean passedImageThumb);
 ```
 **NOTICE:**  
 Currently supports Canvas Wraps, Framed Prints and Acrylic Prints.
@@ -534,7 +533,7 @@ Currently supports Canvas Wraps, Framed Prints and Acrylic Prints.
 ~~Default value is `false`.~~
 ```java
 //TO BE DONE
-PIO.setHideIconForUploadInstructions(boolean hideIconForUploadInstructions);
+PIOConfig#setHideIconForUploadInstructions(boolean hideIconForUploadInstructions);
 ```
 &nbsp;  
 &nbsp;  
@@ -545,8 +544,8 @@ Photo Sources Credentials
 In order to use Instagram as a photo source, credentials are required.  
 To obtain Instagram `CLIENT_ID`, refer to documentation at http://instagram.com/developer
 ```java
-PIO.setInstagramClientId(String INSTAGRAM_CLIENT_ID);
-PIO.setInstagramCallbackUri(String INSTAGRAM_CALLBACK_URI);
+PIOConfig#setInstagramClientId(String INSTAGRAM_CLIENT_ID);
+PIOConfig#setInstagramCallbackUri(String INSTAGRAM_CALLBACK_URI);
 ```
 &nbsp;  
 &nbsp;  
@@ -555,8 +554,8 @@ PIO.setInstagramCallbackUri(String INSTAGRAM_CALLBACK_URI);
 In order to use Flickr as a photo source, credentials are required.  
 To obtain Flickr `CONSUMER_KEY` and `CONSUMER_SECRET`, refer to documentation at https://www.flickr.com/services/developer/api
 ```java
-PIO.setFlickrConsumerKey(String FLICKR_CONSUMER_KEY);
-PIO.setFlickrConsumerSecret(String FLICKR_CONSUMER_SECRET);
+PIOConfig#setFlickrConsumerKey(String FLICKR_CONSUMER_KEY);
+PIOConfig#setFlickrConsumerSecret(String FLICKR_CONSUMER_SECRET);
 ```
 ~~**NOTICE:**~~  
 ~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-flickr`.~~
@@ -567,8 +566,8 @@ PIO.setFlickrConsumerSecret(String FLICKR_CONSUMER_SECRET);
 In order to use Dropbox as a photo source, credentials are required.  
 To obtain Dropbox `CONSUMER_KEY` and `CONSUMER_SECRET`, refer to documentation at https://www.dropbox.com/developers/apps
 ```java
-PIO.setDropboxConsumerKey(String DROPBOX_CONSUMER_KEY);
-PIO.setDropboxConsumerSecret(String DROPBOX_CONSUMER_SECRET);
+PIOConfig#setDropboxConsumerKey(String DROPBOX_CONSUMER_KEY);
+PIOConfig#setDropboxConsumerSecret(String DROPBOX_CONSUMER_SECRET);
 ```
 ~~**NOTICE:**~~  
 ~~If you are asked for `REDIRECT URI`, set it to `http://x-oauthflow-dropbox`.~~
@@ -585,7 +584,7 @@ You need to provide `facebook_app_id` in your app's `strings.xml` file.
 ```
 You can then reference it in java code (**required**) like this:
 ```java
-PIO.setFacebookAppId(getString(R.string.facebook_app_id));
+PIOConfig#setFacebookAppId(getString(R.string.facebook_app_id));
 ```
 &nbsp;  
 &nbsp;  
@@ -594,18 +593,18 @@ PIO.setFacebookAppId(getString(R.string.facebook_app_id));
 In order to use Photobucket as a photo source, credentials are required.  
 To obtain Photobucket `CLIENT_ID` and `CLIENT_SECRET`, refer to documentation at http://pic.pbsrc.com/dev_help/WebHelpPublic/Content/FAQ/FAQOverview.htm#HowDoIUseAPI
 ```java
-PIO.setPhotobucketClientId(String PHOTOBUCKET_CLIENT_ID);
-PIO.setPhotobucketClientSecret(String PHOTOBUCKET_CLIENT_SECRET);
+PIOConfig#setPhotobucketClientId(String PHOTOBUCKET_CLIENT_ID);
+PIOConfig#setPhotobucketClientSecret(String PHOTOBUCKET_CLIENT_SECRET);
 ```
 &nbsp;  
 If your app already logs user in to Photobucket, you will want to save the user from having to log in again inside the PrintIO SDK.  
 
 To do this, you need to provide a Photobucket `USERNAME`, `BASE_API_URL`, `ACCESS_TOKEN` and `REFRESH_TOKEN` using the following methods.
 ```java
-PIO.setPhotobucketUsername(String photobucketUsername);
-PIO.setPhotobucketBaseApiUrl(String photobucketBaseApiUrl);
-PIO.setPhotobucketAccessToken(String photobucketAccessToken);
-PIO.setPhotobucketRefreshToken(String photobucketRefreshToken);
+PIOConfig#setPhotobucketUsername(String photobucketUsername);
+PIOConfig#setPhotobucketBaseApiUrl(String photobucketBaseApiUrl);
+PIOConfig#setPhotobucketAccessToken(String photobucketAccessToken);
+PIOConfig#setPhotobucketRefreshToken(String photobucketRefreshToken);
 ```
 &nbsp;  
 &nbsp;  
@@ -623,7 +622,7 @@ Customize Product
 The toolbar contains the following buttons: `Photos`, `Edit Tools`, `Options` and `Layout`.  
 Default value is `true`.
 ```java
-PIO.setShowOptionsInCustomize(boolean showOptionsInCustomize);
+PIOConfig#setShowOptionsInCustomize(boolean showOptionsInCustomize);
 ```
 **NOTICE:**  
 Not all of those buttons' functions have been implemented yet.  
@@ -634,7 +633,16 @@ Not all of those buttons' functions have been implemented yet.
 
 Default value is `true`.
 ```java
-PIO.setShowPhotosInCustomize(boolean showPhotosInCustomize);
+PIOConfig#setShowPhotosInCustomize(boolean showPhotosInCustomize);
+```
+&nbsp;  
+&nbsp;  
+#### > Shows button for adding images when photo sources are disabled.  
+( >  Shows button for adding images when photo sources are disabled.)  
+
+Default value is `false`.
+```java
+PIOConfig#enablePhotoSourcesInCustomizeProduct(boolean isEnabled);
 ```
 &nbsp;  
 &nbsp;  
@@ -648,7 +656,7 @@ If it is set to `false`, a dialog will appear allowing the user to choose betwee
 
 Default value is `false`.
 ```java
-PIO.setAutoArrange(boolean autoArrange);
+PIOConfig#setAutoArrange(boolean autoArrange);
 ```
 **DIFFERENCES BETWEEN iOS and Android:**  
 iOS version of the SDK provides the following choices:
@@ -687,7 +695,7 @@ icon_help_circle_grey_dark.png (50x50px) - pressed state
 
 Default value is 'false' (Help button is visible).  
 ```java
-PIO.hideHelpButtonInCustomizeProduct(boolean isHidden);
+PIOConfig#hideHelpButtonInCustomizeProduct(boolean isHidden);
 ```
 &nbsp;  
 &nbsp;  
@@ -711,7 +719,7 @@ To change tooltip background color, modify the following item in
 By default, the pop up balloon disappears after 10 seconds.  
 To change this value, use the following method:  
 ```java
-PIO.setDoubleTapBalloonVisibilityTime(int visibilityTimeoutSeconds);
+PIOConfig#setDoubleTapBalloonVisibilityTime(int visibilityTimeoutSeconds);
 ```
 **NOTICE:**  
 The method takes SECONDS (not milliseconds) as argument.
@@ -722,7 +730,7 @@ The method takes SECONDS (not milliseconds) as argument.
 
 ```java
 //TO BE DONE
-PIO.setImageEditorHelpDialog(...);
+PIOConfig#setImageEditorHelpDialog(...);
 ```
 &nbsp;  
 &nbsp;  
@@ -734,7 +742,7 @@ Image Editor
 Available buttons are `Rotate`, `Edit Text` and `Effects`.  
 By default, all buttons are visible.
 ```java
-PIO.setUpCropScreen(boolean isRotateAllowed, boolean isTextAllowed, boolean isEffectsAllowed);
+PIOConfig#setUpCropScreen(boolean isRotateAllowed, boolean isTextAllowed, boolean isEffectsAllowed);
 ```
 
 To modify icons, replace following icons with your own icons of same names.  
@@ -828,13 +836,21 @@ To change cart quantity text color, modify the following item in
 <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
 ```
 &nbsp;  
+&nbsp;
+#### > Show "Add more products" button on Shopping Cart screen.  
+
+Default value is 'true' (button is visible).
+```java
+PIOConfig#setShowAddMoreProductsInShoppingCart(boolean isVisible);
+```
 &nbsp;  
+&nbsp;   
 #### > Remove plus sign from "Add more products" button. By default, sign is visible.  
 ( > Remove `+` sign from `Add More Products` button)  
 
 Default value is `false` (`+` sign is visible).
 ```java
-PIO.removePlusFromAddMoreProductsButton(boolean removePlusSign);
+PIOConfig#removePlusFromAddMoreProductsButton(boolean removePlusSign);
 ```
 To change the icon for "Add More Products" button,
 replace the following icon with your own icon of the same name.  
@@ -848,7 +864,15 @@ icon_add_more_products.png (36×36 xhdpi, 54x54 xxhdpi)
 
 Default value is 'false' (edit button is visible).
 ```java
-PIO.hideEditButtonInShoppingCart(boolean isHidden);
+PIOConfig#hideEditButtonInShoppingCart(boolean isHidden);
+```
+&nbsp;  
+&nbsp;  
+#### > Controls if widget should be closed when tap on Back button in "Shopping Cart" screen. 
+
+Default value is false (functionality is ignored).
+```java
+PIOConfig#closeWidgetFromShoppingCart(boolean closeWidgetFromShoppingCart);
 ```
 &nbsp;  
 &nbsp;  
@@ -859,7 +883,7 @@ Payment Screen
 
 Default value is `false` (logo is visible).
 ```java
-PIO.removeLogoFromPaymentScreen(boolean removeLogo);
+PIOConfig#removeLogoFromPaymentScreen(boolean removeLogo);
 ```
 To change the logo on Payment and Order Confirmation screens,
 replace the following icon with your own icon of the same name.  
@@ -874,7 +898,7 @@ icon_logo.png (71×80)
 
 By default, all payment options are enabled.
 ```java
-PIO.setPaymentOptions(int paymentOptions);
+PIOConfig#setPaymentOptions(int paymentOptions);
 ```
 Use one of the following values from PublicConstants:
 ```java
@@ -895,7 +919,7 @@ Sets the default shipping country.
 /**
  * @param countryCode - A two-letter country code
  */
-PIO.setCountryCode(String countryCode);
+PIOConfig#setCountryCode(String countryCode);
 ```
 **NOTICE:**  
 If `setCountryOnFeaturedProducts()` was set to `true`, default country code is `us`.  
@@ -909,7 +933,7 @@ If not set, default value is determined by the selected Country Code.
 /**
  * @param currencyCode - A three-letter currency code
  */
-PIO.setCurrencyCode(String currencyCode);
+PIOConfig#setCurrencyCode(String currencyCode);
 ```
 &nbsp;  
 &nbsp;  
@@ -921,7 +945,7 @@ PIO.setCurrencyCode(String currencyCode);
 /**
  * @param languageCode - A two-letter language code
  */
-PIO.setLanguageCode(String languageCode);
+PIOConfig#setLanguageCode(String languageCode);
 ```
 &nbsp;  
 &nbsp;  
@@ -935,12 +959,12 @@ Instead of opening Featured Products screen, go directly to specified product.
 /**
  * @param productIdFromApp - ID of a product to jump to (Default value is -1)
  */
-PIO.setProductIdFromApp(int productIdFromApp);
+PIOConfig#setProductIdFromApp(int productIdFromApp);
 
 /**
  * @param skipProductDetails - Use 'true' to skip ProductDetails screen and go directly to Step 1.
  */
-PIO.setSkipProductDetails(boolean skipProductDetails);
+PIOConfig#setSkipProductDetails(boolean skipProductDetails);
 ```
 **NOTICE:**  
 Product IDs can be found in PublicConstants class.  
@@ -955,7 +979,7 @@ Not all Product IDs are currently supported.
  * @param productIdFromApp - ID of a product to jump to
  * @param productSkuFromApp - SKU for product
  */
-PIO.setIdAndSku(int productIdFromApp, String productSkuFromApp);
+PIOConfig#setIdAndSku(int productIdFromApp, String productSkuFromApp);
 ```
 **NOTICE:**  
 PRODUCT_IDS constants are currently `private`, but will be made `public` in upcoming versions of the SDK.  
@@ -966,7 +990,7 @@ SKUs currently work only for Phone Cases and Coasters.
 
 Force a SKU for product.
 ```java
-PIO.setProductSkuFromApp(String productSkuFromApp);
+PIOConfig#setProductSkuFromApp(String productSkuFromApp);
 ```
 **NOTICE:**  
 This method only works for Phone Cases, **not** for Coasters.  
@@ -976,7 +1000,7 @@ This method only works for Phone Cases, **not** for Coasters.
 
 ```java
 //TO BE DONE
-PIO.setProductVariantFromApp(String productVariantFromApp);
+PIOConfig#setProductVariantFromApp(String productVariantFromApp);
 ```
 &nbsp;  
 &nbsp;  
@@ -990,9 +1014,7 @@ To obtain Parse.com credentials, refer to https://parse.com/
 Set the Parse.com `APPLICATION_ID` and `CLIENT_KEY`.  
 Pass an `Application` reference to `initializeParse(...)` method.
 ```java
-PIO.setParseApplicationId(String PARSE_APPLICATION_ID);
-PIO.setParseClientKey(String PARSE_CLIENT_KEY);
-PIO.initializeParse(Application application);
+PIO.initializeParse(Application application, PARSE_APPLICATION_ID, PARSE_CLIENT_KEY);
 ```
 &nbsp;  
 &nbsp;  
@@ -1010,10 +1032,10 @@ PrintIO SDK is currently using PayPal Android SDK version 1.2.1
 PayPal CLIENT_ID can be obtained here  
 https://developer.paypal.com/webapps/developer/applications/myapps  
 ```java
-PIO.setPayPalClientId(String PAY_PAL_CLIENT_ID);
+PIOConfig#setPayPalClientId(String PAY_PAL_CLIENT_ID);
 ```
 **NOTICE:**  
-If `PIO.setLiveApplication(...)` was set to `true`, PayPal **Live** environment is used.  
+If `PIOConfig#setLiveApplication(...)` was set to `true`, PayPal **Live** environment is used.  
 Otherwise, **Sandbox** environment is used.  
 &nbsp;  
 &nbsp;  
@@ -1022,7 +1044,7 @@ Otherwise, **Sandbox** environment is used.
 
 PayPal Receiver Email is your PayPal business account that will receive the payments from the app.  
 ```java
-PIO.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
+PIOConfig#setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
 ```
 &nbsp;  
 &nbsp;  
@@ -1032,7 +1054,7 @@ Braintree Settings
 ( > Set up Braintree encryption key)  
 
 ```java
-PIO.setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);
+PIOConfig#setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);
 ```
 &nbsp;  
 &nbsp;  
@@ -1070,9 +1092,9 @@ These are the default values which work well with default fonts.
 Pass font's filename to appropriate method.  
 `.otf` and `.ttf` fonts are supported.
 ```java
-PIO.setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
-PIO.setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
-PIO.setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
+setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
+setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
+setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
 ```
 **NOTICE:**  
 Fonts need to be placed in `assets` dir.  
@@ -1145,7 +1167,7 @@ To show logo in the navigation bar, use the following method
  * @param imageResourceId - ID of a drawable resource to be used.
  * Make sure to use the image of appropriate size.
  */
-PIO.setApplicationIconId(int imageResourceId);
+PIOConfig#setApplicationIconId(int imageResourceId);
 ```
 &nbsp;  
 &nbsp;  
@@ -1154,7 +1176,7 @@ PIO.setApplicationIconId(int imageResourceId);
 
 Default is blank (no name).
 ```java
-PIO.setPartnerName(String partnerName);
+PIOConfig#setPartnerName(String partnerName);
 ```
 &nbsp;  
 &nbsp;  
@@ -1167,7 +1189,7 @@ PIO.setPartnerName(String partnerName);
  * @param screenId  the ID of a screen to jump to.
  * @param flags  flags that control app's behaviour (back button, etc...). If no flags are required, use 0
  */
-PIO.setJumpToScreen(int screenId, int flags);
+PIOConfig#setJumpToScreen(int screenId, int flags);
 ```
 **NOTICE:**  
 Screens and flags are defined in PublicConstants.java  
@@ -1189,7 +1211,7 @@ FLAG_GO_BACK_TO_FEATURED_PRODUCTS
 
 ```java
 //TO BE DONE
-PIO.setTermsAndConditionsUrl(String termsAndConditionsUrl);
+PIOConfig#setTermsAndConditionsUrl(String termsAndConditionsUrl);
 ```
 &nbsp;  
 &nbsp;  
@@ -1219,7 +1241,7 @@ More categories may be added in the future.
 Colors' names will be changed to more generic names in the future.  
 &nbsp;  
 &nbsp;  
-#### > “Product Details” screen  
+#### > Product Details screen  
 ( > Change Product Details screen labels icons and colors)  
 
 Replace the following icon(s) with your own icon(s) of the same name(s).  
@@ -1287,7 +1309,7 @@ Labels' colors are the same color as the secondary button
 #### > Set url for Help in side menu  
 
 ```java
-PIO.setHelpUrl(String helpUrl);
+PIOConfig#setHelpUrl(String helpUrl);
 ```
 &nbsp;  
 &nbsp;  

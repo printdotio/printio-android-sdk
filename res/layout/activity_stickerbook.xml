@@ -32,7 +32,7 @@
         </LinearLayout>
 
         <print.io.view.TextViewFontBold
-            android:id="@+id/textview_photos"
+            android:id="@+id/textview_quantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -102,6 +102,14 @@
         android:dividerHeight="1px"
         android:headerDividersEnabled="false"
         android:scrollbars="none" />
+
+    <include
+        android:id="@+id/dummy_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dummy_title_separator"
+        layout="@layout/list_item_stickerbook"
+        android:visibility="invisible" />
 
     <!-- Stickerbook info dialog -->
 
