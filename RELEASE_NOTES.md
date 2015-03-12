@@ -11,7 +11,7 @@
 
 **Bugs:**
 
--   [*Throw Pillows - On Color Options screen, for a moment, Step 4 appears on the screen*]
+* Throw Pillows - On Color Options screen, for a moment, Step 4 appears on the screen
 
 ### 
 
