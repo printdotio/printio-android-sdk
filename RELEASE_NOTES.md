@@ -11,7 +11,7 @@
 
 **Bugs:**
 
--   [*Throw Pillows - On Color Options screen, for a moment, Step 4 appears on the screen*](https://trello.com/c/ZT9GCHdB/1184-throw-pillows-on-color-options-screen-for-the-moment-step-4-appears-on-the-screen)
+-   [*Throw Pillows - On Color Options screen, for a moment, Step 4 appears on the screen*]
 
 ### 
 
