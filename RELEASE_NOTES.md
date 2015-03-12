@@ -54,7 +54,7 @@
 
 * Added option on Shopping Review screen to offer expedited/overnight shipping options
 
-* Update PayPal SDK
+* Updated PayPal SDK
 
 * Created method PIO.closeWidgetFromShoppingCart()
 
