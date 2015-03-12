@@ -52,17 +52,17 @@
 
 * Ability to change shipment options
 
-* Need to add options on shopping review screen to offer expedited, overnight shipping options
+* Added option on Shopping Review screen to offer expedited, overnight shipping options
 
 * Update PayPal SDK
 
-* Create method PIO.closeWidgetFromShoppingCart()
+* Created method PIO.closeWidgetFromShoppingCart()
 
-* Split PIO class into PIO and PIOConfig classes (update docs accordingly)
+* Split PIO class into PIO and PIOConfig classes (updated docs accordingly)
 
-* Create internal SDK properties
+* Created internal SDK properties
 
-* Improve activity navigation
+* Improved activity navigation
 
 * Caching of Photobucket images so the SDK doesn't make a new API call every time
 
@@ -74,7 +74,7 @@
 
 * Method for setting default products screen (set Featured screen or All Products screen to be first load)
 
-* Removing “Add More” from cart: Via method
+* Removing “Add More” from cart Via method
 
 * Jump to screen
 
@@ -88,7 +88,7 @@
 
 * Change Layout from customize screen
 
-* Create method to hide help button in Customize Product screen
+* Created method to hide help button in Customize Product screen
 
 * Improved handling of API calls
 
