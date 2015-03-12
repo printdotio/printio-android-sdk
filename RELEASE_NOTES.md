@@ -52,7 +52,7 @@
 
 * Ability to change shipment options
 
-* Added option on Shopping Review screen to offer expedited, overnight shipping options
+* Added option on Shopping Review screen to offer expedited/overnight shipping options
 
 * Update PayPal SDK
 
