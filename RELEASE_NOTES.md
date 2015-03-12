@@ -1,7 +1,5 @@
 ##Android Release Notes
 
-***
-
 2.0.3 (v116)
 ============
 
