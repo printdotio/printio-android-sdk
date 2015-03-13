@@ -1,5 +1,18 @@
 ##Android Release Notes
 
+2.0.4 (v116)
+============
+
+**Features:**
+
+-   Split `PIO.start(Context, PIOConfig)` into `PIO.setConfig(Context, PIOConfig)` and `PIO.start(Context)`
+
+**Bugs:**
+
+-   /
+
+### 
+
 2.0.3 (v116)
 ============
 
