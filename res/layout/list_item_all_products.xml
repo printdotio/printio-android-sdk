@@ -3,17 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_selector_featured_product"
-    android:paddingBottom="5dip"
-    android:paddingLeft="10dip"
-    android:paddingRight="10dip"
-    android:paddingTop="10dip" >
+    android:padding="4dip" >
 
     <print.io.imageloader.MyImageViewSquare
         android:id="@+id/imageview_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop" />
 
     <ImageView
         android:id="@+id/imageview_coming_soon"
@@ -27,24 +25,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="23dip"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageview_image"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:paddingBottom="4dip"
+        android:paddingTop="4dip" >
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_product_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:singleLine="true"
             android:textColor="#212326"
-            android:textSize="@dimen/text_size_normal" />
+            android:textSize="@dimen/text_size_small" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_starting_at"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
+            android:layout_height="match_parent"
+            android:gravity="right|bottom"
             android:singleLine="true"
             android:textColor="#212326"
             android:textSize="@dimen/text_size_small" />

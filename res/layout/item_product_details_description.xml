@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <print.io.view.TextViewFontBold
+        <print.io.view.TextViewFontNormal
             android:id="@+id/textview_content_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

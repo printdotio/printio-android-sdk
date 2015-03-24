@@ -85,13 +85,11 @@
         android:scrollbars="none" >
 
         <LinearLayout
-            android:id="@+id/linearLayoutMainScroll"
+            android:id="@+id/linearlayout_main_scroll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp" />
+            android:orientation="vertical" />
     </ScrollView>
 
 </RelativeLayout>

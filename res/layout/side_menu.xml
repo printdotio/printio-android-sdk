@@ -145,7 +145,7 @@
                             android:layout_margin="5dip"
                             android:gravity="center"
                             android:textColor="@color/side_menu_change_currency_text"
-                            android:textSize="@dimen/text_size_huge" />
+                            android:textSize="35dip" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_currency"
@@ -183,14 +183,13 @@
                         <print.io.imageloader.MyImageView
                             android:id="@+id/image_view_country"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="35dip"
                             android:layout_above="@+id/dummy_country"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginLeft="22dp"
-                            android:layout_marginRight="22dp"
-                            android:layout_marginTop="5dp"
+                            android:layout_margin="5dip"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
                             android:src="@drawable/icon_change_country" />
 
                         <print.io.view.TextViewFontLight
@@ -228,12 +227,14 @@
 
                         <ImageView
                             android:id="@+id/image_view_language"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dip"
                             android:layout_above="@+id/dummy_language"
                             android:layout_centerHorizontal="true"
                             android:layout_gravity="center"
                             android:layout_margin="5dip"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
                             android:src="@drawable/icon_change_language" />
 
                         <print.io.view.TextViewFontLight

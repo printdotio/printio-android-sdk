@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content" >
+    android:layout_height="wrap_content"
+    android:padding="8dip" >
 
     <print.io.imageloader.MyImageViewAspectRatio
         android:id="@+id/imageview_phone_case"
@@ -9,7 +10,6 @@
         android:layout_height="60dip"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
         android:adjustViewBounds="true" />
 
     <print.io.view.TextViewFontLight
@@ -18,10 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageview_phone_case"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:layout_marginBottom="3dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dip"
+        android:layout_marginBottom="4dip"
+        android:gravity="center_horizontal"
         android:lines="2"
         android:textColor="#010101"
         android:textSize="@dimen/text_size_small" />

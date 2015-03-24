@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="6dip" >
+
+    <print.io.imageloader.MyImageView
+        android:id="@+id/imageview_pillow"
+        android:layout_width="100dip"
+        android:layout_height="90dip"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:paddingTop="6dip"
+        android:scaleType="fitCenter" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_pillow_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview_pillow"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="2dip"
+        android:textColor="#010101"
+        android:textSize="@dimen/text_size_normal" />
+
+    <print.io.view.TextViewFontBold
+        android:id="@+id/textview_pillow_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview_pillow_size"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dip"
+        android:textColor="#010101"
+        android:textSize="@dimen/text_size_normal" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

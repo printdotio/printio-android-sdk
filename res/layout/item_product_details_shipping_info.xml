@@ -21,7 +21,7 @@
             android:layout_marginRight="5dip"
             android:src="@drawable/icon_shipping_info" />
 
-        <print.io.view.TextViewFontBold
+        <print.io.view.TextViewFontNormal
             android:id="@+id/textview_shipping_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -32,6 +32,15 @@
                 android:src="@drawable/icon_arrow_back_2" />
         </LinearLayout>
 
+        <Spinner
+            android:id="@+id/spinner_product_page_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/dropdown_transparent"
+            android:gravity="center"
+            android:visibility="gone" />
+
         <RelativeLayout
             android:id="@+id/relativelayout_shopping_cart"
             android:layout_width="wrap_content"
@@ -112,17 +121,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/relativelayout_help_button_info_text"
-        android:layout_below="@+id/textview_current_page"
-        android:layout_marginBottom="8dip" >
+        android:layout_below="@+id/textview_current_page" >
 
-        <print.io.view.CustomizeProductView
-            android:id="@+id/customize_product_view"
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:adjustViewBounds="true" />
+            android:layout_centerInParent="true" >
+
+            <print.io.view.CustomizeProductView
+                android:id="@+id/customize_product_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dip" />
+        </FrameLayout>
     </RelativeLayout>
 
     <!-- Tooltip, displayed over CustomizeProductView, disappears after timeout -->
@@ -262,7 +273,7 @@
 
     <RelativeLayout
         android:id="@+id/layout_product_options"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tab_bar"
         android:background="#ffffff"
@@ -298,7 +309,7 @@
         layout="@layout/item_customize_product_preview_details"
         android:visibility="gone" />
 
-    <!-- Item Auto Arragne -->
+    <!-- Item Auto Arrange -->
 
     <include
         android:id="@+id/layout_auto_arrange"

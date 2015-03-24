@@ -72,6 +72,7 @@
     <!-- Image Couch - Bottom, background -->
 
     <ImageView
+        android:id="@+id/imageview_couch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -121,11 +122,13 @@
             </HorizontalScrollView>
 
             <View
+                android:id="@+id/layout_choose_shape_separator"
                 android:layout_width="match_parent"
                 android:layout_height="1px"
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
-                android:background="@color/step_separator" />
+                android:background="@color/step_separator"
+                android:visibility="gone" />
 
             <!-- Step 2 Title -->
 
@@ -142,21 +145,27 @@
 
             <!-- Step 2 Contents -->
 
-            <HorizontalScrollView
+            <RelativeLayout
                 android:id="@+id/layout_choose_size"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="4dip"
-                android:paddingRight="4dip"
-                android:scrollbars="none" >
+                android:layout_height="match_parent" >
 
-                <LinearLayout
-                    android:id="@+id/linearlayout_choose_size"
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal" />
-            </HorizontalScrollView>
+                    android:layout_centerInParent="true"
+                    android:clipToPadding="false"
+                    android:paddingLeft="100dip"
+                    android:paddingRight="100dip"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_choose_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 

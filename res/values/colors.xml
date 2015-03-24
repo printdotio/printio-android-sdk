@@ -38,6 +38,8 @@
     <color name="photosources_background">#333333</color>
     <color name="photosources_text">#FFFFFF</color>
 
+    <color name="product_details_create_it_container_background">#EBEBEB</color>
+
     <color name="product_details_header_1">#323232</color>
     <color name="product_details_header_2">#42BE9C</color>
     <color name="product_details_header_3">#22A0DD</color>
@@ -83,8 +85,6 @@
     <color name="white">#FFFFFF</color>
     <color name="overlay_translucent">#80000000</color>
     <color name="promo_code_background">#F3F3F3</color>
-    <color name="product_details_layout_shipping">#22A0DD</color>
-    <color name="product_details_layout_bottom">#333333</color>
     <color name="image_upload_soc_but_bg">#333333</color>
     <color name="customize_product_tabbar">#FFFFFF</color>
     <color name="shopping_cart_total_price">#474747</color>

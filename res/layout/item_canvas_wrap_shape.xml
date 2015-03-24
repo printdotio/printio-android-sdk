@@ -16,11 +16,12 @@
 
         <print.io.imageloader.MyImageView
             android:id="@+id/imageview_shape"
-            android:layout_width="wrap_content"
-            android:layout_height="50dip"
+            android:layout_width="100dip"
+            android:layout_height="70dip"
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
-            android:adjustViewBounds="true" />
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_shape"

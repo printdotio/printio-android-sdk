@@ -1,15 +1,111 @@
-##Android Release Notes
+**Android Release Notes**
+
+### 
+
+2.1.0 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed shipping address autocomplete issue [*github issue \#123*](https://github.com/printdotio/printio-android-sdk/issues/123)
+
+- Product Details screen - Changed "Create It" button color to Secondary color (green) to match iOS
+
+### 
+
+2.0.7 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed a bug with drawing background layer for products without solid background color in Customization screen
+
+- Canvas Wraps, Framed Prints and similar products - Customization Step 2 - Moved items closer to the couch on the bottom of the screen for more accurate preview; Increased spacing between items
+
+- Wall Calendars - Added years next to months in drop down menu on Customization screen
+
+- Wall Calendars - Show calendar names instead of "1 Photo" in Step 1
+
+- Wall Calendars - Bigger images in Step 1
+
+- Wall Calendar - Fixed a crash that ocurred when quickly tapping next button
+
+- Professional Prints and Prints - Added missing preview images in Options screen
+
+- Canvas Minis - Removed couch image from Customization Step 1
+
+- Fixed a crash in Framed Prints reported by Photobucket
+
+- Fixed "Price of Professional Prints not visible on All Products view"
+
+- Fixed various minor layout issues (selectors, borders, margins)
+
+### 
+
+2.0.6 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Canvas Wraps - Bigger images in Step 1
+
+- Fixed "Change Country" icon to be the same size as the rest of the icons in Side Menu
+
+- Dog Beds - Fixed some layout issues (sizes on Choose Options screen are now displayed in one row and some of preview items were cut off)
+
+- Wall Calendar - Fixed missing count on Shopping Cart icon when adding more photos from Customization screen
+
+### 
+
+2.0.5 (v116)
+============
+
+**Features:**
+
+- New Product: Dog Beds
+
+- New Product: Canvas Posters
+
+- New Product: Canvas Minis
+
+- New Product: Pro Prints
+
+- New Product: Rugs
+
+- New Product: Tote Bags
+
+- New Product: Wall Calendars
+
+**Bugs:**
+
+- Fixed a glitch when drawing product in Customization screen caused by low number precision
+
+- Fixed missing symbol in Choose Currency buttont in Side Menu
+
+### 
 
 2.0.4 (v116)
 ============
 
 **Features:**
 
--   Split `PIO.start(Context, PIOConfig)` into `PIO.setConfig(Context, PIOConfig)` and `PIO.start(Context)`
+- Split `PIO.start(Context, PIOConfig)` method into `PIO.setConfig(Context, PIOConfig)` and `PIO.start(Context)`
 
 **Bugs:**
 
--   /
+- /
 
 ### 
 
@@ -18,11 +114,11 @@
 
 **Features:**
 
-*   /
+- /
 
 **Bugs:**
 
-* Throw Pillows - On Color Options screen, for a moment, Step 4 appears on the screen
+- Throw Pillows - Hidden unneeded "Step 4" from Color Options screen
 
 ### 
 
@@ -31,13 +127,13 @@
 
 **Features:**
 
-* Optimizing \*book products
+- Optimized book products; Removed paging
 
 **Bugs:**
 
-* Customization screen - Parts of images are missing
+- Fixed "Parts of images are missing" in Customization screen
 
-* Choose Options screen - "Step 1,2,3,4" text should be bold
+- "Step 1,2,3,4" text is now bold in Choose Options screen
 
 ### 
 
@@ -48,9 +144,9 @@
 
 **Bugs:**
 
-* App has crashed - Acrylic Prints
+- Fixed a crash in Acrylic Prints
 
-* App has crashed - Coasters
+- Fixed a crash in Coasters
 
 ### 
 
@@ -59,110 +155,108 @@
 
 **Features:**
 
-* Return structured data when closing SDK
+- Return structured data when closing SDK
 
-* Throw Pillows - Use the same look for back side of pillow
+- Throw Pillows - Use the same look for front and back side of the pillow
 
-* Ability to change shipment options
+- Ability to change shipment options on Shopping Review screen
 
-* Added option on Shopping Review screen to offer expedited/overnight shipping options
+- Updated PayPal SDK to v2.7.1
 
-* Updated PayPal SDK
+- Added method closeWidgetFromShoppingCart()
 
-* Created method PIO.closeWidgetFromShoppingCart()
+- Split PIO class into PIO and PIOConfig classes
 
-* Split PIO class into PIO and PIOConfig classes (updated docs accordingly)
+- Improved activity navigation
 
-* Created internal SDK properties
+- Caching of Photobucket images so the SDK doesn't make a new API call every time
 
-* Improved activity navigation
+- Added Google Analytics tracking
 
-* Caching of Photobucket images so the SDK doesn't make a new API call every time
+- Added a method to choose available payment options
 
-* Added Google Analytics
+- Fixed some differences in Dialogs layouts between Android and iOS
 
-* Ability to choose available payment options
+- Added method for selecting default products list screen: Featured Products (large items) or All Products (small items)
 
-* Dialog layout differences between Android and iOS
+- Added method to remove "Add More" button from Shopping Cart screen [*github issue \#84*](https://github.com/printdotio/printio-ios-sdk/issues/84)
 
-* Method for setting default products screen (set Featured screen or All Products screen to be first load)
+- Added Jump to screen method
 
-* Removing “Add More” from cart Via method
+- Images passed in using setImageUris() now shown as a separate Photosource (Preselected)
 
-* Jump to screen
+- Set passed in image to be first in row for all photo sources
 
-* New Photo Image Source for Passed in Images
+- Added ability to pass URLs to Preselected Photosource
 
-* Set passed in image to be first in row for all photo sources
+- Select default country based on location
 
-* Add in ability for app to pass in URL for Photo
+- Change Layout from customize screen
 
-* Default country by location
+- Added method to hide help button in Customize Product screen
 
-* Change Layout from customize screen
+- Improved handling of API calls
 
-* Created method to hide help button in Customize Product screen
+- Added caching of API calls
 
-* Improved handling of API calls
-
-* Added caching of API calls
+- Removed product prices from navigation bar
 
 **Bugs:**
 
-* Use passed image as thumb for one photo template" doesn't work
+- Fixed "Use passed image as thumb for one photo template"
 
-* Unselected image from Select Images Screen remains selected on the Customization screen list view
+- Removed images from book products list view screen when images are unselected on Select Images screen
 
-* App has crashed - Image Editor screen
+- Fixed a crash in Image Editor screen
 
-* App has crashed - Throw Pillows
+- Fixed a crash in Throw Pillows
 
-* Prints product image is stretched horizontally
+- Fixed aspect ratio for product images [*github issue \#75*](https://github.com/printdotio/printio-android-sdk/issues/75)
 
-* Images are downloaded and re-uploaded on client when image urls are passed to setImages
+- Images not re-uploaded when image urls are passed to SDK using setImages()
 
-* Throw Pillows - On the Back side of pillow doesn't load images automatically on the layout
+- Throw Pillows - Automatically load images on the back side of the pillow
 
-* Select Images Screen - Selected photos disappearing when user puts phone to sleep
+- Fixed disappearing selected photos in Select Images screen when phone goes to sleep
 
-* Logging in another photo source causing deselecting previously selected photo
+- Fixed "Logging in another photo source causing deselecting previously selected photo"
 
-* App has crashed - Minibooks
+- Fixed a crash in Minibooks
 
-* Magnetgram - Unable to select more than one image on Select Image screen
+- Fixed "Unable to select more than one image on Select Image screen" for Magnetgram
 
-* Changeble Country and currency toggle button doesn't work correctly
+- Fixed Changeable Country and Currency toggle buttons in PrintIO SDK Example app
 
-* Select Address screen - App has crashed
+- Fixed a crash in Select Address screen
 
-* Select Address screen - Add Title on Pop up
+- Added title on pop up in Select Address screen
 
-* Thick Prints - missing blue border on "Duplicate to Fill Order" button (added icon which should be changed)
+- Thick Prints - added missing blue border on "Duplicate to Fill Order" button
 
-* Customization screen with list view - Page Number is not correct
+- Book products - screen with list view - Fixed page numbers
 
-* Image Editor screen - User is able to reduce image outside of the layout
+- Image Editor screen - Fixed minimum zoom level - locked to product size
 
-* Image Editor screen - Zoom out does not work
+- Image Editor screen - Fixed zoom out
 
-* Price for item is too long and is using 2 lines
+- Fixed "Price for item is too long and is using 2 lines" [*github issue \#100*](https://github.com/printdotio/printio-android-sdk/issues/100)
 
-* Crash in production java.lang.NullPointerException
+- Fixed a crash in production (java.lang.NullPointerException) [*github issue \#119*](https://github.com/printdotio/printio-android-sdk/issues/119)
 
-* Error uploading product photos for high-image count products
+- Fixed uploading product photos for high-image count products [*github issue \#120*](https://github.com/printdotio/printio-android-sdk/issues/120)
 
-* App has crashed after leaving PrintIO SDK
+- Fixed a crash when leaving PrintIO SDK
 
-* Putting phone to sleep causing some issues
+- Fixed some issues when putting phone to sleep
 
-* Removed image from Customization screen remains selected on the Select Images Screen
+- Deselected image from Select Images screen when image is removed from Customization screen
 
-* App has crashed - Adding Preselected Source on SDK Example
+- Fixed a crash when adding Preselected Photosource in PrintIO SDK Example app
 
-* Country Code is always applied on admin panel, for not supported countries, as USA
+- Fixed app to use selected Country Code (always was US)
 
-* Book products - Add More Images does not work correctly
+- Book products - Fixed "Add More Images" behaviour
 
-* Remove dialog for "Add More Photos" when images are preselected
+- Removed "Add More Photos" dialog when images are preselected
 
-* "Cannot use Recycled Bitmap" crashes still happens in app
+- "Cannot use Recycled Bitmap" crashes happen less frequently

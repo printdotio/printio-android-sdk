@@ -95,67 +95,6 @@
                     android:orientation="horizontal" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/layout_shipping"
-                android:layout_width="match_parent"
-                android:layout_height="50dip"
-                android:background="@color/product_details_layout_shipping"
-                android:visibility="gone" >
-
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/textview_product_is_shipped"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginRight="10dip"
-                    android:layout_marginTop="8dip"
-                    android:text="@string/product_is_shipped"
-                    android:textColor="#ffffff"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textview_product_is_shipped"
-                    android:orientation="horizontal" >
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_arrival"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dip"
-                        android:layout_marginRight="10dip"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:text="@string/est_arrival"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="2dip"
-                        android:layout_marginTop="3dip"
-                        android:background="#ffffff" />
-
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_ship_cost"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dip"
-                        android:layout_marginRight="10dip"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:text="@string/est_ship_cost"
-                        android:textColor="#ffffff"
-                        android:textSize="@dimen/text_size_normal" />
-                </LinearLayout>
-            </RelativeLayout>
-
             <!-- Create It container -->
 
             <include
@@ -164,11 +103,6 @@
                 android:layout_height="60dip"
                 layout="@layout/item_product_details_buy_it"
                 android:visibility="visible" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:background="#d8d8d8" />
 
             <!-- Layout Items -->
 

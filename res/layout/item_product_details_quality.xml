@@ -20,7 +20,7 @@
             android:paddingRight="5dip"
             android:src="@drawable/icon_quality_guarantee" />
 
-        <print.io.view.TextViewFontBold
+        <print.io.view.TextViewFontNormal
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/quality_guarantee"
