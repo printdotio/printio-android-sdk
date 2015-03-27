@@ -90,7 +90,7 @@
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:background="@color/step_separator"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <HorizontalScrollView
                 android:id="@+id/layout_choose_shape_1"
@@ -110,7 +110,6 @@
                     android:paddingLeft="10dip"
                     android:paddingRight="10dip" />
             </HorizontalScrollView>
-            <!-- Grid View, Photo Layout/Designe -->
 
             <print.io.view.TextViewFontLight
                 android:id="@+id/textview_step_3"
@@ -131,7 +130,7 @@
                 android:layout_marginLeft="10dip"
                 android:layout_marginRight="10dip"
                 android:background="@color/step_separator"
-                android:visibility="visible" />
+                android:visibility="gone" />
 
             <HorizontalScrollView
                 android:id="@+id/layout_choose_shape_2"

@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageview_phone_case"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dip"
         android:layout_marginBottom="4dip"
+        android:layout_marginTop="8dip"
         android:gravity="center_horizontal"
         android:lines="2"
         android:textColor="#010101"
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dip"
+        android:layout_marginTop="16dip"
         android:indeterminate="true"
         android:visibility="gone" />
 

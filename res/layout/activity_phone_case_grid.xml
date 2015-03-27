@@ -116,6 +116,7 @@
             android:id="@+id/linearlayout_photos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="top"
             android:orientation="horizontal" />
     </HorizontalScrollView>
 
@@ -126,7 +127,8 @@
         android:layout_below="@+id/layout_step_1"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
-        android:background="@color/step_separator" />
+        android:background="@color/step_separator"
+        android:visibility="gone" />
 
     <!-- Step 2 -->
 

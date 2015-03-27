@@ -81,7 +81,7 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:background="#d6d6d6"
-        android:visibility="invisible" />
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/layout_case_color"

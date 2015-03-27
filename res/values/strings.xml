@@ -37,7 +37,8 @@
     <string name="update">Update</string>
     <string name="later">Later</string>
     <string name="exit">Exit</string>
-    <string name="starting_at">Starting at %s</string>
+    <string name="starting_at_">Starting at %s</string>
+    <string name="price_">Price %s</string>
     <string name="price_each">%s Each</string>
     <string name="title_featured_products">Products</string>
     <string name="view_all_products">View All Products</string>
@@ -131,7 +132,6 @@
     <string name="back_side">Back Side</string>
     <string name="page_number">Page %1$s</string>
     <string name="page_n_of_m">Page %1$s / %2$s</string>
-    <string name="canvas_wraps_help_text">Dotted line shows canvas sides</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="prev">Prev</string>
@@ -514,7 +514,6 @@ each field, simply touch the Place Order button.</string>
     <string name="enter_code">Enter Code</string>
     <string name="cases_skins">Cases &amp; Skins</string>
     <string name="see_other_side">See Other Side</string>
-    <string name="dotted_line">(dotted line shows canvas sides)</string>
     <string name="phone_tablet_customize_info_text">Sides of images are wrapped\n around case (not displayed)</string>
     <string name="beach_bag_customize_info_text">(Front design is replicated on back)</string>
     <string name="drop_box_notification">%1$s allows you to store very large photos. Some large photos will cause an error in the app if you do not have a strong 4g or Wifi connection.</string>

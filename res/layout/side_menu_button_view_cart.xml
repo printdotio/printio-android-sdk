@@ -21,7 +21,7 @@
             android:paddingRight="7dip"
             android:src="@drawable/icon_cart_white" />
 
-        <TextView
+        <print.io.view.TextViewFontLight
             android:id="@+id/textview_overlay_num_items_side_menu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

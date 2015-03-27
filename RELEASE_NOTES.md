@@ -2,6 +2,36 @@
 
 ### 
 
+2.1.2 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Customization screen waits until product design is loaded before displaying product
+
+- Hidden keyboard on Add Address screen when Save Address button is clicked
+
+- Removed unnecessary help text for Canvas Wraps
+
+### 
+
+2.1.1 (v116)
+============
+
+**Features:**
+
+-  Display exact price instead of "starting at $x" on Product Details screen for products which have the same price for all Product Variants
+
+**Bugs**
+
+- Added missing prices for some products
+
+### 
+
 2.1.0 (v116)
 ============
 
@@ -92,7 +122,7 @@
 
 - Fixed a glitch when drawing product in Customization screen caused by low number precision
 
-- Fixed missing symbol in Choose Currency buttont in Side Menu
+- Fixed missing symbol in Choose Currency button in Side Menu
 
 ### 
 

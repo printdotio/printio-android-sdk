@@ -7,12 +7,12 @@
 
     <print.io.imageloader.MyImageView
         android:id="@+id/imageview_canvas_wrap_size"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="120dip"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:paddingTop="2dp" />
+        android:layout_marginLeft="16dip"
+        android:layout_marginRight="16dip"
+        android:adjustViewBounds="true" />
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_canvas_wrap_size_1"
@@ -20,10 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageview_canvas_wrap_size"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:gravity="center"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
@@ -34,10 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_canvas_wrap_size_1"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:gravity="center"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_normal" />
 
@@ -47,10 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_canvas_wrap_size"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
         android:gravity="center"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_normal" />
 
