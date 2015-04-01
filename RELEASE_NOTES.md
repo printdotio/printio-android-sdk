@@ -2,6 +2,25 @@
 
 ### 
 
+2.1.3 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed some products crashing on certain devices
+
+- Increased RestClient timeouts
+
+- Fixed crash in Framed Prints reported by Photobucket
+
+- Fixed Customization screen sometimes not drawing correctly
+
+### 
+
 2.1.2 (v116)
 ============
 
