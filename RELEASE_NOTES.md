@@ -2,6 +2,21 @@
 
 ### 
 
+2.1.4 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed product upload for PRINTS, PROFESSIONAL_PRINTS, METAL_MAGNETS [*github issue \#127*](https://github.com/printdotio/printio-android-sdk/issues/127)
+
+- Fixed crash when reading PIOConfig from persistence
+
+### 
+
 2.1.3 (v116)
 ============
 
