@@ -957,33 +957,21 @@ Steps
 Instead of opening Featured Products screen, go directly to specified product.
 ```java
 /**
- * @param productIdFromApp - ID of a product to jump to (Default value is -1)
+ * Set product type of the product whose "Product Details" screen will be
+ * shown directly when SKD launches. To disable this functionality set
+ * {@code product} to {@code null}.
+ * 
+ * @param product
+ *            The {@code ProductType} of the product to jump to. Default
+ *            value is {@code null} (functionality is ignored).
  */
-PIOConfig#setProductIdFromApp(int productIdFromApp);
+PIOConfig#setProductFromApp(ProductType product);
 
 /**
  * @param skipProductDetails - Use 'true' to skip ProductDetails screen and go directly to Step 1.
  */
 PIOConfig#setSkipProductDetails(boolean skipProductDetails);
 ```
-**NOTICE:**  
-Product IDs can be found in PublicConstants class.  
-Not all Product IDs are currently supported.  
-&nbsp;  
-&nbsp;  
-#### > Jumps directly to product with sku  
-( > Jump to product with specific SKU)  
-
-```java
-/**
- * @param productIdFromApp - ID of a product to jump to
- * @param productSkuFromApp - SKU for product
- */
-PIOConfig#setIdAndSku(int productIdFromApp, String productSkuFromApp);
-```
-**NOTICE:**  
-PRODUCT_IDS constants are currently `private`, but will be made `public` in upcoming versions of the SDK.  
-SKUs currently work only for Phone Cases and Coasters.  
 &nbsp;  
 &nbsp;  
 #### > Jump to SKU (no equivalent method on iOS exists)  

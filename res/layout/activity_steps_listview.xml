@@ -85,7 +85,8 @@
             android:paddingBottom="10dip"
             android:paddingTop="10dip"
             android:textColor="#333333"
-            android:textSize="@dimen/text_size_large" />
+            android:textSize="@dimen/text_size_large"
+            android:visibility="gone" />
 
         <!-- Horizontal Scroll View, Step 1 -->
 
@@ -94,7 +95,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
-            android:scrollbars="none" >
+            android:scrollbars="none"
+            android:visibility="gone" >
 
             <LinearLayout
                 android:id="@+id/linearlayout_choose_shape"
@@ -113,7 +115,8 @@
             android:layout_marginLeft="10dip"
             android:layout_marginRight="10dip"
             android:layout_marginTop="5dip"
-            android:background="@color/step_separator" />
+            android:background="@color/step_separator"
+            android:visibility="gone" />
 
         <!-- Step 2 -->
 

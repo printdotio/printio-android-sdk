@@ -1,3 +1,28 @@
+Migrating to v2.1.8 from v2.x
+========
+- The `ProductType` enum
+
+`ProductType` enum has been introduced to substitute the use of actual values of Product IDs previously found in `PublicConstatns.ProductIds` class.  
+As of v2.1.8, instead of using fields from `PublicConstatns.ProductIds` class you should use corresponding values from `print.io.piopublic.ProductType` enum.  
+## 
+- Changes in `PIOConfig` class
+
+Method `setProductIdFromApp()` has been renamed to `setProductFromApp()`, and now accepts `ProductType` instead of `int` for specifying product. 
+
+All enum definitions from `PIOConfig` class were moved to a separate package called `print.io.piopublic`.  
+Because of this, you will have to change the following imports:
+```
+import print.io.PIOConfig.PhotoSource;
+import print.io.PIOConfig.SideMenuButton;
+import print.io.PIOConfig.SideMenuInfoButton;
+```
+to:
+```
+import print.io.piopublic.PhotoSource;
+import print.io.piopublic.SideMenuButton;
+import print.io.piopublic.SideMenuInfoButton;
+```
+### 
 Migrating to v2.x from v1.x
 ========
 

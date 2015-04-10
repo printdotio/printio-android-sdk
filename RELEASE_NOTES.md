@@ -2,6 +2,64 @@
 
 ### 
 
+2.1.8 (v116)
+============
+
+**Features:**
+
+- Switched to ProductType enum instead of raw Product ID values from PublicConstants.ProductIds
+
+- Moved PIOConfig enums to separate package (print.io.piopublic)
+
+**Bugs:**
+
+- Fixed an issue with absolute-value promo coupons and negative total values
+
+- Minor layout tweaks
+
+### 
+
+2.1.7 (v116)
+============
+
+**Features:**
+
+- Added support for Final coordinates (new product format) 
+
+**Bugs:**
+
+- /
+
+### 
+
+2.1.6 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed an issue with Customize view which caused it to measure its dimensions incorrectly
+
+- Fixed infinite loading dialog when screen is turned off during loading on Customize screen
+
+### 
+
+2.1.5 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- New interface for CANVAS_POSTERS
+
+### 
+
 2.1.4 (v116)
 ============
 

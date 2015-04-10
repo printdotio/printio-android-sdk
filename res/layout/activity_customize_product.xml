@@ -274,40 +274,40 @@
     <RelativeLayout
         android:id="@+id/layout_product_options"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_above="@+id/tab_bar"
-        android:background="#ffffff"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:background="#80000000"
+        android:clickable="true"
         android:visibility="gone" >
 
-        <GridView
-            android:id="@+id/gridview_product_options"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:cacheColorHint="#00000000"
-            android:clipToPadding="false"
-            android:horizontalSpacing="1dip"
-            android:layoutAnimation="@anim/layout_grid_fade"
-            android:listSelector="@drawable/bg_blue"
-            android:numColumns="4"
-            android:paddingBottom="10dip"
-            android:paddingTop="6dip"
-            android:scrollbars="none"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="20dip"
-            android:visibility="visible" />
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff" >
+
+            <GridView
+                android:id="@+id/gridview_product_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:cacheColorHint="#00000000"
+                android:clipToPadding="false"
+                android:horizontalSpacing="1dip"
+                android:layoutAnimation="@anim/layout_grid_fade"
+                android:listSelector="@drawable/bg_blue"
+                android:numColumns="4"
+                android:paddingBottom="10dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="6dip"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="20dip" />
+        </RelativeLayout>
     </RelativeLayout>
-
-    <!-- Item Customize Product Preview Details -->
-
-    <include
-        android:id="@+id/layout_preview_details"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        layout="@layout/item_customize_product_preview_details"
-        android:visibility="gone" />
 
     <!-- Item Auto Arrange -->
 
@@ -317,17 +317,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         layout="@layout/item_auto_arrange"
-        android:visibility="gone" />
-
-    <!-- Dialog Want to share -->
-
-    <include
-        android:id="@+id/dialog_want_to_share"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        layout="@layout/dialog_want_to_share"
-        android:clickable="true"
         android:visibility="gone" />
 
 </RelativeLayout>
