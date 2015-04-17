@@ -15,18 +15,15 @@
     <string name="facebook_login_failed">Error while logging in to Facebook</string>
     <string name="log_in_to_instagram">Log In To Instagram</string>
     <string name="log_in_to_pinterest">Log In To Pinterest</string>
-    <string name="log_in_to_photobucket">Log In To Photobucket</string>
+    <string name="log_in_to">Log In To %1$s</string>
     <string name="photobucket_login">Photobucket Login</string>
     <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
     <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
     <string name="photobucket_error_loading_photos">Error loading Photobucket photos. Please try later.</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
-    <string name="success_login_instagram">Successfully logged in to Instagram</string>
-    <string name="success_login_picasa">Successfully logged in to Picasa</string>
-    <string name="success_login_flickr">Successfully logged in to Flickr</string>
-    <string name="success_login_dropbox">Successfully logged in to Dropbox</string>
-    <string name="success_login_photobucket">Successfully logged in to Photobucket</string>
+    <string name="successful_login_to_photo_source">Successfully logged in to %1$s</string>
+    <string name="failed_to_login_to_photo_source">Failed to log in to %1$s</string>
     <string name="enter_username_and_password">Please enter your username and password</string>
     <string name="wrong_username_or_password">You have entered a wrong username or password</string>
     <string name="other">Other</string>
@@ -570,7 +567,6 @@ each field, simply touch the Place Order button.</string>
     <string name="help_product_mousepad_step_1_2">Step 1 is Easy!\n\nSimply select which Photo Layout/Design you want to create!\n\nOnce you make your selection, you will automatically be taken to the next step!</string>
     <string name="help_product_flat_cards_step_1_2">Let\'s get started and make some beautiful Flat Cards! \n\nThis page takes 2 simple steps, then you automatically move to the next step and start customizing your Flat Cards!\n\n1) Choose which Flat Cards set you want to use!\n\n2) Choose your Flat Cards size. If you don\'t automatically see your Flat Cards size, simply place your finger over the images and swipe it to the left until you see the Flat Cards size of your choice.</string>
     <string name="help_product_wall_calendars_step_1">Help for Wall Calendars</string>
-
     <string name="help_select_photos_general">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_general_2">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nHowever example: If you have selected a 2 Photo Grid, when completing your design you will only be able to use 2 photos in the end design. However this allows you to see how different images look encase you change your mind while designing your %1$s on the next page.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_metal_magnets">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nFor every photo you select it will start at a quantity of 1 count for a magnet. When you are taken to the next screen you can adjust the quantity of each photo or remove it if you decide you do not want it.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Metal Magnets, select Next button in the bottom right corner.</string>
@@ -582,7 +578,6 @@ multiple images so you can play around with the options. For example, on a 2
 Photo Grid, you can upload more than 2 photos if you want to preview how 
 different images will look while you\'re designing your Canvas on the next page.\n\n- Notice that the photo counter in the bottom right corner is keeping track for 
 you! After you select the images you want to try on your Canvas, click the Next button in the bottom right corner</string>
-
     <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollar.\n</string>
     <string name="select_photos_title">Select Images</string>
     <string name="select_color_title">Select Color</string>
@@ -611,5 +606,7 @@ you! After you select the images you want to try on your Canvas, click the Next 
     <string name="error_fetching_product_variants">Sorry, we have a problem getting variants for this product. Please try again later or contact support.</string>
     <string name="error_fetching_api_data">Sorry, we have a problem getting data. Please try again later or contact support.</string>
     <string name="same_look_for_back_side_pillow">Use the same look for back side of pillow?</string>
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
 
 </resources>

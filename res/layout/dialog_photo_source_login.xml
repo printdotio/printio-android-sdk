@@ -8,12 +8,12 @@
     android:padding="8dip" >
 
     <print.io.view.TextViewFontNormal
+        android:id="@+id/textview_dialog_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:lineSpacingExtra="2dip"
         android:paddingBottom="8dip"
-        android:text="@string/log_in_to_photobucket"
         android:textColor="@android:color/black"
         android:textSize="@dimen/text_size_large" />
 

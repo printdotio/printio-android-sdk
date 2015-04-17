@@ -5,7 +5,6 @@
     android:layout_weight="1"
     android:background="@drawable/bg_selector_blue"
     android:clickable="true"
-    android:onClick="onClickPhone"
     android:padding="5dip" >
 
     <ImageView

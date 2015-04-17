@@ -2,6 +2,33 @@
 
 ### 
 
+2.1.9 (v116)
+============
+
+**Features:**
+
+- Added Custom Photosources feature
+
+- Added Select All button to Select Photos screen
+
+- Android devices are now shown first in Phone Cases
+
+- Added methods to get ProductType enum from Product ID (`ProductType.getProductType(int id)` and `ProductType.getProductType(int id, boolean isLive)`)
+
+- Passed promo code is now automatically applied
+
+- Photos count is now displayed for Photobucket folders
+
+**Bugs:**
+
+- Fixed display issues on Customize screen [*github issue \#130*](https://github.com/printdotio/printio-android-sdk/issues/130)
+
+- Fixed a bug where photo manipulations were lost in sigle-photo layouts when app was put to background
+
+- Removed invalid placeholders
+
+### 
+
 2.1.8 (v116)
 ============
 

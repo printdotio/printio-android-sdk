@@ -1,11 +1,73 @@
+Migrating to v2.1.9 from v2.1.8
+========
+ ---
+**Changes with photo sources**
+
+In order to support custom photo sources (defined by SDK users) new mechanism for photo sources has been introduced. 
+
+As of v2.1.8 use of `PhotoSource` enum values have been replaced with corresponding classes implementing new `PhotoSource` interface. These classes are :
+
+ -- `print.io.photosource.impl.dropbox.DropboxPhotoSource`
+ -- `print.io.photosource.impl.facebook.FacebookPhotoSource`
+ -- `print.io.photosource.impl.flickr.FlickrPhotoSource`
+ -- `print.io.photosource.impl.instagram.InstagramPhotoSource`
+ -- `print.io.photosource.impl.phone.PhonePhotoSource`
+ -- `print.io.photosource.impl.photobucket.PhotobucketPhotoSource`
+ -- `print.io.photosource.impl.picasa.PicasaPhotoSource`
+ -- `print.io.photosource.impl.preselected.PreselectedPhotoSource`
+
+For example, previous code for defining list contaning Facebook and Phone photo sources would look like:
+
+```java
+List<PhotoSource> photoSources = Arrays.asList(PhotoSource.FACEBOOK, PhotoSource.Phone);
+```
+Now in order to create photo source simply create object by calling default constructor of photo source implementation class. Which would look like:
+```java
+List<PhotoSource> photoSources = Arrays.asList(new FacebookPhotoSource(), new PhonePhotoSource());
+```
+ ---
+**Changes in `PIOConfig` class**
+
+- Method `PIOConfig#setPhotoSources()` now accepts list of objects implementing `PhotoSource` interface instead of enum values as it was previously the case.
+
+- Photo source configuration has been moved to corresponding photo source classes. 
+
+For example, instead of using
+```java
+	PIOConfig#setInstagramClientId(String);
+	PIOConfig#setInstagramCallbackUri(String);
+```
+you should use corresponding methods in `InstagramPhotoSource` class.
+```java
+	InstagramPhotoSource#setClientId(String);
+	InstagramPhotoSource#setCallbackUri(String);
+```
+ ---
+**Changes in AndroidManifest.xml**
+
+Following activity declarations:
+```xml
+<activity android:name="print.io.social.Instagram" android:noHistory="true"  android:screenOrientation="portrait" />
+<activity android:name="print.io.social.Flickr" android:noHistory="true"  android:screenOrientation="portrait" />
+<activity android:name="print.io.social.Dropbox" android:noHistory="true" android:screenOrientation="portrait" />
+```
+should been changed to:
+```xml
+<activity android:name="print.io.photosource.impl.instagram.Instagram" android:noHistory="true" android:screenOrientation="portrait" />
+<activity android:name="print.io.photosource.impl.flickr.Flickr" android:noHistory="true" android:screenOrientation="portrait" />
+<activity android:name="print.io.photosource.impl.dropbox.Dropbox" android:noHistory="true" android:screenOrientation="portrait" />
+```
+
 Migrating to v2.1.8 from v2.x
 ========
-- The `ProductType` enum
+ ---
+**The `ProductType` enum**
 
 `ProductType` enum has been introduced to substitute the use of actual values of Product IDs previously found in `PublicConstatns.ProductIds` class.  
 As of v2.1.8, instead of using fields from `PublicConstatns.ProductIds` class you should use corresponding values from `print.io.piopublic.ProductType` enum.  
-## 
-- Changes in `PIOConfig` class
+
+ ---
+**Changes in `PIOConfig` class**
 
 Method `setProductIdFromApp()` has been renamed to `setProductFromApp()`, and now accepts `ProductType` instead of `int` for specifying product. 
 
@@ -25,7 +87,7 @@ import print.io.piopublic.SideMenuInfoButton;
 ### 
 Migrating to v2.x from v1.x
 ========
-
+ ---
 - Create an instance of `PIOConfig`:
 ```
 private PIOConfig config = new PIOConfig();
