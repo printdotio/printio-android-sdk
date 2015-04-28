@@ -1314,9 +1314,11 @@ Use `newline` character `\n` to manually add new lines.
 &nbsp;  
 #### > Set "How it Works" text  
 
-To modify "How it Works" text, change the following item in  
+To modify "How it Works" section, change the following items in  
 `res/values/strings.xml`
 ```xml
+<string name="how_it_works_title">How It Works</string>
+<string name="how_it_works_subtitle">How It Works:</string>
 <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
 ```
 **NOTICE:**  

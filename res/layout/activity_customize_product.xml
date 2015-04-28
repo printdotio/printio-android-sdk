@@ -281,32 +281,26 @@
         android:clickable="true"
         android:visibility="gone" >
 
-        <RelativeLayout
+        <GridView
+            android:id="@+id/gridview_product_options"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:background="#ffffff" >
-
-            <GridView
-                android:id="@+id/gridview_product_options"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
-                android:cacheColorHint="#00000000"
-                android:clipToPadding="false"
-                android:horizontalSpacing="1dip"
-                android:layoutAnimation="@anim/layout_grid_fade"
-                android:listSelector="@drawable/bg_blue"
-                android:numColumns="4"
-                android:paddingBottom="10dip"
-                android:paddingLeft="10dip"
-                android:paddingRight="10dip"
-                android:paddingTop="6dip"
-                android:scrollbars="none"
-                android:stretchMode="columnWidth"
-                android:verticalSpacing="20dip" />
-        </RelativeLayout>
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:horizontalSpacing="16dip"
+            android:layoutAnimation="@anim/layout_grid_fade"
+            android:listSelector="@drawable/bg_blue"
+            android:numColumns="4"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="6dip"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dip" />
     </RelativeLayout>
 
     <!-- Item Auto Arrange -->

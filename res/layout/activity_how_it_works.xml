@@ -41,7 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/how_it_works"
+            android:text="@string/how_it_works_title"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
 
@@ -83,7 +83,7 @@
                 android:layout_marginBottom="10dip"
                 android:drawableLeft="@drawable/icon_how_it_works"
                 android:drawablePadding="5dip"
-                android:text="@string/how_it_works_"
+                android:text="@string/how_it_works_subtitle"
                 android:textColor="@color/blue_light"
                 android:textSize="@dimen/text_size_large" />
 

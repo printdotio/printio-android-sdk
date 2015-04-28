@@ -2,7 +2,30 @@
 
 ### 
 
-2.1.9 (v116)
+2.1.12 (v116)
+============
+
+**Features:**
+
+- Disabled removal of images from "Add More Photos" screen
+
+- Added instructions for customizing "How It Works" section of the SDK
+
+- Applied coupon codes are now stored when user leaves the SDK
+
+**Bugs:**
+
+- New fix for display issues on Customize screen [*github issue \#130*](https://github.com/printdotio/printio-android-sdk/issues/130)
+
+- Fixed a bug with serialization of PhotoSource objects
+
+- Fixed MaxImages for certain products on Select Photos screen
+
+- Fixed handling of invalid Build Options
+
+### 
+
+2.1.9a (v116)
 ============
 
 **Features:**
