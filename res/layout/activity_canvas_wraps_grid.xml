@@ -163,6 +163,7 @@
                         android:id="@+id/linearlayout_choose_size"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dip"
                         android:orientation="horizontal" />
                 </HorizontalScrollView>
             </RelativeLayout>

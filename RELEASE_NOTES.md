@@ -7,8 +7,6 @@
 
 **Features:**
 
-- Disabled removal of images from "Add More Photos" screen
-
 - Added instructions for customizing "How It Works" section of the SDK
 
 - Applied coupon codes are now stored when user leaves the SDK
@@ -19,9 +17,11 @@
 
 - Fixed a bug with serialization of PhotoSource objects
 
-- Fixed MaxImages for certain products on Select Photos screen
-
 - Fixed handling of invalid Build Options
+
+- Fixed broken Choose Options screen for some products [*github issue \#125*](https://github.com/printdotio/printio-android-sdk/issues/125)
+
+- Fixed Choose Options selection box alignment [*github issue \#129*](https://github.com/printdotio/printio-android-sdk/issues/129) 
 
 ### 
 
