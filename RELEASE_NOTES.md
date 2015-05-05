@@ -2,6 +2,25 @@
 
 ### 
 
+2.1.13 (v116)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Fixed bug which caused application to occasionally crash when recycled bitmaps are drawn
+
+- Fixed authorisation on Facebook photo source
+
+- Fixed bug when images where not visible on Admin panel for orders which contained photos from Dropbox photo source
+
+- Fixed pre-filling State field on Add Address screen when state is selected from dropdown
+
+### 
+
 2.1.12 (v116)
 ============
 
