@@ -29,5 +29,9 @@
         <item quantity="one">%s Print</item>
         <item quantity="other">%s Prints</item>
     </plurals>
+    <plurals name="StoneCoasters">
+        <item quantity="one">%s Stone Coaster</item>
+        <item quantity="other">%s Stone Coasters</item>
+    </plurals>
 
 </resources>

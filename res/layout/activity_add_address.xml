@@ -332,7 +332,7 @@
         android:id="@+id/item_address_validation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        layout="@layout/activity_address_validation"
+        layout="@layout/item_address_validation"
         android:visibility="gone" />
 
     <print.io.view.OverlayView

@@ -77,32 +77,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:orientation="vertical"
-                    android:weightSum="2" >
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="0px"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:orientation="vertical"
-                        android:paddingBottom="15dp" >
-
-                        <print.io.view.TextViewFontLight
-                            android:id="@+id/est_arrival"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/est_arrival"
-                            android:textColor="#595d66"
-                            android:textSize="@dimen/text_size_normal" />
-
-                        <print.io.view.TextViewFontBold
-                            android:id="@+id/textview_est_arrival_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:singleLine="true"
-                            android:textColor="#595d66"
-                            android:textSize="@dimen/text_size_normal" />
-                    </LinearLayout>
+                    android:weightSum="1" >
 
                     <LinearLayout
                         android:layout_width="wrap_content"

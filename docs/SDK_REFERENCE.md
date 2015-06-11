@@ -1,85 +1,56 @@
 # Developer SDK Customization Reference
 
-Notice: Items that are implemented in iOS SDK but are missing from Android SDK are marked using strikethrough 
-
 ---
 
-## Status Bar Settings
-
-Set status bar style and visibility. Default value is light and visible.  
-(Hide status bar)  
+#### > Status Bar Settings
+( > Set status bar style and visibility.) Default value is light and visible.
 
 Default value is `false` (not hidden).
-
-### Code Sample
 
 ```java
 PIOConfig#setHideStatusBar(boolean hideStatusBar);
 ```
-### Screenshots - to be added
+&nbsp;  
+&nbsp; 
+#### > Navigation Bar Settings
 
-| Currently | Changed |
-| :---- | :---- | :---- |
+( > Change navigation bar color and title font color, also set left and right bar button.) 
 
----
-
-## Navigation Bar Settings
-
-- Change navigation bar color and title font color, also set left and right bar button.  
-
-This can be done in xml by changing the following item in  
-
-| Resource | Method |
-| :---- | :---- |
-| `res/values/colors.xml` | `<color name="title_bar_background">#FFFFFF</color>` |
-
-
-~~`<color name="title_bar_left_button_background">#FFFFFF</color>`~~  
-~~`<color name="title_bar_right_button_background">#FFFFFF</color>`~~  
-
-### Code Sample
+To change navigation bar color, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="title_bar_background">#FFFFFF</color>
+```
 
 ```java
 PIOConfig#setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
 ```
 _Note that the value set programmatically will override the value set in xml!_  
- 
-- To change separator and texts' colors, modify the following items in  
- 
-| Resource | Method |
-| :---- | :---- |
-| `res/values/colors.xml` | `<color name="title_bar_separator">#d6d6d6</color>` |
-| `res/values/colors.xml` | `<color name="title_bar_text">#000000</color>` |
-| `res/values/colors.xml` | `<color name="text_cart_items_quantity">#FFFFFF</color>` |
 
-~~`titleButtonIcon:(NSString *)iPath;`~~  
-
-### Screenshots - to be added
-
-| Currently | Changed |
-|  :---- | :---- |
+To change separator and texts' colors, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="title_bar_separator">#d6d6d6</color>
+<color name="title_bar_text">#000000</color>
+<color name="text_cart_items_quantity">#FFFFFF</color>
+```
   
 _NOTICE: Never modify xml item names. Modify values only._  
-
----
-
-## Set Icon For Back Button  
-(Change `Back` button icon)  
+&nbsp;  
+&nbsp; 
+#### > Set Icon For Back Button  
+( > Change `Back` button icon)  
 
 Replace the following icon with your own icon of the same name.  
 Recommended dimensions are listed next to the icon name.
 
-| Resource | Parameters - Options |
-| :---- | :---- |
-| `res/drawable-xhdpi` | `icon_arrow_back_2.png (19x33)` |
-
-### Screenshots - to be added
-
-| Currently | Changed |
-|  :---- | :---- |
-
---- 
-
+To change icon with your own icon, modify the following item in  
+`res/drawable-xhdpi`
+```xml
+icon_arrow_back_2.png (19x33)
+```
+&nbsp;  
+&nbsp; 
 #### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen  
 ( > Set three buttons title bar style)
 
@@ -423,6 +394,15 @@ PIOConfig#setShareText(String shareText);
 &nbsp;  
 Featured Products
 --------------
+#### > Set list of available products in the SDK.
+
+By default, all values defined in `ProductType` enum are used.
+
+```java
+PIOConfig#setAvailableProducts(List<ProductType> availableProducts);
+```
+&nbsp;  
+&nbsp;  
 #### > Set country on Featured Products screen instead on First screen. Default value is true.  
 ( > Set country on Featured Products screen instead on First screen)  
 
@@ -497,7 +477,7 @@ PIOConfig#setDefaultPhotoSource(PhotoSource defaultPhotoSource);
 
 Set predefined list of images that will be available to the user.
 ```java
-PIOConfig#setImageUrls(String[] imageUrls);
+PIOConfig#setImageUrls(List<String> imageUris);
 ```
 &nbsp;  
 &nbsp;  
@@ -507,33 +487,6 @@ PIOConfig#setImageUrls(String[] imageUrls);
 If images were preset using `setImageUrls(...)`, this method can be used to disable photo sources and force the user to only use predefined photos.
 ```java
 PIOConfig#setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
-```
-&nbsp;  
-&nbsp;  
-~~#### > Disable photo sources only if image is passed in, and user selects template with one photo~~  
-
-```java
-//TO BE DONE
-PIOConfig#setPhotosourcesDisabledForOnePhotoTemplate(boolean PIOConfig#isPhotosourcesDisabledForOnePhotoTemplate);
-```
-&nbsp;  
-&nbsp;  
-#### > Set passed in image as thumbnail for templates with one photo. Right now, only supports Canvas Wraps and Framed Prints.  
-( > Set passed in image as thumbnail for templates with one photo)  
-
-```java
-PIOConfig#setPassedImageThumb(boolean passedImageThumb);
-```
-**NOTICE:**  
-Currently supports Canvas Wraps, Framed Prints and Acrylic Prints.
-&nbsp;  
-&nbsp;  
-~~#### > ??? Hide icon for Upload Instructions text in Photo Sources screen~~  
-
-~~Default value is `false`.~~
-```java
-//TO BE DONE
-PIOConfig#setHideIconForUploadInstructions(boolean hideIconForUploadInstructions);
 ```
 &nbsp;  
 &nbsp;  
@@ -818,8 +771,8 @@ To change cart quantity text color, modify the following item in
 ```
 
 **DIFFERENCES BETWEEN iOS and Android:**  
-iOS version of the SDK allows the badge to be hidden.  
-On Android version, the badge is always visible and its background can be changed.
+iOS version of the SDK shows the badge even when the cart is empty.  
+On Android version, the badge is only visible when there are items in the cart.
 &nbsp;  
 &nbsp;  
 #### > Customize `Shopping Cart` side menu button  

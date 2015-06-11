@@ -2,6 +2,103 @@
 
 ### 
 
+2.3.0 (v116)
+============
+
+**Features:**
+
+- New Product: Acrylic Trays
+
+- New Product: Art Poster
+
+- New Product: Beach Towel
+
+- New Product: Cloth napkins
+
+- New Product: Duvet Covers
+
+- New Product: Giclee Art Prints
+
+- New Product: Glass Cutting Board
+
+- New Product: Mugs
+
+- New Product: Ottoman
+
+- New Product: Pillow Shams
+
+- New Product: Placemats
+
+- New Product: Posters
+
+- New Product: Puzzle Tin
+
+- New Product: Stone Coaster
+
+- New Product: Tabletop Canvas Wraps
+
+- New Product: Wall Clings
+
+- Product Details screen now shows "Price" instead of "Starting at" for products which have the same price for all variants
+
+- If an invalid Promo Code is entered, previously entered valid Promo Code (if any) is used
+
+- Added `PhotobucketPhotoSource.setDefaultAlbumId(String defaultAlbumId)` method
+
+- Dropbox photo source now uses OAuth 2.0 access tokens when downloading images
+
+- Added `PIOConfig.setAvailableProducts(List<ProductType> availableProducts)` method which allows users to customize product availability in SDK
+
+- Refactored Options screens for all products
+
+**Bugs:**
+
+- Fixed a crash caused by bad data returned from server
+
+- Refactored products to use new Custom Steps mechanism
+
+- Removed legacy activities
+
+- Removed incorrect estimated arrival dates from Order Review and Order Completed screens
+
+- Images are now being rotated correctly, according to EXIF attributes
+
+- Fixed applying coupon code when shipping method is changed
+
+- Improved bitmaps caching
+
+- Improved Dropbox thumbnails quality
+
+- Removed 'Change Background' button for products which don't support background color
+
+- Metal Prints - Fixed image alignment on Options screen
+
+- Fixed an issue with the wrong product being displayed on Customization screen
+
+- Fixed cut-off selectors on some Option screens
+
+- Product specifics are now displayed in shopping cart instead of the SKU string which could be misleading because of imperial/metric measurements (github issue #136)
+
+- Fixed imperial/metric units on Option screens
+
+- Fixed increasing MaxPhotos count for Throw Pillows
+
+- Fixed photos counter when Photo Sources are disabled
+
+- Fixed a crash when adding more photos on Customization screen
+
+- Fixed status bar hiding on Customization screen
+
+- Fixed product names cut off on Order Complete screen
+
+- Fixed a crash when starting the SDK without an Internet connection
+
+- Fixed "Confirming Order Information" dialog staying visible forever after phone was put to sleep
+
+- Fixed swipe in Address List
+
+### 
+
 2.1.13 (v116)
 ============
 

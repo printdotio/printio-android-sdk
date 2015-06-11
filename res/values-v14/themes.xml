@@ -18,4 +18,8 @@
         <item name="android:windowCloseOnTouchOutside">false</item>
     </style>
 
+    <style name="ThemePrintIODialogFullscreenNoStatusBar" parent="BaseThemePrintIONoStatusBar">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
 </resources>

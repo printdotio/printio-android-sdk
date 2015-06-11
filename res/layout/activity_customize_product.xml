@@ -211,6 +211,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:clickable="true"
+            android:onClick="onClickAddMorePhotos"
             android:src="@drawable/btn_add" />
 
         <HorizontalScrollView

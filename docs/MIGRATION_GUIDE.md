@@ -1,3 +1,71 @@
+Migrating to v2.3.0 from v2.1.13
+========
+ ---
+**Changes in AndroidManifest.xml**
+ 
+Update minSdkVersion and targetSdkVersion fields to following values:
+```xml
+<uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19" />
+```
+
+Following activities are no longer used and should be removed:
+```xml
+<activity android:name="print.io.ActivityStickerbooksType" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityPhoneCaseGrid" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityThickPrintGrid" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityCanvasWrapsGrid" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityCanvasWrapsNext" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityChooseGridLayout" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityThrowPillowGrid" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityStepsListView" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityShoppingMethods" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityShippingAddress" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityAcrylicBlocksGrid" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+<activity android:name="print.io.ActivityChooseGridLayoutTwoScollViews" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityPreviewOnWall" android:screenOrientation="portrait" />
+```
+ ---
+**Changes in `PIOConfig` class**
+
+- Method `PIOConfig#setStepByStep()` has been removed.
+
+- Method `PIOConfig#setJumpToScreen()` now accepts `print.io.piopublic.Screen` enum instead of int values from `PublicConstants.ScreenIds`.
+
+For example, instead of using
+```java
+PIOConfig#setJumpToScreen(PublicConstants.ScreenIds.SCREEN_SHOPPING_CART, 0);
+```
+you should use
+```java
+//import print.io.piopublic.Screen;
+PIOConfig#setJumpToScreen(Screen.SHOPPING_CART, 0);
+```
+
+- Method `PIOConfig#setPaymentOptions()` now accepts a `List` of `<print.io.piopublic.PaymentOptionType>` instead of packed ints from `PublicConstants.PaymentOptions`.
+
+For example, instead of using
+```java
+PIOConfig#setPaymentOptions(PublicConstants.PaymentOptions.PAYMENT_OPTION_ALL);
+```
+you should use
+```java
+//import print.io.piopublic.PaymentOptionType;
+List<PaymentOptionType> paymentOptions = new ArrayList<PaymentOptionType>(2);
+paymentOptions.add(PaymentOptionType.PAY_PAL);
+paymentOptions.add(PaymentOptionType.CREDIT_CARD);
+PIOConfig#setPaymentOptions(paymentOptions);
+```
+
+Migrating to v2.1.13 from v2.1.9
+========
+ ---
+**Changes in AndroidManifest.xml**
+ 
+Following activity declaration should be added:
+```xml
+<activity android:name="print.io.ActivityCustomSteps" android:screenOrientation="portrait" />
+```
+
 Migrating to v2.1.9 from v2.1.8
 ========
  ---
@@ -7,14 +75,16 @@ In order to support custom photo sources (defined by SDK users) new mechanism fo
 
 As of v2.1.8 use of `PhotoSource` enum values have been replaced with corresponding classes implementing new `PhotoSource` interface. These classes are :
 
- -- `print.io.photosource.impl.dropbox.DropboxPhotoSource`
- -- `print.io.photosource.impl.facebook.FacebookPhotoSource`
- -- `print.io.photosource.impl.flickr.FlickrPhotoSource`
- -- `print.io.photosource.impl.instagram.InstagramPhotoSource`
- -- `print.io.photosource.impl.phone.PhonePhotoSource`
- -- `print.io.photosource.impl.photobucket.PhotobucketPhotoSource`
- -- `print.io.photosource.impl.picasa.PicasaPhotoSource`
- -- `print.io.photosource.impl.preselected.PreselectedPhotoSource`
+```java
+print.io.photosource.impl.dropbox.DropboxPhotoSource
+print.io.photosource.impl.facebook.FacebookPhotoSource
+print.io.photosource.impl.flickr.FlickrPhotoSource
+print.io.photosource.impl.instagram.InstagramPhotoSource
+print.io.photosource.impl.phone.PhonePhotoSource
+print.io.photosource.impl.photobucket.PhotobucketPhotoSource
+print.io.photosource.impl.picasa.PicasaPhotoSource
+print.io.photosource.impl.preselected.PreselectedPhotoSource
+```
 
 For example, previous code for defining list contaning Facebook and Phone photo sources would look like:
 

@@ -166,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dip"
                 android:layout_marginTop="16dip"
-                android:text="@string/shipment_review"
+                android:text="@string/shipment_review_colon"
                 android:textColor="#595d66"
                 android:textSize="@dimen/text_size_large" />
 
@@ -181,10 +181,10 @@
             <!-- Ship to -->
 
             <print.io.view.TextViewFontLight
+                android:id="@+id/textview_ship_to"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dip"
-                android:text="@string/ship_to"
                 android:textColor="#595d66"
                 android:textSize="@dimen/text_size_large" />
 
