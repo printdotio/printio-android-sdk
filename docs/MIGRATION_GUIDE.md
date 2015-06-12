@@ -8,6 +8,11 @@ Update minSdkVersion and targetSdkVersion fields to following values:
 <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19" />
 ```
 
+Following activity declaration should be added:
+```xml
+<activity android:name="print.io.ActivityCustomSteps" android:screenOrientation="portrait" />
+```
+
 Following activities are no longer used and should be removed:
 ```xml
 <activity android:name="print.io.ActivityStickerbooksType" android:screenOrientation="portrait" />
@@ -54,16 +59,6 @@ List<PaymentOptionType> paymentOptions = new ArrayList<PaymentOptionType>(2);
 paymentOptions.add(PaymentOptionType.PAY_PAL);
 paymentOptions.add(PaymentOptionType.CREDIT_CARD);
 PIOConfig#setPaymentOptions(paymentOptions);
-```
-
-Migrating to v2.1.13 from v2.1.9
-========
- ---
-**Changes in AndroidManifest.xml**
- 
-Following activity declaration should be added:
-```xml
-<activity android:name="print.io.ActivityCustomSteps" android:screenOrientation="portrait" />
 ```
 
 Migrating to v2.1.9 from v2.1.8
