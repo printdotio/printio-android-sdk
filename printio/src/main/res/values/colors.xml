@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="global_window_background">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="swipeable_bg">#FFFFFF</color>
+    <color name="swipeable_bg_pressed">#EBEBEB</color>
+    <color name="help_btn_bg">#FFFFFF</color>
+    <color name="help_btn_bg_pressed">#EBEBEB</color>
+    <color name="title_bar_background">#FFFFFF</color>
+    <color name="title_bar_text">#000000</color>
+    <color name="title_bar_separator">#D6D6D6</color>
+
+    <color name="separator_list">#D6D6D6</color>
+
+    <color name="text_cart_items_quantity">#FFFFFF</color>
+    <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
+
+    <color name="step_header_background">#42BE9C</color>
+    <color name="step_separator">#000000</color>
+
+    <color name="separator_color_1">#000000</color>
+    <color name="separator_color_2">#343434</color>
+    <color name="side_menu_background">#1D1D1D</color>
+    <color name="side_menu_text">#FFFFFF</color>
+    <color name="side_menu_options_subtitle_text">#FFFFFF</color>
+    <color name="side_menu_options">#239EDB</color>
+    <color name="side_menu_change_currency_text">#FFFFFF</color>
+    <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
+    <color name="side_menu_accounts">#1CBA9B</color>
+    <color name="side_menu_info_subtitle_text">#FFFFFF</color>
+    <color name="side_menu_info">#6369A6</color>
+    <color name="side_menu_version_bg">#000000</color>
+    <color name="side_menu_version_text">#FFFFFF</color>
+    <color name="customize_product_tooltip">#42BE9C</color>
+
+    <color name="photosources_background">#595d66</color>
+    <color name="photosources_text">#FFFFFF</color>
+
+    <color name="product_details_create_it_container_background">#EBEBEB</color>
+
+    <color name="product_details_header_1">#323232</color>
+    <color name="product_details_header_2">#42BE9C</color>
+    <color name="product_details_header_3">#22A0DD</color>
+    <color name="product_details_header_4">#646AA6</color>
+
+    <!-- other_colors -->
+    <color name="holo_blue_bright">#00DDFF</color>
+
+    <color name="gray">#404040</color>
+    <color name="gray_edit">#C7C7CC</color>
+    <color name="gray_edit_pressed">#96A7A7AC</color>
+
+    <color name="blue_light">#22A0DD</color>
+    <color name="blue_dark">#0E79AD</color>
+    <color name="primary_button_text">#FFFFFF</color>
+
+    <color name="green">#42BE9C</color>
+    <color name="green_dark">#09866D</color>
+    <color name="secondary_button_text">#FFFFFF</color>
+
+    <color name="edit_image_info_text_default">#22A0DD</color>
+    <color name="edit_image_info_text_pressed">#404040</color>
+
+    <color name="edit_image_rotate_text_default">#42BE9C</color>
+    <color name="edit_image_rotate_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_text_text_default">#D94217</color>
+    <color name="edit_image_text_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_effects_text_default">#646AA6</color>
+    <color name="edit_image_effects_text_pressed">#FFFFFF</color>
+
+    <color name="edit_image_info_background_highlight">#EFEFF2</color>
+    <color name="edit_image_rotate_background_highlight">#42BE9C</color>
+    <color name="edit_image_text_background_highlight">#D94217</color>
+    <color name="edit_image_effects_background_highlight">#646AA6</color>
+
+    <color name="red_delete">#F31C24</color>
+    <color name="red_discount">#F31C24</color>
+    <color name="red_delete_pressed">#96F31C24</color>
+    <color name="orange">#D94217</color>
+    <color name="purple">#646AA6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="overlay_translucent">#80000000</color>
+    <color name="promo_code_background">#F3F3F3</color>
+    <color name="image_upload_soc_but_bg">#333333</color>
+    <color name="customize_product_tabbar">#FFFFFF</color>
+    <color name="shopping_cart_total_price">#474747</color>
+    <color name="bg_edit_text">#EFEFF2</color>
+    <color name="address_validation_suggested_address">#EFEFF2</color>
+    <color name="address_validation_initial_address">#EFEFF2</color>
+    <color name="shipment_review_first_container">#EDEDED</color>
+    <color name="shipment_review_second_container">#EDEDED</color>
+    <color name="shipment_review_place_order">#333333</color>
+    <color name="dialog_transparent">#AA000000</color>
+    <color name="image_upload_soc_select">#595D66</color>
+    <color name="country_drop_down">#2277D4</color>
+    <!-- Old Green #1ABC9C -->
+
+</resources>

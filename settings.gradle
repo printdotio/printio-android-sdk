@@ -1,0 +1,6 @@
+// PrintIO SDK
+include ':printio'
+
+if (file('local.gradle').exists()) {
+    apply from: 'local.gradle'
+}

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip" >
+
+        <ImageView
+            android:id="@+id/imageview_shipping_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dip"
+            android:src="@drawable/icon_shipping_info" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/shipping_info"
+            android:textColor="@color/product_details_header_3"
+            android:textSize="@dimen/text_size_large" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_arrival_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_arrival"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_arrival_text_fill"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_arrival_text"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_price_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_price"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_price_text_fill"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_price_text"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_information"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_information"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_information_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_information_text"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_return_policy"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_return_policy"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_return_policy_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_return_policy_text"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="#d8d8d8" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_availability"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="5dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_availability"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_shipping_info_availability_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:lineSpacingMultiplier="1.20"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="10dip"
+            android:text="@string/shipping_info_availability_text"
+            android:textColor="#323232"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+</LinearLayout>

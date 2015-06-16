@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="images">
+        <item quantity="one">%s image</item>
+        <item quantity="other">%s images</item>
+    </plurals>
+    <plurals name="Images">
+        <item quantity="one">%s Image</item>
+        <item quantity="other">%s Images</item>
+    </plurals>
+    <plurals name="Photos">
+        <item quantity="one">%s Photo</item>
+        <item quantity="other">%s Photos</item>
+    </plurals>
+    <plurals name="Magnets">
+        <item quantity="one">%s Magnet</item>
+        <item quantity="other">%s Magnets</item>
+    </plurals>
+    <plurals name="Stickers">
+        <item quantity="one">%s Sticker</item>
+        <item quantity="other">%s Stickers</item>
+    </plurals>
+    <plurals name="Coasters">
+        <item quantity="one">%s Coaster</item>
+        <item quantity="other">%s Coasters</item>
+    </plurals>
+    <plurals name="Prints">
+        <item quantity="one">%s Print</item>
+        <item quantity="other">%s Prints</item>
+    </plurals>
+    <plurals name="StoneCoasters">
+        <item quantity="one">%s Stone Coaster</item>
+        <item quantity="other">%s Stone Coasters</item>
+    </plurals>
+
+</resources>

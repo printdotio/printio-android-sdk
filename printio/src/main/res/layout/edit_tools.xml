@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:visibility="visible" >
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="#cccccc"
+        android:paddingLeft="1px"
+        android:paddingRight="1px"
+        android:paddingTop="1px" >
+
+        <LinearLayout
+            android:id="@+id/dummy_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_shuffle"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_margin="2dip"
+                android:background="@drawable/bg_selector_white"
+                android:clickable="true"
+                android:drawableTop="@drawable/icon_shuffle_purple"
+                android:gravity="center"
+                android:onClick="onClickRandomize"
+                android:paddingBottom="1dip"
+                android:paddingLeft="5dip"
+                android:paddingRight="5dip"
+                android:paddingTop="5dip"
+                android:text="@string/shuffle"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/text_size_normal" />
+
+            <LinearLayout
+                android:id="@+id/edit_tools_change_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#cccccc" />
+
+                <print.io.view.TextViewFontLight
+                    android:id="@+id/textview_change_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:layout_margin="2dip"
+                    android:background="@drawable/bg_selector_white"
+                    android:clickable="true"
+                    android:drawableTop="@drawable/icon_change_background"
+                    android:gravity="center"
+                    android:onClick="onClickChangeBackground"
+                    android:paddingBottom="1dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="5dip"
+                    android:text="@string/background"
+                    android:textColor="@color/purple"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#cccccc" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

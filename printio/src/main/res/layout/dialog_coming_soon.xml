@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_white"
+        android:padding="8dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_coming_soon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="16dip"
+            android:paddingTop="8dip"
+            android:text="@string/coming_soon_product"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.EditTextFontLight
+            android:id="@+id/edittext_enter_your_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_coming_soon"
+            android:layout_marginTop="8dip"
+            android:background="#efeff2"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress"
+            android:padding="12dip"
+            android:singleLine="true"
+            android:textColor="#b3b3b3"
+            android:textColorHint="#b3b3b3" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edittext_enter_your_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dip"
+            android:background="@drawable/btn_blue_light"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="@string/send"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageview_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="-9dip"
+            android:layout_marginTop="-9dip"
+            android:clickable="true"
+            android:padding="10dip"
+            android:src="@drawable/icon_x_b" />
+    </RelativeLayout>
+
+</RelativeLayout>

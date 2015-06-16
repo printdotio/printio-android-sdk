@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="BaseThemePrintIO" parent="@android:style/Theme.Holo.Light">
+        <!-- Any customizations for your app running on devices with Theme.Holo here -->
+    </style>
+
+    <style name="BaseThemePrintIONoStatusBar" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+        <!-- Any customizations for your app running on devices with Theme.Holo here -->
+    </style>
+
+    <style name="ThemePrintIODialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:backgroundDimAmount">0.67</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="ThemePrintIODialogFullscreen" parent="BaseThemePrintIO">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="ThemePrintIODialogFullscreenNoStatusBar" parent="BaseThemePrintIONoStatusBar">
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+</resources>

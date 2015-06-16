@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <!-- Pinch to Zoom -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_buttons"
+        android:background="#99000000" >
+
+        <print.io.view.TouchImageView
+            android:id="@+id/touchimageview_edit_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="#00000000" />
+    </LinearLayout>
+
+    <print.io.view.TextViewFontLight
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="25dip"
+        android:text="@string/pinch_pan"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/text_size_normal" />
+
+    <!-- Buttons Back and Next -->
+
+    <LinearLayout
+        android:id="@+id/layout_back_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_back"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="2"
+            android:background="@drawable/btn_blue_light_sharp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_save"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="8dip"
+            android:layout_weight="2"
+            android:background="@drawable/btn_green_sharp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textColor="@color/secondary_button_text"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_buttons"
+        android:background="#efeff2"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/imageview_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/btn_blue_light"
+            android:clickable="true"
+            android:paddingBottom="10dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="10dip"
+            android:text="@string/close"
+            android:textColor="@color/primary_button_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:id="@+id/layout_zoom_rotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textivew_move"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_move"
+                android:gravity="center"
+                android:text="@string/move"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_zoom"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dip"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_zoom"
+                android:gravity="center"
+                android:text="@string/zoom"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_normal" />
+            <!--
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_rotate"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dip"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_rotate_edit"
+                android:gravity="center"
+                android:text="@string/rotate"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_normal" />
+            -->
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Bottom Tab Bar -->
+
+    <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="55dip"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_info"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_image_selector_info_background"
+            android:clickable="true"
+            android:drawableTop="@drawable/edit_image_selector_info_image"
+            android:gravity="center"
+            android:paddingBottom="1dip"
+            android:paddingTop="5dip"
+            android:text="@string/tabbar_info"
+            android:textColor="@drawable/edit_image_selector_info_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:id="@+id/separator_1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_rotate"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_image_selector_rotate_background"
+            android:clickable="true"
+            android:drawableTop="@drawable/edit_image_selector_rotate_image"
+            android:gravity="center"
+            android:paddingBottom="1dip"
+            android:paddingTop="5dip"
+            android:text="@string/tabbar_rotate"
+            android:textColor="@drawable/edit_image_selector_rotate_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:id="@+id/separator_2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_abc"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/edit_image_selector_text_background"
+            android:clickable="true"
+            android:drawableTop="@drawable/edit_image_selector_text_image"
+            android:gravity="center"
+            android:paddingBottom="1dip"
+            android:paddingTop="5dip"
+            android:text="@string/tabbar_edit_text"
+            android:textColor="@drawable/edit_image_selector_text_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:id="@+id/separator_3"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="#cccccc" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_effects"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/edit_image_selector_effects_background"
+            android:clickable="true"
+            android:drawableTop="@drawable/edit_image_selector_effects_image"
+            android:gravity="center"
+            android:paddingBottom="1dip"
+            android:paddingTop="5dip"
+            android:text="@string/tabbar_effects"
+            android:textColor="@drawable/edit_image_selector_effects_text"
+            android:textSize="@dimen/text_size_normal" />
+    </LinearLayout>
+
+</RelativeLayout>

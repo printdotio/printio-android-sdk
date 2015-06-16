@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9a000000"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dip"
+        android:background="@drawable/bg_white"
+        android:padding="8dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="16dip"
+            android:paddingTop="8dip"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_check_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_text"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="8dip"
+            android:indeterminate="true" />
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_continue_with_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingBottom="16dip"
+            android:paddingTop="16dip"
+            android:text="Continue upload?"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_yes_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_continue_with_upload"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_no"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_blue_light"
+                android:gravity="center"
+                android:onClick="onClickNo"
+                android:padding="8dip"
+                android:text="@string/no"
+                android:textColor="@color/primary_button_text"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_yes"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_green"
+                android:gravity="center"
+                android:onClick="onClickYes"
+                android:padding="8dip"
+                android:text="@string/yes"
+                android:textColor="@color/secondary_button_text"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
