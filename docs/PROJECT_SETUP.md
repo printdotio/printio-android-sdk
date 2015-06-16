@@ -7,18 +7,27 @@ On this page we are going to guide you for setting up PrintIO SDK in an existing
 ### Android Studio guide
 
 ####1. Clone print.io project from this repository
+
 ####2. Import print.io SDK to your project as module
 Open Module Setting -> New Module -> Import Existing Project (Phone and Tablet Application) -> Choose directory of print.io SDK
 
 ### Eclipse guide
 
 ####1. Clone print.io project from this repository
+
 ####2. Import print.io SDK project
 File -> Import -> General -> Existing Projects into Workspace*
+
 ####3. Make print.io SDK as library
 Select print.io SDK project -> Properties -> Android -> Make sure that "Is Library" is ticked
-####4. Add print.io SDK library to your project
-Select your project -> Properties -> Android -> Add... -> printio-android*
+
+####4. Add facebook SDK library to the print.io SDK library
+If your project is not currently using facebook SDK you will have to clone facebook SDK for android and import it into workspace. Then add facebook SDK library to the print.io SDK library like so:
+
+Select print.io SDK project-> Properties -> Android -> Add... -> Choose facebook SDK library
+
+####5. Add print.io SDK library to your project
+Select your project -> Properties -> Android -> Add... -> Choose printio SDK library
 
 
 
