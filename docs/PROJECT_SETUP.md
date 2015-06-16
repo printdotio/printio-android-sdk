@@ -1,26 +1,28 @@
 #Project Setup
-###Prerequisites
 
-In order to follow this guide, you must have minimum the Android 4.4.2 SDK (API v19) and Eclipse installed on your system.  
-For download instructions, please visit [Installing ADT Plug-in for Eclipse](http://developer.android.com/sdk/installing/installing-adt.html).  
-_Please note that we will be migrating to Android Studio soon, as it is now the official IDE for Android._  
+##Setting up PrintIO SDK in your IDE
 
+On this page we are going to guide you for setting up PrintIO SDK in an existing app. This guide will cover Android Studio and Eclipse IDE.
 
-#Configuration
+### Android Studio guide
 
-In order to use the SDK in an existing app, following steps need to be followed carefully:
+####1. Clone print.io project from this repository
+####2. Import print.io SDK to your project as module
+Open Module Setting -> New Module -> Import Existing Project (Phone and Tablet Application) -> Choose directory of print.io SDK
 
-###1. Clone print.io project from this repository
+### Eclipse guide
 
-###2. Import print.io SDK project
+####1. Clone print.io project from this repository
+####2. Import print.io SDK project
 File -> Import -> General -> Existing Projects into Workspace*
+####3. Make print.io SDK as library
+Select print.io SDK project -> Properties -> Android -> Make sure that "Is Library" is ticked
+####4. Add print.io SDK library to your project
+Select your project -> Properties -> Android -> Add... -> printio-android*
 
-###3. Add print.io SDK library to your project
-Project -> Properties -> Android -> Add... -> printio-android*
 
 
-
-#AndroidManifest Configuration
+##AndroidManifest Configuration
 
 After importing and adding print.io SDK project, AndroidManifest.xml file of your project has to be set like so:
 
@@ -51,10 +53,7 @@ As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-    <!--
-  IMPORTANT: Change "com.example.piosdkpoconcept.permission.C2D_MESSAGE" in the lines below
-  to match your app's package name + ".permission.C2D_MESSAGE".
-    -->
+    <!-- IMPORTANT: Change "com.example.piosdkpoconcept.permission.C2D_MESSAGE" in the lines below to match your app's package name + ".permission.C2D_MESSAGE". -->
     <permission
         android:name="com.example.piosdkpoconcept.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
