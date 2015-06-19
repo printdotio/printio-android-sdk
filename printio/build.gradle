@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '22.0.1'
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 19
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+	
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
+}
+
+dependencies {
+    compile 'com.facebook.android:facebook-android-sdk:3.23.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/aws-android-sdk.1.7.0-core.jar')
+    compile files('libs/aws-android-sdk.1.7.0-s3.jar')
+    compile files('libs/bugsense-3.5.jar')
+    compile files('libs/braintree-android-encryption-1.0.0.jar')
+    compile files('libs/bugsense-3.5.jar')
+    compile files('libs/httpclientandroidlib-1.1.1.jar')
+    compile files('libs/Parse-1.5.1.jar')
+    compile files('libs/PayPalAndroidSDK-2.7.1.jar')
+    compile files('libs/printiosdk.jar')
+}
