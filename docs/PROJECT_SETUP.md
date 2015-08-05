@@ -21,7 +21,7 @@ File -> Import -> General -> Existing Projects into Workspace*
 ####3. Make print.io SDK as library
 Select print.io SDK project -> Properties -> Android -> Make sure that "Is Library" is ticked
 
-####4. Add facebook SDK library to the print.io SDK library
+####4. Add facebook SDK (version 4.2) library to the print.io SDK library
 If your project is not currently using facebook SDK you will have to clone facebook SDK for android and import it into workspace. Then add facebook SDK library to the print.io SDK library like so:
 
 Select print.io SDK project-> Properties -> Android -> Add... -> Choose facebook SDK library
@@ -97,9 +97,6 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
         <activity
-            android:name="print.io.ActivityAnimatedHelp"
-            android:screenOrientation="portrait" />
-        <activity
             android:name="print.io.ActivityCurrency"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
@@ -117,9 +114,18 @@ Please add following activities to your AndroidManifest.xml file:
             android:name="print.io.ActivityCustomizeProduct"
             android:screenOrientation="portrait" />
         <activity
+            android:name="print.io.ActivityCustomizePhotobook"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="print.io.ActivityCustomSteps"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="print.io.ActivityStickerBook"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="print.io.ActivityProductPreview"
+            android:screenOrientation="portrait" />
         <activity
             android:name="print.io.ActivityShoppingCart"
             android:screenOrientation="portrait"
@@ -146,17 +152,19 @@ Please add following activities to your AndroidManifest.xml file:
         <activity
             android:name="print.io.ActivityHelp"
             android:screenOrientation="portrait" />
-        <activity android:name="com.facebook.LoginActivity" />
         <activity
-            android:name="print.io.social.Instagram"
+            android:name="print.io.photosource.impl.facebook.Facebook"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="print.io.photosource.impl.instagram.Instagram"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="print.io.social.Flickr"
+            android:name="print.io.photosource.impl.flickr.Flickr"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="print.io.social.Dropbox"
+            android:name="print.io.photosource.impl.dropbox.Dropbox"
             android:noHistory="true"
             android:screenOrientation="portrait" />
         <activity
@@ -164,6 +172,9 @@ Please add following activities to your AndroidManifest.xml file:
             android:screenOrientation="portrait" />
         <activity
             android:name="print.io.ActivityHowItWorks"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
             android:screenOrientation="portrait" />
 
         <!-- Activities needed for new paypal functionalities -->
@@ -226,3 +237,9 @@ Please add following activities to your AndroidManifest.xml file:
 
 ###4. Application element
 Important: `android:largeHeap="true"` attribute is required to be set in `<application\>` element.
+
+###5. Facebook App ID
+Add your facebook_app_id to `res/strings.xml`.
+```xml
+<string name="facebook_app_id">YourFacebookAppId</string>
+```

@@ -9,8 +9,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/viewpager_place_holder" />
+        android:scaleType="centerCrop" />
 
     <ProgressBar
         android:id="@+id/progress"

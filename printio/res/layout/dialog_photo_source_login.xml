@@ -48,12 +48,12 @@
             android:layout_height="match_parent"
             android:layout_marginRight="4dip"
             android:layout_weight="1"
-            android:background="@drawable/btn_blue_light"
+            android:background="@drawable/btn_secondary"
             android:gravity="center"
             android:lineSpacingExtra="1dp"
             android:padding="8dip"
             android:text="@string/cancel"
-            android:textColor="@color/primary_button_text"
+            android:textColor="@color/button_secondary_text"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
 
@@ -63,12 +63,12 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="4dip"
             android:layout_weight="1"
-            android:background="@drawable/btn_green"
+            android:background="@drawable/btn_primary"
             android:gravity="center"
             android:lineSpacingExtra="1dp"
             android:padding="8dip"
             android:text="@string/login"
-            android:textColor="@color/secondary_button_text"
+            android:textColor="@color/button_primary_text"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
     </LinearLayout>

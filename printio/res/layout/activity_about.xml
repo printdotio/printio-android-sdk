@@ -27,7 +27,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -37,7 +37,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_customize_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
-                android:drawableLeft="@drawable/icon_help_purple"
+                android:drawableLeft="@drawable/icon_about"
                 android:drawablePadding="5dip"
                 android:text="@string/about"
                 android:textColor="@color/purple"

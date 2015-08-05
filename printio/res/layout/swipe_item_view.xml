@@ -5,61 +5,66 @@
     android:layout_height="match_parent" >
 
     <LinearLayout
-        android:id="@+id/swipe_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/swipe_delete"
-        android:background="@drawable/btn_edit_swiped"
-        android:gravity="center_vertical|right"
-        android:orientation="horizontal" >
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_edit"
-            android:layout_width="wrap_content"
-            android:layout_height="113dp"
-            android:layout_gravity="right|center_vertical"
-            android:gravity="center_vertical|right"
-            android:paddingBottom="7dip"
-            android:paddingLeft="22dp"
-            android:paddingRight="22dp"
-            android:paddingTop="7dip"
-            android:text="@string/edit"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/swipe_delete"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/btn_delete_swiped"
-        android:gravity="center_vertical|right"
         android:orientation="horizontal" >
 
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_delete"
+        <LinearLayout
+            android:id="@+id/swipe_edit"
             android:layout_width="wrap_content"
-            android:layout_height="113dp"
-            android:layout_gravity="right|center_vertical"
-            android:gravity="center_vertical"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:text="@string/delete"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_edit_swiped"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="113dp"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center_vertical|right"
+                android:paddingBottom="7dip"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:paddingTop="7dip"
+                android:text="@string/edit"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/swipe_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_delete_swiped"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="113dp"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/delete"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
     </LinearLayout>
 
     <print.io.view.swipe.CustomHorizontalScrollView
         android:id="@+id/scrollview_container"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:scrollbars="none" >
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal" >
 
@@ -69,6 +74,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_selector_swipeable"
                 android:padding="8dip" />
+
         </LinearLayout>
     </print.io.view.swipe.CustomHorizontalScrollView>
 

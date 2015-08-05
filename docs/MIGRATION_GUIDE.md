@@ -1,3 +1,48 @@
+Migrating to v3.0.0 from v2.3.0
+========
+ ---
+**Changes in AndroidManifest.xml**
+
+Following activity declarations should be added:
+```xml
+<activity android:name="print.io.ActivityCustomizePhotobook" android:screenOrientation="landscape" />
+<activity android:name="print.io.ActivityProductPreview" android:screenOrientation="portrait" />
+```
+Following activities are no longer used and should be removed:
+```xml
+<activity android:name="print.io.ActivityAnimatedHelp" android:screenOrientation="portrait" />
+```
+
+**API Changes**
+
+Screen titles are now displayed using a separate font.  
+Use the new method [`PIOConfig#setFontPathInAssetsTitle(String)`](SDK_REFERENCE.md#-set-custom-fonts-from-main-app-bundle) to set Title font.
+To keep using the same fonts, use the same font for `setFontPathInAssetsNormal()` and `setFontPathInAssetsTitle()`.  
+
+Method `PIOConfig#setSplashScreenEnabled(boolean isSplashScreenEnabled)` has been removed.  
+Use [`PIOConfig#setSplashScreenTimeout(int splashScreenTimeout)`](SDK_REFERENCE.md#-splash-screen-settings) to enable or disable Splash Screen.  
+
+Separate [colors](SDK_REFERENCE.md#-change-buttons-colors) for `Save To Cart` button have been added.  
+To keep the design the same, set `Save To Cart` button colors to be the same as your secondary button colors.
+
+A separate [text size](SDK_REFERENCE.md#-adjust-font-sizes) for `Create It` button has been added (`text_size_button_create_it`).
+To keep the design the same, set `Create It` text size to be the same as the `text_size_normal` in your `dimens.xml`.  
+Notice that there are two versions of `dimens.xml` file - `values/dimens.xml` for small screens and `values-sw330dp/dimens.xml` for normal screens.  
+
+**Renamed Resources**
+Resource `icon_arrow_back_2.png` has been renamed `icon_arrow_back.png`
+[Set icon for back button](SDK_REFERENCE.md#-set-icon-for-back-button)  
+
+Resources which define [primary and secondary buttons' colors](SDK_REFERENCE.md#-change-buttons-colors) have been renamed.  
+res/colors.xml
+```xml
+<color name="green"> --> <color name="button_primary_default">
+<color name="green_dark"> --> <color name="button_primary_pressed">
+
+<color name="blue_light"> --> <color name="button_secondary_default">
+<color name="blue_dark"> --> <color name="button_secondary_pressed">
+```
+
 Migrating to v2.3.0 from v2.1.13
 ========
  ---

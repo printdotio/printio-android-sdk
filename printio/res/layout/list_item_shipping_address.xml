@@ -98,7 +98,7 @@
             android:layout_centerVertical="true"
             android:paddingLeft="5dip"
             android:paddingRight="10dp"
-            android:src="@drawable/icon_forward_grey"
+            android:src="@drawable/icon_arrow_next_light"
             android:visibility="visible" />
 
         <View

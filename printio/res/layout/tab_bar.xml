@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="60dip"
-    android:background="@color/customize_product_tabbar"
+    android:background="@color/customize_product_tabbar_background"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -16,14 +16,15 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/bg_selector_abc"
             android:clickable="true"
-            android:drawableTop="@drawable/icon_abc_blue"
+            android:drawableTop="@drawable/icon_abc"
             android:gravity="center"
             android:onClick="onClickText"
             android:paddingBottom="4dip"
             android:paddingTop="9dip"
             android:text="@string/text"
-            android:textColor="@color/blue_light"
+            android:textColor="@color/btn_abc_text"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
@@ -32,14 +33,15 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/bg_selector_effects"
             android:clickable="true"
-            android:drawableTop="@drawable/icon_effects_green2"
+            android:drawableTop="@drawable/icon_effects"
             android:gravity="center"
-            android:onClick="onClickEditTools"
+            android:onClick="onClickEffects"
             android:paddingBottom="4dip"
             android:paddingTop="8dip"
             android:text="@string/effects"
-            android:textColor="@color/green"
+            android:textColor="@color/btn_effects_text"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
@@ -48,14 +50,15 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/bg_selector_layout"
             android:clickable="true"
-            android:drawableTop="@drawable/icon_layout_red2"
+            android:drawableTop="@drawable/icon_layout"
             android:gravity="center"
             android:onClick="onClickLayout"
             android:paddingBottom="4dip"
             android:paddingTop="8dip"
             android:text="@string/layout"
-            android:textColor="@color/orange"
+            android:textColor="@color/btn_layout_text"
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontLight
@@ -64,14 +67,15 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:background="@drawable/bg_selector_options"
             android:clickable="true"
-            android:drawableTop="@drawable/icon_options_purple2"
+            android:drawableTop="@drawable/icon_options"
             android:gravity="center"
             android:onClick="onClickOptions"
             android:paddingBottom="4dip"
             android:paddingTop="8dip"
             android:text="@string/options"
-            android:textColor="@color/purple"
+            android:textColor="@color/btn_options_text"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
@@ -86,28 +90,28 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/blue_light" />
+            android:background="@color/edit_button_abc_primary" />
 
         <View
             android:id="@+id/undercolor_effects"
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/green" />
+            android:background="@color/edit_button_effects_primary" />
 
         <View
             android:id="@+id/undercolor_layout"
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/orange" />
+            android:background="@color/edit_button_layout_primary" />
 
         <View
             android:id="@+id/undercolor_options"
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/purple" />
+            android:background="@color/edit_button_options_primary" />
     </LinearLayout>
 
 </LinearLayout>

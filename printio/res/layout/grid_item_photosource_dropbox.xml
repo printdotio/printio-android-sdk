@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <print.io.imageloader.MyImageViewSquare
+            android:id="@+id/imageview_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:id="@+id/overlay_translucent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlay_translucent"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_image_index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageview_image"
+            android:layout_alignRight="@+id/imageview_image"
+            android:layout_marginBottom="4dip"
+            android:layout_marginRight="4dip"
+            android:background="@drawable/bg_selected_photo_index"
+            android:gravity="center"
+            android:minHeight="24dip"
+            android:minWidth="24dip"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <print.io.view.TextViewFontNormal
+        android:id="@+id/textview_dropbox_folder_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dip"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1"
+        android:lines="2"
+        android:padding="5dip"
+        android:textColor="#797c83"
+        android:textSize="@dimen/text_size_normal" />
+
+</LinearLayout>

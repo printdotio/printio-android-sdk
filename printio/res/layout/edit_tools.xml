@@ -44,7 +44,7 @@
                 android:layout_margin="2dip"
                 android:background="@drawable/bg_selector_white"
                 android:clickable="true"
-                android:drawableTop="@drawable/icon_shuffle_purple"
+                android:drawableTop="@drawable/button_shuffle"
                 android:gravity="center"
                 android:onClick="onClickRandomize"
                 android:paddingBottom="1dip"
@@ -52,7 +52,7 @@
                 android:paddingRight="5dip"
                 android:paddingTop="5dip"
                 android:text="@string/shuffle"
-                android:textColor="@color/purple"
+                android:textColor="@color/edit_options_text"
                 android:textSize="@dimen/text_size_normal" />
 
             <LinearLayout
@@ -73,7 +73,7 @@
                     android:layout_margin="2dip"
                     android:background="@drawable/bg_selector_white"
                     android:clickable="true"
-                    android:drawableTop="@drawable/icon_change_background"
+                    android:drawableTop="@drawable/button_change_background_default"
                     android:gravity="center"
                     android:onClick="onClickChangeBackground"
                     android:paddingBottom="1dip"
@@ -81,7 +81,7 @@
                     android:paddingRight="5dip"
                     android:paddingTop="5dip"
                     android:text="@string/background"
-                    android:textColor="@color/purple"
+                    android:textColor="@color/edit_options_text"
                     android:textSize="@dimen/text_size_normal" />
             </LinearLayout>
 

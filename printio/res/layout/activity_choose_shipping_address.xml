@@ -26,7 +26,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -36,7 +36,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_shipping_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="5dip"
-        android:background="@drawable/btn_blue_light"
+        android:background="@drawable/btn_secondary"
         android:gravity="center"
         android:onClick="onClickAddAddress"
         android:paddingBottom="10dip"
@@ -99,7 +99,7 @@
         android:paddingRight="8dip"
         android:paddingTop="10dip"
         android:text="@string/add_address"
-        android:textColor="@color/primary_button_text"
+        android:textColor="@color/button_secondary_text"
         android:textSize="@dimen/text_size_large" />
 
     <View

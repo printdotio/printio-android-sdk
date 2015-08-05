@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:focusableInTouchMode="true" >
+
+    <RelativeLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/title_bar_background" >
+
+        <LinearLayout
+            android:id="@+id/layout_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickBack"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:id="@+id/textview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_arrow_back"
+                android:drawablePadding="8dip"
+                android:text="@string/back"
+                android:textColor="@color/button_back_next_photobooks_text" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner_product_page_titles"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_spinner_transparent"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dip"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickNext"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:id="@+id/textview_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="8dip"
+                android:drawableRight="@drawable/icon_arrow_next"
+                android:text="@string/next"
+                android:textColor="@color/button_back_next_photobooks_text" />
+        </LinearLayout>
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_save_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/layout_forward_button"
+            android:background="@drawable/bg_selector_border_black_light"
+            android:clickable="true"
+            android:onClick="onClickSaveToCart"
+            android:paddingBottom="6dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="6dip"
+            android:text="@string/save_to_cart"
+            android:textColor="@color/button_save_to_cart_photobooks_text"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_buttons"
+        android:background="@color/title_bar_separator" />
+
+    <RelativeLayout
+        android:id="@+id/customize_product_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_dummy_title_separator" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <print.io.view.CustomizeProductView
+                android:id="@+id/customize_product_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/customize_product_view_margins" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!-- Tooltip, displayed over CustomizeProductView, disappears after timeout -->
+
+    <RelativeLayout
+        android:id="@+id/layout_tooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dip"
+        android:layout_marginTop="4dip" >
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_tooltip"
+            android:layout_width="wrap_content"
+            android:layout_height="26dip"
+            android:background="@drawable/bg_tooltip"
+            android:ellipsize="none"
+            android:gravity="center"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text="@string/customize_photobook_tooltip_text"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_normal" />
+
+        <View
+            android:layout_width="20dip"
+            android:layout_height="24dip"
+            android:layout_below="@+id/textview_tooltip"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/arrow_up"
+            android:rotation="180" />
+    </RelativeLayout>
+
+    <!-- Product options layout -->
+
+    <RelativeLayout
+        android:id="@+id/layout_product_options"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_bar"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:background="#80000000"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <GridView
+            android:id="@+id/gridview_product_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:horizontalSpacing="16dip"
+            android:layoutAnimation="@anim/layout_grid_fade"
+            android:listSelector="@drawable/bg_selection_global"
+            android:numColumns="4"
+            android:paddingBottom="10dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="6dip"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="20dip" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/drawer_replace_photo"
+        layout="@layout/drawer_replace_photo"
+        android:visibility="gone" />
+
+</RelativeLayout>

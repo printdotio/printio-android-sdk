@@ -90,7 +90,7 @@
                             android:id="@+id/ship_cost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/ship_cost"
+                            android:text="@string/shipping_cost"
                             android:textColor="#595d66"
                             android:textSize="@dimen/text_size_normal" />
 
@@ -109,7 +109,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0px"
                     android:layout_weight="1"
-                    android:background="@drawable/remove_shippment_button"
+                    android:background="@drawable/button_remove_shipment"
                     android:gravity="center"
                     android:onClick="onClickRemoveItems"
                     android:paddingLeft="15dp"

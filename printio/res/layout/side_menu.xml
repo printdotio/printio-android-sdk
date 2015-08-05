@@ -189,8 +189,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dip"
                             android:adjustViewBounds="true"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/icon_change_country" />
+                            android:scaleType="fitCenter" />
 
                         <print.io.view.TextViewFontLight
                             android:id="@+id/dummy_country"
@@ -516,12 +515,5 @@
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="-1dip"
-        android:background="@drawable/bg_gradient_right" />
 
 </RelativeLayout>

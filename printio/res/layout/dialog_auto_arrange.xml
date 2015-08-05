@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="20dip" >
+
+        <print.io.view.TextViewFontBold
+            android:id="@+id/textview_arrangement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/image_arrangement"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_arrangement"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="20dip"
+            android:orientation="horizontal" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_random"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_secondary"
+                android:drawableTop="@drawable/icon_random_auto_arrange"
+                android:paddingBottom="14dip"
+                android:paddingTop="14dip"
+                android:text="@string/random_auto_arrange"
+                android:textColor="@color/button_secondary_text"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_manual"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_primary"
+                android:drawableTop="@drawable/icon_manual_drag_and_drop"
+                android:paddingBottom="14dip"
+                android:paddingTop="14dip"
+                android:text="@string/manual_drag_drop"
+                android:textColor="@color/button_primary_text"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_auto_arrange_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_buttons"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/auto_arrange_note"
+            android:textColor="#5a5d66"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <solid android:color="@color/button_primary_pressed" />
+
+            <corners android:radius="3px" />
+        </shape></item>
+    <item><shape>
+            <corners android:radius="3px" />
+
+            <solid android:color="@color/button_primary_default" />
+        </shape></item>
+
+</selector>

@@ -4,37 +4,16 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <print.io.view.TextViewFontNormal
+        android:id="@+id/textview_content_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_content_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:paddingBottom="10dip"
-            android:paddingLeft="15dip"
-            android:paddingRight="15dip"
-            android:paddingTop="10dip"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_large" />
-
-        <ImageView
-            android:id="@+id/imageview_plus_minus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:onClick="onClickPlusMinus"
-            android:paddingBottom="5dip"
-            android:paddingLeft="5dip"
-            android:paddingRight="10dip"
-            android:paddingTop="5dip"
-            android:src="@drawable/btn_minus"
-            android:visibility="invisible" />
-    </RelativeLayout>
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip"
+        android:textColor="#323232"
+        android:textSize="@dimen/text_size_large" />
 
     <View
         android:layout_width="match_parent"

@@ -27,4 +27,9 @@
         <item name="android:backgroundDimAmount">0.67</item>
     </style>
 
+    <style name="ThemePrintIODialogTwoColumns" parent="ThemePrintIODialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:minWidth">360dip</item>
+    </style>
+
 </resources>

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#aa000000"
-    android:clickable="true" >
+    android:layout_height="match_parent" >
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -45,11 +43,11 @@
             android:layout_below="@+id/edittext_enter_your_email"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dip"
-            android:background="@drawable/btn_blue_light"
+            android:background="@drawable/btn_secondary"
             android:gravity="center"
             android:padding="8dip"
             android:text="@string/send"
-            android:textColor="@color/primary_button_text"
+            android:textColor="@color/button_secondary_text"
             android:textSize="@dimen/text_size_normal"
             android:textStyle="bold" />
 
@@ -63,7 +61,7 @@
             android:layout_marginTop="-9dip"
             android:clickable="true"
             android:padding="10dip"
-            android:src="@drawable/icon_x_b" />
+            android:src="@drawable/icon_x" />
     </RelativeLayout>
 
 </RelativeLayout>

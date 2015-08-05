@@ -28,7 +28,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -38,7 +38,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -259,7 +259,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:textColor="@color/red_discount"
+                            android:textColor="@color/discount_highlight"
                             android:textSize="@dimen/text_size_normal" />
                     </RelativeLayout>
 
@@ -413,14 +413,14 @@
             android:layout_height="match_parent"
             android:layout_alignParentBottom="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/btn_blue_light"
+            android:background="@drawable/btn_secondary"
             android:drawablePadding="10dp"
-            android:drawableRight="@drawable/icon_arrow_right"
+            android:drawableRight="@drawable/icon_arrow_next_invert"
             android:onClick="onClickPlaceOrder"
             android:paddingLeft="15dip"
             android:paddingRight="15dip"
             android:text="@string/enter_payment_info"
-            android:textColor="@color/primary_button_text"
+            android:textColor="@color/button_secondary_text"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 

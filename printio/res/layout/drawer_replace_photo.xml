@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/title_bar_background" >
+
+        <LinearLayout
+            android:id="@+id/layout_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickCloseReplacePhotoDrawer"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <TextView
+                android:id="@+id/textview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_arrow_back"
+                android:drawablePadding="8dip"
+                android:text="@string/back"
+                android:textColor="@color/button_back_next_photobooks_text" />
+        </LinearLayout>
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_add_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:layout_toLeftOf="@+id/button_replace"
+            android:background="@drawable/btn_secondary"
+            android:gravity="center"
+            android:onClick="onClickAddMorePhotos"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:text="@string/add_photos"
+            android:textColor="@color/button_secondary_text"
+            android:textSize="@dimen/text_size_normal" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_replace"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dip"
+            android:background="@drawable/btn_secondary"
+            android:gravity="center"
+            android:onClick="onClickReplace"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:text="@string/replace"
+            android:textColor="@color/button_secondary_text"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingBottom="16dip"
+            android:paddingTop="16dip" >
+
+            <print.io.imageloader.MyImageView
+                android:id="@+id/imageview_current_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/textview_current"
+                android:layout_margin="8dip"
+                android:adjustViewBounds="true"
+                android:paddingTop="16dip"
+                android:scaleType="fitCenter" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_current"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal"
+                android:text="@string/current"
+                android:textColor="#333333"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="2dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dip"
+            android:layout_marginTop="8dip"
+            android:background="@color/title_bar_separator" />
+
+        <GridView
+            android:id="@+id/gridview_drawer_replace_photo"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:clipToPadding="false"
+            android:horizontalSpacing="8dip"
+            android:numColumns="4"
+            android:paddingBottom="8dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8dip" />
+    </LinearLayout>
+
+</LinearLayout>

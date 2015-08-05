@@ -25,7 +25,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -35,7 +35,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_shipping_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,11 +102,11 @@
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
                 android:layout_marginTop="5dip"
-                android:background="@drawable/btn_green"
+                android:background="@drawable/btn_primary"
                 android:gravity="center"
                 android:onClick="onClickPickFromContacts"
                 android:text="@string/pick_from_contacts"
-                android:textColor="@color/secondary_button_text"
+                android:textColor="@color/button_primary_text"
                 android:textSize="@dimen/text_size_normal" />
 
             <print.io.view.EditTextFontLight
@@ -310,11 +310,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dip"
                 android:layout_margin="5dip"
-                android:background="@drawable/btn_blue_light"
+                android:background="@drawable/btn_secondary"
                 android:gravity="center"
                 android:onClick="onClickSaveAddress"
                 android:text="@string/save_address"
-                android:textColor="@color/primary_button_text"
+                android:textColor="@color/button_secondary_text"
                 android:textSize="@dimen/text_size_normal" />
         </LinearLayout>
     </ScrollView>

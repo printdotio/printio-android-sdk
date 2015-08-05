@@ -46,12 +46,12 @@
             android:layout_marginLeft="8dip"
             android:layout_marginTop="8dip"
             android:layout_weight="2"
-            android:background="@drawable/btn_blue_light_sharp"
+            android:background="@drawable/btn_secondary_sharp"
             android:clickable="true"
             android:gravity="center_horizontal"
             android:padding="10dp"
             android:text="@string/cancel"
-            android:textColor="@color/primary_button_text"
+            android:textColor="@color/button_secondary_text"
             android:textSize="@dimen/text_size_normal" />
 
         <View
@@ -66,12 +66,12 @@
             android:layout_marginRight="8dip"
             android:layout_marginTop="8dip"
             android:layout_weight="2"
-            android:background="@drawable/btn_green_sharp"
+            android:background="@drawable/btn_primary_sharp"
             android:clickable="true"
             android:gravity="center_horizontal"
             android:padding="10dp"
             android:text="@string/save"
-            android:textColor="@color/secondary_button_text"
+            android:textColor="@color/button_primary_text"
             android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
@@ -91,14 +91,14 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/btn_blue_light"
+            android:background="@drawable/btn_secondary"
             android:clickable="true"
             android:paddingBottom="10dip"
             android:paddingLeft="16dip"
             android:paddingRight="16dip"
             android:paddingTop="10dip"
             android:text="@string/close"
-            android:textColor="@color/primary_button_text"
+            android:textColor="@color/button_secondary_text"
             android:textSize="@dimen/text_size_normal" />
 
         <LinearLayout
@@ -135,20 +135,6 @@
                 android:text="@string/zoom"
                 android:textColor="#333333"
                 android:textSize="@dimen/text_size_normal" />
-            <!--
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_rotate"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dip"
-                android:layout_weight="1"
-                android:drawableTop="@drawable/icon_rotate_edit"
-                android:gravity="center"
-                android:text="@string/rotate"
-                android:textColor="#333333"
-                android:textSize="@dimen/text_size_normal" />
-            -->
         </LinearLayout>
     </RelativeLayout>
 

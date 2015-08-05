@@ -26,7 +26,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -36,7 +36,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -127,20 +127,10 @@
             android:paddingBottom="10dip" >
 
             <include
-                android:id="@+id/singlephoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                layout="@layout/item_singlephoto"
-                android:visibility="gone" />
-
-            <include
-                android:id="@+id/multiphoto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                layout="@layout/item_multiphoto"
-                android:visibility="gone" />
+                layout="@layout/item_multiphoto" />
         </RelativeLayout>
     </ScrollView>
 
@@ -159,7 +149,7 @@
         android:layout_marginBottom="10dip"
         android:layout_marginLeft="10dip"
         android:layout_marginTop="2dip"
-        android:background="@drawable/btn_green"
+        android:background="@drawable/btn_primary"
         android:clickable="true"
         android:gravity="center"
         android:onClick="onClickSelectAllButton"
@@ -167,7 +157,7 @@
         android:paddingLeft="15dip"
         android:paddingRight="15dip"
         android:paddingTop="9dip"
-        android:textColor="@color/secondary_button_text"
+        android:textColor="@color/button_primary_text"
         android:textSize="@dimen/text_size_large"
         android:visibility="gone" />
 
@@ -180,10 +170,10 @@
         android:layout_marginBottom="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="2dip"
-        android:background="@drawable/btn_green"
+        android:background="@drawable/btn_primary"
         android:clickable="true"
         android:drawablePadding="10dp"
-        android:drawableRight="@drawable/icon_arrow_right"
+        android:drawableRight="@drawable/icon_arrow_next_invert"
         android:gravity="center"
         android:onClick="onClickNext"
         android:paddingBottom="9dip"
@@ -191,7 +181,7 @@
         android:paddingRight="9dip"
         android:paddingTop="9dip"
         android:text="@string/next"
-        android:textColor="@color/secondary_button_text"
+        android:textColor="@color/button_primary_text"
         android:textSize="@dimen/text_size_large" />
 
     <print.io.view.TextViewFontLight
@@ -201,13 +191,13 @@
         android:layout_above="@+id/textview_customize_product"
         android:layout_alignParentRight="true"
         android:layout_marginRight="10dip"
-        android:background="@drawable/btn_blue_light"
+        android:background="@drawable/btn_secondary"
         android:clickable="false"
         android:paddingBottom="7dip"
         android:paddingLeft="9dip"
         android:paddingRight="9dip"
         android:paddingTop="7dip"
-        android:textColor="@color/primary_button_text"
+        android:textColor="@color/button_secondary_text"
         android:textSize="@dimen/text_size_normal" />
 
 </RelativeLayout>

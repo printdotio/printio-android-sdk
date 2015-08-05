@@ -26,7 +26,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -36,7 +36,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -185,7 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:textColor="@color/red_discount"
+                android:textColor="@color/discount_highlight"
                 android:textSize="@dimen/text_size_normal" />
         </RelativeLayout>
 
@@ -256,7 +256,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dip"
                 android:layout_margin="5dip"
-                android:background="@drawable/bg_print_type" />
+                android:background="@drawable/bg_spinner_silver" />
 
             <LinearLayout
                 android:id="@+id/layout_shipping_method_type"
@@ -279,7 +279,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dip"
                     android:layout_margin="5dip"
-                    android:background="@drawable/bg_print_type" />
+                    android:background="@drawable/bg_spinner_silver" />
             </LinearLayout>
 
             <LinearLayout
@@ -309,7 +309,7 @@
                     android:layout_marginLeft="5dip"
                     android:layout_marginRight="5dip"
                     android:layout_marginTop="5dip"
-                    android:background="@drawable/btn_blue_light_sharp"
+                    android:background="@drawable/btn_secondary_sharp"
                     android:clickable="true"
                     android:gravity="center_horizontal"
                     android:onClick="onClickPaypal"
@@ -326,7 +326,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/pay_with"
-                            android:textColor="@color/primary_button_text"
+                            android:textColor="@color/button_secondary_text"
                             android:textSize="@dimen/text_size_normal" />
 
                         <ImageView
@@ -345,12 +345,12 @@
                     android:layout_marginLeft="5dip"
                     android:layout_marginRight="5dip"
                     android:layout_marginTop="5dip"
-                    android:background="@drawable/btn_gray_sharp"
+                    android:background="@drawable/btn_tertiary_sharp"
                     android:clickable="true"
                     android:gravity="center"
                     android:onClick="onClickCreditCard"
                     android:text="@string/pay_with_card"
-                    android:textColor="#ffffff"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/text_size_normal"
                     android:visibility="gone" />
             </LinearLayout>
@@ -442,7 +442,7 @@
                             android:layout_centerVertical="true"
                             android:layout_marginLeft="5dip"
                             android:layout_marginRight="5dip"
-                            android:src="@drawable/icon_check_green"
+                            android:src="@drawable/icon_credit_card_valid"
                             android:visibility="gone" />
                     </RelativeLayout>
 
@@ -476,7 +476,7 @@
                             android:layout_height="40dip"
                             android:layout_marginRight="3dip"
                             android:layout_weight="1"
-                            android:background="@drawable/bg_print_type_white" />
+                            android:background="@drawable/bg_spinner_white" />
 
                         <Spinner
                             android:id="@+id/spinner_expiration_year"
@@ -484,7 +484,7 @@
                             android:layout_height="40dip"
                             android:layout_marginLeft="3dip"
                             android:layout_weight="1"
-                            android:background="@drawable/bg_print_type_white" />
+                            android:background="@drawable/bg_spinner_white" />
                     </LinearLayout>
 
                     <!-- Place Order -->
@@ -495,10 +495,10 @@
                         android:layout_height="40dip"
                         android:layout_marginBottom="20dip"
                         android:layout_marginTop="5dip"
-                        android:background="@drawable/btn_blue_light"
+                        android:background="@drawable/btn_secondary"
                         android:onClick="onClickPlaceOrderCreditCard"
                         android:text="@string/place_order"
-                        android:textColor="@color/primary_button_text"
+                        android:textColor="@color/button_secondary_text"
                         android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
@@ -538,7 +538,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:src="@drawable/icon_splash_logo_small"
+            android:src="@drawable/icon_logo_payment_screen"
             android:visibility="gone" />
     </LinearLayout>
 

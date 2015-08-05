@@ -26,7 +26,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -36,7 +36,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,32 +119,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dip"
-                layout="@layout/item_product_details_details"
-                android:visibility="visible" />
+                layout="@layout/item_product_details_details" />
 
             <include
                 android:id="@+id/item_shipping_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_shipping_info"
-                android:visibility="visible" />
+                layout="@layout/item_product_details_shipping_info" />
 
             <include
                 android:id="@+id/item_quality_guarantee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_quality"
-                android:visibility="visible" />
-
-            <include
-                android:id="@+id/item_price_chart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_price_chart"
-                android:visibility="gone" />
+                layout="@layout/item_product_details_quality" />
         </LinearLayout>
     </print.io.view.CustomScrollView>
 
@@ -156,15 +145,6 @@
         android:layout_height="60dip"
         android:layout_below="@+id/view_dummy_title_separator"
         layout="@layout/item_product_details_buy_it"
-        android:visibility="gone" />
-
-    <!-- For coasters product -->
-
-    <include
-        android:id="@+id/dialog_coasters"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_stickerbook"
         android:visibility="gone" />
 
 </RelativeLayout>

@@ -3,5 +3,5 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:gravity="center"
-    android:textColor="#FF222222"
+    android:textColor="@color/button_back_next_photobooks_text"
     android:textSize="@dimen/text_size_normal" />

@@ -25,7 +25,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <ImageView
@@ -35,7 +35,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_shipping_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -152,11 +152,11 @@
                     android:layout_marginLeft="35dip"
                     android:layout_marginRight="35dip"
                     android:layout_marginTop="15dip"
-                    android:background="@drawable/btn_green"
+                    android:background="@drawable/btn_primary"
                     android:onClick="onClickAcceptSuggestion"
                     android:padding="14dip"
                     android:text="@string/accept_suggestion"
-                    android:textColor="@color/secondary_button_text"
+                    android:textColor="@color/button_primary_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -168,11 +168,11 @@
                     android:layout_marginLeft="35dip"
                     android:layout_marginRight="35dip"
                     android:layout_marginTop="5dip"
-                    android:background="@drawable/btn_blue_light"
+                    android:background="@drawable/btn_secondary"
                     android:onClick="onClickEditSuggestion"
                     android:padding="14dip"
                     android:text="@string/edit_suggestion"
-                    android:textColor="@color/primary_button_text"
+                    android:textColor="@color/button_secondary_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -238,11 +238,11 @@
                     android:layout_marginLeft="35dip"
                     android:layout_marginRight="35dip"
                     android:layout_marginTop="15dip"
-                    android:background="@drawable/btn_blue_light"
+                    android:background="@drawable/btn_secondary"
                     android:onClick="onClickEditAddressAttempt"
                     android:padding="14dip"
                     android:text="@string/edit_address_re_attempt"
-                    android:textColor="@color/primary_button_text"
+                    android:textColor="@color/button_secondary_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </RelativeLayout>

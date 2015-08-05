@@ -14,7 +14,7 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="15dip"
-        android:text="@string/review_quantity_cropping"
+        android:text="@string/image_quantity_and_cropping"
         android:textColor="#5a5d66"
         android:textSize="@dimen/text_size_large" />
 
@@ -26,57 +26,22 @@
         android:layout_marginBottom="5dip"
         android:layout_marginLeft="20dip"
         android:layout_marginRight="10dip"
-        android:drawableLeft="@drawable/icon_double_tap_small"
+        android:drawableLeft="@drawable/icon_double_tap_to_adjust_crop"
         android:gravity="center"
-        android:text="@string/double_tap_stickerbook"
+        android:text="@string/double_tap_to_adjust_crop"
         android:textColor="#5a5d66"
         android:textSize="@dimen/text_size_normal" />
 
     <print.io.view.TextViewFontLight
-        android:id="@+id/textview_random"
+        android:id="@+id/textview_product_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textview_double_tap"
         android:layout_marginBottom="10dip"
         android:layout_marginLeft="20dip"
         android:layout_marginRight="10dip"
-        android:drawableLeft="@drawable/icon_random"
         android:gravity="center"
-        android:text="@string/random_stickerbook"
         android:textColor="#5a5d66"
         android:textSize="@dimen/text_size_normal" />
-
-    <RelativeLayout
-        android:id="@+id/textview_question_mark"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textview_double_tap"
-        android:layout_marginBottom="10dip"
-        android:clickable="true"
-        android:onClick="onClickHelp"
-        android:paddingLeft="20dip"
-        android:paddingRight="10dip"
-        android:visibility="gone" >
-
-        <ImageView
-            android:id="@+id/dummy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:onClick="onClickHelp"
-            android:src="@drawable/icon_magnets_big_green" />
-
-        <print.io.view.TextViewFontLight
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="5dip"
-            android:layout_toRightOf="@+id/dummy"
-            android:gravity="center"
-            android:text="@string/click_question_mark"
-            android:textColor="#5a5d66"
-            android:textSize="@dimen/text_size_normal" />
-    </RelativeLayout>
 
 </RelativeLayout>

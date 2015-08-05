@@ -11,7 +11,7 @@ Default value is `false` (not hidden).
 PIOConfig#setHideStatusBar(boolean hideStatusBar);
 ```
 &nbsp;  
-&nbsp; 
+&nbsp;  
 #### > Navigation Bar Settings
 
 ( > Change navigation bar color and title font color, also set left and right bar button.) 
@@ -37,7 +37,19 @@ To change separator and texts' colors, modify the following item in
   
 _NOTICE: Never modify xml item names. Modify values only._  
 &nbsp;  
-&nbsp; 
+&nbsp;  
+#### > Splash Screen Settings
+
+Set Splash Screen timeout in milliseconds.  
+Default value is 0 which means that Splash Screen will not be shown.  
+
+```java
+PIOConfig#setSplashScreenTimeout(int splashScreenTimeout);
+```
+
+NOTICE: In order to show Splash Screen, you need to override ActivitySplash (See [Basic usage code](QUICK_START_CODE.md)).
+&nbsp;  
+&nbsp;  
 #### > Set Icon For Back Button  
 ( > Change `Back` button icon)  
 
@@ -47,10 +59,10 @@ Recommended dimensions are listed next to the icon name.
 To change icon with your own icon, modify the following item in  
 `res/drawable-xhdpi`
 ```xml
-icon_arrow_back_2.png (19x33)
+icon_arrow_back.png (19x33)
 ```
 &nbsp;  
-&nbsp; 
+&nbsp;  
 #### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen  
 ( > Set three buttons title bar style)
 
@@ -63,6 +75,14 @@ PIOConfig#useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 &nbsp;  
 Side Menu
 ---------
+#### > Enable or disable Side Menu
+
+Side Menu is enabled by default.
+```java
+public void setSideMenuEnabled(boolean isSideMenuEnabled);
+```
+&nbsp;  
+&nbsp;  
 #### > Use Side Menu with options.  
 ( > Change side menu icon)  
 
@@ -261,13 +281,6 @@ To change the currency code color, modify the following item in
 <color name="side_menu_change_currency_text">#FFFFFF</color>
 ```
 &nbsp;  
-To change the `Change Country` icon, replace the following icon
-with your own icon of same name.  
-Recommended dimensions are listed next to the icon name.
-```
-icon_change_country.png (80x80)
-```
-&nbsp;  
 To change the `Change Language` icon, replace the following icon
 with your own icon of same name.  
 Recommended dimensions are listed next to the icon name.
@@ -412,8 +425,17 @@ PIOConfig#setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
 ```
 &nbsp;  
 &nbsp;  
-#### > Hide category+search view on Featured Products screen. Default value is NO;  
-( > Hide category+search view on Featured Products screen)  
+#### > Change background color of Select Country bar on Featured Products screen.
+
+To change the background color of Select Country bar, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="select_country_background">#2277D4</color>
+```
+&nbsp;  
+&nbsp;  
+#### > Hide category/search view on Featured Products screen. Default value is NO;  
+( > Hide category/search view on Featured Products screen)  
 
 Default value is `false`.
 ```java
@@ -438,6 +460,17 @@ PIOConfig#setHideComingSoonProducts(boolean hideComingSoonProducts);
 ```
 &nbsp;  
 &nbsp;  
+Product Details
+--------------
+#### > Hide prices in Product Details screen  
+
+Default value is `false`.
+```java
+PIOConfig#setPriceTitleHidden(boolean isHidden);
+```
+&nbsp;  
+&nbsp;  
+
 Photo Sources
 --------------
 #### > Set available photo sources. The order of photo sources on screen will be the same like order they are placed in array.  
@@ -633,17 +666,6 @@ icon_add_more_images_b.png (111x111) - pressed state
 ```
 &nbsp;  
 &nbsp;  
-#### > Change icon for Help Button on Customize Product screen.  
-( > Change the `Help` button icon in Customize Product screen)  
-
-Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
-```
-icon_help_circle_grey.png (50x50px) - default state
-icon_help_circle_grey_dark.png (50x50px) - pressed state
-```
-&nbsp;  
-&nbsp;  
 #### > Change visibility of 'Help' button in Customize Product screen.  
 
 Default value is 'false' (Help button is visible).  
@@ -798,22 +820,7 @@ PIOConfig#setShowAddMoreProductsInShoppingCart(boolean isVisible);
 ```
 &nbsp;  
 &nbsp;   
-#### > Remove plus sign from "Add more products" button. By default, sign is visible.  
-( > Remove `+` sign from `Add More Products` button)  
-
-Default value is `false` (`+` sign is visible).
-```java
-PIOConfig#removePlusFromAddMoreProductsButton(boolean removePlusSign);
-```
-To change the icon for "Add More Products" button,
-replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.  
-```
-icon_add_more_products.png (36×36 xhdpi, 54x54 xxhdpi)
-```
-&nbsp;  
-&nbsp;  
-#### > Hide edit button is shopping cart swipe menu.  
+#### > Hide edit button in shopping cart swipe menu.  
 
 Default value is 'false' (edit button is visible).
 ```java
@@ -829,6 +836,28 @@ PIOConfig#closeWidgetFromShoppingCart(boolean closeWidgetFromShoppingCart);
 ```
 &nbsp;  
 &nbsp;  
+#### > Get Shopping Cart object 
+```java
+PIO#getShoppingCart(Context context);
+```
+&nbsp;
+&nbsp;  
+#### > Set Shopping Cart object 
+```java
+PIO#setShoppingCart(Context context, ShoppingCart cart);
+```
+&nbsp;  
+&nbsp;  
+#### > Remove all items from shopping cart
+**Sample code:**  
+```java
+ShoppingCart cart = PIO.getShoppingCart(context);
+cart.removeAllItems();
+PIO.setShoppingCart(context, cart);
+```
+&nbsp;  
+&nbsp;  
+
 Payment Screen
 --------------
 #### > Remove logo from Payment and Order Confirmation screen.  
@@ -849,16 +878,14 @@ icon_logo.png (71×80)
 &nbsp;  
 #### > Set Available Payment Options  
 
-By default, all payment options are enabled.
+To select available payment options, pass a `List` of `PaymentOptionType` to the following method.  
+By default, all payment options defined in `PaymentOptionType` enum are used.
 ```java
-PIOConfig#setPaymentOptions(int paymentOptions);
-```
-Use one of the following values from PublicConstants:
-```java
-class PaymentOptions {
-	PAYMENT_OPTION_ALL
-	PAYMENT_OPTION_PAY_PAL
-	PAYMENT_OPTION_CREDIT_CARD
+PIOConfig#setPaymentOptions(List<PaymentOptionType> paymentOptions);
+
+public enum PaymentOptionType {
+	PAY_PAL,
+	CREDIT_CARD;
 }
 ```
 &nbsp;  
@@ -945,6 +972,14 @@ PIOConfig#setProductVariantFromApp(String productVariantFromApp);
 ```
 &nbsp;  
 &nbsp;  
+Screen 'Shipping Addresses'
+------------------
+#### >  Clear all saved shipping addresses 
+```java
+PIO#clearShippingAddresses(Context context);
+```
+&nbsp;  
+&nbsp;  
 Push Notifications
 ------------------
 #### > Set applicationId and apiKey provided from parse.com  
@@ -1009,7 +1044,7 @@ Other Customization
 #### > Adjust font sizes  
 (Does not exist on iOS)  
 
-Fonts sizes are organized into six "buckets".  
+Fonts sizes are organized into five "buckets", plus some sizes for special uses.  
 To change their sizes, modify the respective items in `res/values/dimens.xml`.  
 These are the default values which work well with default fonts.
 ```xml
@@ -1018,6 +1053,8 @@ These are the default values which work well with default fonts.
 <dimen name="text_size_large">18dip</dimen>
 <dimen name="text_size_title">20dip</dimen>
 <dimen name="text_size_huge">32dip</dimen>
+
+<dimen name="text_size_button_create_it">12dip</dimen>
 
 <dimen name="text_size_photosources">12dip</dimen>
 
@@ -1033,9 +1070,10 @@ These are the default values which work well with default fonts.
 Pass font's filename to appropriate method.  
 `.otf` and `.ttf` fonts are supported.
 ```java
-setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
 setFontPathInAssetsNormal("HelveticaNeueLTStd-Roman.otf");
+setFontPathInAssetsLight("HelveticaNeueLTStd-Lt.otf");
 setFontPathInAssetsBold("HelveticaNeueLTStd-Bd.otf");
+setFontPathInAssetsTitle("HelveticaNeueLTStd-Roman.otf");
 ```
 **NOTICE:**  
 Fonts need to be placed in `assets` dir.  
@@ -1164,14 +1202,23 @@ To change buttons' colors, modify the following items in
 &nbsp;  
 Primary button:
 ```xml
-<color name="blue_light">#22a0dd</color> <!--Default state-->
-<color name="blue_dark">#0e79ad</color> <!--Pressed state-->
+<color name="button_primary_default">#42BE9C</color>
+<color name="button_primary_pressed">#09866D</color>
+<color name="button_primary_text">#FFFFFF</color>
 ```
 &nbsp;
 Secondary button:
 ```xml
-<color name="green">#42be9c</color> <!--Default state-->
-<color name="green_dark">#09866d</color> <!--Pressed state-->
+<color name="button_secondary_default">#22A0DD</color>
+<color name="button_secondary_pressed">#0E79AD</color>
+<color name="button_secondary_text">#FFFFFF</color>
+```
+&nbsp;
+Save To Cart button:
+```xml
+<color name="button_save_to_cart_background_default">#22A0DD</color>
+<color name="button_save_to_cart_background_pressed">#0E79AD</color>
+<color name="button_save_to_cart_text">#000000</color>
 ```
 **NOTICE:**  
 Those buttons are used throughout the application.  

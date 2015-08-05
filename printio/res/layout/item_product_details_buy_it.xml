@@ -6,13 +6,15 @@
     android:background="@color/product_details_create_it_container_background" >
 
     <LinearLayout
+        android:id="@+id/linearlayout_price_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/button_create_it"
         android:orientation="vertical"
         android:paddingLeft="16dip"
-        android:paddingRight="8dip" >
+        android:paddingRight="8dip"
+        android:visibility="gone" >
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_price_starting_at"
@@ -32,21 +34,21 @@
             android:textSize="@dimen/text_size_large" />
     </LinearLayout>
 
-    <print.io.view.ButtonFontBold
+    <print.io.view.ButtonFontTitle
         android:id="@+id/button_create_it"
         android:layout_width="100dip"
         android:layout_height="30dip"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dip"
-        android:background="@drawable/btn_green"
-        android:drawableRight="@drawable/icon_arrow_right"
+        android:background="@drawable/btn_primary"
+        android:drawableRight="@drawable/icon_arrow_next_invert"
         android:onClick="onClickCreateIt"
         android:paddingLeft="5dip"
         android:paddingRight="5dip"
         android:text="@string/create_it"
-        android:textColor="@color/secondary_button_text"
-        android:textSize="@dimen/text_size_normal"
+        android:textColor="@color/button_primary_text"
+        android:textSize="@dimen/text_size_button_create_it"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -29,7 +29,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <Spinner
@@ -37,16 +37,36 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/dropdown_transparent"
+            android:background="@drawable/bg_spinner_transparent"
             android:gravity="center"
             android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickOrder"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/imageview_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_next" />
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/relativelayout_shopping_cart"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="@drawable/btn_blue_light_sharp"
+            android:background="@drawable/btn_save_to_cart"
             android:clickable="true"
             android:onClick="onClickOrder"
             android:paddingLeft="5dip"
@@ -58,17 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/save_to"
-                android:textColor="@color/primary_button_text"
+                android:textColor="@color/button_secondary_text"
                 android:textSize="@dimen/text_size_normal" />
-
-            <print.io.view.TextViewFontNormal
-                android:id="@+id/textview_next_edit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/primary_button_text"
-                android:textSize="@dimen/text_size_normal"
-                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/imageview_cart"
@@ -102,39 +113,47 @@
         android:layout_below="@+id/layout_buttons"
         android:background="@color/title_bar_separator" />
 
-    <!-- Page number -->
-
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_current_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_dummy_title_separator"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:padding="6dip"
-        android:textColor="#333745"
-        android:textSize="@dimen/text_size_normal"
-        android:visibility="gone" />
-
-    <RelativeLayout
-        android:id="@+id/container_customize_product_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/relativelayout_help_button_info_text"
-        android:layout_below="@+id/textview_current_page" >
+        android:layout_above="@+id/tab_bar"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:orientation="vertical" >
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" >
 
             <print.io.view.CustomizeProductView
                 android:id="@+id/customize_product_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_margin="8dip" />
-        </FrameLayout>
-    </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- Info text below the product -->
+
+        <print.io.view.TextViewFontLight
+            android:id="@+id/textview_info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#c6c8cc"
+            android:textSize="@dimen/text_size_normal"
+            android:visibility="gone" />
+
+        <it.sephiroth.android.library.widget.HListView
+            android:id="@+id/hlistview_photos"
+            android:layout_width="match_parent"
+            android:layout_height="64dip"
+            android:clipToPadding="false"
+            android:divider="#00000000"
+            android:listSelector="#00000000"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip" />
+    </LinearLayout>
 
     <!-- Tooltip, displayed over CustomizeProductView, disappears after timeout -->
 
@@ -170,66 +189,6 @@
             android:rotation="180" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativelayout_help_button_info_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/layout_photos_container" >
-
-        <ImageView
-            android:id="@+id/imageview_help_circle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="16dip"
-            android:clickable="true"
-            android:onClick="onClickHelp"
-            android:src="@drawable/icon_help_circle" />
-
-        <!-- Info text below the product -->
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_info_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#c6c8cc"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="gone" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_photos_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tab_bar"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:id="@+id/imageview_add"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="5dip"
-            android:clickable="true"
-            android:onClick="onClickAddMorePhotos"
-            android:src="@drawable/btn_add" />
-
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="4dip"
-            android:layout_marginRight="4dip"
-            android:fillViewport="true"
-            android:visibility="visible" >
-
-            <LinearLayout
-                android:id="@+id/linearlayout_photos"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal" />
-        </HorizontalScrollView>
-    </LinearLayout>
-
     <!-- Tab Bar -->
 
     <include
@@ -241,24 +200,6 @@
         android:background="#ffffff"
         android:padding="3dip"
         android:visibility="visible" />
-
-    <!-- Edit Text -->
-
-    <include
-        android:id="@+id/edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/edit_text"
-        android:visibility="gone" />
-
-    <!-- Autofill -->
-
-    <include
-        android:id="@+id/autofill"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/autofill"
-        android:visibility="gone" />
 
     <!-- Edit Tools -->
 
@@ -293,7 +234,7 @@
             android:gravity="center"
             android:horizontalSpacing="16dip"
             android:layoutAnimation="@anim/layout_grid_fade"
-            android:listSelector="@drawable/bg_blue"
+            android:listSelector="@drawable/bg_selection_global"
             android:numColumns="4"
             android:paddingBottom="10dip"
             android:paddingLeft="10dip"
@@ -303,15 +244,5 @@
             android:stretchMode="columnWidth"
             android:verticalSpacing="20dip" />
     </RelativeLayout>
-
-    <!-- Item Auto Arrange -->
-
-    <include
-        android:id="@+id/layout_auto_arrange"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        layout="@layout/item_auto_arrange"
-        android:visibility="gone" />
 
 </RelativeLayout>

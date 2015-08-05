@@ -27,7 +27,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
 
             <ImageView
                 android:id="@+id/imageview_top_left_logo"
@@ -52,7 +52,7 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_featured_products"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,13 +95,13 @@
         android:layout_width="match_parent"
         android:layout_height="45dip"
         android:layout_below="@+id/view_dummy_title_separator"
-        android:background="@color/country_drop_down"
+        android:background="@color/select_country_background"
         android:clickable="true"
         android:gravity="center"
         android:onClick="onClickChangeCountry"
         android:visibility="gone" >
 
-        <print.io.view.TextViewFontNormal
+        <print.io.view.TextViewFontTitle
             android:id="@+id/textview_country_drop_down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -121,14 +121,14 @@
         android:background="@color/white" >
 
         <ImageView
-            android:id="@+id/image_view_search_categories"
+            android:id="@+id/imageview_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:clickable="true"
             android:onClick="onClickSearch"
             android:padding="10dip"
-            android:src="@drawable/btn_search_categories" />
+            android:src="@drawable/btn_search_featured_products" />
 
         <RelativeLayout
             android:id="@+id/relativelayout_product_categories_filter"
@@ -141,7 +141,7 @@
             android:orientation="horizontal"
             android:padding="10dip" >
 
-            <TextView
+            <print.io.view.TextViewFontLight
                 android:id="@+id/textview_product_categories"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +151,7 @@
                 android:layout_marginLeft="4dip"
                 android:gravity="center"
                 android:text="@string/product_categories"
-                android:textColor="@drawable/text_selector_green"
+                android:textColor="@color/btn_categories_text"
                 android:textSize="@dimen/text_size_large"
                 android:visibility="visible" />
 
@@ -161,16 +161,16 @@
                 android:layout_alignBottom="@+id/textview_product_categories"
                 android:layout_marginLeft="2dip"
                 android:layout_toRightOf="@+id/textview_product_categories"
-                android:src="@drawable/btn_categories_selector" />
+                android:src="@drawable/btn_categories_dropdown_arrow" />
         </RelativeLayout>
 
-        <print.io.view.EditTextFontNormal
+        <print.io.view.EditTextFontLight
             android:id="@+id/edittext_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/imageview_close"
-            android:layout_toRightOf="@+id/image_view_search_categories"
+            android:layout_toRightOf="@+id/imageview_search"
             android:background="#00000000"
             android:hint="@string/product_search"
             android:inputType="textNoSuggestions"

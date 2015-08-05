@@ -28,7 +28,7 @@
                 android:id="@+id/imageview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back_2" />
+                android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
         <print.io.view.TextViewFontBold
@@ -45,7 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="@drawable/btn_blue_light_sharp"
+            android:background="@drawable/btn_save_to_cart"
             android:clickable="true"
             android:onClick="onClickOrder"
             android:paddingLeft="5dip"
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:text="@string/save_to"
-                android:textColor="@color/primary_button_text"
+                android:textColor="@color/button_secondary_text"
                 android:textSize="@dimen/text_size_normal" />
 
             <ImageView
@@ -110,14 +110,5 @@
         android:layout_below="@+id/view_dummy_title_separator"
         layout="@layout/list_item_stickerbook"
         android:visibility="invisible" />
-
-    <!-- Stickerbook info dialog -->
-
-    <include
-        android:id="@+id/dialog_stickerbook"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        layout="@layout/dialog_stickerbook"
-        android:visibility="gone" />
 
 </RelativeLayout>

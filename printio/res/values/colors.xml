@@ -3,6 +3,10 @@
 
     <color name="global_window_background">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="selection_global">#22A0DD</color>
 
     <color name="swipeable_bg">#FFFFFF</color>
     <color name="swipeable_bg_pressed">#EBEBEB</color>
@@ -35,8 +39,15 @@
     <color name="side_menu_version_text">#FFFFFF</color>
     <color name="customize_product_tooltip">#42BE9C</color>
 
-    <color name="photosources_background">#595d66</color>
+    <color name="select_country_background">#2277D4</color>
+    <color name="categories_text_default">#333333</color>
+    <color name="categories_text_pressed">#3FBF9A</color>
+
+    <color name="photosources_background">#595D66</color>
+    <color name="photosources_background_selected">#333333</color>
     <color name="photosources_text">#FFFFFF</color>
+
+    <color name="selected_photo_index_background">#BBFFFFFF</color>
 
     <color name="product_details_create_it_container_background">#EBEBEB</color>
 
@@ -45,20 +56,18 @@
     <color name="product_details_header_3">#22A0DD</color>
     <color name="product_details_header_4">#646AA6</color>
 
-    <!-- other_colors -->
-    <color name="holo_blue_bright">#00DDFF</color>
+    <color name="custom_steps_header_background">#42BE9C</color>
 
-    <color name="gray">#404040</color>
-    <color name="gray_edit">#C7C7CC</color>
-    <color name="gray_edit_pressed">#96A7A7AC</color>
+    <color name="edit_button_abc_primary">#22A0DD</color>
+    <color name="edit_button_abc_secondary">#FFFFFF</color>
+    <color name="edit_button_effects_primary">#42BE9C</color>
+    <color name="edit_button_effects_secondary">#FFFFFF</color>
+    <color name="edit_button_layout_primary">#D94217</color>
+    <color name="edit_button_layout_secondary">#FFFFFF</color>
+    <color name="edit_button_options_primary">#646AA6</color>
+    <color name="edit_button_options_secondary">#FFFFFF</color>
 
-    <color name="blue_light">#22A0DD</color>
-    <color name="blue_dark">#0E79AD</color>
-    <color name="primary_button_text">#FFFFFF</color>
-
-    <color name="green">#42BE9C</color>
-    <color name="green_dark">#09866D</color>
-    <color name="secondary_button_text">#FFFFFF</color>
+    <color name="edit_options_text">#646AA6</color>
 
     <color name="edit_image_info_text_default">#22A0DD</color>
     <color name="edit_image_info_text_pressed">#404040</color>
@@ -77,26 +86,48 @@
     <color name="edit_image_text_background_highlight">#D94217</color>
     <color name="edit_image_effects_background_highlight">#646AA6</color>
 
-    <color name="red_delete">#F31C24</color>
-    <color name="red_discount">#F31C24</color>
-    <color name="red_delete_pressed">#96F31C24</color>
-    <color name="orange">#D94217</color>
-    <color name="purple">#646AA6</color>
-    <color name="white">#FFFFFF</color>
+    <color name="swipe_delete_default">#F31C24</color>
+    <color name="swipe_delete_pressed">#96F31C24</color>
+
+    <color name="discount_highlight">#F31C24</color>
+
     <color name="overlay_translucent">#80000000</color>
+    <color name="overlay_translucent_light">#55000000</color>
+
     <color name="promo_code_background">#F3F3F3</color>
-    <color name="image_upload_soc_but_bg">#333333</color>
-    <color name="customize_product_tabbar">#FFFFFF</color>
-    <color name="shopping_cart_total_price">#474747</color>
+    <color name="customize_product_tabbar_background">#FFFFFF</color>
     <color name="bg_edit_text">#EFEFF2</color>
+    <color name="edit_text_valid_data">#FFEFEFF2</color>
     <color name="address_validation_suggested_address">#EFEFF2</color>
     <color name="address_validation_initial_address">#EFEFF2</color>
-    <color name="shipment_review_first_container">#EDEDED</color>
-    <color name="shipment_review_second_container">#EDEDED</color>
-    <color name="shipment_review_place_order">#333333</color>
-    <color name="dialog_transparent">#AA000000</color>
-    <color name="image_upload_soc_select">#595D66</color>
-    <color name="country_drop_down">#2277D4</color>
-    <!-- Old Green #1ABC9C -->
+
+    <color name="button_primary_default">#42BE9C</color>
+    <color name="button_primary_pressed">#09866D</color>
+    <color name="button_primary_text">#FFFFFF</color>
+
+    <color name="button_secondary_default">#22A0DD</color>
+    <color name="button_secondary_pressed">#0E79AD</color>
+    <color name="button_secondary_text">#FFFFFF</color>
+
+    <color name="button_save_to_cart_background_default">#22A0DD</color>
+    <color name="button_save_to_cart_background_pressed">#0E79AD</color>
+    <color name="button_save_to_cart_text">#000000</color>
+
+    <color name="button_back_next_photobooks_text">#000000</color>
+    <color name="button_save_to_cart_photobooks_text">#000000</color>
+
+    <!-- other_colors -->
+    <color name="gray">#404040</color>
+    <color name="gray_edit">#C7C7CC</color>
+    <color name="gray_edit_pressed">#96A7A7AC</color>
+
+    <color name="purple">#646AA6</color>
+    <color name="green">#42BE9C</color>
+
+    <color name="how_it_works_text">#22A0DD</color>
+
+    <color name="add_more_products_button_text">#22A0DD</color>
+
+    <color name="dialog_stickerbooks_add_more_or_duplicate_background">#AA000000</color>
 
 </resources>

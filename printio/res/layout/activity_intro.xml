@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
+        android:scaleType="centerCrop"
         android:src="@drawable/bg_splash"
         android:visibility="invisible" />
 
@@ -84,11 +85,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="9dip"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_green"
+                    android:background="@drawable/btn_primary"
                     android:onClick="onClickYes"
                     android:padding="14dip"
                     android:text="@string/update"
-                    android:textColor="@color/secondary_button_text"
+                    android:textColor="@color/button_primary_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
 
@@ -98,10 +99,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="9dip"
                     android:layout_weight="1"
-                    android:background="@drawable/btn_blue_light"
+                    android:background="@drawable/btn_secondary"
                     android:onClick="onClickNo"
                     android:padding="14dip"
-                    android:textColor="@color/primary_button_text"
+                    android:textColor="@color/button_secondary_text"
                     android:textSize="@dimen/text_size_normal"
                     android:textStyle="bold" />
             </LinearLayout>

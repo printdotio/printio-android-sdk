@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/placeholder_shopping_cart" />
+                android:src="@drawable/placeholder_search_product" />
         </RelativeLayout>
 
         <print.io.view.TextViewFontLight

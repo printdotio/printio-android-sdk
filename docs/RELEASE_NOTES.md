@@ -1,5 +1,58 @@
 **Android Release Notes**
 
+3.0.0 (v117)
+============
+
+**API Changes:**
+
+- Please refer to [Migration Guide](MIGRATION_GUIDE.md)
+
+**Features:**
+
+- Reduced SDK size by half
+
+- Updated Facebook SDK to latest version (4.2.0)
+
+- Added support for new Products format
+
+- Added new customization steps for some products
+
+- Added Discount Amount and Coupon Code to Order Completed callback
+
+- Added full-screen image preview on Product Details screen
+
+- Added fourth customizable font type (Normal, Light, Bold, *Title*)
+
+- Added a method to clear all saved Shipping Addresses
+
+- Turned off Google Analytics in Staging mode
+
+**Bugs:**
+
+- Fixed Credit Card number validation - All card types are now supported
+
+- Fixed image rotation according to EXIF attributes
+
+- Fixed a crash which occured when using 'jump to Shopping Cart' and the Shopping Cart is empty
+
+- Fixed negative values in Shopping Cart
+
+- Some tweaks to Customize Product screen
+
+- Fixed issues with applying promo coupons
+
+- Fixed missing thumbnails in Shopping Cart for some products
+
+- Fixed memory issues on some devices when creating multi-item products
+
+- Fixed Products search in Side Menu
+
+- Fixed an issue when loading Facebook albums with lots of photos
+
+- Fixed a crash when paying using PayPal and order total is $0
+
+- Stability & code improvements
+
 ### 
 
 2.3.0a (v116)

@@ -20,7 +20,7 @@
         android:layout_alignBottom="@+id/imageview_image"
         android:layout_alignRight="@+id/imageview_image"
         android:adjustViewBounds="true"
-        android:src="@drawable/img_soon"
+        android:src="@drawable/icon_coming_soon"
         android:visibility="gone" />
 
     <LinearLayout

@@ -40,12 +40,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="9dip"
                 android:layout_weight="1"
-                android:background="@drawable/btn_blue_light"
-                android:drawableTop="@drawable/icon_business"
+                android:background="@drawable/btn_secondary"
+                android:drawableTop="@drawable/icon_address_business"
                 android:onClick="onClickBusinessAddress"
                 android:padding="14dip"
                 android:text="@string/business"
-                android:textColor="@color/primary_button_text"
+                android:textColor="@color/button_secondary_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
 
@@ -55,12 +55,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="9dip"
                 android:layout_weight="1"
-                android:background="@drawable/btn_green"
-                android:drawableTop="@drawable/icon_residential"
+                android:background="@drawable/btn_primary"
+                android:drawableTop="@drawable/icon_address_residential"
                 android:onClick="onClickResidentialAddress"
                 android:padding="14dip"
                 android:text="@string/residential"
-                android:textColor="@color/secondary_button_text"
+                android:textColor="@color/button_primary_text"
                 android:textSize="@dimen/text_size_normal"
                 android:textStyle="bold" />
         </LinearLayout>

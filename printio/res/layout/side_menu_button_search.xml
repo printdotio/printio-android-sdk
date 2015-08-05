@@ -34,6 +34,6 @@
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
         android:paddingTop="8dip"
-        android:src="@drawable/icon_search_b" />
+        android:src="@drawable/icon_search" />
 
 </RelativeLayout>

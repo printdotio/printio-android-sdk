@@ -6,14 +6,13 @@
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 
-    <print.io.view.TextViewFontLight
+    <print.io.view.TextViewFontNormal
         android:id="@+id/textview_add_more_products"
         android:layout_width="wrap_content"
         android:layout_height="96dip"
-        android:drawablePadding="10dip"
         android:gravity="center_vertical"
         android:text="@string/add_more_products"
-        android:textColor="@color/blue_light"
+        android:textColor="@color/add_more_products_button_text"
         android:textSize="@dimen/text_size_large" />
 
 </LinearLayout>
