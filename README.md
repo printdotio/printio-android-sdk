@@ -17,6 +17,7 @@ Our SDK allows you to select which features and functionality you need as well a
 - [SDK Customization per screen](docs/SPECIFIC_PAGE_METHODS.md) list with screenshots of customizable UI elements and relevant methods.
 - [SDK Reference](docs/SDK_REFERENCE.md) list of all methods available within sdk, with description and sample code.
 - [Release notes](docs/RELEASE_NOTES.md) new features and bug fixes by version
+- [Licenses](docs/LICENSES.md) Open Source license notices
 
 ### Sample App SDK: For Reference
 - [Demo Android app](docs/DEMO_APP.md) for a more comprehensive demonstration of the PrintIO SDK.
