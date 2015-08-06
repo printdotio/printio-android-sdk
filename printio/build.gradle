@@ -26,7 +26,7 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.android:facebook-android-sdk:3.23.+'
+    compile 'com.facebook.android:facebook-android-sdk:4.2.+'
     compile 'com.google.code.gson:gson:2.2.4'
     compile files('libs/aws-android-sdk.1.7.0-core.jar')
     compile files('libs/aws-android-sdk.1.7.0-s3.jar')
