@@ -22,5 +22,8 @@ Our SDK allows you to select which features and functionality you need as well a
 ### Sample App SDK: For Reference
 - [Demo Android app](docs/DEMO_APP.md) for a more comprehensive demonstration of the PrintIO SDK.
 
+### Optional Services: Reference Docs
+- [Social Media Accounts Setup] (docs/SOCIAL_MEDIA_ACCOUNTS_SETUP.md) the PrintIO SDK allows you to change to your social media accounts. Use this guide if you have questions regarding what information and settings are needed.
+
 -----
 

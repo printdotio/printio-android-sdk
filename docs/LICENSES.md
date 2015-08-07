@@ -1,24 +1,42 @@
-**Licenses**
+**Software Credits**  
+The development of this software was made possible using the following components:
 
-**PrintIO Android SDK uses the following Open Source libraries:**
-
-TouchImageView by Mike Ortiz
+SlidingMenu
 ========
+[SlidingMenu](https://github.com/jfeinstein10/SlidingMenu) by **Jeremy Feinstein**  
+*Licensed Under: [Apache-2.0](https://github.com/jfeinstein10/SlidingMenu/blob/master/LICENSE.txt)*  
 
-https://github.com/MikeOrtiz/TouchImageView  
-
-Copyright (c) 2012 Michael Ortiz
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-
-
-HorizontalVariableListView by Alessandro Crugnola
+TouchImageView
 ========
+[TouchImageView](https://github.com/MikeOrtiz/TouchImageView) by **Michael Ortiz**  
+*Licensed Under: [MIT License](https://github.com/MikeOrtiz/TouchImageView/blob/master/LICENSE)*
 
-https://github.com/sephiroth74/HorizontalVariableListView
+Horizontal Variable ListView
+========
+[Horizontal Variable ListView](https://github.com/sephiroth74/HorizontalVariableListView) by **Alessandro Crugnola**  
+*Licensed Under: [Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)*
 
-This software is distributed under Apache License 2.0: http://www.apache.org/licenses/LICENSE-2.0
+aws-sdk-android
+========
+[aws-sdk-android](https://github.com/aws/aws-sdk-android) by **Amazon Technologies, Inc**  
+*Licensed Under: [Apache-2.0](https://github.com/aws/aws-sdk-android/blob/master/LICENSE.txt)*
+
+braintree_android_encryption
+========
+[braintree_android_encryption](https://github.com/braintree/braintree_android_encryption) by **Braintree**  
+*Licensed Under: [MIT License](https://github.com/braintree/braintree_android_encryption/blob/master/LICENSE)*
+
+gson
+========
+[gson](https://github.com/google/gson) by **Google Inc.**  
+*Licensed Under: [Apache-2.0](https://github.com/google/gson/blob/master/LICENSE)*
+
+ParseUI-Android
+========
+[ParseUI-Android](https://github.com/ParsePlatform/ParseUI-Android) by **Parse, LLC.**  
+*Licensed Under: [Parse License](https://github.com/ParsePlatform/ParseUI-Android/blob/master/LICENSE)*
+
+PayPal-Android-SDK
+========
+[PayPal-Android-SDK](https://github.com/paypal/PayPal-Android-SDK) by **PayPal**  
+*Licensed Under: [BSD License](https://github.com/paypal/PayPal-Android-SDK/blob/master/LICENSE.md)*
