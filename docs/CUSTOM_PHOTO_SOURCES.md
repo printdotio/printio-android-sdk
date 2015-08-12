@@ -213,9 +213,9 @@ Parameters:
 
 `LoadMediaResult` is interface of `onLoadMedia` method call result. This interface has three methods describing the result:
 
-- `getItems()` which returns list of loaded media items
-- `hasMoreMedia()` which returns `true` if there are more media pages to be loaded. If your photo source does not support paging (e.g. all media items are loaded at once) this method can be ignored.
-- `getMessage()` which returns information message to be shown to the user. Message will not be shown if message is blank or `null`.
+- `getItems` which returns list of loaded media items
+- `hasMoreMedia` which returns `true` if there are more media pages to be loaded. If your photo source does not support paging (e.g. all media items are loaded at once) this method can be ignored.
+- `getMessage` which returns information message to be shown to the user. Message will not be shown if message is blank or `null`.
 
 Classs  `DefaultLoadMediaResult` has default implementation of `LoadMediaResult` interface methods which just returns data passed via class constructor.
 
