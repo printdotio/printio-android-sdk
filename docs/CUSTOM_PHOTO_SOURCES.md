@@ -52,28 +52,24 @@ First off, you will have to start by crating your `PhotoSource` interface implem
 
 #### List of unimplemented methods
 
----
 #####Method getServiceId
 ```java
 public int getServiceId()
 ```
 This method should always return unique ID of this photo source.  In order to avoid overlapping by IDs used by photo sources defined in Print.IO SDK your photo source ID should not be `0 <= ID <= 200` as these values are reserved for Print.IO SDK photo sources.
 
----
 #####Method getName
 ```java
 public String getName(Context context) 
 ```
 This method should return name of your photo source.
 
----
 #####Method isAuthorized
 ```java
 public boolean isAuthorized(Context context)
 ```
 This method should return `true` if user is authorized to your photo source, or `false` otherwise. If your photo source does not require authorization this method should always return `true`. In this case you can leave implementation of  `login` and `logout` methods empty.
 
----
 #####Method login
 ```java
 public void login(Activity context, AuthorizationCompleteCallback authorizationCompleteCallback)
@@ -122,7 +118,6 @@ public void login(final Activity context, final AuthorizationCompleteCallback au
 
 Hint: If you need advanced login mechanism like Instagram, Facebook etc.. has you can create an Activty which will implement authorization logic and which should be started from `login` method.
 
----
 #####Method logout
 ```java
 public void logout(Activity context);
@@ -136,14 +131,13 @@ public void logout(Activity context) {
 	editor.putBoolean("LOGGED", false).commit();
 }
 ```
----
+
 #####Method isVisibleInSideMenu
 ```java
 public boolean isVisibleInSideMenu()
 ```
 This method should return `true` if photo source should be visible in side menu.
 
----
 #####Method getSideMenuIcon
 ```java
 public Drawable getSideMenuIcon(Context context)
@@ -161,7 +155,6 @@ public Drawable getSideMenuIcon(Context context) {
 }
 ```
 
----
 #####Method getSelectImagesIcon
 ```java
 public boolean getSelectImagesIcon()
@@ -170,7 +163,6 @@ This method should return icon used on "Select Images" screen.
 
 Note:  Unlike `getSideMenuIcon()`  method, icons returned by this method always have white background.
 
----
 #####Method createPhotoSourceNavigator
 ```java
 public PhotoSourceNavigator<? extends PhotoSource> createPhotoSourceNavigator(PhotoSourceNavigatorHolder holder)
@@ -189,7 +181,6 @@ Where `ExamplePhotoSource` is the class name of this photo source and `ExamplePh
 #### List of methods with default implementation
 All unimplemented methods of `PhotoSource` interface have been covered. However, there is method of `PhotoSource` interface which has default implementation. That method is:
 
----
 #####Method openConnectionForImageDownload
 ```java
 public HttpURLConnection openConnectionForImageDownload(Context context, String url) throws IOException;
