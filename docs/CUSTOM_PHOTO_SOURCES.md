@@ -30,17 +30,17 @@ There are two interfaces you should get familiar with: `PhotoSource` and`PhotoSo
  - providing mechanism for opening connection for downloading photos
  - providing `PhotoSourceNavigator` implementation for this photo source
 	
-**`PhotoSourceNavigator`** is an interface holding logic used within this photo source on "Select Images" screen. `PhotoSourceNavigator` does everything from revealing preview of photo source,  responding to user input and notifying holder of `PhotoSourceNavigator` when user has selected/unselected image(s).
+**`PhotoSourceNavigator`** is an interface for classes holding logic used on "Select Images" screen. `PhotoSourceNavigator` does everything from revealing preview of photo source,  responding to user inputs and notifying holder of `PhotoSourceNavigator` when user has selected/unselected image(s).
 
-**`PhotoSourceNavigatorHolder`** is an interface of object holding `PhotoSourceNavigator`. It's purpose is to provide `PhotoSourceNavigator` with necessary mechanism, common to any photo source and "Select Images" screen.
+**`PhotoSourceNavigatorHolder`** is an interface implemented by object holding `PhotoSourceNavigator`. It's purpose is to provide `PhotoSourceNavigator` with necessary mechanism, common to any photo source, on "Select Images" screen.
 
 In order to help you to create your own custom photo source quickly, we have created *default generic* implementation of photo sources found in package `print.io.photosource.defaultgenericimpl`. Term "*default generic*" implementation comes from the fact that this implementation can cover any photo source which is for *generic* part. And *default* part is tied to the fact that this implementation provides you with default photo source structure which is common to all photo sources provided by our SDK, as they are all derivatives of default generic implementation. E.g. if you would like to have search for images on "Select Images" screen it would be out of the scope of default implementation but it would be still feasible to implement by extending default generic implementation or by creating completely new photo source implementation.
 
 What this default generic implementation will do for you is:
 
 - provide you with structure for default implementation of photo source
-- create default preview of photo source
-- respond to user inputs and cover all navigation logic within "Select Images" screen.
+- create default preview of your photo source based on media items set
+- respond to user inputs and cover all navigation logic
 
 ## How to create a custom photo source using default generic implementation
 
@@ -74,9 +74,9 @@ This method should return `true` if user is authorized to your photo source, or 
 ```java
 public void login(Activity context, AuthorizationCompleteCallback authorizationCompleteCallback)
 ```
-This method is called when user attempts to login to your photo source either from side menu or from "Select Images" screen in case if user is not currently authorized (method `isAuthorized` has returned false). In this method you need to implement authorization logic to your photo source and notify authorization callback with method outcome.
+This method is called when user attempts to login to your photo source either from side menu or from "Select Images" screen in case if user is not currently authorized (method `isAuthorized` has returned `false`). In this method you need to implement authorization logic to your photo source and notify authorization callback with method outcome.
 
-Let's assume that your photo source API only needs to validate combination of username and password. You can easily prompter login dialog and validate credentials like so:
+Let's assume that your photo source API only needs to validate combination of username and password. You can easily show login dialog and validate credentials like so:
 
 ```java
 @Override
@@ -146,7 +146,7 @@ This method should return icon used in side menu.
 
 Photo sources implemented in Print.IO SDK return different icons based on users current authorization state.  When user is authorized to the photo source icon has white background, otherwise background is transparent. 
 
-Implementation of this method can look like:
+Implementation of this method could look like:
 ```java
 @Override
 public Drawable getSideMenuIcon(Context context) {
@@ -161,14 +161,14 @@ public boolean getSelectImagesIcon()
 ```
 This method should return icon used on "Select Images" screen.  
 
-Note:  Unlike `getSideMenuIcon()`  method, icons returned by this method always have white background.
+Unlike `getSideMenuIcon`  method, icons returned by this method always have white background.
 
 #####Method createPhotoSourceNavigator
 ```java
 public PhotoSourceNavigator<? extends PhotoSource> createPhotoSourceNavigator(PhotoSourceNavigatorHolder holder)
 ```
 
-This method is factory method for crating `PhotoSourceNavigator` for this photo source. Implementation of this method could look like:
+This method is factory method for creating `PhotoSourceNavigator` for this photo source. Implementation of this method could look like:
 
 ```java
 @Override
@@ -179,15 +179,15 @@ public PhotoSourceNavigator<ExamplePhotoSource> createPhotoSourceNavigator(Photo
 Where `ExamplePhotoSource` is the class name of this photo source and `ExamplePhotoSourceNavigator` is name of the class extending `DefaultPhotoSourceNavigator` which is going to be covered in "Creating `PhotoSourceNavigator`" section.
 
 #### List of methods with default implementation
-All unimplemented methods of `PhotoSource` interface have been covered. However, there is method of `PhotoSource` interface which has default implementation. That method is:
+All unimplemented methods of `PhotoSource` interface have been covered. However, there is method of `PhotoSource` interface which has default implementation. That method is listed below.
 
 #####Method openConnectionForImageDownload
 ```java
 public HttpURLConnection openConnectionForImageDownload(Context context, String url) throws IOException;
 ```
-This method should open connection for downloading image resource referred by `url` parameter.
+This method should open connection for downloading image resource referred by `url` parameter. 
 
-Note: You can override this method if you need to provide special attributes to HTTP request properties or to request parameters.
+Note: You can override this method if you need to provide special attributes to HTTP request properties or to request parameters. 
 
 
 ### Creating `PhotoSourceNavigator` class
@@ -227,6 +227,10 @@ Media items is term used to describe all items that could be presented by `Defau
 - **Folder** is base class for all items representing folders (folder holds collection of media items).
 	- **Album** is base class for all items representing albums (album is folder which holds collection of photo items).
 - **BackItem** is base class for item representing back navigation button inside Folder. Back item is automatically added by `DefaultPhotoSourceNavigator`.
+
+## Notes
+
+Print.IO SDK has mechanism for caching downloaded images, so you will not need to worry about that.
 
 ## Custom photo source example
 Inside Print.IO demo application there is [simple example](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/src/com/example/piosdkpoconcept/photosource/vlado) of custom photo source implementation.
