@@ -1,5 +1,20 @@
 **Android Release Notes**
 
+3.0.4 (v117)
+============
+
+**Features:**
+
+- Order Number on Order Completed screen can be selected and copied
+
+**Bugs:**
+
+- Fixed Address validation issues
+
+- Fixed deletion of items on Shipment Review screen
+
+###
+
 3.0.0 (v117)
 ============
 
