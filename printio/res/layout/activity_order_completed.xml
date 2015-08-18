@@ -145,6 +145,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="right"
                     android:textColor="#333333"
+                    android:textIsSelectable="true"
                     android:textSize="@dimen/text_size_large" />
             </LinearLayout>
 

@@ -16,6 +16,7 @@ Our SDK allows you to select which features and functionality you need as well a
 - [Migration guide](docs/MIGRATION_GUIDE.md) for easy upgrading to newer versions of the PrintIO SDK.
 - [SDK Customization per screen](docs/SPECIFIC_PAGE_METHODS.md) list with screenshots of customizable UI elements and relevant methods.
 - [SDK Reference](docs/SDK_REFERENCE.md) list of all methods available within sdk, with description and sample code.
+- [Custom photo sources](docs/CUSTOM_PHOTO_SOURCES.md) option to add a custom photo source
 - [Release notes](docs/RELEASE_NOTES.md) new features and bug fixes by version
 - [Licenses](docs/LICENSES.md) Open Source license notices
 

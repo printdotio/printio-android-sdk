@@ -35,7 +35,7 @@
     <string name="dropbox">Dropbox</string>
     <string name="photobucket">Photobucket</string>
     <string name="preselected">Preselected</string>
-    <string name="customize_product_tooltip_text">Double-tap photo to edit</string>
+    <string name="customize_product_tooltip_text">Double-Tap photo to edit</string>
     <string name="customize_photobook_tooltip_text">Tap photo to edit or replace</string>
     <string name="change_book_template">Change Book Template</string>
     <string name="edit_photo">Edit Photo</string>
@@ -168,7 +168,7 @@
     <string name="street_1">Street</string>
     <string name="street_2">Street 2 (Apt or Suite #)</string>
     <string name="save_address">Save Address</string>
-    <string name="pick_from_contacts">Pick from Contacts</string>
+    <string name="choose_from_contacts">Choose from Contacts</string>
     <string name="no_address_saved_for_contact">Sorry, there is no address saved for that contact!</string>
     <string name="country">Country</string>
     <string name="business_residential">Is this address Business or Residential?</string>
@@ -262,7 +262,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="close">Close</string>
     <string name="tabbar_info">Info</string>
     <string name="tabbar_rotate">Rotate</string>
-    <string name="tabbar_edit_text">Edit Text</string>
+    <string name="tabbar_text">Text</string>
     <string name="tabbar_effects">Effects</string>
     <string name="background">Background</string>
     <string name="create_it">Create It!</string>
@@ -368,6 +368,7 @@ each field, simply touch the Place Order button.</string>
     <string name="error_fetching_product_variants">Sorry, we have a problem getting variants for this product. Please try again later or contact support.</string>
     <string name="error_fetching_api_data">Sorry, we have a problem getting data. Please try again later or contact support.</string>
     <string name="same_look_for_back_side_pillow">Use the same look for back side of pillow?</string>
+    <string name="same_look_for_back_side_bag">Use the same look for back side of bag?</string>
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
     <string name="single_layout_information">Layout for this product can not be changed.</string>
@@ -376,6 +377,7 @@ each field, simply touch the Place Order button.</string>
     <string name="dialog_upgrade_shipping_message">Do you want to keep your free shipping coupon or upgrade shipping?</string>
     <string name="dialog_zero_dollar_payment">Zero dollar orders could not be executed via PayPal.\nPlease, use credit card instead.</string>
     <string name="please_select_at_least_one_image">Please select at least one image</string>
+    <string name="add_address_page_title">Checkout</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

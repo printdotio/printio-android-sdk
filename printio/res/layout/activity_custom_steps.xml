@@ -60,10 +60,41 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
+    <!-- Country drop down menu -->
+
+    <LinearLayout
+        android:id="@+id/layout_country_drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:background="@color/select_country_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickChangeCountry"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontTitle
+            android:id="@+id/textview_country_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/layout_country_drop_down"
+        android:background="#cbcbce"
+        android:visibility="gone" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/view_dummy_title_separator"
+        android:layout_below="@+id/separator_1"
         android:fillViewport="true" >
 
         <LinearLayout

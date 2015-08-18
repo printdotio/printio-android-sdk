@@ -112,39 +112,15 @@
         </FrameLayout>
     </RelativeLayout>
 
-    <!-- Tooltip, displayed over CustomizeProductView, disappears after timeout -->
+    <!-- Double tap balloon, displayed over CustomizeProductView, disappears after timeout -->
 
-    <RelativeLayout
-        android:id="@+id/layout_tooltip"
+    <include
+        android:id="@+id/layout_tooltip_balloon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_dummy_title_separator"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-20dip"
-        android:layout_marginTop="4dip" >
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_tooltip"
-            android:layout_width="wrap_content"
-            android:layout_height="26dip"
-            android:background="@drawable/bg_tooltip"
-            android:ellipsize="none"
-            android:gravity="center"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:singleLine="true"
-            android:text="@string/customize_photobook_tooltip_text"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-
-        <View
-            android:layout_width="20dip"
-            android:layout_height="24dip"
-            android:layout_below="@+id/textview_tooltip"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/arrow_up"
-            android:rotation="180" />
-    </RelativeLayout>
+        layout="@layout/item_tooltip_balloon"
+        android:visibility="gone" />
 
     <!-- Product options layout -->
 

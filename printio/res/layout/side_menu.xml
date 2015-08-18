@@ -78,266 +78,44 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/side_menu_background"
+        android:fillViewport="true"
         android:scrollbars="none" >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <LinearLayout
-                android:id="@+id/linearlayout_top_buttons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
-            <LinearLayout
-                android:id="@+id/layout_side_menu_options"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
-                <print.io.view.TextViewFontBold
-                    android:id="@+id/textview_options"
+                <LinearLayout
+                    android:id="@+id/linearlayout_top_buttons"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/side_menu_options"
-                    android:gravity="center"
-                    android:paddingBottom="3dip"
-                    android:paddingTop="3dip"
-                    android:text="@string/options"
-                    android:textColor="@color/side_menu_options_subtitle_text"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <!-- Options -->
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_1" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_2" />
+                    android:orientation="vertical" />
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="110dip"
-                    android:orientation="horizontal" >
-
-                    <RelativeLayout
-                        android:id="@+id/layout_change_currency"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_selector"
-                        android:clickable="true"
-                        android:onClick="onClickChangeCurrency" >
-
-                        <print.io.view.TextViewFontLight
-                            android:id="@+id/text_view_change_currency"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_above="@+id/dummy_currency"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dip"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_change_currency_text"
-                            android:textSize="35dip" />
-
-                        <print.io.view.TextViewFontLight
-                            android:id="@+id/dummy_currency"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:maxLines="2"
-                            android:padding="10dip"
-                            android:text="@string/change_currency"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-                    </RelativeLayout>
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_2" />
-
-                    <RelativeLayout
-                        android:id="@+id/layout_change_country"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_selector"
-                        android:clickable="true"
-                        android:onClick="onClickChangeCountry" >
-
-                        <print.io.imageloader.MyImageView
-                            android:id="@+id/image_view_country"
-                            android:layout_width="match_parent"
-                            android:layout_height="35dip"
-                            android:layout_above="@+id/dummy_country"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dip"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitCenter" />
-
-                        <print.io.view.TextViewFontLight
-                            android:id="@+id/dummy_country"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:maxLines="2"
-                            android:padding="10dip"
-                            android:text="@string/change_country"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-                    </RelativeLayout>
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="1dip"
-                        android:layout_height="match_parent"
-                        android:background="@color/separator_color_2" />
-
-                    <RelativeLayout
-                        android:id="@+id/layout_change_language"
-                        android:layout_width="0dip"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/bg_selector"
-                        android:clickable="true"
-                        android:onClick="onClickChangeLanguage" >
-
-                        <ImageView
-                            android:id="@+id/image_view_language"
-                            android:layout_width="match_parent"
-                            android:layout_height="35dip"
-                            android:layout_above="@+id/dummy_language"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center"
-                            android:layout_margin="5dip"
-                            android:adjustViewBounds="true"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/icon_change_language" />
-
-                        <print.io.view.TextViewFontLight
-                            android:id="@+id/dummy_language"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:maxLines="2"
-                            android:padding="10dip"
-                            android:text="@string/change_language"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-                    </RelativeLayout>
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1"
-                android:visibility="gone" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-
-            <!-- Accounts -->
-
-            <LinearLayout
-                android:id="@+id/linearlayout_accounts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone" >
-
-                <print.io.view.TextViewFontBold
-                    android:id="@+id/textview_accounts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/side_menu_accounts"
-                    android:gravity="center"
-                    android:paddingBottom="3dip"
-                    android:paddingTop="3dip"
-                    android:text="@string/accounts"
-                    android:textColor="@color/side_menu_accounts_subtitle_text"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_1" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_2" />
-
-                <LinearLayout
+                    android:id="@+id/layout_side_menu_options"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                    <LinearLayout
-                        android:id="@+id/layout_row_1"
+                    <print.io.view.TextViewFontBold
+                        android:id="@+id/textview_options"
                         android:layout_width="match_parent"
-                        android:layout_height="70dip"
-                        android:orientation="horizontal"
-                        android:visibility="gone" >
+                        android:layout_height="wrap_content"
+                        android:background="@color/side_menu_options"
+                        android:gravity="center"
+                        android:paddingBottom="3dip"
+                        android:paddingTop="3dip"
+                        android:text="@string/options"
+                        android:textColor="@color/side_menu_options_subtitle_text"
+                        android:textSize="@dimen/text_size_normal" />
 
-                        <print.io.view.TextViewFontLight
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-
-                        <View
-                            android:layout_width="1dip"
-                            android:layout_height="match_parent"
-                            android:background="@color/separator_color_1" />
-
-                        <View
-                            android:layout_width="1dip"
-                            android:layout_height="match_parent"
-                            android:background="@color/separator_color_2" />
-
-                        <print.io.view.TextViewFontLight
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-                    </LinearLayout>
+                    <!-- Options -->
 
                     <View
                         android:layout_width="match_parent"
@@ -350,22 +128,44 @@
                         android:background="@color/separator_color_2" />
 
                     <LinearLayout
-                        android:id="@+id/layout_row_2"
                         android:layout_width="match_parent"
-                        android:layout_height="70dip"
-                        android:orientation="horizontal"
-                        android:visibility="gone" >
+                        android:layout_height="110dip"
+                        android:orientation="horizontal" >
 
-                        <print.io.view.TextViewFontLight
+                        <RelativeLayout
+                            android:id="@+id/layout_change_currency"
                             android:layout_width="0dip"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
                             android:layout_weight="1"
+                            android:background="@drawable/bg_selector"
                             android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
+                            android:onClick="onClickChangeCurrency" >
+
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/text_view_change_currency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/dummy_currency"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dip"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_change_currency_text"
+                                android:textSize="35dip" />
+
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/dummy_currency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:padding="10dip"
+                                android:text="@string/change_currency"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </RelativeLayout>
 
                         <View
                             android:layout_width="1dip"
@@ -377,45 +177,39 @@
                             android:layout_height="match_parent"
                             android:background="@color/separator_color_2" />
 
-                        <print.io.view.TextViewFontLight
+                        <RelativeLayout
+                            android:id="@+id/layout_change_country"
                             android:layout_width="0dip"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
                             android:layout_weight="1"
+                            android:background="@drawable/bg_selector"
                             android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
-                    </LinearLayout>
+                            android:onClick="onClickChangeCountry" >
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_1" />
+                            <print.io.imageloader.MyImageView
+                                android:id="@+id/image_view_country"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dip"
+                                android:layout_above="@+id/dummy_country"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dip"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_2" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_row_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="70dip"
-                        android:orientation="horizontal"
-                        android:visibility="gone" >
-
-                        <print.io.view.TextViewFontLight
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
-                            android:layout_weight="1"
-                            android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/dummy_country"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:padding="10dip"
+                                android:text="@string/change_country"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </RelativeLayout>
 
                         <View
                             android:layout_width="1dip"
@@ -427,16 +221,40 @@
                             android:layout_height="match_parent"
                             android:background="@color/separator_color_2" />
 
-                        <print.io.view.TextViewFontLight
+                        <RelativeLayout
+                            android:id="@+id/layout_change_language"
                             android:layout_width="0dip"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="12dp"
                             android:layout_weight="1"
+                            android:background="@drawable/bg_selector"
                             android:clickable="true"
-                            android:gravity="center"
-                            android:textColor="@color/side_menu_text"
-                            android:textSize="@dimen/text_size_side_menu_button" />
+                            android:onClick="onClickChangeLanguage" >
+
+                            <ImageView
+                                android:id="@+id/image_view_language"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dip"
+                                android:layout_above="@+id/dummy_language"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dip"
+                                android:adjustViewBounds="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/icon_change_language" />
+
+                            <print.io.view.TextViewFontLight
+                                android:id="@+id/dummy_language"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:padding="10dip"
+                                android:text="@string/change_language"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </RelativeLayout>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -450,45 +268,234 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
-            </LinearLayout>
-            <!-- Info -->
 
-            <LinearLayout
-                android:id="@+id/linearlayout_info_buttons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone" >
+                <!-- Accounts -->
 
-                <print.io.view.TextViewFontBold
-                    android:id="@+id/textview_info"
+                <LinearLayout
+                    android:id="@+id/linearlayout_accounts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/side_menu_info"
-                    android:gravity="center"
-                    android:paddingBottom="3dip"
-                    android:paddingTop="3dip"
-                    android:text="@string/info"
-                    android:textColor="@color/side_menu_info_subtitle_text"
-                    android:textSize="@dimen/text_size_normal" />
+                    android:orientation="vertical"
+                    android:visibility="gone" >
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_1" />
+                    <print.io.view.TextViewFontBold
+                        android:id="@+id/textview_accounts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/side_menu_accounts"
+                        android:gravity="center"
+                        android:paddingBottom="3dip"
+                        android:paddingTop="3dip"
+                        android:text="@string/accounts"
+                        android:textColor="@color/side_menu_accounts_subtitle_text"
+                        android:textSize="@dimen/text_size_normal" />
 
-                <View
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_2" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/layout_row_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dip"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_1" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_2" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/separator_color_1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/separator_color_2" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_row_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dip"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_1" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_2" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/separator_color_1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:background="@color/separator_color_2" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_row_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dip"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_1" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:background="@color/separator_color_2" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="12dp"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_1"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_2" />
+                </LinearLayout>
+                <!-- Info -->
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_info_buttons"
                     android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_2" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <print.io.view.TextViewFontBold
+                        android:id="@+id/textview_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/side_menu_info"
+                        android:gravity="center"
+                        android:paddingBottom="3dip"
+                        android:paddingTop="3dip"
+                        android:text="@string/info"
+                        android:textColor="@color/side_menu_info_subtitle_text"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="@color/separator_color_2" />
+                </LinearLayout>
             </LinearLayout>
-
             <!-- Version -->
 
             <LinearLayout
                 android:id="@+id/linearlayout_version"
                 android:layout_width="match_parent"
                 android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
                 android:orientation="vertical"
                 android:visibility="gone" >
 
@@ -513,7 +520,7 @@
                     android:layout_height="1dip"
                     android:background="@color/separator_color_2" />
             </LinearLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>

@@ -203,7 +203,7 @@
             android:gravity="center"
             android:paddingBottom="1dip"
             android:paddingTop="5dip"
-            android:text="@string/tabbar_edit_text"
+            android:text="@string/tabbar_text"
             android:textColor="@drawable/edit_image_selector_text_text"
             android:textSize="@dimen/text_size_normal" />
 

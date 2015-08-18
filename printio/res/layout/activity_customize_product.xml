@@ -144,6 +144,14 @@
             android:textSize="@dimen/text_size_normal"
             android:visibility="gone" />
 
+        <!-- View is used as bottom margin when hlistview_photos is not visible -->
+
+        <View
+            android:id="@+id/view_info_text_margin"
+            android:layout_width="match_parent"
+            android:layout_height="20dip"
+            android:visibility="gone" />
+
         <it.sephiroth.android.library.widget.HListView
             android:id="@+id/hlistview_photos"
             android:layout_width="match_parent"
@@ -155,39 +163,15 @@
             android:paddingRight="4dip" />
     </LinearLayout>
 
-    <!-- Tooltip, displayed over CustomizeProductView, disappears after timeout -->
+    <!-- Double tap balloon, displayed over CustomizeProductView, disappears after timeout -->
 
-    <RelativeLayout
-        android:id="@+id/layout_tooltip"
+    <include
+        android:id="@+id/layout_tooltip_balloon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/view_dummy_title_separator"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-20dip"
-        android:layout_marginTop="4dip" >
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_tooltip"
-            android:layout_width="wrap_content"
-            android:layout_height="26dip"
-            android:background="@drawable/bg_tooltip"
-            android:ellipsize="none"
-            android:gravity="center"
-            android:paddingLeft="5dip"
-            android:paddingRight="5dip"
-            android:singleLine="true"
-            android:text="@string/customize_product_tooltip_text"
-            android:textColor="#ffffff"
-            android:textSize="@dimen/text_size_normal" />
-
-        <View
-            android:layout_width="20dip"
-            android:layout_height="24dip"
-            android:layout_below="@+id/textview_tooltip"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/arrow_up"
-            android:rotation="180" />
-    </RelativeLayout>
+        layout="@layout/item_tooltip_balloon"
+        android:visibility="gone" />
 
     <!-- Tab Bar -->
 

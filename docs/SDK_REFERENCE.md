@@ -404,7 +404,23 @@ In order to use it, Side Menu needs to be enabled.
 PIOConfig#setShareText(String shareText);
 ```
 &nbsp;  
+&nbsp;
+#### > Show Country selection bar on screens.
+By default only `Screen.FEATURED_PRODUCTS` has country selection bar shown. Following screens have support for this configuration:  `Screen.FEATURED_PRODUCTS`, `Screen.PRODUCT_DETAILS` and `Screen.OPTIONS`.
+```java
+PIOConfig#showCountrySelectionOnScreen(List<Screen> screens)
+```
 &nbsp;  
+&nbsp;
+#### > Change background color of Select Country bar.
+
+To change the background color of Select Country bar, modify the following item in  
+`res/values/colors.xml`
+```xml
+<color name="select_country_background">#2277D4</color>
+```
+&nbsp;  
+&nbsp;    
 Featured Products
 --------------
 #### > Set list of available products in the SDK.
@@ -415,25 +431,7 @@ By default, all values defined in `ProductType` enum are used.
 PIOConfig#setAvailableProducts(List<ProductType> availableProducts);
 ```
 &nbsp;  
-&nbsp;  
-#### > Set country on Featured Products screen instead on First screen. Default value is true.  
-( > Set country on Featured Products screen instead on First screen)  
-
-Default value is `true`.
-```java
-PIOConfig#setCountryOnFeaturedProducts(boolean setCountryOnFeaturedProducts);
-```
-&nbsp;  
-&nbsp;  
-#### > Change background color of Select Country bar on Featured Products screen.
-
-To change the background color of Select Country bar, modify the following item in  
-`res/values/colors.xml`
-```xml
-<color name="select_country_background">#2277D4</color>
-```
-&nbsp;  
-&nbsp;  
+&nbsp; 
 #### > Hide category/search view on Featured Products screen. Default value is NO;  
 ( > Hide category/search view on Featured Products screen)  
 
@@ -663,14 +661,6 @@ Recommended dimensions are listed next to the icon name.
 ```
 icon_add_more_images_a.png (111x111) - default state
 icon_add_more_images_b.png (111x111) - pressed state
-```
-&nbsp;  
-&nbsp;  
-#### > Change visibility of 'Help' button in Customize Product screen.  
-
-Default value is 'false' (Help button is visible).  
-```java
-PIOConfig#hideHelpButtonInCustomizeProduct(boolean isHidden);
 ```
 &nbsp;  
 &nbsp;  
