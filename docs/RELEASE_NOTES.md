@@ -11,6 +11,8 @@
 
 - Fixed Address validation issues
 
+- Fixed `setProductSkuFromApp()` method
+
 - Fixed deletion of items on Shipment Review screen
 
 ###
