@@ -80,6 +80,13 @@ public class ApplicationSampleApp extends Application {
 		// In order to use Credit Card payments, you need to set your Braintree encryption key
 		config.setBraintreeEncryptionKey(PIOConstants.Braintree.ENCRYPTION_KEY);
 
+		// Set available photo sources
+		config.setPhotoSources(Arrays.asList(
+			new FacebookPhotoSource(),
+			new PhonePhotoSource(),
+			new PicasaPhotoSource()
+		));
+			
 		try {
 			// Set Config object
 			PIO.setConfig(this, config);
@@ -93,68 +100,5 @@ public class ApplicationSampleApp extends Application {
 
 Add your `Application` class to `AndroidManifest.xml`
 ```xml
-    <application
-        android:name="com.your.package.ApplicationSampleApp"
-```
-
-###Optional Configuration
-
-```java
-// Set your company's name for payment screens.
-config.setPartnerName(String);
-
-// Hide Android status bar
-config.setHideStatusBar(boolean);
-
-// Enable/disable application side menu.
-config.setSideMenuEnabled(boolean);
-config.setDefaultSideMenuButtonsTop();
-config.setDefaultSideMenuInfoButtons();
-
-// Preset the country. Country code is 2 letter code, e.g. "US".
-config.setCountryCode(String);
-
-// Can change country from Featured Products screen (default is true).
-config.setCountryOnFeaturedProducts(boolean);
-
-// Hide category and search bar on Featured Products screen
-config.setHideCategorySearchBar(boolean);
-
-// Set header bar color.
-config.setHeaderColor(int);
-
-// Add desired photo sources (up to 6)
-ArrayList<PhotoSource> photoSourcesTest = new ArrayList<PIO.PhotoSource>();
-photoSourcesTest.add(PhotoSource.PHONE);
-photoSourcesTest.add(PhotoSource.PICASA);
-photoSourcesTest.add(PhotoSource.FACEBOOK);
-photoSourcesTest.add(PhotoSource.DROPBOX);
-photoSourcesTest.add(PhotoSource.FLICKR);
-photoSourcesTest.add(PhotoSource.INSTAGRAM);
-photoSourcesTest.add(PhotoSource.PHOTOBUCKET);
-config.setPhotoSources(photoSourcesTest);
-
-// Or forbid user to use his own images and use only those passed to sdk.
-config.setPhotosourcesDisabled(boolean);
-
-// Array of urls or local path for images that will be preloaded into the application.
-config.setImageUrls(List<String>);
-
-// Preset the images always be auto arranged. User can customize product after.
-config.setAutoArrange(boolean);
-
-// Jump directly to the product. if PIO.setIdAndSku() is set this will be ignored.
-config.setProductIdFromApp(PublicConstants.ProductIds.PHONE_CASES);
-
-// Show/hide help option through the sdk
-config.setShowHelp(boolean);
-
-// Show/hide choosen photos in Customize Product screen.
-config.setShowPhotosInCustomize(boolean);
-
-// Show/hide bottom tab bar with options in Customize Product screen.
-config.setShowOptionsInCustomize(boolean);
-
-// In edit photo screen show/hide options(roatate, add text, add effect)
-config.setUpCropScreen(boolean, boolean, boolean);
+<application android:name="com.your.package.ApplicationSampleApp"
 ```
