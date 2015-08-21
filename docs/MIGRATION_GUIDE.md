@@ -1,3 +1,19 @@
+Migrating to v3.0.4 from v3.0.0
+========
+**Changes in `PIOConfig` class**
+
+Method `setCountryOnFeaturedProducts` has been removed and new method `showCountrySelectionOnScreen` for showing country selection bar on arbitrarily screens has been added.
+
+For example,  instead of using
+```java
+PIOConfig#setCountryOnFeaturedProducts(true);
+```
+you should use 
+```java
+PIOConfig#showCountrySelectionOnScreen(Arrays.asList(Screen.FEATURED_PRODUCTS));
+```
+
+
 Migrating to v3.0.0 from v2.3.0
 ========
  ---
