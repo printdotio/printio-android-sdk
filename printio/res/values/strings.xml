@@ -37,7 +37,12 @@
     <string name="preselected">Preselected</string>
     <string name="customize_product_tooltip_text">Double-Tap photo to edit</string>
     <string name="customize_photobook_tooltip_text">Tap photo to edit or replace</string>
+    <string name="photobooks_front_cover">Front Cover</string>
+    <string name="photobooks_back_cover">Back Cover</string>
+    <string name="photobooks_pages_numbers">Pages %1$s-%2$s</string>
     <string name="change_book_template">Change Book Template</string>
+    <string name="change_template_changes_will_be_lost">By changing template, all changes will be lost. Do you want to proceed?</string>
+    <string name="copy_template_unsuccessful">The templates are incompatible, so the images could not be copied</string>
     <string name="edit_photo">Edit Photo</string>
     <string name="replace_photo">Replace Photo</string>
     <string name="product_preview">Product Preview</string>

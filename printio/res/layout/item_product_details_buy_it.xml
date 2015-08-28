@@ -16,14 +16,27 @@
         android:paddingRight="8dip"
         android:visibility="gone" >
 
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/textview_price_starting_at"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_large"
-            android:textStyle="bold" />
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontNormal
+                android:id="@+id/textview_price_starting_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_price"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_size_large"
+                android:indeterminate="true"
+                android:visibility="gone" />
+        </LinearLayout>
 
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_retail_price"
