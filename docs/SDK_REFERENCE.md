@@ -877,7 +877,7 @@ replace the following icon with your own icon of the same name.
 Recommended dimensions are listed next to the icon name.  
 Default logo is a 100% transparent image (no logo).
 ```
-icon_logo.png (71Ã—80)
+icon_logo.png (71x80)
 ```
 &nbsp;  
 &nbsp;  
