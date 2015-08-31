@@ -1,5 +1,20 @@
 **Android Release Notes**
 
+3.0.13 (v117)
+============
+
+**Features:**
+
+- Added `Products` screen V2
+
+**Bugs:**
+
+- Fixed `Products` screen sometimes showing list instead of grid
+
+- Fixed duplicating items in Shopping Cart
+
+###
+
 3.0.4 (v117)
 ============
 

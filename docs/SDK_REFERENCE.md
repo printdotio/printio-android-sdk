@@ -63,10 +63,10 @@ icon_arrow_back.png (19x33)
 ```
 &nbsp;  
 &nbsp;  
-#### > Set three buttons Back, Menu and Cart button in navigation bar for Featured Products screen  
+#### > Set three buttons Back, Menu and Cart button in navigation bar for Products screen  
 ( > Set three buttons title bar style)
 
-Show `Back`, `Menu` and `Cart` buttons in navigation bar for Featured Products screen.  
+Show `Back`, `Menu` and `Cart` buttons in navigation bar for Products screen.  
 Default value is `false`.
 ```java
 PIOConfig#useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
@@ -143,10 +143,7 @@ enum SideMenuButton {
     VIEW_CART;
 };
 ```
-or, to use the default buttons, call
-```java
-PIOConfig#setDefaultSideMenuButtonsTop();
-```
+
 &nbsp;  
 To modify buttons' icons, replace the corresponding icon with your own.
 Recommended dimensions are listed next to the icon name.
@@ -359,10 +356,7 @@ enum SideMenuInfoButton {
     PAST_ORDERS;
 };
 ```
-or, to use the default buttons, call
-```java
-PIOConfig#setDefaultSideMenuInfoButtons();
-```
+
 &nbsp;  
 To modify buttons' icons, replace the corresponding icon with your own.
 Recommended dimensions are listed next to the icon name.
@@ -406,7 +400,7 @@ PIOConfig#setShareText(String shareText);
 &nbsp;  
 &nbsp;
 #### > Show Country selection bar on screens.
-By default only `Screen.FEATURED_PRODUCTS` has country selection bar shown. Following screens have support for this configuration:  `Screen.FEATURED_PRODUCTS`, `Screen.PRODUCT_DETAILS` and `Screen.OPTIONS`.
+By default only `Screen.PRODUCTS` has country selection bar shown. Following screens have support for this configuration:  `Screen.PRODUCTS`, `Screen.PRODUCT_DETAILS` and `Screen.OPTIONS`.
 ```java
 PIOConfig#showCountrySelectionOnScreen(List<Screen> screens)
 ```
@@ -419,9 +413,30 @@ To change the background color of Select Country bar, modify the following item 
 ```xml
 <color name="select_country_background">#2277D4</color>
 ```
+Screens version
+--------------
 &nbsp;  
-&nbsp;    
-Featured Products
+&nbsp;
+#### > Set screens version
+Changes screens version used by the SDK.  By default `ScreenVersion.V_1` is used.
+```java
+PIOConfig#setScreenVersion(ScreenVersion screenVersion)
+```
+&nbsp;  
+&nbsp; 
+   
+### Screens v2 specific configuration
+&nbsp;  
+&nbsp;
+#### > Set product screens layouts image URL
+Sets URL of image resource used on product layouts on product screens.  This configuration is mandatory when v2 screens are used.
+```java
+PIOConfig#setScreenProductImageUrl(String url)
+```
+&nbsp;  
+&nbsp;
+
+Products screen
 --------------
 #### > Set list of available products in the SDK.
 
@@ -432,8 +447,8 @@ PIOConfig#setAvailableProducts(List<ProductType> availableProducts);
 ```
 &nbsp;  
 &nbsp; 
-#### > Hide category/search view on Featured Products screen. Default value is NO;  
-( > Hide category/search view on Featured Products screen)  
+#### > Hide category/search view on Products screen. Default value is NO;  
+( > Hide category/search view on Products screen)  
 
 Default value is `false`.
 ```java
@@ -515,9 +530,9 @@ PIOConfig#setImageUrls(List<String> imageUris);
 #### > If user pass in images usinig method 'images', this method can disable photo sources, forcing user to use only passed photos. This method overrides method 'availablePhotoSources'  
 ( > Disable photo sources)  
 
-If images were preset using `setImageUrls(...)`, this method can be used to disable photo sources and force the user to only use predefined photos.
+If images were preset using `setImageUrls(...)`, this method can be used to disable photo source screen and force the user to only use predefined photos.
 ```java
-PIOConfig#setPhotosourcesDisabled(boolean isPhotosourcesDisabled);
+PIOConfig#setDisabledScreens(Arrays.asList(Screen.SELECT_IMAGES)));
 ```
 &nbsp;  
 &nbsp;  
@@ -862,7 +877,7 @@ replace the following icon with your own icon of the same name.
 Recommended dimensions are listed next to the icon name.  
 Default logo is a 100% transparent image (no logo).
 ```
-icon_logo.png (71×80)
+icon_logo.png (71x80)
 ```
 &nbsp;  
 &nbsp;  
@@ -891,10 +906,7 @@ Sets the default shipping country.
  */
 PIOConfig#setCountryCode(String countryCode);
 ```
-**NOTICE:**  
-If `setCountryOnFeaturedProducts()` was set to `true`, default country code is `us`.  
-Otherwise, the user is taken to Select Country screen and there is no default value.
-&nbsp;  
+&nbsp; 
 &nbsp;  
 #### > Set currency code  
 
@@ -924,7 +936,7 @@ Steps
 #### > Jumps directly to product.  
 ( > Jump to product)  
 
-Instead of opening Featured Products screen, go directly to specified product.
+Instead of opening Products screen, go directly to specified product details.
 ```java
 /**
  * Set product type of the product whose "Product Details" screen will be
@@ -936,17 +948,18 @@ Instead of opening Featured Products screen, go directly to specified product.
  *            value is {@code null} (functionality is ignored).
  */
 PIOConfig#setProductFromApp(ProductType product);
+```
+Or go to the product options screen by disabling product details screen (or to the product customization screen if options and select images screens are disabled).
 
-/**
- * @param skipProductDetails - Use 'true' to skip ProductDetails screen and go directly to Step 1.
- */
-PIOConfig#setSkipProductDetails(boolean skipProductDetails);
+```java
+PIOConfig#setDisabledScreens(Arrays.asList(Screen.PRODUCT_DETAILS /*, Screen.OPTIONS, Screen.SELECT_IMAGES */)));
 ```
 &nbsp;  
 &nbsp;  
-#### > Jump to SKU (no equivalent method on iOS exists)  
+#### >Force a SKU for product
 
-Force a SKU for product.
+If product options page is disabled, you can force a SKU for product. Otherwise default SKU will be used.
+
 ```java
 PIOConfig#setProductSkuFromApp(String productSkuFromApp);
 ```
@@ -1152,27 +1165,9 @@ PIOConfig#setPartnerName(String partnerName);
 #### > Jump to screen  
 
 ```java
-/**
- * Jumps directly to specified screen.
- * 
- * @param screenId  the ID of a screen to jump to.
- * @param flags  flags that control app's behaviour (back button, etc...). If no flags are required, use 0
- */
-PIOConfig#setJumpToScreen(int screenId, int flags);
+TODO
 ```
-**NOTICE:**  
-Screens and flags are defined in PublicConstants.java  
-```
-Screen IDs:
-SCREEN_SHOPPING_CART
 
-Flags:
-/*
- * If set, back button takes user to Featured Products screen
- * Else, the user is taken back to the host app
- */
-FLAG_GO_BACK_TO_FEATURED_PRODUCTS
-```
 &nbsp;  
 &nbsp;  
 #### > Set url for Terms and Conditions  

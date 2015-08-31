@@ -2,22 +2,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99000000" >
+    android:background="#90000000" >
 
     <!-- Pinch to Zoom -->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/layout_buttons" >
+        android:layout_above="@+id/layout_buttons"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingTop="20dip" >
 
         <print.io.view.TouchImageView
             android:id="@+id/touchimageview_edit_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:adjustViewBounds="true"
-            android:background="#00000000" />
+            android:adjustViewBounds="true" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:background="#80000000" />
 
     <!-- Buttons Back and Next -->
 
@@ -28,7 +35,7 @@
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
         android:padding="8dip"
-        android:weightSum="5" >
+        android:weightSum="7" >
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_back"
@@ -46,7 +53,7 @@
         <View
             android:layout_width="0px"
             android:layout_height="1px"
-            android:layout_weight="1" />
+            android:layout_weight="3" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_save"
@@ -67,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/layout_buttons"
         android:layout_centerHorizontal="true"
-        android:layout_margin="25dip"
+        android:layout_margin="5dip"
         android:text="@string/pinch_pan"
         android:textColor="#ffffff"
         android:textSize="@dimen/text_size_normal" />

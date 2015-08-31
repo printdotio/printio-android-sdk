@@ -77,96 +77,103 @@ As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as 
 Please add following activities to your AndroidManifest.xml file:
 ```xml
 <activity
-    android:name="print.io.PIOActivity"
-    android:screenOrientation="portrait" />
+	android:name="print.io.PIOActivity"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityCaseColorStyle"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityCaseColorStyle"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.ActivityCountry"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityCountry"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.ActivityCurrency"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityCurrency"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.ActivityFeaturedProducts"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="adjustResize" />
+	android:name="print.io.ActivityProducts"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="adjustResize" />
 <activity
-    android:name="print.io.ActivityProductDetails"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityProductsV2"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="adjustResize" />
 <activity
-    android:name="print.io.ActivityProductPreview"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityProductDetails"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityImageUpload"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityProductDetailsV2"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityCustomizeProduct"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityProductPreview"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityCustomizePhotobook"
-    android:screenOrientation="landscape" />
+	android:name="print.io.ActivityImageUpload"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityCustomSteps"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityCustomizeProduct"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityStickerBook"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityCustomizePhotobook"
+	android:screenOrientation="landscape" />
 <activity
-    android:name="print.io.ActivityShoppingCart"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden|adjustResize" />
+	android:name="print.io.ActivityCustomSteps"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityPaymentMethod"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="adjustResize" />
+	android:name="print.io.ActivityStickerBook"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.ActivityChooseShippingAddress"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityShoppingCart"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden|adjustResize" />
 <activity
-    android:name="print.io.ActivityAddAddress"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="adjustResize" />
+	android:name="print.io.ActivityPaymentMethod"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="adjustResize" />
 <activity
-    android:name="print.io.ActivityShipmentReview"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityChooseShippingAddress"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityOrderCompleted"
-    android:screenOrientation="portrait"
-    android:windowSoftInputMode="stateHidden" />
+	android:name="print.io.ActivityAddAddress"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="adjustResize" />
 <activity
-    android:name="print.io.ActivityHelp"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityShipmentReview"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.photosource.impl.facebook.Facebook"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityOrderCompleted"
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="stateHidden" />
 <activity
-    android:name="print.io.photosource.impl.instagram.Instagram"
-    android:noHistory="true"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityHelp"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.photosource.impl.flickr.Flickr"
-    android:noHistory="true"
-    android:screenOrientation="portrait" />
+	android:name="print.io.photosource.impl.facebook.Facebook"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.photosource.impl.dropbox.Dropbox"
-    android:noHistory="true"
-    android:screenOrientation="portrait" />
+	android:name="print.io.photosource.impl.instagram.Instagram"
+	android:noHistory="true"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityAbout"
-    android:screenOrientation="portrait" />
+	android:name="print.io.photosource.impl.flickr.Flickr"
+	android:noHistory="true"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityHowItWorks"
-    android:screenOrientation="portrait" />
+	android:name="print.io.photosource.impl.dropbox.Dropbox"
+	android:noHistory="true"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="com.facebook.FacebookActivity"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityAbout"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="print.io.ActivityHowItWorks"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.facebook.FacebookActivity"
+	android:screenOrientation="portrait" />
 
  <!-- Activities needed for new paypal functionalities -->
  <service

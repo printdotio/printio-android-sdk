@@ -82,9 +82,12 @@ public class ApplicationSampleApp extends Application {
 
 		// Set available photo sources
 		config.setPhotoSources(Arrays.asList(
-			new FacebookPhotoSource(),
 			new PhonePhotoSource(),
-			new PicasaPhotoSource()
+			new InstagramPhotoSource(),
+			new FacebookPhotoSource(),
+			new PhotobucketPhotoSource(),
+			new DropboxPhotoSource(),
+			new FlickrPhotoSource()
 		));
 			
 		try {

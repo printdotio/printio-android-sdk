@@ -1,3 +1,63 @@
+Migrating to v3.0.13 from v3.0.4
+========
+
+**Changes in AndroidManifest.xml**
+
+Following activity declarations should be added:
+```xml
+<activity android:name="print.io.ActivityProducts" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+<activity android:name="print.io.ActivityProductsV2" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+<activity android:name="print.io.ActivityProductDetailsV2" android:screenOrientation="portrait" />
+```
+
+The following activity declaration should be removed:
+```xml
+<activity android:name="print.io.ActivityFeaturedProducts" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+```
+
+**Changes in `Screen` enum**
+
+Value `FEATURED_PRODUCTS` has been renamed `PRODUCTS`.
+
+**Changes in `PIOConfig` class**
+
+- Disabling screens
+
+Mechanism for disabling screens has been changed.  
+Since version v3.0.13, the correct way to disable screens is to pass a `List<Screen>` to the `setDisabledScreens()` method.
+
+For example, instead of using:
+```java
+PIOConfig#setSkipProductDetails(true); 
+// ... or PIOConfig#setPhotoSourcesDisabled(true)
+```
+you should now use:
+```java
+//import print.io.piopublic.Screen;
+
+PIOConfig#setDisabledScreens(Arrays.asList(Screen.PRODUCT_DETAILS)));
+// ... or PIOConfig#setDisabledScreens(Arrays.asList(Screen.PRODUCT_DETAILS, Screen.SELECT_PHOTOS)));
+```
+
+Note: Up until v3.0.13, disabling Product Options screen was done by passing SKU to the SDK.  
+In order to be consistent, this way of disabling Product Options has been changed.  
+As of v3.0.13, disabling Product Options is done the same way as for other screens.  
+If Product Options screen is disabled, passed SKU will still be used to specify product variant or, if SKU was not passed, default SKU will be used.
+
+- Jump to screen
+
+Mechanism for jumping to screens has been changed.  
+Since version v3.0.13, concept of screen flags has been removed, as well as `setJumpToScreenFlags(int)` and `setJumpToScreen(Screen, int)` methods.  
+
+Instead of screen flags, a new method `setJumpToScreen(Screen, Screen)` for specifying "navigate-back screen" has been added.  
+
+For example, if you want to launch the SDK at `Shopping Cart` screen, and go to `Products` screen when user navigates back, you would have to do the following:
+
+```java
+PIOConfig#setJumpToScreen(Screen.SHOPPING_CART, Screen.PRODUCTS);
+```
+
+
 Migrating to v3.0.4 from v3.0.0
 ========
 **Changes in `PIOConfig` class**
@@ -58,6 +118,7 @@ res/colors.xml
 <color name="blue_light"> --> <color name="button_secondary_default">
 <color name="blue_dark"> --> <color name="button_secondary_pressed">
 ```
+
 
 Migrating to v2.3.0 from v2.1.13
 ========
@@ -122,6 +183,7 @@ paymentOptions.add(PaymentOptionType.CREDIT_CARD);
 PIOConfig#setPaymentOptions(paymentOptions);
 ```
 
+
 Migrating to v2.1.9 from v2.1.8
 ========
  ---
@@ -183,6 +245,7 @@ should been changed to:
 <activity android:name="print.io.photosource.impl.flickr.Flickr" android:noHistory="true" android:screenOrientation="portrait" />
 <activity android:name="print.io.photosource.impl.dropbox.Dropbox" android:noHistory="true" android:screenOrientation="portrait" />
 ```
+
 
 Migrating to v2.1.8 from v2.x
 ========
