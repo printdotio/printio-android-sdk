@@ -400,7 +400,7 @@ PIOConfig#setShareText(String shareText);
 &nbsp;  
 &nbsp;
 #### > Show Country selection bar on screens.
-By default, only `Screen.PRODUCTS` has country selection bar displayed. The following Screens support this method: `Screen.PRODUCTS`, `Screen.PRODUCT_DETAILS` and `Screen.OPTIONS`.
+By default only `Screen.PRODUCTS` has country selection bar shown. Following screens have support for this configuration:  `Screen.PRODUCTS`, `Screen.PRODUCT_DETAILS` and `Screen.OPTIONS`.
 ```java
 PIOConfig#showCountrySelectionOnScreen(List<Screen> screens)
 ```
@@ -413,8 +413,29 @@ To change the background color of Select Country bar, modify the following item 
 ```xml
 <color name="select_country_background">#2277D4</color>
 ```
+Screens version
+--------------
 &nbsp;  
-&nbsp;    
+&nbsp;
+#### > Set screens version
+Changes screens version used by the SDK.  By default `ScreenVersion.V_1` is used.
+```java
+PIOConfig#setScreenVersion(ScreenVersion screenVersion)
+```
+&nbsp;  
+&nbsp; 
+   
+### Screens v2 specific configuration
+&nbsp;  
+&nbsp;
+#### > Set product screens layouts image URL
+Sets URL of image resource used on product layouts on product screens.  This configuration is mandatory when v2 screens are used.
+```java
+PIOConfig#setScreenProductImageUrl(String url)
+```
+&nbsp;  
+&nbsp;
+
 Products screen
 --------------
 #### > Set list of available products in the SDK.
@@ -856,7 +877,7 @@ replace the following icon with your own icon of the same name.
 Recommended dimensions are listed next to the icon name.  
 Default logo is a 100% transparent image (no logo).
 ```
-icon_logo.png (71×80)
+icon_logo.png (71Ã—80)
 ```
 &nbsp;  
 &nbsp;  
@@ -915,7 +936,7 @@ Steps
 #### > Jumps directly to product.  
 ( > Jump to product)  
 
-Instead of opening Products screen, go directly to specified product's details.
+Instead of opening Products screen, go directly to specified product details.
 ```java
 /**
  * Set product type of the product whose "Product Details" screen will be
@@ -928,16 +949,16 @@ Instead of opening Products screen, go directly to specified product's details.
  */
 PIOConfig#setProductFromApp(ProductType product);
 ```
-Or go to the `Product Options` screen by disabling `Product Details` screen (or to the `Product Customization` screen if `Product Options` and `Select Images` screens are disabled).
+Or go to the product options screen by disabling product details screen (or to the product customization screen if options and select images screens are disabled).
 
 ```java
 PIOConfig#setDisabledScreens(Arrays.asList(Screen.PRODUCT_DETAILS /*, Screen.OPTIONS, Screen.SELECT_IMAGES */)));
 ```
 &nbsp;  
 &nbsp;  
-#### > Predefine a SKU for product
+#### >Force a SKU for product
 
-If product options page is disabled, you can predefine a SKU for product. Otherwise, default SKU will be used.
+If product options page is disabled, you can force a SKU for product. Otherwise default SKU will be used.
 
 ```java
 PIOConfig#setProductSkuFromApp(String productSkuFromApp);
