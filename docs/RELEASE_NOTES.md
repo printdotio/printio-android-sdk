@@ -1,11 +1,26 @@
 **Android Release Notes**
 
+3.0.18 (v117)
+============
+
+**Features:**
+
+- Added `Product Details V2` screen
+
+- `Create It` button renamed `Make It`
+
+**Bugs:**
+
+- Fixed Unicode support in API calls
+
+###
+
 3.0.13 (v117)
 ============
 
 **Features:**
 
-- Added `Products` screen V2
+- Added `Products V2` screen
 
 **Bugs:**
 

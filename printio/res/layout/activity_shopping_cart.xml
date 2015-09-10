@@ -217,7 +217,7 @@
             android:layout_height="48dip"
             android:layout_below="@+id/layout_coupon"
             android:background="@drawable/btn_primary"
-            android:drawableRight="@drawable/icon_arrow_next_invert"
+            android:drawableRight="@drawable/icon_arrow_next_white"
             android:gravity="center"
             android:onClick="onClickCheckout"
             android:paddingLeft="20dp"

@@ -23,6 +23,7 @@
             android:indeterminate="true" />
 
         <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_progress_text_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -32,10 +33,10 @@
             android:textSize="@dimen/text_size_normal" />
 
         <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_progress_text_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:singleLine="true"
             android:text="@string/progress_text_pt2"
             android:textColor="#5a5d66"
             android:textSize="@dimen/text_size_normal" />

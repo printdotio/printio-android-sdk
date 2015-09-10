@@ -17,7 +17,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:text="@string/about_partner"
+        android:text="@string/about_title"
         android:textColor="@color/side_menu_text"
         android:textSize="@dimen/text_size_side_menu_button" />
 

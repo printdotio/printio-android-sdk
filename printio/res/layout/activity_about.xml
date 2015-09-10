@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/about_partner"
+            android:text="@string/about_title"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
 
@@ -84,7 +84,7 @@
                 android:layout_marginBottom="10dip"
                 android:drawableLeft="@drawable/icon_about"
                 android:drawablePadding="5dip"
-                android:text="@string/about"
+                android:text="@string/about_subtitle"
                 android:textColor="@color/purple"
                 android:textSize="@dimen/text_size_large" />
 
