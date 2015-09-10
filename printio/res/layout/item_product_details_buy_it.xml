@@ -55,11 +55,11 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="10dip"
         android:background="@drawable/btn_primary"
-        android:drawableRight="@drawable/icon_arrow_next_invert"
+        android:drawableRight="@drawable/icon_arrow_next_white"
         android:onClick="onClickCreateIt"
         android:paddingLeft="5dip"
         android:paddingRight="5dip"
-        android:text="@string/create_it"
+        android:text="@string/make_it"
         android:textColor="@color/button_primary_text"
         android:textSize="@dimen/text_size_button_create_it"
         android:textStyle="bold" />

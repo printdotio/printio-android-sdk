@@ -36,6 +36,15 @@
             android:src="@drawable/icon_ver_divider"
             android:visibility="invisible" />
 
+        <print.io.view.TextViewFontTitle
+            android:id="@+id/textview_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/product_details"
+            android:textColor="@color/title_bar_text"
+            android:textSize="@dimen/text_size_title" />
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -96,45 +105,49 @@
             android:layout_height="match_parent"
             android:orientation="vertical" >
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager_product_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="302dip"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip" />
 
                 <RelativeLayout
+                    android:id="@+id/relativelayout_products_overlay"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dip"
-                    android:layout_marginTop="16dip"
-                    android:orientation="vertical" >
+                    android:layout_height="match_parent"
+                    android:background="#BB000000"
+                    android:visibility="gone" >
 
-                    <LinearLayout
-                        android:id="@+id/layout_images_dot_indicators"
+                    <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:orientation="horizontal" />
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dip"
+                        android:src="@drawable/icon_arrow_back_white" />
 
-                    <print.io.view.TextViewFontTitle
-                        android:id="@+id/textview_product_name"
+                    <print.io.view.TextViewFontNormal
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dip"
-                        android:textColor="@color/title_bar_text"
-                        android:textSize="@dimen/text_size_title" />
-                </RelativeLayout>
+                        android:layout_centerInParent="true"
+                        android:singleLine="true"
+                        android:text="@string/products_hint_overlay_text"
+                        android:textColor="@color/white" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/viewpager_product_images"
-                        android:layout_width="match_parent"
-                        android:layout_height="302dip" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="16dip"
+                        android:src="@drawable/icon_arrow_next_white" />
                 </RelativeLayout>
-            </LinearLayout>
+            </RelativeLayout>
 
             <!-- Create It container -->
 

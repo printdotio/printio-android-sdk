@@ -173,7 +173,7 @@
         android:background="@drawable/btn_primary"
         android:clickable="true"
         android:drawablePadding="10dp"
-        android:drawableRight="@drawable/icon_arrow_next_invert"
+        android:drawableRight="@drawable/icon_arrow_next_white"
         android:gravity="center"
         android:onClick="onClickNext"
         android:paddingBottom="9dip"

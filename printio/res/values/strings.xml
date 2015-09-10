@@ -158,8 +158,6 @@
     <string name="share_using">Share using:</string>
     <string name="like_us">Like Us On Facebook</string>
     <string name="rate_our_app">Rate Our App</string>
-    <string name="about_partner">About print.io</string>
-    <string name="how_it_works">How It Works</string>
     <string name="past_orders">Past Orders</string>
     <string name="save">Save</string>
     <string name="save_to">Save to</string>
@@ -270,7 +268,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="tabbar_text">Text</string>
     <string name="tabbar_effects">Effects</string>
     <string name="background">Background</string>
-    <string name="create_it">Create It!</string>
+    <string name="make_it">Make It!</string>
     <string name="details">Details</string>
     <string name="shipping_info">Shipping Info</string>
     <string name="shipping_info_arrival">Est. Arrival</string>
@@ -326,7 +324,8 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="you_have_ordered_the_following_products">You have ordered the following products:</string>
     <string name="overall">Overall:</string>
     <string name="continue_shopping">Continue Shopping</string>
-    <string name="about">About:</string>
+    <string name="about_title">About print.io</string>
+    <string name="about_subtitle">About:</string>
     <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
     <string name="how_it_works_title">How It Works</string>
     <string name="how_it_works_subtitle">How It Works:</string>
@@ -383,6 +382,8 @@ each field, simply touch the Place Order button.</string>
     <string name="dialog_zero_dollar_payment">Zero dollar orders could not be executed via PayPal.\nPlease, use credit card instead.</string>
     <string name="please_select_at_least_one_image">Please select at least one image</string>
     <string name="add_address_page_title">Checkout</string>
+    <string name="products_hint_overlay_text">Swipe to see more items</string>
+    <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>
