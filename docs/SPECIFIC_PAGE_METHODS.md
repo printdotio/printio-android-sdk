@@ -1,23 +1,23 @@
 Specific Page Methods
 ===
-- [**A. Products Screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#a-products-screen)
-- [**B. Product Details screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#product-details-screen)
-- [**C. Choose Options screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#choose-options-screen)
-- [**D. Select Photos screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#select-photos-screen)
-- [**E. Customization screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#customization-screen)
-- [**F. Image Editor screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#image-editor-screen)
-- [**G. Shopping Cart screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#shopping-cart-screen)
-- [**H. Select Address screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#select-address-screen)
-- [**I. Payment screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#payment-screen)
-- [**J. Order Completed screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#order-completed-screen)
-- [**K. Choose Country screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#choose-country-screen)
-- [**L. About screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#about-screen)
-- [**M. How It Works screen**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#how-it-works-screen)
-- [**N. Side Menu**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#side-menu)
+- [**A. Products Screen**](SPECIFIC_PAGE_METHODS.md#a-products-screen)
+- [**B. Product Details screen**](SPECIFIC_PAGE_METHODS.md#product-details-screen)
+- [**C. Choose Options screen**](SPECIFIC_PAGE_METHODS.md#choose-options-screen)
+- [**D. Select Photos screen**](SPECIFIC_PAGE_METHODS.md#select-photos-screen)
+- [**E. Customization screen**](SPECIFIC_PAGE_METHODS.md#customization-screen)
+- [**F. Image Editor screen**](SPECIFIC_PAGE_METHODS.md#image-editor-screen)
+- [**G. Shopping Cart screen**](SPECIFIC_PAGE_METHODS.md#shopping-cart-screen)
+- [**H. Select Address screen**](SPECIFIC_PAGE_METHODS.md#select-address-screen)
+- [**I. Payment screen**](SPECIFIC_PAGE_METHODS.md#payment-screen)
+- [**J. Order Completed screen**](SPECIFIC_PAGE_METHODS.md#order-completed-screen)
+- [**K. Choose Country screen**](SPECIFIC_PAGE_METHODS.md#choose-country-screen)
+- [**L. About screen**](SPECIFIC_PAGE_METHODS.md#about-screen)
+- [**M. How It Works screen**](SPECIFIC_PAGE_METHODS.md#how-it-works-screen)
+- [**N. Side Menu**](SPECIFIC_PAGE_METHODS.md#side-menu)
 
 ---
 
-- [**Full app Methods**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#full-app-methods)
+- [**Full app Methods**](SPECIFIC_PAGE_METHODS.md#full-app-methods)
 
 ---
 
@@ -31,19 +31,19 @@ Specific Page Methods
 
 #### A1. Set list of available products in the SDK. 
 
-- [**PIOConfig.setAvailableProducts**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-list-of-available-products-in-the-sdk)
+- [**PIOConfig.setAvailableProducts**](SDK_REFERENCE.md#-set-list-of-available-products-in-the-sdk)
 
 #### A2. Hide category/search view on Featured Products screen. Default value is NO.
 
-- [**PIOConfig.setHideCategorySearchBar**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-hide-categorysearch-view-on-featured-products-screen-default-value-is-no)
+- [**PIOConfig.setHideCategorySearchBar**](SDK_REFERENCE.md#-hide-categorysearch-view-on-featured-products-screen-default-value-is-no)
 
 #### A3. Shows featured products by default. If disabled all products screen is shown. Default value is YES.
 
-- [**PIOConfig.setShowFeaturedProductsByDefault**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
+- [**PIOConfig.setShowFeaturedProductsByDefault**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
 
 #### A4. Hide Coming Soon products. Default value is false.
 
-- [**PIOConfig.setHideComingSoonProducts**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
+- [**PIOConfig.setHideComingSoonProducts**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
 
 ---
 
@@ -55,11 +55,11 @@ Specific Page Methods
 
 #### B1. Hide prices in Product Details screen. Default value is false.
 
-- [**PIOConfig.setPriceTitleHidden**](https://github.com/printdotio/printio-android/blob/docs/docs/SPECIFIC_PAGE_METHODS.md#a1-hide-prices-in-product-details-screen-default-value-is-false)
+- [**PIOConfig.setPriceTitleHidden**](SPECIFIC_PAGE_METHODS.md#a1-hide-prices-in-product-details-screen-default-value-is-false)
 
 #### B2. Change Product Details screen labels icons and colors.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-product-details-screen)
+- [**Resource**](SDK_REFERENCE.md#-product-details-screen)
 
 ---
 
@@ -75,23 +75,23 @@ Specific Page Methods
 
 #### D1. Set available photo sources.
 
-- [**PIOConfig.setPhotoSources**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-available-photo-sources-the-order-of-photo-sources-on-screen-will-be-the-same-like-order-they-are-placed-in-array)
+- [**PIOConfig.setPhotoSources**](SDK_REFERENCE.md#-set-available-photo-sources-the-order-of-photo-sources-on-screen-will-be-the-same-like-order-they-are-placed-in-array)
 
 #### D2. Set default photo source.
 
-- [**PIOConfig.setDefaultPhotoSource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-default-photo-source)
+- [**PIOConfig.setDefaultPhotoSource**](SDK_REFERENCE.md#-set-default-photo-source)
 
 #### D3. Pass in images URLs or UIImage objects.
 
-- [**PIOConfig.setImageUrls**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-pass-in-images-urls-or-uiimage-objects)
+- [**PIOConfig.setImageUrls**](SDK_REFERENCE.md#-pass-in-images-urls-or-uiimage-objects)
 
 #### D4. Disable photo sources.
 
-- [**PIOConfig.setPhotosourcesDisabled**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-if-user-pass-in-images-usinig-method-images-this-method-can-disable-photo-sources-forcing-user-to-use-only-passed-photos-this-method-overrides-method-availablephotosources)
+- [**PIOConfig.setPhotosourcesDisabled**](SDK_REFERENCE.md#-if-user-pass-in-images-usinig-method-images-this-method-can-disable-photo-sources-forcing-user-to-use-only-passed-photos-this-method-overrides-method-availablephotosources)
 
 #### D5. Change photosources text and background colors. 
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-photosources-text-and-background-colors)
+- [**Resource**](SDK_REFERENCE.md#-change-photosources-text-and-background-colors)
 
 ---
 
@@ -105,35 +105,35 @@ Specific Page Methods
 
 #### E1. Show/hide tab bar in Customize Product screen. Default value is YES.
 
-- [**PIOConfig.setShowOptionsInCustomize**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-showhide-tab-bar-in-customize-product-screen-default-value-is-yes)
+- [**PIOConfig.setShowOptionsInCustomize**](SDK_REFERENCE.md#-showhide-tab-bar-in-customize-product-screen-default-value-is-yes)
 
 #### E2. Hide list with images in customization screen.
 
-- [**PIOConfig.setShowPhotosInCustomize**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-hide-list-with-images-in-customization-screen)
+- [**PIOConfig.setShowPhotosInCustomize**](SDK_REFERENCE.md#-hide-list-with-images-in-customization-screen)
 
 #### E3. Shows button for adding images when photo sources are disabled.
 
-- [**PIOConfig.enablePhotoSourcesInCustomizeProduct**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-shows-button-for-adding-images-when-photo-sources-are-disabled)
+- [**PIOConfig.enablePhotoSourcesInCustomizeProduct**](SDK_REFERENCE.md#-shows-button-for-adding-images-when-photo-sources-are-disabled)
 
 #### E4. Set photo(s) arrangement in Customize Product screen. Default value is false.
 
-- [**PIOConfig.setAutoArrange**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-photos-arrangement-in-customize-product-screen)
+- [**PIOConfig.setAutoArrange**](SDK_REFERENCE.md#-set-photos-arrangement-in-customize-product-screen)
 
 #### E5. Change image for "Add photos" button in Customize Product screen.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-image-for-add-photos-button-in-customize-product-screen)
+- [**Resource**](SDK_REFERENCE.md#-change-image-for-add-photos-button-in-customize-product-screen)
 
 #### E6. Set Pop up balloon in Customize Product screen.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen)
+- [**Resource**](SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen)
 
 #### E7. Set Pop up balloon in Customize Product screen visibility timeout.
 
-- [**PIOConfig.setDoubleTapBalloonVisibilityTime**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen-visibility-timeout)
+- [**PIOConfig.setDoubleTapBalloonVisibilityTime**](SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen-visibility-timeout)
 
 #### E8. Dialog Arrange Photos.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-dialog-arrange-photos)
+- [**Resource**](SDK_REFERENCE.md#-dialog-arrange-photos)
 
 ---
 
@@ -143,7 +143,7 @@ Specific Page Methods
 
 #### F1. Set which buttons will be visible in Image Editor toolbar. By default, all buttons are visible.
 
-- [**PIOConfig.setUpCropScreen**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-which-buttons-will-be-visible-in-image-editor-toolbar-by-default-all-buttons-are-visible)
+- [**PIOConfig.setUpCropScreen**](SDK_REFERENCE.md#-set-which-buttons-will-be-visible-in-image-editor-toolbar-by-default-all-buttons-are-visible)
 
 ---
 
@@ -153,19 +153,19 @@ Specific Page Methods
 
 #### G1. Show "Add more products" button on Shopping Cart screen.
 
-- [**PIOConfig.setShowAddMoreProductsInShoppingCart**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-show-add-more-products-button-on-shopping-cart-screen)
+- [**PIOConfig.setShowAddMoreProductsInShoppingCart**](SDK_REFERENCE.md#-show-add-more-products-button-on-shopping-cart-screen)
 
 #### G2. Hide edit button in shopping cart swipe menu.
 
-- [**PIOConfig.hideEditButtonInShoppingCart**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-hide-edit-button-in-shopping-cart-swipe-menu)
+- [**PIOConfig.hideEditButtonInShoppingCart**](SDK_REFERENCE.md#-hide-edit-button-in-shopping-cart-swipe-menu)
 
 #### G3. Controls if widget should be closed when tap on Back button in "Shopping Cart" screen. Default value is false. 
 
-- [**PIOConfig.closeWidgetFromShoppingCart**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-controls-if-widget-should-be-closed-when-tap-on-back-button-in-shopping-cart-screen)
+- [**PIOConfig.closeWidgetFromShoppingCart**](SDK_REFERENCE.md#-controls-if-widget-should-be-closed-when-tap-on-back-button-in-shopping-cart-screen)
 
 #### G4. Remove all items from shopping cart.
 
-- [**Sample code**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-remove-all-items-from-shopping-cart)
+- [**Sample code**](SDK_REFERENCE.md#-remove-all-items-from-shopping-cart)
 
 ---
 
@@ -175,11 +175,11 @@ Specific Page Methods
 
 #### H1. Clear all saved shipping addresses.
 
-- [**PIO.clearShippingAddresses**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#--clear-all-saved-shipping-addresses)
+- [**PIO.clearShippingAddresses**](SDK_REFERENCE.md#--clear-all-saved-shipping-addresses)
 
 #### H2. Dialog Address Type.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-dialog-address-type)
+- [**Resource**](SDK_REFERENCE.md#-dialog-address-type)
 
 ---
 
@@ -187,13 +187,13 @@ Specific Page Methods
 
 ![enter image description here][12]
 
-#### I1. Remove logo from Payment screen.
+#### I1. Show logo on Payment screen.
 
-- [**PIOConfig.removeLogoFromPaymentScreen**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-remove-logo-from-payment-and-order-confirmation-screen)
+- [**PIOConfig.setVendorLogoOnScreen**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
 
 #### I2. Set Available Payment Options.
 
-- [**PIOConfig.setPaymentOptions**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-available-payment-options)
+- [**PIOConfig.setPaymentOptions**](SDK_REFERENCE.md#-set-available-payment-options)
 
 ---
 
@@ -201,9 +201,9 @@ Specific Page Methods
 
 ![enter image description here][13]
 
-#### J1. Remove logo from Order Completed screen.
+#### J1. Show logo on Order Completed screen.
 
-- [**Coming Soon**](#)
+- [**PIOConfig.setVendorLogoOnScreen**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
 
 ---
 
@@ -217,7 +217,7 @@ Specific Page Methods
 
 #### L1. Set "About" text.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-about-text)
+- [**Resource**](SDK_REFERENCE.md#-set-about-text)
 
 ---
 
@@ -227,7 +227,7 @@ Specific Page Methods
 
 #### M1. Set "How it Works" text.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-how-it-works-text)
+- [**Resource**](SDK_REFERENCE.md#-set-how-it-works-text)
 
 ---
 
@@ -241,43 +241,43 @@ Specific Page Methods
 
 #### N1. Customize Shopping Cart side menu button.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-customize-shopping-cart-side-menu-button)
+- [**Resource**](SDK_REFERENCE.md#-customize-shopping-cart-side-menu-button)
 
 #### N2. Set url for Help in side menu.
 
-- [**PIOConfig.setHelpUrl**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-url-for-help-in-side-menu)
+- [**PIOConfig.setHelpUrl**](SDK_REFERENCE.md#-set-url-for-help-in-side-menu)
 
 #### N3. Enable or disable Side Menu.
 
-- [**PIOConfig.setSideMenuEnabled**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-enable-or-disable-side-menu)
+- [**PIOConfig.setSideMenuEnabled**](SDK_REFERENCE.md#-enable-or-disable-side-menu)
 
 #### N4. Use Side Menu with options.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-use-side-menu-with-options)
+- [**Resource**](SDK_REFERENCE.md#-use-side-menu-with-options)
 
 #### N5. Set which options to use in side menu.
 
-- [**PIOConfig.setSideMenuButtons**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-which-options-to-use-in-side-menu)
+- [**PIOConfig.setSideMenuButtons**](SDK_REFERENCE.md#-set-which-options-to-use-in-side-menu)
 
 #### N6. Set support email address.
 
-- [**PIOConfig.setSupportEmail**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-support-email-address)
+- [**PIOConfig.setSupportEmail**](SDK_REFERENCE.md#-set-support-email-address)
 
 #### N7. Hide Accounts section, use the following method.
 
-- [**PIOConfig.hidePhotoSourcesInSideMenu**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-to-hide-accounts-section-use-the-following-method)
+- [**PIOConfig.hidePhotoSourcesInSideMenu**](SDK_REFERENCE.md#-to-hide-accounts-section-use-the-following-method)
 
 #### N8. Hide SDK Version from Side Menu.
 
-- [**PIOConfig.hideVersionInSideMenu**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#hide-sdk-version-from-side-menu)
+- [**PIOConfig.hideVersionInSideMenu**](SDK_REFERENCE.md#hide-sdk-version-from-side-menu)
 
 #### N9. Slide side menu from right. Default value is NO.
 
-- [**PIOConfig.setRightSideMenu**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-slide-side-menu-from-right-default-value-is-no)
+- [**PIOConfig.setRightSideMenu**](SDK_REFERENCE.md#-slide-side-menu-from-right-default-value-is-no)
 
 #### N10. This is option from Side Menu, in order to use it, Side Menu needs to be enabled first.
 
-- [**PIOConfig.setShareText**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-this-is-option-from-side-menu-in-order-to-use-it-side-menu-needs-to-be-enabled-first)
+- [**PIOConfig.setShareText**](SDK_REFERENCE.md#-this-is-option-from-side-menu-in-order-to-use-it-side-menu-needs-to-be-enabled-first)
 
 ---
 
@@ -300,91 +300,91 @@ Full app Methods
 
 #### A. Set custom icon for Shopping Cart.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-custom-icon-for-shopping-cart)
+- [**Resource**](SDK_REFERENCE.md#-set-custom-icon-for-shopping-cart)
 
 #### B. Jumps directly to product.
 
-- [**PIOConfig.setProductFromApp**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-jumps-directly-to-product)
+- [**PIOConfig.setProductFromApp**](SDK_REFERENCE.md#-jumps-directly-to-product)
 
 #### C. Force a SKU for product.
 
-- [**PIOConfig.setProductSkuFromApp**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#force-a-sku-for-product)
+- [**PIOConfig.setProductSkuFromApp**](SDK_REFERENCE.md#force-a-sku-for-product)
 
 #### D. Register device to receive push notifications.
 
-- [**PIO.initializeParse**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-register-device-to-receive-push-notifications)
+- [**PIO.initializeParse**](SDK_REFERENCE.md#-register-device-to-receive-push-notifications)
 
 #### E. Adjust font sizes.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-adjust-font-sizes)
+- [**Resource**](SDK_REFERENCE.md#-adjust-font-sizes)
 
 #### F. Set custom fonts from main app bundle.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-custom-fonts-from-main-app-bundle)
+- [**Resource**](SDK_REFERENCE.md#-set-custom-fonts-from-main-app-bundle)
 
 #### G. Change "Loading" GIF animation.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-loading-gif-animation)
+- [**Resource**](SDK_REFERENCE.md#-change-loading-gif-animation)
 
 #### H. Change title of loading dialog.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-title-of-loading-dialog)
+- [**Resource**](SDK_REFERENCE.md#-change-title-of-loading-dialog)
 
 #### I. Change icon for Help Button.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-icon-for-help-button)
+- [**Resource**](SDK_REFERENCE.md#-change-icon-for-help-button)
 
 #### J. Change logo in SDK.
 
-- [**PIOConfig.setApplicationIconId**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-logo-in-sdk)
+- [**PIOConfig.setApplicationIconId**](SDK_REFERENCE.md#-change-logo-in-sdk)
 
 #### K. Set payee name. 
 
-- [**PIOConfig.setPartnerName**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-payee-name)
+- [**PIOConfig.setPartnerName**](SDK_REFERENCE.md#-set-payee-name)
 
 #### L. Change buttons' colors.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-buttons-colors)
+- [**Resource**](SDK_REFERENCE.md#-change-buttons-colors)
 
 #### M. Set country code.
 
-- [**PIOConfig.setCountryCode**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-country-code)
+- [**PIOConfig.setCountryCode**](SDK_REFERENCE.md#-set-country-code)
 
 #### N. Set currency code.
 
-- [**PIOConfig.setCurrencyCode**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-currency-code)
+- [**PIOConfig.setCurrencyCode**](SDK_REFERENCE.md#-set-currency-code)
 
 #### O. Get shopping cart items count without starting the SDK.
 
-- [**PIO.getNumberOfItemsInShoppingCart**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-get-shopping-cart-items-count-without-starting-the-sdk)
+- [**PIO.getNumberOfItemsInShoppingCart**](SDK_REFERENCE.md#-get-shopping-cart-items-count-without-starting-the-sdk)
 
 #### P. Status Bar Settings.
 
-- [**PIOConfig.setHideStatusBar**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-status-bar-settings)
+- [**PIOConfig.setHideStatusBar**](SDK_REFERENCE.md#-status-bar-settings)
 
 #### Q. Navigation Bar Settings.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-navigation-bar-settings)
+- [**Resource**](SDK_REFERENCE.md#-navigation-bar-settings)
 
 #### R. Set Icon For Back Button.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-icon-for-back-button)
+- [**Resource**](SDK_REFERENCE.md#-set-icon-for-back-button)
 
 #### S. Set three buttons Back, Menu and Cart button in navigation bar for Products screen.
 
-- [**PIOConfig.useThreeButtonsBarStyle**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-set-three-buttons-back-menu-and-cart-button-in-navigation-bar-for-products-screen)
+- [**PIOConfig.useThreeButtonsBarStyle**](SDK_REFERENCE.md#-set-three-buttons-back-menu-and-cart-button-in-navigation-bar-for-products-screen)
 
 #### T. Pass promo coupon code to SDK.
 
-- [**PIOConfig.setPromoCode**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-pass-promo-coupon-code-to-sdk)
+- [**PIOConfig.setPromoCode**](SDK_REFERENCE.md#-pass-promo-coupon-code-to-sdk)
 
 #### U. Show Country selection bar on screens.
 
-- [**PIOConfig.showCountrySelectionOnScreen**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-show-country-selection-bar-on-screens)
+- [**PIOConfig.showCountrySelectionOnScreen**](SDK_REFERENCE.md#-show-country-selection-bar-on-screens)
 
 #### V. Change background color of Select Country bar.
 
-- [**Resource**](https://github.com/printdotio/printio-android-sdk/blob/master/docs/SDK_REFERENCE.md#-change-background-color-of-select-country-bar)
+- [**Resource**](SDK_REFERENCE.md#-change-background-color-of-select-country-bar)
 
 ---
 
