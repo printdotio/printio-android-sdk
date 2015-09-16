@@ -384,6 +384,9 @@ each field, simply touch the Place Order button.</string>
     <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more items</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
+    <string name="special_offer">Special Offer</string>
+    <string name="for_text">for\u00A0</string>
+    <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

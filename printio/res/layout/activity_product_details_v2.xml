@@ -88,16 +88,101 @@
     <View
         android:id="@+id/separator_1"
         android:layout_width="match_parent"
-        android:layout_height="2dip"
+        android:layout_height="1px"
         android:layout_below="@+id/layout_country_drop_down"
-        android:background="#cbcbce"
-        android:visibility="gone" />
+        android:background="@color/title_bar_separator" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout_price_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator_1"
+        android:background="@color/price_container_background_v2"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:id="@+id/linearlayout_special_offer_banner_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/special_offer_banner_height"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:visibility="gone" >
+
+            <print.io.view.TextViewFontBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/special_offer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:id="@+id/textview_for_word"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip"
+                android:singleLine="true"
+                android:text="@string/for_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:id="@+id/imageview_vendor_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_size_medium"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontNormal
+                android:id="@+id/textview_price_starting_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressbar_price"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_size_medium"
+                android:indeterminate="true"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_retail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_2"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/linearlayout_price_holder"
+        android:background="#cbcbce" />
 
     <print.io.view.CustomScrollView
         android:id="@+id/scroll_view_info"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/separator_1"
+        android:layout_below="@+id/separator_2"
         android:scrollbars="none" >
 
         <LinearLayout
@@ -149,14 +234,22 @@
                 </RelativeLayout>
             </RelativeLayout>
 
-            <!-- Create It container -->
-
-            <include
-                android:id="@+id/container_create_it"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="60dip"
-                layout="@layout/item_product_details_buy_it"
-                android:visibility="visible" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <print.io.view.ButtonFontTitle
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/btn_primary"
+                    android:onClick="onClickCreateIt"
+                    android:text="@string/make_it"
+                    android:textColor="@color/button_primary_text"
+                    android:textSize="@dimen/text_size_button_create_it_v2"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <!-- Layout Items -->
 
@@ -165,8 +258,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="10dip"
-                android:paddingTop="10dip" />
+                android:paddingBottom="10dip" />
 
             <include
                 android:id="@+id/item_details"
@@ -191,14 +283,25 @@
         </LinearLayout>
     </print.io.view.CustomScrollView>
 
-    <!-- Sticky Create It container -->
-
-    <include
-        android:id="@+id/container_create_it_sticky"
+    <LinearLayout
+        android:id="@+id/linearlayout_button_create_it_holder"
         android:layout_width="match_parent"
-        android:layout_height="60dip"
-        android:layout_below="@+id/separator_1"
-        layout="@layout/item_product_details_buy_it"
-        android:visibility="gone" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator_2"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="10dip"
+        android:visibility="gone" >
+
+        <print.io.view.ButtonFontTitle
+            android:layout_width="match_parent"
+            android:layout_height="40dip"
+            android:background="@drawable/btn_primary"
+            android:onClick="onClickCreateIt"
+            android:text="@string/make_it"
+            android:textColor="@color/button_primary_text"
+            android:textSize="@dimen/text_size_button_create_it_v2"
+            android:textStyle="bold" />
+    </LinearLayout>
 
 </RelativeLayout>

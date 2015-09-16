@@ -10,11 +10,13 @@
 
     <dimen name="text_size_small">10dip</dimen>
     <dimen name="text_size_normal">12dip</dimen>
+    <dimen name="text_size_medium">14dip</dimen>
     <dimen name="text_size_large">16dip</dimen>
     <dimen name="text_size_title">18dip</dimen>
     <dimen name="text_size_huge">30dip</dimen>
 
     <dimen name="text_size_button_create_it">12dip</dimen>
+    <dimen name="text_size_button_create_it_v2">16dip</dimen>
 
     <dimen name="text_size_photosources">10dip</dimen>
 
@@ -26,4 +28,6 @@
 
     <dimen name="customize_product_view_margins">8dip</dimen>
 
+    <dimen name="special_offer_banner_height">35dip</dimen>
+    
 </resources>

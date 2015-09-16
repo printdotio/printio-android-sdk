@@ -1,3 +1,18 @@
+Migrating to v3.0.24 from v3.0.13
+========
+**Changes in `PIOConfig` class**
+
+Mechanism for showing vendor logo on screens has been changed. New method for showing logo on screens [`PIOConfig.setVendorLogoOnScreen`](SDK_REFERENCE.md#-show-vendor-logo-on-screens) has been added and previously defined method for removing logo from Payment and Order Completed screens `PIOConfig.removeLogoFromPaymentScreen` has been removed.
+
+If you used `removeLogoFromPaymentScreen(true)` to remove logo from Payment screen in your SDK initialization code, then you should simply remove this method call, as logos are now hidden from all screens by default.
+
+Otherwise, if your SDK was showing overridden logos, you should add the following code to your SDK initialization code:
+```java
+PIOConfig.setVendorLogoOnScreen(Screen.PAYMENT, R.drawable.icon_logo_payment_screen);
+PIOConfig.setVendorLogoOnScreen(Screen.ORDER_COMPLETED, R.drawable.icon_logo);
+```
+
+
 Migrating to v3.0.13 from v3.0.4
 ========
 

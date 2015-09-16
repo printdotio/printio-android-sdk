@@ -1,5 +1,20 @@
 **Android Release Notes**
 
+3.0.24 (v117)
+============
+
+**Features:**
+
+- Updated design of `Product Details V2` screen
+
+- Added a method to remove logo from `Order Completed` screen
+
+**Bugs:**
+
+- /
+
+###
+
 3.0.18 (v117)
 ============
 

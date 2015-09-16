@@ -103,8 +103,6 @@ To change side menu background color, modify the following item in
 ```
 &nbsp;  
 &nbsp;  
-*On iOS this is a part of "Set which options to use in side menu"
-( > Change side menu separators' colors)  
 
 To change side menu separators' colors, modify the following items in  
 `res/values/colors.xml`
@@ -406,6 +404,30 @@ PIOConfig.showCountrySelectionOnScreen(List<Screen> screens)
 ```
 &nbsp;  
 &nbsp;
+#### > Show vendor logo on screens.
+
+```java
+PIOConfig.setVendorLogoOnScreen(Screen screen, Integer resourceId);
+```
+```java
+/**
+ * Sets drawable resource ID to be used as vendor logo for supplied
+ * {@link Screen}. By default, all screens do not have any logo associated
+ * with them. Following screens have support for showing vendor logo:
+ * {@link Screen#PAYMENT}, {@link Screen#ORDER_COMPLETED} and
+ * {@link Screen#PRODUCT_DETAILS} v2.
+ * 
+ * @param screen
+ *            The screen where logo should be shown.
+ * @param resourceId
+ *            The logo drawable resource ID that will be asociated to the
+ *            supplied {@code screen}. If {@code null} value is supplied
+ *            vendor logo will be hidden.
+ */
+public void setVendorLogoOnScreen(Screen screen, Integer resourceId)
+```
+&nbsp;  
+&nbsp;
 #### > Change background color of Select Country bar.
 
 To change the background color of Select Country bar, modify the following item in  
@@ -434,6 +456,13 @@ Sets URL of image resource used on product layouts on product screens.
 This configuration is mandatory when v2 screens are used.
 ```java
 PIOConfig.setScreenProductImageUrl(String url)
+```
+&nbsp;  
+&nbsp;
+#### > Set products with special offer banner
+Sets  products for who special offer banner will be shown.
+```java
+PIOConfig.setProductsWithSpecialOfferBanner(List<ProductType> products)
 ```
 &nbsp;  
 &nbsp;
@@ -659,14 +688,6 @@ Default value is `false`.
 ```java
 PIOConfig.setAutoArrange(boolean autoArrange);
 ```
-**DIFFERENCES BETWEEN iOS and Android:**  
-iOS version of the SDK provides the following choices:
-- PIO_PHOTO_ARRANGEMENT_CHOOSE
-- PIO_PHOTO_ARRANGEMENT_AUTO
-- PIO_PHOTO_ARRANGEMENT_MANUAL
-whereas in Android, this method corresponds to choice between:
-- PIO_PHOTO_ARRANGEMENT_CHOOSE
-- PIO_PHOTO_ARRANGEMENT_AUTO
 &nbsp;  
 &nbsp;  
 
@@ -791,9 +812,7 @@ To change cart quantity text color, modify the following item in
 <color name="text_cart_items_quantity">#FFFFFF</color>
 ```
 
-**DIFFERENCES BETWEEN iOS and Android:**  
-iOS version of the SDK shows the badge even when the cart is empty.  
-On Android version, the badge is only visible when there are items in the cart.
+The badge is only visible when there are items in the cart.
 &nbsp;  
 &nbsp;  
 #### > Customize `Shopping Cart` side menu button  
@@ -881,22 +900,6 @@ PIO.setShoppingCart(context, cart);
 
 Payment Screen
 --------------
-#### > Remove logo from Payment and Order Confirmation screen.  
-( > Remove logo from Payment ~~and Order Confirmation~~ screen)  
-
-Default value is `false` (logo is visible).
-```java
-PIOConfig.removeLogoFromPaymentScreen(boolean removeLogo);
-```
-To change the logo on Payment and Order Confirmation screens,
-replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.  
-Default logo is a 100% transparent image (no logo).
-```
-icon_logo.png (71x80)
-```
-&nbsp;  
-&nbsp;  
 #### > Set Available Payment Options  
 
 To select available payment options, pass a `List` of `PaymentOptionType` to the following method.  
@@ -1035,7 +1038,6 @@ Otherwise, **Sandbox** environment is used.
 &nbsp;  
 &nbsp;  
 #### > Define PayPal receiver email  
-(Does not exist on iOS)  
 
 PayPal Receiver Email is your PayPal business account that will receive the payments from the app.  
 ```java
@@ -1061,7 +1063,6 @@ Other Customization
 &nbsp;
 &nbsp;
 #### > Adjust font sizes  
-(Does not exist on iOS)  
 
 Fonts sizes are organized into five "buckets", plus some sizes for special uses.  
 To change their sizes, modify the respective items in `res/values/dimens.xml`.  
@@ -1196,7 +1197,6 @@ PIOConfig.setTermsAndConditionsUrl(String termsAndConditionsUrl);
 &nbsp;  
 &nbsp;  
 #### > Change buttons' colors  
-(Does not exist on iOS)
 
 To change buttons' colors, modify the following items in  
 `res/values/colors.xml`  
