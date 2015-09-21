@@ -1,5 +1,20 @@
 **Android Release Notes**
 
+3.0.27 (v117)
+============
+
+**Features:**
+
+- /
+
+**Bugs:**
+
+- Removed dependency on FacebookSDK when Facebook is not being used as a Photo Source
+
+- Fixed updating of prices for Shopping Cart items
+
+###
+
 3.0.24 (v117)
 ============
 
