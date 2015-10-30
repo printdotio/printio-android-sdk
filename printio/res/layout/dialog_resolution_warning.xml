@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+        android:padding="8dip" >
+
+        <ImageView
+            android:layout_width="32dip"
+            android:layout_height="32dip"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/icon_resolution_warning_small" />
+
+        <print.io.view.TextViewFontNormal
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dip"
+            android:text="@string/dialog_resolution_warning_title"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/dialog_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="16dip"
+                android:paddingTop="8dip"
+                android:textColor="#5a5d66"
+                android:textSize="@dimen/text_size_normal" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_keep"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginRight="4dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_white_button"
+                android:gravity="center"
+                android:padding="8dip"
+                android:text="@string/keep_photo"
+                android:textColor="#5a5d66"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_abandon"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dip"
+                android:layout_weight="1"
+                android:background="@drawable/bg_red_button"
+                android:gravity="center"
+                android:padding="8dip"
+                android:text="@string/replace"
+                android:textAllCaps="true"
+                android:textColor="@color/button_primary_text"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -2,11 +2,15 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="BaseThemePrintIO" parent="@android:style/Theme.Holo.Light">
+
         <!-- Any customizations for your app running on devices with Theme.Holo here -->
+        <item name="android:windowActionModeOverlay">true</item>
     </style>
 
     <style name="BaseThemePrintIONoStatusBar" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+
         <!-- Any customizations for your app running on devices with Theme.Holo here -->
+        <item name="android:windowActionModeOverlay">true</item>
     </style>
 
     <style name="ThemePrintIODialog" parent="@android:style/Theme.Holo.Light.Dialog">

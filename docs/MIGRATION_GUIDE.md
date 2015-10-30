@@ -1,3 +1,46 @@
+Migrating to v3.X.X from v3.0.24
+========
+**Changes in AndroidManifest.xml**
+
+Following activity declarations should be added:
+```xml
+<activity android:name="print.io.ActivityProductOptions" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivitySelectPhotos" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityCustomizeList" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+<activity android:name="print.io.ActivityOptionBackground" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+```
+
+The following activity declarations should be removed:
+```xml
+<activity android:name="print.io.ActivityProductPreview" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityCustomSteps" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityImageUpload" android:screenOrientation="portrait" />
+<activity android:name="print.io.ActivityStickerBook" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+<activity android:name="print.io.ActivityCaseColorStyle" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" />
+```
+
+The following activity declaration:
+```xml
+<activity android:name="print.io.ActivityCustomizeProduct" android:screenOrientation="portrait" />
+```
+should be replaced by:
+```xml
+<activity android:name="print.io.ActivityCustomizeProduct" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+```
+
+The following activity declaration:
+```xml
+<activity android:name="print.io.ActivityCustomizePhotobook" android:screenOrientation="landscape" />
+```
+should be replaced by:
+```xml
+<activity android:name="print.io.ActivityCustomizePhotobook" android:screenOrientation="landscape" android:windowSoftInputMode="adjustResize" />
+```
+
+**Changes in `PIOConfig` class**
+
+Medhod `PIOConfig.hideEditButtonInShoppingCart()` has been removed as well as the Edit button in the Shopping Cart.
+
 Migrating to v3.0.24 from v3.0.13
 ========
 **Changes in `PIOConfig` class**

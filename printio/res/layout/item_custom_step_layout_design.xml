@@ -14,7 +14,7 @@
         android:textColor="#333333"
         android:textSize="@dimen/text_size_large" />
 
-    <GridView
+    <print.io.view.ExpandableHeightGridView
         android:id="@+id/gridview_step_options"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
