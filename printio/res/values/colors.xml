@@ -59,6 +59,8 @@
 
     <color name="custom_steps_header_background">#42BE9C</color>
 
+    <color name="resolution_warning_background">#7FFFFFFF</color>
+
     <color name="edit_button_abc_primary">#22A0DD</color>
     <color name="edit_button_abc_secondary">#FFFFFF</color>
     <color name="edit_button_effects_primary">#42BE9C</color>
@@ -96,6 +98,9 @@
     <color name="overlay_translucent_light">#55000000</color>
 
     <color name="promo_code_background">#F3F3F3</color>
+    <color name="bg_text_editor_buttons">#AAAAAA</color>
+    <color name="text_editor_font_default">#000000</color>
+    <color name="text_editor_font_selected">#FF0000</color>
     <color name="customize_product_tabbar_background">#FFFFFF</color>
     <color name="bg_edit_text">#EFEFF2</color>
     <color name="edit_text_valid_data">#FFEFEFF2</color>
@@ -116,6 +121,7 @@
 
     <color name="button_back_next_photobooks_text">#000000</color>
     <color name="button_save_to_cart_photobooks_text">#000000</color>
+	<color name="button_cancel_options_text">#000000</color>
 
     <!-- other_colors -->
     <color name="gray">#404040</color>

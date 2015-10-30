@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">printio</string>
-    <string name="share_app_text">I\'m using PrintIO! You can download it from http://www.print.io/our-app</string>
+    <string name="app_name">Makeable</string>
+    <string name="share_app_text">I\'m using PrintIO SDK! You can download it from https://github.com/printdotio/printio-android-sdk</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
     <string name="upgrade_to_force_upgrade">PrintIO has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
     <string name="choose_country">Choose Country</string>
@@ -31,7 +31,7 @@
     <string name="instagram">Instagram</string>
     <string name="facebook">Facebook</string>
     <string name="flickr">Flickr</string>
-    <string name="picasa">Picasa</string>
+    <string name="picasa">Google Photos</string>
     <string name="dropbox">Dropbox</string>
     <string name="photobucket">Photobucket</string>
     <string name="preselected">Preselected</string>
@@ -45,11 +45,13 @@
     <string name="copy_template_unsuccessful">The templates are incompatible, so the images could not be copied</string>
     <string name="edit_photo">Edit Photo</string>
     <string name="replace_photo">Replace Photo</string>
+    <string name="add_text">Add Text</string>
+    <string name="default_text_not_changed">Default text isn\'t changed. Do you want to continue without changing it?</string>
     <string name="product_preview">Product Preview</string>
     <string name="choose_print_type">Choose print type</string>
     <string name="shopping_cart">Shopping Cart</string>
     <string name="add_more_products">Add More Products</string>
-    <string name="subtotal">Subtotal</string>
+    <string name="subtotal">Subtotal:</string>
     <string name="promo_code">Promo Code</string>
     <string name="shipping_method">Shipping Method</string>
     <string name="first_name">First Name</string>
@@ -58,7 +60,9 @@
     <string name="zip_code">Zip Code</string>
     <string name="city">City</string>
     <string name="telephone_number">Phone Number</string>
-    <string name="checkout">Check Out</string>
+    <string name="remove_item">Remove Item</string>
+    <string name="done">Done</string>
+    <string name="checkout">Checkout</string>
     <string name="billing_country">Billing Country</string>
     <string name="card_information">Card Information</string>
     <string name="card_number">Card Number</string>
@@ -105,6 +109,7 @@
     <string name="cancel">Cancel</string>
     <string name="verifying_payment">Verifying payment&#8230;</string>
     <string name="state_region_province">State/Region/Province</string>
+    <string name="product">Product</string>
     <string name="products">Products</string>
     <string name="help">Help</string>
     <string name="options">Options</string>
@@ -124,6 +129,7 @@
     <string name="step_choose_size"><![CDATA[<b>Step %1$s:</b> Choose Size]]></string>
     <string name="step_choose_size_and_set"><![CDATA[<b>Step %1$s:</b> Choose Size and Set]]></string>
     <string name="step_choose_size_and_thickness"><![CDATA[<b>Step %1$s:</b> Choose Size and Thickness]]></string>
+    <string name="step_choose_size_and_shape"><![CDATA[<b>Step %1$s:</b> Choose Size and Shape]]></string>
     <string name="step_choose_type_and_size"><![CDATA[<b>Step %1$s:</b> Choose Type and Size]]></string>
     <string name="step_choose_color"><![CDATA[<b>Step %1$s:</b> Choose Color]]></string>
     <string name="step_choose_material"><![CDATA[<b>Step %1$s:</b> Choose Material]]></string>
@@ -135,7 +141,10 @@
     <string name="step_choose_phone_type"><![CDATA[<b>Step %1$s:</b> Choose Phone Type]]></string>
     <string name="step_choose_tablet_type"><![CDATA[<b>Step %1$s:</b> Choose Tablet Type]]></string>
     <string name="step_choose_print_type"><![CDATA[<b>Step %1$s:</b> Choose Print Type]]></string>
+    <string name="step_choose_mat_size"><![CDATA[<b>Step %1$s:</b> Choose Mat Size]]></string>
     <string name="step_choose_frame_color"><![CDATA[<b>Step %1$s:</b> Choose Frame Color]]></string>
+    <string name="step_choose_frame_type"><![CDATA[<b>Step %1$s:</b> Choose Frame Type]]></string>
+    <string name="step_choose_frame_thickness"><![CDATA[<b>Step %1$s:</b> Choose Frame Thickness]]></string>
     <string name="step_choose_front_side_template"><![CDATA[<b>Step %1$s:</b> Choose Front Side Template]]></string>
     <string name="step_choose_back_side_template"><![CDATA[<b>Step %1$s:</b> Choose Back Side Template]]></string>
     <string name="step_choose_pillow_type_and_size"><![CDATA[<b>Step %1$s:</b> Choose Pillow Type and Size]]></string>
@@ -143,13 +152,26 @@
     <string name="step_choose_background_border"><![CDATA[<b>Step %1$s:</b> Choose Background/Border Color]]></string>
     <string name="step_choose_case_background_color"><![CDATA[<b>Step %1$s:</b> Choose Case Background Color]]></string>
     <string name="step_choose_case_style"><![CDATA[<b>Step %1$s:</b> Choose Case Style]]></string>
+    <string name="step_choose_case_hardness"><![CDATA[<b>Step %1$s:</b> Choose Case Hardness]]></string>
+    <string name="step_choose_case_color"><![CDATA[<b>Step %1$s:</b> Choose Case Color]]></string>
     <string name="step_choose_surface"><![CDATA[<b>Step %1$s:</b> Choose Surface]]></string>
     <string name="step_choose_backing"><![CDATA[<b>Step %1$s:</b> Choose Backing]]></string>
+    <string name="step_choose_print_size"><![CDATA[<b>Step %1$s:</b> Choose Print Size]]></string>
     <string name="step_choose_pillow_fabric"><![CDATA[<b>Step %1$s:</b> Choose Pillow Fabric]]></string>
     <string name="step_choose_paper_finish"><![CDATA[<b>Step %1$s:</b> Choose Paper Finish]]></string>
+    <string name="step_choose_paper_type"><![CDATA[<b>Step %1$s:</b> Choose Paper Type]]></string>
     <string name="step_choose_page_count"><![CDATA[<b>Step %1$s:</b> Choose Page Count]]></string>
     <string name="step_choose_hand_preference"><![CDATA[<b>Step %1$s:</b> Choose Hand Preference]]></string>
+    <string name="step_choose_single_double_sided"><![CDATA[<b>Step %1$s:</b> Choose Single/Double Sided]]></string>
+    <string name="step_choose_pack_size"><![CDATA[<b>Step %1$s:</b> Choose Pack Size]]></string>
     <string name="step_choose_image"><![CDATA[<b>Step %1$s:</b> Choose Image]]></string>
+    <string name="step_choose_gender"><![CDATA[<b>Step %1$s:</b> Choose Gender]]></string>
+    <string name="step_choose_print"><![CDATA[<b>Step %1$s:</b> Choose Print]]></string>
+    <string name="step_choose_model"><![CDATA[<b>Step %1$s:</b> Choose Model]]></string>
+    <string name="step_choose_brand"><![CDATA[<b>Step %1$s:</b> Choose Brand]]></string>
+    <string name="step_choose_underbase"><![CDATA[<b>Step %1$s:</b> Choose Underbase]]></string>
+    <string name="step_choose_print_sides"><![CDATA[<b>Step %1$s:</b> Choose Print Sides]]></string>
+    <string name="step_choose_thickness"><![CDATA[<b>Step %1$s:</b> Choose Thickness]]></string>
     <string name="choose_options">Choose Options</string>
     <string name="select_photos">Select Photos</string>
     <string name="no_printable_media">No printable media</string>
@@ -164,6 +186,7 @@
     <string name="save_to_cart">Save To Cart</string>
     <string name="frame">Frame</string>
     <string name="print">Print</string>
+    <string name="thickness">Thickness</string>
     <string name="watch_video">Watch Video</string>
     <string name="choose_currency">Choose currency</string>
     <string name="add_address">Add Shipping Address</string>
@@ -234,10 +257,11 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="progress_text_pt1">Loading.. Please wait.</string>
     <string name="progress_text_pt2">Think Happy Thoughts</string>
     <string name="are_you_sure">Are you sure?</string>
+    <string name="product_does_not_support_text">Text cannot be added to this product.</string>
     <string name="add_text_coming_soon">Add text feature is coming soon</string>
     <string name="effects_coming_soon">Effects are coming soon</string>
     <string name="effects">Effects</string>
-    <string name="please_try_again">print.io is currently upgrading our products. Please try again in a few minutes.</string>
+    <string name="please_try_again">Makeable is currently upgrading our products. Please try again in a few minutes.</string>
     <string name="almost_done">Almost Done!</string>
     <string name="select_address">Select Address</string>
     <string name="select_email">Select Email</string>
@@ -324,9 +348,9 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="you_have_ordered_the_following_products">You have ordered the following products:</string>
     <string name="overall">Overall:</string>
     <string name="continue_shopping">Continue Shopping</string>
-    <string name="about_title">About print.io</string>
+    <string name="about_title">About Makeable</string>
     <string name="about_subtitle">About:</string>
-    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
+    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@makeable.com for support and friends</string>
     <string name="how_it_works_title">How It Works</string>
     <string name="how_it_works_subtitle">How It Works:</string>
     <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
@@ -343,7 +367,7 @@ to the Payment Page.</string>
 enter your credit card information by taking a picture of the front of your card 
 OR enter manually with your keypad. Once you have entered information into 
 each field, simply touch the Place Order button.</string>
-    <string name="pop_up_order_completed">print.io thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nSupport@print.io for support and friends</string>
+    <string name="pop_up_order_completed">Makeable thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nsupport@makeable.com for support and friends</string>
     <string name="solid_background">Solid Background</string>
     <string name="product_categories">Categories</string>
     <string name="apply">Apply</string>
@@ -352,7 +376,7 @@ each field, simply touch the Place Order button.</string>
     <string name="beach_bag_customize_info_text">(Front design is replicated on back)</string>
     <string name="drop_box_notification">%1$s allows you to store very large photos. Some large photos will cause an error in the app if you do not have a strong 4g or Wifi connection.</string>
     <string name="change_country_notification">Changing country will potentially change the price of items in shopping cart.</string>
-    <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you can not validate, please contact our support.</string>
+    <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you cannot validate, please contact our support.</string>
     <string name="try_again">Try again</string>
     <string name="ok">OK</string>
     <string name="shipping_price_error">We are sorry, but there are currently no shipping options for %1$s in your location.</string>
@@ -373,21 +397,40 @@ each field, simply touch the Place Order button.</string>
     <string name="error_fetching_api_data">Sorry, we have a problem getting data. Please try again later or contact support.</string>
     <string name="same_look_for_back_side_pillow">Use the same look for back side of pillow?</string>
     <string name="same_look_for_back_side_bag">Use the same look for back side of bag?</string>
+    <string name="same_look_for_back_side">Use the same look for back side?</string>
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
-    <string name="single_layout_information">Layout for this product can not be changed.</string>
+    <string name="single_layout_information">Layout for this product cannot be changed.</string>
     <string name="keep">Keep</string>
     <string name="upgrade">Upgrade</string>
     <string name="dialog_upgrade_shipping_message">Do you want to keep your free shipping coupon or upgrade shipping?</string>
     <string name="dialog_zero_dollar_payment">Zero dollar orders could not be executed via PayPal.\nPlease, use credit card instead.</string>
     <string name="please_select_at_least_one_image">Please select at least one image</string>
     <string name="add_address_page_title">Checkout</string>
-    <string name="products_hint_overlay_text">Swipe to see more items</string>
+    <string name="products_hint_overlay_text">Swipe to see more pictures</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
-    <string name="special_offer">Special Offer</string>
-    <string name="for_text">for\u00A0</string>
+    <string name="for_text">For\u00A0</string>
     <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
-
+    <string name="dialog_resolution_warning_title">This photo is too small</string>
+    <string name="dialog_resolution_warning_message">This photo may distort when printing, aim for at least %1$spx wide and %2$spx tall.</string>
+    <string name="keep_photo">Keep photo</string>
+    <string name="keep_shopping">Keep Shopping</string>
+    <string name="whats_new">What\'s New</string>
+    <string name="whats_new_dialog_text"></string>
+    <string name="check_order_status_hint">To check the status of your order, please enter your order ID below.</string>
+    <string name="order_id">Order ID</string>
+    <string name="view_order_status">View Order Status</string>
+    <string name="order_id_cannot_be_empty">Order ID cannot be empty</string>
+    <string name="no_orders_with_entered_order_id">There are no orders with entered order ID</string>
+    <string name="date">Date</string>
+    <string name="id">ID</string>
+    <string name="cost">Cost</string>
+    <string name="no_past_orders">No past orders.</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_details">Order Details</string>
+    <string name="total_cost">Total Cost</string>
+	<string name="status">Status:</string>
+	
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>
     <string name="help_product_phone_case_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Phone case.\n\n1) Select a case color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your case color! To change the color, simply repeat this step again.\n\n3) Do you prefer Matte Finish or Gloss Finish for your case &amp; images? Glossy finish reflects light and gives it a shiny look. Matte finish has no shine. Make your selections then we automatically take you to the next step!</string>

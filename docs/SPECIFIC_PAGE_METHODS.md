@@ -17,7 +17,7 @@ Specific Page Methods
 
 ---
 
-- [**Full app Methods**](SPECIFIC_PAGE_METHODS.md#full-app-methods)
+- [**Global Methods**](SPECIFIC_PAGE_METHODS.md#global-methods)
 
 ---
 
@@ -31,19 +31,19 @@ Specific Page Methods
 
 #### A1. Set list of available products in the SDK. 
 
-- [**PIOConfig.setAvailableProducts**](SDK_REFERENCE.md#-set-list-of-available-products-in-the-sdk)
+- [**PIOConfig.setAvailableProducts()**](SDK_REFERENCE.md#-set-list-of-available-products-in-the-sdk)
 
 #### A2. Hide category/search view on Featured Products screen. Default value is NO.
 
-- [**PIOConfig.setHideCategorySearchBar**](SDK_REFERENCE.md#-hide-categorysearch-view-on-featured-products-screen-default-value-is-no)
+- [**PIOConfig.setHideCategorySearchBar()**](SDK_REFERENCE.md#-hide-categorysearch-view-on-featured-products-screen-default-value-is-no)
 
 #### A3. Shows featured products by default. If disabled all products screen is shown. Default value is YES.
 
-- [**PIOConfig.setShowFeaturedProductsByDefault**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
+- [**PIOConfig.setShowFeaturedProductsByDefault()**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
 
 #### A4. Hide Coming Soon products. Default value is false.
 
-- [**PIOConfig.setHideComingSoonProducts**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
+- [**PIOConfig.setHideComingSoonProducts()**](SDK_REFERENCE.md#-shows-featured-products-by-default-if-disabled-all-products-screen-is-shown-default-value-is-yes)
 
 ---
 
@@ -55,7 +55,7 @@ Specific Page Methods
 
 #### B1. Hide prices in Product Details screen. Default value is false.
 
-- [**PIOConfig.setPriceTitleHidden**](SPECIFIC_PAGE_METHODS.md#a1-hide-prices-in-product-details-screen-default-value-is-false)
+- [**PIOConfig.setPriceTitleHidden()**](SPECIFIC_PAGE_METHODS.md#a1-hide-prices-in-product-details-screen-default-value-is-false)
 
 #### B2. Change Product Details screen labels icons and colors.
 
@@ -75,19 +75,19 @@ Specific Page Methods
 
 #### D1. Set available photo sources.
 
-- [**PIOConfig.setPhotoSources**](SDK_REFERENCE.md#-set-available-photo-sources-the-order-of-photo-sources-on-screen-will-be-the-same-like-order-they-are-placed-in-array)
+- [**PIOConfig.setPhotoSources()**](SDK_REFERENCE.md#-set-available-photo-sources-the-order-of-photo-sources-on-screen-will-be-the-same-like-order-they-are-placed-in-array)
 
 #### D2. Set default photo source.
 
-- [**PIOConfig.setDefaultPhotoSource**](SDK_REFERENCE.md#-set-default-photo-source)
+- [**PIOConfig.setDefaultPhotoSource()**](SDK_REFERENCE.md#-set-default-photo-source)
 
 #### D3. Pass in images URLs or UIImage objects.
 
-- [**PIOConfig.setImageUrls**](SDK_REFERENCE.md#-pass-in-images-urls-or-uiimage-objects)
+- [**PIOConfig.setImageUrls()**](SDK_REFERENCE.md#-pass-in-images-urls-or-uiimage-objects)
 
 #### D4. Disable photo sources.
 
-- [**PIOConfig.setPhotosourcesDisabled**](SDK_REFERENCE.md#-if-user-pass-in-images-usinig-method-images-this-method-can-disable-photo-sources-forcing-user-to-use-only-passed-photos-this-method-overrides-method-availablephotosources)
+- [**PIOConfig.setPhotosourcesDisabled()**](SDK_REFERENCE.md#-if-user-pass-in-images-usinig-method-images-this-method-can-disable-photo-sources-forcing-user-to-use-only-passed-photos-this-method-overrides-method-availablephotosources)
 
 #### D5. Change photosources text and background colors. 
 
@@ -105,19 +105,19 @@ Specific Page Methods
 
 #### E1. Show/hide tab bar in Customize Product screen. Default value is YES.
 
-- [**PIOConfig.setShowOptionsInCustomize**](SDK_REFERENCE.md#-showhide-tab-bar-in-customize-product-screen-default-value-is-yes)
+- [**PIOConfig.setShowOptionsInCustomize()**](SDK_REFERENCE.md#-showhide-tab-bar-in-customize-product-screen-default-value-is-yes)
 
 #### E2. Hide list with images in customization screen.
 
-- [**PIOConfig.setShowPhotosInCustomize**](SDK_REFERENCE.md#-hide-list-with-images-in-customization-screen)
+- [**PIOConfig.setShowPhotosInCustomize()**](SDK_REFERENCE.md#-hide-list-with-images-in-customization-screen)
 
 #### E3. Shows button for adding images when photo sources are disabled.
 
-- [**PIOConfig.enablePhotoSourcesInCustomizeProduct**](SDK_REFERENCE.md#-shows-button-for-adding-images-when-photo-sources-are-disabled)
+- [**PIOConfig.enablePhotoSourcesInCustomizeProduct()**](SDK_REFERENCE.md#-shows-button-for-adding-images-when-photo-sources-are-disabled)
 
 #### E4. Set photo(s) arrangement in Customize Product screen. Default value is false.
 
-- [**PIOConfig.setAutoArrange**](SDK_REFERENCE.md#-set-photos-arrangement-in-customize-product-screen)
+- [**PIOConfig.setAutoArrange()**](SDK_REFERENCE.md#-set-photos-arrangement-in-customize-product-screen)
 
 #### E5. Change image for "Add photos" button in Customize Product screen.
 
@@ -129,7 +129,7 @@ Specific Page Methods
 
 #### E7. Set Pop up balloon in Customize Product screen visibility timeout.
 
-- [**PIOConfig.setDoubleTapBalloonVisibilityTime**](SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen-visibility-timeout)
+- [**PIOConfig.setDoubleTapBalloonVisibilityTime()**](SDK_REFERENCE.md#-set-pop-up-balloon-in-customize-product-screen-visibility-timeout)
 
 #### E8. Dialog Arrange Photos.
 
@@ -143,7 +143,7 @@ Specific Page Methods
 
 #### F1. Set which buttons will be visible in Image Editor toolbar. By default, all buttons are visible.
 
-- [**PIOConfig.setUpCropScreen**](SDK_REFERENCE.md#-set-which-buttons-will-be-visible-in-image-editor-toolbar-by-default-all-buttons-are-visible)
+- [**PIOConfig.setUpCropScreen()**](SDK_REFERENCE.md#-set-which-buttons-will-be-visible-in-image-editor-toolbar-by-default-all-buttons-are-visible)
 
 ---
 
@@ -153,15 +153,15 @@ Specific Page Methods
 
 #### G1. Show "Add more products" button on Shopping Cart screen.
 
-- [**PIOConfig.setShowAddMoreProductsInShoppingCart**](SDK_REFERENCE.md#-show-add-more-products-button-on-shopping-cart-screen)
+- [**PIOConfig.setShowAddMoreProductsInShoppingCart()**](SDK_REFERENCE.md#-show-add-more-products-button-on-shopping-cart-screen)
 
 #### G2. Hide edit button in shopping cart swipe menu.
 
-- [**PIOConfig.hideEditButtonInShoppingCart**](SDK_REFERENCE.md#-hide-edit-button-in-shopping-cart-swipe-menu)
+- This button and the corresponding method were removed.
 
 #### G3. Controls if widget should be closed when tap on Back button in "Shopping Cart" screen. Default value is false. 
 
-- [**PIOConfig.closeWidgetFromShoppingCart**](SDK_REFERENCE.md#-controls-if-widget-should-be-closed-when-tap-on-back-button-in-shopping-cart-screen)
+- [**PIOConfig.closeWidgetFromShoppingCart()**](SDK_REFERENCE.md#-controls-if-widget-should-be-closed-when-tap-on-back-button-in-shopping-cart-screen)
 
 #### G4. Remove all items from shopping cart.
 
@@ -175,7 +175,7 @@ Specific Page Methods
 
 #### H1. Clear all saved shipping addresses.
 
-- [**PIO.clearShippingAddresses**](SDK_REFERENCE.md#--clear-all-saved-shipping-addresses)
+- [**PIO.clearShippingAddresses()**](SDK_REFERENCE.md#--clear-all-saved-shipping-addresses)
 
 #### H2. Dialog Address Type.
 
@@ -189,11 +189,11 @@ Specific Page Methods
 
 #### I1. Show logo on Payment screen.
 
-- [**PIOConfig.setVendorLogoOnScreen**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
+- [**PIOConfig.setVendorLogoOnScreen()**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
 
 #### I2. Set Available Payment Options.
 
-- [**PIOConfig.setPaymentOptions**](SDK_REFERENCE.md#-set-available-payment-options)
+- [**PIOConfig.setPaymentOptions()**](SDK_REFERENCE.md#-set-available-payment-options)
 
 ---
 
@@ -203,7 +203,7 @@ Specific Page Methods
 
 #### J1. Show logo on Order Completed screen.
 
-- [**PIOConfig.setVendorLogoOnScreen**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
+- [**PIOConfig.setVendorLogoOnScreen()**](SDK_REFERENCE.md#-show-vendor-logo-on-screens)
 
 ---
 
@@ -245,11 +245,11 @@ Specific Page Methods
 
 #### N2. Set url for Help in side menu.
 
-- [**PIOConfig.setHelpUrl**](SDK_REFERENCE.md#-set-url-for-help-in-side-menu)
+- [**PIOConfig.setHelpUrl()**](SDK_REFERENCE.md#-set-url-for-help-in-side-menu)
 
 #### N3. Enable or disable Side Menu.
 
-- [**PIOConfig.setSideMenuEnabled**](SDK_REFERENCE.md#-enable-or-disable-side-menu)
+- [**PIOConfig.setSideMenuEnabled()**](SDK_REFERENCE.md#-enable-or-disable-side-menu)
 
 #### N4. Use Side Menu with options.
 
@@ -257,31 +257,31 @@ Specific Page Methods
 
 #### N5. Set which options to use in side menu.
 
-- [**PIOConfig.setSideMenuButtons**](SDK_REFERENCE.md#-set-which-options-to-use-in-side-menu)
+- [**PIOConfig.setSideMenuButtons()**](SDK_REFERENCE.md#-set-which-options-to-use-in-side-menu)
 
 #### N6. Set support email address.
 
-- [**PIOConfig.setSupportEmail**](SDK_REFERENCE.md#-set-support-email-address)
+- [**PIOConfig.setSupportEmail()**](SDK_REFERENCE.md#-set-support-email-address)
 
 #### N7. Hide Accounts section, use the following method.
 
-- [**PIOConfig.hidePhotoSourcesInSideMenu**](SDK_REFERENCE.md#-to-hide-accounts-section-use-the-following-method)
+- [**PIOConfig.hidePhotoSourcesInSideMenu()**](SDK_REFERENCE.md#-to-hide-accounts-section-use-the-following-method)
 
 #### N8. Hide SDK Version from Side Menu.
 
-- [**PIOConfig.hideVersionInSideMenu**](SDK_REFERENCE.md#hide-sdk-version-from-side-menu)
+- [**PIOConfig.hideVersionInSideMenu()**](SDK_REFERENCE.md#hide-sdk-version-from-side-menu)
 
 #### N9. Slide side menu from right. Default value is NO.
 
-- [**PIOConfig.setRightSideMenu**](SDK_REFERENCE.md#-slide-side-menu-from-right-default-value-is-no)
+- [**PIOConfig.setRightSideMenu()**](SDK_REFERENCE.md#-slide-side-menu-from-right-default-value-is-no)
 
 #### N10. This is option from Side Menu, in order to use it, Side Menu needs to be enabled first.
 
-- [**PIOConfig.setShareText**](SDK_REFERENCE.md#-this-is-option-from-side-menu-in-order-to-use-it-side-menu-needs-to-be-enabled-first)
+- [**PIOConfig.setShareText()**](SDK_REFERENCE.md#-this-is-option-from-side-menu-in-order-to-use-it-side-menu-needs-to-be-enabled-first)
 
 ---
 
-Full app Methods
+Global Methods
 ===
 
 ![enter image description here][18]
@@ -289,6 +289,8 @@ Full app Methods
 ![enter image description here][19]
 ---
 ![enter image description here][20]
+---
+![enter image description here][21]
 ---
 ![enter image description here][26]
 ---
@@ -304,15 +306,15 @@ Full app Methods
 
 #### B. Jumps directly to product.
 
-- [**PIOConfig.setProductFromApp**](SDK_REFERENCE.md#-jumps-directly-to-product)
+- [**PIOConfig.setProductFromApp()**](SDK_REFERENCE.md#-jumps-directly-to-product)
 
 #### C. Force a SKU for product.
 
-- [**PIOConfig.setProductSkuFromApp**](SDK_REFERENCE.md#force-a-sku-for-product)
+- [**PIOConfig.setProductSkuFromApp()**](SDK_REFERENCE.md#force-a-sku-for-product)
 
 #### D. Register device to receive push notifications.
 
-- [**PIO.initializeParse**](SDK_REFERENCE.md#-register-device-to-receive-push-notifications)
+- [**PIO.initializeParse()**](SDK_REFERENCE.md#-register-device-to-receive-push-notifications)
 
 #### E. Adjust font sizes.
 
@@ -320,7 +322,7 @@ Full app Methods
 
 #### F. Set custom fonts from main app bundle.
 
-- [**Resource**](SDK_REFERENCE.md#-set-custom-fonts-from-main-app-bundle)
+- [**PIOConfig.setFontPathInAssets()**](SDK_REFERENCE.md#-set-custom-fonts-from-main-app-bundle)
 
 #### G. Change "Loading" GIF animation.
 
@@ -336,11 +338,11 @@ Full app Methods
 
 #### J. Change logo in SDK.
 
-- [**PIOConfig.setApplicationIconId**](SDK_REFERENCE.md#-change-logo-in-sdk)
+- [**PIOConfig.setApplicationIconId()**](SDK_REFERENCE.md#-change-logo-in-sdk)
 
 #### K. Set payee name. 
 
-- [**PIOConfig.setPartnerName**](SDK_REFERENCE.md#-set-payee-name)
+- [**PIOConfig.setPartnerName()**](SDK_REFERENCE.md#-set-payee-name)
 
 #### L. Change buttons' colors.
 
@@ -348,19 +350,19 @@ Full app Methods
 
 #### M. Set country code.
 
-- [**PIOConfig.setCountryCode**](SDK_REFERENCE.md#-set-country-code)
+- [**PIOConfig.setCountryCode()**](SDK_REFERENCE.md#-set-country-code)
 
 #### N. Set currency code.
 
-- [**PIOConfig.setCurrencyCode**](SDK_REFERENCE.md#-set-currency-code)
+- [**PIOConfig.setCurrencyCode()**](SDK_REFERENCE.md#-set-currency-code)
 
 #### O. Get shopping cart items count without starting the SDK.
 
-- [**PIO.getNumberOfItemsInShoppingCart**](SDK_REFERENCE.md#-get-shopping-cart-items-count-without-starting-the-sdk)
+- [**PIO.getNumberOfItemsInShoppingCart()**](SDK_REFERENCE.md#-get-shopping-cart-items-count-without-starting-the-sdk)
 
-#### P. Status Bar Settings.
+#### P. Status Bar visibility.
 
-- [**PIOConfig.setHideStatusBar**](SDK_REFERENCE.md#-status-bar-settings)
+- [**PIOConfig.setHideStatusBar()**](SDK_REFERENCE.md#-set-status-bar-visibility)
 
 #### Q. Navigation Bar Settings.
 
@@ -372,15 +374,15 @@ Full app Methods
 
 #### S. Set three buttons Back, Menu and Cart button in navigation bar for Products screen.
 
-- [**PIOConfig.useThreeButtonsBarStyle**](SDK_REFERENCE.md#-set-three-buttons-back-menu-and-cart-button-in-navigation-bar-for-products-screen)
+- [**PIOConfig.useThreeButtonsBarStyle()**](SDK_REFERENCE.md#-set-three-buttons-back-menu-and-cart-button-in-navigation-bar-for-products-screen)
 
 #### T. Pass promo coupon code to SDK.
 
-- [**PIOConfig.setPromoCode**](SDK_REFERENCE.md#-pass-promo-coupon-code-to-sdk)
+- [**PIOConfig.setPromoCode()**](SDK_REFERENCE.md#-pass-promo-coupon-code-to-sdk)
 
 #### U. Show Country selection bar on screens.
 
-- [**PIOConfig.showCountrySelectionOnScreen**](SDK_REFERENCE.md#-show-country-selection-bar-on-screens)
+- [**PIOConfig.showCountrySelectionOnScreen()**](SDK_REFERENCE.md#-show-country-selection-bar-on-screens)
 
 #### V. Change background color of Select Country bar.
 
@@ -403,7 +405,6 @@ Full app Methods
 [12]: https://www.dropbox.com/s/d41mjiupn4eq3rj/Payment%20I01%2C%20I02.PNG?dl=1
 [13]: https://www.dropbox.com/s/7e7pu5ghva6qgbb/Order%20Completed%20E01.PNG?dl=1
 [14]: https://www.dropbox.com/s/po9atvydg2ao778/How%20it%20works%20M1.png?dl=1
-[15]: https://www.dropbox.com/s/x4pqdf942v21plg/About%20L1.png?dl=1
 [16]: https://www.dropbox.com/s/rlsgq9v37h60zuh/Side%20Menu%20N1%2C%20N2.png?dl=1
 [17]: https://www.dropbox.com/s/x4pqdf942v21plg/About%20L1.png?dl=1
 [18]: https://www.dropbox.com/s/vo7ajbh245gaat3/Full%20App%20A%2C%20E%2C%20F.png?dl=1

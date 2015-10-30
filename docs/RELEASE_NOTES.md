@@ -1,5 +1,62 @@
 **Android Release Notes**
 
+3.1.0 (v118)
+============
+
+**Features:**
+
+- Add text to product design
+
+- New Product: Layflat Photobooks
+
+- New Product: Flat Cards
+
+- New Product: Mementos
+
+- New Product: Adjustable Strap Tote
+
+- New Product: Bandana
+
+- New Product: Dopp Kits
+
+- New Product: Fabric By The Yard
+
+- New Product: Framed Canvas
+
+- New Product: Hand Towels
+
+- Warning when selected photos are too small to be printed on selected product
+
+- New Shopping Cart layout
+
+- New Screen: `Past Orders`
+
+- New Screen: `Order Details`
+
+- New Screen: `Order Status`
+
+- `What's New` Dialog added
+
+- Merged all product options into single page
+
+- Added method for showing 'Cancel' button on Options Screen (`PIOConfig.setCancelOptionsButtonVisibility(boolean isVisible)`)
+
+- Added method for setting Retail Price discount percent (`Product Details` screen)
+
+- Added method to enable Template filtering based on passed photos count (`PIOConfig.setLayoutStepStrategy(LayoutStepStrategy strategy)`)
+
+**Bugs:**
+
+- Fixed a crash caused by Facebook ID not being set in PIOConfig
+
+- Fixed overlapping Gear icon and Back button on `Order Completed` screen
+
+- Fixed an issue which caused a crash on some devices when too many photos are selected
+
+- Autoresize subtotal text in `Shopping Cart` screen
+
+###
+
 3.0.27 (v117)
 ============
 

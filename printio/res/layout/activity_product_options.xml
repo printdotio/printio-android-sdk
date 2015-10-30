@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/title_bar_background" >
+
+        <LinearLayout
+            android:id="@+id/layout_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:onClick="onClickBack"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <ImageView
+                android:id="@+id/imageview_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_arrow_back" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/layout_back_button"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontTitle
+            android:id="@+id/textview_customize_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/choose_options"
+            android:textColor="@color/title_bar_text"
+            android:textSize="@dimen/text_size_title" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_ver_divider"
+            android:visibility="invisible" />
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/textview_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_selector_border_black_light"
+            android:clickable="true"
+            android:onClick="onClickCancel"
+            android:paddingBottom="6dip"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="6dip"
+            android:text="@string/cancel"
+            android:textColor="@color/button_cancel_options_text"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_dummy_title_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/layout_titlebar"
+        android:background="@color/title_bar_separator" />
+
+    <!-- Country drop down menu -->
+
+    <LinearLayout
+        android:id="@+id/layout_country_drop_down"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:background="@color/select_country_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClickChangeCountry"
+        android:visibility="gone" >
+
+        <print.io.view.TextViewFontTitle
+            android:id="@+id/textview_country_drop_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator_1"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@+id/layout_country_drop_down"
+        android:background="#cbcbce"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollview_steps_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/separator_1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/linerlayout_steps_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</RelativeLayout>

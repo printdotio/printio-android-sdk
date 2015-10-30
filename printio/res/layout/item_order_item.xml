@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <print.io.view.TextViewFontBold
+            android:id="@+id/textview_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:text="@string/status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#42BE9C"
+                android:paddingBottom="2dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="2dip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="15dip"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_normal" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_order_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="90dip"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_normal" />
+
+</TableRow>

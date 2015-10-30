@@ -23,6 +23,18 @@
             android:background="@color/overlay_translucent"
             android:visibility="invisible" />
 
+        <ImageView
+            android:id="@+id/imageview_resolution_warning"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:layout_alignBottom="@+id/imageview_image"
+            android:layout_alignLeft="@+id/imageview_image"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="4dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon_photo_source_resolution_warning"
+            android:visibility="invisible" />
+
         <print.io.view.TextViewFontNormal
             android:id="@+id/textview_image_index"
             android:layout_width="wrap_content"

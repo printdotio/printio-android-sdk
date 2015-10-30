@@ -117,7 +117,9 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="horizontal" >
+                android:orientation="horizontal"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip" >
 
                 <print.io.view.TextViewFontNormal
                     android:layout_width="wrap_content"
@@ -131,7 +133,8 @@
                     android:id="@+id/textview_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="14dp"
+                    android:paddingLeft="4dip"
+                    android:paddingTop="2dip"
                     android:singleLine="true"
                     android:textColor="#323232"
                     android:textSize="@dimen/text_size_normal" />
@@ -211,20 +214,54 @@
             </LinearLayout>
         </LinearLayout>
 
-        <print.io.view.ButtonFontLight
-            android:id="@+id/button_checkout"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="48dip"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/layout_coupon"
-            android:background="@drawable/btn_primary"
-            android:drawableRight="@drawable/icon_arrow_next_white"
-            android:gravity="center"
-            android:onClick="onClickCheckout"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:text="@string/checkout"
-            android:textColor="@color/button_primary_text"
-            android:textSize="@dimen/text_size_large" />
+            android:orientation="horizontal" >
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_remove_item"
+                android:layout_width="0dip"
+                android:layout_height="48dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_delete_swiped"
+                android:gravity="center"
+                android:onClick="onClickRemoveItem"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/remove_item"
+                android:textColor="@color/button_primary_text"
+                android:textSize="@dimen/text_size_large" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_checkout"
+                android:layout_width="0dip"
+                android:layout_height="48dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_primary"
+                android:gravity="center"
+                android:onClick="onClickCheckout"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/checkout"
+                android:textColor="@color/button_primary_text"
+                android:textSize="@dimen/text_size_large" />
+
+            <print.io.view.ButtonFontLight
+                android:id="@+id/button_remove_item_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="48dip"
+                android:background="@drawable/btn_secondary"
+                android:gravity="center"
+                android:onClick="onClickRemoveItemCancel"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/done"
+                android:textColor="@color/button_secondary_text"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
+        </LinearLayout>
     </RelativeLayout>
 
     <View

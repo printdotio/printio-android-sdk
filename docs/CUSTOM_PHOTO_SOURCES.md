@@ -11,7 +11,7 @@ When selecting images, you have an option to include up to six photo sources fro
 - Phone
 - Facebook
 - Instagram
-- Picasa
+- Picasa (Google Photos)
 - Flickr
 - Photobucket
 - Dropbox

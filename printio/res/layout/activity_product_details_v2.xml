@@ -112,21 +112,11 @@
             android:paddingBottom="10dip"
             android:visibility="gone" >
 
-            <print.io.view.TextViewFontBold
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:singleLine="true"
-                android:text="@string/special_offer"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_large" />
-
             <TextView
                 android:id="@+id/textview_for_word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:paddingLeft="8dip"
                 android:paddingRight="8dip"
                 android:singleLine="true"
                 android:text="@string/for_text"

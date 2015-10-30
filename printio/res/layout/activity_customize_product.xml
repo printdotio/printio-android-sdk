@@ -113,55 +113,67 @@
         android:layout_below="@+id/layout_buttons"
         android:background="@color/title_bar_separator" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab_bar"
+        android:layout_above="@+id/container_bottom_buttons"
         android:layout_below="@+id/view_dummy_title_separator"
-        android:orientation="vertical" >
+        android:fillViewport="true"
+        android:scrollbars="none" >
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dip"
-            android:layout_weight="1" >
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
 
-            <print.io.view.CustomizeProductView
-                android:id="@+id/customize_product_view"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1" >
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="8dip" >
+
+                    <print.io.view.CustomizeProductView
+                        android:id="@+id/customize_product_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <!-- Info text below the product -->
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_info_text"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_margin="8dip" />
-        </RelativeLayout>
+                android:gravity="center"
+                android:textColor="#c6c8cc"
+                android:textSize="@dimen/text_size_normal"
+                android:visibility="gone" />
 
-        <!-- Info text below the product -->
+            <!-- View is used as bottom margin when hlistview_photos is not visible -->
 
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_info_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textColor="#c6c8cc"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="gone" />
+            <View
+                android:id="@+id/view_info_text_margin"
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:visibility="gone" />
 
-        <!-- View is used as bottom margin when hlistview_photos is not visible -->
-
-        <View
-            android:id="@+id/view_info_text_margin"
-            android:layout_width="match_parent"
-            android:layout_height="20dip"
-            android:visibility="gone" />
-
-        <it.sephiroth.android.library.widget.HListView
-            android:id="@+id/hlistview_photos"
-            android:layout_width="match_parent"
-            android:layout_height="64dip"
-            android:clipToPadding="false"
-            android:divider="#00000000"
-            android:listSelector="#00000000"
-            android:paddingLeft="4dip"
-            android:paddingRight="4dip" />
-    </LinearLayout>
+            <it.sephiroth.android.library.widget.HListView
+                android:id="@+id/hlistview_photos"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:clipToPadding="false"
+                android:divider="#00000000"
+                android:listSelector="#00000000"
+                android:paddingLeft="4dip"
+                android:paddingRight="4dip" />
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Double tap balloon, displayed over CustomizeProductView, disappears after timeout -->
 
@@ -173,17 +185,38 @@
         layout="@layout/item_tooltip_balloon"
         android:visibility="gone" />
 
-    <!-- Tab Bar -->
+    <!-- Bottom Buttons Container -->
 
-    <include
-        android:id="@+id/tab_bar"
+    <LinearLayout
+        android:id="@+id/container_bottom_buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        layout="@layout/tab_bar"
-        android:background="#ffffff"
-        android:padding="3dip"
-        android:visibility="visible" />
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/layout_text_editor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_text_editor"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/tab_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/tab_bar"
+            android:background="#ffffff"
+            android:padding="3dip"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <print.io.view.ColorPreviewView
+        android:id="@+id/color_preview"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_above="@+id/container_bottom_buttons"
+        android:layout_marginBottom="-35dip" />
 
     <!-- Edit Tools -->
 
@@ -191,7 +224,7 @@
         android:id="@+id/edit_tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tab_bar"
+        android:layout_above="@+id/container_bottom_buttons"
         layout="@layout/edit_tools"
         android:visibility="gone" />
 
@@ -201,7 +234,7 @@
         android:id="@+id/layout_product_options"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab_bar"
+        android:layout_above="@+id/container_bottom_buttons"
         android:layout_below="@+id/view_dummy_title_separator"
         android:background="#80000000"
         android:clickable="true"

@@ -93,26 +93,33 @@
         android:layout_below="@+id/layout_buttons"
         android:background="@color/title_bar_separator" />
 
-    <RelativeLayout
-        android:id="@+id/customize_product_view_container"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/view_dummy_title_separator" >
+        android:layout_above="@+id/layout_text_editor"
+        android:layout_below="@+id/view_dummy_title_separator"
+        android:fillViewport="true"
+        android:scrollbars="none" >
 
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:clipChildren="false" >
+        <RelativeLayout
+            android:id="@+id/customize_product_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-            <print.io.view.CustomizeProductView
-                android:id="@+id/customize_product_view"
+            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/customize_product_view_margins" />
-        </FrameLayout>
-    </RelativeLayout>
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/customize_product_view_margins"
+                android:clipChildren="false" >
 
+                <print.io.view.CustomizeProductView
+                    android:id="@+id/customize_product_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+        </RelativeLayout>
+    </ScrollView>
     <!-- Double tap balloon, displayed over CustomizeProductView, disappears after timeout -->
 
     <include
@@ -129,7 +136,6 @@
         android:id="@+id/layout_product_options"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab_bar"
         android:layout_below="@+id/view_dummy_title_separator"
         android:background="#80000000"
         android:clickable="true"
@@ -161,5 +167,19 @@
         android:id="@+id/drawer_replace_photo"
         layout="@layout/drawer_replace_photo"
         android:visibility="gone" />
+
+    <include
+        android:id="@+id/layout_text_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_text_editor"
+        android:visibility="gone" />
+
+    <print.io.view.ColorPreviewView
+        android:id="@+id/color_preview"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_above="@+id/layout_text_editor" />
 
 </RelativeLayout>

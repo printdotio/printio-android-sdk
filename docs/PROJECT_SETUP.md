@@ -80,7 +80,7 @@ Please add following activities to your AndroidManifest.xml file:
 	android:name="print.io.PIOActivity"
 	android:screenOrientation="portrait" />
 <activity
-	android:name="print.io.ActivityCaseColorStyle"
+	android:name="print.io.ActivityOptionBackground"
 	android:screenOrientation="portrait"
 	android:windowSoftInputMode="stateHidden" />
 <activity
@@ -106,22 +106,21 @@ Please add following activities to your AndroidManifest.xml file:
 	android:name="print.io.ActivityProductDetailsV2"
 	android:screenOrientation="portrait" />
 <activity
-	android:name="print.io.ActivityProductPreview"
-	android:screenOrientation="portrait" />
-<activity
-	android:name="print.io.ActivityImageUpload"
+	android:name="print.io.ActivitySelectPhotos"
 	android:screenOrientation="portrait" />
 <activity
 	android:name="print.io.ActivityCustomizeProduct"
-	android:screenOrientation="portrait" />
+	android:screenOrientation="portrait"
+	android:windowSoftInputMode="adjustResize" />
 <activity
 	android:name="print.io.ActivityCustomizePhotobook"
-	android:screenOrientation="landscape" />
+	android:screenOrientation="landscape"
+	android:windowSoftInputMode="adjustResize" />
 <activity
-	android:name="print.io.ActivityCustomSteps"
+	android:name="print.io.ActivityProductOptions"
 	android:screenOrientation="portrait" />
 <activity
-	android:name="print.io.ActivityStickerBook"
+	android:name="print.io.ActivityCustomizeList"
 	android:screenOrientation="portrait"
 	android:windowSoftInputMode="stateHidden" />
 <activity
@@ -180,10 +179,10 @@ Please add following activities to your AndroidManifest.xml file:
      android:name="com.paypal.android.sdk.payments.PayPalService"
      android:exported="false" />
 
- <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
- <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
- <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
- <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+ <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" android:screenOrientation="portrait" />
+ <activity android:name="com.paypal.android.sdk.payments.LoginActivity" android:screenOrientation="portrait" />
+ <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" android:screenOrientation="portrait" />
+ <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" android:screenOrientation="portrait" />
  <activity
      android:name="io.card.payment.CardIOActivity"
      android:configChanges="keyboardHidden|orientation" />

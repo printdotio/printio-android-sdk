@@ -60,10 +60,8 @@
         android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
-    <!-- Step 3 -->
-
     <print.io.view.TextViewFontLight
-        android:id="@+id/textview_step_3"
+        android:id="@+id/textview_step_choose_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view_dummy_title_separator"
@@ -77,7 +75,7 @@
         android:id="@+id/view_dummy_2"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_below="@+id/textview_step_3"
+        android:layout_below="@+id/textview_step_choose_color"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:background="#d6d6d6"
@@ -87,7 +85,7 @@
         android:id="@+id/layout_case_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textview_step_3"
+        android:layout_below="@+id/textview_step_choose_color"
         android:orientation="vertical"
         android:paddingLeft="5dip"
         android:paddingRight="5dip" >
@@ -243,77 +241,6 @@
                     android:src="@drawable/icon_color_add_default" />
             </RelativeLayout>
         </LinearLayout>
-    </LinearLayout>
-
-    <View
-        android:id="@+id/view_dummy_3"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_below="@+id/layout_case_color"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="10dip"
-        android:background="@color/step_separator" />
-
-    <!-- Step 4 -->
-
-    <print.io.view.TextViewFontLight
-        android:id="@+id/textview_step_4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view_dummy_3"
-        android:gravity="center"
-        android:paddingBottom="10dip"
-        android:paddingTop="10dip"
-        android:textColor="#333333"
-        android:textSize="@dimen/text_size_large" />
-
-    <View
-        android:id="@+id/view_dummy_4"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_below="@+id/textview_step_4"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:background="#d6d6d6"
-        android:visibility="gone" />
-
-    <LinearLayout
-        android:id="@+id/linearLayoutForCaseStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textview_step_4"
-        android:orientation="horizontal"
-        android:paddingBottom="10dip"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:paddingTop="5dip" >
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_matte"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:drawableTop="@drawable/material_type_matte_default"
-            android:gravity="center"
-            android:onClick="onClickMatte"
-            android:text="@string/matte"
-            android:textColor="#000000"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_glossy"
-            android:layout_width="0dip"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:drawableTop="@drawable/material_type_glossy_default"
-            android:gravity="center"
-            android:onClick="onClickGlossy"
-            android:text="@string/glossy"
-            android:textColor="#000000"
-            android:textSize="@dimen/text_size_normal" />
     </LinearLayout>
 
     <include
