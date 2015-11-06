@@ -491,7 +491,7 @@ Sets discount percentage for retail price. Value should be in range [0-99].
 
 Default value is `null` (functionality is ignored). 
 ```java
-PIOConfig.setRetailDiscountPercent(float discountPercent);
+PIOConfig.setRetailDiscountPercent(Float discountPercent);
 ```
 &nbsp;  
 &nbsp;  
