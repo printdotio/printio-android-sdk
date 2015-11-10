@@ -1,4 +1,4 @@
-Migrating to v3.X.X from v3.0.24
+Migrating to v3.1.0 from v3.0.24
 ========
 **Changes in AndroidManifest.xml**
 
