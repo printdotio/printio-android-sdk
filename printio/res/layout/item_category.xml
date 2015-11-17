@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/bg_selector"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:singleLine="true"
+        android:textColor="#FF222222"
+        android:textSize="@dimen/text_size_large" />
+
+</LinearLayout>

@@ -476,6 +476,14 @@ PIOConfig.setHideComingSoonProducts(boolean hideComingSoonProducts);
 ```
 &nbsp;  
 &nbsp;  
+#### > Set bottom bar visibility
+
+Default value is `true` (bottom bar is visible).
+```java
+PIOConfig.setProductsBottomBarVisibility(boolean isVisible);
+```
+&nbsp;  
+&nbsp;  
 Product Details
 --------------
 #### > Hide prices in Product Details screen  
@@ -491,7 +499,7 @@ Sets discount percentage for retail price. Value should be in range [0-99].
 
 Default value is `null` (functionality is ignored). 
 ```java
-PIOConfig.setRetailDiscountPercent(float discountPercent);
+PIOConfig.setRetailDiscountPercent(Float discountPercent);
 ```
 &nbsp;  
 &nbsp;  
@@ -504,6 +512,7 @@ Possible strategies:
 * `DEFAULT` - Choose layout step is always shown when there is more then one layout.
 * `SKIP_BEST_FIT_TO_PASSED_IMAGES_COUNT` - Skips choose layout step and uses layout that fits the best for passed in images count.
 * `FILTER_LAYOUTS_UP_TO_PASSED_IMAGES_COUNT` - Shows step but with layouts which have image slots up to passed in images count. If there are no layouts that satisfy filtering criteria all layouts will be shown. In case when there is single layout step is skipped.
+* `SKIP_FOR_SINGLE_PASSED_IMAGE` - Skips choose layout step when single images is passed in and uses one photo layout, otherwise step is shown.
 
 Default value is `LayoutStepStrategy.DEFAULT`.
 ```java
@@ -892,7 +901,7 @@ PIO.setShoppingCart(context, cart);
 &nbsp;  
 &nbsp;  
 
-Payment Screen screen
+Payment screen
 --------------
 #### > Set Available Payment Options  
 
@@ -907,7 +916,7 @@ public enum PaymentOptionType {
 }
 ```
 &nbsp;  
-&nbsp;  
+&nbsp;
 Country, Currency and Language
 ------------------------------
 #### > Set country code  

@@ -1,5 +1,44 @@
 **Android Release Notes**
 
+3.1.7 (v118)
+============
+
+**Features:**
+
+- Redesigned `Products` screen
+
+- All products enabled in `Products` screen V2
+
+- PayPal disabled when order total is zero
+
+- Added 'Auto Populate' feature for Wall Calendars and Ottomans
+
+- Added new layout step strategy: `SKIP_FOR_SINGLE_PASSED_IMAGE` (refer to [this method](docs/SDK_REFERENCE.md#-set-strategy-for-choose-layout-step-on-product-options-screen))
+
+**Bugs:**
+
+- Fixed a crash caused by setting `PIOConfig.setShowOptionsInCustomize()` to `false`
+
+- Fixed loading of large overlay images
+
+- Fixed a crash on Mementos product
+
+- Fixed image manipulations being lost when screen turned off/on in List-type products
+
+- Adjusted promo text in V2 `Product Details` screen
+
+- Changed price container color
+
+- Added missing icons for some product options
+
+- Fixed 'Decrease text size' button
+
+- Fixed a crash when replacing photos in Layflat Photobooks
+
+- Buttons in `Customize Product` screen are now closed when tapping outside
+
+###
+
 3.1.0 (v118)
 ============
 

@@ -39,7 +39,6 @@
     <color name="side_menu_version_text">#FFFFFF</color>
 
     <color name="price_container_background">#2277D4</color>
-    <color name="price_container_background_v2">#1429A0</color>
     <color name="select_country_background">#2277D4</color>
     <color name="categories_text_default">#333333</color>
     <color name="categories_text_pressed">#3FBF9A</color>
