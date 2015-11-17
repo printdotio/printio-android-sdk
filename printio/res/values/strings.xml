@@ -18,9 +18,10 @@
     <string name="exit">Exit</string>
     <string name="exit_shop">Exit Shop</string>
     <string name="starting_at_">Starting at %s</string>
+    <string name="starting_at">Starting at</string>
     <string name="price_">Price %s</string>
     <string name="price_each">%s Each</string>
-    <string name="title_featured_products">Products</string>
+    <string name="title_products">Products</string>
     <string name="all">All</string>
     <string name="product_details">Product Details</string>
     <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
@@ -50,6 +51,7 @@
     <string name="product_preview">Product Preview</string>
     <string name="choose_print_type">Choose print type</string>
     <string name="shopping_cart">Shopping Cart</string>
+    <string name="default_shopping_cart_description">One Size</string>
     <string name="add_more_products">Add More Products</string>
     <string name="subtotal">Subtotal:</string>
     <string name="promo_code">Promo Code</string>
@@ -87,8 +89,6 @@
     <string name="page_number">Page %1$s</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
-    <string name="random">Random Auto Arrange</string>
-    <string name="manual">Manual Drag and Drop</string>
     <string name="first_name_empty">\'First Name\' should not be empty</string>
     <string name="last_name_empty">\'Last Name\' should not be empty</string>
     <string name="email_empty">\'Email\' should not be empty</string>
@@ -241,9 +241,13 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="edit_address_re_attempt">Edit Address &amp; Retry</string>
     <string name="secured_by">Secured by </string>
     <string name="select_payment_method">Please select your payment method</string>
-    <string name="auto_arrange_note">Note: Both options allow you to finalize\nthe arrangement manually.</string>
+    <string name="image_arrangement">Image Arrangement</string>
     <string name="random_auto_arrange">Auto Random\nArrange</string>
     <string name="manual_drag_drop">Manual\nDrag and Drop</string>
+    <string name="auto_arrange_note">Note: Both options allow you to finalize\nthe arrangement manually.</string>
+    <string name="auto_populate_message">Before saving to cart, all pages need to be filled in. Do you want to auto or manually populate photos?</string>
+    <string name="auto_populate">Auto populate</string>
+    <string name="manual">Manual</string>
     <string name="country_edit_text_warning_message">Warning! Changing the ship to country may change the product price and availability of the items in your cart. Are you sure you want to change the country?</string>
     <string name="change_language">Change Language</string>
     <string name="under_1">under %1$s</string>
@@ -281,7 +285,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="coming_soon">Coming soon</string>
     <string name="get_more_photos">Get More\n Images</string>
     <string name="continue_with">Continue with\n %1$s</string>
-    <string name="image_arrangement">Image Arrangement</string>
     <string name="product_search">Search for products here</string>
     <string name="country_search">Search for countries here</string>
     <string name="currency_search">Search for currencies here</string>
@@ -314,6 +317,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="retail_price">%1$s Retail Price</string>
     <string name="selected_images">You selected only %1$s/%2$s images</string>
     <string name="or">or</string>
+    <string name="or_caps">OR</string>
     <string name="add_more_images">Add More Images</string>
     <string name="add_photos">Add Photos</string>
     <string name="replace">Replace</string>
@@ -362,6 +366,8 @@ type of product, making it easy for you to edit or remove items if necessary…
 but we hope you love what you made and we know you will be happy with it!\n\n- Once jeverything looks great in Shipment Review, please select the Enter 
 Payment Info button in the bottom right corner, which will then take you
 to the Payment Page.</string>
+    <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another payment method.</string>
+    <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
     <string name="pop_up_payment_page">Almost done! You\'re now in the Payment screen to purchase your one-of-akind design(s)! \n\n- First, select your correct Billing Country.\n\n- Next, select payment method (PayPal or Card) and follow the steps on the next screens.</string>
     <string name="pop_up_payment">You are in this screen because you selected to pay with a card. Automatically 
 enter your credit card information by taking a picture of the front of your card 
@@ -409,7 +415,7 @@ each field, simply touch the Place Order button.</string>
     <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more pictures</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
-    <string name="for_text">For\u00A0</string>
+    <string name="for_text">for\u00A0</string>
     <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
     <string name="dialog_resolution_warning_title">This photo is too small</string>
     <string name="dialog_resolution_warning_message">This photo may distort when printing, aim for at least %1$spx wide and %2$spx tall.</string>
@@ -429,8 +435,19 @@ each field, simply touch the Place Order button.</string>
     <string name="order_status">Order Status</string>
     <string name="order_details">Order Details</string>
     <string name="total_cost">Total Cost</string>
-	<string name="status">Status:</string>
-	
+    <string name="status">Status:</string>
+    <string name="order_product">Order %1$s</string>
+    <string name="search_caps">SEARCH</string>
+    <string name="categories">Categories</string>
+    <string name="category_description_photo_books">Photo books for all of your memories</string>
+    <string name="category_description_cards_and_calendars">Never miss a date and send the right cards</string>
+    <string name="category_description_home_decor">Set your home apart from your neighbor\'s</string>
+    <string name="category_description_photo_gifts">Awesome gifts for great people</string>
+    <string name="category_description_appareal">Products you want to be seen in</string>
+    <string name="category_description_pohone_cases_and_skins">Keepin\' it hip and protected</string>
+    <string name="category_description_prints">Not just pictures, they are memories</string>
+    <string name="cards_and_calendats">Cards &amp; Calendars</string>
+
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>
     <string name="help_product_phone_case_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Phone case.\n\n1) Select a case color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your case color! To change the color, simply repeat this step again.\n\n3) Do you prefer Matte Finish or Gloss Finish for your case &amp; images? Glossy finish reflects light and gives it a shiny look. Matte finish has no shine. Make your selections then we automatically take you to the next step!</string>

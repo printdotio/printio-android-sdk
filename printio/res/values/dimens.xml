@@ -28,6 +28,4 @@
 
     <dimen name="customize_product_view_margins">8dip</dimen>
 
-    <dimen name="special_offer_banner_height">35dip</dimen>
-    
 </resources>

@@ -1,5 +1,11 @@
-Migrating to v3.X.X from v3.0.24
+Migrating to v3.1.0 from v3.0.24
 ========
+**New feature - Text**
+
+A new feature has been added in this version, which allows users to add text to products.  
+In order for this feature to work, `fonts` folder needs to be added to the `assets` folder of the host app.  
+The folder can be found in our [Example app](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/assets)
+
 **Changes in AndroidManifest.xml**
 
 Following activity declarations should be added:

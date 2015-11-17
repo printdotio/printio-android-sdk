@@ -127,6 +127,7 @@
             android:orientation="vertical" >
 
             <RelativeLayout
+                android:id="@+id/customize_product_view_container"
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
                 android:layout_weight="1" >
@@ -135,7 +136,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:layout_margin="8dip" >
+                    android:layout_margin="@dimen/customize_product_view_margins" >
 
                     <print.io.view.CustomizeProductView
                         android:id="@+id/customize_product_view"
@@ -163,15 +164,31 @@
                 android:layout_height="20dip"
                 android:visibility="gone" />
 
-            <it.sephiroth.android.library.widget.HListView
-                android:id="@+id/hlistview_photos"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="64dip"
-                android:clipToPadding="false"
-                android:divider="#00000000"
-                android:listSelector="#00000000"
-                android:paddingLeft="4dip"
-                android:paddingRight="4dip" />
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <print.io.imageloader.MyImageView
+                    android:id="@+id/imageview_add_more_photos"
+                    android:layout_width="55dip"
+                    android:layout_height="55dip"
+                    android:layout_margin="4dip"
+                    android:adjustViewBounds="true"
+                    android:onClick="onClickAddMorePhotos"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/btn_add" />
+
+                <it.sephiroth.android.library.widget.HListView
+                    android:id="@+id/hlistview_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dip"
+                    android:clipToPadding="false"
+                    android:divider="#00000000"
+                    android:listSelector="#00000000"
+                    android:paddingLeft="4dip"
+                    android:paddingRight="4dip" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

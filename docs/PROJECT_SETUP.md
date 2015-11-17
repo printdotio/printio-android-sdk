@@ -2,7 +2,7 @@
 
 ##Setting up PrintIO SDK in your IDE
 
-On this page we are going to guide you for setting up PrintIO SDK in an existing app. This guide will cover Android Studio and Eclipse IDE.
+On this page we are going to guide you through setting up the PrintIO SDK in an existing app. This guide will cover Android Studio and Eclipse IDE.
 
 ### Android Studio guide
 
@@ -18,14 +18,23 @@ Open Module Setting -> New Module -> Import Existing Project (Phone and Tablet A
 ####2. Import print.io SDK project
 File -> Import -> General -> Existing Projects into Workspace*
 
-####3. Make print.io SDK as library
+####3. Mark print.io SDK as library project
 Select print.io SDK project -> Properties -> Android -> Make sure that "Is Library" is ticked
 
-####4. Add facebook SDK (version 4.2) library to the print.io SDK library
-If your project is not currently using facebook SDK you will have to clone facebook SDK for android and import it into workspace. Then add facebook SDK library to the print.io SDK library like so:
+####4. Add print.io SDK dependencies 
+Libraries will have to be added manually when developing with Eclipse  
+(In Android Studio, these dependencies are automatically resolved by Gradle dependency management mechanism).
 
-Select print.io SDK project-> Properties -> Android -> Add... -> Choose facebook SDK library
+* 4.1 Gson library
 
+	Download Gson library version 2.2.4 jar and add it to `libs` folder of print.io SDK project.
+
+* 4.2 Facebook SDK (This step is required only if you intend to use Facebook as a photo source)
+
+	If your project is not currently using Facebook SDK you will have to clone Facebook SDK version 4.2 for Android and import it into workspace. Then add Facebook SDK library to the print.io SDK library like so:
+
+	Select print.io SDK project-> Properties -> Android -> Add... -> Choose Facebook SDK library
+  
 ####5. Add print.io SDK library to your project
 Select your project -> Properties -> Android -> Add... -> Choose printio SDK library
 
@@ -240,3 +249,7 @@ Add your facebook_app_id to `res/strings.xml`.
 ```xml
 <string name="facebook_app_id">YourFacebookAppId</string>
 ```
+
+###6. Add fonts for Text feature  
+Copy PIO SDK `fonts` folder to the `assets` folder of the host app.  
+The folder can be found in our [Example app](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/assets)
