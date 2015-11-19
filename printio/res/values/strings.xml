@@ -18,9 +18,12 @@
     <string name="exit">Exit</string>
     <string name="exit_shop">Exit Shop</string>
     <string name="starting_at_">Starting at %s</string>
+    <string name="starting_at_retail_">Starting at %1$s %2$s</string>
     <string name="starting_at">Starting at</string>
     <string name="price_">Price %s</string>
+    <string name="price_retail_">Price %1$s %2$s</string>
     <string name="price_each">%s Each</string>
+    <string name="price_retail_each">%1$s %2$s Each</string>
     <string name="title_products">Products</string>
     <string name="all">All</string>
     <string name="product_details">Product Details</string>
@@ -366,7 +369,7 @@ type of product, making it easy for you to edit or remove items if necessary…
 but we hope you love what you made and we know you will be happy with it!\n\n- Once jeverything looks great in Shipment Review, please select the Enter 
 Payment Info button in the bottom right corner, which will then take you
 to the Payment Page.</string>
-    <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another payment method.</string>
+    <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use Credit Card payment method.</string>
     <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
     <string name="pop_up_payment_page">Almost done! You\'re now in the Payment screen to purchase your one-of-akind design(s)! \n\n- First, select your correct Billing Country.\n\n- Next, select payment method (PayPal or Card) and follow the steps on the next screens.</string>
     <string name="pop_up_payment">You are in this screen because you selected to pay with a card. Automatically 
@@ -415,7 +418,6 @@ each field, simply touch the Place Order button.</string>
     <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more pictures</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
-    <string name="for_text">for\u00A0</string>
     <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
     <string name="dialog_resolution_warning_title">This photo is too small</string>
     <string name="dialog_resolution_warning_message">This photo may distort when printing, aim for at least %1$spx wide and %2$spx tall.</string>
@@ -478,19 +480,19 @@ you! After you select the images you want to try on your Canvas, click the Next 
 
     <string-array name="wall_calendars_page_titles">
         <item>Calendar Cover</item>
-        <item>January 2015</item>
-        <item>February 2015</item>
-        <item>March 2015</item>
-        <item>April 2015</item>
-        <item>May 2015</item>
-        <item>June 2015</item>
-        <item>July 2015</item>
-        <item>August 2015</item>
-        <item>September 2015</item>
-        <item>October 2015</item>
-        <item>November 2015</item>
-        <item>December 2015</item>
         <item>January 2016</item>
+        <item>February 2016</item>
+        <item>March 2016</item>
+        <item>April 2016</item>
+        <item>May 2016</item>
+        <item>June 2016</item>
+        <item>July 2016</item>
+        <item>August 2016</item>
+        <item>September 2016</item>
+        <item>October 2016</item>
+        <item>November 2016</item>
+        <item>December 2016</item>
+        <item>January 2017</item>
     </string-array>
 
 </resources>

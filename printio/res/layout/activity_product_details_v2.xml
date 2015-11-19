@@ -136,32 +136,13 @@
                 android:textSize="@dimen/text_size_medium" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linearlayout_special_offer_banner_holder"
+        <ImageView
+            android:id="@+id/imageview_vendor_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dip"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:visibility="gone" >
-
-            <TextView
-                android:id="@+id/textview_for_word"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:paddingRight="8dip"
-                android:singleLine="true"
-                android:text="@string/for_text"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_large" />
-
-            <ImageView
-                android:id="@+id/imageview_vendor_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/text_size_medium"
-                android:adjustViewBounds="true" />
-        </LinearLayout>
+            android:layout_marginTop="4dip"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
     </LinearLayout>
 
     <View

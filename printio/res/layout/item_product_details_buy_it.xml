@@ -45,6 +45,14 @@
             android:singleLine="true"
             android:textColor="#c6c8cc"
             android:textSize="@dimen/text_size_large" />
+
+        <ImageView
+            android:id="@+id/imageview_vendor_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dip"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
     </LinearLayout>
 
     <print.io.view.ButtonFontTitle

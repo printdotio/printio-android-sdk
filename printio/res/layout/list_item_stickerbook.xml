@@ -30,7 +30,8 @@
             android:id="@+id/imageview_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:scaleType="fitXY" />
 
         <LinearLayout
             android:id="@+id/view_resolution_warning"

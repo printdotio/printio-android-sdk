@@ -119,8 +119,14 @@
     <color name="button_save_to_cart_text">#000000</color>
 
     <color name="button_back_next_photobooks_text">#000000</color>
+
     <color name="button_save_to_cart_photobooks_text">#000000</color>
+    <color name="button_save_to_cart_photobooks_border">#000000</color>
+    <color name="button_save_to_cart_photobooks_background">#00000000</color>
+
 	<color name="button_cancel_options_text">#000000</color>
+	<color name="button_cancel_options_border">#000000</color>
+	<color name="button_cancel_options_background">#00000000</color>
 
     <!-- other_colors -->
     <color name="gray">#404040</color>
