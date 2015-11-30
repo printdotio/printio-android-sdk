@@ -243,21 +243,28 @@
 
             <!-- Billing Country -->
 
-            <print.io.view.TextViewFontLight
+            <LinearLayout
+                android:id="@+id/container_billing_country"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dip"
-                android:layout_marginTop="5dip"
-                android:text="@string/billing_country"
-                android:textColor="#595d66"
-                android:textSize="@dimen/text_size_normal" />
+                android:orientation="vertical" >
 
-            <Spinner
-                android:id="@+id/spinner_billing_country"
-                android:layout_width="match_parent"
-                android:layout_height="45dip"
-                android:layout_margin="5dip"
-                android:background="@drawable/bg_spinner_silver" />
+                <print.io.view.TextViewFontLight
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/billing_country"
+                    android:textColor="#595d66"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Spinner
+                    android:id="@+id/spinner_billing_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_spinner_silver" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/layout_shipping_method_type"
@@ -365,33 +372,37 @@
                 android:focusable="false"
                 android:focusableInTouchMode="true"
                 android:orientation="vertical"
-                android:paddingLeft="5dip"
-                android:paddingRight="5dip"
                 android:visibility="gone" >
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#efeff2"
+                    android:background="@color/white"
                     android:orientation="vertical"
-                    android:padding="5dip" >
+                    android:padding="8dip" >
 
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_secured_by"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableRight="@drawable/icon_braintree"
-                        android:gravity="right|center_vertical"
-                        android:text="@string/secured_by"
-                        android:textColor="#595d66"
-                        android:textSize="@dimen/text_size_small" />
+                        android:orientation="horizontal" >
 
-                    <print.io.view.TextViewFontLight
-                        android:id="@+id/textview_card_information"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/card_information"
-                        android:textColor="#323232" />
+                        <print.io.view.TextViewFontLight
+                            android:id="@+id/textview_card_information"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/card_information"
+                            android:textColor="#323232" />
+
+                        <print.io.view.TextViewFontLight
+                            android:id="@+id/textview_secured_by"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@drawable/icon_braintree"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/secured_by"
+                            android:textColor="#595d66"
+                            android:textSize="@dimen/text_size_small" />
+                    </LinearLayout>
 
                     <!-- Full Name -->
 
@@ -400,7 +411,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dip"
                         android:layout_marginTop="5dip"
-                        android:background="#ffffff"
+                        android:background="@color/bg_edit_text"
                         android:hint="@string/full_name"
                         android:inputType="textCapWords"
                         android:nextFocusDown="@+id/edittext_last_name"
@@ -417,14 +428,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dip"
-                        android:background="#ffffff" >
+                        android:background="@color/bg_edit_text" >
 
                         <print.io.view.EditTextFontLight
                             android:id="@+id/edittext_card_number"
                             android:layout_width="match_parent"
                             android:layout_height="40dip"
                             android:layout_toLeftOf="@+id/imageview_check"
-                            android:background="#ffffff"
+                            android:background="@null"
                             android:hint="@string/card_number"
                             android:inputType="numberDecimal"
                             android:nextFocusDown="@+id/edittext_cvc"
@@ -452,7 +463,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="40dip"
                         android:layout_marginTop="5dip"
-                        android:background="#ffffff"
+                        android:background="@color/bg_edit_text"
                         android:hint="@string/cvc"
                         android:inputType="numberDecimal"
                         android:paddingLeft="10dip"
@@ -469,24 +480,192 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dip"
+                        android:descendantFocusability="afterDescendants"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
                         android:orientation="horizontal" >
 
                         <Spinner
                             android:id="@+id/spinner_expiration_month"
                             android:layout_width="0dip"
                             android:layout_height="40dip"
-                            android:layout_marginRight="3dip"
+                            android:layout_marginRight="2dip"
                             android:layout_weight="1"
-                            android:background="@drawable/bg_spinner_white" />
+                            android:background="@color/bg_edit_text"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
 
                         <Spinner
                             android:id="@+id/spinner_expiration_year"
                             android:layout_width="0dip"
                             android:layout_height="40dip"
-                            android:layout_marginLeft="3dip"
+                            android:layout_marginLeft="2dip"
                             android:layout_weight="1"
-                            android:background="@drawable/bg_spinner_white" />
+                            android:background="@color/bg_edit_text"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true" />
                     </LinearLayout>
+
+                    <!-- Billing Address -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal" >
+
+                        <print.io.view.TextViewFontBold
+                            android:layout_width="0px"
+                            android:layout_height="40dip"
+                            android:layout_marginRight="2dip"
+                            android:layout_weight="1"
+                            android:text="@string/billing_address"
+                            android:textColor="#595d66"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <print.io.view.ButtonFontBold
+                            android:id="@+id/button_use_shipping_address"
+                            android:layout_width="0px"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_primary"
+                            android:onClick="onClickUseShippingAddressAsBillingAddress"
+                            android:text="@string/use_shipping_address"
+                            android:textColor="@color/button_primary_text"
+                            android:textSize="@dimen/text_size_normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal" >
+
+                        <print.io.view.EditTextFontLight
+                            android:id="@+id/edittext_billing_first_name"
+                            android:layout_width="0px"
+                            android:layout_height="40dip"
+                            android:layout_marginRight="2dip"
+                            android:layout_weight="1"
+                            android:background="@color/bg_edit_text"
+                            android:hint="@string/first_name"
+                            android:inputType="textCapWords"
+                            android:nextFocusDown="@+id/edittext_billing_last_name"
+                            android:nextFocusForward="@+id/edittext_billing_last_name"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:singleLine="true"
+                            android:textColor="#595d66"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <print.io.view.EditTextFontLight
+                            android:id="@+id/edittext_billing_last_name"
+                            android:layout_width="0px"
+                            android:layout_height="40dip"
+                            android:layout_marginLeft="2dip"
+                            android:layout_weight="1"
+                            android:background="@color/bg_edit_text"
+                            android:hint="@string/last_name"
+                            android:inputType="textCapWords"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:singleLine="true"
+                            android:textColor="#595d66"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="@dimen/text_size_normal" />
+                    </LinearLayout>
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_billing_street_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/street_1"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_billing_street_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/street_2"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_billing_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/zip_code"
+                        android:inputType="number"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_billing_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/city"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <print.io.view.EditTextFontLight
+                        android:id="@+id/edittext_billing_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:hint="@string/state_region_province"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapWords"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <print.io.view.TextViewFontLight
+                        android:id="@+id/textview_billing_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_marginTop="5dip"
+                        android:background="@color/bg_edit_text"
+                        android:gravity="center_vertical"
+                        android:hint="@string/country"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:singleLine="true"
+                        android:textColor="#595d66"
+                        android:textColorHint="#b3b3b3"
+                        android:textSize="@dimen/text_size_normal" />
 
                     <!-- Place Order -->
 
@@ -494,8 +673,8 @@
                         android:id="@+id/button_place_order"
                         android:layout_width="match_parent"
                         android:layout_height="40dip"
-                        android:layout_marginBottom="20dip"
-                        android:layout_marginTop="5dip"
+                        android:layout_marginBottom="16dip"
+                        android:layout_marginTop="16dip"
                         android:background="@drawable/btn_secondary"
                         android:onClick="onClickPlaceOrderCreditCard"
                         android:text="@string/place_order"
@@ -503,7 +682,7 @@
                         android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
 
-                <!-- Brain tree big image below layout -->
+                <!-- Braintree big image below layout -->
 
                 <ImageView
                     android:layout_width="match_parent"

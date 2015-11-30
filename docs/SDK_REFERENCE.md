@@ -505,16 +505,30 @@ PIOConfig.setRetailDiscountPercent(Float discountPercent);
 &nbsp;  
 Product Options screen
 --------------
-#### > Set strategy for "choose layout" step on Product Options screen
+#### > Set strategy for steps with single option 
+Set strategies used for displaying steps when there is single option to choose.
 
 Possible strategies:
 
-* `DEFAULT` - Choose layout step is always shown when there is more then one layout.
+* `PRESELECT` - If step has single option, option will be preselected.
+* `SKIP` - If step has single option, step will not be shown.
+
+Default value is `SingleOptionStepStrategy.PRESELECT`.
+```java
+PIOConfig.setSingleOptionStepStrategy(SingleOptionStepStrategy strategy);
+```
+&nbsp;  
+&nbsp;
+#### > Set strategy for layout step on Product Options screen
+
+Possible strategies:
+
+* `SHOW` - Choose layout step is always shown when there is more then one layout.
 * `SKIP_BEST_FIT_TO_PASSED_IMAGES_COUNT` - Skips choose layout step and uses layout that fits the best for passed in images count.
 * `FILTER_LAYOUTS_UP_TO_PASSED_IMAGES_COUNT` - Shows step but with layouts which have image slots up to passed in images count. If there are no layouts that satisfy filtering criteria all layouts will be shown. In case when there is single layout step is skipped.
 * `SKIP_FOR_SINGLE_PASSED_IMAGE` - Skips choose layout step when single images is passed in and uses one photo layout, otherwise step is shown.
 
-Default value is `LayoutStepStrategy.DEFAULT`.
+Default value is `LayoutStepStrategy.SHOW`.
 ```java
 PIOConfig.setLayoutStepStrategy(LayoutStepStrategy strategy);
 ```
@@ -850,10 +864,10 @@ PIOConfig.setShowAddMoreProductsInShoppingCart(boolean isVisible);
 
 Possible strategies:
 
-* `DEFAULT` - Opens "Products" screen.
+* `OPEN_PRODUCTS_SCREEN` - Opens "Products" screen.
 * `RETURN_TO_HOST_ACTIVITY` - Closes SDK and returns to the host activity.
 
-Default value is `AddMoreProductsButtonStrategy.DEFAULT`.
+Default value is `AddMoreProductsButtonStrategy.OPEN_PRODUCTS_SCREEN`.
 ```java
 PIOConfig.setAddMoreProductsButtonStrategy(AddMoreProductsButtonStrategy strategy);
 ```

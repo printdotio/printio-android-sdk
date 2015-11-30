@@ -76,6 +76,8 @@
     <string name="enter_cvc">Please enter CVC or CVS</string>
     <string name="exp_month_not_valid">Expiration month is not valid</string>
     <string name="billing_address">Billing Address</string>
+    <string name="use_shipping_address">Use Shipping Address</string>
+    <string name="clear_billing_address">Clear Billing Address</string>
     <string name="invalid_coupon">Coupon code is not valid!</string>
     <string name="enter_promo_code">Please enter promo code.</string>
     <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
@@ -395,7 +397,7 @@ each field, simply touch the Place Order button.</string>
     <string name="set_of">Set of %1$s</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
     <string name="problem_downloading_some_photos">There was a problem downloading some of your selected photos. Please try again!</string>
-    <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollar.\n</string>
+    <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollars.\n</string>
     <string name="select_photos_title">Select Images</string>
     <string name="select_color_title">Select Color</string>
     <string name="metal_magnet_title">Metal Magnet</string>
