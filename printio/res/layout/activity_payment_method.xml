@@ -241,30 +241,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <!-- Billing Country -->
-
-            <LinearLayout
-                android:id="@+id/container_billing_country"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <print.io.view.TextViewFontLight
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dip"
-                    android:layout_marginTop="5dip"
-                    android:text="@string/billing_country"
-                    android:textColor="#595d66"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <Spinner
-                    android:id="@+id/spinner_billing_country"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dip"
-                    android:layout_margin="5dip"
-                    android:background="@drawable/bg_spinner_silver" />
-            </LinearLayout>
+            <!-- Shipping method -->
 
             <LinearLayout
                 android:id="@+id/layout_shipping_method_type"
@@ -289,6 +266,60 @@
                     android:layout_margin="5dip"
                     android:background="@drawable/bg_spinner_silver" />
             </LinearLayout>
+
+            <!-- Billing country -->
+
+            <LinearLayout
+                android:id="@+id/container_billing_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <print.io.view.TextViewFontLight
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:text="@string/billing_country"
+                    android:textColor="#595d66"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <Spinner
+                    android:id="@+id/spinner_billing_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dip"
+                    android:layout_margin="5dip"
+                    android:background="@drawable/bg_spinner_silver" />
+            </LinearLayout>
+
+            <!-- Place Order zero total -->
+
+            <LinearLayout
+                android:id="@+id/layout_place_order_zero_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="#ffffff"
+                android:visibility="gone"
+                android:orientation="vertical" >
+
+                <print.io.view.ButtonFontLight
+                    android:id="@+id/button_place_order_zero_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:layout_marginBottom="16dip"
+                    android:layout_marginTop="16dip"
+                    android:background="@drawable/btn_secondary"
+                    android:onClick="onClickPlaceOrderZeroTotal"
+                    android:text="@string/place_order"
+                    android:textColor="@color/button_secondary_text"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <!-- Payment buttons -->
 
             <LinearLayout
                 android:id="@+id/layout_buttons"

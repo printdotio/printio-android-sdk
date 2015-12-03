@@ -31,6 +31,7 @@
     <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
     <string name="successful_login_to_photo_source">Successfully logged in to %1$s</string>
     <string name="failed_to_login_to_photo_source">Failed to log in to %1$s</string>
+    <string name="logout_photo_source">Do you want to log out of %1$s?</string>
     <string name="phone">Phone</string>
     <string name="instagram">Instagram</string>
     <string name="facebook">Facebook</string>
@@ -99,7 +100,6 @@
     <string name="email_empty">\'Email\' should not be empty</string>
     <string name="state_empty">\'State\' should not be empty</string>
     <string name="zip_code_empty">\'Zip Code\' should not be empty</string>
-    <string name="zip_code_us">\'Zip Code\' must be five-digit</string>
     <string name="city_empty">\'City\' should not be empty</string>
     <string name="phone_number_empty">\'Phone Number\' should not be less then %1$s digits</string>
     <string name="phone_number_digits_only">\'Phone Number\' must contain digits only</string>
@@ -451,6 +451,7 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_pohone_cases_and_skins">Keepin\' it hip and protected</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
+    <string name="tip_scroll_vericaly_when_step_appears">Tip - Try scrollying vericaly\nwhen next step appears.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

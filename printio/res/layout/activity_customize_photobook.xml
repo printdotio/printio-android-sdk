@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        layout="@layout/item_tooltip_balloon"
+        layout="@layout/item_tooltip_balloon_down"
         android:visibility="gone" />
 
     <!-- Product options layout -->
