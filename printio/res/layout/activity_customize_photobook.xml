@@ -8,7 +8,7 @@
     android:focusableInTouchMode="true" >
 
     <RelativeLayout
-        android:id="@+id/layout_buttons"
+        android:id="@+id/layout_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"
         android:background="@color/title_bar_background" >
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/layout_forward_button"
-            android:background="@drawable/bg_selector_border_black_light"
+            android:background="@drawable/bg_selector_button_save_to_cart_photobook"
             android:clickable="true"
             android:onClick="onClickSaveToCart"
             android:paddingBottom="6dip"
@@ -90,7 +90,7 @@
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_below="@+id/layout_buttons"
+        android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
     <ScrollView
@@ -127,7 +127,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        layout="@layout/item_tooltip_balloon"
+        layout="@layout/item_tooltip_balloon_down"
         android:visibility="gone" />
 
     <!-- Product options layout -->

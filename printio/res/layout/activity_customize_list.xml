@@ -7,7 +7,7 @@
     android:focusableInTouchMode="true" >
 
     <RelativeLayout
-        android:id="@+id/layout_buttons"
+        android:id="@+id/layout_titlebar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_bar_height"
         android:background="@color/title_bar_background" >
@@ -89,7 +89,7 @@
         android:id="@+id/view_dummy_title_separator"
         android:layout_width="match_parent"
         android:layout_height="1px"
-        android:layout_below="@+id/layout_buttons"
+        android:layout_below="@+id/layout_titlebar"
         android:background="@color/title_bar_separator" />
 
     <ListView

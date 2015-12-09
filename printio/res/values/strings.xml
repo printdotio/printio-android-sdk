@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="facebook_app_id"></string> <!-- Needed as placeholder. -->
+
     <string name="app_name">Makeable</string>
     <string name="share_app_text">I\'m using PrintIO SDK! You can download it from https://github.com/printdotio/printio-android-sdk</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
@@ -18,9 +20,12 @@
     <string name="exit">Exit</string>
     <string name="exit_shop">Exit Shop</string>
     <string name="starting_at_">Starting at %s</string>
+    <string name="starting_at_retail_">Starting at %1$s %2$s</string>
     <string name="starting_at">Starting at</string>
     <string name="price_">Price %s</string>
+    <string name="price_retail_">Price %1$s %2$s</string>
     <string name="price_each">%s Each</string>
+    <string name="price_retail_each">%1$s %2$s Each</string>
     <string name="title_products">Products</string>
     <string name="all">All</string>
     <string name="product_details">Product Details</string>
@@ -28,6 +33,7 @@
     <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
     <string name="successful_login_to_photo_source">Successfully logged in to %1$s</string>
     <string name="failed_to_login_to_photo_source">Failed to log in to %1$s</string>
+    <string name="logout_photo_source">Do you want to log out of %1$s?</string>
     <string name="phone">Phone</string>
     <string name="instagram">Instagram</string>
     <string name="facebook">Facebook</string>
@@ -73,6 +79,8 @@
     <string name="enter_cvc">Please enter CVC or CVS</string>
     <string name="exp_month_not_valid">Expiration month is not valid</string>
     <string name="billing_address">Billing Address</string>
+    <string name="use_shipping_address">Use Shipping Address</string>
+    <string name="clear_billing_address">Clear Billing Address</string>
     <string name="invalid_coupon">Coupon code is not valid!</string>
     <string name="enter_promo_code">Please enter promo code.</string>
     <string name="coupon_not_applied">Sorry, this coupon does not apply to the items in your cart.</string>
@@ -94,7 +102,6 @@
     <string name="email_empty">\'Email\' should not be empty</string>
     <string name="state_empty">\'State\' should not be empty</string>
     <string name="zip_code_empty">\'Zip Code\' should not be empty</string>
-    <string name="zip_code_us">\'Zip Code\' must be five-digit</string>
     <string name="city_empty">\'City\' should not be empty</string>
     <string name="phone_number_empty">\'Phone Number\' should not be less then %1$s digits</string>
     <string name="phone_number_digits_only">\'Phone Number\' must contain digits only</string>
@@ -125,6 +132,7 @@
     <string name="login">Login</string>
     <string name="info">Info</string>
     <string name="version">Version: %1$s</string>
+    <string name="step_title_generic"><![CDATA[<b>Step %1$s:</b> Choose %2$s]]></string>
     <string name="step_choose_type"><![CDATA[<b>Step %1$s:</b> Choose Type]]></string>
     <string name="step_choose_size"><![CDATA[<b>Step %1$s:</b> Choose Size]]></string>
     <string name="step_choose_size_and_set"><![CDATA[<b>Step %1$s:</b> Choose Size and Set]]></string>
@@ -366,7 +374,7 @@ type of product, making it easy for you to edit or remove items if necessary…
 but we hope you love what you made and we know you will be happy with it!\n\n- Once jeverything looks great in Shipment Review, please select the Enter 
 Payment Info button in the bottom right corner, which will then take you
 to the Payment Page.</string>
-    <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another payment method.</string>
+    <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use Credit Card payment method.</string>
     <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
     <string name="pop_up_payment_page">Almost done! You\'re now in the Payment screen to purchase your one-of-akind design(s)! \n\n- First, select your correct Billing Country.\n\n- Next, select payment method (PayPal or Card) and follow the steps on the next screens.</string>
     <string name="pop_up_payment">You are in this screen because you selected to pay with a card. Automatically 
@@ -392,7 +400,7 @@ each field, simply touch the Place Order button.</string>
     <string name="set_of">Set of %1$s</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
     <string name="problem_downloading_some_photos">There was a problem downloading some of your selected photos. Please try again!</string>
-    <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollar.\n</string>
+    <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollars.\n</string>
     <string name="select_photos_title">Select Images</string>
     <string name="select_color_title">Select Color</string>
     <string name="metal_magnet_title">Metal Magnet</string>
@@ -415,7 +423,6 @@ each field, simply touch the Place Order button.</string>
     <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more pictures</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
-    <string name="for_text">for\u00A0</string>
     <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
     <string name="dialog_resolution_warning_title">This photo is too small</string>
     <string name="dialog_resolution_warning_message">This photo may distort when printing, aim for at least %1$spx wide and %2$spx tall.</string>
@@ -447,6 +454,7 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_pohone_cases_and_skins">Keepin\' it hip and protected</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
+    <string name="tip_scroll_vertically_when_step_appears">Tip - Try scrolling vertically\nwhen next step appears.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>
@@ -478,19 +486,19 @@ you! After you select the images you want to try on your Canvas, click the Next 
 
     <string-array name="wall_calendars_page_titles">
         <item>Calendar Cover</item>
-        <item>January 2015</item>
-        <item>February 2015</item>
-        <item>March 2015</item>
-        <item>April 2015</item>
-        <item>May 2015</item>
-        <item>June 2015</item>
-        <item>July 2015</item>
-        <item>August 2015</item>
-        <item>September 2015</item>
-        <item>October 2015</item>
-        <item>November 2015</item>
-        <item>December 2015</item>
         <item>January 2016</item>
+        <item>February 2016</item>
+        <item>March 2016</item>
+        <item>April 2016</item>
+        <item>May 2016</item>
+        <item>June 2016</item>
+        <item>July 2016</item>
+        <item>August 2016</item>
+        <item>September 2016</item>
+        <item>October 2016</item>
+        <item>November 2016</item>
+        <item>December 2016</item>
+        <item>January 2017</item>
     </string-array>
 
 </resources>

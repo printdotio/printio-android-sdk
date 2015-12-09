@@ -1,3 +1,14 @@
+IMPORTANT NOTE TO PARTNERS
+========
+We have made changes to Framed Canvas’ and T-shirts products. If you have these products enabled in the production version of your admin panel, they will not work in the iOS and Android clients until you update to this SDK. A work around is to disable these products in your admin panel until you are ready to update to the latest Makeable SDK. This will ensure a better user experience.  
+
+
+Migrating to v3.1.21 from v3.1.7
+========
+**Changes in AndroidManifest.xml**
+Activity declarations have been modified and new Activities were added.  
+Please refer to [Project Setup](PROJECT_SETUP.md#3-activities)
+
 Migrating to v3.1.0 from v3.0.24
 ========
 **New feature - Text**

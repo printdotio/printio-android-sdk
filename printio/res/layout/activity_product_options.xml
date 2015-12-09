@@ -59,7 +59,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dip"
-            android:background="@drawable/bg_selector_border_black_light"
+            android:background="@drawable/bg_selector_button_cancel_options"
             android:clickable="true"
             android:onClick="onClickCancel"
             android:paddingBottom="6dip"

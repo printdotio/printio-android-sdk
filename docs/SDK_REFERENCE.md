@@ -241,14 +241,14 @@ PIOConfig.setSupportEmail(String supportEmail);
 &nbsp;  
 ##### **Options** section:  
 
-To modify its title, change the following item in  `res/values/strings.xml` and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
+To modify its title, change the following item in `res/values/strings.xml` and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
 ```xml
 <string name="options">Options</string>
 ```
 **NOTICE:**  
 Never modify xml item names. Modify values only.  
 &nbsp;  
-To change the section title color, modify the following item in  `res/values/colors.xml`
+To change the section title color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="side_menu_options_subtitle_text">#FFFFFF</color>
 ```
@@ -283,12 +283,12 @@ To modify its title, change the following item in `res/values/strings.xml`  and 
 <string name="accounts">Accounts</string>
 ```
 &nbsp;  
-To change the section title color, modify the following item in  `res/values/colors.xml`
+To change the section title color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
-To change the section title background color, modify the following item in  `res/values/colors.xml`
+To change the section title background color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="side_menu_accounts">#1CBA9B</color>
 ```
@@ -300,17 +300,17 @@ PIOConfig.hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
 ```
 &nbsp;  
 ##### **Info** section:  
-To modify its title, change the following item in  `res/values/strings.xml`  and if your app supports multiple languages, change the appropriate items in  `res/values-language/strings.xml`
+To modify its title, change the following item in `res/values/strings.xml`  and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
 ```xml
 <string name="info">Info</string>
 ```
 &nbsp;  
-To change the section title color, modify the following item in  `res/values/colors.xml`
+To change the section title color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="side_menu_info_subtitle_text">#FFFFFF</color>
 ```
 &nbsp;  
-To change the section title background color, modify the following item in  `res/values/colors.xml`
+To change the section title background color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="side_menu_info">#6369A6</color>
 ```
@@ -403,7 +403,7 @@ PIOConfig.setVendorLogoOnScreen(Screen screen, Integer resourceId)
 &nbsp;
 #### > Change background color of Select Country bar.
 
-To change the background color of Select Country bar, modify the following item in  `res/values/colors.xml`
+To change the background color of Select Country bar, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="select_country_background">#2277D4</color>
 ```
@@ -505,16 +505,30 @@ PIOConfig.setRetailDiscountPercent(Float discountPercent);
 &nbsp;  
 Product Options screen
 --------------
-#### > Set strategy for "choose layout" step on Product Options screen
+#### > Set strategy for steps with single option 
+Set strategies used for displaying steps when there is single option to choose.
 
 Possible strategies:
 
-* `DEFAULT` - Choose layout step is always shown when there is more then one layout.
+* `PRESELECT` - If step has single option, option will be preselected.
+* `SKIP` - If step has single option, step will not be shown.
+
+Default value is `SingleOptionStepStrategy.PRESELECT`.
+```java
+PIOConfig.setSingleOptionStepStrategy(SingleOptionStepStrategy strategy);
+```
+&nbsp;  
+&nbsp;
+#### > Set strategy for layout step on Product Options screen
+
+Possible strategies:
+
+* `SHOW` - Choose layout step is always shown when there is more then one layout.
 * `SKIP_BEST_FIT_TO_PASSED_IMAGES_COUNT` - Skips choose layout step and uses layout that fits the best for passed in images count.
 * `FILTER_LAYOUTS_UP_TO_PASSED_IMAGES_COUNT` - Shows step but with layouts which have image slots up to passed in images count. If there are no layouts that satisfy filtering criteria all layouts will be shown. In case when there is single layout step is skipped.
 * `SKIP_FOR_SINGLE_PASSED_IMAGE` - Skips choose layout step when single images is passed in and uses one photo layout, otherwise step is shown.
 
-Default value is `LayoutStepStrategy.DEFAULT`.
+Default value is `LayoutStepStrategy.SHOW`.
 ```java
 PIOConfig.setLayoutStepStrategy(LayoutStepStrategy strategy);
 ```
@@ -527,6 +541,13 @@ Sets visibility of cancel button in title bar. When clicked SDK will return cont
 Default value is `false` (hidden).
 ```java
 PIOConfig.setCancelOptionsButtonVisibility(boolean isVisible);
+```
+
+To customize `Cancel` button, modify the following items in `res/values/colors.xml`:
+```xml
+<color name="button_cancel_options_text">#000000</color>
+<color name="button_cancel_options_border">#000000</color>
+<color name="button_cancel_options_background">#00000000</color>
 ```
 &nbsp;  
 &nbsp;
@@ -712,11 +733,11 @@ icon_add_more_images_b.png (111x111) - pressed state
 #### > Set Pop up balloon in Customize Product screen.  
 ( > Customize tooltip in Customize Product screen)  
 
-To modify tooltip text, change the following item in  `res/values/strings.xml`
+To modify tooltip text, change the following item in `res/values/strings.xml`
 ```xml
 <string name="customize_product_tooltip_text">Double click photo to edit</string>
 ```
-To change tooltip background color, modify the following item in  `res/values/colors.xml`
+To change tooltip background color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="customize_product_tooltip">#42BE9C</color>
 ```
@@ -760,7 +781,7 @@ icon_edit_image_effects_default.png - default state
 icon_edit_image_effects_pressed.png - pressed state
 ```
 
-To change background highlight colors, modify following items in  `res/values/colors.xml`
+To change background highlight colors, modify following items in `res/values/colors.xml`
 ```xml
 <color name="edit_image_info_background_highlight">#EFEFF2</color>
 <color name="edit_image_rotate_background_highlight">#42BE9C</color>
@@ -768,7 +789,7 @@ To change background highlight colors, modify following items in  `res/values/co
 <color name="edit_image_effects_background_highlight">#646AA6</color>
 ```
 
-To change text colors, modify following items in  `res/values/colors.xml`
+To change text colors, modify following items in `res/values/colors.xml`
 ```xml
 <color name="edit_image_info_text_default">#22A0DD</color>
 <color name="edit_image_info_text_pressed">#404040</color>
@@ -809,7 +830,7 @@ These are the default values.
 <dimen name="cart_items_quantity_top_offset">10dip</dimen>
 <dimen name="cart_items_quantity_right_offset">0dip</dimen>
 ```
-To change cart quantity text color, modify the following item in  `res/values/colors.xml`
+To change cart quantity text color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="text_cart_items_quantity">#FFFFFF</color>
 ```
@@ -825,7 +846,7 @@ Recommended dimensions are listed next to the icon name.
 icon_cart_white.png (45x42)
 icon_cart_items_qty_background_side_menu.png (31x31) //Background for the badge that displays cart items count
 ```
-To change cart quantity text color, modify the following item in  `res/values/colors.xml`
+To change cart quantity text color, modify the following item in `res/values/colors.xml`
 ```xml
 <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
 ```
@@ -843,10 +864,10 @@ PIOConfig.setShowAddMoreProductsInShoppingCart(boolean isVisible);
 
 Possible strategies:
 
-* `DEFAULT` - Opens "Products" screen.
+* `OPEN_PRODUCTS_SCREEN` - Opens "Products" screen.
 * `RETURN_TO_HOST_ACTIVITY` - Closes SDK and returns to the host activity.
 
-Default value is `AddMoreProductsButtonStrategy.DEFAULT`.
+Default value is `AddMoreProductsButtonStrategy.OPEN_PRODUCTS_SCREEN`.
 ```java
 PIOConfig.setAddMoreProductsButtonStrategy(AddMoreProductsButtonStrategy strategy);
 ```
@@ -1118,7 +1139,7 @@ Smaller value equals faster animation and vice-versa.
 #### > Change title of loading dialog  
 ( > Change loading dialog text)  
 
-To modify loading dialog title and message, change the following items in  `res/values/strings.xml`
+To modify loading dialog title and message, change the following items in `res/values/strings.xml`
 ```xml
 <string name="progress_text_pt1">Loading... Please wait.</string>
 <string name="progress_text_pt2">Think Happy Thoughts</string>
@@ -1163,7 +1184,7 @@ PIOConfig.setPartnerName(String partnerName);
 
 Sets the screen to jump to when SDK launches  and the screen which should be shown when user navigates back.  
 Following screens are supported by this method:
--  `Screen.PRODUCTS`
+- `Screen.PRODUCTS`
 - `Screen.SHOPPING_CART`
 
 ```java
@@ -1186,7 +1207,7 @@ PIOConfig.setJumpToScreen(Screen screen, Screen navigateBackScreen)
 &nbsp;  
 #### > Change buttons' colors  
 
-To change buttons' colors, modify the following items in  `res/values/colors.xml`  
+To change buttons' colors, modify the following items in `res/values/colors.xml`  
 &nbsp;  
 Primary button:
 ```xml
@@ -1207,6 +1228,13 @@ Save To Cart button:
 <color name="button_save_to_cart_background_default">#22A0DD</color>
 <color name="button_save_to_cart_background_pressed">#0E79AD</color>
 <color name="button_save_to_cart_text">#000000</color>
+```
+&nbsp;
+Save To Cart button in Customize Photobooks screen:
+```xml
+<color name="button_save_to_cart_photobooks_text">#000000</color>
+<color name="button_save_to_cart_photobooks_border">#000000</color>
+<color name="button_save_to_cart_photobooks_background">#00000000</color>
 ```
 **NOTICE:**  
 Those buttons are used throughout the application.  
@@ -1251,7 +1279,7 @@ To change 'Quality Guarantee' text, modify following item in
 #### > Dialog "Arrange Photos"  
 ( > Change buttons labels in Auto Arrange dialog)  
 
-To modify buttons' labels, change the following items in  `res/values/strings.xml`
+To modify buttons' labels, change the following items in `res/values/strings.xml`
 ```xml
 <string name="random_auto_arrange">Auto Random\nArrange</string>
 <string name="manual_drag_drop">Manual\nDrag and Drop</string>
@@ -1263,7 +1291,7 @@ Use `newline` character `\n` to manually add new lines.
 #### > Dialog "Address Type"  
 ( > Change Address Type dialog labels)  
 
-To modify labels, change the following items in   `res/values/strings.xml`
+To modify labels, change the following items in  `res/values/strings.xml`
 ```xml
 <string name="business_residential">Is this address Business or Residental?</string>
 <string name="business">Business\nAddress</string>
@@ -1276,7 +1304,7 @@ Use `newline` character `\n` to manually add new lines.
 #### > Dialog "What's New"  
 ( > Change What's New dialog text)
 
-  To modify text, change the following item in  `res/values/strings.xml`
+  To modify text, change the following item in `res/values/strings.xml`
 ```xml
 <string name="whats_new_dialog_text"></string>
 ```
@@ -1299,7 +1327,7 @@ PIOConfig.setHelpUrl(String helpUrl);
 &nbsp;  
 #### > Set "About" text  
 
-To modify "About" text, change the following item in  `res/values/strings.xml`
+To modify "About" text, change the following item in `res/values/strings.xml`
 ```xml
 <string name="about_partner">About print.io</string>
 <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
@@ -1310,7 +1338,7 @@ Use `newline` character `\n` to manually add new lines.
 &nbsp;  
 #### > Set "How it Works" text  
 
-To modify "How it Works" section, change the following items in  `res/values/strings.xml`
+To modify "How it Works" section, change the following items in `res/values/strings.xml`
 ```xml
 <string name="how_it_works_title">How It Works</string>
 <string name="how_it_works_subtitle">How It Works:</string>
@@ -1330,7 +1358,7 @@ PIO.getNumberOfItemsInShoppingCart(Context context);
 &nbsp;
 #### > Change photo sources text and background colors  
 
-To change photo sources text and background colors, modify following items in  `res/values/colors.xml`
+To change photo sources text and background colors, modify following items in `res/values/colors.xml`
 ```xml
 <color name="photosources_background">#333333</color>
 <color name="photosources_text">#FFFFFF</color>

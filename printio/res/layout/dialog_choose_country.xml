@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_white"
+        android:orientation="vertical"
+        android:padding="8dip" >
+
+        <print.io.view.TextViewFontNormal
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="8dip"
+            android:text="@string/choose_country"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large" />
+
+        <RelativeLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dip"
+            android:paddingTop="4dip"
+            android:visibility="visible" >
+
+            <print.io.view.EditTextFontLight
+                android:id="@+id/edittext_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text_search"
+                android:hint="@string/country_search"
+                android:imeOptions="actionDone"
+                android:inputType="textNoSuggestions|textVisiblePassword"
+                android:paddingLeft="8dip"
+                android:paddingRight="30dip"
+                android:textSize="@dimen/text_size_normal" />
+
+            <ImageView
+                android:id="@+id/imageview_clear_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:paddingBottom="8dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:paddingTop="8dip"
+                android:src="@drawable/icon_x" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview_choose_country"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="1dip" />
+
+        <print.io.view.ButtonFontLight
+            android:id="@+id/button_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_secondary"
+            android:gravity="center"
+            android:padding="8dip"
+            android:text="@string/cancel"
+            android:textColor="@color/button_secondary_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
