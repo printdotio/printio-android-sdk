@@ -3,6 +3,10 @@
 3.1.21 (v118)
 =============
 
+IMPORTANT NOTE TO PARTNERS
+========
+We have made changes to Framed Canvas’ and T-shirts products. If you have these products enabled in the production version of your admin panel, they will not work in the iOS and Android clients until you update to this SDK. A work around is to disable these products in your admin panel until you are ready to update to the latest Makeable SDK. This will ensure a better user experience.  
+
 **Features:**
 
 - Added an exception when SDK is invoked without specifying any Payment methods
