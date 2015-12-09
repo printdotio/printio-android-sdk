@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="facebook_app_id"></string> <!-- Needed as placeholder. -->
+
     <string name="app_name">Makeable</string>
     <string name="share_app_text">I\'m using PrintIO SDK! You can download it from https://github.com/printdotio/printio-android-sdk</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
@@ -130,6 +132,7 @@
     <string name="login">Login</string>
     <string name="info">Info</string>
     <string name="version">Version: %1$s</string>
+    <string name="step_title_generic"><![CDATA[<b>Step %1$s:</b> Choose %2$s]]></string>
     <string name="step_choose_type"><![CDATA[<b>Step %1$s:</b> Choose Type]]></string>
     <string name="step_choose_size"><![CDATA[<b>Step %1$s:</b> Choose Size]]></string>
     <string name="step_choose_size_and_set"><![CDATA[<b>Step %1$s:</b> Choose Size and Set]]></string>
@@ -451,7 +454,7 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_pohone_cases_and_skins">Keepin\' it hip and protected</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
-    <string name="tip_scroll_vericaly_when_step_appears">Tip - Try scrollying vericaly\nwhen next step appears.</string>
+    <string name="tip_scroll_vertically_when_step_appears">Tip - Try scrolling vertically\nwhen next step appears.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

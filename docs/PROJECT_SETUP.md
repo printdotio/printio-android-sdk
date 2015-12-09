@@ -103,11 +103,11 @@ Please add following activities to your AndroidManifest.xml file:
 <activity
 	android:name="print.io.ActivityProducts"
 	android:screenOrientation="portrait"
-	android:windowSoftInputMode="adjustResize" />
+	android:windowSoftInputMode="adjustResize|stateHidden" />
 <activity
 	android:name="print.io.ActivityProductsV2"
 	android:screenOrientation="portrait"
-	android:windowSoftInputMode="adjustResize" />
+	android:windowSoftInputMode="adjustResize|stateHidden" />
 <activity
 	android:name="print.io.ActivityProductDetails"
 	android:screenOrientation="portrait" />
@@ -182,63 +182,73 @@ Please add following activities to your AndroidManifest.xml file:
 <activity
 	android:name="com.facebook.FacebookActivity"
 	android:screenOrientation="portrait" />
+<activity
+    android:name="print.io.ActivityOrderDetails"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="print.io.ActivityOrderStatus"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="print.io.ActivityPastOrders"
+    android:screenOrientation="portrait" />
 
- <!-- Activities needed for new paypal functionalities -->
- <service
-     android:name="com.paypal.android.sdk.payments.PayPalService"
-     android:exported="false" />
+<!-- Activities needed for new PayPal functionalities -->
+<service
+    android:name="com.paypal.android.sdk.payments.PayPalService"
+    android:exported="false" />
 
- <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" android:screenOrientation="portrait" />
- <activity android:name="com.paypal.android.sdk.payments.LoginActivity" android:screenOrientation="portrait" />
- <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" android:screenOrientation="portrait" />
- <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" android:screenOrientation="portrait" />
- <activity
-     android:name="io.card.payment.CardIOActivity"
-     android:configChanges="keyboardHidden|orientation" />
- <activity android:name="io.card.payment.DataEntryActivity" />
+<activity
+    android:name="com.paypal.android.sdk.payments.PaymentActivity"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="com.paypal.android.sdk.payments.LoginActivity"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"
+    android:screenOrientation="portrait" />
+<activity
+    android:name="io.card.payment.CardIOActivity"
+    android:configChanges="keyboardHidden|orientation" />
+<activity android:name="io.card.payment.DataEntryActivity" />
 
- <meta-data
-     android:name="com.crashlytics.ApiKey"
-     android:value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
- <meta-data
-     android:name="com.facebook.sdk.ApplicationId"
-     android:value="@string/facebook_app_id" />
+<meta-data
+    android:name="com.crashlytics.ApiKey"
+    android:value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+<meta-data
+    android:name="com.facebook.sdk.ApplicationId"
+    android:value="@string/facebook_app_id" />
 
- <service android:name="com.parse.PushService" />
+<service android:name="com.parse.PushService" />
 
- <receiver android:name="com.parse.ParseBroadcastReceiver" >
-     <intent-filter>
-         <action android:name="android.intent.action.BOOT_COMPLETED" />
-         <action android:name="android.intent.action.USER_PRESENT" />
-     </intent-filter>
- </receiver>
- <receiver
-     android:name="com.parse.GcmBroadcastReceiver"
-     android:permission="com.google.android.c2dm.permission.SEND" >
-     <intent-filter>
-         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-         <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+<receiver android:name="com.parse.ParseBroadcastReceiver" >
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.USER_PRESENT" />
+    </intent-filter>
+</receiver>
+<receiver
+    android:name="com.parse.GcmBroadcastReceiver"
+    android:permission="com.google.android.c2dm.permission.SEND" >
+    <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-         <!-- IMPORTANT: Change "com.example.piosdkpoconcept" to match your app's package name. -->
-         <category android:name="com.example.piosdkpoconcept" />
-     </intent-filter>
- </receiver>
- <receiver
-     android:name="print.io.PushNotificationsReceiver"
-     android:exported="false" >
-     <intent-filter>
+        <!-- IMPORTANT: Change "com.example.piosdkpoconcept" to match your app's package name. -->
+        <category android:name="com.example.piosdkpoconcept" />
+    </intent-filter>
+</receiver>
+<receiver
+    android:name="print.io.PushNotificationsReceiver"
+    android:exported="false" >
+    <intent-filter>
 
-         <!-- IMPORTANT: Change "com.example.piosdkpoconcept" to match your app's package name. -->
-         <action android:name="com.example.piosdkpoconcept.PUSH_NOTIFICATION" />
-     </intent-filter>
- </receiver>
-
- <!-- IMPORTANT: Change "com.example.piosdkpoconcept" to match your app's package name. -->
- <receiver android:name="com.example.piosdkpoconcept.PrintIOCloseReceiver" >
-     <intent-filter>
-         <action android:name="ACTION_EXIT_PRINT_IO_SDK" />
-     </intent-filter>
- </receiver>
+        <!-- IMPORTANT: Change "com.example.piosdkpoconcept" to match your app's package name. -->
+        <action android:name="com.example.piosdkpoconcept.PUSH_NOTIFICATION" />
+    </intent-filter>
+</receiver>
 ```
 
 ###4. Application element
