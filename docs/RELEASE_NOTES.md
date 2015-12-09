@@ -1,5 +1,60 @@
 **Android Release Notes**
 
+3.1.21 (v118)
+=============
+
+**Features:**
+
+- Added an exception when SDK is invoked without specifying any Payment methods
+
+- Added ability to make a purchase when a coupon brings order total to $0
+
+- Added ability to enter Billing Address when making purchases
+
+- Removed 5-character limit when entering Zip codes
+
+- Added confirmation dialog when logging out of photo sources
+
+- Customizable user flow for `Options` screen. Refer to [docs](docs/SDK_REFERENCE.md#-set-strategy-for-steps-with-single-option)
+
+- V2 screens can be used without passed-in image
+
+- Vendor logo can now be displayed in V1 screens
+
+- `Cancel` button in `Options` screen is now customizable. Refer to [docs](docs/SDK_REFERENCE.md#-set-cancel-button-visibility)
+
+- Resolution warning thresholds reduced from 0.5 to 0.33
+
+- Updated `Google Photos` icon
+
+- Added new options for some products
+
+- Added crash reporting
+
+**Bugs:**
+
+- Fixed a bug which occurred when some images were passed in, but `Preselected` photo source was not selected
+
+- Fixed a bug which occurred when country was changed from within a category
+
+- Fixed a crash when dialog is shown while the app is in the background
+
+- Fixed a crash on image preview in V2 `Product Details` screen
+
+- Fixed image alignment in MINIBOOKS product
+
+- Fixed `Add more photos` button visibility when `PIOConfig.setShowPhotosInCustomize()` is set to `false`
+
+- Fixed transparency issues in MINIBOOKS product
+
+- Fixed a crash in WALL_CALENDARS product when using auto-populate option
+
+- Fixed bad overlays and bad/missing icons for some products
+
+- Fixed text being cut off on some labels
+
+###
+
 3.1.7 (v118)
 ============
 
