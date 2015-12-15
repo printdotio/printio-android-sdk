@@ -133,19 +133,14 @@
     <string name="info">Info</string>
     <string name="version">Version: %1$s</string>
     <string name="step_title_generic"><![CDATA[<b>Step %1$s:</b> Choose %2$s]]></string>
-    <string name="step_choose_type"><![CDATA[<b>Step %1$s:</b> Choose Type]]></string>
+    <string name="step_choose_photo_layout_design"><![CDATA[<b>Step %1$s:</b> Choose Photo Layout & Design]]></string>
     <string name="step_choose_size"><![CDATA[<b>Step %1$s:</b> Choose Size]]></string>
-    <string name="step_choose_size_and_set"><![CDATA[<b>Step %1$s:</b> Choose Size and Set]]></string>
     <string name="step_choose_size_and_thickness"><![CDATA[<b>Step %1$s:</b> Choose Size and Thickness]]></string>
     <string name="step_choose_size_and_shape"><![CDATA[<b>Step %1$s:</b> Choose Size and Shape]]></string>
-    <string name="step_choose_type_and_size"><![CDATA[<b>Step %1$s:</b> Choose Type and Size]]></string>
     <string name="step_choose_color"><![CDATA[<b>Step %1$s:</b> Choose Color]]></string>
     <string name="step_choose_material"><![CDATA[<b>Step %1$s:</b> Choose Material]]></string>
-    <string name="step_choose_back_color"><![CDATA[<b>Step %1$s:</b> Choose Back Color]]></string>
-    <string name="step_choose_bed_type"><![CDATA[<b>Step %1$s:</b> Choose Bed Type]]></string>
     <string name="step_choose_shape"><![CDATA[<b>Step %1$s:</b> Choose Shape]]></string>
     <string name="step_choose_wrap_style"><![CDATA[<b>Step %1$s:</b> Choose Wrap Color Style]]></string>
-    <string name="step_choose_photo_layout_design"><![CDATA[<b>Step %1$s:</b> Choose Photo Layout & Design]]></string>
     <string name="step_choose_phone_type"><![CDATA[<b>Step %1$s:</b> Choose Phone Type]]></string>
     <string name="step_choose_tablet_type"><![CDATA[<b>Step %1$s:</b> Choose Tablet Type]]></string>
     <string name="step_choose_print_type"><![CDATA[<b>Step %1$s:</b> Choose Print Type]]></string>
@@ -155,7 +150,6 @@
     <string name="step_choose_frame_thickness"><![CDATA[<b>Step %1$s:</b> Choose Frame Thickness]]></string>
     <string name="step_choose_front_side_template"><![CDATA[<b>Step %1$s:</b> Choose Front Side Template]]></string>
     <string name="step_choose_back_side_template"><![CDATA[<b>Step %1$s:</b> Choose Back Side Template]]></string>
-    <string name="step_choose_pillow_type_and_size"><![CDATA[<b>Step %1$s:</b> Choose Pillow Type and Size]]></string>
     <string name="step_choose_pillow_back_pillow"><![CDATA[<b>Step %1$s:</b> Choose Pillow Back Color]]></string>
     <string name="step_choose_background_border"><![CDATA[<b>Step %1$s:</b> Choose Background/Border Color]]></string>
     <string name="step_choose_case_background_color"><![CDATA[<b>Step %1$s:</b> Choose Case Background Color]]></string>
@@ -165,20 +159,10 @@
     <string name="step_choose_surface"><![CDATA[<b>Step %1$s:</b> Choose Surface]]></string>
     <string name="step_choose_backing"><![CDATA[<b>Step %1$s:</b> Choose Backing]]></string>
     <string name="step_choose_print_size"><![CDATA[<b>Step %1$s:</b> Choose Print Size]]></string>
-    <string name="step_choose_pillow_fabric"><![CDATA[<b>Step %1$s:</b> Choose Pillow Fabric]]></string>
     <string name="step_choose_paper_finish"><![CDATA[<b>Step %1$s:</b> Choose Paper Finish]]></string>
     <string name="step_choose_paper_type"><![CDATA[<b>Step %1$s:</b> Choose Paper Type]]></string>
     <string name="step_choose_page_count"><![CDATA[<b>Step %1$s:</b> Choose Page Count]]></string>
-    <string name="step_choose_hand_preference"><![CDATA[<b>Step %1$s:</b> Choose Hand Preference]]></string>
-    <string name="step_choose_single_double_sided"><![CDATA[<b>Step %1$s:</b> Choose Single/Double Sided]]></string>
     <string name="step_choose_pack_size"><![CDATA[<b>Step %1$s:</b> Choose Pack Size]]></string>
-    <string name="step_choose_image"><![CDATA[<b>Step %1$s:</b> Choose Image]]></string>
-    <string name="step_choose_gender"><![CDATA[<b>Step %1$s:</b> Choose Gender]]></string>
-    <string name="step_choose_print"><![CDATA[<b>Step %1$s:</b> Choose Print]]></string>
-    <string name="step_choose_model"><![CDATA[<b>Step %1$s:</b> Choose Model]]></string>
-    <string name="step_choose_brand"><![CDATA[<b>Step %1$s:</b> Choose Brand]]></string>
-    <string name="step_choose_underbase"><![CDATA[<b>Step %1$s:</b> Choose Underbase]]></string>
-    <string name="step_choose_print_sides"><![CDATA[<b>Step %1$s:</b> Choose Print Sides]]></string>
     <string name="step_choose_thickness"><![CDATA[<b>Step %1$s:</b> Choose Thickness]]></string>
     <string name="choose_options">Choose Options</string>
     <string name="select_photos">Select Photos</string>
@@ -454,7 +438,6 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_pohone_cases_and_skins">Keepin\' it hip and protected</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
-    <string name="tip_scroll_vertically_when_step_appears">Tip - Try scrolling vertically\nwhen next step appears.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

@@ -9,6 +9,7 @@
     android:horizontalSpacing="8dip"
     android:layoutAnimation="@anim/layout_grid_fade"
     android:numColumns="3"
+    android:listSelector="@drawable/bg_selector_global"
     android:paddingBottom="90dip"
     android:paddingLeft="10dip"
     android:paddingRight="10dip"

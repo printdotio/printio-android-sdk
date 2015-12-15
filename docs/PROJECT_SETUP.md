@@ -163,15 +163,12 @@ Please add following activities to your AndroidManifest.xml file:
 	android:screenOrientation="portrait" />
 <activity
 	android:name="print.io.photosource.impl.instagram.Instagram"
-	android:noHistory="true"
 	android:screenOrientation="portrait" />
 <activity
 	android:name="print.io.photosource.impl.flickr.Flickr"
-	android:noHistory="true"
 	android:screenOrientation="portrait" />
 <activity
 	android:name="print.io.photosource.impl.dropbox.Dropbox"
-	android:noHistory="true"
 	android:screenOrientation="portrait" />
 <activity
 	android:name="print.io.ActivityAbout"
