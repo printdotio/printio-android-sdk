@@ -137,20 +137,49 @@
 
             <!-- Layout Items -->
 
+            <print.io.view.TextViewFontNormal
+                android:id="@+id/textview_description_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dip"
+                android:paddingLeft="15dip"
+                android:paddingRight="20dip"
+                android:paddingTop="20dip"
+                android:text="@string/description"
+                android:textColor="@color/product_details_header_1"
+                android:textSize="@dimen/text_size_large" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:background="#d8d8d8" />
+
             <LinearLayout
-                android:id="@+id/container_product_details"
+                android:id="@+id/layout_description_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="10dip"
-                android:paddingTop="10dip" />
+                android:paddingBottom="10dip" >
 
-            <include
-                android:id="@+id/item_details"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dip"
-                layout="@layout/item_product_details_details" />
+                <LinearLayout
+                    android:id="@+id/layout_description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dip"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="15dip"
+                    android:paddingTop="10dip" />
+
+                <include
+                    android:id="@+id/item_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    layout="@layout/item_product_details_details" />
+            </LinearLayout>
 
             <include
                 android:id="@+id/item_shipping_info"

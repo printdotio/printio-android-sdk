@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<print.io.view.TextViewFontNormal xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textview_checkout_progress"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/view_dummy_title_separator"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/bg_border_black_bg_white"
+    android:paddingBottom="2dip"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="2dip"
+    android:visibility="invisible" />

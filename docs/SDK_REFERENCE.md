@@ -128,7 +128,6 @@ enum SideMenuButton {
 	EXIT_BUTTON,
     SEARCH_BAR,
     PRODUCTS,
-    FEATURED_PRODUCTS,
     SHARE_WITH_IMAGE,
     EMAIL_SUPPORT,
     HELP,
@@ -142,7 +141,6 @@ Recommended dimensions are listed next to the icon name.
 ```
 icon_exit_sdk.png (17x30)
 icon_products.png (52x52)
-icon_featured_products.png (52x52)
 icon_email.png (52x52)
 icon_help.png (17x26)
 icon_cart_white.png (45x42)
@@ -458,16 +456,7 @@ Default value is `false`.
 PIOConfig.setHideCategorySearchBar(boolean hideCategorySearchBar);
 ```
 &nbsp;  
-&nbsp;  
-#### > Shows featured products by default. If disabled all products screen is shown
-( > Shows featured products by default. If disabled all products screen is shown.)  
-
-Default value is `true`.
-```java
-PIOConfig.setShowFeaturedProductsByDefault(boolean showFeaturedProductsByDefault);
-```
-&nbsp;  
-&nbsp;  
+&nbsp;    
 #### > Hide `Coming Soon` products  
 
 Default value is `false`.
@@ -851,7 +840,15 @@ To change cart quantity text color, modify the following item in `res/values/col
 <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
 ```
 &nbsp;  
-&nbsp;
+&nbsp;  
+#### > Show Checkout Progress below the title bar in Shopping Cart.  
+
+Default value is 'false' (Checkout Progress is hidden).
+```java
+PIOConfig.setShowCheckoutProgress(boolean showCheckoutProgress);
+```
+&nbsp;  
+&nbsp;  
 #### > Show "Add more products" button on Shopping Cart screen.  
 
 Default value is 'true' (button is visible).
@@ -859,7 +856,7 @@ Default value is 'true' (button is visible).
 PIOConfig.setShowAddMoreProductsInShoppingCart(boolean isVisible);
 ```
 &nbsp;  
-&nbsp; 
+&nbsp;  
 #### > Set click action strategy for "Add more products" button
 
 Possible strategies:
@@ -872,7 +869,20 @@ Default value is `AddMoreProductsButtonStrategy.OPEN_PRODUCTS_SCREEN`.
 PIOConfig.setAddMoreProductsButtonStrategy(AddMoreProductsButtonStrategy strategy);
 ```
 &nbsp;  
+&nbsp;
+#### > Set delete mode for Shopping Cart
+
+Available modes:
+
+* `HIDDEN` - Delete buttons are displayed using "Remove Item" button at the bottom of the screen.
+* `VISIBLE` - Each item has its own delete button in the top right corner.
+
+Default value is `ShoppingCartDeleteMode.HIDDEN`.
+```java
+PIOConfig.setShoppingCartDeleteMode(ShoppingCartDeleteMode shoppingCartDeleteMode);
+```
 &nbsp;  
+&nbsp;    
 #### > Controls if widget should be closed when tap on Back button in "Shopping Cart" screen. 
 
 Default value is false (functionality is ignored).

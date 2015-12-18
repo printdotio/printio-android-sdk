@@ -27,5 +27,5 @@
     <dimen name="cart_items_quantity_right_offset">0dip</dimen>
 
     <dimen name="customize_product_view_margins">8dip</dimen>
-
+	
 </resources>

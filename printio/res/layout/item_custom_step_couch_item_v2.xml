@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="8dip"
+    android:layout_marginRight="8dip"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="5dip"
+    android:paddingTop="2dip" >
+
+    <print.io.view.TextViewFontBold
+        android:id="@+id/textview_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_normal" />
+
+    <print.io.imageloader.MyImageView
+        android:id="@+id/imageview_image"
+        android:layout_width="wrap_content"
+        android:layout_height="120dip"
+        android:adjustViewBounds="true"
+        android:paddingLeft="1dip"
+        android:paddingRight="1dip"
+        android:scaleType="fitCenter" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_normal" />
+
+    <print.io.view.TextViewFontLight
+        android:id="@+id/textview_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="#333333"
+        android:textSize="@dimen/text_size_normal"
+        android:visibility="gone" />
+
+</LinearLayout>

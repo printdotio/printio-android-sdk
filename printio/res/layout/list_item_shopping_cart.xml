@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageview_shopping_cart"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="20dip"
+        android:layout_marginRight="8dip"
         android:gravity="center"
         android:orientation="vertical" >
 
@@ -107,64 +107,16 @@
             android:src="@drawable/icon_quantity" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_arrival"
+    <ImageView
+        android:id="@+id/imageview_delete_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/dummy_shopping_cart_quantity"
-        android:layout_marginLeft="15dip"
-        android:layout_marginRight="10dip"
-        android:layout_toRightOf="@+id/imageview_shopping_cart"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone" >
-
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/est_arrival"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/est_arrival"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_est_arrival_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:singleLine="true"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/layout_ship_cost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textview_price"
         android:layout_alignParentRight="true"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:visibility="gone" >
-
-        <print.io.view.TextViewFontNormal
-            android:id="@+id/ship_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/ship_cost"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_ship_cost_value"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:singleLine="true"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:padding="8dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_x"
+        android:visibility="gone" />
 
 </RelativeLayout>
