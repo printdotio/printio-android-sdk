@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<attr name="hlv_listViewStyle" format="reference" />
-	<attr name="hlv_absHListViewStyle" format="reference" />
-	<attr name="hlv_listPreferredItemWidth" format="dimension" />
+	<attr name="printiosdk_hlv_listViewStyle" format="reference" />
+	<attr name="printiosdk_hlv_absHListViewStyle" format="reference" />
+	<attr name="printiosdk_hlv_listPreferredItemWidth" format="dimension" />
 
-	<attr name="hlv_expandableListViewStyle" format="reference" />
+	<attr name="printiosdk_hlv_expandableListViewStyle" format="reference" />
 
-	<declare-styleable name="HListView">
+	<declare-styleable name="PrintIoSdkHListView">
 		<attr name="android:entries" />
 		<attr name="android:divider" />
 		<attr name="hlv_dividerWidth" format="dimension" />
@@ -24,7 +24,7 @@
 	</declare-styleable>
 
 
-	<declare-styleable name="AbsHListView">
+	<declare-styleable name="PrintIoSdkAbsHListView">
 		<attr name="android:listSelector" />
 		<attr name="android:smoothScrollbar" />
 		<attr name="android:drawSelectorOnTop" />
@@ -42,7 +42,7 @@
 	</declare-styleable>
 
 
-	<declare-styleable name="ExpandableHListView">
+	<declare-styleable name="PrintIoSdkExpandableHListView">
 
 		<attr name="hlv_indicatorGravity">
 			<flag name="top" value="0x30" />

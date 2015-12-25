@@ -1,5 +1,54 @@
 **Android Release Notes**
 
+3.1.28 (v119)
+=============
+
+**Features:**
+
+- Ability to contact our Customer Support when an order fails two times
+
+- Added checkout progress indicator. Refer to [docs](docs/SDK_REFERENCE.md#-show-checkout-progress-below-the-title-bar-in-shopping-cart)
+
+- Product Description is now expandable in `Product Details` V2 Screen
+
+- Product price is displayed in Title Bar during checkout
+
+- Added a method to hide `Remove Item` button from `Shopping Cart` Screen. Refer to [docs](docs/SDK_REFERENCE.md#-set-delete-mode-for-shopping-cart)
+
+- Removed list view from `Products` V2 Screen
+
+- Removed `Featured Products` button from Side Menu
+
+- Added shopping cart summary to `Shopping Cart` screen
+
+- Overlays are automatically resized to the required size
+
+- Added fallback strategy when desirable `Options` Screen layout does not match API data
+
+**Bugs:**
+
+- Fixed segmentation fault in `Customize List` Screen
+
+- Fixed minor issues in `Options` Screen
+
+- Fixed crash in `Payment Method` Screen
+
+- Fixed layout names for `Flat Cards` product
+
+- Fixed crash on `Mousepads` product
+
+- Fixed missing `Photo Arrangement` dialog when device is put to sleep on `Customize Product` Screen
+
+- Fixed Billing Address when using PayPal payment method
+
+- Fixed a NullPointerException reported by Keepy (github issue #151)
+
+- Fixed a crash caused by missing overlays on some products
+
+- Fixed missing authorization screen when app is brought back from background
+
+###
+
 3.1.21 (v118)
 =============
 

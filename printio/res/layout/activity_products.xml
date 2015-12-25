@@ -151,10 +151,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
+                android:clickable="true"
                 android:gravity="center_vertical"
                 android:onClick="onClickCancelSearch"
                 android:paddingRight="10dip"
-                android:clickable="true"
                 android:text="@string/cancel"
                 android:textSize="@dimen/text_size_medium" />
         </RelativeLayout>
@@ -194,8 +194,8 @@
         android:layout_above="@+id/layout_bottom_bar"
         android:layout_below="@id/layout_search_bar"
         android:clipToPadding="false"
-        android:visibility="gone"
-        android:scrollbars="none" >
+        android:scrollbars="none"
+        android:visibility="gone" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -304,7 +304,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/title_bar_height"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:weightSum="4" >
 
@@ -313,7 +313,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClickBottomBarSearch"
-                android:padding="10dip"
+                android:padding="8dip"
                 android:src="@drawable/btn_selector_bottombar_search" />
 
             <ImageView
@@ -321,7 +321,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClickBottomBarShare"
-                android:padding="10dip"
+                android:padding="8dip"
                 android:src="@drawable/btn_selector_bottombar_share" />
 
             <ImageView
@@ -329,7 +329,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClickBottomBarRate"
-                android:padding="10dip"
+                android:padding="8dip"
                 android:src="@drawable/btn_selector_bottombar_rate" />
 
             <ImageView
@@ -337,7 +337,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:onClick="onClickBottomBarLike"
-                android:padding="10dip"
+                android:padding="8dip"
                 android:src="@drawable/btn_selector_bottombar_like" />
         </LinearLayout>
     </LinearLayout>

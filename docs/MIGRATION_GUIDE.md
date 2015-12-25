@@ -1,3 +1,9 @@
+Migrating to v3.1.28 from v3.1.21
+========
+
+Method `PIOConfig.setShowFeaturedProductsByDefault` was removed and all products are shown by default.
+Enum value `SideMenuButton.FEATURED_PRODUCTS` was removed.  
+
 Migrating to v3.1.21 from v3.1.7
 ========
 **Changes in AndroidManifest.xml**
