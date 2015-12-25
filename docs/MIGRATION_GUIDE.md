@@ -1,4 +1,4 @@
-Migrating to v3.1.25 from v3.1.21
+Migrating to v3.1.28 from v3.1.21
 ========
 
 Method `PIOConfig.setShowFeaturedProductsByDefault` was removed and all products are shown by default.

@@ -10,4 +10,5 @@
     android:paddingLeft="16dip"
     android:paddingRight="16dip"
     android:paddingTop="2dip"
+    android:textSize="@dimen/text_size_small"
     android:visibility="invisible" />
