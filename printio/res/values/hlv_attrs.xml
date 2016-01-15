@@ -9,18 +9,18 @@
 	<declare-styleable name="PrintIoSdkHListView">
 		<attr name="android:entries" />
 		<attr name="android:divider" />
-		<attr name="hlv_dividerWidth" format="dimension" />
-		<attr name="hlv_headerDividersEnabled" format="boolean" />
-		<attr name="hlv_footerDividersEnabled" format="boolean" />
-		<attr name="hlv_overScrollHeader" format="reference|color" />
-		<attr name="hlv_overScrollFooter" format="reference|color" />
+		<attr name="printiosdk_hlv_dividerWidth" format="dimension" />
+		<attr name="printiosdk_hlv_headerDividersEnabled" format="boolean" />
+		<attr name="printiosdk_hlv_footerDividersEnabled" format="boolean" />
+		<attr name="printiosdk_hlv_overScrollHeader" format="reference|color" />
+		<attr name="printiosdk_hlv_overScrollFooter" format="reference|color" />
 
 		<!--
 		When "wrap_content" is used as value of the layout_height property.
 		Pass the position, inside the adapter, of the view being used to measure the view
 		or '-1' to use the default behavior ( default is -1 )
 		-->
-		<attr name="hlv_measureWithChild" format="integer" />
+		<attr name="printiosdk_hlv_measureWithChild" format="integer" />
 	</declare-styleable>
 
 
@@ -32,8 +32,8 @@
 		<attr name="android:scrollingCache" />
 		<attr name="android:choiceMode" />
 
-		<attr name="hlv_stackFromRight" format="boolean" />
-		<attr name="hlv_transcriptMode">
+		<attr name="printiosdk_hlv_stackFromRight" format="boolean" />
+		<attr name="printiosdk_hlv_transcriptMode">
 			<enum name="disabled" value="0" />
 			<enum name="normal" value="1" />
 			<enum name="alwaysScroll" value="2" />
@@ -44,7 +44,7 @@
 
 	<declare-styleable name="PrintIoSdkExpandableHListView">
 
-		<attr name="hlv_indicatorGravity">
+		<attr name="printiosdk_hlv_indicatorGravity">
 			<flag name="top" value="0x30" />
 			<flag name="bottom" value="0x50" />
 			<flag name="left" value="0x03" />
@@ -61,7 +61,7 @@
 			<flag name="end" value="0x00800005" />
 		</attr>
 
-		<attr name="hlv_childIndicatorGravity">
+		<attr name="printiosdk_hlv_childIndicatorGravity">
 			<flag name="top" value="0x30" />
 			<flag name="bottom" value="0x50" />
 			<flag name="left" value="0x03" />
@@ -78,19 +78,19 @@
 			<flag name="end" value="0x00800005" />
 		</attr>
 
-		<attr name="hlv_childDivider" format="reference|color" />
-		<attr name="hlv_groupIndicator" format="reference" />
-		<attr name="hlv_childIndicator" format="reference" />
+		<attr name="printiosdk_hlv_childDivider" format="reference|color" />
+		<attr name="printiosdk_hlv_groupIndicator" format="reference" />
+		<attr name="printiosdk_hlv_childIndicator" format="reference" />
 
 		<!-- after gravity for the indicator has been set -->
 		<!-- a custom padding can be set -->
-		<attr name="hlv_indicatorPaddingLeft" format="dimension" />
-		<attr name="hlv_indicatorPaddingTop" format="dimension" />
+		<attr name="printiosdk_hlv_indicatorPaddingLeft" format="dimension" />
+		<attr name="printiosdk_hlv_indicatorPaddingTop" format="dimension" />
 
 		<!-- after gravity for the child indicator has been set -->
 		<!-- a custom padding can be set -->
-		<attr name="hlv_childIndicatorPaddingLeft" format="dimension" />
-		<attr name="hlv_childIndicatorPaddingTop" format="dimension" />
+		<attr name="printiosdk_hlv_childIndicatorPaddingLeft" format="dimension" />
+		<attr name="printiosdk_hlv_childIndicatorPaddingTop" format="dimension" />
 	</declare-styleable>
 
 </resources>

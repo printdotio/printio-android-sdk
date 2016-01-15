@@ -139,7 +139,7 @@ Please add following activities to your AndroidManifest.xml file:
 <activity
 	android:name="print.io.ActivityPaymentMethod"
 	android:screenOrientation="portrait"
-	android:windowSoftInputMode="adjustResize" />
+	android:windowSoftInputMode="adjustResize|stateUnchanged" />
 <activity
 	android:name="print.io.ActivityChooseShippingAddress"
 	android:screenOrientation="portrait" />

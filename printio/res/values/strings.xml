@@ -363,7 +363,6 @@ each field, simply touch the Place Order button.</string>
     <string name="coaster_text">Choose Coaster Type</string>
     <string name="coaster_4_different">4 Different Coasters</string>
     <string name="coaster_1_duplicated">1 Coaster Duplicated</string>
-    <string name="set_of">Set of %1$s</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
     <string name="problem_downloading_some_photos">There was a problem downloading some of your selected photos. Please try again!</string>
     <string name="equivalent_amount">You will be billed in the equivalent amount of your order in US Dollars.\n</string>

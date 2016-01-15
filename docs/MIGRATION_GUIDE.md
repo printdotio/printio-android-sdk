@@ -1,3 +1,17 @@
+Migrating to v3.X.X from v3.1.28
+========
+
+**Changes in AndroidManifest.xml**
+
+The following activity declaration:
+```xml
+<activity android:name="print.io.ActivityPaymentMethod" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+```
+should be replaced by:
+```xml
+<activity android:name="print.io.ActivityPaymentMethod" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateUnchanged" />
+```
+
 Migrating to v3.1.28 from v3.1.21
 ========
 

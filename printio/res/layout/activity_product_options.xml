@@ -42,6 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:paddingLeft="4dip"
+            android:paddingRight="4dip"
             android:text="@string/choose_options"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
