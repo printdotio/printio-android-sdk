@@ -2,95 +2,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dip" >
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/separator_list_shopping_cart" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dip" >
 
-        <print.io.view.TextViewFontBold
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subtotal"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
+            android:orientation="horizontal" >
 
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_subtotal"
-            android:layout_width="0px"
+            <print.io.view.TextViewFontBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subtotal"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_subtotal"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shipping"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontNormal
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/calculated_at_checkout"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/coupon"
+                android:textColor="@color/discount_highlight"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontBold
+                android:id="@+id/textview_coupon_savings"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/discount_highlight"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <print.io.view.TextViewFontNormal
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tax"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+
+            <print.io.view.TextViewFontNormal
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@string/calculated_at_checkout"
+                android:textColor="#323232"
+                android:textSize="@dimen/text_size_normal" />
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <print.io.view.TextViewFontNormal
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/shipping"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontNormal
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="@string/calculated_at_checkout"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <print.io.view.TextViewFontBold
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/coupon"
-            android:textColor="@color/discount_highlight"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontBold
-            android:id="@+id/textview_coupon_savings"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:textColor="@color/discount_highlight"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <print.io.view.TextViewFontNormal
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/tax"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-
-        <print.io.view.TextViewFontNormal
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="@string/calculated_at_checkout"
-            android:textColor="#323232"
-            android:textSize="@dimen/text_size_normal" />
-    </LinearLayout>
+        android:layout_height="1px"
+        android:background="@color/separator_list_shopping_cart" />
 
 </LinearLayout>

@@ -151,7 +151,7 @@ Specific Page Methods
 
 ![enter image description here][10]
 
-#### G1. Show "Add more products" button on Shopping Cart screen.
+#### G1. Show "Keep Shopping" button on Shopping Cart screen.
 
 - [**PIOConfig.setShowAddMoreProductsInShoppingCart()**](SDK_REFERENCE.md#-show-add-more-products-button-on-shopping-cart-screen)
 
@@ -312,10 +312,6 @@ Global Methods
 
 - [**PIOConfig.setProductSkuFromApp()**](SDK_REFERENCE.md#force-a-sku-for-product)
 
-#### D. Register device to receive push notifications.
-
-- [**PIO.initializeParse()**](SDK_REFERENCE.md#-register-device-to-receive-push-notifications)
-
 #### E. Adjust font sizes.
 
 - [**Resource**](SDK_REFERENCE.md#-adjust-font-sizes)
@@ -400,7 +396,7 @@ Global Methods
 [7]: https://www.dropbox.com/s/68huinimygb1080/Products%20E03%2C%20E05%2C%20E6%2C%20E7.PNG?dl=1
 [8]: https://www.dropbox.com/s/5e8a4n3uk346arx/Products%20E04.PNG?dl=1
 [9]: https://www.dropbox.com/s/6q73cgyc8l4hj0p/Products%20F01.PNG?dl=1
-[10]: https://www.dropbox.com/s/pjftf0buasnapih/Shopping%20Cart%20screen%20G01%2C%20G02.png?dl=1
+[10]: https://www.dropbox.com/s/fr4azbwch2ot45l/Shopping%20Cart%20screen%20G01%2C%20G02%20%281%29%20copy.png?dl=1
 [11]: https://www.dropbox.com/s/889zb38cwjuephj/Product%20Detail%20B02.png?dl=1
 [12]: https://www.dropbox.com/s/d41mjiupn4eq3rj/Payment%20I01%2C%20I02.PNG?dl=1
 [13]: https://www.dropbox.com/s/7e7pu5ghva6qgbb/Order%20Completed%20E01.PNG?dl=1

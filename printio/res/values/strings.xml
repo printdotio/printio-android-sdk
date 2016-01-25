@@ -18,7 +18,6 @@
     <string name="update">Update</string>
     <string name="later">Later</string>
     <string name="exit">Exit</string>
-    <string name="exit_shop">Exit Shop</string>
     <string name="starting_at_">Starting at %s</string>
     <string name="starting_at_retail_">Starting at %1$s %2$s</string>
     <string name="starting_at">Starting at</string>
@@ -223,7 +222,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="auto_populate">Auto populate</string>
     <string name="manual">Manual</string>
     <string name="country_edit_text_warning_message">Warning! Changing the ship to country may change the product price and availability of the items in your cart. Are you sure you want to change the country?</string>
-    <string name="change_language">Change Language</string>
     <string name="under_1">under %1$s</string>
     <string name="complete_design">Please complete your design</string>
     <string name="less_photos"><![CDATA[You selected <b>%1$s</b><br/>Grid space for <b>%2$s</b>]]></string>
@@ -284,7 +282,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="shipping_info_availability_text">This item ships internationally.</string>
     <string name="quality_guarantee">Quality Guarantee</string>
     <string name="price_chart">Price Chart is coming soon</string>
-    <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
     <string name="price">Price</string>
     <string name="image_not_ready_popup">Image is downloading please wait until download bar is complete</string>
     <string name="image_failed_to_download">Error while downloading some of your photos. Please try again.</string>
@@ -326,7 +323,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="you_have_ordered_the_following_products">You have ordered the following products:</string>
     <string name="overall">Overall:</string>
     <string name="continue_shopping">Continue Shopping</string>
-    <string name="about_title">About Makeable</string>
+    <string name="about_title">About</string>
     <string name="about_subtitle">About:</string>
     <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@makeable.com for support and friends</string>
     <string name="how_it_works_title">How It Works</string>
@@ -387,6 +384,7 @@ each field, simply touch the Place Order button.</string>
     <string name="please_select_at_least_one_image">Please select at least one image</string>
     <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more pictures</string>
+    <string name="product_couch_hint_overlay_text">Swipe to see more sizes</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
     <string name="product_details_v2_prints_price">4x6 Prints starting at %s</string>
     <string name="dialog_resolution_warning_title">This photo is too small</string>
@@ -420,6 +418,19 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
     <string name="dialog_send_email_order_failed">Placing your order has failed twice, would you like to contact our customer support?</string>
+    <string name="exit_side_menu_button">Exit</string>
+    <string name="log_in_with_section">Log in with</string>
+    <string name="options_section">Options</string>
+    <string name="information_section">Information</string>
+    <string name="order_status_side_menu_button">Order Status</string>
+    <string name="past_orders_side_menu_button">Past Orders</string>
+    <string name="about_us_side_menu_button">About us</string>
+    <string name="contact_us_side_menu_button">Contact us</string>
+    <string name="how_it_works_side_menu_button">How it works</string>
+    <string name="quality_guarantee_side_menu_button">Quality Guarantee</string>
+    <string name="quality_guarantee_title">Quality Guarantee</string>
+    <string name="quality_guarantee_subtitle">Quality Guarantee:</string>
+    <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>

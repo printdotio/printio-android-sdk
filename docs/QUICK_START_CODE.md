@@ -58,11 +58,6 @@ public class ApplicationSampleApp extends Application {
 	public void onCreate() {
 		super.onCreate();
 
-		// Initialize Parse push notifications
-		// Needs to be inside Application class' onCreate() method
-		// Use empty Strings if you are not using Parse notifications
-		PIO.initializeParse(this, PIOConstants.Parse.APPLICATION_ID, PIOConstants.Parse.CLIENT_KEY);
-
 		// Create PIOConfig object which will be used to configure SDK
 		PIOConfig config = new PIOConfig();
 

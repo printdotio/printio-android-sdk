@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.slidingmenu.lib.SlidingMenu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:sliding="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/slidingmenulayout"
-    sliding:printiosdk_slidingmenu_viewAbove="@layout/list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" />

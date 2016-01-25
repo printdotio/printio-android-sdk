@@ -81,10 +81,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dip"
-                android:drawableLeft="@drawable/icon_how_it_works"
+                android:drawableLeft="@drawable/icon_side_menu_button_how_it_works"
                 android:drawablePadding="5dip"
                 android:text="@string/how_it_works_subtitle"
-                android:textColor="@color/how_it_works_text"
+                android:textColor="#22A0DD"
                 android:textSize="@dimen/text_size_large" />
 
             <View

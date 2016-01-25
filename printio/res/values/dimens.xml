@@ -18,9 +18,7 @@
     <dimen name="text_size_button_create_it">12dip</dimen>
     <dimen name="text_size_button_create_it_v2">16dip</dimen>
 
-    <dimen name="text_size_photosources">10dip</dimen>
-
-    <dimen name="text_size_side_menu_button">12dip</dimen>
+    <dimen name="text_size_side_menu_button">14dip</dimen>
 
     <dimen name="text_size_cart_items_quantity">8dip</dimen>
     <dimen name="cart_items_quantity_top_offset">10dip</dimen>

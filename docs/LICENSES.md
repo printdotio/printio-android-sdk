@@ -31,11 +31,6 @@ gson
 [gson](https://github.com/google/gson) by **Google Inc.**  
 *Licensed Under: [Apache-2.0](https://github.com/google/gson/blob/master/LICENSE)*
 
-ParseUI-Android
-========
-[ParseUI-Android](https://github.com/ParsePlatform/ParseUI-Android) by **Parse, LLC.**  
-*Licensed Under: [Parse License](https://github.com/ParsePlatform/ParseUI-Android/blob/master/LICENSE)*
-
 PayPal-Android-SDK
 ========
 [PayPal-Android-SDK](https://github.com/paypal/PayPal-Android-SDK) by **PayPal**  

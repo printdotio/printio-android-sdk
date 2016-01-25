@@ -37,9 +37,12 @@
             android:visibility="invisible" />
 
         <print.io.view.TextViewFontTitle
+            android:id="@+id/textview_screen_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:drawablePadding="4dip"
+            android:gravity="center_vertical"
             android:text="@string/shopping_cart"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
@@ -59,7 +62,7 @@
         android:layout_above="@+id/layout_total_price"
         android:layout_below="@+id/view_dummy_title_separator"
         android:cacheColorHint="@color/transparent"
-        android:divider="#d8d8d8"
+        android:divider="@color/separator_list_shopping_cart"
         android:dividerHeight="1px"
         android:scrollbars="none" />
 

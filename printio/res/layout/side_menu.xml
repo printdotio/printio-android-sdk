@@ -3,76 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <RelativeLayout
-        android:id="@+id/layout_for_listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/side_menu_background"
-        android:visibility="gone" >
-
-        <LinearLayout
-            android:id="@+id/layout_for_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:orientation="vertical" >
-
-            <!-- Search -->
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_selector"
-                android:padding="10dip"
-                android:visibility="visible" >
-
-                <print.io.view.EditTextFontLight
-                    android:id="@+id/edittext_search1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bg_edit_text_search"
-                    android:inputType="textNoSuggestions|textVisiblePassword"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="30dip"
-                    android:textSize="@dimen/text_size_normal" />
-
-                <ImageView
-                    android:id="@+id/imageview_clear1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:clickable="true"
-                    android:onClick="onClickClearText"
-                    android:paddingBottom="8dip"
-                    android:paddingLeft="10dip"
-                    android:paddingRight="10dip"
-                    android:paddingTop="8dip"
-                    android:src="@drawable/icon_x" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_1" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dip"
-                android:background="@color/separator_color_2" />
-        </LinearLayout>
-
-        <ListView
-            android:id="@+id/list_view_side_menu"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/layout_for_search"
-            android:cacheColorHint="#00000000"
-            android:divider="#00000000"
-            android:dividerHeight="1dip"
-            android:listSelector="#000000" />
-    </RelativeLayout>
-
     <ScrollView
         android:id="@+id/scroll_view_side_menu"
         android:layout_width="match_parent"
@@ -92,11 +22,202 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
+                <RelativeLayout
+                    android:id="@+id/side_menu_button_exit"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip"
+                    android:background="@drawable/bg_selector"
+                    android:clickable="true"
+                    android:onClick="onClickExitSDK"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_exit_sdk" />
+
+                        <print.io.view.TextViewFontLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/exit_side_menu_button"
+                            android:textColor="@color/side_menu_text"
+                            android:textSize="@dimen/text_size_side_menu_button" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <!-- Log in with area -->
+
                 <LinearLayout
-                    android:id="@+id/linearlayout_top_buttons"
+                    android:id="@+id/layout_side_menu_photo_sources"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" />
+                    android:orientation="vertical" >
+
+                    <print.io.view.TextViewFontNormal
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/side_menu_header_background"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="4dip"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="4dip"
+                        android:text="@string/log_in_with_section"
+                        android:textAllCaps="true"
+                        android:textColor="@color/side_menu_text"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/layout_ps_row_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dip"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginTop="10dip"
+                                android:background="@color/side_menu_separator_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginTop="10dip"
+                                android:background="@color/side_menu_separator_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:id="@+id/view_ps_row_separator_1"
+                                android:layout_width="0dip"
+                                android:layout_height="1dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_weight="1"
+                                android:background="@color/side_menu_separator_color" />
+
+                            <View
+                                android:id="@+id/view_ps_row_separator_2"
+                                android:layout_width="0dip"
+                                android:layout_height="1dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_weight="1"
+                                android:background="@color/side_menu_separator_color" />
+
+                            <View
+                                android:id="@+id/view_ps_row_separator_3"
+                                android:layout_width="0dip"
+                                android:layout_height="1dip"
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_weight="1"
+                                android:background="@color/side_menu_separator_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_ps_row_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dip"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginTop="10dip"
+                                android:background="@color/side_menu_separator_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+
+                            <View
+                                android:layout_width="1dip"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dip"
+                                android:layout_marginTop="10dip"
+                                android:background="@color/side_menu_separator_color"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:layout_width="0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Options area -->
 
                 <LinearLayout
                     android:id="@+id/layout_side_menu_options"
@@ -104,33 +225,22 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical" >
 
-                    <print.io.view.TextViewFontBold
-                        android:id="@+id/textview_options"
+                    <print.io.view.TextViewFontNormal
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/side_menu_options"
-                        android:gravity="center"
-                        android:paddingBottom="3dip"
-                        android:paddingTop="3dip"
-                        android:text="@string/options"
-                        android:textColor="@color/side_menu_options_subtitle_text"
-                        android:textSize="@dimen/text_size_normal" />
-
-                    <!-- Options -->
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_2" />
+                        android:background="@color/side_menu_header_background"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="4dip"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="4dip"
+                        android:text="@string/options_section"
+                        android:textAllCaps="true"
+                        android:textColor="@color/side_menu_text"
+                        android:textSize="@dimen/text_size_medium" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="110dip"
+                        android:layout_height="100dip"
                         android:orientation="horizontal" >
 
                         <RelativeLayout
@@ -171,12 +281,9 @@
                         <View
                             android:layout_width="1dip"
                             android:layout_height="match_parent"
-                            android:background="@color/separator_color_1" />
-
-                        <View
-                            android:layout_width="1dip"
-                            android:layout_height="match_parent"
-                            android:background="@color/separator_color_2" />
+                            android:layout_marginBottom="10dip"
+                            android:layout_marginTop="10dip"
+                            android:background="@color/side_menu_separator_color" />
 
                         <RelativeLayout
                             android:id="@+id/layout_change_country"
@@ -211,283 +318,317 @@
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
 
-                        <View
-                            android:layout_width="1dip"
+                <!-- Information area -->
+
+                <LinearLayout
+                    android:id="@+id/layout_side_menu_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <print.io.view.TextViewFontNormal
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/side_menu_header_background"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="4dip"
+                        android:paddingLeft="10dip"
+                        android:paddingTop="4dip"
+                        android:text="@string/information_section"
+                        android:textAllCaps="true"
+                        android:textColor="@color/side_menu_text"
+                        android:textSize="@dimen/text_size_medium" />
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_contact_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickContactUs"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:background="@color/separator_color_1" />
-
-                        <View
-                            android:layout_width="1dip"
-                            android:layout_height="match_parent"
-                            android:background="@color/separator_color_2" />
-
-                        <RelativeLayout
-                            android:id="@+id/layout_change_language"
-                            android:layout_width="0dip"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/bg_selector"
-                            android:clickable="true"
-                            android:onClick="onClickChangeLanguage" >
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
 
                             <ImageView
-                                android:id="@+id/image_view_language"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dip"
-                                android:layout_above="@+id/dummy_language"
-                                android:layout_centerHorizontal="true"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dip"
-                                android:adjustViewBounds="true"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/icon_change_language" />
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_contact_us" />
 
                             <print.io.view.TextViewFontLight
-                                android:id="@+id/dummy_language"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_alignParentBottom="true"
-                                android:layout_centerHorizontal="true"
-                                android:gravity="center"
-                                android:maxLines="2"
-                                android:padding="10dip"
-                                android:text="@string/change_language"
-                                android:textColor="@color/side_menu_text"
-                                android:textSize="@dimen/text_size_side_menu_button" />
-                        </RelativeLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_1"
-                    android:visibility="gone" />
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dip"
-                    android:background="@color/separator_color_2" />
-
-                <!-- Accounts -->
-
-                <LinearLayout
-                    android:id="@+id/linearlayout_accounts"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone" >
-
-                    <print.io.view.TextViewFontBold
-                        android:id="@+id/textview_accounts"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/side_menu_accounts"
-                        android:gravity="center"
-                        android:paddingBottom="3dip"
-                        android:paddingTop="3dip"
-                        android:text="@string/accounts"
-                        android:textColor="@color/side_menu_accounts_subtitle_text"
-                        android:textSize="@dimen/text_size_normal" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_1" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_2" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical" >
-
-                        <LinearLayout
-                            android:id="@+id/layout_row_1"
-                            android:layout_width="match_parent"
-                            android:layout_height="70dip"
-                            android:orientation="horizontal"
-                            android:visibility="gone" >
-
-                            <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
-                                android:textColor="@color/side_menu_text"
-                                android:textSize="@dimen/text_size_side_menu_button" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_1" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_2" />
-
-                            <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
+                                android:text="@string/contact_us_side_menu_button"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dip"
-                            android:background="@color/separator_color_1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dip"
-                            android:background="@color/separator_color_2" />
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_quality_guarantee"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickQualityQuarantee"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
 
                         <LinearLayout
-                            android:id="@+id/layout_row_2"
-                            android:layout_width="match_parent"
-                            android:layout_height="70dip"
-                            android:orientation="horizontal"
-                            android:visibility="gone" >
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_quality_quarantee" />
 
                             <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
-                                android:textColor="@color/side_menu_text"
-                                android:textSize="@dimen/text_size_side_menu_button" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_1" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_2" />
-
-                            <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
+                                android:text="@string/quality_guarantee_side_menu_button"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1dip"
-                            android:background="@color/separator_color_1" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dip"
-                            android:background="@color/separator_color_2" />
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_order_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickOrderStatus"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
 
                         <LinearLayout
-                            android:id="@+id/layout_row_3"
-                            android:layout_width="match_parent"
-                            android:layout_height="70dip"
-                            android:orientation="horizontal"
-                            android:visibility="gone" >
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_order_status" />
 
                             <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
-                                android:textColor="@color/side_menu_text"
-                                android:textSize="@dimen/text_size_side_menu_button" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_1" />
-
-                            <View
-                                android:layout_width="1dip"
-                                android:layout_height="match_parent"
-                                android:background="@color/separator_color_2" />
-
-                            <print.io.view.TextViewFontLight
-                                android:layout_width="0dip"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginLeft="12dp"
-                                android:layout_weight="1"
-                                android:clickable="true"
-                                android:gravity="center"
+                                android:text="@string/order_status_side_menu_button"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
-                    </LinearLayout>
 
-                    <View
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_past_orders"
                         android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_1"
-                        android:visibility="gone" />
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickPastOrders"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
 
-                    <View
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_past_orders" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/past_orders_side_menu_button"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_how_it_works"
                         android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_2" />
-                </LinearLayout>
-                <!-- Info -->
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickHowItWorks"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/linearlayout_info_buttons"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:visibility="gone" >
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
 
-                    <print.io.view.TextViewFontBold
-                        android:id="@+id/textview_info"
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_how_it_works" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/how_it_works_side_menu_button"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_about_us"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@color/side_menu_info"
-                        android:gravity="center"
-                        android:paddingBottom="3dip"
-                        android:paddingTop="3dip"
-                        android:text="@string/info"
-                        android:textColor="@color/side_menu_info_subtitle_text"
-                        android:textSize="@dimen/text_size_normal" />
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickAboutUs"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dip"
-                        android:background="@color/separator_color_2" />
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_about_us" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/about_us_side_menu_button"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
             <!-- Version -->

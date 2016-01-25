@@ -17,6 +17,7 @@
     <color name="title_bar_separator">#D6D6D6</color>
 
     <color name="separator_list">#D6D6D6</color>
+    <color name="separator_list_shopping_cart">#D8D8D8</color>
 
     <color name="text_cart_items_quantity">#FFFFFF</color>
     <color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
@@ -26,16 +27,13 @@
 
     <color name="separator_color_1">#000000</color>
     <color name="separator_color_2">#343434</color>
+    
+    <color name="side_menu_separator_color">#343434</color>
+    <color name="side_menu_header_background">#333333</color>
     <color name="side_menu_background">#1D1D1D</color>
     <color name="side_menu_text">#FFFFFF</color>
-    <color name="side_menu_options_subtitle_text">#FFFFFF</color>
-    <color name="side_menu_options">#239EDB</color>
     <color name="side_menu_change_currency_text">#FFFFFF</color>
-    <color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
-    <color name="side_menu_accounts">#1CBA9B</color>
-    <color name="side_menu_info_subtitle_text">#FFFFFF</color>
-    <color name="side_menu_info">#6369A6</color>
-    <color name="side_menu_version_bg">#000000</color>
+    <color name="side_menu_version_bg">#1D1D1D</color>
     <color name="side_menu_version_text">#FFFFFF</color>
 
     <color name="price_container_background">#2277D4</color>
@@ -135,8 +133,6 @@
 
     <color name="purple">#646AA6</color>
     <color name="green">#42BE9C</color>
-
-    <color name="how_it_works_text">#22A0DD</color>
 
     <color name="add_more_products_button_text">#22A0DD</color>
 

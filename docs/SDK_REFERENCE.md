@@ -1,151 +1,6 @@
 # Developer SDK Customization Reference
 
 ---
-
-#### > Set Status Bar visibility
-( > Set Status Bar visibility)
-
-Default value is `false` (Status Bar is visible).
-
-```java
-PIOConfig.setHideStatusBar(boolean hideStatusBar);
-```
-&nbsp;  
-&nbsp;  
-#### > Navigation Bar Settings
-
-( > Change navigation bar color and title font color, also set left and right bar button.) 
-
-To change navigation bar color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="title_bar_background">#FFFFFF</color>
-```
-
-```java
-PIOConfig.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
-```
-_Note that the value set programmatically will override the value set in xml!_  
-
-To change separator and texts' colors, modify the following item in `res/values/colors.xml`
-```xml
-<color name="title_bar_separator">#d6d6d6</color>
-<color name="title_bar_text">#000000</color>
-<color name="text_cart_items_quantity">#FFFFFF</color>
-```
-  
-_NOTICE: Never modify xml item names. Modify values only._  
-&nbsp;  
-&nbsp;  
-#### > Splash Screen Settings
-
-Set Splash Screen timeout in milliseconds.  
-Default value is 0 which means that Splash Screen will not be shown.  
-
-```java
-PIOConfig.setSplashScreenTimeout(int splashScreenTimeout);
-```
-
-NOTICE: In order to show Splash Screen, you need to override ActivitySplash (See [Basic usage code](QUICK_START_CODE.md)).
-&nbsp;  
-&nbsp;  
-#### > Set Icon For Back Button  
-( > Change `Back` button icon)  
-
-Replace the following icon with your own icon of the same name.  
-Recommended dimensions are listed next to the icon name.
-
-To change icon with your own icon, modify the following item in `res/drawable-xhdpi`
-```xml
-icon_arrow_back.png (19x33)
-```
-&nbsp;  
-&nbsp;  
-#### > Set three buttons Back, Menu and Cart button in navigation bar for Products screen  
-( > Set three buttons title bar style)
-
-Show `Back`, `Menu` and `Cart` buttons in navigation bar for Products screen.  
-Default value is `false`.
-```java
-PIOConfig.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
-```
-&nbsp;  
-&nbsp;  
-Side Menu
----------
-#### > Enable or disable Side Menu
-
-Default value is `true` - Side Menu is enabled.
-```java
-PIOConfig.setSideMenuEnabled(boolean isSideMenuEnabled);
-```
-&nbsp;  
-&nbsp;  
-#### > Use Side Menu with options.  
-( > Change side menu icon)  
-
-Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
-```
-icon_menu_default.png (39x29)
-icon_menu_pressed.png (39x29)
-```
-&nbsp;  
-&nbsp;  
-( > Change side menu background color)  
-
-To change side menu background color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_background">#1D1D1D</color>
-```
-&nbsp;  
-&nbsp;  
-
-To change side menu separators' colors, modify the following items in `res/values/colors.xml`
-```xml
-<color name="separator_color_1">#000000</color>
-<color name="separator_color_2">#343434</color>
-```
-&nbsp;  
-&nbsp;  
-( > Change side menu text color)  
-
-To change side menu text color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_text">#FFFFFF</color>
-```
-&nbsp;  
-&nbsp;  
-#### > Set which options to use in side menu  
-( > Choose which options will be displayed in side menu)  
-
-**Buttons** section is at the top of the side menu.  
-&nbsp;  
-To select buttons for this section, pass a `List` of `SideMenuButton` to the following method
-```java
-PIOConfig.setSideMenuButtons(List<SideMenuButton> sideMenuButtons);
-
-enum SideMenuButton {
-	EXIT_BUTTON,
-    SEARCH_BAR,
-    PRODUCTS,
-    SHARE_WITH_IMAGE,
-    EMAIL_SUPPORT,
-    HELP,
-    VIEW_CART;
-};
-```
-
-&nbsp;  
-To modify buttons' icons, replace the corresponding icon with your own.
-Recommended dimensions are listed next to the icon name.
-```
-icon_exit_sdk.png (17x30)
-icon_products.png (52x52)
-icon_email.png (52x52)
-icon_help.png (17x26)
-icon_cart_white.png (45x42)
-```
-&nbsp;  
 #### > Starting PrintIO SDK  
 
 To start PrintIO SDK use the following method:
@@ -162,7 +17,53 @@ To start PrintIO SDK use the following method:
  */
 PIO.start(Context context, PIOConfig config) throws PIOException;
 ```
+&nbsp;  
+&nbsp;  
+#### > Get Shopping Cart object 
+
+Returns copy of currently saved shopping cart.
+```java
+/**
+ * Returns copy of currently saved shopping cart.
+ * 
+ * @param context
+ *            The {@code Context} of current application instance.
+ * @return currently saved {@code ShoppingCart}
+ */
+PIO.getShoppingCart(Context context)
+```
 &nbsp;
+&nbsp;  
+#### > Set Shopping Cart object
+
+Sets and saves supplied shopping cart.
+```java
+/**
+ * Sets and saves supplied shopping cart.
+ * 
+ * @param context
+ *            The {@code Context} of current application instance.
+ * @param cart
+ *            The {@code ShoppingCart} to be used inside SDK.
+ */
+PIO.setShoppingCart(Context context, ShoppingCart cart)
+```
+&nbsp;  
+&nbsp;  
+#### > Get number of items in shopping cart
+**Sample code:**  
+```java
+int count = PIO.getShoppingCart(context).getItems().size();
+```
+#### > Remove all items from shopping cart
+**Sample code:**  
+```java
+ShoppingCart cart = PIO.getShoppingCart(context);
+cart.removeAllItems();
+PIO.setShoppingCart(context, cart);
+```
+&nbsp;
+&nbsp;  
 #### > PrintIO SDK publicly exposed data
 
 PrintIO SDK provides SDK user with following data which could be accessed at all times:
@@ -218,6 +119,45 @@ public void onCreate() {
 }
 ```
 &nbsp;  
+&nbsp;  
+#### > Set Status Bar visibility
+( > Set Status Bar visibility)
+
+Default value is `false` (Status Bar is visible).
+
+```java
+PIOConfig.setHideStatusBar(boolean hideStatusBar);
+```
+&nbsp;  
+&nbsp;  
+#### > Splash Screen Settings
+
+Set Splash Screen timeout in milliseconds.  
+Default value is 0 which means that Splash Screen will not be shown.  
+
+```java
+PIOConfig.setSplashScreenTimeout(int splashScreenTimeout);
+```
+
+NOTICE: In order to show Splash Screen, you need to override ActivitySplash (See [Basic usage code](QUICK_START_CODE.md)).
+&nbsp;  
+&nbsp; 
+#### > Set country code  
+
+Sets the default shipping country. Country code must be valid ISO 3166-1 (two-letter) country code.
+```java
+PIOConfig.setCountryCode(String countryCode);
+```
+&nbsp; 
+&nbsp;  
+#### > Set currency code  
+
+If not set, default value is determined by the selected Country Code. Currency code must be valid ISO 4217 currency code.
+```java
+PIOConfig.setCurrencyCode(String currencyCode);
+```
+&nbsp;  
+&nbsp;
 #### > Pass promo coupon code to SDK  
 
 Pass a promo coupon code which will be shown to user in `Shopping Cart` screen.  
@@ -228,32 +168,92 @@ Once products in shopping cart are purchased, coupon code is cleared.
 To set promo coupon code, use the following method:
 ```java
 PIOConfig.setPromoCode(String promoCode);
-```
+``` 
+&nbsp;  
 &nbsp;
-#### > Set support email address  
+Side Menu
+---------
+#### > Enable or disable Side Menu
 
-To set support email address, use the following method:
+Default value is `true` - Side Menu is enabled.
 ```java
-PIOConfig.setSupportEmail(String supportEmail);
+PIOConfig.setSideMenuEnabled(boolean isSideMenuEnabled);
 ```
 &nbsp;  
+&nbsp;  
+#### > Slide Side Menu from right
+Controls if Side Menu should slide from left or right.
+ 
+Default value is `false` (side menu slides from left side).
+```java
+PIOConfig.setRightSideMenu(boolean rightSideMenu);
+```
+&nbsp;  
+&nbsp;  
+( > Change Side Menu icon)  
+
+Replace following icons with your own icons of same names.  
+Recommended dimensions are listed next to the icon name.
+```
+icon_menu_default.png (39x29)
+icon_menu_pressed.png (39x29)
+```
+&nbsp;  
+&nbsp;  
+( > Change color of elements inside Side Menu)  
+
+To change color of Side Menu elements, you can modify the following items in `res/values/colors.xml`:
+
+Background color:
+```xml
+<color name="side_menu_background">#1D1D1D</color>
+```
+Separator color:
+```xml
+<color name="side_menu_separator_color">#343434</color>
+```
+Text color:
+```xml
+<color name="side_menu_text">#FFFFFF</color>
+```
+&nbsp;  
+&nbsp;  
+#### > Set which options to use in side menu  
+( > Choose which options will be displayed in side menu)  
+
+&nbsp;  
+To select which buttons will be used, pass a `List` of `SideMenuButton` to the following method. By default all buttons are visible.
+```java
+PIOConfig.setVisibleSideMenuButtons(List<SideMenuButton> sideMenuButtons);
+
+enum SideMenuButton {
+	EXIT,
+	ABOUT,
+    HOW_IT_WORKS,
+    PAST_ORDERS,
+    ORDER_STATUS,
+    CONTACT_US,
+    QUALITY_GUARANTEE;
+};
+```
+
+&nbsp;  
+To modify buttons' icons, replace the corresponding icon with your own.
+```
+icon_side_menu_button_about_us.png
+icon_side_menu_button_contact_us.png
+icon_side_menu_button_how_it_works.png
+icon_side_menu_button_order_status.png
+icon_side_menu_button_past_orders.png
+icon_side_menu_button_quality_quarantee.png
+```
+&nbsp; 
+&nbsp;   
 ##### **Options** section:  
 
-To modify its title, change the following item in `res/values/strings.xml` and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
+To modify section title, change the following item in `res/values/strings.xml` .
 ```xml
-<string name="options">Options</string>
-```
-**NOTICE:**  
-Never modify xml item names. Modify values only.  
-&nbsp;  
-To change the section title color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_options_subtitle_text">#FFFFFF</color>
-```
-&nbsp;  
-To change the section title background color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_options">#239EDB</color>
+<string name="options_section">Options</string>
 ```
 &nbsp;  
 To change the currency code color, modify the following item in `res/values/colors.xml`
@@ -261,112 +261,106 @@ To change the currency code color, modify the following item in `res/values/colo
 <color name="side_menu_change_currency_text">#FFFFFF</color>
 ```
 &nbsp;  
-To change the `Change Language` icon, replace the following icon with your own icon of same name. Recommended dimensions are listed next to the icon name.
-```
-icon_change_language.png (80x80)
-```
-&nbsp;  
-These methods control if the user is allowed to change the preset country, currency and language.  
+These methods control if the user is allowed to change the preset country and currency.  
 Default values are `true`.
 ```java
-PIOConfig.setChangeableCountry(boolean changeableCountry);
-PIOConfig.setChangeableCurrency(boolean changeableCurrency);
-PIOConfig.setChangeableLanguage(boolean changeableLanguage);
+PIOConfig.setChangeableCountry(boolean isChangeable);
+PIOConfig.setChangeableCurrency(boolean isChangeable);
 ```
 &nbsp;  
-##### **Accounts** section:
-Contains the available photo sources that the app will use.  
-To modify its title, change the following item in `res/values/strings.xml`  and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
+&nbsp;  
+##### **Log in with** section:
+Contains the available photo sources that the app will use.  To select Photo Sources that will be displayed here, refer to **Photo Sources** section of this document.
+
+To modify section title, change the following item in `res/values/strings.xml`.
 ```xml
-<string name="accounts">Accounts</string>
+<string name="log_in_with_section">Log in with</string>
 ```
 &nbsp;  
-To change the section title color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_accounts_subtitle_text">#FFFFFF</color>
-```
-&nbsp;  
-To change the section title background color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_accounts">#1CBA9B</color>
-```
-&nbsp;  
-#### > To select Photo Sources that will be displayed here, refer to **Photo Sources** section of this document.
-#### > To hide **Accounts** section, use the following method
+ To hide this section, use the following method
 ```java
 PIOConfig.hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
 ```
-&nbsp;  
-##### **Info** section:  
-To modify its title, change the following item in `res/values/strings.xml`  and if your app supports multiple languages, change the appropriate items in `res/values-language/strings.xml`
+&nbsp; 
+&nbsp;   
+##### **Information** section:  
+To modify its title, change the following item in `res/values/strings.xml`.
 ```xml
-<string name="info">Info</string>
+<string name="information_section">Information</string>
 ```
-&nbsp;  
-To change the section title color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_info_subtitle_text">#FFFFFF</color>
-```
-&nbsp;  
-To change the section title background color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="side_menu_info">#6369A6</color>
-```
-&nbsp;  
-To select buttons for this section, pass a `List` of `SideMenuInfoButton` to the following method
+&nbsp; 
+#### > Set support email address  
+
+To set support email address, use the following method:
 ```java
-PIOConfig.setSideMenuInfoButtons(List<SideMenuInfoButton> sideMenuInfoButtons);
-
-enum SideMenuInfoButton {
-    PRICING_CHART,
-    SHARE_APP,
-    LIKE_US_FB,
-    RATE_APP,
-    ABOUT,
-    HOW_IT_WORKS,
-    PAST_ORDERS;
-};
-```
-
-&nbsp;  
-To modify buttons' icons, replace the corresponding icon with your own.
-Recommended dimensions are listed next to the icon name.
-```
-icon_side_menu_pricing_chart.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_share_this_app.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_like_us_on_facebook.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_rate_our_app.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_about.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_how_it_works.png (baseline-mdpi:26x26; xhdpi:52x52)
-icon_side_menu_past_orders.png (baseline-mdpi:26x26; xhdpi:52x52)
-```
+PIOConfig.setSupportEmail(String supportEmail);
+``` 
 &nbsp;  
 &nbsp;  
-##### **Hide SDK Version** from Side Menu:  
-&nbsp;  
+#### Set visibility of **SDK Version** in Side Menu:  
 By default, the SDK version is shown at the bottom of the Side Menu.  
 To hide the SDK version, use the following method
 ```java
 PIOConfig.hideVersionInSideMenu(boolean isHidden);
 ```
 &nbsp;  
+&nbsp;
+Screens version
+--------------
 &nbsp;  
-#### > Slide side menu from right. Default value is NO.  
-( > Slide side menu from right side)  
-
-Default value is `false` (side menu slides from left side).
+&nbsp;
+#### > Set screens version 
+Changes screens version used by the SDK.  
+By default `ScreenVersion.V_1` is used.
 ```java
-PIOConfig.setRightSideMenu(boolean rightSideMenu);
+PIOConfig.setScreenVersion(ScreenVersion screenVersion)
+```
+&nbsp;  
+&nbsp; 
+General screen configuration
+--------------
+&nbsp;  
+&nbsp; 
+#### > Navigation Bar Settings
+( > Change navigation bar color and title font color, also set left and right bar button.) 
+To change navigation bar color, modify the following item in `res/values/colors.xml`
+```xml
+<color name="title_bar_background">#FFFFFF</color>
+```
+```java
+PIOConfig.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
+```
+_Note that the value set programmatically will override the value set in xml!_  
+
+To change separator and texts' colors, modify the following item in `res/values/colors.xml`
+```xml
+<color name="title_bar_separator">#d6d6d6</color>
+<color name="title_bar_text">#000000</color>
+<color name="text_cart_items_quantity">#FFFFFF</color>
+```
+  
+_NOTICE: Never modify xml item names. Modify values only._   
+&nbsp;  
+&nbsp;  
+#### > Set Icon For Back Button  
+( > Change `Back` button icon)  
+
+Replace the following icon with your own icon of the same name.  
+Recommended dimensions are listed next to the icon name.
+
+To change icon with your own icon, modify the following item in `res/drawable-xhdpi`
+```xml
+icon_arrow_back.png (19x33)
 ```
 &nbsp;  
 &nbsp;  
-#### > This is option from Side Menu, in order to use it, Side Menu needs to be enabled first.  
-( > Set share text)  
+#### > Set three buttons Back, Menu and Cart button in navigation bar for Products screen  
+( > Set three buttons title bar style)
 
-This is an option from Side Menu.  
-In order to use it, Side Menu needs to be enabled.
+Show `Back`, `Menu` and `Cart` buttons in navigation bar for Products screen.  
+Default value is `false`.
 ```java
-PIOConfig.setShareText(String shareText);
+PIOConfig.useThreeButtonsBarStyle(boolean useThreeButtonsBarStyle);
 ```
 &nbsp;  
 &nbsp;
@@ -376,17 +370,24 @@ By default, only `Screen.PRODUCTS` has country selection bar displayed. The foll
 PIOConfig.showCountrySelectionOnScreen(List<Screen> screens)
 ```
 &nbsp;  
-&nbsp;
+#### > Change background color of Select Country bar.
+
+To change the background color of Select Country bar, modify the following item in `res/values/colors.xml`
+```xml
+<color name="select_country_background">#2277D4</color>
+```
+&nbsp;  
+&nbsp;  
 #### > Show vendor logo on screens.
 
 Sets drawable resource ID to be used as vendor logo for supplied `Screen`
 ```java
 /**
  * Sets drawable resource ID to be used as vendor logo for supplied
- * {@link Screen}. By default, all screens do not have any logo associated
+ * {@link Screen}. By default, no screens have logo associated
  * with them. Following screens have support for showing vendor logo:
  * {@link Screen#PAYMENT}, {@link Screen#ORDER_COMPLETED} and
- * {@link Screen#PRODUCT_DETAILS} v2.
+ * {@link Screen#PRODUCT_DETAILS}.
  * 
  * @param screen
  *            The screen where logo should be shown.
@@ -398,27 +399,30 @@ Sets drawable resource ID to be used as vendor logo for supplied `Screen`
 PIOConfig.setVendorLogoOnScreen(Screen screen, Integer resourceId)
 ```
 &nbsp;  
-&nbsp;
-#### > Change background color of Select Country bar.
+&nbsp;  
+#### > Show vendor logo in Title Bar on screens.
 
-To change the background color of Select Country bar, modify the following item in `res/values/colors.xml`
-```xml
-<color name="select_country_background">#2277D4</color>
+Sets drawable resource ID to be used as vendor logo in Title Bar for supplied `Screen`
+```java
+/**
+ * Sets drawable resource ID to be used as vendor logo in Title Bar for
+ * supplied {@link Screen}. By default, no screens have logo associated
+ * with them. Following screens have support for showing vendor logo:
+ * {@link Screen#PRODUCTS} and {@link Screen#SHOPPING_CART}.
+ * 
+ * @param screen
+ *            The screen where logo should be shown.
+ * @param resourceId
+ *            The logo drawable resource ID that will be asociated to the
+ *            supplied {@code screen}. If {@code null} value is supplied
+ *            vendor logo will be hidden.
+ */
+PIOConfig.setTitleBarVendorLogoOnScreen(Screen screen, Integer resourceId)
 ```
-Screens version
---------------
 &nbsp;  
 &nbsp;
-#### > Set screens version
-Changes screens version used by the SDK.  
-By default `ScreenVersion.V_1` is used.
-```java
-PIOConfig.setScreenVersion(ScreenVersion screenVersion)
-```
-&nbsp;  
-&nbsp; 
-   
-### Screens v2 specific configuration
+Screens v2 specific configuration
+--------------
 &nbsp;  
 &nbsp;
 #### > Set product screens layouts image URL
@@ -470,6 +474,14 @@ PIOConfig.setHideComingSoonProducts(boolean hideComingSoonProducts);
 Default value is `true` (bottom bar is visible).
 ```java
 PIOConfig.setProductsBottomBarVisibility(boolean isVisible);
+```
+&nbsp;  
+&nbsp;
+#### > Set featured products in Hero
+
+Default value is `null` (default featured products, returned from API are shown in Hero).
+```java
+PIOConfig.setFeaturedProducts(List<ProductType> products);
 ```
 &nbsp;  
 &nbsp;  
@@ -525,7 +537,7 @@ PIOConfig.setLayoutStepStrategy(LayoutStepStrategy strategy);
 &nbsp;
 #### > Set cancel button visibility
 
-Sets visibility of cancel button in title bar. When clicked SDK will return control to the host activity.
+Sets the visibility of cancel button in title bar. When clicked SDK will return control to the host activity.  
 
 Default value is `false` (hidden).
 ```java
@@ -537,6 +549,17 @@ To customize `Cancel` button, modify the following items in `res/values/colors.x
 <color name="button_cancel_options_text">#000000</color>
 <color name="button_cancel_options_border">#000000</color>
 <color name="button_cancel_options_background">#00000000</color>
+```
+&nbsp;  
+&nbsp;
+#### > Set `Swipe to see more sizes` overlay visibility
+
+Sets the visibility of `Swipe to see more sizes` hint overlay in Couch step (for applicable products).  
+The overlay is shown once per each product.  
+
+Default value is `false` (hidden).
+```java
+PIOConfig.setShowCouchHintOverlay(boolean showCouchHintOverlay);
 ```
 &nbsp;  
 &nbsp;
@@ -827,20 +850,6 @@ To change cart quantity text color, modify the following item in `res/values/col
 The badge is only visible when there are items in the cart.
 &nbsp;  
 &nbsp;  
-#### > Customize `Shopping Cart` side menu button  
-
-Replace following icons with your own icons of same names.  
-Recommended dimensions are listed next to the icon name.
-```
-icon_cart_white.png (45x42)
-icon_cart_items_qty_background_side_menu.png (31x31) //Background for the badge that displays cart items count
-```
-To change cart quantity text color, modify the following item in `res/values/colors.xml`
-```xml
-<color name="text_cart_items_quantity_side_menu">#FFFFFF</color>
-```
-&nbsp;  
-&nbsp;  
 #### > Show Checkout Progress below the title bar in Shopping Cart.  
 
 Default value is 'false' (Checkout Progress is hidden).
@@ -849,7 +858,7 @@ PIOConfig.setShowCheckoutProgress(boolean showCheckoutProgress);
 ```
 &nbsp;  
 &nbsp;  
-#### > Show "Add more products" button on Shopping Cart screen.  
+#### > Show "Keep Shopping" button on Shopping Cart screen.  
 
 Default value is 'true' (button is visible).
 ```java
@@ -891,46 +900,6 @@ PIOConfig.closeWidgetFromShoppingCart(boolean closeWidgetFromShoppingCart);
 ```
 &nbsp;  
 &nbsp;  
-#### > Get Shopping Cart object 
-
-Returns copy of currently saved shopping cart.
-```java
-/**
- * Returns copy of currently saved shopping cart.
- * 
- * @param context
- *            The {@code Context} of current application instance.
- * @return currently saved {@code ShoppingCart}
- */
-PIO.getShoppingCart(Context context)
-```
-&nbsp;
-&nbsp;  
-#### > Set Shopping Cart object
-
-Sets and saves supplied shopping cart.
-```java
-/**
- * Sets and saves supplied shopping cart.
- * 
- * @param context
- *            The {@code Context} of current application instance.
- * @param cart
- *            The {@code ShoppingCart} to be used inside SDK.
- */
-PIO.setShoppingCart(Context context, ShoppingCart cart)
-```
-&nbsp;  
-&nbsp;  
-#### > Remove all items from shopping cart
-**Sample code:**  
-```java
-ShoppingCart cart = PIO.getShoppingCart(context);
-cart.removeAllItems();
-PIO.setShoppingCart(context, cart);
-```
-&nbsp;  
-&nbsp;  
 
 Payment screen
 --------------
@@ -945,32 +914,6 @@ public enum PaymentOptionType {
 	PAY_PAL,
 	CREDIT_CARD;
 }
-```
-&nbsp;  
-&nbsp;
-Country, Currency and Language
-------------------------------
-#### > Set country code  
-
-Sets the default shipping country. Country code must be valid ISO 3166-1 (two-letter) country code.
-```java
-PIOConfig.setCountryCode(String countryCode);
-```
-&nbsp; 
-&nbsp;  
-#### > Set currency code  
-
-If not set, default value is determined by the selected Country Code. Currency code must be valid ISO 4217 currency code.
-```java
-PIOConfig.setCurrencyCode(String currencyCode);
-```
-&nbsp;  
-&nbsp;  
-#### > Set language code 
-
-Not implemented yet.
-```java
-PIOConfig.setLanguageCode(String languageCode);
 ```
 &nbsp;  
 &nbsp;  
@@ -1015,20 +958,6 @@ Shipping Addresses screen
 #### >  Clear all saved shipping addresses 
 ```java
 PIO.clearShippingAddresses(Context context);
-```
-&nbsp;  
-&nbsp;  
-Push Notifications
-------------------
-#### > Set applicationId and apiKey provided from parse.com  
-#### > Register device to receive push notifications.  
-( > Initialize Parse.com push notifications)  
-
-To obtain Parse.com credentials, refer to https://parse.com/  
-Set the Parse.com `APPLICATION_ID` and `CLIENT_KEY`.  
-Pass an `Application` reference to `initializeParse(...)` method.
-```java
-PIO.initializeParse(Application application, PARSE_APPLICATION_ID, PARSE_CLIENT_KEY);
 ```
 &nbsp;
 &nbsp;
@@ -1328,13 +1257,6 @@ Dialog text will be converted to HTML markup when displayed. Dialog will not be 
 Labels' colors are the same color as the secondary button  
 &nbsp;  
 &nbsp;  
-#### > Set URL for Help in side menu  
-
-```java
-PIOConfig.setHelpUrl(String helpUrl);
-```
-&nbsp;  
-&nbsp;  
 #### > Set "About" text  
 
 To modify "About" text, change the following item in `res/values/strings.xml`
@@ -1356,27 +1278,3 @@ To modify "How it Works" section, change the following items in `res/values/stri
 ```
 **NOTICE:**  
 Use `newline` character `\n` to manually add new lines.  
-&nbsp;  
-&nbsp;  
-#### > Get shopping cart items count without starting the SDK  
-
-To get the count of items in shopping cart, use the following method:
-```java
-PIO.getNumberOfItemsInShoppingCart(Context context);
-```
-&nbsp;  
-&nbsp;
-#### > Change photo sources text and background colors  
-
-To change photo sources text and background colors, modify following items in `res/values/colors.xml`
-```xml
-<color name="photosources_background">#333333</color>
-<color name="photosources_text">#FFFFFF</color>
-```
-  
-To change photo sources text size, modify the following line in `res/values/dimens.xml`
-```xml
-<dimen name="text_size_photosources">12dip</dimen>
-```
-&nbsp;  
-&nbsp;
