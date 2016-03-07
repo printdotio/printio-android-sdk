@@ -179,7 +179,7 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/btn_add" />
 
-                <it.sephiroth.android.library.widget.HListView
+                <it.sephiroth.android.library.pio.widget.HListView
                     android:id="@+id/hlistview_photos"
                     android:layout_width="match_parent"
                     android:layout_height="64dip"

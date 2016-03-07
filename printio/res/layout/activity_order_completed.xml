@@ -39,26 +39,13 @@
             android:src="@drawable/btn_menu"
             android:visibility="gone" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageview_menu"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
         <print.io.view.TextViewFontTitle
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/order_completed"
+            android:text="@string/screen_title_order_completed"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
 
         <LinearLayout
             android:layout_width="wrap_content"

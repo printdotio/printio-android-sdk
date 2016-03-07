@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<print.io.view.TextViewFontNormal xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="10dip"
+    android:background="@drawable/bg_selector_button_nav_bar"
+    android:clickable="true"
+    android:onClick="onClickCancel"
+    android:paddingBottom="6dip"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="6dip"
+    android:text="@string/cancel"
+    android:textColor="@color/button_nav_bar_text"
+    android:textSize="@dimen/text_size_normal" />

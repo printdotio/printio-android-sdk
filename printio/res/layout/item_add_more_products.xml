@@ -11,8 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="96dip"
         android:gravity="center_vertical"
-        android:text="@string/keep_shopping"
-        android:textColor="@color/add_more_products_button_text"
+        android:text="@string/button_add_more_products_text"
+        android:textColor="@color/button_add_more_products_text"
         android:textSize="@dimen/text_size_large" />
 
 </LinearLayout>

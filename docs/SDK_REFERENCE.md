@@ -240,6 +240,7 @@ enum SideMenuButton {
 &nbsp;  
 To modify buttons' icons, replace the corresponding icon with your own.
 ```
+icon_side_menu_button_exit_sdk
 icon_side_menu_button_about_us.png
 icon_side_menu_button_contact_us.png
 icon_side_menu_button_how_it_works.png
@@ -247,13 +248,24 @@ icon_side_menu_button_order_status.png
 icon_side_menu_button_past_orders.png
 icon_side_menu_button_quality_quarantee.png
 ```
+&nbsp;  
+To modify buttons' labels, change the following items in `res/values/strings.xml` .
+```
+<string name="side_menu_button_label_exit">Exit</string>
+<string name="side_menu_button_label_order_status">Order Status</string>
+<string name="side_menu_button_label_past_orders">Past Orders</string>
+<string name="side_menu_button_label_about_us">About us</string>
+<string name="side_menu_button_label_contact_us">Contact us</string>
+<string name="side_menu_button_label_how_it_works">How it works</string>
+<string name="side_menu_button_label_quality_guarantee">Quality Guarantee</string>
+```
 &nbsp; 
 &nbsp;   
 ##### **Options** section:  
 
 To modify section title, change the following item in `res/values/strings.xml` .
 ```xml
-<string name="options_section">Options</string>
+<string name="side_menu_section_title_options">Options</string>
 ```
 &nbsp;  
 To change the currency code color, modify the following item in `res/values/colors.xml`
@@ -274,7 +286,7 @@ Contains the available photo sources that the app will use.  To select Photo Sou
 
 To modify section title, change the following item in `res/values/strings.xml`.
 ```xml
-<string name="log_in_with_section">Log in with</string>
+<string name="side_menu_section_title_log_in_with">Log in with</string>
 ```
 &nbsp;  
  To hide this section, use the following method
@@ -286,7 +298,7 @@ PIOConfig.hidePhotoSourcesInSideMenu(boolean hidePhotoSources);
 ##### **Information** section:  
 To modify its title, change the following item in `res/values/strings.xml`.
 ```xml
-<string name="information_section">Information</string>
+<string name="side_menu_section_title_information">Information</string>
 ```
 &nbsp; 
 #### > Set support email address  
@@ -330,7 +342,7 @@ To change navigation bar color, modify the following item in `res/values/colors.
 ```java
 PIOConfig.setHeaderColor(int color); //color is a 6-digit (rgb) or 8-digit (argb) hex value
 ```
-_Note that the value set programmatically will override the value set in xml!_  
+_Note that the value set programmatically will override the value set in xml._  
 
 To change separator and texts' colors, modify the following item in `res/values/colors.xml`
 ```xml
@@ -338,7 +350,31 @@ To change separator and texts' colors, modify the following item in `res/values/
 <color name="title_bar_text">#000000</color>
 <color name="text_cart_items_quantity">#FFFFFF</color>
 ```
-  
+_NOTICE: Never modify xml item names. Modify values only._   
+&nbsp;  
+&nbsp;  
+#### > Change screen title
+To change screen title,  modify the following item in `res/values/strings.xml`
+```xml
+<string name="screen_title_products">Products</string>
+<string name="screen_title_product_details">Product Details</string>
+<string name="screen_title_product_options">Choose Options</string>
+<string name="screen_title_shopping_cart">Shopping Cart</string>
+<string name="screen_title_select_photos">Select Photos</string>
+<string name="screen_title_past_orders">Past Orders</string>
+<string name="screen_title_order_status">Order Status</string>
+<string name="screen_title_order_details">Order Details</string>
+<string name="screen_title_quality_guarantee">Quality Guarantee</string>
+<string name="screen_title_how_it_works">How It Works</string>
+<string name="screen_title_about">About</string>
+<string name="screen_title_add_address">Checkout</string>
+<string name="screen_title_select_address">Select Address</string>
+<string name="screen_title_choose_country">Choose Country</string>
+<string name="screen_title_choose_currency">Choose Currency</string>
+<string name="screen_title_order_completed">Order Completed</string>
+<string name="screen_title_payment_method">Payment</string>
+<string name="screen_title_shipment_review">Shipment Review</string>
+```
 _NOTICE: Never modify xml item names. Modify values only._   
 &nbsp;  
 &nbsp;  
@@ -503,6 +539,51 @@ Default value is `null` (functionality is ignored).
 PIOConfig.setRetailDiscountPercent(Float discountPercent);
 ```
 &nbsp;  
+&nbsp;
+#### > Set price style
+For `V_1` screens:
+
+To change background color of price container, color of price text or color of retail price text, modify following items `res/values/colors.xml` in respectively.
+```xml
+<color name="product_details_v1_price_container_background">#EBEBEB</color>
+<color name="product_details_v1_price_text_color">#323232</color>
+<color name="product_details_v1_retail_price_text_color">#c6c8cc</color>
+``` 
+To change size of price text or retail price text,  modify following items `res/values/dimens.xml` in respectively.
+```xml
+<dimen name="product_details_v1_price_text_size">16dip</dimen>
+<dimen name="product_details_v1_retail_price_text_size">16dip</dimen>
+```
+
+For `V_2` screens: 
+
+To change background color of price container, color of starting at text, color of retail price text or color of price text, modify following items `res/values/colors.xml` in respectively.
+```xml
+<color name="product_details_v2_price_container_background">#2277D4</color>
+<color name="product_details_v2_staring_at_text_color">#FFFFFFFF</color>
+<color name="product_details_v2_retail_price_text_color">#FFFFFFFF</color>
+<color name="product_details_v2_price_text_color">#FFFFFFFF</color>
+``` 
+To change size of starting at text, retail price text or price text,  modify following items `res/values/dimens.xml` in respectively.
+```xml
+<dimen name="product_details_v2_staring_at_text_size">14dip</dimen>
+<dimen name="product_details_v2_retail_price_text_size">14dip</dimen>
+<dimen name="product_details_v2_price_text_size">14dip</dimen>
+``` 
+#### > Change style of "Create it" button 
+
+To change style of "Create it" button, modify following resources:
+
+`res/layout/item_button_create_it_v1` if you are using `ScreenVersion.V_1`, or/and
+`res/layout/item_button_create_it_v2` if you are using `ScreenVersion.V_2`.
+
+_Note that layout attributes (such as width, height, margin, etc..) will be overridden in files were these layouts are included._
+
+Button can have product name loaded to the label. In order to use this, string resource
+`button_label_create_it_with_product` needs to be defined. E.g.
+`<string name="button_label_create_it_with_product">Create %1$s</string>` 
+would result with button label with following value "Create Framed Print".
+&nbsp; 
 &nbsp;  
 Product Options screen
 --------------
@@ -543,13 +624,9 @@ Default value is `false` (hidden).
 ```java
 PIOConfig.setCancelOptionsButtonVisibility(boolean isVisible);
 ```
-
-To customize `Cancel` button, modify the following items in `res/values/colors.xml`:
-```xml
-<color name="button_cancel_options_text">#000000</color>
-<color name="button_cancel_options_border">#000000</color>
-<color name="button_cancel_options_background">#00000000</color>
-```
+To customize `Cancel` button appearance, you can modify following XML file:
+`res/layout/item_nav_bar_button_cancel.xml`. 
+Item representing button must retain the same `android:id` property value as well as `android:onClick` property.  
 &nbsp;  
 &nbsp;
 #### > Set `Swipe to see more sizes` overlay visibility
@@ -850,7 +927,7 @@ To change cart quantity text color, modify the following item in `res/values/col
 The badge is only visible when there are items in the cart.
 &nbsp;  
 &nbsp;  
-#### > Show Checkout Progress below the title bar in Shopping Cart.  
+#### > Show Checkout Progress below the title bar in Shopping Cart  
 
 Default value is 'false' (Checkout Progress is hidden).
 ```java
@@ -858,7 +935,7 @@ PIOConfig.setShowCheckoutProgress(boolean showCheckoutProgress);
 ```
 &nbsp;  
 &nbsp;  
-#### > Show "Keep Shopping" button on Shopping Cart screen.  
+#### > Show "Add more products" button on Shopping Cart screen  
 
 Default value is 'true' (button is visible).
 ```java
@@ -877,6 +954,13 @@ Default value is `AddMoreProductsButtonStrategy.OPEN_PRODUCTS_SCREEN`.
 ```java
 PIOConfig.setAddMoreProductsButtonStrategy(AddMoreProductsButtonStrategy strategy);
 ```
+#### > Change style of "Add more products" button
+
+To change color of button text, modify the following item in `res/values/colors.xml`.
+`<color name="button_add_more_products_text">#22A0DD</color>`
+
+To change button text, modify the following item in `res/values/strings.xml`.
+`<string name="button_add_more_products_text">Keep Shopping</string>`
 &nbsp;  
 &nbsp;
 #### > Set delete mode for Shopping Cart
@@ -1272,7 +1356,6 @@ Use `newline` character `\n` to manually add new lines.
 
 To modify "How it Works" section, change the following items in `res/values/strings.xml`
 ```xml
-<string name="how_it_works_title">How It Works</string>
 <string name="how_it_works_subtitle">How It Works:</string>
 <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
 ```

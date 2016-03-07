@@ -2,10 +2,6 @@
 
     <!-- Dimensions for screens larger than 330dip -->
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-
     <dimen name="title_bar_height">48dip</dimen>
 
     <dimen name="text_size_small">12dip</dimen>
@@ -23,7 +19,5 @@
     <dimen name="text_size_cart_items_quantity">10dip</dimen>
     <dimen name="cart_items_quantity_top_offset">10dip</dimen>
     <dimen name="cart_items_quantity_right_offset">0dip</dimen>
-
-    <dimen name="customize_product_view_margins">8dip</dimen>
 
 </resources>

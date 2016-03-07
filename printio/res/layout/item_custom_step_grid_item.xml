@@ -5,7 +5,7 @@
     android:padding="8dip" >
 
     <print.io.imageloader.MyImageViewAspectRatio
-        android:id="@+id/imageview_phone_case"
+        android:id="@+id/imageview_item_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -13,10 +13,10 @@
         android:adjustViewBounds="true" />
 
     <print.io.view.TextViewFontLight
-        android:id="@+id/textview_phone_photos_count"
+        android:id="@+id/textview_item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageview_phone_case"
+        android:layout_below="@+id/imageview_item_image"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="4dip"
         android:layout_marginTop="8dip"

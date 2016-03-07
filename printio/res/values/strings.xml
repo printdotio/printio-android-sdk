@@ -4,6 +4,31 @@
     <string name="facebook_app_id"></string> <!-- Needed as placeholder. -->
 
     <string name="app_name">Makeable</string>
+    
+    <!-- Screen titles -->
+    <string name="screen_title_products">Products</string>
+    <string name="screen_title_product_details">Product Details</string>
+    <string name="screen_title_product_options">Choose Options</string>
+    <string name="screen_title_shopping_cart">Shopping Cart</string>
+    <string name="screen_title_select_photos">Select Photos</string>
+    <string name="screen_title_past_orders">Past Orders</string>
+    <string name="screen_title_order_status">Order Status</string>
+    <string name="screen_title_order_details">Order Details</string>
+    <string name="screen_title_quality_guarantee">Quality Guarantee</string>
+    <string name="screen_title_how_it_works">How It Works</string>
+    <string name="screen_title_about">About</string>
+    <string name="screen_title_add_address">Checkout</string>
+    <string name="screen_title_select_address">Select Address</string>
+    <string name="screen_title_choose_country">Choose Country</string>
+    <string name="screen_title_choose_currency">Choose Currency</string>
+    <string name="screen_title_order_completed">Order Completed</string>
+    <string name="screen_title_payment_method">Payment</string>
+    <string name="screen_title_shipment_review">Shipment Review</string>
+    
+    <string name="button_label_create_it">Make it!</string>
+    <string name="button_label_create_it_with_product"></string>
+    <string name="button_add_more_products_text">Keep Shopping</string>
+    
     <string name="share_app_text">I\'m using PrintIO SDK! You can download it from https://github.com/printdotio/printio-android-sdk</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
     <string name="upgrade_to_force_upgrade">PrintIO has been upgraded to %1$s, it is a critical update and you must update in order to continue!</string>
@@ -25,9 +50,7 @@
     <string name="price_retail_">Price %1$s %2$s</string>
     <string name="price_each">%s Each</string>
     <string name="price_retail_each">%1$s %2$s Each</string>
-    <string name="title_products">Products</string>
     <string name="all">All</string>
-    <string name="product_details">Product Details</string>
     <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
     <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
     <string name="successful_login_to_photo_source">Successfully logged in to %1$s</string>
@@ -55,7 +78,6 @@
     <string name="default_text_not_changed">Default text isn\'t changed. Do you want to continue without changing it?</string>
     <string name="product_preview">Product Preview</string>
     <string name="choose_print_type">Choose print type</string>
-    <string name="shopping_cart">Shopping Cart</string>
     <string name="step_x_of_y">Step %1$s of %2$s</string>
     <string name="default_shopping_cart_description">One Size</string>
     <string name="add_more_products">Add More Products</string>
@@ -145,8 +167,6 @@
     <string name="step_choose_pillow_back_pillow"><![CDATA[<b>Step %1$s:</b> Choose Pillow Back Color]]></string>
     <string name="step_choose_background_border"><![CDATA[<b>Step %1$s:</b> Choose Background/Border Color]]></string>
     <string name="step_choose_case_background_color"><![CDATA[<b>Step %1$s:</b> Choose Case Background Color]]></string>
-    <string name="choose_options">Choose Options</string>
-    <string name="select_photos">Select Photos</string>
     <string name="no_printable_media">No printable media</string>
     <string name="internet_connection_error">Network error. Please check your internet connection.</string>
     <string name="server_not_respondiong">Server is not responding. Please try again.</string>
@@ -161,7 +181,6 @@
     <string name="print">Print</string>
     <string name="thickness">Thickness</string>
     <string name="watch_video">Watch Video</string>
-    <string name="choose_currency">Choose currency</string>
     <string name="add_address">Add Shipping Address</string>
     <string name="full_name">Full Name</string>
     <string name="street_1">Street</string>
@@ -173,7 +192,6 @@
     <string name="business_residential">Is this address Business or Residential?</string>
     <string name="business">Business\nAddress</string>
     <string name="residential">Residential\nAddress</string>
-    <string name="help_text">This is an awesome question mark PopUp\n\nYesterda I asked for any details about this screen but unfortunately all I\'ve got was \"Details will be filled in later\". Design is about the content and can\'t be done without informations.\n\nNot: Enjoy this empty unnecessary screen then ;)</string>
     <string name="help_text_canvas_customize">Arrange your photos however you like. OR, if you want a head start, select the Auto 
 Arrange option and we will pre-populate the grid with the image you 
 chose. You can always go back and change the order after!\n\nThe images you selected on the previous step appear at the bottom of the screen. 
@@ -192,7 +210,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="order_total">Order Total:</string>
     <string name="order_total1">Order Total</string>
     <string name="total_ship_cost">Total Ship Cost:</string>
-    <string name="shipment_review">Shipment Review</string>
     <string name="shipment_review_colon">Shipment Review:</string>
     <string name="ship_to">Ship to</string>
     <string name="remove">Remove</string>
@@ -239,14 +256,12 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="effects">Effects</string>
     <string name="please_try_again">Makeable is currently upgrading our products. Please try again in a few minutes.</string>
     <string name="almost_done">Almost Done!</string>
-    <string name="select_address">Select Address</string>
     <string name="select_email">Select Email</string>
     <string name="select_phone_number">Select Phone Number</string>
     <string name="choose_shipping_method">Choose Shipping Method</string>
     <string name="matte">Matte</string>
     <string name="glossy">Glossy</string>
     <string name="address_form">Address Form</string>
-    <string name="payment">Payment</string>
     <string name="pick_a_color">Pick a color</string>
     <string name="upload_instructions_title">Upload Instructions</string>
     <string name="upload_instructions_text">1. Add images from the above sources\n\n2. Selected photos will be counted below\n\n3. When done, click the \"Next\" button below</string>
@@ -267,7 +282,6 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="tabbar_text">Text</string>
     <string name="tabbar_effects">Effects</string>
     <string name="background">Background</string>
-    <string name="make_it">Make It!</string>
     <string name="details">Details</string>
     <string name="shipping_info">Shipping Info</string>
     <string name="shipping_info_arrival">Est. Arrival</string>
@@ -317,16 +331,13 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="remove_item_question">Do you want to delete this item?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="order_completed">Order Completed</string>
     <string name="thanks">Thank You for your purchase!</string>
     <string name="your_order_number_is">Your Order Number is:</string>
     <string name="you_have_ordered_the_following_products">You have ordered the following products:</string>
     <string name="overall">Overall:</string>
     <string name="continue_shopping">Continue Shopping</string>
-    <string name="about_title">About</string>
     <string name="about_subtitle">About:</string>
     <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@makeable.com for support and friends</string>
-    <string name="how_it_works_title">How It Works</string>
     <string name="how_it_works_subtitle">How It Works:</string>
     <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
     <string name="pop_up_select_address_page">This page allows you to add, edit or delete a Shipping Address.\n\nTo add a shipping address:\n\n1) Please select the (+ Add a Shipping Address) button at the bottom of the page.\n\n2) A new Address Form Page will appear. Please fill out all necessary fields. Once all the Address fields are filled out, please select the Save Address button.\n\n3) If you missed a required field, a pop up in red text will alert you to what is missing and ask you to update before re-saving.\n\nTo select a shipping address you have either added or that is already listed on the screen:\n\n1) Simply select the address you want to use and it will automatically take you to the Shipment Review Screen</string>
@@ -334,16 +345,13 @@ right corner to review and add the item to your shopping cart.</string>
 cost(s), Shipping Method, Tax, Order Total, and the Estimated Arrival Date of 
 your shipment(s).\n\n- If you are ordering multiple products, this page separates the shipment by 
 type of product, making it easy for you to edit or remove items if necessary… 
-but we hope you love what you made and we know you will be happy with it!\n\n- Once jeverything looks great in Shipment Review, please select the Enter 
+but we hope you love what you made and we know you will be happy with it!\n\n- Once everything looks great in Shipment Review, please select the Enter 
 Payment Info button in the bottom right corner, which will then take you
 to the Payment Page.</string>
     <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use Credit Card payment method.</string>
     <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
-    <string name="pop_up_payment_page">Almost done! You\'re now in the Payment screen to purchase your one-of-akind design(s)! \n\n- First, select your correct Billing Country.\n\n- Next, select payment method (PayPal or Card) and follow the steps on the next screens.</string>
-    <string name="pop_up_payment">You are in this screen because you selected to pay with a card. Automatically 
-enter your credit card information by taking a picture of the front of your card 
-OR enter manually with your keypad. Once you have entered information into 
-each field, simply touch the Place Order button.</string>
+    <string name="pop_up_payment_page">Almost done!\n\nYou\'re now in the Payment screen to purchase your one-of-a-kind design(s)!\n\nSelect payment method (PayPal or Card) and follow the steps on the next screens.</string>
+    <string name="pop_up_payment">You are in this screen because you selected to pay with a card.\n\nOnce you have entered information into each field, simply touch the Place Order button.</string>
     <string name="pop_up_order_completed">Makeable thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nsupport@makeable.com for support and friends</string>
     <string name="solid_background">Solid Background</string>
     <string name="product_categories">Categories</string>
@@ -382,7 +390,6 @@ each field, simply touch the Place Order button.</string>
     <string name="dialog_upgrade_shipping_message">Do you want to keep your free shipping coupon or upgrade shipping?</string>
     <string name="dialog_zero_dollar_payment">Zero dollar orders could not be executed via PayPal.\nPlease, use credit card instead.</string>
     <string name="please_select_at_least_one_image">Please select at least one image</string>
-    <string name="add_address_page_title">Checkout</string>
     <string name="products_hint_overlay_text">Swipe to see more pictures</string>
     <string name="product_couch_hint_overlay_text">Swipe to see more sizes</string>
     <string name="download_below_threshold_message">We see your Internet connection is running slowly, you may want to try connecting via faster Internet connection.</string>
@@ -391,6 +398,7 @@ each field, simply touch the Place Order button.</string>
     <string name="dialog_resolution_warning_message">This photo may distort when printing, aim for at least %1$spx wide and %2$spx tall.</string>
     <string name="keep_photo">Keep photo</string>
     <string name="keep_shopping">Keep Shopping</string>
+    <string name="keep_shopping_nav_btn_label">Keep\nShopping</string>
     <string name="whats_new">What\'s New</string>
     <string name="whats_new_dialog_text"></string>
     <string name="check_order_status_hint">To check the status of your order, please enter your order ID below.</string>
@@ -418,17 +426,16 @@ each field, simply touch the Place Order button.</string>
     <string name="category_description_prints">Not just pictures, they are memories</string>
     <string name="cards_and_calendats">Cards &amp; Calendars</string>
     <string name="dialog_send_email_order_failed">Placing your order has failed twice, would you like to contact our customer support?</string>
-    <string name="exit_side_menu_button">Exit</string>
-    <string name="log_in_with_section">Log in with</string>
-    <string name="options_section">Options</string>
-    <string name="information_section">Information</string>
-    <string name="order_status_side_menu_button">Order Status</string>
-    <string name="past_orders_side_menu_button">Past Orders</string>
-    <string name="about_us_side_menu_button">About us</string>
-    <string name="contact_us_side_menu_button">Contact us</string>
-    <string name="how_it_works_side_menu_button">How it works</string>
-    <string name="quality_guarantee_side_menu_button">Quality Guarantee</string>
-    <string name="quality_guarantee_title">Quality Guarantee</string>
+    <string name="side_menu_section_title_log_in_with">Log in with</string>
+    <string name="side_menu_section_title_options">Options</string>
+    <string name="side_menu_section_title_information">Information</string>
+    <string name="side_menu_button_label_exit">Exit</string>
+    <string name="side_menu_button_label_order_status">Order Status</string>
+    <string name="side_menu_button_label_past_orders">Past Orders</string>
+    <string name="side_menu_button_label_about_us">About us</string>
+    <string name="side_menu_button_label_contact_us">Contact us</string>
+    <string name="side_menu_button_label_how_it_works">How it works</string>
+    <string name="side_menu_button_label_quality_guarantee">Quality Guarantee</string>
     <string name="quality_guarantee_subtitle">Quality Guarantee:</string>
     <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
 
@@ -449,7 +456,7 @@ each field, simply touch the Place Order button.</string>
     <string name="help_address_validation">Oops!\n\nThe address you entered was not 100% correct, but that\'s okay were here to help you make sure it is correct so we ship to the correct address!\n\nThis screen suggests what it should be! You have the option to Accept the address suggestion or Edit the suggestion!</string>
     <string name="help_select_color_throw_pillow">This page allows you to choose the color of your Throw Pillow!\n\nOnce you select your Pillow color you will automatically be taken to the next step.\n\n1) Select a Pillow color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Pillow color! To change the color, simply repeat this step again.</string>
     <string name="help_select_photos_general">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
-    <string name="help_select_photos_general_2">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nHowever example: If you have selected a 2 Photo Grid, when completing your design you will only be able to use 2 photos in the end design. However this allows you to see how different images look encase you change your mind while designing your %1$s on the next page.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
+    <string name="help_select_photos_general_2">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nHowever example: If you have selected a 2 Photo Grid, when completing your design you will only be able to use 2 photos in the end design. However this allows you to see how different images look in case you change your mind while designing your %1$s on the next page.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_metal_magnets">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nFor every photo you select it will start at a quantity of 1 count for a magnet. When you are taken to the next screen you can adjust the quantity of each photo or remove it if you decide you do not want it.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Metal Magnets, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_canvas">This page allows you to select your pictures &amp; art from ALL of your favorite 
 sources!\n\n- Upload images from your device, Instagram, Facebook, Picasa, Flickr, or 

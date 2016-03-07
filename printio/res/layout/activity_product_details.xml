@@ -29,28 +29,14 @@
                 android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/layout_back_button"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
         <print.io.view.TextViewFontTitle
             android:id="@+id/textview_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/product_details"
+            android:text="@string/screen_title_product_details"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/relativelayout_shopping_cart"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
 
         <include layout="@layout/button_shopping_cart" />
     </RelativeLayout>
@@ -132,7 +118,7 @@
                 android:id="@+id/container_create_it"
                 android:layout_width="match_parent"
                 android:layout_height="60dip"
-                layout="@layout/item_product_details_buy_it"
+                layout="@layout/item_product_details_create_it"
                 android:visibility="visible" />
 
             <!-- Layout Items -->
@@ -187,13 +173,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_shipping_info" />
-
-            <include
-                android:id="@+id/item_quality_guarantee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_quality" />
         </LinearLayout>
     </print.io.view.CustomScrollView>
 
@@ -204,7 +183,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dip"
         android:layout_below="@+id/separator_1"
-        layout="@layout/item_product_details_buy_it"
+        layout="@layout/item_product_details_create_it"
         android:visibility="gone" />
 
 </RelativeLayout>

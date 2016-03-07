@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<print.io.view.ButtonFontTitle xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/btn_primary"
+    android:drawablePadding="4dip"
+    android:drawableRight="@drawable/icon_arrow_next_white"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:singleLine="true"
+    android:text="@string/button_label_create_it"
+    android:textColor="@color/button_primary_text"
+    android:textSize="@dimen/text_size_button_create_it"
+    android:textStyle="bold" />

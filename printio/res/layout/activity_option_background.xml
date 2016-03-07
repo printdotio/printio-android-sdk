@@ -30,27 +30,14 @@
                 android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/layout_back_button"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
         <print.io.view.TextViewFontTitle
             android:id="@+id/textview_customize_product"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/choose_options"
+            android:text="@string/screen_title_product_options"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
     </RelativeLayout>
 
     <View

@@ -27,9 +27,9 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="-1dip"
             android:layout_marginRight="-1dip"
-            android:background="#478cd1"
+            android:background="@color/photosources_album_count_background"
             android:padding="3dip"
-            android:textColor="#ffffff"
+            android:textColor="@color/photosources_album_count_text"
             android:textSize="@dimen/text_size_normal" />
     </RelativeLayout>
 

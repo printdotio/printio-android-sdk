@@ -3,18 +3,16 @@
     android:id="@+id/layout_transparent_bottom"
     android:layout_width="match_parent"
     android:layout_height="60dip"
-    android:background="@color/product_details_create_it_container_background" >
+    android:background="@color/product_details_v1_price_container_background" >
 
     <LinearLayout
         android:id="@+id/linearlayout_price_holder"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/button_create_it"
         android:orientation="vertical"
         android:paddingLeft="16dip"
-        android:paddingRight="8dip"
-        android:visibility="gone" >
+        android:paddingRight="8dip" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,8 +24,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textColor="#323232"
-                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/product_details_v1_price_text_color"
+                android:textSize="@dimen/product_details_v1_price_text_size"
                 android:textStyle="bold" />
 
             <ProgressBar
@@ -43,8 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:textColor="#c6c8cc"
-            android:textSize="@dimen/text_size_large" />
+            android:textColor="@color/product_details_v1_retail_price_text_color"
+            android:textSize="@dimen/product_details_v1_retail_price_text_size" />
 
         <ImageView
             android:id="@+id/imageview_vendor_logo"
@@ -55,21 +53,20 @@
             android:visibility="gone" />
     </LinearLayout>
 
-    <print.io.view.ButtonFontTitle
-        android:id="@+id/button_create_it"
-        android:layout_width="100dip"
-        android:layout_height="30dip"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="10dip"
-        android:background="@drawable/btn_primary"
-        android:drawableRight="@drawable/icon_arrow_next_white"
-        android:onClick="onClickCreateIt"
-        android:paddingLeft="5dip"
-        android:paddingRight="5dip"
-        android:text="@string/make_it"
-        android:textColor="@color/button_primary_text"
-        android:textSize="@dimen/text_size_button_create_it"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/linearlayout_price_holder"
+        android:gravity="right" >
+
+        <include
+            android:id="@+id/button_create_it"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dip"
+            layout="@layout/item_button_create_it_v1"
+            android:minWidth="100dip" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -33,5 +33,9 @@
         <item quantity="one">%s Stone Coaster</item>
         <item quantity="other">%s Stone Coasters</item>
     </plurals>
+    <plurals name="PremiumCoasters">
+        <item quantity="one">%s Premium Coaster</item>
+        <item quantity="other">%s Premium Coasters</item>
+    </plurals>
 
 </resources>

@@ -45,13 +45,6 @@
             android:src="@drawable/btn_menu"
             android:visibility="gone" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/imageview_menu"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
         <print.io.view.TextViewFontTitle
             android:id="@+id/textview_screen_title"
             android:layout_width="wrap_content"
@@ -59,16 +52,10 @@
             android:layout_centerInParent="true"
             android:drawablePadding="4dip"
             android:gravity="center_vertical"
-            android:text="@string/title_products"
+            android:singleLine="true"
+            android:text="@string/screen_title_products"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/imageview_menu_right"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
 
         <ImageView
             android:id="@+id/imageview_menu_right"

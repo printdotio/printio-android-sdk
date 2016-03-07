@@ -36,7 +36,6 @@
     <color name="side_menu_version_bg">#1D1D1D</color>
     <color name="side_menu_version_text">#FFFFFF</color>
 
-    <color name="price_container_background">#2277D4</color>
     <color name="select_country_background">#2277D4</color>
     <color name="categories_text_default">#333333</color>
     <color name="categories_text_pressed">#3FBF9A</color>
@@ -44,10 +43,10 @@
     <color name="photosources_background">#595D66</color>
     <color name="photosources_background_selected">#333333</color>
     <color name="photosources_text">#FFFFFF</color>
-
+    <color name="photosources_album_count_text">#FFFFFF</color>
+    <color name="photosources_album_count_background">#478cd1</color>
+    
     <color name="selected_photo_index_background">#BBFFFFFF</color>
-
-    <color name="product_details_create_it_container_background">#EBEBEB</color>
 
     <color name="product_details_header_1">#323232</color>
     <color name="product_details_header_2">#42BE9C</color>
@@ -122,10 +121,18 @@
     <color name="button_save_to_cart_photobooks_border">#000000</color>
     <color name="button_save_to_cart_photobooks_background">#00000000</color>
 
-	<color name="button_cancel_options_text">#000000</color>
-	<color name="button_cancel_options_border">#000000</color>
-	<color name="button_cancel_options_background">#00000000</color>
+	<color name="button_nav_bar_text">#000000</color>
+	<color name="button_nav_bar_border">#000000</color>
+	<color name="button_nav_bar_background">#00000000</color>
 
+	<color name="product_details_v1_price_container_background">#EBEBEB</color>
+	<color name="product_details_v1_price_text_color">#323232</color>
+	<color name="product_details_v1_retail_price_text_color">#c6c8cc</color>
+	<color name="product_details_v2_price_container_background">#2277D4</color>
+	<color name="product_details_v2_staring_at_text_color">#FFFFFFFF</color>
+	<color name="product_details_v2_retail_price_text_color">#FFFFFFFF</color>
+	<color name="product_details_v2_price_text_color">#FFFFFFFF</color>
+	
     <!-- other_colors -->
     <color name="gray">#404040</color>
     <color name="gray_edit">#C7C7CC</color>
@@ -134,7 +141,7 @@
     <color name="purple">#646AA6</color>
     <color name="green">#42BE9C</color>
 
-    <color name="add_more_products_button_text">#22A0DD</color>
+    <color name="button_add_more_products_text">#22A0DD</color>
 
     <color name="dialog_stickerbooks_add_more_or_duplicate_background">#AA000000</color>
 

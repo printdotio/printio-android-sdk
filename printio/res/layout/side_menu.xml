@@ -49,7 +49,7 @@
                         <print.io.view.TextViewFontLight
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/exit_side_menu_button"
+                            android:text="@string/side_menu_button_label_exit"
                             android:textColor="@color/side_menu_text"
                             android:textSize="@dimen/text_size_side_menu_button" />
                     </LinearLayout>
@@ -70,7 +70,7 @@
                         android:paddingBottom="4dip"
                         android:paddingLeft="10dip"
                         android:paddingTop="4dip"
-                        android:text="@string/log_in_with_section"
+                        android:text="@string/side_menu_section_title_log_in_with"
                         android:textAllCaps="true"
                         android:textColor="@color/side_menu_text"
                         android:textSize="@dimen/text_size_medium" />
@@ -233,7 +233,7 @@
                         android:paddingBottom="4dip"
                         android:paddingLeft="10dip"
                         android:paddingTop="4dip"
-                        android:text="@string/options_section"
+                        android:text="@string/side_menu_section_title_options"
                         android:textAllCaps="true"
                         android:textColor="@color/side_menu_text"
                         android:textSize="@dimen/text_size_medium" />
@@ -337,7 +337,7 @@
                         android:paddingBottom="4dip"
                         android:paddingLeft="10dip"
                         android:paddingTop="4dip"
-                        android:text="@string/information_section"
+                        android:text="@string/side_menu_section_title_information"
                         android:textAllCaps="true"
                         android:textColor="@color/side_menu_text"
                         android:textSize="@dimen/text_size_medium" />
@@ -369,7 +369,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/contact_us_side_menu_button"
+                                android:text="@string/side_menu_button_label_contact_us"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
@@ -417,7 +417,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/quality_guarantee_side_menu_button"
+                                android:text="@string/side_menu_button_label_quality_guarantee"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
@@ -465,7 +465,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/order_status_side_menu_button"
+                                android:text="@string/side_menu_button_label_order_status"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
@@ -513,7 +513,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/past_orders_side_menu_button"
+                                android:text="@string/side_menu_button_label_past_orders"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
@@ -561,7 +561,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/how_it_works_side_menu_button"
+                                android:text="@string/side_menu_button_label_how_it_works"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>
@@ -609,7 +609,7 @@
                             <print.io.view.TextViewFontLight
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/about_us_side_menu_button"
+                                android:text="@string/side_menu_button_label_about_us"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>

@@ -11,76 +11,121 @@
         android:layout_height="@dimen/title_bar_height"
         android:background="@color/title_bar_background" >
 
-        <LinearLayout
-            android:id="@+id/layout_back_button"
+        <RelativeLayout
+            android:id="@+id/layout_title_left"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:clickable="true"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingLeft="10dip"
-            android:paddingRight="10dip"
-            android:visibility="gone" >
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:id="@+id/layout_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageview_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_arrow_back" />
+
+                <ImageView
+                    android:id="@+id/imageview_top_left_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageview_back"
+                android:id="@+id/imageview_menu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icon_arrow_back" />
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/layout_back_button"
+                android:padding="10dip"
+                android:src="@drawable/btn_menu"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageview_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/layout_title_left"
+            android:onClick="onClickShowSearch"
+            android:padding="10dip"
+            android:src="@drawable/icon_search_featured_products_default" />
+
+        <RelativeLayout
+            android:id="@+id/layout_title_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/imageview_search"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <print.io.view.EditTextFontLight
+                android:id="@+id/edittext_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/textview_cance_search"
+                android:background="#00000000"
+                android:hint="@string/product_search"
+                android:inputType="textNoSuggestions"
+                android:singleLine="true"
+                android:textColor="#222222"
+                android:textSize="@dimen/text_size_medium" />
+
+            <print.io.view.TextViewFontLight
+                android:id="@+id/textview_cance_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="onClickCancelSearch"
+                android:paddingRight="10dip"
+                android:text="@string/cancel"
+                android:textSize="@dimen/text_size_medium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_title_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <print.io.view.TextViewFontTitle
+                android:id="@+id/textview_screen_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dip"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/screen_title_products"
+                android:textColor="@color/title_bar_text"
+                android:textSize="@dimen/text_size_title" />
 
             <ImageView
-                android:id="@+id/imageview_top_left_logo"
+                android:id="@+id/imageview_menu_right"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/relativelayout_shopping_cart"
+                android:padding="10dip"
+                android:src="@drawable/btn_menu"
+                android:visibility="gone" />
 
-        <ImageView
-            android:id="@+id/imageview_menu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/layout_back_button"
-            android:padding="10dip"
-            android:src="@drawable/btn_menu"
-            android:visibility="gone" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/imageview_menu"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
-        <print.io.view.TextViewFontTitle
-            android:id="@+id/textview_screen_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:drawablePadding="4dip"
-            android:gravity="center_vertical"
-            android:text="@string/title_products"
-            android:textColor="@color/title_bar_text"
-            android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/imageview_menu_right"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
-        <ImageView
-            android:id="@+id/imageview_menu_right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@id/relativelayout_shopping_cart"
-            android:padding="10dip"
-            android:src="@drawable/btn_menu"
-            android:visibility="gone" />
-
-        <include layout="@layout/button_shopping_cart" />
+            <include layout="@layout/button_shopping_cart" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <View
@@ -113,88 +158,12 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_search_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/layout_country_drop_down"
-        android:orientation="vertical" >
-
-        <RelativeLayout
-            android:id="@+id/layout_search_bar_action_search"
-            android:layout_width="match_parent"
-            android:layout_height="45dip"
-            android:visibility="gone" >
-
-            <ImageView
-                android:id="@+id/imageview_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:padding="10dip"
-                android:src="@drawable/icon_search_featured_products_default" />
-
-            <print.io.view.EditTextFontLight
-                android:id="@+id/edittext_search"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/textview_cance_search"
-                android:layout_toRightOf="@id/imageview_search"
-                android:background="#00000000"
-                android:hint="@string/product_search"
-                android:inputType="textNoSuggestions"
-                android:singleLine="true"
-                android:textColor="#222222"
-                android:textSize="@dimen/text_size_medium" />
-
-            <print.io.view.TextViewFontLight
-                android:id="@+id/textview_cance_search"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:clickable="true"
-                android:gravity="center_vertical"
-                android:onClick="onClickCancelSearch"
-                android:paddingRight="10dip"
-                android:text="@string/cancel"
-                android:textSize="@dimen/text_size_medium" />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/layout_search_bar_action_show_search"
-            android:layout_width="wrap_content"
-            android:layout_height="45dip"
-            android:layout_gravity="center"
-            android:onClick="onClickShowSearch" >
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:padding="10dip"
-                android:src="@drawable/icon_search_featured_products_default" />
-
-            <print.io.view.TextViewFontLight
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/search_caps"
-                android:textSize="@dimen/text_size_medium" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#CACACA" />
-    </LinearLayout>
-
     <ScrollView
         android:id="@+id/scrollview_categories_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/layout_bottom_bar"
-        android:layout_below="@id/layout_search_bar"
+        android:layout_below="@id/layout_country_drop_down"
         android:clipToPadding="false"
         android:scrollbars="none"
         android:visibility="gone" >
@@ -247,7 +216,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/layout_bottom_bar"
-        android:layout_below="@id/layout_search_bar"
+        android:layout_below="@id/layout_country_drop_down"
         android:clipToPadding="false"
         android:scrollbars="none"
         android:visibility="gone" >
@@ -264,7 +233,7 @@
         android:id="@+id/textview_categories_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layout_search_bar"
+        android:layout_below="@id/layout_country_drop_down"
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="15dip"
@@ -308,15 +277,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="4" >
-
-            <ImageView
-                android:layout_width="0dip"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="onClickBottomBarSearch"
-                android:padding="8dip"
-                android:src="@drawable/btn_selector_bottombar_search" />
+            android:weightSum="3" >
 
             <ImageView
                 android:layout_width="0dip"

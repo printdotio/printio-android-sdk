@@ -29,28 +29,14 @@
                 android:src="@drawable/icon_arrow_back" />
         </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/layout_back_button"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
-
         <print.io.view.TextViewFontTitle
             android:id="@+id/textview_product_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/product_details"
+            android:text="@string/screen_title_product_details"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/relativelayout_shopping_cart"
-            android:src="@drawable/icon_ver_divider"
-            android:visibility="invisible" />
 
         <include layout="@layout/button_shopping_cart" />
     </RelativeLayout>
@@ -159,7 +145,7 @@
                     android:id="@+id/linearlayout_price_holder"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/price_container_background"
+                    android:background="@color/product_details_v2_price_container_background"
                     android:gravity="center_horizontal"
                     android:orientation="vertical"
                     android:paddingBottom="10dip"
@@ -175,8 +161,8 @@
                             android:layout_height="wrap_content"
                             android:singleLine="true"
                             android:text="@string/starting_at"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_medium"
+                            android:textColor="@color/product_details_v2_staring_at_text_color"
+                            android:textSize="@dimen/product_details_v2_staring_at_text_size"
                             android:textStyle="bold" />
 
                         <print.io.view.TextViewFontNormal
@@ -186,16 +172,16 @@
                             android:layout_marginLeft="5dip"
                             android:layout_marginRight="5dip"
                             android:singleLine="true"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_medium" />
+                            android:textColor="@color/product_details_v2_retail_price_text_color"
+                            android:textSize="@dimen/product_details_v2_retail_price_text_size" />
 
                         <print.io.view.TextViewFontNormal
                             android:id="@+id/textview_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:singleLine="true"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/text_size_medium" />
+                            android:textColor="@color/product_details_v2_price_text_color"
+                            android:textSize="@dimen/product_details_v2_price_text_size" />
                     </LinearLayout>
 
                     <ImageView
@@ -215,15 +201,12 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <print.io.view.ButtonFontTitle
+                <include
+                    android:id="@+id/button_create_it"
                     android:layout_width="match_parent"
                     android:layout_height="40dip"
-                    android:background="@drawable/btn_create_it"
-                    android:onClick="onClickCreateIt"
-                    android:text="@string/make_it"
-                    android:textColor="@color/button_primary_text"
-                    android:textSize="@dimen/text_size_button_create_it_v2"
-                    android:textStyle="bold" />
+                    layout="@layout/item_button_create_it_v2"
+                    android:onClick="onClickCreateIt" />
             </LinearLayout>
 
             <!-- Layout Items -->
@@ -282,13 +265,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
                 layout="@layout/item_product_details_shipping_info" />
-
-            <include
-                android:id="@+id/item_quality_guarantee"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_quality" />
         </LinearLayout>
     </print.io.view.CustomScrollView>
 
@@ -302,15 +278,12 @@
         android:padding="10dip"
         android:visibility="gone" >
 
-        <print.io.view.ButtonFontTitle
+        <include
+            android:id="@+id/button_create_it"
             android:layout_width="match_parent"
             android:layout_height="40dip"
-            android:background="@drawable/btn_create_it"
-            android:onClick="onClickCreateIt"
-            android:text="@string/make_it"
-            android:textColor="@color/button_primary_text"
-            android:textSize="@dimen/text_size_button_create_it_v2"
-            android:textStyle="bold" />
+            layout="@layout/item_button_create_it_v2"
+            android:onClick="onClickCreateIt" />
     </LinearLayout>
 
 </RelativeLayout>
