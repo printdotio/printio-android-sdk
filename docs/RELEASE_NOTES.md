@@ -52,9 +52,7 @@
 3.1.21 (v118)
 =============
 
-IMPORTANT NOTE TO PARTNERS
-========
-**IMPORTANT NOTE TO PARTNERS**: We have made changes to Framed Canvas’ and T-shirts products. These products will not behave as intended if enabled in the production version of your admin panel for iOS and Android clients. A work around is to disable these products in your admin panel. This will ensure a better user experience.
+**IMPORTANT NOTE TO PARTNERS**: We have made changes to Framed Canvas’ and T-shirts products. These products will not behave as intended if enabled in the production version of your admin panel for iOS and Android clients. A work around is to disable these products in your admin panel. This will ensure a better user experience.  
 
 **Features:**
 

@@ -1389,27 +1389,3 @@ To modify "How it Works" section, change the following items in `res/values/stri
 ```
 **NOTICE:**  
 Use `newline` character `\n` to manually add new lines.  
-&nbsp;  
-&nbsp;  
-#### > Get shopping cart items count without starting the SDK  
-
-To get the count of items in shopping cart, use the following method:
-```java
-PIO.getNumberOfItemsInShoppingCart(Context context);
-```
-&nbsp;  
-&nbsp;
-#### > Change photo sources text and background colors  
-
-To change photo sources text and background colors, modify following items in `res/values/colors.xml`
-```xml
-<color name="photosources_background">#333333</color>
-<color name="photosources_text">#FFFFFF</color>
-```
-  
-To change photo sources text size, modify the following line in `res/values/dimens.xml`
-```xml
-<dimen name="text_size_photosources">12dip</dimen>
-```
-&nbsp;  
-&nbsp;
