@@ -12,11 +12,6 @@ should be replaced by:
 <activity android:name="print.io.ActivityPaymentMethod" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize|stateUnchanged" />
 ```
 
-Following activity declaration should be removed:
-```xml
-<activity android:name="print.io.ActivityHelp" android:screenOrientation="portrait" />
-```
-
 Following activity declaration should be added:
 ```xml
 <activity android:name="print.io.ActivityQualityGuarantee" android:screenOrientation="portrait" />
@@ -24,7 +19,9 @@ Following activity declaration should be added:
 
 **Changes in PIOConfig**
 
-Method `PIOConfig.setHelpUrl(String)` has been removed and so was the Help screen. 
+Method `setApiUrl` has been removed. It is not required to set API URL anymore.
+
+Method `setRecipeID(String recipeID)` has been changed to `setRecipeIDs(String liveRecipeID, String stagingRecipeID)`. From now on you would need to specify both live and staging recipe IDs (respectively) when setting recipe IDs.
 
 **Changes after Side Menu got redesigned**
 

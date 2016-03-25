@@ -38,6 +38,8 @@
             android:text="@string/screen_title_choose_country"
             android:textColor="@color/title_bar_text"
             android:textSize="@dimen/text_size_title" />
+        
+        <include layout="@layout/button_shopping_cart" />
     </RelativeLayout>
 
     <View

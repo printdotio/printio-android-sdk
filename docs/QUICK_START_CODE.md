@@ -19,7 +19,7 @@ After you set your Config object, there are two ways to start the print.io SDK:
    PIO.start(context);
    ```
 
-####2. or Start the SDK by extending ActivitySplash
+####2. Or start the SDK by extending ActivitySplash
 
    print.io SDK can also be launched using (or extending) `ActivitySplash`.  
    This is useful if you want to create a stand-alone app which uses print.io SDK.  
@@ -61,33 +61,24 @@ public class ApplicationSampleApp extends Application {
 		// Create PIOConfig object which will be used to configure SDK
 		PIOConfig config = new PIOConfig();
 
-		// Tells the SDK which server to use (Live or Staging) server.
+		// Mandatory config - set API keys provided for every partner
+		config.setRecipeIDs(PIOConstants.RECIPE_ID_LIVE, PIOConstants.RECIPE_ID_STAGING);
+
+		// Optional config - tell SDK which environment to use (Live or Staging)
 		// In Staging mode, you can test purchase process without using real money.
-		// Note: Some other methods require this to be called first, so make sure to call it as early as possible.
 		config.setLiveApplication(false);
 
-		// API KEY provided for every partner
-		config.setRecipeID(PIOConstants.RECIPE_ID);
-
-		// PublicConstants.API_URL_STAGING or PublicConstants.API_URL_LIVE
-		config.setApiUrl(PublicConstants.API_URL_STAGING);
-
-		// In order to use Credit Card payments, you need to set your Braintree encryption key
-		config.setBraintreeEncryptionKey(PIOConstants.Braintree.ENCRYPTION_KEY);
-
-		// Set available photo sources
+		// Optional config - set available photo sources
 		config.setPhotoSources(Arrays.asList(
 			new PhonePhotoSource(),
 			new InstagramPhotoSource(),
-			new FacebookPhotoSource(),
-			new PhotobucketPhotoSource(),
-			new DropboxPhotoSource(),
-			new FlickrPhotoSource()
+			new FacebookPhotoSource()
 		));
 			
 		try {
-			// Set Config object
+			// Set configuration object and start PIO SDK
 			PIO.setConfig(this, config);
+			PIO.start(this);
 		} catch (PIOException e) {
 			e.printStackTrace();
 		}

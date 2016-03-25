@@ -3,7 +3,7 @@
 
     <string name="facebook_app_id"></string> <!-- Needed as placeholder. -->
 
-    <string name="app_name">Makeable</string>
+    <string name="app_name">Gooten</string>
     
     <!-- Screen titles -->
     <string name="screen_title_products">Products</string>
@@ -24,6 +24,7 @@
     <string name="screen_title_order_completed">Order Completed</string>
     <string name="screen_title_payment_method">Payment</string>
     <string name="screen_title_shipment_review">Shipment Review</string>
+    <string name="screen_title_help">Help</string>
     
     <string name="button_label_create_it">Make it!</string>
     <string name="button_label_create_it_with_product"></string>
@@ -144,7 +145,6 @@
     <string name="verifying_payment">Verifying payment&#8230;</string>
     <string name="state_region_province">State/Region/Province</string>
     <string name="product">Product</string>
-    <string name="products">Products</string>
     <string name="help">Help</string>
     <string name="options">Options</string>
     <string name="featured_products">Featured Products</string>
@@ -254,7 +254,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="add_text_coming_soon">Add text feature is coming soon</string>
     <string name="effects_coming_soon">Effects are coming soon</string>
     <string name="effects">Effects</string>
-    <string name="please_try_again">Makeable is currently upgrading our products. Please try again in a few minutes.</string>
+    <string name="please_try_again">Gooten is currently upgrading our products. Please try again in a few minutes.</string>
     <string name="almost_done">Almost Done!</string>
     <string name="select_email">Select Email</string>
     <string name="select_phone_number">Select Phone Number</string>
@@ -337,7 +337,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="overall">Overall:</string>
     <string name="continue_shopping">Continue Shopping</string>
     <string name="about_subtitle">About:</string>
-    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@makeable.com for support and friends</string>
+    <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@gooten.com for support and friends</string>
     <string name="how_it_works_subtitle">How It Works:</string>
     <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
     <string name="pop_up_select_address_page">This page allows you to add, edit or delete a Shipping Address.\n\nTo add a shipping address:\n\n1) Please select the (+ Add a Shipping Address) button at the bottom of the page.\n\n2) A new Address Form Page will appear. Please fill out all necessary fields. Once all the Address fields are filled out, please select the Save Address button.\n\n3) If you missed a required field, a pop up in red text will alert you to what is missing and ask you to update before re-saving.\n\nTo select a shipping address you have either added or that is already listed on the screen:\n\n1) Simply select the address you want to use and it will automatically take you to the Shipment Review Screen</string>
@@ -352,7 +352,7 @@ to the Payment Page.</string>
     <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
     <string name="pop_up_payment_page">Almost done!\n\nYou\'re now in the Payment screen to purchase your one-of-a-kind design(s)!\n\nSelect payment method (PayPal or Card) and follow the steps on the next screens.</string>
     <string name="pop_up_payment">You are in this screen because you selected to pay with a card.\n\nOnce you have entered information into each field, simply touch the Place Order button.</string>
-    <string name="pop_up_order_completed">Makeable thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nsupport@makeable.com for support and friends</string>
+    <string name="pop_up_order_completed">Gooten thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nsupport@gooten.com for support and friends</string>
     <string name="solid_background">Solid Background</string>
     <string name="product_categories">Categories</string>
     <string name="apply">Apply</string>
@@ -433,6 +433,7 @@ to the Payment Page.</string>
     <string name="side_menu_button_label_order_status">Order Status</string>
     <string name="side_menu_button_label_past_orders">Past Orders</string>
     <string name="side_menu_button_label_about_us">About us</string>
+    <string name="side_menu_button_label_help">Help</string>
     <string name="side_menu_button_label_contact_us">Contact us</string>
     <string name="side_menu_button_label_how_it_works">How it works</string>
     <string name="side_menu_button_label_quality_guarantee">Quality Guarantee</string>

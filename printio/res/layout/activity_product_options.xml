@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -35,11 +36,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:gravity="center_vertical"
             android:paddingLeft="4dip"
             android:paddingRight="4dip"
+            android:singleLine="true"
             android:text="@string/screen_title_product_options"
             android:textColor="@color/title_bar_text"
-            android:textSize="@dimen/text_size_title" />
+            android:textSize="@dimen/text_size_title"
+            app:pio_center_horizontal_parent="@+id/layout_titlebar" />
 
         <include layout="@layout/item_nav_bar_button_cancel" />
     </RelativeLayout>

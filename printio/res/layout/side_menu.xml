@@ -20,7 +20,8 @@
                 android:id="@+id/linearlayout_top_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:splitMotionEvents="false" >
 
                 <RelativeLayout
                     android:id="@+id/side_menu_button_exit"
@@ -60,7 +61,8 @@
                     android:id="@+id/layout_side_menu_photo_sources"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:splitMotionEvents="false" >
 
                     <print.io.view.TextViewFontNormal
                         android:layout_width="match_parent"
@@ -78,13 +80,15 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical" >
+                        android:orientation="vertical"
+                        android:splitMotionEvents="false" >
 
                         <LinearLayout
                             android:id="@+id/layout_ps_row_1"
                             android:layout_width="match_parent"
                             android:layout_height="70dip"
                             android:orientation="horizontal"
+                            android:splitMotionEvents="false"
                             android:visibility="gone" >
 
                             <ImageView
@@ -169,6 +173,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="70dip"
                             android:orientation="horizontal"
+                            android:splitMotionEvents="false"
                             android:visibility="gone" >
 
                             <ImageView
@@ -241,7 +246,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="100dip"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal"
+                        android:splitMotionEvents="false" >
 
                         <RelativeLayout
                             android:id="@+id/layout_change_currency"
@@ -327,7 +333,8 @@
                     android:id="@+id/layout_side_menu_information"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:splitMotionEvents="false" >
 
                     <print.io.view.TextViewFontNormal
                         android:layout_width="match_parent"
@@ -610,6 +617,54 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/side_menu_button_label_about_us"
+                                android:textColor="@color/side_menu_text"
+                                android:textSize="@dimen/text_size_side_menu_button" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginTop="5dip"
+                            android:src="@drawable/icon_side_menu_button_arrow" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dip"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/side_menu_separator_color" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/side_menu_button_help"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dip"
+                        android:background="@drawable/bg_selector"
+                        android:clickable="true"
+                        android:onClick="onClickSMHelp"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip"
+                                android:layout_marginRight="10dip"
+                                android:layout_marginTop="5dip"
+                                android:src="@drawable/icon_side_menu_button_help" />
+
+                            <print.io.view.TextViewFontLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/side_menu_button_label_help"
                                 android:textColor="@color/side_menu_text"
                                 android:textSize="@dimen/text_size_side_menu_button" />
                         </LinearLayout>

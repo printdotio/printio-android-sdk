@@ -229,6 +229,7 @@ PIOConfig.setVisibleSideMenuButtons(List<SideMenuButton> sideMenuButtons);
 enum SideMenuButton {
 	EXIT,
 	ABOUT,
+	HELP,
     HOW_IT_WORKS,
     PAST_ORDERS,
     ORDER_STATUS,
@@ -242,6 +243,7 @@ To modify buttons' icons, replace the corresponding icon with your own.
 ```
 icon_side_menu_button_exit_sdk
 icon_side_menu_button_about_us.png
+icon_side_menu_button_help.png
 icon_side_menu_button_contact_us.png
 icon_side_menu_button_how_it_works.png
 icon_side_menu_button_order_status.png
@@ -255,6 +257,7 @@ To modify buttons' labels, change the following items in `res/values/strings.xml
 <string name="side_menu_button_label_order_status">Order Status</string>
 <string name="side_menu_button_label_past_orders">Past Orders</string>
 <string name="side_menu_button_label_about_us">About us</string>
+<string name="side_menu_button_label_help">Help</string>
 <string name="side_menu_button_label_contact_us">Contact us</string>
 <string name="side_menu_button_label_how_it_works">How it works</string>
 <string name="side_menu_button_label_quality_guarantee">Quality Guarantee</string>
@@ -307,6 +310,11 @@ To set support email address, use the following method:
 ```java
 PIOConfig.setSupportEmail(String supportEmail);
 ``` 
+####> Set help URL
+To set help URL, use the following method:
+```java
+PIOConfig.setHelpUrl(String url);
+```
 &nbsp;  
 &nbsp;  
 #### Set visibility of **SDK Version** in Side Menu:  
@@ -374,6 +382,7 @@ To change screen title,  modify the following item in `res/values/strings.xml`
 <string name="screen_title_order_completed">Order Completed</string>
 <string name="screen_title_payment_method">Payment</string>
 <string name="screen_title_shipment_review">Shipment Review</string>
+<string name="screen_title_help">Help</string>
 ```
 _NOTICE: Never modify xml item names. Modify values only._   
 &nbsp;  
@@ -574,8 +583,8 @@ To change size of starting at text, retail price text or price text,  modify fol
 
 To change style of "Create it" button, modify following resources:
 
-`res/layout/item_button_create_it_v1` if you are using `ScreenVersion.V_1`, or/and
-`res/layout/item_button_create_it_v2` if you are using `ScreenVersion.V_2`.
+`res/layout/item_button_create_it_v1.xml` if you are using `ScreenVersion.V_1`, or/and
+`res/layout/item_button_create_it_v2.xml` if you are using `ScreenVersion.V_2`.
 
 _Note that layout attributes (such as width, height, margin, etc..) will be overridden in files were these layouts are included._
 
@@ -983,7 +992,22 @@ Default value is false (functionality is ignored).
 PIOConfig.closeWidgetFromShoppingCart(boolean closeWidgetFromShoppingCart);
 ```
 &nbsp;  
+&nbsp; 
+#### > Change style of "Remove Item" button
+To change style of "Remove Item" button, modify following resources
+`res/layout/item_button_remove_item.xml`.
+
+_Note that layout attributes (such as width, height, margin, etc..) will be overridden in files were these layouts are included._
 &nbsp;  
+&nbsp;
+Add Address screen
+--------------
+#### > Change design of "Choose From Contacts" button
+
+To change design of "Choose From Contacts" button modify following resource: 
+`res/layout/item_choose_from_contacts.xml`.
+
+_Note that button element has to remain the same id property value._
 
 Payment screen
 --------------
@@ -1045,12 +1069,23 @@ PIO.clearShippingAddresses(Context context);
 ```
 &nbsp;
 &nbsp;
+Choose Country screen
+------------------
+#### >  Set shopping cart button visibility
+Sets shopping cart button visibility in navigation bar. Default value is `false` (button is invisible).
+
+```java
+PIOConfig.setShowShoppingCartButtonVisibilityOnCountryScreen(boolean isVisible)
+```
+&nbsp;
+&nbsp;
 PayPal Settings
 ---------------
-#### > Set PayPal's client ids, for both modes, staging and production. Default values are client ids from PrintIO.  
-( > Set up PayPal credentials)  
+#### > Set PayPal's client ID
 
-PrintIO SDK is currently using PayPal Android SDK version 1.2.1  
+To configure SDK to work with your PayPal account, set appropriate PayPal client ID. If not specified, SDK will use Gooten's account client ID.  
+
+Gooten SDK is currently using PayPal Android SDK version 1.2.1.
 
 PayPal CLIENT_ID can be obtained here  
 https://developer.paypal.com/webapps/developer/applications/myapps  
@@ -1058,21 +1093,14 @@ https://developer.paypal.com/webapps/developer/applications/myapps
 PIOConfig.setPayPalClientId(String PAY_PAL_CLIENT_ID);
 ```
 **NOTICE:**  
-If `PIOConfig.setLiveApplication(...)` was set to `true`, PayPal **Live** environment is used. Otherwise, **Sandbox** environment is used.  
-&nbsp;  
-&nbsp;  
-#### > Define PayPal receiver email  
-
-PayPal Receiver Email is your PayPal business account that will receive the payments from the app.  
-```java
-PIOConfig.setPayPalReceiverEmail(String PAY_PAL_RECEIVER_EMAIL);
-```
+If `PIOConfig.setLiveApplication(...)` was set to `true`, PayPal **Live** environment is used. Otherwise, **Sandbox** environment is used.  Therefore, make sure to set appropriate PayPal client ID (based on used environment).
 &nbsp;  
 &nbsp;  
 Braintree Settings
 ------------------
-#### > Set Braintree encryption key for staging and production mode. By default, keys from PrintIO will be used.  
-( > Set up Braintree encryption key)  
+#### > Set Braintree encryption key
+
+To configure SDK to work with your Braintree account, set appropriate Braintree encryption key. If not specified, SDK will use Gooten's account encryption key.  
 
 ```java
 PIOConfig.setBraintreeEncryptionKey(String BRAINTREE_ENCRYPTION_KEY);

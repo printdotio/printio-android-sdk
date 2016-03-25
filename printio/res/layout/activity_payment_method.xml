@@ -290,7 +290,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#ffffff"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:splitMotionEvents="false" >
 
                     <print.io.view.TextViewFontLight
                         android:id="@+id/textview_select_payment_method"
@@ -514,12 +515,31 @@
                                 android:layout_height="40dip"
                                 android:layout_marginRight="2dip"
                                 android:layout_weight="1"
+                                android:gravity="bottom"
                                 android:text="@string/billing_address"
                                 android:textColor="#595d66"
                                 android:textSize="@dimen/text_size_normal" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:orientation="horizontal" >
 
                             <print.io.view.ButtonFontBold
-                                android:id="@+id/button_use_shipping_address"
+                                android:id="@+id/button_pick_from_contacts"
+                                android:layout_width="0px"
+                                android:layout_height="40dip"
+                                android:layout_marginRight="2dip"
+                                android:layout_weight="1"
+                                android:background="@drawable/btn_primary"
+                                android:onClick="onClickPickFromContacts"
+                                android:text="@string/choose_from_contacts"
+                                android:textColor="@color/button_primary_text"
+                                android:textSize="@dimen/text_size_normal" />
+
+                            <print.io.view.ButtonFontBold
                                 android:layout_width="0px"
                                 android:layout_height="40dip"
                                 android:layout_marginLeft="2dip"
@@ -572,14 +592,14 @@
                                 android:textSize="@dimen/text_size_normal" />
                         </LinearLayout>
 
-                        <print.io.view.EditTextFontLight
-                            android:id="@+id/edittext_billing_street_1"
+                        <print.io.view.AutoCompleteTextViewFontLight
+                            android:id="@+id/autocompletetextview_billing_street_1"
                             android:layout_width="match_parent"
                             android:layout_height="40dip"
                             android:layout_marginTop="5dip"
                             android:background="@color/bg_edit_text"
                             android:hint="@string/street_1"
-                            android:inputType="textCapWords"
+                            android:inputType="textNoSuggestions"
                             android:paddingLeft="10dip"
                             android:paddingRight="10dip"
                             android:singleLine="true"
@@ -643,6 +663,36 @@
                             android:inputType="textCapWords"
                             android:paddingLeft="10dip"
                             android:paddingRight="10dip"
+                            android:textColor="#595d66"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <print.io.view.EditTextFontLight
+                            android:id="@+id/edittext_billing_phone_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginTop="5dip"
+                            android:background="@color/bg_edit_text"
+                            android:hint="@string/telephone_number"
+                            android:inputType="phone"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:singleLine="true"
+                            android:textColor="#595d66"
+                            android:textColorHint="#b3b3b3"
+                            android:textSize="@dimen/text_size_normal" />
+
+                        <print.io.view.EditTextFontLight
+                            android:id="@+id/edittext_billing_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dip"
+                            android:layout_marginTop="5dip"
+                            android:background="@color/bg_edit_text"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:singleLine="true"
                             android:textColor="#595d66"
                             android:textColorHint="#b3b3b3"
                             android:textSize="@dimen/text_size_normal" />

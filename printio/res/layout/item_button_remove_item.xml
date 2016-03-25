@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<print.io.view.ButtonFontLight xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/btn_delete_swiped"
+    android:gravity="center"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:text="@string/remove_item"
+    android:textColor="@color/button_primary_text"
+    android:textSize="@dimen/text_size_large" />

@@ -156,6 +156,9 @@ Please add following activities to your AndroidManifest.xml file:
 	android:screenOrientation="portrait"
 	android:windowSoftInputMode="stateHidden" />
 <activity
+	android:name="print.io.ActivityHelp"
+	android:screenOrientation="portrait" />
+<activity
 	android:name="print.io.photosource.impl.facebook.Facebook"
 	android:screenOrientation="portrait" />
 <activity

@@ -42,4 +42,8 @@ limitations under the License.
         <attr name="printiosdk_slidingmenu_selectorDrawable" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="PIO_TextViewNoOverlap">
+        <attr name="pio_center_horizontal_parent" format="reference" />
+    </declare-styleable>
+
 </resources>
