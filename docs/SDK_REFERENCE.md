@@ -521,12 +521,28 @@ Default value is `true` (bottom bar is visible).
 PIOConfig.setProductsBottomBarVisibility(boolean isVisible);
 ```
 &nbsp;  
-&nbsp;
+&nbsp;  
+#### > Set Facebook Page URL for `Like` button in bottom bar
+
+There is no default value.
+```java
+PIOConfig.setFacebookPageUrl(String facebookPageUrl);
+```
+&nbsp;  
+&nbsp;  
 #### > Set featured products in Hero
 
 Default value is `null` (default featured products, returned from API are shown in Hero).
 ```java
 PIOConfig.setFeaturedProducts(List<ProductType> products);
+```
+&nbsp;  
+&nbsp;  
+#### > Set promo image with link in Hero
+
+The link will open in external application.
+```java
+PIOConfig.setHeroItem(HeroItem heroItem);
 ```
 &nbsp;  
 &nbsp;  

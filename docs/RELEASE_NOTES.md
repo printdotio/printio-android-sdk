@@ -1,5 +1,123 @@
 **Android Release Notes**
 
+3.2.0 (v120)
+============
+
+**New products:**
+`SCARVES`
+`STICKERS`
+`JERSEY_BLANKETS`
+`LAPTOP_COVERS`
+`PET_BANDANA`
+`PET_BOWLS`
+`APRONS`
+`FLOORMATS`
+`YOGA_MATS`
+`BEER_MUGS`
+`CURTAIN_SHEERS`
+`FLIP_FLOPS`
+`BODY_PILLOWS`
+`BATH_TOWELS`
+`ACCESSORY_POUCHES`
+`WASH_CLOTHS`
+`INFANT_CLOTHING`
+`SWEATSHIRTS`
+`HOODIES`
+`YOUTH_APPAREL`
+`TODDLER_CLOTHING`
+`LEGGINGS`
+`PREMIUM_COASTERS`
+`LEATHER_GALLERY_WRAPS`
+`FRAMED_LEATHER_GALLERY_WRAPS`
+`OUTDOOR_CANVAS_WRAPS`
+`NOTEBOOKS`
+`NOTEPADS`
+`MAGNETS`
+`STICKERS`
+`WATER_BOTTLES`
+`TAPESTRIES`
+`FOLDED_CARDS`
+
+**Features:**
+
+- Payment options now default to Gooten's, if not specified
+
+- Side Menu redesigned
+
+- Search moved to title bar
+
+- `Shopping Cart` icon added to `Select Country` and `Select Currency` screens
+
+- `Keep Shopping` button moved to title bar when necessary
+
+- Added support for transparency on specific products
+
+- Added `Estimated International Arrival` to `Product Details` screen
+
+- Added a method to manually set featured products in `Products` screen. Refer to [docs](SDK_REFERENCE.md#-set-featured-products-in-hero)
+
+- Added a method to add an image and link to featured product section in `Products` screen. Refer to [docs](SDK_REFERENCE.md#-set-promo-image-with-link-in-hero)
+
+- Customizable `Make It` button
+
+- Customizable `Cancel` button in `Product Options` screen
+
+- Customizable indicator for Photo Count for Photo Albums in `Select Images` screen
+
+- Customizable `Keep Shopping` button
+
+- Customizable `Remove Item` button in `Shopping Cart` screen
+
+- Customizable prices display in `Product Details V2` screen
+
+- Customizable `Add Address` screen
+
+- Customizable screen titles
+
+- Screen titles automatically shrink to fit available space
+
+- Facebook SDK updated
+
+- Optimized SDK storage usage
+
+- Image cache is cleared every 24h
+
+**Bugs:**
+
+- Fixed wrong price being displayed in `Add Address` and `Select Address` screens when coupons are applied
+
+- Fixed a bug when user is able to select more than maximum allowed photos for a given product
+
+- Fixed a crash when using `SingleOptionStepStrategy.SKIP` strategy
+
+- Fixed a crash for `Puzzles` products
+
+- Fixed missing `Use Same Look` dialog for some products
+
+- Prevented opening of multiple `Shopping Cart` items at the same time
+
+- Prevented opening of multiple screens from menu at the same time
+
+- Prevented opening of multiple payment options at the same time
+
+- Fixed a bug with transparent `Phone Cases`
+
+- Fixed a crash when going back from `Checkout` screen on some devices
+
+- Fixed overlapping product descriptions in `Shopping Cart` screen
+
+- Fixed image loading on Android Emulator (AVD)
+
+- Fixed missing page selection dropdown for `Flat Cards` product
+
+- Fixed "default text" warning not shown for `Folded Cards` product
+
+- Fixed a crash when Facebook Page Url is not set
+
+- Fixed non-transparent search icon
+
+###
+
 3.1.28 (v119)
 =============
 
@@ -7,13 +125,13 @@
 
 - Ability to contact our Customer Support when an order fails two times
 
-- Added checkout progress indicator. Refer to [docs](docs/SDK_REFERENCE.md#-show-checkout-progress-below-the-title-bar-in-shopping-cart)
+- Added checkout progress indicator. Refer to [docs](SDK_REFERENCE.md#-show-checkout-progress-below-the-title-bar-in-shopping-cart)
 
 - Product Description is now expandable in `Product Details` V2 Screen
 
 - Product price is displayed in Title Bar during checkout
 
-- Added a method to hide `Remove Item` button from `Shopping Cart` Screen. Refer to [docs](docs/SDK_REFERENCE.md#-set-delete-mode-for-shopping-cart)
+- Added a method to hide `Remove Item` button from `Shopping Cart` Screen. Refer to [docs](SDK_REFERENCE.md#-set-delete-mode-for-shopping-cart)
 
 - Removed list view from `Products` V2 Screen
 
@@ -66,13 +184,13 @@
 
 - Added confirmation dialog when logging out of photo sources
 
-- Customizable user flow for `Options` screen. Refer to [docs](docs/SDK_REFERENCE.md#-set-strategy-for-steps-with-single-option)
+- Customizable user flow for `Options` screen. Refer to [docs](SDK_REFERENCE.md#-set-strategy-for-steps-with-single-option)
 
 - V2 screens can be used without passed-in image
 
 - Vendor logo can now be displayed in V1 screens
 
-- `Cancel` button in `Options` screen is now customizable. Refer to [docs](docs/SDK_REFERENCE.md#-set-cancel-button-visibility)
+- `Cancel` button in `Options` screen is now customizable. Refer to [docs](SDK_REFERENCE.md#-set-cancel-button-visibility)
 
 - Resolution warning thresholds reduced from 0.5 to 0.33
 
@@ -119,7 +237,7 @@
 
 - Added 'Auto Populate' feature for Wall Calendars and Ottomans
 
-- Added new layout step strategy: `SKIP_FOR_SINGLE_PASSED_IMAGE` (refer to [this method](docs/SDK_REFERENCE.md#-set-strategy-for-choose-layout-step-on-product-options-screen))
+- Added new layout step strategy: `SKIP_FOR_SINGLE_PASSED_IMAGE` (refer to [this method](SDK_REFERENCE.md#-set-strategy-for-choose-layout-step-on-product-options-screen))
 
 **Bugs:**
 
