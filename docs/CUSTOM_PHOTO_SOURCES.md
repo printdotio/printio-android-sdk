@@ -233,4 +233,4 @@ Media items is term used to describe all items that could be presented by `Defau
 Print.IO SDK has mechanism for caching downloaded images, so you will not need to worry about that.
 
 ## Custom photo source example
-Inside Print.IO demo application there is [simple example](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/src/com/example/piosdkpoconcept/photosource/vlado) of custom photo source implementation.
+Inside Print.IO demo application there is [simple example](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/src/com/piosdkexample/photosource/vlado) of custom photo source implementation.
