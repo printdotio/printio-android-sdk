@@ -1,5 +1,18 @@
 **Android Release Notes**
 
+3.2.1 (v120)
+============
+
+**Features:**
+
+-
+
+**Bugs:**
+
+- Fixed an issue with list-type products
+
+###
+
 3.2.0 (v120)
 ============
 
