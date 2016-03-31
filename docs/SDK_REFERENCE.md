@@ -64,6 +64,27 @@ PIO.setShoppingCart(context, cart);
 ```
 &nbsp;
 &nbsp;  
+#### > Set host activity  
+
+```java
+PIOConfig.setHostAppActivity(String hostAppActivityClassName)
+```
+
+Gooten SDK provides a few "shortcuts" for getting back to the host application.
+One of them is the `EXIT` button in the Side Menu (which is visible by default).
+In order for these to work, `Host Activity` needs to be set.  
+This is the `ClassName` of the `Activity` that the Gooten SDK will navigate back to.  
+
+This is usually the `Activity` that started the Gooten SDK.  
+In this case you can use the following sample code:  
+**Sample code:**
+```java
+config.setHostAppActivity(getComponentName().getClassName());
+```
+
+If your application is just a wrapper around the Gooten SDK, you should remove the `EXIT` button from the [Side Menu](#-set-buttons-to-be-displayed-in-side-menu)
+&nbsp;  
+&nbsp;  
 #### > PrintIO SDK publicly exposed data
 
 PrintIO SDK provides SDK user with following data which could be accessed at all times:
@@ -218,11 +239,12 @@ Text color:
 ```
 &nbsp;  
 &nbsp;  
-#### > Set which options to use in side menu  
-( > Choose which options will be displayed in side menu)  
+#### > Set buttons to be displayed in side menu  
 
 &nbsp;  
 To select which buttons will be used, pass a `List` of `SideMenuButton` to the following method. By default all buttons are visible.
+
+**Important:** Host `Activity` needs to be set for the `EXIT` button to work. Refer to [setting host activity](#-set-host-activity)
 ```java
 PIOConfig.setVisibleSideMenuButtons(List<SideMenuButton> sideMenuButtons);
 
@@ -643,12 +665,14 @@ PIOConfig.setLayoutStepStrategy(LayoutStepStrategy strategy);
 &nbsp;
 #### > Set cancel button visibility
 
-Sets the visibility of cancel button in title bar. When clicked SDK will return control to the host activity.  
+Sets the visibility of cancel button in title bar. When clicked SDK will return control to the host `Activity`.  
 
 Default value is `false` (hidden).
 ```java
 PIOConfig.setCancelOptionsButtonVisibility(boolean isVisible);
 ```
+**Important:** Host `Activity` needs to be set. Refer to [setting host activity](#-set-host-activity)
+
 To customize `Cancel` button appearance, you can modify following XML file:
 `res/layout/item_nav_bar_button_cancel.xml`. 
 Item representing button must retain the same `android:id` property value as well as `android:onClick` property.  
@@ -973,12 +997,16 @@ PIOConfig.setShowAddMoreProductsInShoppingCart(boolean isVisible);
 Possible strategies:
 
 * `OPEN_PRODUCTS_SCREEN` - Opens "Products" screen.
-* `RETURN_TO_HOST_ACTIVITY` - Closes SDK and returns to the host activity.
+* `RETURN_TO_HOST_ACTIVITY` - Closes SDK and returns to the host `Activity`.
 
 Default value is `AddMoreProductsButtonStrategy.OPEN_PRODUCTS_SCREEN`.
 ```java
 PIOConfig.setAddMoreProductsButtonStrategy(AddMoreProductsButtonStrategy strategy);
 ```
+
+**Important:** In order to use `RETURN_TO_HOST_ACTIVITY`, host `Activity` needs to be set. Refer to [setting host activity](#-set-host-activity)
+&nbsp;  
+&nbsp;  
 #### > Change style of "Add more products" button
 
 To change color of button text, modify the following item in `res/values/colors.xml`.
