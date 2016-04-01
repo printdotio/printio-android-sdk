@@ -1,4 +1,4 @@
-Migrating to vX.X.X from v3.1.28
+Migrating to v3.2.0 from v3.1.28
 ========
 
 **Changes in AndroidManifest.xml**
@@ -25,7 +25,7 @@ Method `setRecipeID(String recipeID)` has been changed to `setRecipeIDs(String l
 
 **Changes after Side Menu got redesigned**
 
-Side Menu got brand new design in vX.X.X.  
+Side Menu got brand new design in v3.2.0.  
 It is advised that all custom configurations related to Side Menu get checked because they could be obsolete now.  
 Please refer to Side Menu section inside [SDK Reference](SDK_REFERENCE.md#side-menu) for new configuration possibilities.
 
@@ -53,7 +53,7 @@ side_menu_version_bg
 **BugSense library dependency**
 
 BugSense library has been removed from the SDK, but feature is still supported via the same method `PIOConfig.setBugSenseKey(String)`.  
-If you wish to use this feature in SDK vX.X.X or later, you have to add BugSense library v3.5 to your project.
+If you wish to use this feature in SDK v3.2.0 or later, you have to add BugSense library v3.5 to your project.
 
 **Parse library**
 

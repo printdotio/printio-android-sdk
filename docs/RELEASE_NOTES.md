@@ -1,5 +1,20 @@
 **Android Release Notes**
 
+3.2.2 (v120)
+============
+
+**Features:**
+
+-
+
+**Bugs:**
+
+- Fixed backwards compatibility with v3.1.28
+
+- Fixed wrong format when exporting Multi-Item products to server; Fixed compatibility with Vendor API
+
+###
+
 3.2.1 (v120)
 ============
 
