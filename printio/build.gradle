@@ -28,5 +28,10 @@ android {
 dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.5.+'
     compile 'com.google.code.gson:gson:2.2.4'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.amazonaws:aws-android-sdk-core:2.+'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.+'
+    compile files('libs/braintree-android-encryption-1.0.0.jar')
+    compile files('libs/PayPalAndroidSDK-2.7.1.jar')
+    compile files('libs/printiosdk.jar')
 }
