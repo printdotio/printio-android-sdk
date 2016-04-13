@@ -31,7 +31,9 @@ dependencies {
     compile 'com.amazonaws:aws-android-sdk-core:2.+'
     compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
     compile 'com.amazonaws:aws-android-sdk-s3:2.+'
-    compile files('libs/braintree-android-encryption-1.0.0.jar')
-    compile files('libs/PayPalAndroidSDK-2.7.1.jar')
+    compile 'com.braintreepayments:encryption:2.+'
+    compile('com.paypal.sdk:paypal-android-sdk:2.13.3') {
+    	exclude group: 'io.card'
+    }
     compile files('libs/printiosdk.jar')
 }
