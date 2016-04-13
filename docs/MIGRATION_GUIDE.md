@@ -1,3 +1,14 @@
+Migrating to v3.2.7 from v3.2.2
+========
+
+**Changes in PIOConfig**
+
+Method `setGoogleAnalyticsTrackId` has been removed. In order to use Google Analytics you should do following:
+```
+// import print.io.analytics.impl.GoogleAnalyticsTracker;
+config.setAnalyticsTracker(new GoogleAnalyticsTracker(trackingId));
+```
+
 Migrating to v3.2.0 from v3.1.28
 ========
 

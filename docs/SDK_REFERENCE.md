@@ -84,7 +84,23 @@ config.setHostAppActivity(getComponentName().getClassName());
 
 If your application is just a wrapper around the Gooten SDK, you should remove the `EXIT` button from the [Side Menu](#-set-buttons-to-be-displayed-in-side-menu)
 &nbsp;  
+&nbsp; 
+#### > Set all products and variants
+Sets if SDK should use all products and variants available with default pricing. By default, value is set to `false` - SDK will use products and variants with prices that are set via admin panel.
+
+```java
+PIOConfig.setAllProductsAndVariants(boolean isAll)
+```
 &nbsp;  
+&nbsp;   
+#### > Set testing mode for order placing
+Sets if SDK should use testing mode for placing orders. In testing mode orders are submitted without payment verification. This is only used in live environment. By default, value is set to `false` - SDK will use live mode for placing orders. 
+
+```java
+PIOConfig.setOrderTesting(boolean isOrderTesting)
+```
+&nbsp;  
+&nbsp;   
 #### > PrintIO SDK publicly exposed data
 
 PrintIO SDK provides SDK user with following data which could be accessed at all times:
@@ -138,6 +154,21 @@ public void onCreate() {
 	super.onCreate();
 	LocalBroadcastManager.getInstance(this).registerReceiver(new PIOSDKEventListener(), new IntentFilter(PIOConstants.PIO_SDK_EVENTS));
 }
+```
+&nbsp;  
+&nbsp; 
+#### > Set analytics tracker
+Sets `AnalyticsTracker` object used to receive analytics events from the SDK.
+```java
+PIOConfig.setAnalyticsTracker(AnalyticsTracker tracker)
+```
+Default implementations proved by SDK:
+
+ - `print.io.analytics.impl.GoogleAnalyticsTracker` - uses Google Analytics service for tracking analytics events
+
+Usage example:
+```java
+config.setAnalyticsTracker(new GoogleAnalyticsTracker("UA-00000000-0"));
 ```
 &nbsp;  
 &nbsp;  

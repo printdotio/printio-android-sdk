@@ -25,16 +25,16 @@ Select print.io SDK project -> Properties -> Android -> Make sure that "Is Libra
 Libraries will have to be added manually when developing with Eclipse  
 (In Android Studio, these dependencies are automatically resolved by Gradle dependency management mechanism).
 
-* 4.1 Facebook SDK (This step is required only if you intend to use Facebook as a photo source)
+* 4.1 Required dependencies (Mandatory)
+
+	To make your life easer we have bundled these libraries together. You can download [this archive](https://www.dropbox.com/s/0r5837d3t20kab0/libs.zip?dl=1) and extract the files to the `libs` folder of the PrintIO SDK.
+
+* 4.2 Facebook SDK (This step is required only if you intend to use Facebook as a photo source)
 
 	If your project is not currently using Facebook SDK you will have to clone Facebook SDK version 4.5 for Android and import it into workspace. Then add Facebook SDK library to the print.io SDK library like so:
 
 	Select print.io SDK project-> Properties -> Android -> Add... -> Choose Facebook SDK library
 
-* 4.2 Other dependencies (Mandatory)
-
-	To make your life easer we have bundled these libraries together. You can download them from this [link](https://www.dropbox.com/s/0r5837d3t20kab0/libs.zip?dl=1) and add them to `libs` folder of PrintIO SDK.
- 
 ####5. Add print.io SDK library to your project
 Select your project -> Properties -> Android -> Add... -> Choose printio SDK library
 

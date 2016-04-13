@@ -19,6 +19,7 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="5dip"
         android:layout_toRightOf="@+id/imageview_photo_icon"
+        android:ellipsize="none"
         android:singleLine="true"
         android:textColor="@color/photosources_text"
         android:textSize="@dimen/text_size_photosources" />

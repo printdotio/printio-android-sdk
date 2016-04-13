@@ -1,5 +1,30 @@
 **Android Release Notes**
 
+3.2.7 (v120)
+============
+
+**Features:**
+
+- Improved Analytics
+
+- Added option for testing SDK in Live environment without placing actual orders. Refer to [docs](SDK_REFERENCE.md#-set-testing-mode-for-order-placing)
+
+- Added option to use all available `Products` and `Product Variants` with default pricing. Refer to [docs](SDK_REFERENCE.md#-set-all-products-and-variants)
+
+**Bugs:**
+
+- Handled expired promo coupons
+
+- Fixed coupon savings when items are deleted on `Shipping Review` Screen
+
+- Fixed currency conversion when changing shipping country
+
+- Fixed overlay images for some products in `Products` V2 Screen
+
+- Fixed hanging Progress Dialog when handling large cached data
+
+###
+
 3.2.2 (v120)
 ============
 
