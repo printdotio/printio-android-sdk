@@ -84,7 +84,23 @@ config.setHostAppActivity(getComponentName().getClassName());
 
 If your application is just a wrapper around the Gooten SDK, you should remove the `EXIT` button from the [Side Menu](#-set-buttons-to-be-displayed-in-side-menu)
 &nbsp;  
+&nbsp; 
+#### > Set all products and variants
+Sets if SDK should use all products and variants available with default pricing. By default, value is set to `false` - SDK will use products and variants with prices that are set via admin panel.
+
+```java
+PIOConfig.setAllProductsAndVariants(boolean isAll)
+```
 &nbsp;  
+&nbsp;   
+#### > Set testing mode for order placing
+Sets if SDK should use testing mode for placing orders. In testing mode orders are submitted without payment verification. This is only used in live environment. By default, value is set to `false` - SDK will use live mode for placing orders. 
+
+```java
+PIOConfig.setOrderTesting(boolean isOrderTesting)
+```
+&nbsp;  
+&nbsp;   
 #### > PrintIO SDK publicly exposed data
 
 PrintIO SDK provides SDK user with following data which could be accessed at all times:
@@ -138,6 +154,21 @@ public void onCreate() {
 	super.onCreate();
 	LocalBroadcastManager.getInstance(this).registerReceiver(new PIOSDKEventListener(), new IntentFilter(PIOConstants.PIO_SDK_EVENTS));
 }
+```
+&nbsp;  
+&nbsp; 
+#### > Set analytics tracker
+Sets `AnalyticsTracker` object used to receive analytics events from the SDK.
+```java
+PIOConfig.setAnalyticsTracker(AnalyticsTracker tracker)
+```
+Default implementations proved by SDK:
+
+ - `print.io.analytics.impl.GoogleAnalyticsTracker` - uses Google Analytics service for tracking analytics events
+
+Usage example:
+```java
+config.setAnalyticsTracker(new GoogleAnalyticsTracker("UA-00000000-0"));
 ```
 &nbsp;  
 &nbsp;  
@@ -1417,8 +1448,8 @@ Labels' colors are the same color as the secondary button
 
 To modify "About" text, change the following item in `res/values/strings.xml`
 ```xml
-<string name="about_partner">About print.io</string>
-<string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nSupport@print.io for support and friends</string>
+<string name="about_subtitle">About:</string>
+<string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@gooten.com for support and friends</string>
 ```
 **NOTICE:**  
 Use `newline` character `\n` to manually add new lines.  

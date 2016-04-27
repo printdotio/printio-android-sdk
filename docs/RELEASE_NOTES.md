@@ -1,5 +1,36 @@
 **Android Release Notes**
 
+3.2.8 (v120)
+============
+
+**Features:**
+
+- Improved Analytics
+
+- Dependencies cleanup
+
+- Added option for testing SDK in Live environment without placing actual orders. Refer to [docs](SDK_REFERENCE.md#-set-testing-mode-for-order-placing)
+
+- Added option to use all available `Products` and `Product Variants` with default pricing. Refer to [docs](SDK_REFERENCE.md#-set-all-products-and-variants)
+
+**Bugs:**
+
+- Handled expired promo coupons
+
+- Fixed coupon savings when items are deleted on `Shipping Review` Screen
+
+- Fixed currency conversion when changing shipping country
+
+- Fixed overlay images for some products in `Products` V2 Screen
+
+- Fixed hanging Progress Dialog when handling large cached data
+
+- Fixed incorrect photo count in `Select Photos` Screen when product layout is changed in `Customize Product` Screen
+
+- Fixed Photosource names cut off in `Select Photos` Screen on Galaxy S5
+
+###
+
 3.2.2 (v120)
 ============
 
@@ -36,7 +67,7 @@
 `STICKERS`
 `JERSEY_BLANKETS`
 `LAPTOP_COVERS`
-`PET_BANDANA`
+`PET_BANDANAS`
 `PET_BOWLS`
 `APRONS`
 `FLOORMATS`
