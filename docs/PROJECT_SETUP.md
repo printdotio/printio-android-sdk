@@ -27,7 +27,9 @@ Libraries will have to be added manually when developing with Eclipse
 
 * 4.1 Required dependencies (Mandatory)
 
-	To make your life easer we have bundled these libraries together. You can download [this archive](https://www.dropbox.com/s/0r5837d3t20kab0/libs.zip?dl=1) and extract the files to the `libs` folder of the PrintIO SDK.
+	To make your life easier we have bundled these libraries together. You can download [this archive](https://www.dropbox.com/s/116fiby558vvtuv/libs-2.3.8.zip?dl=1) and extract the files to the `libs` folder of the PrintIO SDK.
+	
+	Android v4 Support Library is also required. Chances are that you already have this library included in your project. If not, you can find instructions about including support libraries on [this link](http://developer.android.com/tools/support-library/setup.html). 
 
 * 4.2 Facebook SDK (This step is required only if you intend to use Facebook as a photo source)
 
@@ -55,36 +57,23 @@ As mentioned above, print.io supports Android 4.0+ (API level 14 and higher) as 
    You will need to add these permissions to manifest:
    
 ```xml
+<!-- Begin PIO -->
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 <uses-permission android:name="android.permission.USE_CREDENTIALS" />
 <uses-permission android:name="android.permission.READ_CONTACTS" />
+<!-- End PIO -->
 
-<!-- Permissions needed for new paypal integration -->
-<uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.VIBRATE" />
-<!-- for most things, including card.io and paypal -->
+<!-- Begin PayPal -->
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-<!-- IMPORTANT: Change "com.example.piosdkpoconcept.permission.C2D_MESSAGE" in the lines below to match your app's package name + ".permission.C2D_MESSAGE". -->
-<permission android:name="com.example.piosdkpoconcept.permission.C2D_MESSAGE" android:protectionLevel="signature" />
-
-<uses-permission android:name="com.example.piosdkpoconcept.permission.C2D_MESSAGE" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
-<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-
-<uses-feature android:name="android.hardware.camera" android:required="false" />
-<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
-<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+<!-- End PayPal -->
 ```
 
 ###3. Activities
 Please add following activities to your AndroidManifest.xml file:
 ```xml
+<!-- Begin PIO -->
 <activity
 	android:name="print.io.PIOActivity"
 	android:screenOrientation="portrait" />
@@ -156,9 +145,6 @@ Please add following activities to your AndroidManifest.xml file:
 	android:screenOrientation="portrait"
 	android:windowSoftInputMode="stateHidden" />
 <activity
-	android:name="print.io.ActivityHelp"
-	android:screenOrientation="portrait" />
-<activity
 	android:name="print.io.photosource.impl.facebook.Facebook"
 	android:screenOrientation="portrait" />
 <activity
@@ -177,49 +163,64 @@ Please add following activities to your AndroidManifest.xml file:
 	android:name="print.io.ActivityHowItWorks"
 	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityQualityGuarantee"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityQualityGuarantee"
+	android:screenOrientation="portrait" />
 <activity
 	android:name="com.facebook.FacebookActivity"
 	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityOrderDetails"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityOrderDetails"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityOrderStatus"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityOrderStatus"
+	android:screenOrientation="portrait" />
 <activity
-    android:name="print.io.ActivityPastOrders"
-    android:screenOrientation="portrait" />
+	android:name="print.io.ActivityPastOrders"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="print.io.ActivityHelp"
+	android:screenOrientation="portrait" />
+<!-- End PIO -->
 
-<!-- Activities needed for new PayPal functionalities -->
+<!-- Begin PayPal -->
+<activity
+	android:name="com.paypal.android.sdk.payments.PaymentActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.LoginActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity"
+	android:screenOrientation="portrait" />
+<activity
+	android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity"
+	android:screenOrientation="portrait" />
 <service
-    android:name="com.paypal.android.sdk.payments.PayPalService"
-    android:exported="false" />
+	android:name="com.paypal.android.sdk.payments.PayPalService"
+	android:exported="false" />
+<!-- End PayPal -->
 
-<activity
-    android:name="com.paypal.android.sdk.payments.PaymentActivity"
-    android:screenOrientation="portrait" />
-<activity
-    android:name="com.paypal.android.sdk.payments.LoginActivity"
-    android:screenOrientation="portrait" />
-<activity
-    android:name="com.paypal.android.sdk.payments.PaymentMethodActivity"
-    android:screenOrientation="portrait" />
-<activity
-    android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity"
-    android:screenOrientation="portrait" />
-<activity
-    android:name="io.card.payment.CardIOActivity"
-    android:configChanges="keyboardHidden|orientation" />
-<activity android:name="io.card.payment.DataEntryActivity" />
 
+<!-- Begin Facebook -->
 <meta-data
-    android:name="com.crashlytics.ApiKey"
-    android:value="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
-<meta-data
-    android:name="com.facebook.sdk.ApplicationId"
-    android:value="@string/facebook_app_id" />
+	android:name="com.facebook.sdk.ApplicationId"
+	android:value="@string/facebook_app_id" />
+<!-- End Facebook -->
 ```
 
 ###4. Application element

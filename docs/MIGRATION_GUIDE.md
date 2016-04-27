@@ -1,4 +1,4 @@
-Migrating to v3.2.7 from v3.2.2
+Migrating to v3.2.8 from v3.2.2
 ========
 
 **Changes in PIOConfig**

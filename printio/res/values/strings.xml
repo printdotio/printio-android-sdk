@@ -3,8 +3,6 @@
 
     <string name="facebook_app_id"></string> <!-- Needed as placeholder. -->
 
-    <string name="app_name">Gooten</string>
-    
     <!-- Screen titles -->
     <string name="screen_title_products">Products</string>
     <string name="screen_title_product_details">Product Details</string>

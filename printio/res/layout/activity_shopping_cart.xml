@@ -169,11 +169,12 @@
                         android:id="@+id/textview_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:ellipsize="none"
                         android:paddingLeft="4dip"
                         android:paddingTop="2dip"
                         android:singleLine="true"
                         android:textColor="#323232"
-                        android:textSize="@dimen/text_size_normal" />
+                        android:textSize="@dimen/text_size_large" />
                 </LinearLayout>
 
                 <LinearLayout

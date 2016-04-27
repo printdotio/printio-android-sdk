@@ -1,11 +1,13 @@
 **Android Release Notes**
 
-3.2.7 (v120)
+3.2.8 (v120)
 ============
 
 **Features:**
 
 - Improved Analytics
+
+- Dependencies cleanup
 
 - Added option for testing SDK in Live environment without placing actual orders. Refer to [docs](SDK_REFERENCE.md#-set-testing-mode-for-order-placing)
 
@@ -22,6 +24,10 @@
 - Fixed overlay images for some products in `Products` V2 Screen
 
 - Fixed hanging Progress Dialog when handling large cached data
+
+- Fixed incorrect photo count in `Select Photos` Screen when product layout is changed in `Customize Product` Screen
+
+- Fixed Photosource names cut off in `Select Photos` Screen on Galaxy S5
 
 ###
 
@@ -61,7 +67,7 @@
 `STICKERS`
 `JERSEY_BLANKETS`
 `LAPTOP_COVERS`
-`PET_BANDANA`
+`PET_BANDANAS`
 `PET_BOWLS`
 `APRONS`
 `FLOORMATS`
