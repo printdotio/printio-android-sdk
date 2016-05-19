@@ -1,11 +1,35 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'gooten-sdk'
+
+    publishedGroupId = 'com.gooten.printio'
+    libraryName = 'GootenSDK'
+    artifact = 'printio'
+
+    libraryDescription = 'Gooten Android SDK. Gooten is a custom print fulfillment service that enables businesses to simplify product fulfillment through the world’s best manufacturers.'
+
+    siteUrl = 'https://www.gooten.com/'
+    gitUrl = 'https://github.com/printdotio/printio-android-sdk.git'
+
+    libraryVersion = '3.2.8'
+
+    developerId = 'gooten'
+    developerName = 'Bojan Radivojevic'
+    developerEmail = 'bomberaya@gmail.com'
+
+    licenseName = 'The MIT License (MIT)'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 19
-    buildToolsVersion '22.0.1'
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
-        minSdkVersion 9
+        minSdkVersion 10
         targetSdkVersion 19
     }
 
@@ -26,7 +50,7 @@ android {
 }
 
 dependencies {
-    compile 'com.facebook.android:facebook-android-sdk:4.5.+'
+    compile 'com.facebook.android:facebook-android-sdk:4.5.0'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.amazonaws:aws-android-sdk-core:2.+'
     compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
@@ -37,3 +61,6 @@ dependencies {
     }
     compile files('libs/printiosdk.jar')
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
