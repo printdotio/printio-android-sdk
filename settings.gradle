@@ -1,5 +1,5 @@
 // Gooten SDK
-include ':gooten-sdk'
+include ':gooten-android-sdk'
 
 if (file('local.gradle').exists()) {
     apply from: 'local.gradle'

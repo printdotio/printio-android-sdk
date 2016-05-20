@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'gooten-sdk'
+    bintrayName = 'gooten-android-sdk'
 
     publishedGroupId = 'com.gooten'
     libraryName = 'GootenSDK'
-    artifact = 'gooten-sdk'
+    artifact = 'gooten-android-sdk'
 
     libraryDescription = 'Gooten Android SDK. Gooten is a custom print fulfillment service that enables businesses to simplify product fulfillment through the world’s best manufacturers.'
 
