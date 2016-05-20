@@ -6,7 +6,7 @@ ext {
 
     publishedGroupId = 'com.gooten'
     libraryName = 'GootenSDK'
-    artifact = 'gooten'
+    artifact = 'gooten-sdk'
 
     libraryDescription = 'Gooten Android SDK. Gooten is a custom print fulfillment service that enables businesses to simplify product fulfillment through the world’s best manufacturers.'
 
