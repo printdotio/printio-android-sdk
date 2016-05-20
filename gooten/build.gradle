@@ -4,9 +4,9 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'gooten-sdk'
 
-    publishedGroupId = 'com.gooten.printio'
+    publishedGroupId = 'com.gooten'
     libraryName = 'GootenSDK'
-    artifact = 'printio'
+    artifact = 'gooten'
 
     libraryDescription = 'Gooten Android SDK. Gooten is a custom print fulfillment service that enables businesses to simplify product fulfillment through the world’s best manufacturers.'
 
@@ -16,12 +16,12 @@ ext {
     libraryVersion = '3.2.8'
 
     developerId = 'gooten'
-    developerName = 'Bojan Radivojevic'
-    developerEmail = 'bomberaya@gmail.com'
+    developerName = 'Micah Smith'
+    developerEmail = 'micah@gooten.com'
 
-    licenseName = 'The MIT License (MIT)'
-    licenseUrl = 'https://opensource.org/licenses/MIT'
-    allLicenses = ["MIT"]
+    licenseName = 'Gooten License'
+    licenseUrl = 'https://github.com/printdotio/printio-android-sdk/blob/master/LICENSE.md'
+    allLicenses = ["Gooten"]
 }
 
 android {
