@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://www.gooten.com/'
     gitUrl = 'https://github.com/printdotio/printio-android-sdk.git'
 
-    libraryVersion = '3.2.8'
+    libraryVersion = version
 
     developerId = 'gooten'
     developerName = 'Micah Smith'
