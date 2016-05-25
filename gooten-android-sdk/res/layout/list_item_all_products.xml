@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_selector_featured_product"
@@ -34,15 +35,17 @@
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_product_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0px"
             android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="none"
             android:singleLine="true"
             android:textColor="#212326"
             android:textSize="@dimen/text_size_small" />
 
         <print.io.view.TextViewFontLight
             android:id="@+id/textview_starting_at"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="right|bottom"
             android:singleLine="true"

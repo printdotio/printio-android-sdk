@@ -75,7 +75,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toLeftOf="@+id/textview_cance_search"
+                android:layout_toLeftOf="@+id/textview_cancel_search"
                 android:background="#00000000"
                 android:hint="@string/product_search"
                 android:inputType="textNoSuggestions"
@@ -84,7 +84,7 @@
                 android:textSize="@dimen/text_size_medium" />
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/textview_cance_search"
+                android:id="@+id/textview_cancel_search"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"

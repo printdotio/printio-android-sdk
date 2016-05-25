@@ -27,6 +27,11 @@
     <string name="button_label_create_it">Make it!</string>
     <string name="button_label_create_it_with_product"></string>
     <string name="button_add_more_products_text">Keep Shopping</string>
+    <string name="button_label_coupon_add">Add</string>
+    
+    <string name="toast_coupon_already_added">Coupon is already added</string>
+    
+    <string name="dialog_message_confirm_coupons">Are you sure you want to use all coupons?</string>
     
     <string name="share_app_text">I\'m using PrintIO SDK! You can download it from https://github.com/printdotio/printio-android-sdk</string>
     <string name="upgrade_to">PrintIO has been upgraded to %1$s, we recommend you to update now?</string>
@@ -167,7 +172,7 @@
     <string name="step_choose_case_background_color"><![CDATA[<b>Step %1$s:</b> Choose Case Background Color]]></string>
     <string name="no_printable_media">No printable media</string>
     <string name="internet_connection_error">Network error. Please check your internet connection.</string>
-    <string name="server_not_respondiong">Server is not responding. Please try again.</string>
+    <string name="server_not_responding">Server is not responding. Please try again.</string>
     <string name="share_using">Share using:</string>
     <string name="like_us">Like Us On Facebook</string>
     <string name="rate_our_app">Rate Our App</string>
@@ -348,8 +353,8 @@ Payment Info button in the bottom right corner, which will then take you
 to the Payment Page.</string>
     <string name="warning_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use Credit Card payment method.</string>
     <string name="error_paypal_zero_total">Unfortunately, PayPal does not accept zero-value orders. Please use another promo code or add some more items to your shopping cart.</string>
-    <string name="pop_up_payment_page">Almost done!\n\nYou\'re now in the Payment screen to purchase your one-of-a-kind design(s)!\n\nSelect payment method (PayPal or Card) and follow the steps on the next screens.</string>
-    <string name="pop_up_payment">You are in this screen because you selected to pay with a card.\n\nOnce you have entered information into each field, simply touch the Place Order button.</string>
+    <string name="pop_up_payment_default">Almost done!\n\nYou\'re now in the Payment screen to purchase your one-of-a-kind design(s)!\n\nSelect payment method and follow the steps on the next screens.</string>
+    <string name="pop_up_payment_credit_card">You are in this screen because you selected to pay with a card.\n\nOnce you have entered information into each field, simply touch the Place Order button.</string>
     <string name="pop_up_order_completed">Gooten thanks you for your Order!\nYou will receive an email confirmation shortly with your order # which has a direct link to help you track the status of your artwork!\n\n\nIf you ever have any questions the Customer Service contact will also be in your email confirmation.\nPlease come back and visit us again soon, we will always be adding more products to print on!\n\nsupport@gooten.com for support and friends</string>
     <string name="solid_background">Solid Background</string>
     <string name="product_categories">Categories</string>

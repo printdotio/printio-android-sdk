@@ -187,19 +187,6 @@
                     android:orientation="horizontal"
                     android:visibility="gone" >
 
-                    <print.io.view.TextViewFontNormal
-                        android:id="@+id/textview_cancel"
-                        android:layout_width="0px"
-                        android:layout_height="match_parent"
-                        android:layout_weight="4"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:onClick="onClickPromoCodeCancel"
-                        android:singleLine="true"
-                        android:text="@string/cancel"
-                        android:textColor="#000000"
-                        android:textSize="@dimen/text_size_large" />
-
                     <RelativeLayout
                         android:id="@+id/container_edittext_coupon"
                         android:layout_width="0px"
@@ -215,37 +202,25 @@
                             android:layout_centerVertical="true"
                             android:layout_toLeftOf="@+id/imageview_close"
                             android:background="@color/transparent"
-                            android:gravity="left|center_vertical"
+                            android:gravity="center"
                             android:hint="@string/enter_code"
                             android:inputType="textNoSuggestions"
                             android:paddingLeft="8dip"
                             android:paddingRight="8dip"
                             android:textColorHint="@color/gray"
                             android:textSize="@dimen/text_size_normal" />
-
-                        <ImageView
-                            android:id="@+id/imageview_close"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
-                            android:clickable="true"
-                            android:onClick="onClickRemoveCoupon"
-                            android:padding="10dip"
-                            android:src="@drawable/icon_x" />
                     </RelativeLayout>
 
                     <print.io.view.ButtonFontLight
-                        android:id="@+id/button_apply_coupon"
                         android:layout_width="0px"
                         android:layout_height="40dip"
                         android:layout_marginLeft="4dp"
                         android:layout_marginRight="8dp"
                         android:layout_weight="3"
-                        android:background="@drawable/btn_secondary"
+                        android:background="@drawable/btn_primary"
                         android:gravity="center"
                         android:onClick="onClickApplyCoupon"
-                        android:text="@string/apply"
+                        android:text="@string/button_label_coupon_add"
                         android:textColor="@color/button_secondary_text"
                         android:textSize="@dimen/text_size_normal" />
                 </LinearLayout>
@@ -295,6 +270,40 @@
                 android:textColor="@color/button_secondary_text"
                 android:textSize="@dimen/text_size_large"
                 android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_coupons_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layout_total_price"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlay_translucent_light"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <ScrollView
+                android:id="@+id/scrollview_coupons_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/viewgroup_coupons_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+            </ScrollView>
         </LinearLayout>
     </RelativeLayout>
 

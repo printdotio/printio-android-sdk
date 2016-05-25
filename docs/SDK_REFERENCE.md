@@ -242,7 +242,7 @@ PIOConfig.setRightSideMenu(boolean rightSideMenu);
 ```
 &nbsp;  
 &nbsp;  
-( > Change Side Menu icon)  
+#### > Change Side Menu icons  
 
 Replace following icons with your own icons of same names.  
 Recommended dimensions are listed next to the icon name.
@@ -252,7 +252,7 @@ icon_menu_pressed.png (39x29)
 ```
 &nbsp;  
 &nbsp;  
-( > Change color of elements inside Side Menu)  
+#### > Change color of elements inside Side Menu  
 
 To change color of Side Menu elements, you can modify the following items in `res/values/colors.xml`:
 
@@ -267,6 +267,13 @@ Separator color:
 Text color:
 ```xml
 <color name="side_menu_text">#FFFFFF</color>
+```
+Arrow color:  
+
+Each Side Menu button contains an arrow which is white by default.  
+If you want to adapt its color to match your custom background color, replace the following item in `res/drawable-xhdpi`
+```xml
+icon_side_menu_button_arrow (20x32)
 ```
 &nbsp;  
 &nbsp;  

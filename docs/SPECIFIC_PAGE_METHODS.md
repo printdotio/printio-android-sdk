@@ -241,7 +241,7 @@ Specific Page Methods
 
 #### N1. Customize Shopping Cart side menu button.
 
-- [**Resource**](SDK_REFERENCE.md#-customize-shopping-cart-side-menu-button)
+- [**Resource**](SDK_REFERENCE.md#-change-color-of-elements-inside-side-menu)
 
 #### N2. Set url for Help in side menu.
 
