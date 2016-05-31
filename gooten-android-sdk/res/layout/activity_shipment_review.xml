@@ -286,34 +286,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
             </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dip"
-                android:layout_marginRight="3dip"
-                android:layout_marginTop="3dip"
-                android:background="#ffffff"
-                android:padding="5dip"
-                android:visibility="gone" >
-
-                <print.io.view.TextViewFontLight
-                    android:id="@+id/text_view_ship_to"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:paddingBottom="10dip"
-                    android:text="@string/ship_to"
-                    android:textColor="#595d66"
-                    android:textSize="@dimen/text_size_large" />
-
-                <include
-                    android:id="@+id/layout_included_address"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_view_ship_to"
-                    layout="@layout/list_item_shipping_address" />
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -357,42 +329,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dip"
         android:layout_alignParentBottom="true"
-        android:background="@color/white" >
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:background="@color/title_bar_separator"
-            android:visibility="gone" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_order_total"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_toLeftOf="@+id/button_place_order"
-            android:paddingLeft="8dip"
-            android:paddingRight="8dip"
-            android:paddingTop="5dip"
-            android:text="@string/order_total1"
-            android:textColor="#010101"
-            android:textSize="@dimen/text_size_large"
-            android:visibility="gone" />
-
-        <print.io.view.TextViewFontLight
-            android:id="@+id/textview_order_total_price_big"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textview_order_total"
-            android:layout_marginTop="1dp"
-            android:layout_toLeftOf="@+id/button_place_order"
-            android:paddingLeft="8dip"
-            android:paddingRight="8dip"
-            android:singleLine="true"
-            android:textColor="#010101"
-            android:textSize="@dimen/text_size_normal"
-            android:visibility="gone" />
+        android:background="@color/white"
+        android:splitMotionEvents="false" >
 
         <print.io.view.ButtonFontLight
             android:id="@+id/button_place_order"

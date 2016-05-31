@@ -30,6 +30,7 @@
     <string name="button_label_coupon_add">Add</string>
     
     <string name="toast_coupon_already_added">Coupon is already added</string>
+    <string name="toast_coupon_is_empty">Please enter coupon code</string>
     
     <string name="dialog_message_confirm_coupons">Are you sure you want to use all coupons?</string>
     
@@ -362,7 +363,6 @@ to the Payment Page.</string>
     <string name="enter_code">Enter Code</string>
     <string name="phone_tablet_customize_info_text">Sides of images are wrapped</string>
     <string name="beach_bag_customize_info_text">(Front design is replicated on back)</string>
-    <string name="drop_box_notification">%1$s allows you to store very large photos. Some large photos will cause an error in the app if you do not have a strong 4g or Wifi connection.</string>
     <string name="change_country_notification">Changing country will potentially change the price of items in shopping cart.</string>
     <string name="payment_verification_error_message">Your order did not properly connect and validate with our server. You might have an issue with your connection. Please check your internet connection and try again. If you cannot validate, please contact our support.</string>
     <string name="try_again">Try again</string>
@@ -387,6 +387,7 @@ to the Payment Page.</string>
     <string name="same_look_for_back_side">Use the same look for back side?</string>
     <string name="select_all">Select All</string>
     <string name="deselect_all">Deselect All</string>
+    <string name="cannot_change_back_page_layout">Layout for the back page cannot be changed.</string>
     <string name="single_layout_information">Layout for this product cannot be changed.</string>
     <string name="keep">Keep</string>
     <string name="upgrade">Upgrade</string>

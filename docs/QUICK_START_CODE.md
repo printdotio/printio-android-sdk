@@ -64,16 +64,15 @@ public class ApplicationSampleApp extends Application {
 		// Mandatory config - set API keys provided for every partner
 		config.setRecipeIDs(PIOConstants.RECIPE_ID_LIVE, PIOConstants.RECIPE_ID_STAGING);
 
+		// Mandatory config - set available photo sources
+		config.setPhotoSources(Arrays.asList((PhotoSource)
+			new PhonePhotoSource(),
+			new PicasaPhotoSource()
+		));
+
 		// Optional config - tell SDK which environment to use (Live or Staging)
 		// In Staging mode, you can test purchase process without using real money.
 		config.setLiveApplication(false);
-
-		// Optional config - set available photo sources
-		config.setPhotoSources(Arrays.asList(
-			new PhonePhotoSource(),
-			new InstagramPhotoSource(),
-			new FacebookPhotoSource()
-		));
 			
 		try {
 			// Set configuration object and start PIO SDK

@@ -78,6 +78,7 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/layout_buttons"
         android:background="#efeff2"
+        android:clickable="true"
         android:visibility="gone" >
 
         <print.io.view.TextViewFontLight
