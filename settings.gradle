@@ -1,5 +1,5 @@
-// PrintIO SDK
-include ':printio'
+// Gooten SDK
+include ':gooten-android-sdk'
 
 if (file('local.gradle').exists()) {
     apply from: 'local.gradle'

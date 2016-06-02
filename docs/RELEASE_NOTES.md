@@ -1,5 +1,46 @@
 **Android Release Notes**
 
+3.3.0 (v121)
+============
+
+**Features:**
+
+- Multiple Coupons
+
+- New Analytics implementation. [More info here](CUSTOM_ANALYTICS_TRACKING.md)
+
+- Testing Orders in Live mode. Refer to [docs](SDK_REFERENCE.md#-set-testing-mode-for-order-placing)
+
+- Added device info to Order metadata
+
+**Bugs:**
+
+- Fixed image issues when single image is used in different places
+
+- Fixed image rotation issues in List products
+
+- Fixed overlays not printed correctly
+
+- Fixed some photos not showing in `Google Photos` Photosource
+
+- Fixed selected images indicator not working correctly after putting phone to sleep in `Customize Product` Screen
+
+- Fixed 'Incorrect Total Price' issue
+
+- Fixed some OOM issues and crashes
+
+- Fixed missing custom category
+
+- Fixed a crash after putting phone to sleep on `Image Editor` Screen
+
+- Fixed an issue with back button when jumping to `Shopping Cart` Screen
+
+- Fixed price not visible for long product names in `Products V2` Screen
+
+- Added missing icons for product options
+
+###
+
 3.2.8 (v120)
 ============
 
