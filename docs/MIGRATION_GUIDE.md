@@ -1,10 +1,34 @@
+Migrating to v3.3.0 from v3.2.8
+========
+
+**Changes in Custom Analytics Tracking**
+
+Custom Analytics Tracking was introduced in Gooten SDK v3.2.8 [(More info here)](CUSTOM_ANALYTICS_TRACKING.md)  
+If you did not implement Custom Analytics Tracking, you don't need to take any steps.  
+  
+If you implemented Custom Analytics Tracking, you need to make the following changes:  
+Method `trackEvent(Context context, Event event)` has been replaced with separate methods for each event type.  
+There are three event types: `ScreenViewEvent`, `ActionEvent` and `TransactionEvent`, hence the following three methods:
+```java
+//import print.io.analytics.ActionEvent;
+//import print.io.analytics.BaseEvent;
+//import print.io.analytics.ScreenViewEvent;
+//import print.io.analytics.TransactionEvent;
+
+public void trackAction(Context context, ActionEvent event)
+public void trackScreen(Context context, ScreenViewEvent event)
+public void trackTransaction(Context context, TransactionEvent event)
+```
+
+Each event type now has its unique properties instead of having a generic dictionary.
+
 Migrating to v3.2.8 from v3.2.2
 ========
 
 **Changes in PIOConfig**
 
-Method `setGoogleAnalyticsTrackId` has been removed. In order to use Google Analytics you should do following:
-```
+Method `setGoogleAnalyticsTrackId()` has been removed. In order to use Google Analytics you should do following:
+```java
 // import print.io.analytics.impl.GoogleAnalyticsTracker;
 config.setAnalyticsTracker(new GoogleAnalyticsTracker(trackingId));
 ```
