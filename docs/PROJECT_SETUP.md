@@ -234,4 +234,4 @@ Add your facebook_app_id to `res/strings.xml`.
 
 ###6. Add fonts for Text feature  
 Copy PIO SDK `fonts` folder to the `assets` folder of the host app.  
-The folder can be found in our [Example app](https://github.com/printdotio/printio-android-example/tree/master/PIOSDKPOConcept/assets)
+The archive with fonts can be downloaded from [here](https://www.dropbox.com/s/6s60ldvxlo6q6ta/fonts.zip?dl=1).
