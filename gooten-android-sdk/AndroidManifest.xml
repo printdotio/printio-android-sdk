@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="print.io">
+          package="print.io">
 
     <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
-    <application/>
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <application android:largeHeap="true">
+        <activity
+            android:name="print.io.PIOActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityOptionBackground"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.ActivityCountry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.ActivityCurrency"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.ActivityProducts"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="print.io.ActivityProductsV2"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <activity
+            android:name="print.io.ActivityProductDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityProductDetailsV2"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivitySelectPhotos"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityCustomizeProduct"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="print.io.ActivityCustomizePhotobook"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="print.io.ActivityProductOptions"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityCustomizeList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.ActivityShoppingCart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity
+            android:name="print.io.ActivityPaymentMethod"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateUnchanged"/>
+        <activity
+            android:name="print.io.ActivityChooseShippingAddress"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityAddAddress"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name="print.io.ActivityShipmentReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.ActivityOrderCompleted"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name="print.io.photosource.impl.facebook.Facebook"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.photosource.impl.instagram.Instagram"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.photosource.impl.flickr.Flickr"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.photosource.impl.dropbox.Dropbox"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityAbout"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityHowItWorks"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityQualityGuarantee"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityOrderDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityOrderStatus"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityPastOrders"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="print.io.ActivityHelp"
+            android:screenOrientation="portrait"/>
+    </application>
+
 </manifest>
