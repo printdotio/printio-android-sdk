@@ -166,13 +166,6 @@
                     android:layout_marginTop="5dip"
                     layout="@layout/item_product_details_details" />
             </LinearLayout>
-
-            <include
-                android:id="@+id/item_shipping_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_shipping_info" />
         </LinearLayout>
     </print.io.view.CustomScrollView>
 

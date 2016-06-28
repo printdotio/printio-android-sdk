@@ -1,28 +1,9 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
 
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'gooten-android-sdk'
-
-    publishedGroupId = 'com.gooten'
-    libraryName = 'GootenSDK'
-    artifact = 'gooten-android-sdk'
-
-    libraryDescription = 'Gooten Android SDK. Gooten is a custom print fulfillment service that enables businesses to simplify product fulfillment through the world’s best manufacturers.'
-
-    siteUrl = 'https://www.gooten.com/'
-    gitUrl = 'https://github.com/printdotio/printio-android-sdk.git'
-
-    libraryVersion = version
-
-    developerId = 'gooten'
-    developerName = 'Micah Smith'
-    developerEmail = 'micah@gooten.com'
-
-    licenseName = 'Gooten License'
-    licenseUrl = 'https://github.com/printdotio/printio-android-sdk/blob/master/LICENSE.md'
-    allLicenses = ["Gooten"]
-}
+group = 'com.gooten'
+version = '3.3.6'
 
 android {
     compileSdkVersion 19
@@ -39,7 +20,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
-	
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -49,18 +30,93 @@ android {
     }
 }
 
+task javadoc(type: Javadoc) {
+    //source = android.sourceSets.main.java.srcDirs
+    //classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    //classpath = files(variant.javaCompile.classpath.files, project.android.getBootClasspath())
+    source = files("../../printio-android/src/print", "../../printio-android/libs")
+    classpath = files("../../printio-android/bin/classes/print", project.android.getBootClasspath().join(File.pathSeparator))
+    options {
+        links "http://docs.oracle.com/javase/7/docs/api/"
+        linksOffline "http://d.android.com/reference", "${android.sdkDirectory}/docs/reference"
+    }
+    exclude '**/BuildConfig.java'
+    exclude '**/R.java'
+    exclude '**/it/'
+    exclude '**/com/'
+    failOnError = false
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives javadocJar, sourcesJar
+}
+
+signing {
+    sign configurations.archives
+}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+
+        repository(url: sonatypeRepo) {
+            authentication(userName: sonatypeUsername, password: sonatypePassword)
+        }
+
+        pom.project {
+            name 'Gooten Android SDK'
+            packaging 'aar'
+            description 'Gooten custom print fulfillment service Android SDK'
+            url 'https://www.gooten.com'
+
+            scm {
+                url 'git@github.com:printdotio/printio-android-sdk.git'
+                connection 'scm:git:git@github.com:printdotio/printio-android-sdk.git'
+                developerConnection 'scm:git:git@github.com:printdotio/printio-android-sdk.git'
+            }
+
+            licenses {
+                license {
+                    name 'Gooten License'
+                    url 'https://github.com/printdotio/printio-android-sdk/blob/master/LICENSE.md'
+                }
+            }
+
+            developers {
+                developer {
+                    id 'bomberaya'
+                    name 'Bojan Radivojevic'
+                    email 'bojan@gooten.com'
+                }
+                developer {
+                    id 'vlado'
+                    name 'Vlado Pajic'
+                    email 'vlado@gooten.com'
+                }
+            }
+        }
+    }
+}
+
 dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.5.0'
     compile 'com.google.code.gson:gson:2.2.4'
-    compile 'com.amazonaws:aws-android-sdk-core:2.+'
-    compile 'com.amazonaws:aws-android-sdk-cognito:2.+'
-    compile 'com.amazonaws:aws-android-sdk-s3:2.+'
-    compile 'com.braintreepayments:encryption:2.+'
+    compile 'com.amazonaws:aws-android-sdk-core:2.2.18'
+    compile 'com.amazonaws:aws-android-sdk-cognito:2.2.18'
+    compile 'com.amazonaws:aws-android-sdk-s3:2.2.18'
+    compile 'com.braintreepayments:encryption:2.1.0'
     compile('com.paypal.sdk:paypal-android-sdk:2.13.3') {
-    	exclude group: 'io.card'
+        exclude group: 'io.card'
     }
     compile files('libs/printiosdk.jar')
 }
-
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

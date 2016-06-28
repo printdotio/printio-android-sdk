@@ -215,12 +215,9 @@
                 android:id="@+id/textview_description_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_button_expand"
                 android:clickable="true"
-                android:onClick="onClickToggleProductDescription"
                 android:paddingBottom="10dip"
                 android:paddingLeft="15dip"
-                android:paddingRight="20dip"
                 android:paddingTop="10dip"
                 android:text="@string/description"
                 android:textColor="@color/product_details_header_1"
@@ -238,8 +235,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingBottom="10dip"
-                android:visibility="gone" >
+                android:paddingBottom="10dip" >
 
                 <LinearLayout
                     android:id="@+id/layout_description_text"
@@ -258,13 +254,6 @@
                     android:layout_marginTop="5dip"
                     layout="@layout/item_product_details_details" />
             </LinearLayout>
-
-            <include
-                android:id="@+id/item_shipping_info"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dip"
-                layout="@layout/item_product_details_shipping_info" />
         </LinearLayout>
     </print.io.view.CustomScrollView>
 

@@ -31,6 +31,7 @@
     
     <string name="toast_coupon_already_added">Coupon is already added</string>
     <string name="toast_coupon_is_empty">Please enter coupon code</string>
+    <string name="toast_error_while_croppin_image">Cropping image failed. Please try again.</string>
     
     <string name="dialog_message_confirm_coupons">Are you sure you want to use all coupons?</string>
     
