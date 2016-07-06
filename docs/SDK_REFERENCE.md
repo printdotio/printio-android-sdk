@@ -130,7 +130,9 @@ PIOConfig.setRecipeID(String recipeID)
 &nbsp;  
 &nbsp; 
 #### > Set environment
-Sets environment used by SDK.
+Sets environment used by SDK.  
+
+Default is `Environment.LIVE`
 ```java
 PIOConfig.setEnvironment(Environment environment)
 ```
