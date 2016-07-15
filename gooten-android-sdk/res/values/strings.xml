@@ -31,6 +31,7 @@
     
     <string name="toast_coupon_already_added">Coupon is already added</string>
     <string name="toast_coupon_is_empty">Please enter coupon code</string>
+    <string name="toast_error_while_croppin_image">Cropping image failed. Please try again.</string>
     
     <string name="dialog_message_confirm_coupons">Are you sure you want to use all coupons?</string>
     
@@ -162,7 +163,7 @@
     <string name="logout">Logout</string>
     <string name="login">Login</string>
     <string name="info">Info</string>
-    <string name="version">Version: %1$s</string>
+    <string name="version">Version: %1$s (%2$s)</string>
     <string name="step_title_generic"><![CDATA[<b>Step %1$s:</b> Choose %2$s]]></string>
     <string name="step_choose_photo_layout_design"><![CDATA[<b>Step %1$s:</b> Choose Photo Layout & Design]]></string>
     <string name="step_choose_size_and_shape"><![CDATA[<b>Step %1$s:</b> Choose Size and Shape]]></string>

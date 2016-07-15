@@ -1,3 +1,13 @@
+Migrating to v3.3.8 from v3.3.0
+========
+
+**Changes in PIOConfig**
+
+Method `PIOConfig.setRecipeID(String, String)` has changed signature to `PIOConfig.setRecipeID(String)`  and now only accepts recipe ID for current environment.  
+
+Method `PIOConfig.setLiveApplication(boolean)` was removed. In order to change environment you can use `PIOConfig.setEnvironment(Environment)` method. Default is `Environment.LIVE`.  
+
+
 Migrating to v3.3.0 from v3.2.8
 ========
 

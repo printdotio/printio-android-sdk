@@ -62,43 +62,6 @@ ShoppingCart cart = PIO.getShoppingCart(context);
 cart.removeAllItems();
 PIO.setShoppingCart(context, cart);
 ```
-&nbsp;
-&nbsp;  
-#### > Set host activity  
-
-```java
-PIOConfig.setHostAppActivity(String hostAppActivityClassName)
-```
-
-Gooten SDK provides a few "shortcuts" for getting back to the host application.
-One of them is the `EXIT` button in the Side Menu (which is visible by default).
-In order for these to work, `Host Activity` needs to be set.  
-This is the `ClassName` of the `Activity` that the Gooten SDK will navigate back to.  
-
-This is usually the `Activity` that started the Gooten SDK.  
-In this case you can use the following sample code:  
-**Sample code:**
-```java
-config.setHostAppActivity(getComponentName().getClassName());
-```
-
-If your application is just a wrapper around the Gooten SDK, you should remove the `EXIT` button from the [Side Menu](#-set-buttons-to-be-displayed-in-side-menu)
-&nbsp;  
-&nbsp; 
-#### > Set all products and variants
-Sets if SDK should use all products and variants available with default pricing. By default, value is set to `false` - SDK will use products and variants with prices that are set via admin panel.
-
-```java
-PIOConfig.setAllProductsAndVariants(boolean isAll)
-```
-&nbsp;  
-&nbsp;   
-#### > Set testing mode for order placing
-Sets if SDK should use testing mode for placing orders. In testing mode orders are submitted without payment verification. This is only used in live environment. By default, value is set to `false` - SDK will use live mode for placing orders. 
-
-```java
-PIOConfig.setOrderTesting(boolean isOrderTesting)
-```
 &nbsp;  
 &nbsp;   
 #### > PrintIO SDK publicly exposed data
@@ -109,8 +72,6 @@ PrintIO SDK provides SDK user with following data which could be accessed at all
  2. Last successful order information
 
 Methods for accessing these structures are `PIO.getShoppingCart(Context)` and `PIO.getLastOrder(Context)` respectively.
-
-&nbsp;
 #### > PrintIO SDK Events
 
 PrintIO SDK uses BroadcastReceiver mechanism to notify user of SDK with events. PrintIO SDK broadcast following events:
@@ -157,6 +118,64 @@ public void onCreate() {
 ```
 &nbsp;  
 &nbsp; 
+## PIOConfig configurations
+&nbsp;  
+&nbsp; 
+#### > Set RecipeID
+Sets Gooten API key for environment.
+
+```java
+PIOConfig.setRecipeID(String recipeID)
+```
+&nbsp;  
+&nbsp; 
+#### > Set environment
+Sets environment used by SDK.  
+
+Default is `Environment.LIVE`
+```java
+PIOConfig.setEnvironment(Environment environment)
+```
+&nbsp;
+&nbsp;  
+#### > Set host activity  
+
+```java
+PIOConfig.setHostAppActivity(String hostAppActivityClassName)
+```
+
+Gooten SDK provides a few "shortcuts" for getting back to the host application.
+One of them is the `EXIT` button in the Side Menu (which is visible by default).
+In order for these to work, `Host Activity` needs to be set.  
+This is the `ClassName` of the `Activity` that the Gooten SDK will navigate back to.  
+
+This is usually the `Activity` that started the Gooten SDK.  
+In this case you can use the following sample code:  
+**Sample code:**
+```java
+config.setHostAppActivity(getComponentName().getClassName());
+```
+
+If your application is just a wrapper around the Gooten SDK, you should remove the `EXIT` button from the [Side Menu](#-set-buttons-to-be-displayed-in-side-menu)
+&nbsp;  
+&nbsp; 
+#### > Set all products and variants
+Sets if SDK should use all products and variants available with default pricing. By default, value is set to `false` - SDK will use products and variants with prices that are set via admin panel.
+
+```java
+PIOConfig.setAllProductsAndVariants(boolean isAll)
+```
+&nbsp;  
+&nbsp;   
+#### > Set testing mode for order placing
+Sets if SDK should use testing mode for placing orders. In testing mode orders are submitted without payment verification. This is only used in live environment. By default, value is set to `false` - SDK will use live mode for placing orders. 
+
+```java
+PIOConfig.setOrderTesting(boolean isOrderTesting)
+```
+
+
+&nbsp;
 #### > Set analytics tracker
 Sets `AnalyticsTracker` object used to receive analytics events from the SDK.
 ```java

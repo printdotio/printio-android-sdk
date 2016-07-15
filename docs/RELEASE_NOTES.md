@@ -1,5 +1,28 @@
 **Android Release Notes**
 
+3.3.8 (v123)
+============
+
+**New products:**
+`BOTTLE LABELS`
+`ACCENT MUGS`
+`METAL ORNAMENTS`
+`DESK CALENDARS`
+
+**Features:**
+
+- Taxes calculation
+
+- Order ID is now visible in PayPal receipts
+
+**Bugs:**
+
+- Improved image loading on first run
+
+- Updated product overlays for `Products V2` Screen
+
+###
+
 3.3.0 (v121)
 ============
 
