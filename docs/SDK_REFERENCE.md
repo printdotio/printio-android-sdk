@@ -416,6 +416,14 @@ PIOConfig.setScreenVersion(ScreenVersion screenVersion)
 ```
 &nbsp;  
 &nbsp; 
+#### > Set Product Details screen version 
+Changes Product Details screen version used by the SDK.
+By default `ScreenVersion.V_1` is used.
+```java
+PIOConfig.setProductDetailsScreenVersion(ScreenVersion screenVersion)
+```
+&nbsp;  
+&nbsp; 
 General screen configuration
 --------------
 &nbsp;  
@@ -869,16 +877,31 @@ In order to use Picasa as a photo source, **no credentials are required**.  Pica
 &nbsp;  
 Customize Product screen
 -----------------
-#### > Show/hide tab bar in Customize Product screen.  
-( > Show toolbar in Customize Product screen)  
+#### > Show/hide toolbar in Customize Product screen.    
 
-The toolbar contains the following buttons: `Photos`, `Edit Tools`, `Options` and `Layout`.  
-Default value is `true`.
+The toolbar contains the following buttons: `Text`, `Effects`, `Layout` and `Options`.  
+Default value is `true` (Toolbar is visible).
 ```java
 PIOConfig.setShowOptionsInCustomize(boolean showOptionsInCustomize);
 ```
 **NOTICE:**  
 Not all of those buttons' functions have been implemented yet.  
+&nbsp;  
+&nbsp;  
+#### > Show/hide Effects button within the toolbar in Customize Product screen.  
+
+Default value is `true` (Effects button is shown).
+```java
+PIOConfig.setShowEffectsInCustomizeProductScreen(boolean effectsShownInCustomizeProductScreen);
+```
+&nbsp;  
+&nbsp;  
+#### > Show/hide Change Background button within the toolbar in Customize Product screen.  
+
+Default value is `true` (Change Backround button is shown).
+```java
+PIOConfig.setShowChangeBackgroundColorInCustomizeProductScreen(boolean changeBackgroundColorShownInCustomizeProductScreen);
+```
 &nbsp;  
 &nbsp;  
 #### > Hide list with images in customization screen.  

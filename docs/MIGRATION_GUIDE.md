@@ -1,3 +1,20 @@
+Migrating to v3.3.9 from v3.3.8
+========
+
+**Changes in PIOConfig**
+
+Method `PIOConfig.setScreenVersion(ScreenVersion)` has been removed.
+
+Since v3.3.9, `Products` and `Product Details` Screens' versions can be set independently, using the following methods:
+
+```java
+PIOConfig.setProductsScreenVersion(ScreenVersion screenVersion); // Default value is ScreenVersion.V_1
+PIOConfig.setProductDetailsScreenVersion(ScreenVersion screenVersion); // Default value is ScreenVersion.V_1
+```
+
+**To keep the current behaviour**, invoke both methods and pass the same `ScreenVersion` as arguments.
+
+
 Migrating to v3.3.8 from v3.3.0
 ========
 
