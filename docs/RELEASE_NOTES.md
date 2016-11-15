@@ -1,5 +1,22 @@
 **Android Release Notes**
 
+3.3.9 (v124)
+============
+
+**Features:**
+
+- Ability to set `Product Details` Screen version independently. Refer to [docs](SDK_REFERENCE.md#-set-product-details-screen-version) and [migration guide](MIGRATION_GUIDE.md#-migrating-to-v3.3.9-from-v3.3.8)
+
+- Ability to remove `Effects` and `Change Background` buttons from `Customize Product` Screen. Refer to [docs](SDK_REFERENCE.md#-showhide-effects-button-within-the-toolbar-in-customize-product-screen)
+
+**Bugs:**
+
+- Fixed an issue with hero when there are fewer than 5 products available
+
+- Fixed misspelled product name - `ACCENT MUGS`
+
+###
+
 3.3.8 (v123)
 ============
 

@@ -105,7 +105,7 @@ Specific Page Methods
 
 #### E1. Show/hide tab bar in Customize Product screen. Default value is YES.
 
-- [**PIOConfig.setShowOptionsInCustomize()**](SDK_REFERENCE.md#-showhide-tab-bar-in-customize-product-screen-default-value-is-yes)
+- [**PIOConfig.setShowOptionsInCustomize()**](SDK_REFERENCE.md#-showhide-toolbar-in-customize-product-screen)
 
 #### E2. Hide list with images in customization screen.
 
