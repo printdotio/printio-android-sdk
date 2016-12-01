@@ -408,11 +408,11 @@ Screens version
 --------------
 &nbsp;  
 &nbsp;
-#### > Set screens version 
-Changes screens version used by the SDK.  
+#### > Set Products screen version 
+Changes Produts screen version used by the SDK.  
 By default `ScreenVersion.V_1` is used.
 ```java
-PIOConfig.setScreenVersion(ScreenVersion screenVersion)
+PIOConfig.setProductsScreenVersion(ScreenVersion screenVersion)
 ```
 &nbsp;  
 &nbsp; 

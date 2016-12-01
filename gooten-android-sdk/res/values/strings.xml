@@ -370,7 +370,7 @@ to the Payment Page.</string>
     <string name="ok">OK</string>
     <string name="shipping_price_error">We are sorry, but there are currently no shipping options for %1$s in your location.</string>
     <string name="coaster_text">Choose Coaster Type</string>
-    <string name="coaster_4_different">4 Different Coasters</string>
+    <string name="coaster_x_different">%1$s Different Coasters</string>
     <string name="coaster_1_duplicated">1 Coaster Duplicated</string>
     <string name="problem_downloading_product_details">There was a problem downloading some of the details needed to build your product.\nOur Team has been notified, please try again!</string>
     <string name="problem_downloading_some_photos">There was a problem downloading some of your selected photos. Please try again!</string>
@@ -472,22 +472,5 @@ multiple images so you can play around with the options. For example, on a 2
 Photo Grid, you can upload more than 2 photos if you want to preview how 
 different images will look while you\'re designing your Canvas on the next page.\n\n- Notice that the photo counter in the bottom right corner is keeping track for 
 you! After you select the images you want to try on your Canvas, click the Next button in the bottom right corner</string>
-
-    <string-array name="wall_calendars_page_titles">
-        <item>Calendar Cover</item>
-        <item>January 2016</item>
-        <item>February 2016</item>
-        <item>March 2016</item>
-        <item>April 2016</item>
-        <item>May 2016</item>
-        <item>June 2016</item>
-        <item>July 2016</item>
-        <item>August 2016</item>
-        <item>September 2016</item>
-        <item>October 2016</item>
-        <item>November 2016</item>
-        <item>December 2016</item>
-        <item>January 2017</item>
-    </string-array>
 
 </resources>

@@ -37,5 +37,9 @@
         <item quantity="one">%s Premium Coaster</item>
         <item quantity="other">%s Premium Coasters</item>
     </plurals>
-
+    <plurals name="DisposableCoasters">
+        <item quantity="one">%s Disposable Coaster</item>
+        <item quantity="other">%s Disposable Coasters</item>
+    </plurals>
+    
 </resources>
