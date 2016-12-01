@@ -3,15 +3,15 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = 'com.gooten'
-version = '3.3.9'
+version = '3.3.10'
 
 android {
-    compileSdkVersion 23
+    compileSdkVersion 19
     buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 19
     }
 
     buildTypes {

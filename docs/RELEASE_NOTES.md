@@ -1,5 +1,26 @@
 **Android Release Notes**
 
+3.3.10 (v124)
+============
+
+**New products:**
+`CANVAS ORNAMENTS`
+`DISPOSABLE COASTERS`
+`LUGGAGE TAGS`
+`PORCELAIN ORNAMENTS`
+
+**Features:**
+
+-
+
+**Bugs:**
+
+- Fixed `Host App Activity not found` issues
+
+- Fixed page titles for `WALL CALENDARS`
+
+###
+
 3.3.9 (v123)
 ============
 

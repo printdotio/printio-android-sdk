@@ -30,7 +30,7 @@
             android:orientation="horizontal" >
 
             <print.io.view.TextViewFontLight
-                android:id="@+id/textview_4_different"
+                android:id="@+id/textview_different"
                 android:layout_width="0dip"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -38,7 +38,6 @@
                 android:drawablePadding="10dip"
                 android:drawableTop="@drawable/icon_coasters_4_different"
                 android:gravity="center"
-                android:text="@string/coaster_4_different"
                 android:textColor="#5a5d66"
                 android:textSize="@dimen/text_size_normal" />
 
