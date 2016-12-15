@@ -1,5 +1,23 @@
 **Android Release Notes**
 
+3.3.11 (v125)
+============
+
+**New products:**
+``
+
+**Features:**
+
+-
+
+**Bugs:**
+
+- Fixed `NumberFormatException` in `ActivityPaymentMethod` when using certain non-US locales
+
+- Fixed Frame Size calculation for `FRAMED PRINTS` product
+
+###
+
 3.3.10 (v124)
 ============
 
