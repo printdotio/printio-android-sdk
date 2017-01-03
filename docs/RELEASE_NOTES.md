@@ -1,10 +1,25 @@
 **Android Release Notes**
 
-3.3.11 (v125)
+3.3.12 (v126)
 ============
 
 **New products:**
-``
+`DOG TAGS`
+`KEY FOBS`
+`PHOTO DOWNLOADS`
+`PHOTO SCULPTURES`
+`PLAQUES`
+`TRADING CARDS`
+`WALL STARS`
+
+**Bugs:**
+
+- Removed some hard-coded data
+
+###
+
+3.3.11 (v125)
+============
 
 **Features:**
 
