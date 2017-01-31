@@ -1,5 +1,14 @@
 **Android Release Notes**
 
+3.3.13 (v127)
+============
+
+**Features:**
+
+- Added support for new Layer type (LayerType.BLEED)
+
+###
+
 3.3.12 (v126)
 ============
 
