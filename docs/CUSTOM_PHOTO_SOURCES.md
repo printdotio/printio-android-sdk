@@ -48,7 +48,7 @@ Let's see an example of a custom photo source implementation and walk through th
 
 ### Creating `PhotoSource` class
 
-First off, you will have to start by creating your `PhotoSource` interface implementation by extending `DefaultPhotoSource` class. Class `DefaultPhotoSource` has unimplemented methods for which you would need to provide implementation. Those methods are listed below.
+First off, you will have to start by crating your `PhotoSource` interface implementation by extending `DefaultPhotoSource` class. Class `DefaultPhotoSource` has unimplemented methods for which you would need to provide implementation. Those methods are listed below.
 
 #### List of unimplemented methods
 

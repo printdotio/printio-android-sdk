@@ -1,5 +1,14 @@
 **Android Release Notes**
 
+3.3.14 (v128)
+============
+
+**Features:**
+
+- Improved Google Analytics e-commerce tracking
+
+###
+
 3.3.13 (v127)
 ============
 

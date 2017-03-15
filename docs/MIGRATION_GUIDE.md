@@ -1,3 +1,23 @@
+Migrating to v3.3.13 from v3.3.14
+========
+
+**Changes in Custom Analytics Tracking**
+
+Custom Analytics Tracking was introduced in Gooten SDK v3.2.8 [(More info here)](CUSTOM_ANALYTICS_TRACKING.md)  
+If you did not implement Custom Analytics Tracking, you don't need to take any steps.  
+  
+If you implemented Custom Analytics Tracking, you need to make the following changes:  
+Method `trackItem(Context context, Event event)` has been added to the `AnalyticsTracker` interface.  
+It is used in conjuction with `trackTransaction()` in order to track individual `Items` within a `Transaction`.  
+Every `Item` in a `Transaction` needs to have a `transactionID` which specifies which `Transaction` the `Item` belongs to.  
+
+```java
+//import print.io.analytics.ItemEvent;
+
+public void trackItem(Context context, ItemEvent event)
+```
+
+
 Migrating to v3.3.9 from v3.3.8
 ========
 
