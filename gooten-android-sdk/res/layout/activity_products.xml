@@ -231,7 +231,7 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <TextView
+    <print.io.view.TextViewFontNormal
         android:id="@+id/textview_categories_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

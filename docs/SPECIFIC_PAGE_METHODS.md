@@ -245,7 +245,7 @@ Specific Page Methods
 
 #### N2. Set url for Help in side menu.
 
-- [**PIOConfig.setHelpUrl()**](SDK_REFERENCE.md#-set-url-for-help-in-side-menu)
+- [**Resource**](SDK_REFERENCE.md#-set-help-text)
 
 #### N3. Enable or disable Side Menu.
 

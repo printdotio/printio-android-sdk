@@ -1,3 +1,44 @@
+Migrating to v3.3.15 from v3.3.14
+========
+
+**Changes in PIOConfig**
+
+Method `PIOConfig.setHelpUrl(String)` has been removed.  
+To set the URL for `Help` screen, add the following string to your `strings.xml`:  
+
+```xml
+<string name="help_text">https://www.your_url.com</string>
+```
+
+**Other changes**
+
+Since v3.3.15, `Help`, `Quality Guarantee` and `About` screens can either show native content  
+(Subtitle and text) or HTML page.
+
+To show native content, add the following strings to your `strings.xml`:  
+
+```xml
+<string name="help_subtitle">Subtitle goes here</string>
+<string name="help_text">Text goes here...</string>
+
+<string name="quality_guarantee_subtitle">Subtitle goes here</string>
+<string name="quality_guarantee_text">Text goes here...</string>
+
+<string name="about_subtitle">Subtitle goes here</string>
+<string name="about_text">Text goes here...</string>
+```
+
+To show HTML page, add corresponding strings with URLs to your `strings.xml`:
+
+```xml
+<string name="help_text">https://www.your_url.com</string>
+
+<string name="quality_guarantee_text">https://www.your_url.com</string>
+
+<string name="about_text">https://www.your_url.com</string>
+``` 
+
+
 Migrating to v3.3.13 from v3.3.14
 ========
 
