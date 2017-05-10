@@ -389,13 +389,6 @@ To set support email address, use the following method:
 ```java
 PIOConfig.setSupportEmail(String supportEmail);
 ``` 
-####> Set help URL
-To set help URL, use the following method:
-```java
-PIOConfig.setHelpUrl(String url);
-```
-&nbsp;  
-&nbsp;  
 #### Set visibility of **SDK Version** in Side Menu:  
 By default, the SDK version is shown at the bottom of the Side Menu.  
 To hide the SDK version, use the following method
@@ -1444,11 +1437,6 @@ To change labels' colors, modify the following items in `res/values/colors.xml`
 <!--Quality Guarantee-->
 <color name="product_details_header_4">#646AA6</color>
 ```
-To change 'Quality Guarantee' text, modify following item in
-`res/values/strings.xml`
-```xml
-<string name="quality_guarantee_text">Your memories are our top priority...</string>
-```
 &nbsp;  
 &nbsp;  
 #### > Dialog "Arrange Photos"  
@@ -1500,6 +1488,11 @@ To modify "About" text, change the following item in `res/values/strings.xml`
 <string name="about_subtitle">About:</string>
 <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@gooten.com for support and friends</string>
 ```
+
+Since v3.3.15, you can use a HTML page which will be displayed instead of native views:
+```xml
+<string name="about_text">https://www.your_url.com</string>
+``` 
 **NOTICE:**  
 Use `newline` character `\n` to manually add new lines.  
 &nbsp;  
@@ -1512,4 +1505,54 @@ To modify "How it Works" section, change the following items in `res/values/stri
 <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
 ```
 **NOTICE:**  
-Use `newline` character `\n` to manually add new lines.  
+Use `newline` character `\n` to manually add new lines.
+&nbsp;  
+&nbsp;  
+#### > Set "Quality Guarantee" text  
+
+To modify "Quality Guarantee" section, change the following items in `res/values/strings.xml`
+```xml
+<string name="quality_guarantee_subtitle">Quality Guarantee:</string>
+<string name="quality_guarantee_text">Your memories are our top priority...</string>
+```
+
+Since v3.3.15, you can use a HTML page which will be displayed instead of native views:
+```xml
+<string name="quality_guarantee_text">https://www.your_url.com</string>
+``` 
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.
+&nbsp;  
+&nbsp;  
+#### > Set "Help" text  
+
+To modify "Help" section, change the following items in `res/values/strings.xml`
+```xml
+<string name="help_subtitle">Help:</string>
+<string name="help_text">Replace with your own text...</string>
+```
+
+Since v3.3.15, you can use a HTML page which will be displayed instead of native views:
+```xml
+<string name="help_text">https://www.your_url.com</string>
+``` 
+**NOTICE:**  
+Use `newline` character `\n` to manually add new lines.
+&nbsp;  
+&nbsp;  
+#### > Terms and Conditions  
+
+Terms and Conditions acknowledgement checkbox can be displayed on the `Payment` screen using the following method:
+```java
+PIOConfig.setTermsAndConditionsAcceptanceRequired(boolean isTermsAndConditionsAcceptanceRequired);
+```
+
+If it is enabled, the user will need to accept Terms and Conditions before completing the payment.  
+You should change the acknowledgement text to include a link to your own Terms and Conditions by adding the following string(s) to your `strings.xml`.  
+Use <a> tag to add your own URL:
+```xml
+<string name="terms_and_conditions_acknowledgement">I agree with the <a href="https://www.your_url.com">Terms and Conditions</a></string>
+<string name="terms_and_conditions_not_accepted_warning">Please accept the Terms and Conditions</string>
+```
+&nbsp;  
+&nbsp;  

@@ -1,5 +1,25 @@
 **Android Release Notes**
 
+3.3.15 (v129)
+============
+
+**New products:**
+`OUTDOOR PILLOWS`
+
+**Features:**
+
+- Added ability to request Terms and Conditions acceptance from the user before payment
+
+- `ActivityAbout`, `ActivityHelp` and `ActivityQualityGuarantee` now support native and WebView modes
+
+**Bugs:**
+
+- Fixed Google Photos (Picasa) login
+
+- Fixed issue where the image editor could not be opened after adding more photos to a product
+
+###
+
 3.3.14 (v128)
 ============
 

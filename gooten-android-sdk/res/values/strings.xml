@@ -59,6 +59,7 @@
     <string name="all">All</string>
     <string name="photobucket_server_error">Photobucket is temporarily unavailable. Please try later.</string>
     <string name="photobucket_error_loading_albums">Error loading Photobucket albums. Please try later.</string>
+    <string name="select_account">Select Account</string>
     <string name="successful_login_to_photo_source">Successfully logged in to %1$s</string>
     <string name="failed_to_login_to_photo_source">Failed to log in to %1$s</string>
     <string name="logout_photo_source">Do you want to log out of %1$s?</string>
@@ -247,6 +248,8 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="under_1">under %1$s</string>
     <string name="complete_design">Please complete your design</string>
     <string name="less_photos"><![CDATA[You selected <b>%1$s</b><br/>Grid space for <b>%2$s</b>]]></string>
+    <string name="terms_and_conditions_acknowledgement">I agree with the <a href="https://www.gooten.com">Terms and Conditions</a></string>
+    <string name="terms_and_conditions_not_accepted_warning">Please accept the Terms and Conditions</string>
     <string name="pay_with">Pay with</string>
     <string name="pay_with_card">Pay with Card</string>
     <string name="pinch_pan">Pinch to Zoom / Pan to Move</string>
@@ -344,7 +347,7 @@ right corner to review and add the item to your shopping cart.</string>
     <string name="about_subtitle">About:</string>
     <string name="about_text">Our Mission is to foster creative individuality and bring on-demand printed products to people all over the world. We hope to surround people with their favorite memories and brands, to remind them of the better things in life, improving the world one creation at a time.\n\nWe have an unwavering commitment to quality and customer satisfaction. If you\'re not happy, we\'re not happy. That\'s why we go the extra mile to insure that we carry the highest quality products, printed by the best printers, at the best possible prices.\n\nWe have print facilities all over the world, so whether you\'re in the USA, India, or Laos, we can ship to you! Since inception, we\'ve shipped to over 100 countries.\n\nsupport@gooten.com for support and friends</string>
     <string name="how_it_works_subtitle">How It Works:</string>
-    <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Picasa, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
+    <string name="how_it_works_text">1. Browse through our selection of products and choose the item or items you would like to purchase. We carry the highest quality products, printed by the best printers, at the best possible prices.\n\n2. Customize your item. Choose the size, shape, layout and product options you like best.\n\n3. Upload your images, or designs. Import from your phone, Instagram, Facebook, Flickr, Google Photos, or Dropbox.\n\n4. Ship to any country in the world! Specify your location and choose shipping method. We\'ve shipped to over 100 countries and counting.\n\n5. Pay using PayPal or the credit card of your choice. Our custom credit card imaging system makes it easier than ever to pay! All of your credit card info is automatically entered with one simple photo.\n\n6. Enjoy! We place the utmost importance on quality and customer satisfaction. We know you\'ll love the products! Enjoy.</string>
     <string name="pop_up_select_address_page">This page allows you to add, edit or delete a Shipping Address.\n\nTo add a shipping address:\n\n1) Please select the (+ Add a Shipping Address) button at the bottom of the page.\n\n2) A new Address Form Page will appear. Please fill out all necessary fields. Once all the Address fields are filled out, please select the Save Address button.\n\n3) If you missed a required field, a pop up in red text will alert you to what is missing and ask you to update before re-saving.\n\nTo select a shipping address you have either added or that is already listed on the screen:\n\n1) Simply select the address you want to use and it will automatically take you to the Shipment Review Screen</string>
     <string name="pop_up_shipment_review_page">Your work(s) of art is almost ready to go!\n\n- The Shipment Review Page breaks down your order summary by item, 
 cost(s), Shipping Method, Tax, Order Total, and the Estimated Arrival Date of 
@@ -444,6 +447,8 @@ to the Payment Page.</string>
     <string name="side_menu_button_label_quality_guarantee">Quality Guarantee</string>
     <string name="quality_guarantee_subtitle">Quality Guarantee:</string>
     <string name="quality_guarantee_text">We guarantee that you will be happy with your order and will remake the item anytime there is an error. We\'re here for the long term, and reputation matters more than profits.</string>
+    <string name="help_subtitle">Help:</string>
+    <string name="help_text">This is a placeholder. Add \"help_subtitle\" and \"help_text\" strings to your \"strings.xml\" with your own text or URL.</string>
 
     <!-- Help -->
     <string name="help_product_woven_blanket_step_3_4">Now you really get to be creative! This page allows you to choose the color and style of your Woven Blanket!\n\nOnce you select your Blanket color you will automatically be taken to the next step.\n\n1) Select a Blanket color from the available colors OR you can click the box with the plus(+) sign which allows you to get more creative and pick your own color!\n\n2) If you pressed the plus(+) button to select your own color, HOLD your finger on the screen, DRAG your finger to select the perfect color, then LET GO &amp; you will have selected your Blanket color! To change the color, simply repeat this step again.</string>
@@ -465,7 +470,7 @@ to the Payment Page.</string>
     <string name="help_select_photos_general_2">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nHowever example: If you have selected a 2 Photo Grid, when completing your design you will only be able to use 2 photos in the end design. However this allows you to see how different images look in case you change your mind while designing your %1$s on the next page.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your %1$s, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_metal_magnets">This page allows you to select your pictures and art from any or all of your favorite sources!\n\nYou can select one image from each source or multiple from each source.\n\nFor every photo you select it will start at a quantity of 1 count for a magnet. When you are taken to the next screen you can adjust the quantity of each photo or remove it if you decide you do not want it.\n\nThere is a photo counter in the bottom right corner that keeps track for you!\n\nAfter you select the images you want to try on your Metal Magnets, select Next button in the bottom right corner.</string>
     <string name="help_select_photos_canvas">This page allows you to select your pictures &amp; art from ALL of your favorite 
-sources!\n\n- Upload images from your device, Instagram, Facebook, Picasa, Flickr, or 
+sources!\n\n- Upload images from your device, Instagram, Facebook, Google Photos, Flickr, or 
 Dropbox.\n\n- You can select one image from each source OR multiple images from multiple 
 sources.\n\n- Too many awesome images and not sure which will the look best? Upload 
 multiple images so you can play around with the options. For example, on a 2 

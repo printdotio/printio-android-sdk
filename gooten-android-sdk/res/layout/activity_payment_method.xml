@@ -359,6 +359,38 @@
                         android:visibility="gone" />
                 </LinearLayout>
 
+                <!-- Terms and Conditions -->
+
+                <LinearLayout
+                    android:id="@+id/layout_terms_and_conditions_acknowledgement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/checkbox_terms_and_conditions_acknowledgement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" />
+
+                        <print.io.view.TextViewFontNormal
+                            android:id="@+id/textview_terms_and_conditions_acknowledgement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="8dip"
+                            android:paddingTop="8dip"
+                            android:text="@string/terms_and_conditions_acknowledgement" />
+                    </LinearLayout>
+                </LinearLayout>
+
                 <!-- Credit Card data container -->
 
                 <LinearLayout

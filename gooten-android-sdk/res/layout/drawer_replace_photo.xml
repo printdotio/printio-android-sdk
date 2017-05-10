@@ -24,7 +24,7 @@
             android:paddingLeft="10dip"
             android:paddingRight="10dip" >
 
-            <TextView
+            <print.io.view.TextViewFontNormal
                 android:id="@+id/textview_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
