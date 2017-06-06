@@ -1,5 +1,14 @@
 **Android Release Notes**
 
+3.3.16 (v130)
+============
+
+**Bugs:**
+
+- Fixed issue with uploading Prints and other similar (List-type) products
+
+###
+
 3.3.15 (v129)
 ============
 
