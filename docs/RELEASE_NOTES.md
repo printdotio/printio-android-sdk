@@ -1,5 +1,16 @@
 **Android Release Notes**
 
+3.3.17 (v131)
+============
+
+**Bugs:**
+
+- Removed deprecated FloatMath methods which caused the SDK to crash when built with Android SDK 23 and newer
+
+- Fixed paddings in grid items to accommodate for longer item names
+
+###
+
 3.3.16 (v130)
 ============
 
