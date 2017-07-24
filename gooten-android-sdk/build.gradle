@@ -3,7 +3,7 @@ apply plugin: 'maven'
 apply plugin: 'signing'
 
 group = 'com.gooten'
-version = '3.3.17'
+version = '3.3.18'
 
 android {
     compileSdkVersion 19

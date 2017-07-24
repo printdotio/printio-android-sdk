@@ -1,5 +1,28 @@
 **Android Release Notes**
 
+3.3.18 (v132)
+============
+
+**Features:**
+
+- Added option to override OpenGL texture size limit
+
+**Bugs:**
+
+- Fixed a crash when tapping back while Photobooks are loading
+
+- Fixed cut-off text in some screens
+
+- Reduced memory usage when loading images from content providers
+
+- Updated default background colors for various products
+
+- Updated exported image formats for various products
+
+- Removed 'Internet connection slow' message when loading local items
+
+###
+
 3.3.17 (v131)
 ============
 

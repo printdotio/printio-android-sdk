@@ -20,19 +20,17 @@
 
     <print.io.view.TextViewFontLight
         android:id="@+id/textview_title"
-        android:layout_width="wrap_content"
+        android:layout_width="100dip"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:maxWidth="120dip"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_normal" />
 
     <print.io.view.TextViewFontBold
         android:id="@+id/textview_price"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:maxWidth="120dip"
         android:textColor="#333333"
         android:textSize="@dimen/text_size_normal"
         android:visibility="gone" />
